@@ -13,7 +13,7 @@
 
 ## CreateLmsStudent
 
-Create a student
+Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to the provider's API. Returns the created LmsStudent.
 
 ### Example Usage
 
@@ -52,7 +52,7 @@ func main() {
                 shared.LmsEmail{},
             },
             FirstName: unifiedgosdk.Pointer("Marcella"),
-            ID: unifiedgosdk.Pointer("04f331a8-dc9c-4c07-8736-fa1537e3c7cb"),
+            ID: unifiedgosdk.Pointer("3969f57c-214d-4f0b-aa7c-8d5395c21384"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg"),
             LastName: unifiedgosdk.Pointer("Murazik"),
             Metadata: []shared.LmsMetadata{},
@@ -71,7 +71,7 @@ func main() {
                     Type: shared.LmsTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-06-30T23:26:48.052Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-01T07:39:18.663Z"),
         },
         ConnectionID: "<id>",
     })
@@ -104,7 +104,7 @@ func main() {
 
 ## GetLmsStudent
 
-Retrieve a student
+Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -159,7 +159,7 @@ func main() {
 
 ## ListLmsStudents
 
-List all students
+Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -213,7 +213,7 @@ func main() {
 
 ## PatchLmsStudent
 
-Update a student
+Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
 ### Example Usage
 
@@ -252,7 +252,7 @@ func main() {
                 shared.LmsEmail{},
             },
             FirstName: unifiedgosdk.Pointer("Marcella"),
-            ID: unifiedgosdk.Pointer("24f1db3e-48d4-45d8-a0f7-78d5a7bcd6fa"),
+            ID: unifiedgosdk.Pointer("f37eded4-a6e6-482e-81be-849ac16fa098"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg"),
             LastName: unifiedgosdk.Pointer("Murazik"),
             Metadata: []shared.LmsMetadata{},
@@ -271,7 +271,7 @@ func main() {
                     Type: shared.LmsTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-06-30T23:26:48.060Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-01T07:39:18.672Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -305,7 +305,7 @@ func main() {
 
 ## RemoveLmsStudent
 
-Remove a student
+Deletes the LmsStudent identified by `id`.
 
 ### Example Usage
 
@@ -360,7 +360,7 @@ func main() {
 
 ## UpdateLmsStudent
 
-Update a student
+Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
 ### Example Usage
 
@@ -399,7 +399,7 @@ func main() {
                 shared.LmsEmail{},
             },
             FirstName: unifiedgosdk.Pointer("Marcella"),
-            ID: unifiedgosdk.Pointer("24f1db3e-48d4-45d8-a0f7-78d5a7bcd6fa"),
+            ID: unifiedgosdk.Pointer("f37eded4-a6e6-482e-81be-849ac16fa098"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg"),
             LastName: unifiedgosdk.Pointer("Murazik"),
             Metadata: []shared.LmsMetadata{},
@@ -418,7 +418,7 @@ func main() {
                     Type: shared.LmsTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-06-30T23:26:48.060Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-01T07:39:18.672Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

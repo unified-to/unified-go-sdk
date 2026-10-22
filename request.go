@@ -31,6 +31,7 @@ func newRequest(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateVerificationRequest - Create a request
+// Creates a VerificationRequest. Provide the unified VerificationRequest fields in the request body; they are mapped to the provider's API. Returns the created VerificationRequest.
 func (s *Request) CreateVerificationRequest(ctx context.Context, request operations.CreateVerificationRequestRequest, opts ...operations.Option) (*operations.CreateVerificationRequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Request) CreateVerificationRequest(ctx context.Context, request operati
 }
 
 // GetVerificationRequest - Retrieve a request
+// Retrieves a single VerificationRequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Request) GetVerificationRequest(ctx context.Context, request operations.GetVerificationRequestRequest, opts ...operations.Option) (*operations.GetVerificationRequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Request) GetVerificationRequest(ctx context.Context, request operations
 }
 
 // ListVerificationRequests - List all requests
+// Returns a list of VerificationRequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Request) ListVerificationRequests(ctx context.Context, request operations.ListVerificationRequestsRequest, opts ...operations.Option) (*operations.ListVerificationRequestsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Request) ListVerificationRequests(ctx context.Context, request operatio
 }
 
 // PatchVerificationRequest - Update a request
+// Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields to change in the request body.
 func (s *Request) PatchVerificationRequest(ctx context.Context, request operations.PatchVerificationRequestRequest, opts ...operations.Option) (*operations.PatchVerificationRequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Request) PatchVerificationRequest(ctx context.Context, request operatio
 }
 
 // RemoveVerificationRequest - Remove a request
+// Deletes the VerificationRequest identified by `id`.
 func (s *Request) RemoveVerificationRequest(ctx context.Context, request operations.RemoveVerificationRequestRequest, opts ...operations.Option) (*operations.RemoveVerificationRequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Request) RemoveVerificationRequest(ctx context.Context, request operati
 }
 
 // UpdateVerificationRequest - Update a request
+// Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields to change in the request body.
 func (s *Request) UpdateVerificationRequest(ctx context.Context, request operations.UpdateVerificationRequestRequest, opts ...operations.Option) (*operations.UpdateVerificationRequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

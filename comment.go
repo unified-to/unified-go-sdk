@@ -31,6 +31,7 @@ func newComment(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateKmsComment - Create a comment
+// Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to the provider's API. Returns the created KmsComment.
 func (s *Comment) CreateKmsComment(ctx context.Context, request operations.CreateKmsCommentRequest, opts ...operations.Option) (*operations.CreateKmsCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Comment) CreateKmsComment(ctx context.Context, request operations.Creat
 }
 
 // CreateTaskComment - Create a comment
+// Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped to the provider's API. Returns the created TaskComment.
 func (s *Comment) CreateTaskComment(ctx context.Context, request operations.CreateTaskCommentRequest, opts ...operations.Option) (*operations.CreateTaskCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Comment) CreateTaskComment(ctx context.Context, request operations.Crea
 }
 
 // CreateUcComment - Create a comment
+// Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to the provider's API. Returns the created UcComment.
 func (s *Comment) CreateUcComment(ctx context.Context, request operations.CreateUcCommentRequest, opts ...operations.Option) (*operations.CreateUcCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Comment) CreateUcComment(ctx context.Context, request operations.Create
 }
 
 // GetKmsComment - Retrieve a comment
+// Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Comment) GetKmsComment(ctx context.Context, request operations.GetKmsCommentRequest, opts ...operations.Option) (*operations.GetKmsCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -880,6 +884,7 @@ func (s *Comment) GetKmsComment(ctx context.Context, request operations.GetKmsCo
 }
 
 // GetTaskComment - Retrieve a comment
+// Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Comment) GetTaskComment(ctx context.Context, request operations.GetTaskCommentRequest, opts ...operations.Option) (*operations.GetTaskCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1087,6 +1092,7 @@ func (s *Comment) GetTaskComment(ctx context.Context, request operations.GetTask
 }
 
 // GetUcComment - Retrieve a comment
+// Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Comment) GetUcComment(ctx context.Context, request operations.GetUcCommentRequest, opts ...operations.Option) (*operations.GetUcCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1294,6 +1300,7 @@ func (s *Comment) GetUcComment(ctx context.Context, request operations.GetUcComm
 }
 
 // ListKmsComments - List all comments
+// Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Comment) ListKmsComments(ctx context.Context, request operations.ListKmsCommentsRequest, opts ...operations.Option) (*operations.ListKmsCommentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Comment) ListKmsComments(ctx context.Context, request operations.ListKm
 }
 
 // ListTaskComments - List all comments
+// Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Comment) ListTaskComments(ctx context.Context, request operations.ListTaskCommentsRequest, opts ...operations.Option) (*operations.ListTaskCommentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1708,6 +1716,7 @@ func (s *Comment) ListTaskComments(ctx context.Context, request operations.ListT
 }
 
 // ListUcComments - List all comments
+// Returns a list of UcComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Comment) ListUcComments(ctx context.Context, request operations.ListUcCommentsRequest, opts ...operations.Option) (*operations.ListUcCommentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1915,6 +1924,7 @@ func (s *Comment) ListUcComments(ctx context.Context, request operations.ListUcC
 }
 
 // PatchKmsComment - Update a comment
+// Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 func (s *Comment) PatchKmsComment(ctx context.Context, request operations.PatchKmsCommentRequest, opts ...operations.Option) (*operations.PatchKmsCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2129,6 +2139,7 @@ func (s *Comment) PatchKmsComment(ctx context.Context, request operations.PatchK
 }
 
 // PatchTaskComment - Update a comment
+// Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 func (s *Comment) PatchTaskComment(ctx context.Context, request operations.PatchTaskCommentRequest, opts ...operations.Option) (*operations.PatchTaskCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2343,6 +2354,7 @@ func (s *Comment) PatchTaskComment(ctx context.Context, request operations.Patch
 }
 
 // PatchUcComment - Update a comment
+// Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 func (s *Comment) PatchUcComment(ctx context.Context, request operations.PatchUcCommentRequest, opts ...operations.Option) (*operations.PatchUcCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2557,6 +2569,7 @@ func (s *Comment) PatchUcComment(ctx context.Context, request operations.PatchUc
 }
 
 // RemoveKmsComment - Remove a comment
+// Deletes the KmsComment identified by `id`.
 func (s *Comment) RemoveKmsComment(ctx context.Context, request operations.RemoveKmsCommentRequest, opts ...operations.Option) (*operations.RemoveKmsCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2739,6 +2752,7 @@ func (s *Comment) RemoveKmsComment(ctx context.Context, request operations.Remov
 }
 
 // RemoveTaskComment - Remove a comment
+// Deletes the TaskComment identified by `id`.
 func (s *Comment) RemoveTaskComment(ctx context.Context, request operations.RemoveTaskCommentRequest, opts ...operations.Option) (*operations.RemoveTaskCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2921,6 +2935,7 @@ func (s *Comment) RemoveTaskComment(ctx context.Context, request operations.Remo
 }
 
 // RemoveUcComment - Remove a comment
+// Deletes the UcComment identified by `id`.
 func (s *Comment) RemoveUcComment(ctx context.Context, request operations.RemoveUcCommentRequest, opts ...operations.Option) (*operations.RemoveUcCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3103,6 +3118,7 @@ func (s *Comment) RemoveUcComment(ctx context.Context, request operations.Remove
 }
 
 // UpdateKmsComment - Update a comment
+// Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 func (s *Comment) UpdateKmsComment(ctx context.Context, request operations.UpdateKmsCommentRequest, opts ...operations.Option) (*operations.UpdateKmsCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3317,6 +3333,7 @@ func (s *Comment) UpdateKmsComment(ctx context.Context, request operations.Updat
 }
 
 // UpdateTaskComment - Update a comment
+// Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 func (s *Comment) UpdateTaskComment(ctx context.Context, request operations.UpdateTaskCommentRequest, opts ...operations.Option) (*operations.UpdateTaskCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3531,6 +3548,7 @@ func (s *Comment) UpdateTaskComment(ctx context.Context, request operations.Upda
 }
 
 // UpdateUcComment - Update a comment
+// Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 func (s *Comment) UpdateUcComment(ctx context.Context, request operations.UpdateUcCommentRequest, opts ...operations.Option) (*operations.UpdateUcCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

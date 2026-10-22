@@ -31,6 +31,7 @@ func newTaxonomy(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateHrisTaxonomy - Create a taxonomy
+// Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped to the provider's API. Returns the created HrisTaxonomy.
 func (s *Taxonomy) CreateHrisTaxonomy(ctx context.Context, request operations.CreateHrisTaxonomyRequest, opts ...operations.Option) (*operations.CreateHrisTaxonomyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Taxonomy) CreateHrisTaxonomy(ctx context.Context, request operations.Cr
 }
 
 // GetHrisTaxonomy - Retrieve a taxonomy
+// Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Taxonomy) GetHrisTaxonomy(ctx context.Context, request operations.GetHrisTaxonomyRequest, opts ...operations.Option) (*operations.GetHrisTaxonomyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Taxonomy) GetHrisTaxonomy(ctx context.Context, request operations.GetHr
 }
 
 // ListCrmTaxonomies - List all taxonomies
+// Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Taxonomy) ListCrmTaxonomies(ctx context.Context, request operations.ListCrmTaxonomiesRequest, opts ...operations.Option) (*operations.ListCrmTaxonomiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Taxonomy) ListCrmTaxonomies(ctx context.Context, request operations.Lis
 }
 
 // ListHrisTaxonomies - List all taxonomies
+// Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Taxonomy) ListHrisTaxonomies(ctx context.Context, request operations.ListHrisTaxonomiesRequest, opts ...operations.Option) (*operations.ListHrisTaxonomiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

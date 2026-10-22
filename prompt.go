@@ -31,6 +31,7 @@ func newPrompt(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 }
 
 // CreateGenaiPrompt - Create a prompt
+// Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped to the provider's API. Returns the created GenaiPrompt.
 func (s *Prompt) CreateGenaiPrompt(ctx context.Context, request operations.CreateGenaiPromptRequest, opts ...operations.Option) (*operations.CreateGenaiPromptResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

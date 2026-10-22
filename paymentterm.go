@@ -31,6 +31,7 @@ func newPaymentterm(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 }
 
 // CreateAccountingPaymentterm - Create a paymentterm
+// Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
 func (s *Paymentterm) CreateAccountingPaymentterm(ctx context.Context, request operations.CreateAccountingPaymenttermRequest, opts ...operations.Option) (*operations.CreateAccountingPaymenttermResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Paymentterm) CreateAccountingPaymentterm(ctx context.Context, request o
 }
 
 // GetAccountingPaymentterm - Retrieve a paymentterm
+// Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Paymentterm) GetAccountingPaymentterm(ctx context.Context, request operations.GetAccountingPaymenttermRequest, opts ...operations.Option) (*operations.GetAccountingPaymenttermResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Paymentterm) GetAccountingPaymentterm(ctx context.Context, request oper
 }
 
 // ListAccountingPaymentterms - List all paymentterms
+// Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Paymentterm) ListAccountingPaymentterms(ctx context.Context, request operations.ListAccountingPaymenttermsRequest, opts ...operations.Option) (*operations.ListAccountingPaymenttermsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Paymentterm) ListAccountingPaymentterms(ctx context.Context, request op
 }
 
 // PatchAccountingPaymentterm - Update a paymentterm
+// Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 func (s *Paymentterm) PatchAccountingPaymentterm(ctx context.Context, request operations.PatchAccountingPaymenttermRequest, opts ...operations.Option) (*operations.PatchAccountingPaymenttermResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Paymentterm) PatchAccountingPaymentterm(ctx context.Context, request op
 }
 
 // RemoveAccountingPaymentterm - Remove a paymentterm
+// Deletes the AccountingPaymentterm identified by `id`.
 func (s *Paymentterm) RemoveAccountingPaymentterm(ctx context.Context, request operations.RemoveAccountingPaymenttermRequest, opts ...operations.Option) (*operations.RemoveAccountingPaymenttermResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Paymentterm) RemoveAccountingPaymentterm(ctx context.Context, request o
 }
 
 // UpdateAccountingPaymentterm - Update a paymentterm
+// Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 func (s *Paymentterm) UpdateAccountingPaymentterm(ctx context.Context, request operations.UpdateAccountingPaymenttermRequest, opts ...operations.Option) (*operations.UpdateAccountingPaymenttermResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

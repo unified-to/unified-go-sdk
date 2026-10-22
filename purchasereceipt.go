@@ -31,6 +31,7 @@ func newPurchasereceipt(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, h
 }
 
 // GetAccountingPurchasereceipt - Retrieve a purchasereceipt
+// Retrieves a single AccountingPurchasereceipt by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Purchasereceipt) GetAccountingPurchasereceipt(ctx context.Context, request operations.GetAccountingPurchasereceiptRequest, opts ...operations.Option) (*operations.GetAccountingPurchasereceiptResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -238,6 +239,7 @@ func (s *Purchasereceipt) GetAccountingPurchasereceipt(ctx context.Context, requ
 }
 
 // ListAccountingPurchasereceipts - List all purchasereceipts
+// Returns a list of AccountingPurchasereceipts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Purchasereceipt) ListAccountingPurchasereceipts(ctx context.Context, request operations.ListAccountingPurchasereceiptsRequest, opts ...operations.Option) (*operations.ListAccountingPurchasereceiptsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

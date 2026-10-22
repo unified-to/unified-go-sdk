@@ -32,7 +32,7 @@
 
 ## CreateAnalyticsEvent
 
-Create an event
+Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsEvent.
 
 ### Example Usage
 
@@ -60,13 +60,13 @@ func main() {
         AnalyticsEvent: shared.AnalyticsEvent{
             CreatedAt: types.MustNewTimeFromString("2023-06-21T03:13:22.954Z"),
             EventType: shared.EventTypeScreenView.ToPointer(),
-            ID: unifiedgosdk.Pointer("16a850a1-a7e9-458c-bd8d-4efe8a5d66ac"),
+            ID: unifiedgosdk.Pointer("4bfc96a9-ff67-44ae-b446-152ef1a3d100"),
             Metadata: map[string]shared.PropertyAnalyticsEventMetadata{
                 "key": shared.PropertyAnalyticsEventMetadata{},
             },
             Name: unifiedgosdk.Pointer("page_view"),
             PageURL: unifiedgosdk.Pointer("https://golden-carboxyl.biz"),
-            UpdatedAt: types.MustNewTimeFromString("2023-09-24T16:23:03.740Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-09-24T18:14:57.746Z"),
         },
         ConnectionID: "<id>",
     })
@@ -99,7 +99,7 @@ func main() {
 
 ## CreateCalendarEvent
 
-Create an event
+Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are mapped to the provider's API. Returns the created CalendarEvent.
 
 ### Example Usage
 
@@ -128,9 +128,9 @@ func main() {
             Attachments: []shared.CalendarAttachment{},
             Conference: []shared.CalendarConference{},
             CreatedAt: unifiedgosdk.Pointer("2019-08-04T14:33:51.814Z"),
-            EndAt: unifiedgosdk.Pointer("2020-05-24T07:01:09.232Z"),
+            EndAt: unifiedgosdk.Pointer("2020-05-24T09:40:09.347Z"),
             HasConference: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("e9913106-d288-4504-8cd9-df2838bed13c"),
+            ID: unifiedgosdk.Pointer("00111fbd-d5e6-4c13-9c93-be91f7154f38"),
             IsAllDay: unifiedgosdk.Pointer(false),
             IsFree: unifiedgosdk.Pointer(false),
             IsPrivate: unifiedgosdk.Pointer(false),
@@ -140,15 +140,15 @@ func main() {
             Recurrence: []shared.CalendarEventRecurrence{
                 shared.CalendarEventRecurrence{
                     Count: unifiedgosdk.Pointer[float64](4.0),
-                    EndAt: types.MustNewTimeFromString("2025-03-24T15:41:05.059Z"),
+                    EndAt: types.MustNewTimeFromString("2025-03-25T10:15:51.349Z"),
                     ExcludedDates: []string{
-                        "2024-02-02T18:45:37.233Z",
+                        "2024-02-03T09:35:14.298Z",
                     },
                     Frequency: shared.CalendarEventRecurrenceFrequencyYearly.ToPointer(),
                     IncludedDates: []string{
-                        "2023-07-07T01:28:09.892Z",
-                        "2025-01-23T21:40:25.793Z",
-                        "2024-04-01T23:41:13.035Z",
+                        "2023-07-07T14:23:41.891Z",
+                        "2025-01-24T15:42:51.143Z",
+                        "2024-04-02T15:02:53.330Z",
                     },
                     Interval: unifiedgosdk.Pointer[float64](7.0),
                     OnDays: []shared.PropertyCalendarEventRecurrenceOnDays{
@@ -485,11 +485,11 @@ func main() {
                     WeekStart: shared.WeekStartTu.ToPointer(),
                 },
             },
-            StartAt: unifiedgosdk.Pointer("2020-05-23T21:47:32.005Z"),
+            StartAt: unifiedgosdk.Pointer("2020-05-24T00:26:19.631Z"),
             Status: shared.CalendarEventStatusConfirmed.ToPointer(),
             Subject: unifiedgosdk.Pointer("Sunt spargo tepidus bestia vigor credo coadunatio appello."),
             Timezone: unifiedgosdk.Pointer("Asia/Bangkok"),
-            UpdatedAt: unifiedgosdk.Pointer("2020-06-30T05:23:45.736Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2020-06-30T08:22:45.566Z"),
             WebURL: unifiedgosdk.Pointer("https://another-pinstripe.com"),
         },
         ConnectionID: "<id>",
@@ -523,7 +523,7 @@ func main() {
 
 ## CreateCdpEvent
 
-Create an event
+Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the provider's API. Returns the created CdpEvent.
 
 ### Example Usage
 
@@ -579,7 +579,7 @@ func main() {
 
 ## CreateCrmEvent
 
-Create an event
+Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the provider's API. Returns the created CrmEvent.
 
 ### Example Usage
 
@@ -608,13 +608,13 @@ func main() {
             Call: &shared.PropertyCrmEventCall{
                 Description: unifiedgosdk.Pointer("Arbitro aptus."),
                 Duration: unifiedgosdk.Pointer[float64](64.0),
-                StartAt: types.MustNewTimeFromString("2024-12-11T00:48:21.026Z"),
+                StartAt: types.MustNewTimeFromString("2024-12-11T17:31:41.901Z"),
             },
             CreatedAt: types.MustNewTimeFromString("2020-07-14T04:53:23.784Z"),
-            ID: unifiedgosdk.Pointer("2861a115-b973-4d8a-8ef6-7c9a7f2efb64"),
+            ID: unifiedgosdk.Pointer("cb6a3ace-0074-470f-a9c3-3bd2cee96a09"),
             Metadata: []shared.CrmMetadata{},
             Type: shared.CrmEventTypeCall.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-11T12:55:45.327Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-12T12:36:07.340Z"),
         },
         ConnectionID: "<id>",
     })
@@ -647,7 +647,7 @@ func main() {
 
 ## GetAnalyticsEvent
 
-Retrieve an event
+Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -702,7 +702,7 @@ func main() {
 
 ## GetCalendarEvent
 
-Retrieve an event
+Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -757,7 +757,7 @@ func main() {
 
 ## GetCdpEvent
 
-Retrieve an event
+Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -812,7 +812,7 @@ func main() {
 
 ## GetClubsEvent
 
-Retrieve an event
+Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -867,7 +867,7 @@ func main() {
 
 ## GetCrmEvent
 
-Retrieve an event
+Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -922,7 +922,7 @@ func main() {
 
 ## ListAnalyticsEvents
 
-List all events
+Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -976,7 +976,7 @@ func main() {
 
 ## ListCalendarEvents
 
-List all events
+Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1030,7 +1030,7 @@ func main() {
 
 ## ListCdpEvents
 
-List all events
+Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1084,7 +1084,7 @@ func main() {
 
 ## ListClubsEvents
 
-List all events
+Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1138,7 +1138,7 @@ func main() {
 
 ## ListCrmEvents
 
-List all events
+Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1192,7 +1192,7 @@ func main() {
 
 ## PatchCalendarEvent
 
-Update an event
+Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1221,9 +1221,9 @@ func main() {
             Attachments: []shared.CalendarAttachment{},
             Conference: []shared.CalendarConference{},
             CreatedAt: unifiedgosdk.Pointer("2019-08-04T14:33:51.814Z"),
-            EndAt: unifiedgosdk.Pointer("2020-05-24T07:01:09.236Z"),
+            EndAt: unifiedgosdk.Pointer("2020-05-24T09:40:09.353Z"),
             HasConference: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("14a1cdee-441e-4ea7-ba56-39b688c8d77f"),
+            ID: unifiedgosdk.Pointer("251c8515-1230-4346-bb6c-8759c4f5fad3"),
             IsAllDay: unifiedgosdk.Pointer(false),
             IsFree: unifiedgosdk.Pointer(false),
             IsPrivate: unifiedgosdk.Pointer(false),
@@ -1233,15 +1233,15 @@ func main() {
             Recurrence: []shared.CalendarEventRecurrence{
                 shared.CalendarEventRecurrence{
                     Count: unifiedgosdk.Pointer[float64](4.0),
-                    EndAt: types.MustNewTimeFromString("2025-03-24T15:41:05.085Z"),
+                    EndAt: types.MustNewTimeFromString("2025-03-25T10:15:51.393Z"),
                     ExcludedDates: []string{
-                        "2024-02-02T18:45:37.253Z",
+                        "2024-02-03T09:35:14.333Z",
                     },
                     Frequency: shared.CalendarEventRecurrenceFrequencyYearly.ToPointer(),
                     IncludedDates: []string{
-                        "2023-07-07T01:28:09.910Z",
-                        "2025-01-23T21:40:25.818Z",
-                        "2024-04-01T23:41:13.055Z",
+                        "2023-07-07T14:23:41.922Z",
+                        "2025-01-24T15:42:51.186Z",
+                        "2024-04-02T15:02:53.366Z",
                     },
                     Interval: unifiedgosdk.Pointer[float64](7.0),
                     OnDays: []shared.PropertyCalendarEventRecurrenceOnDays{
@@ -1578,11 +1578,11 @@ func main() {
                     WeekStart: shared.WeekStartTu.ToPointer(),
                 },
             },
-            StartAt: unifiedgosdk.Pointer("2020-05-23T21:47:32.009Z"),
+            StartAt: unifiedgosdk.Pointer("2020-05-24T00:26:19.637Z"),
             Status: shared.CalendarEventStatusConfirmed.ToPointer(),
             Subject: unifiedgosdk.Pointer("Sunt spargo tepidus bestia vigor credo coadunatio appello."),
             Timezone: unifiedgosdk.Pointer("Asia/Bangkok"),
-            UpdatedAt: unifiedgosdk.Pointer("2020-06-30T05:23:45.740Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2020-06-30T08:22:45.573Z"),
             WebURL: unifiedgosdk.Pointer("https://another-pinstripe.com"),
         },
         ConnectionID: "<id>",
@@ -1617,7 +1617,7 @@ func main() {
 
 ## PatchCdpEvent
 
-Update an event
+Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1674,7 +1674,7 @@ func main() {
 
 ## PatchCrmEvent
 
-Update an event
+Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1703,13 +1703,13 @@ func main() {
             Call: &shared.PropertyCrmEventCall{
                 Description: unifiedgosdk.Pointer("Arbitro aptus."),
                 Duration: unifiedgosdk.Pointer[float64](64.0),
-                StartAt: types.MustNewTimeFromString("2024-12-11T00:48:21.064Z"),
+                StartAt: types.MustNewTimeFromString("2024-12-11T17:31:41.949Z"),
             },
             CreatedAt: types.MustNewTimeFromString("2020-07-14T04:53:23.784Z"),
-            ID: unifiedgosdk.Pointer("fc1b8c52-fc3c-4ad5-8c05-6d3e8eb071aa"),
+            ID: unifiedgosdk.Pointer("6ee8337c-85b4-45ae-8759-aaa2e283bb04"),
             Metadata: []shared.CrmMetadata{},
             Type: shared.CrmEventTypeCall.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-11T12:55:45.381Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-12T12:36:07.407Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1743,7 +1743,7 @@ func main() {
 
 ## PatchMessagingEvent
 
-Update an event
+Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1774,7 +1774,7 @@ func main() {
                 Name: unifiedgosdk.Pointer(""),
             },
             CreatedAt: types.MustNewTimeFromString("2019-05-30T19:44:46.461Z"),
-            ID: unifiedgosdk.Pointer("7557665c-8c74-4a4b-9f0f-811c0fb08e7a"),
+            ID: unifiedgosdk.Pointer("21655438-a41c-4f8c-9a2e-cb9cb2a996fd"),
             IsReplacingOriginal: unifiedgosdk.Pointer(false),
             Metadata: []shared.MessagingMetadata{},
             Type: shared.MessagingEventTypeButtonClick.ToPointer(),
@@ -1811,7 +1811,7 @@ func main() {
 
 ## RemoveCalendarEvent
 
-Remove an event
+Deletes the CalendarEvent identified by `id`.
 
 ### Example Usage
 
@@ -1866,7 +1866,7 @@ func main() {
 
 ## RemoveCdpEvent
 
-Remove an event
+Deletes the CdpEvent identified by `id`.
 
 ### Example Usage
 
@@ -1921,7 +1921,7 @@ func main() {
 
 ## RemoveCrmEvent
 
-Remove an event
+Deletes the CrmEvent identified by `id`.
 
 ### Example Usage
 
@@ -1976,7 +1976,7 @@ func main() {
 
 ## UpdateCalendarEvent
 
-Update an event
+Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2005,9 +2005,9 @@ func main() {
             Attachments: []shared.CalendarAttachment{},
             Conference: []shared.CalendarConference{},
             CreatedAt: unifiedgosdk.Pointer("2019-08-04T14:33:51.814Z"),
-            EndAt: unifiedgosdk.Pointer("2020-05-24T07:01:09.236Z"),
+            EndAt: unifiedgosdk.Pointer("2020-05-24T09:40:09.353Z"),
             HasConference: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("14a1cdee-441e-4ea7-ba56-39b688c8d77f"),
+            ID: unifiedgosdk.Pointer("251c8515-1230-4346-bb6c-8759c4f5fad3"),
             IsAllDay: unifiedgosdk.Pointer(false),
             IsFree: unifiedgosdk.Pointer(false),
             IsPrivate: unifiedgosdk.Pointer(false),
@@ -2017,15 +2017,15 @@ func main() {
             Recurrence: []shared.CalendarEventRecurrence{
                 shared.CalendarEventRecurrence{
                     Count: unifiedgosdk.Pointer[float64](4.0),
-                    EndAt: types.MustNewTimeFromString("2025-03-24T15:41:05.085Z"),
+                    EndAt: types.MustNewTimeFromString("2025-03-25T10:15:51.393Z"),
                     ExcludedDates: []string{
-                        "2024-02-02T18:45:37.253Z",
+                        "2024-02-03T09:35:14.333Z",
                     },
                     Frequency: shared.CalendarEventRecurrenceFrequencyYearly.ToPointer(),
                     IncludedDates: []string{
-                        "2023-07-07T01:28:09.910Z",
-                        "2025-01-23T21:40:25.818Z",
-                        "2024-04-01T23:41:13.055Z",
+                        "2023-07-07T14:23:41.922Z",
+                        "2025-01-24T15:42:51.186Z",
+                        "2024-04-02T15:02:53.366Z",
                     },
                     Interval: unifiedgosdk.Pointer[float64](7.0),
                     OnDays: []shared.PropertyCalendarEventRecurrenceOnDays{
@@ -2362,11 +2362,11 @@ func main() {
                     WeekStart: shared.WeekStartTu.ToPointer(),
                 },
             },
-            StartAt: unifiedgosdk.Pointer("2020-05-23T21:47:32.009Z"),
+            StartAt: unifiedgosdk.Pointer("2020-05-24T00:26:19.637Z"),
             Status: shared.CalendarEventStatusConfirmed.ToPointer(),
             Subject: unifiedgosdk.Pointer("Sunt spargo tepidus bestia vigor credo coadunatio appello."),
             Timezone: unifiedgosdk.Pointer("Asia/Bangkok"),
-            UpdatedAt: unifiedgosdk.Pointer("2020-06-30T05:23:45.740Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2020-06-30T08:22:45.573Z"),
             WebURL: unifiedgosdk.Pointer("https://another-pinstripe.com"),
         },
         ConnectionID: "<id>",
@@ -2401,7 +2401,7 @@ func main() {
 
 ## UpdateCdpEvent
 
-Update an event
+Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2458,7 +2458,7 @@ func main() {
 
 ## UpdateCrmEvent
 
-Update an event
+Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2487,13 +2487,13 @@ func main() {
             Call: &shared.PropertyCrmEventCall{
                 Description: unifiedgosdk.Pointer("Arbitro aptus."),
                 Duration: unifiedgosdk.Pointer[float64](64.0),
-                StartAt: types.MustNewTimeFromString("2024-12-11T00:48:21.064Z"),
+                StartAt: types.MustNewTimeFromString("2024-12-11T17:31:41.949Z"),
             },
             CreatedAt: types.MustNewTimeFromString("2020-07-14T04:53:23.784Z"),
-            ID: unifiedgosdk.Pointer("fc1b8c52-fc3c-4ad5-8c05-6d3e8eb071aa"),
+            ID: unifiedgosdk.Pointer("6ee8337c-85b4-45ae-8759-aaa2e283bb04"),
             Metadata: []shared.CrmMetadata{},
             Type: shared.CrmEventTypeCall.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-11T12:55:45.381Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-12T12:36:07.407Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2527,7 +2527,7 @@ func main() {
 
 ## UpdateMessagingEvent
 
-Update an event
+Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2558,7 +2558,7 @@ func main() {
                 Name: unifiedgosdk.Pointer(""),
             },
             CreatedAt: types.MustNewTimeFromString("2019-05-30T19:44:46.461Z"),
-            ID: unifiedgosdk.Pointer("7557665c-8c74-4a4b-9f0f-811c0fb08e7a"),
+            ID: unifiedgosdk.Pointer("21655438-a41c-4f8c-9a2e-cb9cb2a996fd"),
             IsReplacingOriginal: unifiedgosdk.Pointer(false),
             Metadata: []shared.MessagingMetadata{},
             Type: shared.MessagingEventTypeButtonClick.ToPointer(),

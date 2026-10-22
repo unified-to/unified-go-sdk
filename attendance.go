@@ -31,6 +31,7 @@ func newAttendance(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks 
 }
 
 // CreateHrisAttendance - Create an attendance
+// Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are mapped to the provider's API. Returns the created HrisAttendance.
 func (s *Attendance) CreateHrisAttendance(ctx context.Context, request operations.CreateHrisAttendanceRequest, opts ...operations.Option) (*operations.CreateHrisAttendanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Attendance) CreateHrisAttendance(ctx context.Context, request operation
 }
 
 // GetHrisAttendance - Retrieve an attendance
+// Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Attendance) GetHrisAttendance(ctx context.Context, request operations.GetHrisAttendanceRequest, opts ...operations.Option) (*operations.GetHrisAttendanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Attendance) GetHrisAttendance(ctx context.Context, request operations.G
 }
 
 // ListHrisAttendances - List all attendances
+// Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Attendance) ListHrisAttendances(ctx context.Context, request operations.ListHrisAttendancesRequest, opts ...operations.Option) (*operations.ListHrisAttendancesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Attendance) ListHrisAttendances(ctx context.Context, request operations
 }
 
 // PatchHrisAttendance - Update an attendance
+// Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 func (s *Attendance) PatchHrisAttendance(ctx context.Context, request operations.PatchHrisAttendanceRequest, opts ...operations.Option) (*operations.PatchHrisAttendanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Attendance) PatchHrisAttendance(ctx context.Context, request operations
 }
 
 // RemoveHrisAttendance - Remove an attendance
+// Deletes the HrisAttendance identified by `id`.
 func (s *Attendance) RemoveHrisAttendance(ctx context.Context, request operations.RemoveHrisAttendanceRequest, opts ...operations.Option) (*operations.RemoveHrisAttendanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Attendance) RemoveHrisAttendance(ctx context.Context, request operation
 }
 
 // UpdateHrisAttendance - Update an attendance
+// Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 func (s *Attendance) UpdateHrisAttendance(ctx context.Context, request operations.UpdateHrisAttendanceRequest, opts ...operations.Option) (*operations.UpdateHrisAttendanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

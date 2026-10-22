@@ -13,7 +13,7 @@
 
 ## CreateAccountingTaxrate
 
-Create a taxrate
+Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the request body; they are mapped to the provider's API. Returns the created AccountingTaxrate.
 
 ### Example Usage
 
@@ -50,7 +50,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-01-04T10:37:56.894Z"),
             Description: unifiedgosdk.Pointer("Exempt (0%)"),
             EffectiveRate: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("1eeede99-19ce-4185-9054-69df8fb32710"),
+            ID: unifiedgosdk.Pointer("01c2eb64-87ee-4c55-9300-b6e0dfec82ad"),
             IsActive: unifiedgosdk.Pointer(false),
             IsCompound: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
@@ -59,7 +59,7 @@ func main() {
             Region: unifiedgosdk.Pointer("KS"),
             TotalRate: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingTaxrateTypeSales.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-02-13T05:09:51.173Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-02-13T05:32:42.700Z"),
         },
         ConnectionID: "<id>",
     })
@@ -92,7 +92,7 @@ func main() {
 
 ## GetAccountingTaxrate
 
-Retrieve a taxrate
+Retrieves a single AccountingTaxrate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -147,7 +147,7 @@ func main() {
 
 ## ListAccountingTaxrates
 
-List all taxrates
+Returns a list of AccountingTaxrates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -201,7 +201,7 @@ func main() {
 
 ## PatchAccountingTaxrate
 
-Update a taxrate
+Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
 
 ### Example Usage
 
@@ -238,7 +238,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-01-04T10:37:56.894Z"),
             Description: unifiedgosdk.Pointer("Exempt (0%)"),
             EffectiveRate: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("7efef66d-926b-4c67-9803-216a861ed3ec"),
+            ID: unifiedgosdk.Pointer("6fadebf2-8c72-4fb3-97f5-5057ddd19842"),
             IsActive: unifiedgosdk.Pointer(false),
             IsCompound: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
@@ -247,7 +247,7 @@ func main() {
             Region: unifiedgosdk.Pointer("KS"),
             TotalRate: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingTaxrateTypeSales.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-02-13T05:09:51.173Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-02-13T05:32:42.700Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -281,7 +281,7 @@ func main() {
 
 ## RemoveAccountingTaxrate
 
-Remove a taxrate
+Deletes the AccountingTaxrate identified by `id`.
 
 ### Example Usage
 
@@ -336,7 +336,7 @@ func main() {
 
 ## UpdateAccountingTaxrate
 
-Update a taxrate
+Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
 
 ### Example Usage
 
@@ -373,7 +373,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-01-04T10:37:56.894Z"),
             Description: unifiedgosdk.Pointer("Exempt (0%)"),
             EffectiveRate: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("7efef66d-926b-4c67-9803-216a861ed3ec"),
+            ID: unifiedgosdk.Pointer("6fadebf2-8c72-4fb3-97f5-5057ddd19842"),
             IsActive: unifiedgosdk.Pointer(false),
             IsCompound: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
@@ -382,7 +382,7 @@ func main() {
             Region: unifiedgosdk.Pointer("KS"),
             TotalRate: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingTaxrateTypeSales.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-02-13T05:09:51.173Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-02-13T05:32:42.700Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

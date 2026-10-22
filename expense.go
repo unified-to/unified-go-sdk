@@ -31,6 +31,7 @@ func newExpense(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateAccountingExpense - Create an expense
+// Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpense.
 func (s *Expense) CreateAccountingExpense(ctx context.Context, request operations.CreateAccountingExpenseRequest, opts ...operations.Option) (*operations.CreateAccountingExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Expense) CreateAccountingExpense(ctx context.Context, request operation
 }
 
 // CreateLegalExpense - Create an expense
+// Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
 func (s *Expense) CreateLegalExpense(ctx context.Context, request operations.CreateLegalExpenseRequest, opts ...operations.Option) (*operations.CreateLegalExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Expense) CreateLegalExpense(ctx context.Context, request operations.Cre
 }
 
 // GetAccountingExpense - Retrieve an expense
+// Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Expense) GetAccountingExpense(ctx context.Context, request operations.GetAccountingExpenseRequest, opts ...operations.Option) (*operations.GetAccountingExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -666,6 +669,7 @@ func (s *Expense) GetAccountingExpense(ctx context.Context, request operations.G
 }
 
 // GetLegalExpense - Retrieve an expense
+// Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Expense) GetLegalExpense(ctx context.Context, request operations.GetLegalExpenseRequest, opts ...operations.Option) (*operations.GetLegalExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Expense) GetLegalExpense(ctx context.Context, request operations.GetLeg
 }
 
 // ListAccountingExpenses - List all expenses
+// Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Expense) ListAccountingExpenses(ctx context.Context, request operations.ListAccountingExpensesRequest, opts ...operations.Option) (*operations.ListAccountingExpensesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1080,6 +1085,7 @@ func (s *Expense) ListAccountingExpenses(ctx context.Context, request operations
 }
 
 // ListLegalExpenses - List all expenses
+// Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Expense) ListLegalExpenses(ctx context.Context, request operations.ListLegalExpensesRequest, opts ...operations.Option) (*operations.ListLegalExpensesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1287,6 +1293,7 @@ func (s *Expense) ListLegalExpenses(ctx context.Context, request operations.List
 }
 
 // PatchAccountingExpense - Update an expense
+// Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 func (s *Expense) PatchAccountingExpense(ctx context.Context, request operations.PatchAccountingExpenseRequest, opts ...operations.Option) (*operations.PatchAccountingExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Expense) PatchAccountingExpense(ctx context.Context, request operations
 }
 
 // PatchLegalExpense - Update an expense
+// Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 func (s *Expense) PatchLegalExpense(ctx context.Context, request operations.PatchLegalExpenseRequest, opts ...operations.Option) (*operations.PatchLegalExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1715,6 +1723,7 @@ func (s *Expense) PatchLegalExpense(ctx context.Context, request operations.Patc
 }
 
 // RemoveAccountingExpense - Remove an expense
+// Deletes the AccountingExpense identified by `id`.
 func (s *Expense) RemoveAccountingExpense(ctx context.Context, request operations.RemoveAccountingExpenseRequest, opts ...operations.Option) (*operations.RemoveAccountingExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1897,6 +1906,7 @@ func (s *Expense) RemoveAccountingExpense(ctx context.Context, request operation
 }
 
 // RemoveLegalExpense - Remove an expense
+// Deletes the LegalExpense identified by `id`.
 func (s *Expense) RemoveLegalExpense(ctx context.Context, request operations.RemoveLegalExpenseRequest, opts ...operations.Option) (*operations.RemoveLegalExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2079,6 +2089,7 @@ func (s *Expense) RemoveLegalExpense(ctx context.Context, request operations.Rem
 }
 
 // UpdateAccountingExpense - Update an expense
+// Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 func (s *Expense) UpdateAccountingExpense(ctx context.Context, request operations.UpdateAccountingExpenseRequest, opts ...operations.Option) (*operations.UpdateAccountingExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2293,6 +2304,7 @@ func (s *Expense) UpdateAccountingExpense(ctx context.Context, request operation
 }
 
 // UpdateLegalExpense - Update an expense
+// Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 func (s *Expense) UpdateLegalExpense(ctx context.Context, request operations.UpdateLegalExpenseRequest, opts ...operations.Option) (*operations.UpdateLegalExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

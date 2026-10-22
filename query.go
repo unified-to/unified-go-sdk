@@ -31,6 +31,7 @@ func newQuery(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 }
 
 // CreateDatastoreQuery - Create a query
+// Creates a DatastoreQuery. Provide the unified DatastoreQuery fields in the request body; they are mapped to the provider's API. Returns the created DatastoreQuery.
 func (s *Query) CreateDatastoreQuery(ctx context.Context, request operations.CreateDatastoreQueryRequest, opts ...operations.Option) (*operations.CreateDatastoreQueryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

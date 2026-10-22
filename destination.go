@@ -31,6 +31,7 @@ func newDestination(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 }
 
 // CreateCdpDestination - Create a destination
+// Creates a CdpDestination. Provide the unified CdpDestination fields in the request body; they are mapped to the provider's API. Returns the created CdpDestination.
 func (s *Destination) CreateCdpDestination(ctx context.Context, request operations.CreateCdpDestinationRequest, opts ...operations.Option) (*operations.CreateCdpDestinationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Destination) CreateCdpDestination(ctx context.Context, request operatio
 }
 
 // GetCdpDestination - Retrieve a destination
+// Retrieves a single CdpDestination by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Destination) GetCdpDestination(ctx context.Context, request operations.GetCdpDestinationRequest, opts ...operations.Option) (*operations.GetCdpDestinationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Destination) GetCdpDestination(ctx context.Context, request operations.
 }
 
 // ListCdpDestinations - List all destinations
+// Returns a list of CdpDestinations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Destination) ListCdpDestinations(ctx context.Context, request operations.ListCdpDestinationsRequest, opts ...operations.Option) (*operations.ListCdpDestinationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Destination) ListCdpDestinations(ctx context.Context, request operation
 }
 
 // PatchCdpDestination - Update a destination
+// Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change in the request body.
 func (s *Destination) PatchCdpDestination(ctx context.Context, request operations.PatchCdpDestinationRequest, opts ...operations.Option) (*operations.PatchCdpDestinationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Destination) PatchCdpDestination(ctx context.Context, request operation
 }
 
 // RemoveCdpDestination - Remove a destination
+// Deletes the CdpDestination identified by `id`.
 func (s *Destination) RemoveCdpDestination(ctx context.Context, request operations.RemoveCdpDestinationRequest, opts ...operations.Option) (*operations.RemoveCdpDestinationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Destination) RemoveCdpDestination(ctx context.Context, request operatio
 }
 
 // UpdateCdpDestination - Update a destination
+// Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change in the request body.
 func (s *Destination) UpdateCdpDestination(ctx context.Context, request operations.UpdateCdpDestinationRequest, opts ...operations.Option) (*operations.UpdateCdpDestinationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

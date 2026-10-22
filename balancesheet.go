@@ -31,6 +31,7 @@ func newBalancesheet(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hook
 }
 
 // GetAccountingBalancesheet - Retrieve a balancesheet
+// Retrieves a single AccountingBalancesheet by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Balancesheet) GetAccountingBalancesheet(ctx context.Context, request operations.GetAccountingBalancesheetRequest, opts ...operations.Option) (*operations.GetAccountingBalancesheetResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -238,6 +239,7 @@ func (s *Balancesheet) GetAccountingBalancesheet(ctx context.Context, request op
 }
 
 // ListAccountingBalancesheets - List all balancesheets
+// Returns a list of AccountingBalancesheets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Balancesheet) ListAccountingBalancesheets(ctx context.Context, request operations.ListAccountingBalancesheetsRequest, opts ...operations.Option) (*operations.ListAccountingBalancesheetsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

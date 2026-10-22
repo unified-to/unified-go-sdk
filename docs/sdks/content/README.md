@@ -13,7 +13,7 @@
 
 ## CreateLmsContent
 
-Create a content
+Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to the provider's API. Returns the created LmsContent.
 
 ### Example Usage
 
@@ -46,7 +46,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Usque laboriosam ventosus adflicto."),
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("30e4f460-4b55-4fc2-956e-f6f5ff936ab5"),
+            ID: unifiedgosdk.Pointer("c1a50c5f-3b8d-4e1a-89d7-24e8071225bc"),
             Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             Languages: []string{
@@ -106,7 +106,7 @@ func main() {
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ut"),
             ProviderName: unifiedgosdk.Pointer("Bins LLC"),
-            PublishedAt: types.MustNewTimeFromString("2022-09-03T06:18:34.592Z"),
+            PublishedAt: types.MustNewTimeFromString("2022-09-03T13:41:50.364Z"),
             ShortDescription: unifiedgosdk.Pointer("Caritas."),
             Skills: []string{
                 "trucido",
@@ -121,7 +121,7 @@ func main() {
             Tags: []string{
                 "dens",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-10-04T04:34:53.718Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-04T12:18:18.550Z"),
         },
         ConnectionID: "<id>",
     })
@@ -154,7 +154,7 @@ func main() {
 
 ## GetLmsContent
 
-Retrieve a content
+Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -209,7 +209,7 @@ func main() {
 
 ## ListLmsContents
 
-List all contents
+Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -263,7 +263,7 @@ func main() {
 
 ## PatchLmsContent
 
-Update a content
+Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
 ### Example Usage
 
@@ -296,7 +296,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Usque laboriosam ventosus adflicto."),
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("de227394-fbd0-4a0b-8f28-9e960cc07406"),
+            ID: unifiedgosdk.Pointer("47939b71-9963-4c72-adb3-0c27c660cd9d"),
             Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             Languages: []string{
@@ -356,7 +356,7 @@ func main() {
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ut"),
             ProviderName: unifiedgosdk.Pointer("Bins LLC"),
-            PublishedAt: types.MustNewTimeFromString("2022-09-03T06:18:34.603Z"),
+            PublishedAt: types.MustNewTimeFromString("2022-09-03T13:41:50.375Z"),
             ShortDescription: unifiedgosdk.Pointer("Caritas."),
             Skills: []string{
                 "trucido",
@@ -371,7 +371,7 @@ func main() {
             Tags: []string{
                 "dens",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-10-04T04:34:53.729Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-04T12:18:18.562Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -405,7 +405,7 @@ func main() {
 
 ## RemoveLmsContent
 
-Remove a content
+Deletes the LmsContent identified by `id`.
 
 ### Example Usage
 
@@ -460,7 +460,7 @@ func main() {
 
 ## UpdateLmsContent
 
-Update a content
+Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
 ### Example Usage
 
@@ -493,7 +493,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Usque laboriosam ventosus adflicto."),
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("de227394-fbd0-4a0b-8f28-9e960cc07406"),
+            ID: unifiedgosdk.Pointer("47939b71-9963-4c72-adb3-0c27c660cd9d"),
             Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             Languages: []string{
@@ -553,7 +553,7 @@ func main() {
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ut"),
             ProviderName: unifiedgosdk.Pointer("Bins LLC"),
-            PublishedAt: types.MustNewTimeFromString("2022-09-03T06:18:34.603Z"),
+            PublishedAt: types.MustNewTimeFromString("2022-09-03T13:41:50.375Z"),
             ShortDescription: unifiedgosdk.Pointer("Caritas."),
             Skills: []string{
                 "trucido",
@@ -568,7 +568,7 @@ func main() {
             Tags: []string{
                 "dens",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-10-04T04:34:53.729Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-04T12:18:18.562Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

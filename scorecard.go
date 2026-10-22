@@ -31,6 +31,7 @@ func newScorecard(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 }
 
 // CreateAtsScorecard - Create a scorecard
+// Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped to the provider's API. Returns the created AtsScorecard.
 func (s *Scorecard) CreateAtsScorecard(ctx context.Context, request operations.CreateAtsScorecardRequest, opts ...operations.Option) (*operations.CreateAtsScorecardResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Scorecard) CreateAtsScorecard(ctx context.Context, request operations.C
 }
 
 // GetAtsScorecard - Retrieve a scorecard
+// Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Scorecard) GetAtsScorecard(ctx context.Context, request operations.GetAtsScorecardRequest, opts ...operations.Option) (*operations.GetAtsScorecardResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Scorecard) GetAtsScorecard(ctx context.Context, request operations.GetA
 }
 
 // GetUcScorecard - Retrieve a scorecard
+// Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Scorecard) GetUcScorecard(ctx context.Context, request operations.GetUcScorecardRequest, opts ...operations.Option) (*operations.GetUcScorecardResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Scorecard) GetUcScorecard(ctx context.Context, request operations.GetUc
 }
 
 // ListAtsScorecards - List all scorecards
+// Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Scorecard) ListAtsScorecards(ctx context.Context, request operations.ListAtsScorecardsRequest, opts ...operations.Option) (*operations.ListAtsScorecardsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -866,6 +870,7 @@ func (s *Scorecard) ListAtsScorecards(ctx context.Context, request operations.Li
 }
 
 // ListUcScorecards - List all scorecards
+// Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Scorecard) ListUcScorecards(ctx context.Context, request operations.ListUcScorecardsRequest, opts ...operations.Option) (*operations.ListUcScorecardsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1073,6 +1078,7 @@ func (s *Scorecard) ListUcScorecards(ctx context.Context, request operations.Lis
 }
 
 // PatchAtsScorecard - Update a scorecard
+// Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 func (s *Scorecard) PatchAtsScorecard(ctx context.Context, request operations.PatchAtsScorecardRequest, opts ...operations.Option) (*operations.PatchAtsScorecardResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1287,6 +1293,7 @@ func (s *Scorecard) PatchAtsScorecard(ctx context.Context, request operations.Pa
 }
 
 // RemoveAtsScorecard - Remove a scorecard
+// Deletes the AtsScorecard identified by `id`.
 func (s *Scorecard) RemoveAtsScorecard(ctx context.Context, request operations.RemoveAtsScorecardRequest, opts ...operations.Option) (*operations.RemoveAtsScorecardResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1469,6 +1476,7 @@ func (s *Scorecard) RemoveAtsScorecard(ctx context.Context, request operations.R
 }
 
 // UpdateAtsScorecard - Update a scorecard
+// Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 func (s *Scorecard) UpdateAtsScorecard(ctx context.Context, request operations.UpdateAtsScorecardRequest, opts ...operations.Option) (*operations.UpdateAtsScorecardResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

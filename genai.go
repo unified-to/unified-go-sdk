@@ -31,6 +31,7 @@ func newGenai(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 }
 
 // CreateGenaiAgent - Create an agent
+// Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to the provider's API. Returns the created GenaiAgent.
 func (s *Genai) CreateGenaiAgent(ctx context.Context, request operations.CreateGenaiAgentRequest, opts ...operations.Option) (*operations.CreateGenaiAgentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Genai) CreateGenaiAgent(ctx context.Context, request operations.CreateG
 }
 
 // CreateGenaiEmbedding - Create an embedding
+// Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are mapped to the provider's API. Returns the created GenaiEmbedding.
 func (s *Genai) CreateGenaiEmbedding(ctx context.Context, request operations.CreateGenaiEmbeddingRequest, opts ...operations.Option) (*operations.CreateGenaiEmbeddingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Genai) CreateGenaiEmbedding(ctx context.Context, request operations.Cre
 }
 
 // CreateGenaiMemory - Create a memory
+// Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped to the provider's API. Returns the created GenaiMemory.
 func (s *Genai) CreateGenaiMemory(ctx context.Context, request operations.CreateGenaiMemoryRequest, opts ...operations.Option) (*operations.CreateGenaiMemoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Genai) CreateGenaiMemory(ctx context.Context, request operations.Create
 }
 
 // CreateGenaiOrganization - Create an organization
+// Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they are mapped to the provider's API. Returns the created GenaiOrganization.
 func (s *Genai) CreateGenaiOrganization(ctx context.Context, request operations.CreateGenaiOrganizationRequest, opts ...operations.Option) (*operations.CreateGenaiOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -887,6 +891,7 @@ func (s *Genai) CreateGenaiOrganization(ctx context.Context, request operations.
 }
 
 // CreateGenaiPrompt - Create a prompt
+// Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped to the provider's API. Returns the created GenaiPrompt.
 func (s *Genai) CreateGenaiPrompt(ctx context.Context, request operations.CreateGenaiPromptRequest, opts ...operations.Option) (*operations.CreateGenaiPromptResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1101,6 +1106,7 @@ func (s *Genai) CreateGenaiPrompt(ctx context.Context, request operations.Create
 }
 
 // CreateGenaiTask - Create a task
+// Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to the provider's API. Returns the created GenaiTask.
 func (s *Genai) CreateGenaiTask(ctx context.Context, request operations.CreateGenaiTaskRequest, opts ...operations.Option) (*operations.CreateGenaiTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1315,6 +1321,7 @@ func (s *Genai) CreateGenaiTask(ctx context.Context, request operations.CreateGe
 }
 
 // GetGenaiAgent - Retrieve an agent
+// Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Genai) GetGenaiAgent(ctx context.Context, request operations.GetGenaiAgentRequest, opts ...operations.Option) (*operations.GetGenaiAgentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1522,6 +1529,7 @@ func (s *Genai) GetGenaiAgent(ctx context.Context, request operations.GetGenaiAg
 }
 
 // GetGenaiMemory - Retrieve a memory
+// Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Genai) GetGenaiMemory(ctx context.Context, request operations.GetGenaiMemoryRequest, opts ...operations.Option) (*operations.GetGenaiMemoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1729,6 +1737,7 @@ func (s *Genai) GetGenaiMemory(ctx context.Context, request operations.GetGenaiM
 }
 
 // GetGenaiModel - Retrieve a model
+// Retrieves a single GenaiModel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Genai) GetGenaiModel(ctx context.Context, request operations.GetGenaiModelRequest, opts ...operations.Option) (*operations.GetGenaiModelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1936,6 +1945,7 @@ func (s *Genai) GetGenaiModel(ctx context.Context, request operations.GetGenaiMo
 }
 
 // GetGenaiOrganization - Retrieve an organization
+// Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Genai) GetGenaiOrganization(ctx context.Context, request operations.GetGenaiOrganizationRequest, opts ...operations.Option) (*operations.GetGenaiOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2143,6 +2153,7 @@ func (s *Genai) GetGenaiOrganization(ctx context.Context, request operations.Get
 }
 
 // GetGenaiSkill - Retrieve a skill
+// Retrieves a single GenaiSkill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Genai) GetGenaiSkill(ctx context.Context, request operations.GetGenaiSkillRequest, opts ...operations.Option) (*operations.GetGenaiSkillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2350,6 +2361,7 @@ func (s *Genai) GetGenaiSkill(ctx context.Context, request operations.GetGenaiSk
 }
 
 // GetGenaiTask - Retrieve a task
+// Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Genai) GetGenaiTask(ctx context.Context, request operations.GetGenaiTaskRequest, opts ...operations.Option) (*operations.GetGenaiTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2557,6 +2569,7 @@ func (s *Genai) GetGenaiTask(ctx context.Context, request operations.GetGenaiTas
 }
 
 // ListGenaiAgents - List all agents
+// Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Genai) ListGenaiAgents(ctx context.Context, request operations.ListGenaiAgentsRequest, opts ...operations.Option) (*operations.ListGenaiAgentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2764,6 +2777,7 @@ func (s *Genai) ListGenaiAgents(ctx context.Context, request operations.ListGena
 }
 
 // ListGenaiMemories - List all memories
+// Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Genai) ListGenaiMemories(ctx context.Context, request operations.ListGenaiMemoriesRequest, opts ...operations.Option) (*operations.ListGenaiMemoriesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2971,6 +2985,7 @@ func (s *Genai) ListGenaiMemories(ctx context.Context, request operations.ListGe
 }
 
 // ListGenaiModels - List all models
+// Returns a list of GenaiModels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Genai) ListGenaiModels(ctx context.Context, request operations.ListGenaiModelsRequest, opts ...operations.Option) (*operations.ListGenaiModelsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3178,6 +3193,7 @@ func (s *Genai) ListGenaiModels(ctx context.Context, request operations.ListGena
 }
 
 // ListGenaiOrganizations - List all organizations
+// Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Genai) ListGenaiOrganizations(ctx context.Context, request operations.ListGenaiOrganizationsRequest, opts ...operations.Option) (*operations.ListGenaiOrganizationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3385,6 +3401,7 @@ func (s *Genai) ListGenaiOrganizations(ctx context.Context, request operations.L
 }
 
 // ListGenaiSkills - List all skills
+// Returns a list of GenaiSkills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Genai) ListGenaiSkills(ctx context.Context, request operations.ListGenaiSkillsRequest, opts ...operations.Option) (*operations.ListGenaiSkillsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3592,6 +3609,7 @@ func (s *Genai) ListGenaiSkills(ctx context.Context, request operations.ListGena
 }
 
 // ListGenaiTasks - List all tasks
+// Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Genai) ListGenaiTasks(ctx context.Context, request operations.ListGenaiTasksRequest, opts ...operations.Option) (*operations.ListGenaiTasksResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3799,6 +3817,7 @@ func (s *Genai) ListGenaiTasks(ctx context.Context, request operations.ListGenai
 }
 
 // PatchGenaiAgent - Update an agent
+// Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 func (s *Genai) PatchGenaiAgent(ctx context.Context, request operations.PatchGenaiAgentRequest, opts ...operations.Option) (*operations.PatchGenaiAgentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4013,6 +4032,7 @@ func (s *Genai) PatchGenaiAgent(ctx context.Context, request operations.PatchGen
 }
 
 // PatchGenaiMemory - Update a memory
+// Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
 func (s *Genai) PatchGenaiMemory(ctx context.Context, request operations.PatchGenaiMemoryRequest, opts ...operations.Option) (*operations.PatchGenaiMemoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4227,6 +4247,7 @@ func (s *Genai) PatchGenaiMemory(ctx context.Context, request operations.PatchGe
 }
 
 // PatchGenaiOrganization - Update an organization
+// Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 func (s *Genai) PatchGenaiOrganization(ctx context.Context, request operations.PatchGenaiOrganizationRequest, opts ...operations.Option) (*operations.PatchGenaiOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4441,6 +4462,7 @@ func (s *Genai) PatchGenaiOrganization(ctx context.Context, request operations.P
 }
 
 // PatchGenaiTask - Update a task
+// Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 func (s *Genai) PatchGenaiTask(ctx context.Context, request operations.PatchGenaiTaskRequest, opts ...operations.Option) (*operations.PatchGenaiTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4655,6 +4677,7 @@ func (s *Genai) PatchGenaiTask(ctx context.Context, request operations.PatchGena
 }
 
 // RemoveGenaiAgent - Remove an agent
+// Deletes the GenaiAgent identified by `id`.
 func (s *Genai) RemoveGenaiAgent(ctx context.Context, request operations.RemoveGenaiAgentRequest, opts ...operations.Option) (*operations.RemoveGenaiAgentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4837,6 +4860,7 @@ func (s *Genai) RemoveGenaiAgent(ctx context.Context, request operations.RemoveG
 }
 
 // RemoveGenaiMemory - Remove a memory
+// Deletes the GenaiMemory identified by `id`.
 func (s *Genai) RemoveGenaiMemory(ctx context.Context, request operations.RemoveGenaiMemoryRequest, opts ...operations.Option) (*operations.RemoveGenaiMemoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5019,6 +5043,7 @@ func (s *Genai) RemoveGenaiMemory(ctx context.Context, request operations.Remove
 }
 
 // RemoveGenaiOrganization - Remove an organization
+// Deletes the GenaiOrganization identified by `id`.
 func (s *Genai) RemoveGenaiOrganization(ctx context.Context, request operations.RemoveGenaiOrganizationRequest, opts ...operations.Option) (*operations.RemoveGenaiOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5201,6 +5226,7 @@ func (s *Genai) RemoveGenaiOrganization(ctx context.Context, request operations.
 }
 
 // RemoveGenaiSkill - Remove a skill
+// Deletes the GenaiSkill identified by `id`.
 func (s *Genai) RemoveGenaiSkill(ctx context.Context, request operations.RemoveGenaiSkillRequest, opts ...operations.Option) (*operations.RemoveGenaiSkillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5383,6 +5409,7 @@ func (s *Genai) RemoveGenaiSkill(ctx context.Context, request operations.RemoveG
 }
 
 // RemoveGenaiTask - Remove a task
+// Deletes the GenaiTask identified by `id`.
 func (s *Genai) RemoveGenaiTask(ctx context.Context, request operations.RemoveGenaiTaskRequest, opts ...operations.Option) (*operations.RemoveGenaiTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5565,6 +5592,7 @@ func (s *Genai) RemoveGenaiTask(ctx context.Context, request operations.RemoveGe
 }
 
 // UpdateGenaiAgent - Update an agent
+// Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 func (s *Genai) UpdateGenaiAgent(ctx context.Context, request operations.UpdateGenaiAgentRequest, opts ...operations.Option) (*operations.UpdateGenaiAgentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5779,6 +5807,7 @@ func (s *Genai) UpdateGenaiAgent(ctx context.Context, request operations.UpdateG
 }
 
 // UpdateGenaiMemory - Update a memory
+// Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
 func (s *Genai) UpdateGenaiMemory(ctx context.Context, request operations.UpdateGenaiMemoryRequest, opts ...operations.Option) (*operations.UpdateGenaiMemoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5993,6 +6022,7 @@ func (s *Genai) UpdateGenaiMemory(ctx context.Context, request operations.Update
 }
 
 // UpdateGenaiOrganization - Update an organization
+// Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 func (s *Genai) UpdateGenaiOrganization(ctx context.Context, request operations.UpdateGenaiOrganizationRequest, opts ...operations.Option) (*operations.UpdateGenaiOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6207,6 +6237,7 @@ func (s *Genai) UpdateGenaiOrganization(ctx context.Context, request operations.
 }
 
 // UpdateGenaiTask - Update a task
+// Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 func (s *Genai) UpdateGenaiTask(ctx context.Context, request operations.UpdateGenaiTaskRequest, opts ...operations.Option) (*operations.UpdateGenaiTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

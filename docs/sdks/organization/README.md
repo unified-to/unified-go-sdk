@@ -27,7 +27,7 @@
 
 ## CreateAdsOrganization
 
-Create an organization
+Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
 
 ### Example Usage
 
@@ -56,13 +56,13 @@ func main() {
             AccountNumber: unifiedgosdk.Pointer("LQUJx8zQBW"),
             CreatedAt: types.MustNewTimeFromString("2020-07-23T21:47:11.440Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("37fa02a7-2485-4c88-a329-c38febfa1be4"),
+            ID: unifiedgosdk.Pointer("f5896d7a-b8b5-4867-832d-d97788717610"),
             Managers: []shared.AdsManager{},
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Ankunding Inc"),
             Status: shared.AdsOrganizationStatusProcessing.ToPointer(),
             Timezone: unifiedgosdk.Pointer("Europe/Chisinau"),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-29T03:04:47.129Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-30T00:42:16.467Z"),
         },
         ConnectionID: "<id>",
     })
@@ -95,7 +95,7 @@ func main() {
 
 ## CreateGenaiOrganization
 
-Create an organization
+Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they are mapped to the provider's API. Returns the created GenaiOrganization.
 
 ### Example Usage
 
@@ -123,10 +123,10 @@ func main() {
         GenaiOrganization: shared.GenaiOrganization{
             CreatedAt: types.MustNewTimeFromString("2020-10-27T16:03:47.122Z"),
             Description: unifiedgosdk.Pointer("Voluptates abeo subseco."),
-            ID: unifiedgosdk.Pointer("f9efe1a2-99d3-49e7-b858-8a1f79714fb9"),
+            ID: unifiedgosdk.Pointer("979ae74f-14ff-48a7-ad20-609831f3425d"),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("officially about"),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-26T10:38:34.878Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-26T19:34:30.479Z"),
         },
         ConnectionID: "<id>",
     })
@@ -159,7 +159,7 @@ func main() {
 
 ## CreateRepoOrganization
 
-Create an organization
+Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
 
 ### Example Usage
 
@@ -188,10 +188,10 @@ func main() {
             AvatarURL: unifiedgosdk.Pointer("https://picsum.photos/seed/fGl6Lb/3157/3173"),
             CreatedAt: types.MustNewTimeFromString("2022-07-07T00:18:40.748Z"),
             Description: unifiedgosdk.Pointer("Trepide defendo supra testimonium ager."),
-            ID: unifiedgosdk.Pointer("d11dbf84-08b3-42b3-9028-bf71a50ce463"),
+            ID: unifiedgosdk.Pointer("933e206a-d0b9-4551-b0a1-48ec334aa3f3"),
             Metadata: []shared.RepoMetadata{},
             Name: unifiedgosdk.Pointer("Denesik - Lemke"),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-21T15:08:19.151Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-21T21:22:03.917Z"),
             WebURL: unifiedgosdk.Pointer("https://turbulent-overheard.biz"),
         },
         ConnectionID: "<id>",
@@ -225,7 +225,7 @@ func main() {
 
 ## GetAccountingOrganization
 
-Retrieve an organization
+Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -280,7 +280,7 @@ func main() {
 
 ## GetAdsOrganization
 
-Retrieve an organization
+Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -335,7 +335,7 @@ func main() {
 
 ## GetGenaiOrganization
 
-Retrieve an organization
+Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -390,7 +390,7 @@ func main() {
 
 ## GetRepoOrganization
 
-Retrieve an organization
+Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -445,7 +445,7 @@ func main() {
 
 ## ListAccountingOrganizations
 
-List all organizations
+Returns a list of AccountingOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -499,7 +499,7 @@ func main() {
 
 ## ListAdsOrganizations
 
-List all organizations
+Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -553,7 +553,7 @@ func main() {
 
 ## ListGenaiOrganizations
 
-List all organizations
+Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -607,7 +607,7 @@ func main() {
 
 ## ListRepoOrganizations
 
-List all organizations
+Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -661,7 +661,7 @@ func main() {
 
 ## PatchAdsOrganization
 
-Update an organization
+Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -690,13 +690,13 @@ func main() {
             AccountNumber: unifiedgosdk.Pointer("LQUJx8zQBW"),
             CreatedAt: types.MustNewTimeFromString("2020-07-23T21:47:11.440Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("dc95b21f-c5ad-4cb6-b1db-4c172e0343f0"),
+            ID: unifiedgosdk.Pointer("d88adc9e-4dfa-4add-881f-5451e79f73a9"),
             Managers: []shared.AdsManager{},
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Ankunding Inc"),
             Status: shared.AdsOrganizationStatusProcessing.ToPointer(),
             Timezone: unifiedgosdk.Pointer("Europe/Chisinau"),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-29T03:04:47.143Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-30T00:42:16.483Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -730,7 +730,7 @@ func main() {
 
 ## PatchGenaiOrganization
 
-Update an organization
+Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -758,10 +758,10 @@ func main() {
         GenaiOrganization: shared.GenaiOrganization{
             CreatedAt: types.MustNewTimeFromString("2020-10-27T16:03:47.122Z"),
             Description: unifiedgosdk.Pointer("Voluptates abeo subseco."),
-            ID: unifiedgosdk.Pointer("8efc655b-1348-44e4-92a1-1ab5ab8473bc"),
+            ID: unifiedgosdk.Pointer("f8be95c0-9ebe-4e98-8012-81311a8cd9b5"),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("officially about"),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-26T10:38:34.880Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-26T19:34:30.483Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -795,7 +795,7 @@ func main() {
 
 ## PatchRepoOrganization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -824,10 +824,10 @@ func main() {
             AvatarURL: unifiedgosdk.Pointer("https://picsum.photos/seed/fGl6Lb/3157/3173"),
             CreatedAt: types.MustNewTimeFromString("2022-07-07T00:18:40.748Z"),
             Description: unifiedgosdk.Pointer("Trepide defendo supra testimonium ager."),
-            ID: unifiedgosdk.Pointer("5e3f6bde-51ce-47b1-bc1a-309e3993a0df"),
+            ID: unifiedgosdk.Pointer("85be66a9-5510-4ada-ac47-f32a603fd07c"),
             Metadata: []shared.RepoMetadata{},
             Name: unifiedgosdk.Pointer("Denesik - Lemke"),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-21T15:08:19.154Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-21T21:22:03.920Z"),
             WebURL: unifiedgosdk.Pointer("https://turbulent-overheard.biz"),
         },
         ConnectionID: "<id>",
@@ -862,7 +862,7 @@ func main() {
 
 ## RemoveAdsOrganization
 
-Remove an organization
+Deletes the AdsOrganization identified by `id`.
 
 ### Example Usage
 
@@ -917,7 +917,7 @@ func main() {
 
 ## RemoveGenaiOrganization
 
-Remove an organization
+Deletes the GenaiOrganization identified by `id`.
 
 ### Example Usage
 
@@ -972,7 +972,7 @@ func main() {
 
 ## RemoveRepoOrganization
 
-Remove an organization
+Deletes the RepoOrganization identified by `id`.
 
 ### Example Usage
 
@@ -1027,7 +1027,7 @@ func main() {
 
 ## UpdateAdsOrganization
 
-Update an organization
+Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1056,13 +1056,13 @@ func main() {
             AccountNumber: unifiedgosdk.Pointer("LQUJx8zQBW"),
             CreatedAt: types.MustNewTimeFromString("2020-07-23T21:47:11.440Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("dc95b21f-c5ad-4cb6-b1db-4c172e0343f0"),
+            ID: unifiedgosdk.Pointer("d88adc9e-4dfa-4add-881f-5451e79f73a9"),
             Managers: []shared.AdsManager{},
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Ankunding Inc"),
             Status: shared.AdsOrganizationStatusProcessing.ToPointer(),
             Timezone: unifiedgosdk.Pointer("Europe/Chisinau"),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-29T03:04:47.143Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-30T00:42:16.483Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1096,7 +1096,7 @@ func main() {
 
 ## UpdateGenaiOrganization
 
-Update an organization
+Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1124,10 +1124,10 @@ func main() {
         GenaiOrganization: shared.GenaiOrganization{
             CreatedAt: types.MustNewTimeFromString("2020-10-27T16:03:47.122Z"),
             Description: unifiedgosdk.Pointer("Voluptates abeo subseco."),
-            ID: unifiedgosdk.Pointer("8efc655b-1348-44e4-92a1-1ab5ab8473bc"),
+            ID: unifiedgosdk.Pointer("f8be95c0-9ebe-4e98-8012-81311a8cd9b5"),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("officially about"),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-26T10:38:34.880Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-26T19:34:30.483Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1161,7 +1161,7 @@ func main() {
 
 ## UpdateRepoOrganization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1190,10 +1190,10 @@ func main() {
             AvatarURL: unifiedgosdk.Pointer("https://picsum.photos/seed/fGl6Lb/3157/3173"),
             CreatedAt: types.MustNewTimeFromString("2022-07-07T00:18:40.748Z"),
             Description: unifiedgosdk.Pointer("Trepide defendo supra testimonium ager."),
-            ID: unifiedgosdk.Pointer("5e3f6bde-51ce-47b1-bc1a-309e3993a0df"),
+            ID: unifiedgosdk.Pointer("85be66a9-5510-4ada-ac47-f32a603fd07c"),
             Metadata: []shared.RepoMetadata{},
             Name: unifiedgosdk.Pointer("Denesik - Lemke"),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-21T15:08:19.154Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-21T21:22:03.920Z"),
             WebURL: unifiedgosdk.Pointer("https://turbulent-overheard.biz"),
         },
         ConnectionID: "<id>",

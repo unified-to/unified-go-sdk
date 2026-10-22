@@ -31,6 +31,7 @@ func newDomain(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 }
 
 // CreateComputeDomain - Create a domain
+// Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are mapped to the provider's API. Returns the created ComputeDomain.
 func (s *Domain) CreateComputeDomain(ctx context.Context, request operations.CreateComputeDomainRequest, opts ...operations.Option) (*operations.CreateComputeDomainResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Domain) CreateComputeDomain(ctx context.Context, request operations.Cre
 }
 
 // GetComputeDomain - Retrieve a domain
+// Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Domain) GetComputeDomain(ctx context.Context, request operations.GetComputeDomainRequest, opts ...operations.Option) (*operations.GetComputeDomainResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Domain) GetComputeDomain(ctx context.Context, request operations.GetCom
 }
 
 // ListComputeDomains - List all domains
+// Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Domain) ListComputeDomains(ctx context.Context, request operations.ListComputeDomainsRequest, opts ...operations.Option) (*operations.ListComputeDomainsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Domain) ListComputeDomains(ctx context.Context, request operations.List
 }
 
 // PatchComputeDomain - Update a domain
+// Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 func (s *Domain) PatchComputeDomain(ctx context.Context, request operations.PatchComputeDomainRequest, opts ...operations.Option) (*operations.PatchComputeDomainResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Domain) PatchComputeDomain(ctx context.Context, request operations.Patc
 }
 
 // RemoveComputeDomain - Remove a domain
+// Deletes the ComputeDomain identified by `id`.
 func (s *Domain) RemoveComputeDomain(ctx context.Context, request operations.RemoveComputeDomainRequest, opts ...operations.Option) (*operations.RemoveComputeDomainResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Domain) RemoveComputeDomain(ctx context.Context, request operations.Rem
 }
 
 // UpdateComputeDomain - Update a domain
+// Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 func (s *Domain) UpdateComputeDomain(ctx context.Context, request operations.UpdateComputeDomainRequest, opts ...operations.Option) (*operations.UpdateComputeDomainResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

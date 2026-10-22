@@ -25,7 +25,7 @@
 
 ## CreateAccountingContact
 
-Create a contact
+Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they are mapped to the provider's API. Returns the created AccountingContact.
 
 ### Example Usage
 
@@ -75,7 +75,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Delores"),
-            ID: unifiedgosdk.Pointer("5ed9cc63-e0d5-4b24-8c5f-3e0e3ae59897"),
+            ID: unifiedgosdk.Pointer("fdf93d62-2079-4d04-a659-6a963caddc00"),
             Identification: unifiedgosdk.Pointer("531850872"),
             IsActive: unifiedgosdk.Pointer(true),
             IsCustomer: unifiedgosdk.Pointer(true),
@@ -86,7 +86,7 @@ func main() {
             PaymentMethods: []shared.AccountingContactPaymentMethod{
                 shared.AccountingContactPaymentMethod{
                     Default: unifiedgosdk.Pointer(true),
-                    ID: unifiedgosdk.Pointer("e1e27032-ccb2-4ac9-b501-b3a64c114b9f"),
+                    ID: unifiedgosdk.Pointer("8636e7f8-2c88-4c9e-9549-3751ae2979e6"),
                     Name: unifiedgosdk.Pointer("Visa 7844"),
                     Type: shared.AccountingContactPaymentMethodTypeCard,
                 },
@@ -108,7 +108,7 @@ func main() {
                     Type: shared.AccountingTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2023-12-19T20:51:25.364Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-20T07:36:45.907Z"),
             Website: unifiedgosdk.Pointer("https://kertzmanngroup.com"),
         },
         ConnectionID: "<id>",
@@ -142,7 +142,7 @@ func main() {
 
 ## CreateCrmContact
 
-Create a contact
+Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to the provider's API. Returns the created CrmContact.
 
 ### Example Usage
 
@@ -186,7 +186,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Mohammad"),
-            ID: unifiedgosdk.Pointer("300f2e85-3d9e-4075-840a-4fd9fe523962"),
+            ID: unifiedgosdk.Pointer("6be397fd-fb29-4e99-a32c-895bf4fc4e3a"),
             ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/26803724"),
             LastName: unifiedgosdk.Pointer("Bartell"),
             LinkUrls: []string{
@@ -200,7 +200,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("f5f35195-7412-4359-8cd1-f82139af7291"),
+                    ID: unifiedgosdk.Pointer("c1ac2149-70d3-459b-b9d2-79bef51441d7"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -220,7 +220,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("National Tactics Analyst"),
-            UpdatedAt: types.MustNewTimeFromString("2021-02-24T05:06:32.253Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-24T05:42:21.126Z"),
         },
         ConnectionID: "<id>",
     })
@@ -253,7 +253,7 @@ func main() {
 
 ## CreateUcContact
 
-Create a contact
+Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to the provider's API. Returns the created UcContact.
 
 ### Example Usage
 
@@ -288,7 +288,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Luther"),
-            ID: unifiedgosdk.Pointer("16034c6d-9641-43cf-88ab-f1dafcdc65e2"),
+            ID: unifiedgosdk.Pointer("07d54d1d-38a4-4c25-aa39-d52da829527a"),
             LastName: unifiedgosdk.Pointer("Rogahn"),
             Metadata: []shared.UcMetadata{},
             Name: unifiedgosdk.Pointer("Luther Rogahn"),
@@ -307,7 +307,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Chief Optimization Executive"),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-08T09:06:39.793Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-08T23:06:51.843Z"),
         },
         ConnectionID: "<id>",
     })
@@ -340,7 +340,7 @@ func main() {
 
 ## GetAccountingContact
 
-Retrieve a contact
+Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -395,7 +395,7 @@ func main() {
 
 ## GetCrmContact
 
-Retrieve a contact
+Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -450,7 +450,7 @@ func main() {
 
 ## GetUcContact
 
-Retrieve a contact
+Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -505,7 +505,7 @@ func main() {
 
 ## ListAccountingContacts
 
-List all contacts
+Returns a list of AccountingContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -559,7 +559,7 @@ func main() {
 
 ## ListCrmContacts
 
-List all contacts
+Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -613,7 +613,7 @@ func main() {
 
 ## ListUcContacts
 
-List all contacts
+Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -667,7 +667,7 @@ func main() {
 
 ## PatchAccountingContact
 
-Update a contact
+Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
 ### Example Usage
 
@@ -717,7 +717,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Delores"),
-            ID: unifiedgosdk.Pointer("f99279d9-5e04-4e2f-aac5-98630e0e6481"),
+            ID: unifiedgosdk.Pointer("2094babf-af16-43a0-af2f-3f8e8126dab1"),
             Identification: unifiedgosdk.Pointer("531850872"),
             IsActive: unifiedgosdk.Pointer(true),
             IsCustomer: unifiedgosdk.Pointer(true),
@@ -728,7 +728,7 @@ func main() {
             PaymentMethods: []shared.AccountingContactPaymentMethod{
                 shared.AccountingContactPaymentMethod{
                     Default: unifiedgosdk.Pointer(true),
-                    ID: unifiedgosdk.Pointer("c10d1ec1-1157-467d-97e9-a468cfcb5576"),
+                    ID: unifiedgosdk.Pointer("4b732532-2bc6-4d80-8805-357304c02d5a"),
                     Name: unifiedgosdk.Pointer("Visa 7844"),
                     Type: shared.AccountingContactPaymentMethodTypeCard,
                 },
@@ -750,7 +750,7 @@ func main() {
                     Type: shared.AccountingTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2023-12-19T20:51:25.388Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-20T07:36:45.925Z"),
             Website: unifiedgosdk.Pointer("https://kertzmanngroup.com"),
         },
         ConnectionID: "<id>",
@@ -785,7 +785,7 @@ func main() {
 
 ## PatchCrmContact
 
-Update a contact
+Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
 ### Example Usage
 
@@ -829,7 +829,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Mohammad"),
-            ID: unifiedgosdk.Pointer("6ed2fb9f-37d9-4e9b-94e4-71fc8efcf77f"),
+            ID: unifiedgosdk.Pointer("86854558-d801-4b6a-8b08-c5c9087fc5c5"),
             ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/26803724"),
             LastName: unifiedgosdk.Pointer("Bartell"),
             LinkUrls: []string{
@@ -843,7 +843,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("ae413485-8c49-40a3-833a-1a5f212c344f"),
+                    ID: unifiedgosdk.Pointer("e061d87c-c4a7-4741-8734-8aca32ffae2c"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -863,7 +863,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("National Tactics Analyst"),
-            UpdatedAt: types.MustNewTimeFromString("2021-02-24T05:06:32.254Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-24T05:42:21.127Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -897,7 +897,7 @@ func main() {
 
 ## PatchUcContact
 
-Update a contact
+Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 
 ### Example Usage
 
@@ -932,7 +932,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Luther"),
-            ID: unifiedgosdk.Pointer("3d110359-50a8-4975-82a9-90517f97f779"),
+            ID: unifiedgosdk.Pointer("62d40703-2d73-48d4-98f9-bd4bfc5324d5"),
             LastName: unifiedgosdk.Pointer("Rogahn"),
             Metadata: []shared.UcMetadata{},
             Name: unifiedgosdk.Pointer("Luther Rogahn"),
@@ -951,7 +951,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Chief Optimization Executive"),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-08T09:06:39.805Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-08T23:06:51.851Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -985,7 +985,7 @@ func main() {
 
 ## RemoveAccountingContact
 
-Remove a contact
+Deletes the AccountingContact identified by `id`.
 
 ### Example Usage
 
@@ -1040,7 +1040,7 @@ func main() {
 
 ## RemoveCrmContact
 
-Remove a contact
+Deletes the CrmContact identified by `id`.
 
 ### Example Usage
 
@@ -1095,7 +1095,7 @@ func main() {
 
 ## RemoveUcContact
 
-Remove a contact
+Deletes the UcContact identified by `id`.
 
 ### Example Usage
 
@@ -1150,7 +1150,7 @@ func main() {
 
 ## UpdateAccountingContact
 
-Update a contact
+Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1200,7 +1200,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Delores"),
-            ID: unifiedgosdk.Pointer("f99279d9-5e04-4e2f-aac5-98630e0e6481"),
+            ID: unifiedgosdk.Pointer("2094babf-af16-43a0-af2f-3f8e8126dab1"),
             Identification: unifiedgosdk.Pointer("531850872"),
             IsActive: unifiedgosdk.Pointer(true),
             IsCustomer: unifiedgosdk.Pointer(true),
@@ -1211,7 +1211,7 @@ func main() {
             PaymentMethods: []shared.AccountingContactPaymentMethod{
                 shared.AccountingContactPaymentMethod{
                     Default: unifiedgosdk.Pointer(true),
-                    ID: unifiedgosdk.Pointer("c10d1ec1-1157-467d-97e9-a468cfcb5576"),
+                    ID: unifiedgosdk.Pointer("4b732532-2bc6-4d80-8805-357304c02d5a"),
                     Name: unifiedgosdk.Pointer("Visa 7844"),
                     Type: shared.AccountingContactPaymentMethodTypeCard,
                 },
@@ -1233,7 +1233,7 @@ func main() {
                     Type: shared.AccountingTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2023-12-19T20:51:25.388Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-20T07:36:45.925Z"),
             Website: unifiedgosdk.Pointer("https://kertzmanngroup.com"),
         },
         ConnectionID: "<id>",
@@ -1268,7 +1268,7 @@ func main() {
 
 ## UpdateCrmContact
 
-Update a contact
+Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1312,7 +1312,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Mohammad"),
-            ID: unifiedgosdk.Pointer("6ed2fb9f-37d9-4e9b-94e4-71fc8efcf77f"),
+            ID: unifiedgosdk.Pointer("86854558-d801-4b6a-8b08-c5c9087fc5c5"),
             ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/26803724"),
             LastName: unifiedgosdk.Pointer("Bartell"),
             LinkUrls: []string{
@@ -1326,7 +1326,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("ae413485-8c49-40a3-833a-1a5f212c344f"),
+                    ID: unifiedgosdk.Pointer("e061d87c-c4a7-4741-8734-8aca32ffae2c"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -1346,7 +1346,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("National Tactics Analyst"),
-            UpdatedAt: types.MustNewTimeFromString("2021-02-24T05:06:32.254Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-24T05:42:21.127Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1380,7 +1380,7 @@ func main() {
 
 ## UpdateUcContact
 
-Update a contact
+Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1415,7 +1415,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Luther"),
-            ID: unifiedgosdk.Pointer("3d110359-50a8-4975-82a9-90517f97f779"),
+            ID: unifiedgosdk.Pointer("62d40703-2d73-48d4-98f9-bd4bfc5324d5"),
             LastName: unifiedgosdk.Pointer("Rogahn"),
             Metadata: []shared.UcMetadata{},
             Name: unifiedgosdk.Pointer("Luther Rogahn"),
@@ -1434,7 +1434,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Chief Optimization Executive"),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-08T09:06:39.805Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-08T23:06:51.851Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

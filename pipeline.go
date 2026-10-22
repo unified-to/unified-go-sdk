@@ -31,6 +31,7 @@ func newPipeline(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateCrmPipeline - Create a pipeline
+// Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped to the provider's API. Returns the created CrmPipeline.
 func (s *Pipeline) CreateCrmPipeline(ctx context.Context, request operations.CreateCrmPipelineRequest, opts ...operations.Option) (*operations.CreateCrmPipelineResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Pipeline) CreateCrmPipeline(ctx context.Context, request operations.Cre
 }
 
 // GetCrmPipeline - Retrieve a pipeline
+// Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Pipeline) GetCrmPipeline(ctx context.Context, request operations.GetCrmPipelineRequest, opts ...operations.Option) (*operations.GetCrmPipelineResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Pipeline) GetCrmPipeline(ctx context.Context, request operations.GetCrm
 }
 
 // ListCrmPipelines - List all pipelines
+// Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Pipeline) ListCrmPipelines(ctx context.Context, request operations.ListCrmPipelinesRequest, opts ...operations.Option) (*operations.ListCrmPipelinesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Pipeline) ListCrmPipelines(ctx context.Context, request operations.List
 }
 
 // PatchCrmPipeline - Update a pipeline
+// Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 func (s *Pipeline) PatchCrmPipeline(ctx context.Context, request operations.PatchCrmPipelineRequest, opts ...operations.Option) (*operations.PatchCrmPipelineResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Pipeline) PatchCrmPipeline(ctx context.Context, request operations.Patc
 }
 
 // RemoveCrmPipeline - Remove a pipeline
+// Deletes the CrmPipeline identified by `id`.
 func (s *Pipeline) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCrmPipelineRequest, opts ...operations.Option) (*operations.RemoveCrmPipelineResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Pipeline) RemoveCrmPipeline(ctx context.Context, request operations.Rem
 }
 
 // UpdateCrmPipeline - Update a pipeline
+// Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 func (s *Pipeline) UpdateCrmPipeline(ctx context.Context, request operations.UpdateCrmPipelineRequest, opts ...operations.Option) (*operations.UpdateCrmPipelineResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

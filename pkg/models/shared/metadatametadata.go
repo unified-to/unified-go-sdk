@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// MetadataMetadataFormat - The data type of the custom field's values
 type MetadataMetadataFormat string
 
 const (
@@ -42,12 +43,14 @@ func (e *MetadataMetadataFormat) IsExact() bool {
 
 type MetadataMetadata struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt *time.Time              `json:"created_at,omitempty"`
-	Format    *MetadataMetadataFormat `json:"format,omitempty"`
-	ID        *string                 `json:"id,omitempty"`
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// The data type of the custom field's values
+	Format *MetadataMetadataFormat `json:"format,omitempty"`
+	ID     *string                 `json:"id,omitempty"`
 	// When true, this metadata slug is required for create for this integration.
-	IsRequired *bool  `json:"is_required,omitempty"`
-	Name       string `json:"name"`
+	IsRequired *bool `json:"is_required,omitempty"`
+	// The display name of the custom field
+	Name string `json:"name"`
 	// This is the unified object type that this metadata is associated with. eg. crm_contact or commerce_item
 	ObjectType     string            `json:"object_type"`
 	Objects        map[string]string `json:"objects,omitempty"`

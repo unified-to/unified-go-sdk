@@ -37,7 +37,7 @@
 
 ## CreateHealthcareAppointment
 
-Create an appointment
+Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
 
 ### Example Usage
 
@@ -66,7 +66,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-11T08:16:20.874Z"),
             Description: unifiedgosdk.Pointer("clarus aptus cetera"),
             EndAt: types.MustNewTimeFromString("2023-12-12T13:04:41.451Z"),
-            ID: unifiedgosdk.Pointer("e57d4ec5-b3c7-47c7-bf0d-adb561ff2349"),
+            ID: unifiedgosdk.Pointer("26c0c976-c996-4dbb-8b58-5166dbe67220"),
             Metadata: []shared.HealthcareMetadata{},
             PractitionerIds: []string{},
             Reasons: []shared.HealthcareCode{
@@ -86,7 +86,7 @@ func main() {
             SlotIds: []string{},
             StartAt: types.MustNewTimeFromString("2023-12-12T12:34:41.451Z"),
             Status: shared.HealthcareAppointmentStatusBooked.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-19T10:41:19.860Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-20T04:16:13.523Z"),
         },
         ConnectionID: "<id>",
     })
@@ -119,7 +119,7 @@ func main() {
 
 ## CreateHealthcareObservation
 
-Create an observation
+Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request body; they are mapped to the provider's API. Returns the created HealthcareObservation.
 
 ### Example Usage
 
@@ -177,15 +177,15 @@ func main() {
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2022-12-06T21:34:04.293Z"),
-            ID: unifiedgosdk.Pointer("c618a863-9850-40c0-979c-241f62edc05a"),
+            ID: unifiedgosdk.Pointer("3d95939a-fd15-4205-a9a7-8996dcd8717c"),
             Interpretation: shared.InterpretationCriticalHigh.ToPointer(),
-            IssuedAt: types.MustNewTimeFromString("2025-05-11T10:29:32.163Z"),
+            IssuedAt: types.MustNewTimeFromString("2025-05-12T01:23:42.793Z"),
             Metadata: []shared.HealthcareMetadata{},
             Name: unifiedgosdk.Pointer("Blood pressure panel"),
-            ObservedAt: types.MustNewTimeFromString("2025-01-20T04:00:19.834Z"),
+            ObservedAt: types.MustNewTimeFromString("2025-01-20T17:02:16.723Z"),
             Status: shared.HealthcareObservationStatusCorrected.ToPointer(),
             Type: shared.HealthcareObservationTypeVitalSigns.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-24T06:24:42.917Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-25T02:38:27.139Z"),
         },
         ConnectionID: "<id>",
     })
@@ -218,7 +218,7 @@ func main() {
 
 ## CreateHealthcarePatient
 
-Create a patient
+Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they are mapped to the provider's API. Returns the created HealthcarePatient.
 
 ### Example Usage
 
@@ -251,7 +251,7 @@ func main() {
                 PostalCode: unifiedgosdk.Pointer("54031"),
                 Region: unifiedgosdk.Pointer("Nebraska"),
             },
-            Birthdate: unifiedgosdk.Pointer("2025-02-12"),
+            Birthdate: unifiedgosdk.Pointer("2025-02-13"),
             CreatedAt: types.MustNewTimeFromString("2021-06-05T21:08:04.917Z"),
             Emails: []shared.HealthcareEmail{
                 shared.HealthcareEmail{
@@ -261,7 +261,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Alejandrin"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("71bef0d8-2160-4fef-8b45-37b8a6bb244f"),
+            ID: unifiedgosdk.Pointer("bff90549-5920-4a01-933d-a669aa5b05f7"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -281,7 +281,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-22T20:18:33.735Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-23T18:37:32.861Z"),
         },
         ConnectionID: "<id>",
     })
@@ -314,7 +314,7 @@ func main() {
 
 ## GetHealthcareAllergy
 
-Retrieve an allergy
+Retrieves a single HealthcareAllergy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -369,7 +369,7 @@ func main() {
 
 ## GetHealthcareAppointment
 
-Retrieve an appointment
+Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -424,7 +424,7 @@ func main() {
 
 ## GetHealthcareCondition
 
-Retrieve a condition
+Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -479,7 +479,7 @@ func main() {
 
 ## GetHealthcareEncounter
 
-Retrieve an encounter
+Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -534,7 +534,7 @@ func main() {
 
 ## GetHealthcareImmunization
 
-Retrieve an immunization
+Retrieves a single HealthcareImmunization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -589,7 +589,7 @@ func main() {
 
 ## GetHealthcareLocation
 
-Retrieve a location
+Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -644,7 +644,7 @@ func main() {
 
 ## GetHealthcareMedication
 
-Retrieve a medication
+Retrieves a single HealthcareMedication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -699,7 +699,7 @@ func main() {
 
 ## GetHealthcareObservation
 
-Retrieve an observation
+Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -754,7 +754,7 @@ func main() {
 
 ## GetHealthcarePatient
 
-Retrieve a patient
+Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -809,7 +809,7 @@ func main() {
 
 ## GetHealthcarePractitioner
 
-Retrieve a practitioner
+Retrieves a single HealthcarePractitioner by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -864,7 +864,7 @@ func main() {
 
 ## GetHealthcareSlot
 
-Retrieve a slot
+Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -919,7 +919,7 @@ func main() {
 
 ## ListHealthcareAllergies
 
-List all allergies
+Returns a list of HealthcareAllergies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -973,7 +973,7 @@ func main() {
 
 ## ListHealthcareAppointments
 
-List all appointments
+Returns a list of HealthcareAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1027,7 +1027,7 @@ func main() {
 
 ## ListHealthcareConditions
 
-List all conditions
+Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1081,7 +1081,7 @@ func main() {
 
 ## ListHealthcareEncounters
 
-List all encounters
+Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1135,7 +1135,7 @@ func main() {
 
 ## ListHealthcareImmunizations
 
-List all immunizations
+Returns a list of HealthcareImmunizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1189,7 +1189,7 @@ func main() {
 
 ## ListHealthcareLocations
 
-List all locations
+Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1243,7 +1243,7 @@ func main() {
 
 ## ListHealthcareMedications
 
-List all medications
+Returns a list of HealthcareMedications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1297,7 +1297,7 @@ func main() {
 
 ## ListHealthcareObservations
 
-List all observations
+Returns a list of HealthcareObservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1351,7 +1351,7 @@ func main() {
 
 ## ListHealthcarePatients
 
-List all patients
+Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1405,7 +1405,7 @@ func main() {
 
 ## ListHealthcarePractitioners
 
-List all practitioners
+Returns a list of HealthcarePractitioners. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1459,7 +1459,7 @@ func main() {
 
 ## ListHealthcareSlots
 
-List all slots
+Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1513,7 +1513,7 @@ func main() {
 
 ## PatchHealthcareAppointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -1542,7 +1542,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-11T08:16:20.874Z"),
             Description: unifiedgosdk.Pointer("clarus aptus cetera"),
             EndAt: types.MustNewTimeFromString("2023-12-12T13:04:41.451Z"),
-            ID: unifiedgosdk.Pointer("cc805b15-1b9f-4db2-9608-a1472e62c59d"),
+            ID: unifiedgosdk.Pointer("76ec3204-d039-4780-a1a6-9d82e5c58b81"),
             Metadata: []shared.HealthcareMetadata{},
             PractitionerIds: []string{},
             Reasons: []shared.HealthcareCode{
@@ -1562,7 +1562,7 @@ func main() {
             SlotIds: []string{},
             StartAt: types.MustNewTimeFromString("2023-12-12T12:34:41.451Z"),
             Status: shared.HealthcareAppointmentStatusBooked.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-19T10:41:19.878Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-20T04:16:13.539Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1596,7 +1596,7 @@ func main() {
 
 ## PatchHealthcarePatient
 
-Update a patient
+Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
 ### Example Usage
 
@@ -1629,7 +1629,7 @@ func main() {
                 PostalCode: unifiedgosdk.Pointer("54031"),
                 Region: unifiedgosdk.Pointer("Nebraska"),
             },
-            Birthdate: unifiedgosdk.Pointer("2025-02-12"),
+            Birthdate: unifiedgosdk.Pointer("2025-02-13"),
             CreatedAt: types.MustNewTimeFromString("2021-06-05T21:08:04.917Z"),
             Emails: []shared.HealthcareEmail{
                 shared.HealthcareEmail{
@@ -1639,7 +1639,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Alejandrin"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("570149a1-cb28-49d2-861b-e9417dc279e4"),
+            ID: unifiedgosdk.Pointer("e0aa04a2-ee2c-4f84-963b-2cb8213f03bb"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -1659,7 +1659,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-22T20:18:33.752Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-23T18:37:32.888Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1693,7 +1693,7 @@ func main() {
 
 ## RemoveHealthcareAppointment
 
-Remove an appointment
+Deletes the HealthcareAppointment identified by `id`.
 
 ### Example Usage
 
@@ -1748,7 +1748,7 @@ func main() {
 
 ## UpdateHealthcareAppointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -1777,7 +1777,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-11T08:16:20.874Z"),
             Description: unifiedgosdk.Pointer("clarus aptus cetera"),
             EndAt: types.MustNewTimeFromString("2023-12-12T13:04:41.451Z"),
-            ID: unifiedgosdk.Pointer("cc805b15-1b9f-4db2-9608-a1472e62c59d"),
+            ID: unifiedgosdk.Pointer("76ec3204-d039-4780-a1a6-9d82e5c58b81"),
             Metadata: []shared.HealthcareMetadata{},
             PractitionerIds: []string{},
             Reasons: []shared.HealthcareCode{
@@ -1797,7 +1797,7 @@ func main() {
             SlotIds: []string{},
             StartAt: types.MustNewTimeFromString("2023-12-12T12:34:41.451Z"),
             Status: shared.HealthcareAppointmentStatusBooked.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-19T10:41:19.878Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-20T04:16:13.539Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1831,7 +1831,7 @@ func main() {
 
 ## UpdateHealthcarePatient
 
-Update a patient
+Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
 ### Example Usage
 
@@ -1864,7 +1864,7 @@ func main() {
                 PostalCode: unifiedgosdk.Pointer("54031"),
                 Region: unifiedgosdk.Pointer("Nebraska"),
             },
-            Birthdate: unifiedgosdk.Pointer("2025-02-12"),
+            Birthdate: unifiedgosdk.Pointer("2025-02-13"),
             CreatedAt: types.MustNewTimeFromString("2021-06-05T21:08:04.917Z"),
             Emails: []shared.HealthcareEmail{
                 shared.HealthcareEmail{
@@ -1874,7 +1874,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Alejandrin"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("570149a1-cb28-49d2-861b-e9417dc279e4"),
+            ID: unifiedgosdk.Pointer("e0aa04a2-ee2c-4f84-963b-2cb8213f03bb"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -1894,7 +1894,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-22T20:18:33.752Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-23T18:37:32.888Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

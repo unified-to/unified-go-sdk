@@ -31,6 +31,7 @@ func newBankfeedaccount(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, h
 }
 
 // CreateAccountingBankfeedaccount - Create a bankfeedaccount
+// Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
 func (s *Bankfeedaccount) CreateAccountingBankfeedaccount(ctx context.Context, request operations.CreateAccountingBankfeedaccountRequest, opts ...operations.Option) (*operations.CreateAccountingBankfeedaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Bankfeedaccount) CreateAccountingBankfeedaccount(ctx context.Context, r
 }
 
 // GetAccountingBankfeedaccount - Retrieve a bankfeedaccount
+// Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Bankfeedaccount) GetAccountingBankfeedaccount(ctx context.Context, request operations.GetAccountingBankfeedaccountRequest, opts ...operations.Option) (*operations.GetAccountingBankfeedaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Bankfeedaccount) GetAccountingBankfeedaccount(ctx context.Context, requ
 }
 
 // ListAccountingBankfeedaccounts - List all bankfeedaccounts
+// Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Bankfeedaccount) ListAccountingBankfeedaccounts(ctx context.Context, request operations.ListAccountingBankfeedaccountsRequest, opts ...operations.Option) (*operations.ListAccountingBankfeedaccountsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Bankfeedaccount) ListAccountingBankfeedaccounts(ctx context.Context, re
 }
 
 // PatchAccountingBankfeedaccount - Update a bankfeedaccount
+// Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 func (s *Bankfeedaccount) PatchAccountingBankfeedaccount(ctx context.Context, request operations.PatchAccountingBankfeedaccountRequest, opts ...operations.Option) (*operations.PatchAccountingBankfeedaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Bankfeedaccount) PatchAccountingBankfeedaccount(ctx context.Context, re
 }
 
 // RemoveAccountingBankfeedaccount - Remove a bankfeedaccount
+// Deletes the AccountingBankfeedaccount identified by `id`.
 func (s *Bankfeedaccount) RemoveAccountingBankfeedaccount(ctx context.Context, request operations.RemoveAccountingBankfeedaccountRequest, opts ...operations.Option) (*operations.RemoveAccountingBankfeedaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Bankfeedaccount) RemoveAccountingBankfeedaccount(ctx context.Context, r
 }
 
 // UpdateAccountingBankfeedaccount - Update a bankfeedaccount
+// Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 func (s *Bankfeedaccount) UpdateAccountingBankfeedaccount(ctx context.Context, request operations.UpdateAccountingBankfeedaccountRequest, opts ...operations.Option) (*operations.UpdateAccountingBankfeedaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

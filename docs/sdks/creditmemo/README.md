@@ -13,7 +13,7 @@
 
 ## CreateAccountingCreditmemo
 
-Create a creditmemo
+Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body; they are mapped to the provider's API. Returns the created AccountingCreditmemo.
 
 ### Example Usage
 
@@ -46,7 +46,7 @@ func main() {
             CreditmemoNumber: unifiedgosdk.Pointer("CM-99537"),
             Currency: unifiedgosdk.Pointer("AUD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("9c7c8eca-81ef-4776-840b-210a14223b3c"),
+            ID: unifiedgosdk.Pointer("abafb946-a93b-47e1-a26b-a262d14db967"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Hic vorax dedecor amo adfero torqueo quas victoria."),
@@ -55,7 +55,7 @@ func main() {
             Status: shared.AccountingCreditmemoStatusAuthorized.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-11T07:57:22.889Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-11T23:11:29.386Z"),
         },
         ConnectionID: "<id>",
     })
@@ -88,7 +88,7 @@ func main() {
 
 ## GetAccountingCreditmemo
 
-Retrieve a creditmemo
+Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -143,7 +143,7 @@ func main() {
 
 ## ListAccountingCreditmemoes
 
-List all creditmemoes
+Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -197,7 +197,7 @@ func main() {
 
 ## PatchAccountingCreditmemo
 
-Update a creditmemo
+Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
 ### Example Usage
 
@@ -230,7 +230,7 @@ func main() {
             CreditmemoNumber: unifiedgosdk.Pointer("CM-99537"),
             Currency: unifiedgosdk.Pointer("AUD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("568d9318-1556-4402-88ff-ea980ec43dbe"),
+            ID: unifiedgosdk.Pointer("8a145713-1fbd-40e2-b361-bdd9b06ef0da"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Hic vorax dedecor amo adfero torqueo quas victoria."),
@@ -239,7 +239,7 @@ func main() {
             Status: shared.AccountingCreditmemoStatusAuthorized.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-11T07:57:22.916Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-11T23:11:29.409Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -273,7 +273,7 @@ func main() {
 
 ## RemoveAccountingCreditmemo
 
-Remove a creditmemo
+Deletes the AccountingCreditmemo identified by `id`.
 
 ### Example Usage
 
@@ -328,7 +328,7 @@ func main() {
 
 ## UpdateAccountingCreditmemo
 
-Update a creditmemo
+Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
 ### Example Usage
 
@@ -361,7 +361,7 @@ func main() {
             CreditmemoNumber: unifiedgosdk.Pointer("CM-99537"),
             Currency: unifiedgosdk.Pointer("AUD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("568d9318-1556-4402-88ff-ea980ec43dbe"),
+            ID: unifiedgosdk.Pointer("8a145713-1fbd-40e2-b361-bdd9b06ef0da"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Hic vorax dedecor amo adfero torqueo quas victoria."),
@@ -370,7 +370,7 @@ func main() {
             Status: shared.AccountingCreditmemoStatusAuthorized.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-11T07:57:22.916Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-11T23:11:29.409Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

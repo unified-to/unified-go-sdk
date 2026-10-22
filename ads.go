@@ -31,6 +31,7 @@ func newAds(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks.
 }
 
 // CreateAdsAd - Create an ad
+// Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the provider's API. Returns the created AdsAd.
 func (s *Ads) CreateAdsAd(ctx context.Context, request operations.CreateAdsAdRequest, opts ...operations.Option) (*operations.CreateAdsAdResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Ads) CreateAdsAd(ctx context.Context, request operations.CreateAdsAdReq
 }
 
 // CreateAdsAsset - Create an asset
+// Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the provider's API. Returns the created AdsAsset.
 func (s *Ads) CreateAdsAsset(ctx context.Context, request operations.CreateAdsAssetRequest, opts ...operations.Option) (*operations.CreateAdsAssetResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Ads) CreateAdsAsset(ctx context.Context, request operations.CreateAdsAs
 }
 
 // CreateAdsCampaign - Create a campaign
+// Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped to the provider's API. Returns the created AdsCampaign.
 func (s *Ads) CreateAdsCampaign(ctx context.Context, request operations.CreateAdsCampaignRequest, opts ...operations.Option) (*operations.CreateAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Ads) CreateAdsCampaign(ctx context.Context, request operations.CreateAd
 }
 
 // CreateAdsCreative - Create a creative
+// Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped to the provider's API. Returns the created AdsCreative.
 func (s *Ads) CreateAdsCreative(ctx context.Context, request operations.CreateAdsCreativeRequest, opts ...operations.Option) (*operations.CreateAdsCreativeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -887,6 +891,7 @@ func (s *Ads) CreateAdsCreative(ctx context.Context, request operations.CreateAd
 }
 
 // CreateAdsGroup - Create a group
+// Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
 func (s *Ads) CreateAdsGroup(ctx context.Context, request operations.CreateAdsGroupRequest, opts ...operations.Option) (*operations.CreateAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1101,6 +1106,7 @@ func (s *Ads) CreateAdsGroup(ctx context.Context, request operations.CreateAdsGr
 }
 
 // CreateAdsInsertionorder - Create an insertionorder
+// Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they are mapped to the provider's API. Returns the created AdsInsertionorder.
 func (s *Ads) CreateAdsInsertionorder(ctx context.Context, request operations.CreateAdsInsertionorderRequest, opts ...operations.Option) (*operations.CreateAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1315,6 +1321,7 @@ func (s *Ads) CreateAdsInsertionorder(ctx context.Context, request operations.Cr
 }
 
 // CreateAdsOrganization - Create an organization
+// Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
 func (s *Ads) CreateAdsOrganization(ctx context.Context, request operations.CreateAdsOrganizationRequest, opts ...operations.Option) (*operations.CreateAdsOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1529,6 +1536,7 @@ func (s *Ads) CreateAdsOrganization(ctx context.Context, request operations.Crea
 }
 
 // GetAdsAd - Retrieve an ad
+// Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ads) GetAdsAd(ctx context.Context, request operations.GetAdsAdRequest, opts ...operations.Option) (*operations.GetAdsAdResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1736,6 +1744,7 @@ func (s *Ads) GetAdsAd(ctx context.Context, request operations.GetAdsAdRequest, 
 }
 
 // GetAdsAsset - Retrieve an asset
+// Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ads) GetAdsAsset(ctx context.Context, request operations.GetAdsAssetRequest, opts ...operations.Option) (*operations.GetAdsAssetResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1943,6 +1952,7 @@ func (s *Ads) GetAdsAsset(ctx context.Context, request operations.GetAdsAssetReq
 }
 
 // GetAdsCampaign - Retrieve a campaign
+// Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ads) GetAdsCampaign(ctx context.Context, request operations.GetAdsCampaignRequest, opts ...operations.Option) (*operations.GetAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2150,6 +2160,7 @@ func (s *Ads) GetAdsCampaign(ctx context.Context, request operations.GetAdsCampa
 }
 
 // GetAdsCreative - Retrieve a creative
+// Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ads) GetAdsCreative(ctx context.Context, request operations.GetAdsCreativeRequest, opts ...operations.Option) (*operations.GetAdsCreativeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2357,6 +2368,7 @@ func (s *Ads) GetAdsCreative(ctx context.Context, request operations.GetAdsCreat
 }
 
 // GetAdsGroup - Retrieve a group
+// Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ads) GetAdsGroup(ctx context.Context, request operations.GetAdsGroupRequest, opts ...operations.Option) (*operations.GetAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2564,6 +2576,7 @@ func (s *Ads) GetAdsGroup(ctx context.Context, request operations.GetAdsGroupReq
 }
 
 // GetAdsInsertionorder - Retrieve an insertionorder
+// Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ads) GetAdsInsertionorder(ctx context.Context, request operations.GetAdsInsertionorderRequest, opts ...operations.Option) (*operations.GetAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2771,6 +2784,7 @@ func (s *Ads) GetAdsInsertionorder(ctx context.Context, request operations.GetAd
 }
 
 // GetAdsOrganization - Retrieve an organization
+// Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ads) GetAdsOrganization(ctx context.Context, request operations.GetAdsOrganizationRequest, opts ...operations.Option) (*operations.GetAdsOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2978,6 +2992,7 @@ func (s *Ads) GetAdsOrganization(ctx context.Context, request operations.GetAdsO
 }
 
 // GetAdsPromoted - Retrieve a promoted
+// Retrieves a single AdsPromoted by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ads) GetAdsPromoted(ctx context.Context, request operations.GetAdsPromotedRequest, opts ...operations.Option) (*operations.GetAdsPromotedResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3185,6 +3200,7 @@ func (s *Ads) GetAdsPromoted(ctx context.Context, request operations.GetAdsPromo
 }
 
 // GetAdsTarget - Retrieve a target
+// Retrieves a single AdsTarget by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ads) GetAdsTarget(ctx context.Context, request operations.GetAdsTargetRequest, opts ...operations.Option) (*operations.GetAdsTargetResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3392,6 +3408,7 @@ func (s *Ads) GetAdsTarget(ctx context.Context, request operations.GetAdsTargetR
 }
 
 // ListAdsAds - List all ads
+// Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ads) ListAdsAds(ctx context.Context, request operations.ListAdsAdsRequest, opts ...operations.Option) (*operations.ListAdsAdsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3599,6 +3616,7 @@ func (s *Ads) ListAdsAds(ctx context.Context, request operations.ListAdsAdsReque
 }
 
 // ListAdsAssets - List all assets
+// Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ads) ListAdsAssets(ctx context.Context, request operations.ListAdsAssetsRequest, opts ...operations.Option) (*operations.ListAdsAssetsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3806,6 +3824,7 @@ func (s *Ads) ListAdsAssets(ctx context.Context, request operations.ListAdsAsset
 }
 
 // ListAdsCampaigns - List all campaigns
+// Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ads) ListAdsCampaigns(ctx context.Context, request operations.ListAdsCampaignsRequest, opts ...operations.Option) (*operations.ListAdsCampaignsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4013,6 +4032,7 @@ func (s *Ads) ListAdsCampaigns(ctx context.Context, request operations.ListAdsCa
 }
 
 // ListAdsCreatives - List all creatives
+// Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ads) ListAdsCreatives(ctx context.Context, request operations.ListAdsCreativesRequest, opts ...operations.Option) (*operations.ListAdsCreativesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4220,6 +4240,7 @@ func (s *Ads) ListAdsCreatives(ctx context.Context, request operations.ListAdsCr
 }
 
 // ListAdsGroups - List all groups
+// Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ads) ListAdsGroups(ctx context.Context, request operations.ListAdsGroupsRequest, opts ...operations.Option) (*operations.ListAdsGroupsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4427,6 +4448,7 @@ func (s *Ads) ListAdsGroups(ctx context.Context, request operations.ListAdsGroup
 }
 
 // ListAdsInsertionorders - List all insertionorders
+// Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ads) ListAdsInsertionorders(ctx context.Context, request operations.ListAdsInsertionordersRequest, opts ...operations.Option) (*operations.ListAdsInsertionordersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4634,6 +4656,7 @@ func (s *Ads) ListAdsInsertionorders(ctx context.Context, request operations.Lis
 }
 
 // ListAdsOrganizations - List all organizations
+// Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ads) ListAdsOrganizations(ctx context.Context, request operations.ListAdsOrganizationsRequest, opts ...operations.Option) (*operations.ListAdsOrganizationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4841,6 +4864,7 @@ func (s *Ads) ListAdsOrganizations(ctx context.Context, request operations.ListA
 }
 
 // ListAdsPromoteds - List all promoteds
+// Returns a list of AdsPromoteds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ads) ListAdsPromoteds(ctx context.Context, request operations.ListAdsPromotedsRequest, opts ...operations.Option) (*operations.ListAdsPromotedsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5048,6 +5072,7 @@ func (s *Ads) ListAdsPromoteds(ctx context.Context, request operations.ListAdsPr
 }
 
 // ListAdsReports - List all reports
+// Returns a list of AdsReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ads) ListAdsReports(ctx context.Context, request operations.ListAdsReportsRequest, opts ...operations.Option) (*operations.ListAdsReportsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5255,6 +5280,7 @@ func (s *Ads) ListAdsReports(ctx context.Context, request operations.ListAdsRepo
 }
 
 // ListAdsTargets - List all targets
+// Returns a list of AdsTargets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ads) ListAdsTargets(ctx context.Context, request operations.ListAdsTargetsRequest, opts ...operations.Option) (*operations.ListAdsTargetsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5462,6 +5488,7 @@ func (s *Ads) ListAdsTargets(ctx context.Context, request operations.ListAdsTarg
 }
 
 // PatchAdsAd - Update an ad
+// Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 func (s *Ads) PatchAdsAd(ctx context.Context, request operations.PatchAdsAdRequest, opts ...operations.Option) (*operations.PatchAdsAdResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5676,6 +5703,7 @@ func (s *Ads) PatchAdsAd(ctx context.Context, request operations.PatchAdsAdReque
 }
 
 // PatchAdsCampaign - Update a campaign
+// Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 func (s *Ads) PatchAdsCampaign(ctx context.Context, request operations.PatchAdsCampaignRequest, opts ...operations.Option) (*operations.PatchAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5890,6 +5918,7 @@ func (s *Ads) PatchAdsCampaign(ctx context.Context, request operations.PatchAdsC
 }
 
 // PatchAdsCreative - Update a creative
+// Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 func (s *Ads) PatchAdsCreative(ctx context.Context, request operations.PatchAdsCreativeRequest, opts ...operations.Option) (*operations.PatchAdsCreativeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6104,6 +6133,7 @@ func (s *Ads) PatchAdsCreative(ctx context.Context, request operations.PatchAdsC
 }
 
 // PatchAdsGroup - Update a group
+// Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 func (s *Ads) PatchAdsGroup(ctx context.Context, request operations.PatchAdsGroupRequest, opts ...operations.Option) (*operations.PatchAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6318,6 +6348,7 @@ func (s *Ads) PatchAdsGroup(ctx context.Context, request operations.PatchAdsGrou
 }
 
 // PatchAdsInsertionorder - Update an insertionorder
+// Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 func (s *Ads) PatchAdsInsertionorder(ctx context.Context, request operations.PatchAdsInsertionorderRequest, opts ...operations.Option) (*operations.PatchAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6532,6 +6563,7 @@ func (s *Ads) PatchAdsInsertionorder(ctx context.Context, request operations.Pat
 }
 
 // PatchAdsOrganization - Update an organization
+// Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 func (s *Ads) PatchAdsOrganization(ctx context.Context, request operations.PatchAdsOrganizationRequest, opts ...operations.Option) (*operations.PatchAdsOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6746,6 +6778,7 @@ func (s *Ads) PatchAdsOrganization(ctx context.Context, request operations.Patch
 }
 
 // RemoveAdsAd - Remove an ad
+// Deletes the AdsAd identified by `id`.
 func (s *Ads) RemoveAdsAd(ctx context.Context, request operations.RemoveAdsAdRequest, opts ...operations.Option) (*operations.RemoveAdsAdResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6928,6 +6961,7 @@ func (s *Ads) RemoveAdsAd(ctx context.Context, request operations.RemoveAdsAdReq
 }
 
 // RemoveAdsCampaign - Remove a campaign
+// Deletes the AdsCampaign identified by `id`.
 func (s *Ads) RemoveAdsCampaign(ctx context.Context, request operations.RemoveAdsCampaignRequest, opts ...operations.Option) (*operations.RemoveAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7110,6 +7144,7 @@ func (s *Ads) RemoveAdsCampaign(ctx context.Context, request operations.RemoveAd
 }
 
 // RemoveAdsCreative - Remove a creative
+// Deletes the AdsCreative identified by `id`.
 func (s *Ads) RemoveAdsCreative(ctx context.Context, request operations.RemoveAdsCreativeRequest, opts ...operations.Option) (*operations.RemoveAdsCreativeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7292,6 +7327,7 @@ func (s *Ads) RemoveAdsCreative(ctx context.Context, request operations.RemoveAd
 }
 
 // RemoveAdsGroup - Remove a group
+// Deletes the AdsGroup identified by `id`.
 func (s *Ads) RemoveAdsGroup(ctx context.Context, request operations.RemoveAdsGroupRequest, opts ...operations.Option) (*operations.RemoveAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7474,6 +7510,7 @@ func (s *Ads) RemoveAdsGroup(ctx context.Context, request operations.RemoveAdsGr
 }
 
 // RemoveAdsInsertionorder - Remove an insertionorder
+// Deletes the AdsInsertionorder identified by `id`.
 func (s *Ads) RemoveAdsInsertionorder(ctx context.Context, request operations.RemoveAdsInsertionorderRequest, opts ...operations.Option) (*operations.RemoveAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7656,6 +7693,7 @@ func (s *Ads) RemoveAdsInsertionorder(ctx context.Context, request operations.Re
 }
 
 // RemoveAdsOrganization - Remove an organization
+// Deletes the AdsOrganization identified by `id`.
 func (s *Ads) RemoveAdsOrganization(ctx context.Context, request operations.RemoveAdsOrganizationRequest, opts ...operations.Option) (*operations.RemoveAdsOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7838,6 +7876,7 @@ func (s *Ads) RemoveAdsOrganization(ctx context.Context, request operations.Remo
 }
 
 // UpdateAdsAd - Update an ad
+// Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 func (s *Ads) UpdateAdsAd(ctx context.Context, request operations.UpdateAdsAdRequest, opts ...operations.Option) (*operations.UpdateAdsAdResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8052,6 +8091,7 @@ func (s *Ads) UpdateAdsAd(ctx context.Context, request operations.UpdateAdsAdReq
 }
 
 // UpdateAdsCampaign - Update a campaign
+// Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 func (s *Ads) UpdateAdsCampaign(ctx context.Context, request operations.UpdateAdsCampaignRequest, opts ...operations.Option) (*operations.UpdateAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8266,6 +8306,7 @@ func (s *Ads) UpdateAdsCampaign(ctx context.Context, request operations.UpdateAd
 }
 
 // UpdateAdsCreative - Update a creative
+// Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 func (s *Ads) UpdateAdsCreative(ctx context.Context, request operations.UpdateAdsCreativeRequest, opts ...operations.Option) (*operations.UpdateAdsCreativeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8480,6 +8521,7 @@ func (s *Ads) UpdateAdsCreative(ctx context.Context, request operations.UpdateAd
 }
 
 // UpdateAdsGroup - Update a group
+// Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 func (s *Ads) UpdateAdsGroup(ctx context.Context, request operations.UpdateAdsGroupRequest, opts ...operations.Option) (*operations.UpdateAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8694,6 +8736,7 @@ func (s *Ads) UpdateAdsGroup(ctx context.Context, request operations.UpdateAdsGr
 }
 
 // UpdateAdsInsertionorder - Update an insertionorder
+// Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 func (s *Ads) UpdateAdsInsertionorder(ctx context.Context, request operations.UpdateAdsInsertionorderRequest, opts ...operations.Option) (*operations.UpdateAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8908,6 +8951,7 @@ func (s *Ads) UpdateAdsInsertionorder(ctx context.Context, request operations.Up
 }
 
 // UpdateAdsOrganization - Update an organization
+// Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 func (s *Ads) UpdateAdsOrganization(ctx context.Context, request operations.UpdateAdsOrganizationRequest, opts ...operations.Option) (*operations.UpdateAdsOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

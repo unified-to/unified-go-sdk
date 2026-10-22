@@ -31,6 +31,7 @@ func newTrialbalance(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hook
 }
 
 // GetAccountingTrialbalance - Retrieve a trialbalance
+// Retrieves a single AccountingTrialbalance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Trialbalance) GetAccountingTrialbalance(ctx context.Context, request operations.GetAccountingTrialbalanceRequest, opts ...operations.Option) (*operations.GetAccountingTrialbalanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -238,6 +239,7 @@ func (s *Trialbalance) GetAccountingTrialbalance(ctx context.Context, request op
 }
 
 // ListAccountingTrialbalances - List all trialbalances
+// Returns a list of AccountingTrialbalances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Trialbalance) ListAccountingTrialbalances(ctx context.Context, request operations.ListAccountingTrialbalancesRequest, opts ...operations.Option) (*operations.ListAccountingTrialbalancesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

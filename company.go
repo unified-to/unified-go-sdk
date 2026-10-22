@@ -31,6 +31,7 @@ func newCompany(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateAtsCompany - Create a company
+// Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
 func (s *Company) CreateAtsCompany(ctx context.Context, request operations.CreateAtsCompanyRequest, opts ...operations.Option) (*operations.CreateAtsCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Company) CreateAtsCompany(ctx context.Context, request operations.Creat
 }
 
 // CreateCrmCompany - Create a company
+// Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to the provider's API. Returns the created CrmCompany.
 func (s *Company) CreateCrmCompany(ctx context.Context, request operations.CreateCrmCompanyRequest, opts ...operations.Option) (*operations.CreateCrmCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Company) CreateCrmCompany(ctx context.Context, request operations.Creat
 }
 
 // CreateHrisCompany - Create a company
+// Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
 func (s *Company) CreateHrisCompany(ctx context.Context, request operations.CreateHrisCompanyRequest, opts ...operations.Option) (*operations.CreateHrisCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Company) CreateHrisCompany(ctx context.Context, request operations.Crea
 }
 
 // GetAtsCompany - Retrieve a company
+// Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Company) GetAtsCompany(ctx context.Context, request operations.GetAtsCompanyRequest, opts ...operations.Option) (*operations.GetAtsCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -880,6 +884,7 @@ func (s *Company) GetAtsCompany(ctx context.Context, request operations.GetAtsCo
 }
 
 // GetCrmCompany - Retrieve a company
+// Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Company) GetCrmCompany(ctx context.Context, request operations.GetCrmCompanyRequest, opts ...operations.Option) (*operations.GetCrmCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1087,6 +1092,7 @@ func (s *Company) GetCrmCompany(ctx context.Context, request operations.GetCrmCo
 }
 
 // GetHrisCompany - Retrieve a company
+// Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Company) GetHrisCompany(ctx context.Context, request operations.GetHrisCompanyRequest, opts ...operations.Option) (*operations.GetHrisCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1294,6 +1300,7 @@ func (s *Company) GetHrisCompany(ctx context.Context, request operations.GetHris
 }
 
 // ListAtsCompanies - List all companies
+// Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Company) ListAtsCompanies(ctx context.Context, request operations.ListAtsCompaniesRequest, opts ...operations.Option) (*operations.ListAtsCompaniesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Company) ListAtsCompanies(ctx context.Context, request operations.ListA
 }
 
 // ListCrmCompanies - List all companies
+// Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Company) ListCrmCompanies(ctx context.Context, request operations.ListCrmCompaniesRequest, opts ...operations.Option) (*operations.ListCrmCompaniesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1915,6 +1923,7 @@ func (s *Company) ListEnrichCompanies(ctx context.Context, request operations.Li
 }
 
 // ListHrisCompanies - List all companies
+// Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Company) ListHrisCompanies(ctx context.Context, request operations.ListHrisCompaniesRequest, opts ...operations.Option) (*operations.ListHrisCompaniesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2122,6 +2131,7 @@ func (s *Company) ListHrisCompanies(ctx context.Context, request operations.List
 }
 
 // PatchAtsCompany - Update a company
+// Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 func (s *Company) PatchAtsCompany(ctx context.Context, request operations.PatchAtsCompanyRequest, opts ...operations.Option) (*operations.PatchAtsCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2336,6 +2346,7 @@ func (s *Company) PatchAtsCompany(ctx context.Context, request operations.PatchA
 }
 
 // PatchCrmCompany - Update a company
+// Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 func (s *Company) PatchCrmCompany(ctx context.Context, request operations.PatchCrmCompanyRequest, opts ...operations.Option) (*operations.PatchCrmCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2550,6 +2561,7 @@ func (s *Company) PatchCrmCompany(ctx context.Context, request operations.PatchC
 }
 
 // PatchHrisCompany - Update a company
+// Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 func (s *Company) PatchHrisCompany(ctx context.Context, request operations.PatchHrisCompanyRequest, opts ...operations.Option) (*operations.PatchHrisCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2764,6 +2776,7 @@ func (s *Company) PatchHrisCompany(ctx context.Context, request operations.Patch
 }
 
 // RemoveAtsCompany - Remove a company
+// Deletes the AtsCompany identified by `id`.
 func (s *Company) RemoveAtsCompany(ctx context.Context, request operations.RemoveAtsCompanyRequest, opts ...operations.Option) (*operations.RemoveAtsCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2946,6 +2959,7 @@ func (s *Company) RemoveAtsCompany(ctx context.Context, request operations.Remov
 }
 
 // RemoveCrmCompany - Remove a company
+// Deletes the CrmCompany identified by `id`.
 func (s *Company) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrmCompanyRequest, opts ...operations.Option) (*operations.RemoveCrmCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3128,6 +3142,7 @@ func (s *Company) RemoveCrmCompany(ctx context.Context, request operations.Remov
 }
 
 // RemoveHrisCompany - Remove a company
+// Deletes the HrisCompany identified by `id`.
 func (s *Company) RemoveHrisCompany(ctx context.Context, request operations.RemoveHrisCompanyRequest, opts ...operations.Option) (*operations.RemoveHrisCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3310,6 +3325,7 @@ func (s *Company) RemoveHrisCompany(ctx context.Context, request operations.Remo
 }
 
 // UpdateAtsCompany - Update a company
+// Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 func (s *Company) UpdateAtsCompany(ctx context.Context, request operations.UpdateAtsCompanyRequest, opts ...operations.Option) (*operations.UpdateAtsCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3524,6 +3540,7 @@ func (s *Company) UpdateAtsCompany(ctx context.Context, request operations.Updat
 }
 
 // UpdateCrmCompany - Update a company
+// Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 func (s *Company) UpdateCrmCompany(ctx context.Context, request operations.UpdateCrmCompanyRequest, opts ...operations.Option) (*operations.UpdateCrmCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3738,6 +3755,7 @@ func (s *Company) UpdateCrmCompany(ctx context.Context, request operations.Updat
 }
 
 // UpdateHrisCompany - Update a company
+// Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 func (s *Company) UpdateHrisCompany(ctx context.Context, request operations.UpdateHrisCompanyRequest, opts ...operations.Option) (*operations.UpdateHrisCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -31,7 +31,7 @@
 
 ## CreateTicketingCategory
 
-Create a category
+Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they are mapped to the provider's API. Returns the created TicketingCategory.
 
 ### Example Usage
 
@@ -59,11 +59,11 @@ func main() {
         TicketingCategory: shared.TicketingCategory{
             CreatedAt: types.MustNewTimeFromString("2019-10-19T22:02:51.067Z"),
             Description: unifiedgosdk.Pointer("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero."),
-            ID: unifiedgosdk.Pointer("132cb90b-ff2e-43b0-8ddc-585b0f8060f6"),
+            ID: unifiedgosdk.Pointer("9eb72447-a830-4f73-9402-f6c85f737ea2"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("amicitia"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-14T00:34:02.739Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-14T21:44:12.267Z"),
         },
         ConnectionID: "<id>",
     })
@@ -96,7 +96,7 @@ func main() {
 
 ## CreateTicketingCustomer
 
-Create a customer
+Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the request body; they are mapped to the provider's API. Returns the created TicketingCustomer.
 
 ### Example Usage
 
@@ -129,7 +129,7 @@ func main() {
                     Type: shared.TicketingEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.Pointer("e3cc0375-1503-474f-afb3-f694c49cd371"),
+            ID: unifiedgosdk.Pointer("38d3e52b-6c67-4c04-b23b-3bedf6eb02e3"),
             Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("Christian Windler"),
             Tags: []string{
@@ -150,7 +150,7 @@ func main() {
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-04T01:56:17.625Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-05T00:05:41.433Z"),
         },
         ConnectionID: "<id>",
     })
@@ -183,7 +183,7 @@ func main() {
 
 ## CreateTicketingNote
 
-Create a note
+Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are mapped to the provider's API. Returns the created TicketingNote.
 
 ### Example Usage
 
@@ -211,9 +211,9 @@ func main() {
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
             Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
-            ID: unifiedgosdk.Pointer("379fd407-2c1a-4c4f-9408-8cce16d25ad2"),
+            ID: unifiedgosdk.Pointer("86334ced-97d3-4ff2-9d8e-f069597c280d"),
             Metadata: []shared.TicketingMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2024-09-29T06:43:21.104Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-09-29T23:44:28.352Z"),
         },
         ConnectionID: "<id>",
     })
@@ -246,7 +246,7 @@ func main() {
 
 ## CreateTicketingTicket
 
-Create a ticket
+Creates a TicketingTicket. Provide the unified TicketingTicket fields in the request body; they are mapped to the provider's API. Returns the created TicketingTicket.
 
 ### Example Usage
 
@@ -276,7 +276,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-06-25T19:19:31.279Z"),
             Description: unifiedgosdk.Pointer("Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium."),
             DueAt: types.MustNewTimeFromString("2021-07-07T17:39:49.813Z"),
-            ID: unifiedgosdk.Pointer("deedd6a3-2f17-44dd-9af1-a0e87655ca78"),
+            ID: unifiedgosdk.Pointer("62d86b9c-a84d-4a19-a0eb-83fe1be551e3"),
             Metadata: []shared.TicketingMetadata{},
             Priority: unifiedgosdk.Pointer("MEDIUM"),
             Source: unifiedgosdk.Pointer("email"),
@@ -285,7 +285,7 @@ func main() {
             Tags: []string{
                 "vilicus",
             },
-            UpdatedAt: types.MustNewTimeFromString("2021-07-03T18:28:56.759Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-03T18:34:47.521Z"),
             URL: unifiedgosdk.Pointer("https://similar-velocity.net/"),
         },
         ConnectionID: "<id>",
@@ -319,7 +319,7 @@ func main() {
 
 ## GetTicketingCategory
 
-Retrieve a category
+Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -374,7 +374,7 @@ func main() {
 
 ## GetTicketingCustomer
 
-Retrieve a customer
+Retrieves a single TicketingCustomer by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -429,7 +429,7 @@ func main() {
 
 ## GetTicketingNote
 
-Retrieve a note
+Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -484,7 +484,7 @@ func main() {
 
 ## GetTicketingTicket
 
-Retrieve a ticket
+Retrieves a single TicketingTicket by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -539,7 +539,7 @@ func main() {
 
 ## ListTicketingCategories
 
-List all categories
+Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -593,7 +593,7 @@ func main() {
 
 ## ListTicketingCustomers
 
-List all customers
+Returns a list of TicketingCustomers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -647,7 +647,7 @@ func main() {
 
 ## ListTicketingNotes
 
-List all notes
+Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -701,7 +701,7 @@ func main() {
 
 ## ListTicketingTickets
 
-List all tickets
+Returns a list of TicketingTickets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -755,7 +755,7 @@ func main() {
 
 ## PatchTicketingCategory
 
-Update a category
+Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -783,11 +783,11 @@ func main() {
         TicketingCategory: shared.TicketingCategory{
             CreatedAt: types.MustNewTimeFromString("2019-10-19T22:02:51.067Z"),
             Description: unifiedgosdk.Pointer("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero."),
-            ID: unifiedgosdk.Pointer("fd46751c-c2d1-4514-8eee-2ff2e3627795"),
+            ID: unifiedgosdk.Pointer("84db6781-2529-49bf-bc4a-6222a4eb1054"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("amicitia"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-14T00:34:02.751Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-14T21:44:12.279Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -821,7 +821,7 @@ func main() {
 
 ## PatchTicketingCustomer
 
-Update a customer
+Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
 
 ### Example Usage
 
@@ -854,7 +854,7 @@ func main() {
                     Type: shared.TicketingEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.Pointer("75ff56c0-e087-452f-821a-1b48af1f3273"),
+            ID: unifiedgosdk.Pointer("62c31562-749a-4426-b29d-11fbc7ad2b53"),
             Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("Christian Windler"),
             Tags: []string{
@@ -875,7 +875,7 @@ func main() {
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-04T01:56:17.639Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-05T00:05:41.449Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -909,7 +909,7 @@ func main() {
 
 ## PatchTicketingNote
 
-Update a note
+Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 
 ### Example Usage
 
@@ -937,9 +937,9 @@ func main() {
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
             Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
-            ID: unifiedgosdk.Pointer("6a4cdc74-ca84-46cc-aae0-c8f72b91303e"),
+            ID: unifiedgosdk.Pointer("df11d5bd-3ba0-413e-b03a-41438bcf0f2a"),
             Metadata: []shared.TicketingMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2024-09-29T06:43:21.114Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-09-29T23:44:28.358Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -973,7 +973,7 @@ func main() {
 
 ## PatchTicketingTicket
 
-Update a ticket
+Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
 
 ### Example Usage
 
@@ -1003,7 +1003,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-06-25T19:19:31.279Z"),
             Description: unifiedgosdk.Pointer("Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium."),
             DueAt: types.MustNewTimeFromString("2021-07-07T17:39:49.813Z"),
-            ID: unifiedgosdk.Pointer("a6e2a7b5-95b9-4d6b-adf4-3393f513e96b"),
+            ID: unifiedgosdk.Pointer("60b58c10-795c-4a62-be1b-a56385a1a24c"),
             Metadata: []shared.TicketingMetadata{},
             Priority: unifiedgosdk.Pointer("MEDIUM"),
             Source: unifiedgosdk.Pointer("email"),
@@ -1012,7 +1012,7 @@ func main() {
             Tags: []string{
                 "vilicus",
             },
-            UpdatedAt: types.MustNewTimeFromString("2021-07-03T18:28:56.759Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-03T18:34:47.521Z"),
             URL: unifiedgosdk.Pointer("https://similar-velocity.net/"),
         },
         ConnectionID: "<id>",
@@ -1047,7 +1047,7 @@ func main() {
 
 ## RemoveTicketingCategory
 
-Remove a category
+Deletes the TicketingCategory identified by `id`.
 
 ### Example Usage
 
@@ -1102,7 +1102,7 @@ func main() {
 
 ## RemoveTicketingCustomer
 
-Remove a customer
+Deletes the TicketingCustomer identified by `id`.
 
 ### Example Usage
 
@@ -1157,7 +1157,7 @@ func main() {
 
 ## RemoveTicketingNote
 
-Remove a note
+Deletes the TicketingNote identified by `id`.
 
 ### Example Usage
 
@@ -1212,7 +1212,7 @@ func main() {
 
 ## RemoveTicketingTicket
 
-Remove a ticket
+Deletes the TicketingTicket identified by `id`.
 
 ### Example Usage
 
@@ -1267,7 +1267,7 @@ func main() {
 
 ## UpdateTicketingCategory
 
-Update a category
+Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -1295,11 +1295,11 @@ func main() {
         TicketingCategory: shared.TicketingCategory{
             CreatedAt: types.MustNewTimeFromString("2019-10-19T22:02:51.067Z"),
             Description: unifiedgosdk.Pointer("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero."),
-            ID: unifiedgosdk.Pointer("fd46751c-c2d1-4514-8eee-2ff2e3627795"),
+            ID: unifiedgosdk.Pointer("84db6781-2529-49bf-bc4a-6222a4eb1054"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("amicitia"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-14T00:34:02.751Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-14T21:44:12.279Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1333,7 +1333,7 @@ func main() {
 
 ## UpdateTicketingCustomer
 
-Update a customer
+Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
 
 ### Example Usage
 
@@ -1366,7 +1366,7 @@ func main() {
                     Type: shared.TicketingEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.Pointer("75ff56c0-e087-452f-821a-1b48af1f3273"),
+            ID: unifiedgosdk.Pointer("62c31562-749a-4426-b29d-11fbc7ad2b53"),
             Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("Christian Windler"),
             Tags: []string{
@@ -1387,7 +1387,7 @@ func main() {
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-04T01:56:17.639Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-05T00:05:41.449Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1421,7 +1421,7 @@ func main() {
 
 ## UpdateTicketingNote
 
-Update a note
+Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 
 ### Example Usage
 
@@ -1449,9 +1449,9 @@ func main() {
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
             Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
-            ID: unifiedgosdk.Pointer("6a4cdc74-ca84-46cc-aae0-c8f72b91303e"),
+            ID: unifiedgosdk.Pointer("df11d5bd-3ba0-413e-b03a-41438bcf0f2a"),
             Metadata: []shared.TicketingMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2024-09-29T06:43:21.114Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-09-29T23:44:28.358Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1485,7 +1485,7 @@ func main() {
 
 ## UpdateTicketingTicket
 
-Update a ticket
+Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
 
 ### Example Usage
 
@@ -1515,7 +1515,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-06-25T19:19:31.279Z"),
             Description: unifiedgosdk.Pointer("Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium."),
             DueAt: types.MustNewTimeFromString("2021-07-07T17:39:49.813Z"),
-            ID: unifiedgosdk.Pointer("a6e2a7b5-95b9-4d6b-adf4-3393f513e96b"),
+            ID: unifiedgosdk.Pointer("60b58c10-795c-4a62-be1b-a56385a1a24c"),
             Metadata: []shared.TicketingMetadata{},
             Priority: unifiedgosdk.Pointer("MEDIUM"),
             Source: unifiedgosdk.Pointer("email"),
@@ -1524,7 +1524,7 @@ func main() {
             Tags: []string{
                 "vilicus",
             },
-            UpdatedAt: types.MustNewTimeFromString("2021-07-03T18:28:56.759Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-03T18:34:47.521Z"),
             URL: unifiedgosdk.Pointer("https://similar-velocity.net/"),
         },
         ConnectionID: "<id>",

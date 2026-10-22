@@ -10,7 +10,7 @@
 
 ## CreateHealthcareObservation
 
-Create an observation
+Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request body; they are mapped to the provider's API. Returns the created HealthcareObservation.
 
 ### Example Usage
 
@@ -68,15 +68,15 @@ func main() {
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2022-12-06T21:34:04.293Z"),
-            ID: unifiedgosdk.Pointer("c618a863-9850-40c0-979c-241f62edc05a"),
+            ID: unifiedgosdk.Pointer("3d95939a-fd15-4205-a9a7-8996dcd8717c"),
             Interpretation: shared.InterpretationCriticalHigh.ToPointer(),
-            IssuedAt: types.MustNewTimeFromString("2025-05-11T10:29:32.163Z"),
+            IssuedAt: types.MustNewTimeFromString("2025-05-12T01:23:42.793Z"),
             Metadata: []shared.HealthcareMetadata{},
             Name: unifiedgosdk.Pointer("Blood pressure panel"),
-            ObservedAt: types.MustNewTimeFromString("2025-01-20T04:00:19.834Z"),
+            ObservedAt: types.MustNewTimeFromString("2025-01-20T17:02:16.723Z"),
             Status: shared.HealthcareObservationStatusCorrected.ToPointer(),
             Type: shared.HealthcareObservationTypeVitalSigns.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-24T06:24:42.917Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-25T02:38:27.139Z"),
         },
         ConnectionID: "<id>",
     })
@@ -109,7 +109,7 @@ func main() {
 
 ## GetHealthcareObservation
 
-Retrieve an observation
+Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -164,7 +164,7 @@ func main() {
 
 ## ListHealthcareObservations
 
-List all observations
+Returns a list of HealthcareObservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 

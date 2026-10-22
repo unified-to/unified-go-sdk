@@ -31,6 +31,7 @@ func newLms(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks.
 }
 
 // CreateLmsActivity - Create an activity
+// Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped to the provider's API. Returns the created LmsActivity.
 func (s *Lms) CreateLmsActivity(ctx context.Context, request operations.CreateLmsActivityRequest, opts ...operations.Option) (*operations.CreateLmsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Lms) CreateLmsActivity(ctx context.Context, request operations.CreateLm
 }
 
 // CreateLmsClass - Create a class
+// Creates a LmsClass. Provide the unified LmsClass fields in the request body; they are mapped to the provider's API. Returns the created LmsClass.
 func (s *Lms) CreateLmsClass(ctx context.Context, request operations.CreateLmsClassRequest, opts ...operations.Option) (*operations.CreateLmsClassResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Lms) CreateLmsClass(ctx context.Context, request operations.CreateLmsCl
 }
 
 // CreateLmsCollection - Create a collection
+// Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are mapped to the provider's API. Returns the created LmsCollection.
 func (s *Lms) CreateLmsCollection(ctx context.Context, request operations.CreateLmsCollectionRequest, opts ...operations.Option) (*operations.CreateLmsCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Lms) CreateLmsCollection(ctx context.Context, request operations.Create
 }
 
 // CreateLmsContent - Create a content
+// Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to the provider's API. Returns the created LmsContent.
 func (s *Lms) CreateLmsContent(ctx context.Context, request operations.CreateLmsContentRequest, opts ...operations.Option) (*operations.CreateLmsContentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -887,6 +891,7 @@ func (s *Lms) CreateLmsContent(ctx context.Context, request operations.CreateLms
 }
 
 // CreateLmsCourse - Create a course
+// Creates a LmsCourse. Provide the unified LmsCourse fields in the request body; they are mapped to the provider's API. Returns the created LmsCourse.
 func (s *Lms) CreateLmsCourse(ctx context.Context, request operations.CreateLmsCourseRequest, opts ...operations.Option) (*operations.CreateLmsCourseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1101,6 +1106,7 @@ func (s *Lms) CreateLmsCourse(ctx context.Context, request operations.CreateLmsC
 }
 
 // CreateLmsInstructor - Create an instructor
+// Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request body; they are mapped to the provider's API. Returns the created LmsInstructor.
 func (s *Lms) CreateLmsInstructor(ctx context.Context, request operations.CreateLmsInstructorRequest, opts ...operations.Option) (*operations.CreateLmsInstructorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1315,6 +1321,7 @@ func (s *Lms) CreateLmsInstructor(ctx context.Context, request operations.Create
 }
 
 // CreateLmsStudent - Create a student
+// Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to the provider's API. Returns the created LmsStudent.
 func (s *Lms) CreateLmsStudent(ctx context.Context, request operations.CreateLmsStudentRequest, opts ...operations.Option) (*operations.CreateLmsStudentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1529,6 +1536,7 @@ func (s *Lms) CreateLmsStudent(ctx context.Context, request operations.CreateLms
 }
 
 // GetLmsActivity - Retrieve an activity
+// Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Lms) GetLmsActivity(ctx context.Context, request operations.GetLmsActivityRequest, opts ...operations.Option) (*operations.GetLmsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1736,6 +1744,7 @@ func (s *Lms) GetLmsActivity(ctx context.Context, request operations.GetLmsActiv
 }
 
 // GetLmsClass - Retrieve a class
+// Retrieves a single LmsClass by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Lms) GetLmsClass(ctx context.Context, request operations.GetLmsClassRequest, opts ...operations.Option) (*operations.GetLmsClassResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1943,6 +1952,7 @@ func (s *Lms) GetLmsClass(ctx context.Context, request operations.GetLmsClassReq
 }
 
 // GetLmsCollection - Retrieve a collection
+// Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Lms) GetLmsCollection(ctx context.Context, request operations.GetLmsCollectionRequest, opts ...operations.Option) (*operations.GetLmsCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2150,6 +2160,7 @@ func (s *Lms) GetLmsCollection(ctx context.Context, request operations.GetLmsCol
 }
 
 // GetLmsContent - Retrieve a content
+// Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Lms) GetLmsContent(ctx context.Context, request operations.GetLmsContentRequest, opts ...operations.Option) (*operations.GetLmsContentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2357,6 +2368,7 @@ func (s *Lms) GetLmsContent(ctx context.Context, request operations.GetLmsConten
 }
 
 // GetLmsCourse - Retrieve a course
+// Retrieves a single LmsCourse by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Lms) GetLmsCourse(ctx context.Context, request operations.GetLmsCourseRequest, opts ...operations.Option) (*operations.GetLmsCourseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2564,6 +2576,7 @@ func (s *Lms) GetLmsCourse(ctx context.Context, request operations.GetLmsCourseR
 }
 
 // GetLmsInstructor - Retrieve an instructor
+// Retrieves a single LmsInstructor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Lms) GetLmsInstructor(ctx context.Context, request operations.GetLmsInstructorRequest, opts ...operations.Option) (*operations.GetLmsInstructorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2771,6 +2784,7 @@ func (s *Lms) GetLmsInstructor(ctx context.Context, request operations.GetLmsIns
 }
 
 // GetLmsStudent - Retrieve a student
+// Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Lms) GetLmsStudent(ctx context.Context, request operations.GetLmsStudentRequest, opts ...operations.Option) (*operations.GetLmsStudentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2978,6 +2992,7 @@ func (s *Lms) GetLmsStudent(ctx context.Context, request operations.GetLmsStuden
 }
 
 // ListLmsActivities - List all activities
+// Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Lms) ListLmsActivities(ctx context.Context, request operations.ListLmsActivitiesRequest, opts ...operations.Option) (*operations.ListLmsActivitiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3185,6 +3200,7 @@ func (s *Lms) ListLmsActivities(ctx context.Context, request operations.ListLmsA
 }
 
 // ListLmsClasses - List all classes
+// Returns a list of LmsClasses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Lms) ListLmsClasses(ctx context.Context, request operations.ListLmsClassesRequest, opts ...operations.Option) (*operations.ListLmsClassesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3392,6 +3408,7 @@ func (s *Lms) ListLmsClasses(ctx context.Context, request operations.ListLmsClas
 }
 
 // ListLmsCollections - List all collections
+// Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Lms) ListLmsCollections(ctx context.Context, request operations.ListLmsCollectionsRequest, opts ...operations.Option) (*operations.ListLmsCollectionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3599,6 +3616,7 @@ func (s *Lms) ListLmsCollections(ctx context.Context, request operations.ListLms
 }
 
 // ListLmsContents - List all contents
+// Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Lms) ListLmsContents(ctx context.Context, request operations.ListLmsContentsRequest, opts ...operations.Option) (*operations.ListLmsContentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3806,6 +3824,7 @@ func (s *Lms) ListLmsContents(ctx context.Context, request operations.ListLmsCon
 }
 
 // ListLmsCourses - List all courses
+// Returns a list of LmsCourses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Lms) ListLmsCourses(ctx context.Context, request operations.ListLmsCoursesRequest, opts ...operations.Option) (*operations.ListLmsCoursesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4013,6 +4032,7 @@ func (s *Lms) ListLmsCourses(ctx context.Context, request operations.ListLmsCour
 }
 
 // ListLmsInstructors - List all instructors
+// Returns a list of LmsInstructors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Lms) ListLmsInstructors(ctx context.Context, request operations.ListLmsInstructorsRequest, opts ...operations.Option) (*operations.ListLmsInstructorsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4220,6 +4240,7 @@ func (s *Lms) ListLmsInstructors(ctx context.Context, request operations.ListLms
 }
 
 // ListLmsStudents - List all students
+// Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Lms) ListLmsStudents(ctx context.Context, request operations.ListLmsStudentsRequest, opts ...operations.Option) (*operations.ListLmsStudentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4427,6 +4448,7 @@ func (s *Lms) ListLmsStudents(ctx context.Context, request operations.ListLmsStu
 }
 
 // PatchLmsActivity - Update an activity
+// Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 func (s *Lms) PatchLmsActivity(ctx context.Context, request operations.PatchLmsActivityRequest, opts ...operations.Option) (*operations.PatchLmsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4641,6 +4663,7 @@ func (s *Lms) PatchLmsActivity(ctx context.Context, request operations.PatchLmsA
 }
 
 // PatchLmsClass - Update a class
+// Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 func (s *Lms) PatchLmsClass(ctx context.Context, request operations.PatchLmsClassRequest, opts ...operations.Option) (*operations.PatchLmsClassResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4855,6 +4878,7 @@ func (s *Lms) PatchLmsClass(ctx context.Context, request operations.PatchLmsClas
 }
 
 // PatchLmsCollection - Update a collection
+// Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 func (s *Lms) PatchLmsCollection(ctx context.Context, request operations.PatchLmsCollectionRequest, opts ...operations.Option) (*operations.PatchLmsCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5069,6 +5093,7 @@ func (s *Lms) PatchLmsCollection(ctx context.Context, request operations.PatchLm
 }
 
 // PatchLmsContent - Update a content
+// Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 func (s *Lms) PatchLmsContent(ctx context.Context, request operations.PatchLmsContentRequest, opts ...operations.Option) (*operations.PatchLmsContentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5283,6 +5308,7 @@ func (s *Lms) PatchLmsContent(ctx context.Context, request operations.PatchLmsCo
 }
 
 // PatchLmsCourse - Update a course
+// Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 func (s *Lms) PatchLmsCourse(ctx context.Context, request operations.PatchLmsCourseRequest, opts ...operations.Option) (*operations.PatchLmsCourseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5497,6 +5523,7 @@ func (s *Lms) PatchLmsCourse(ctx context.Context, request operations.PatchLmsCou
 }
 
 // PatchLmsInstructor - Update an instructor
+// Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 func (s *Lms) PatchLmsInstructor(ctx context.Context, request operations.PatchLmsInstructorRequest, opts ...operations.Option) (*operations.PatchLmsInstructorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5711,6 +5738,7 @@ func (s *Lms) PatchLmsInstructor(ctx context.Context, request operations.PatchLm
 }
 
 // PatchLmsStudent - Update a student
+// Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 func (s *Lms) PatchLmsStudent(ctx context.Context, request operations.PatchLmsStudentRequest, opts ...operations.Option) (*operations.PatchLmsStudentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5925,6 +5953,7 @@ func (s *Lms) PatchLmsStudent(ctx context.Context, request operations.PatchLmsSt
 }
 
 // RemoveLmsActivity - Remove an activity
+// Deletes the LmsActivity identified by `id`.
 func (s *Lms) RemoveLmsActivity(ctx context.Context, request operations.RemoveLmsActivityRequest, opts ...operations.Option) (*operations.RemoveLmsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6107,6 +6136,7 @@ func (s *Lms) RemoveLmsActivity(ctx context.Context, request operations.RemoveLm
 }
 
 // RemoveLmsClass - Remove a class
+// Deletes the LmsClass identified by `id`.
 func (s *Lms) RemoveLmsClass(ctx context.Context, request operations.RemoveLmsClassRequest, opts ...operations.Option) (*operations.RemoveLmsClassResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6289,6 +6319,7 @@ func (s *Lms) RemoveLmsClass(ctx context.Context, request operations.RemoveLmsCl
 }
 
 // RemoveLmsCollection - Remove a collection
+// Deletes the LmsCollection identified by `id`.
 func (s *Lms) RemoveLmsCollection(ctx context.Context, request operations.RemoveLmsCollectionRequest, opts ...operations.Option) (*operations.RemoveLmsCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6471,6 +6502,7 @@ func (s *Lms) RemoveLmsCollection(ctx context.Context, request operations.Remove
 }
 
 // RemoveLmsContent - Remove a content
+// Deletes the LmsContent identified by `id`.
 func (s *Lms) RemoveLmsContent(ctx context.Context, request operations.RemoveLmsContentRequest, opts ...operations.Option) (*operations.RemoveLmsContentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6653,6 +6685,7 @@ func (s *Lms) RemoveLmsContent(ctx context.Context, request operations.RemoveLms
 }
 
 // RemoveLmsCourse - Remove a course
+// Deletes the LmsCourse identified by `id`.
 func (s *Lms) RemoveLmsCourse(ctx context.Context, request operations.RemoveLmsCourseRequest, opts ...operations.Option) (*operations.RemoveLmsCourseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6835,6 +6868,7 @@ func (s *Lms) RemoveLmsCourse(ctx context.Context, request operations.RemoveLmsC
 }
 
 // RemoveLmsInstructor - Remove an instructor
+// Deletes the LmsInstructor identified by `id`.
 func (s *Lms) RemoveLmsInstructor(ctx context.Context, request operations.RemoveLmsInstructorRequest, opts ...operations.Option) (*operations.RemoveLmsInstructorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7017,6 +7051,7 @@ func (s *Lms) RemoveLmsInstructor(ctx context.Context, request operations.Remove
 }
 
 // RemoveLmsStudent - Remove a student
+// Deletes the LmsStudent identified by `id`.
 func (s *Lms) RemoveLmsStudent(ctx context.Context, request operations.RemoveLmsStudentRequest, opts ...operations.Option) (*operations.RemoveLmsStudentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7199,6 +7234,7 @@ func (s *Lms) RemoveLmsStudent(ctx context.Context, request operations.RemoveLms
 }
 
 // UpdateLmsActivity - Update an activity
+// Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 func (s *Lms) UpdateLmsActivity(ctx context.Context, request operations.UpdateLmsActivityRequest, opts ...operations.Option) (*operations.UpdateLmsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7413,6 +7449,7 @@ func (s *Lms) UpdateLmsActivity(ctx context.Context, request operations.UpdateLm
 }
 
 // UpdateLmsClass - Update a class
+// Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 func (s *Lms) UpdateLmsClass(ctx context.Context, request operations.UpdateLmsClassRequest, opts ...operations.Option) (*operations.UpdateLmsClassResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7627,6 +7664,7 @@ func (s *Lms) UpdateLmsClass(ctx context.Context, request operations.UpdateLmsCl
 }
 
 // UpdateLmsCollection - Update a collection
+// Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 func (s *Lms) UpdateLmsCollection(ctx context.Context, request operations.UpdateLmsCollectionRequest, opts ...operations.Option) (*operations.UpdateLmsCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7841,6 +7879,7 @@ func (s *Lms) UpdateLmsCollection(ctx context.Context, request operations.Update
 }
 
 // UpdateLmsContent - Update a content
+// Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 func (s *Lms) UpdateLmsContent(ctx context.Context, request operations.UpdateLmsContentRequest, opts ...operations.Option) (*operations.UpdateLmsContentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8055,6 +8094,7 @@ func (s *Lms) UpdateLmsContent(ctx context.Context, request operations.UpdateLms
 }
 
 // UpdateLmsCourse - Update a course
+// Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 func (s *Lms) UpdateLmsCourse(ctx context.Context, request operations.UpdateLmsCourseRequest, opts ...operations.Option) (*operations.UpdateLmsCourseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8269,6 +8309,7 @@ func (s *Lms) UpdateLmsCourse(ctx context.Context, request operations.UpdateLmsC
 }
 
 // UpdateLmsInstructor - Update an instructor
+// Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 func (s *Lms) UpdateLmsInstructor(ctx context.Context, request operations.UpdateLmsInstructorRequest, opts ...operations.Option) (*operations.UpdateLmsInstructorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8483,6 +8524,7 @@ func (s *Lms) UpdateLmsInstructor(ctx context.Context, request operations.Update
 }
 
 // UpdateLmsStudent - Update a student
+// Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 func (s *Lms) UpdateLmsStudent(ctx context.Context, request operations.UpdateLmsStudentRequest, opts ...operations.Option) (*operations.UpdateLmsStudentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

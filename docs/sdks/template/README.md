@@ -15,7 +15,7 @@
 
 ## CreateComputeTemplate
 
-Create a template
+Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are mapped to the provider's API. Returns the created ComputeTemplate.
 
 ### Example Usage
 
@@ -47,10 +47,10 @@ func main() {
             Dockerfile: unifiedgosdk.Pointer("FROM ubuntu:24.04\nRUN apt-get update"),
             GpuCount: unifiedgosdk.Pointer[float64](2.0),
             GpuModel: shared.ComputeTemplateGpuModelNvidiaGh200.ToPointer(),
-            ID: unifiedgosdk.Pointer("87214967-c388-454a-b15b-d7ea77a70778"),
+            ID: unifiedgosdk.Pointer("eaa43204-8bb4-45ef-a7a2-05e9a78e76d8"),
             Image: unifiedgosdk.Pointer("perfumed-molasses/cohibeo:5.2"),
             IsPublic: unifiedgosdk.Pointer(false),
-            LastUsedAt: types.MustNewTimeFromString("2026-03-23T20:27:16.056Z"),
+            LastUsedAt: types.MustNewTimeFromString("2026-03-24T16:28:06.696Z"),
             MemoryMb: unifiedgosdk.Pointer[float64](8192.0),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("multi-byte-card"),
@@ -58,7 +58,7 @@ func main() {
                 8080.0,
             },
             Status: shared.ComputeTemplateStatusOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-12T18:38:51.398Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-13T07:28:16.292Z"),
         },
         ConnectionID: "<id>",
     })
@@ -91,7 +91,7 @@ func main() {
 
 ## GetComputeTemplate
 
-Retrieve a template
+Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -146,7 +146,7 @@ func main() {
 
 ## GetSigningTemplate
 
-Retrieve a template
+Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -201,7 +201,7 @@ func main() {
 
 ## ListComputeTemplates
 
-List all templates
+Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -255,7 +255,7 @@ func main() {
 
 ## ListSigningTemplates
 
-List all templates
+Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -309,7 +309,7 @@ func main() {
 
 ## PatchComputeTemplate
 
-Update a template
+Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
 ### Example Usage
 
@@ -341,10 +341,10 @@ func main() {
             Dockerfile: unifiedgosdk.Pointer("FROM ubuntu:24.04\nRUN apt-get update"),
             GpuCount: unifiedgosdk.Pointer[float64](2.0),
             GpuModel: shared.ComputeTemplateGpuModelNvidiaGh200.ToPointer(),
-            ID: unifiedgosdk.Pointer("9cb36833-667b-4fd1-a64c-9bad7d4d2a50"),
+            ID: unifiedgosdk.Pointer("54d4604d-270c-4610-8aab-cf1d48975452"),
             Image: unifiedgosdk.Pointer("perfumed-molasses/cohibeo:5.2"),
             IsPublic: unifiedgosdk.Pointer(false),
-            LastUsedAt: types.MustNewTimeFromString("2026-03-23T20:27:16.077Z"),
+            LastUsedAt: types.MustNewTimeFromString("2026-03-24T16:28:06.720Z"),
             MemoryMb: unifiedgosdk.Pointer[float64](8192.0),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("multi-byte-card"),
@@ -352,7 +352,7 @@ func main() {
                 8080.0,
             },
             Status: shared.ComputeTemplateStatusOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-12T18:38:51.411Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-13T07:28:16.307Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -386,7 +386,7 @@ func main() {
 
 ## RemoveComputeTemplate
 
-Remove a template
+Deletes the ComputeTemplate identified by `id`.
 
 ### Example Usage
 
@@ -441,7 +441,7 @@ func main() {
 
 ## UpdateComputeTemplate
 
-Update a template
+Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
 ### Example Usage
 
@@ -473,10 +473,10 @@ func main() {
             Dockerfile: unifiedgosdk.Pointer("FROM ubuntu:24.04\nRUN apt-get update"),
             GpuCount: unifiedgosdk.Pointer[float64](2.0),
             GpuModel: shared.ComputeTemplateGpuModelNvidiaGh200.ToPointer(),
-            ID: unifiedgosdk.Pointer("9cb36833-667b-4fd1-a64c-9bad7d4d2a50"),
+            ID: unifiedgosdk.Pointer("54d4604d-270c-4610-8aab-cf1d48975452"),
             Image: unifiedgosdk.Pointer("perfumed-molasses/cohibeo:5.2"),
             IsPublic: unifiedgosdk.Pointer(false),
-            LastUsedAt: types.MustNewTimeFromString("2026-03-23T20:27:16.077Z"),
+            LastUsedAt: types.MustNewTimeFromString("2026-03-24T16:28:06.720Z"),
             MemoryMb: unifiedgosdk.Pointer[float64](8192.0),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("multi-byte-card"),
@@ -484,7 +484,7 @@ func main() {
                 8080.0,
             },
             Status: shared.ComputeTemplateStatusOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-12T18:38:51.411Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-13T07:28:16.307Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

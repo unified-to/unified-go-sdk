@@ -31,6 +31,7 @@ func newPerformance(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 }
 
 // CreatePerformanceFeedback - Create a feedback
+// Creates a PerformanceFeedback. Provide the unified PerformanceFeedback fields in the request body; they are mapped to the provider's API. Returns the created PerformanceFeedback.
 func (s *Performance) CreatePerformanceFeedback(ctx context.Context, request operations.CreatePerformanceFeedbackRequest, opts ...operations.Option) (*operations.CreatePerformanceFeedbackResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Performance) CreatePerformanceFeedback(ctx context.Context, request ope
 }
 
 // CreatePerformanceGoal - Create a goal
+// Creates a PerformanceGoal. Provide the unified PerformanceGoal fields in the request body; they are mapped to the provider's API. Returns the created PerformanceGoal.
 func (s *Performance) CreatePerformanceGoal(ctx context.Context, request operations.CreatePerformanceGoalRequest, opts ...operations.Option) (*operations.CreatePerformanceGoalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Performance) CreatePerformanceGoal(ctx context.Context, request operati
 }
 
 // GetPerformanceCycle - Retrieve a cycle
+// Retrieves a single PerformanceCycle by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Performance) GetPerformanceCycle(ctx context.Context, request operations.GetPerformanceCycleRequest, opts ...operations.Option) (*operations.GetPerformanceCycleResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -666,6 +669,7 @@ func (s *Performance) GetPerformanceCycle(ctx context.Context, request operation
 }
 
 // GetPerformanceFeedback - Retrieve a feedback
+// Retrieves a single PerformanceFeedback by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Performance) GetPerformanceFeedback(ctx context.Context, request operations.GetPerformanceFeedbackRequest, opts ...operations.Option) (*operations.GetPerformanceFeedbackResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Performance) GetPerformanceFeedback(ctx context.Context, request operat
 }
 
 // GetPerformanceGoal - Retrieve a goal
+// Retrieves a single PerformanceGoal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Performance) GetPerformanceGoal(ctx context.Context, request operations.GetPerformanceGoalRequest, opts ...operations.Option) (*operations.GetPerformanceGoalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1080,6 +1085,7 @@ func (s *Performance) GetPerformanceGoal(ctx context.Context, request operations
 }
 
 // GetPerformanceReview - Retrieve a review
+// Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Performance) GetPerformanceReview(ctx context.Context, request operations.GetPerformanceReviewRequest, opts ...operations.Option) (*operations.GetPerformanceReviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1287,6 +1293,7 @@ func (s *Performance) GetPerformanceReview(ctx context.Context, request operatio
 }
 
 // ListPerformanceCycles - List all cycles
+// Returns a list of PerformanceCycles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Performance) ListPerformanceCycles(ctx context.Context, request operations.ListPerformanceCyclesRequest, opts ...operations.Option) (*operations.ListPerformanceCyclesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1494,6 +1501,7 @@ func (s *Performance) ListPerformanceCycles(ctx context.Context, request operati
 }
 
 // ListPerformanceFeedbacks - List all feedbacks
+// Returns a list of PerformanceFeedbacks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Performance) ListPerformanceFeedbacks(ctx context.Context, request operations.ListPerformanceFeedbacksRequest, opts ...operations.Option) (*operations.ListPerformanceFeedbacksResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1701,6 +1709,7 @@ func (s *Performance) ListPerformanceFeedbacks(ctx context.Context, request oper
 }
 
 // ListPerformanceGoals - List all goals
+// Returns a list of PerformanceGoals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Performance) ListPerformanceGoals(ctx context.Context, request operations.ListPerformanceGoalsRequest, opts ...operations.Option) (*operations.ListPerformanceGoalsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1908,6 +1917,7 @@ func (s *Performance) ListPerformanceGoals(ctx context.Context, request operatio
 }
 
 // ListPerformanceReviews - List all reviews
+// Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Performance) ListPerformanceReviews(ctx context.Context, request operations.ListPerformanceReviewsRequest, opts ...operations.Option) (*operations.ListPerformanceReviewsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2115,6 +2125,7 @@ func (s *Performance) ListPerformanceReviews(ctx context.Context, request operat
 }
 
 // PatchPerformanceGoal - Update a goal
+// Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
 func (s *Performance) PatchPerformanceGoal(ctx context.Context, request operations.PatchPerformanceGoalRequest, opts ...operations.Option) (*operations.PatchPerformanceGoalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2329,6 +2340,7 @@ func (s *Performance) PatchPerformanceGoal(ctx context.Context, request operatio
 }
 
 // RemovePerformanceGoal - Remove a goal
+// Deletes the PerformanceGoal identified by `id`.
 func (s *Performance) RemovePerformanceGoal(ctx context.Context, request operations.RemovePerformanceGoalRequest, opts ...operations.Option) (*operations.RemovePerformanceGoalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2511,6 +2523,7 @@ func (s *Performance) RemovePerformanceGoal(ctx context.Context, request operati
 }
 
 // UpdatePerformanceGoal - Update a goal
+// Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
 func (s *Performance) UpdatePerformanceGoal(ctx context.Context, request operations.UpdatePerformanceGoalRequest, opts ...operations.Option) (*operations.UpdatePerformanceGoalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

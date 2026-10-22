@@ -13,7 +13,7 @@
 
 ## CreateAccountingSalesorder
 
-Create a salesorder
+Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingSalesorder.
 
 ### Example Usage
 
@@ -49,13 +49,13 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CategoryIds: []string{},
-            ClosedAt: types.MustNewTimeFromString("2023-03-25T12:57:23.155Z"),
+            ClosedAt: types.MustNewTimeFromString("2023-03-25T18:51:55.584Z"),
             CreatedAt: types.MustNewTimeFromString("2022-01-17T16:11:50.310Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             Fees: []shared.AccountingFee{},
             FulfillmentType: shared.FulfillmentTypeOther.ToPointer(),
-            ID: unifiedgosdk.Pointer("2ee1a550-d200-4b90-84de-64861a01cf0a"),
+            ID: unifiedgosdk.Pointer("31b40f4c-8c74-473c-834c-108a496eb083"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             OrderNumber: unifiedgosdk.Pointer("832663"),
@@ -77,7 +77,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TipAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-03-25T12:57:23.155Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-25T18:51:55.584Z"),
         },
         ConnectionID: "<id>",
     })
@@ -110,7 +110,7 @@ func main() {
 
 ## GetAccountingSalesorder
 
-Retrieve a salesorder
+Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -165,7 +165,7 @@ func main() {
 
 ## ListAccountingSalesorders
 
-List all salesorders
+Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -219,7 +219,7 @@ func main() {
 
 ## PatchAccountingSalesorder
 
-Update a salesorder
+Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
 ### Example Usage
 
@@ -255,13 +255,13 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CategoryIds: []string{},
-            ClosedAt: types.MustNewTimeFromString("2023-03-25T12:57:23.174Z"),
+            ClosedAt: types.MustNewTimeFromString("2023-03-25T18:51:55.597Z"),
             CreatedAt: types.MustNewTimeFromString("2022-01-17T16:11:50.310Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             Fees: []shared.AccountingFee{},
             FulfillmentType: shared.FulfillmentTypeOther.ToPointer(),
-            ID: unifiedgosdk.Pointer("81444e74-2438-4d48-a12a-446390d8c063"),
+            ID: unifiedgosdk.Pointer("eb857dee-e60e-475f-bdcd-edb5a376f942"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             OrderNumber: unifiedgosdk.Pointer("832663"),
@@ -283,7 +283,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TipAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-03-25T12:57:23.174Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-25T18:51:55.597Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -317,7 +317,7 @@ func main() {
 
 ## RemoveAccountingSalesorder
 
-Remove a salesorder
+Deletes the AccountingSalesorder identified by `id`.
 
 ### Example Usage
 
@@ -372,7 +372,7 @@ func main() {
 
 ## UpdateAccountingSalesorder
 
-Update a salesorder
+Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
 ### Example Usage
 
@@ -408,13 +408,13 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CategoryIds: []string{},
-            ClosedAt: types.MustNewTimeFromString("2023-03-25T12:57:23.174Z"),
+            ClosedAt: types.MustNewTimeFromString("2023-03-25T18:51:55.597Z"),
             CreatedAt: types.MustNewTimeFromString("2022-01-17T16:11:50.310Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             Fees: []shared.AccountingFee{},
             FulfillmentType: shared.FulfillmentTypeOther.ToPointer(),
-            ID: unifiedgosdk.Pointer("81444e74-2438-4d48-a12a-446390d8c063"),
+            ID: unifiedgosdk.Pointer("eb857dee-e60e-475f-bdcd-edb5a376f942"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             OrderNumber: unifiedgosdk.Pointer("832663"),
@@ -436,7 +436,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TipAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-03-25T12:57:23.174Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-25T18:51:55.597Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

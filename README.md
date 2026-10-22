@@ -66,7 +66,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("e1ef892f-3b71-470e-9366-7d11f6594355"),
+			ID:                  unifiedgosdk.Pointer("cf355b43-f7e4-4200-abd9-da8905ac9789"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -79,7 +79,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-06T21:40:54.101Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-07T03:43:27.331Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -122,7 +122,7 @@ func main() {
 * [CreateAccountingExpensereport](docs/sdks/accounting/README.md#createaccountingexpensereport) - Create an expensereport
 * [CreateAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create an invoice
 * [CreateAccountingJournal](docs/sdks/accounting/README.md#createaccountingjournal) - Create a journal
-* [CreateAccountingOrder](docs/sdks/accounting/README.md#createaccountingorder) - Create an order
+* [~~CreateAccountingOrder~~](docs/sdks/accounting/README.md#createaccountingorder) - Create an order :warning: **Deprecated**
 * [CreateAccountingPaymentterm](docs/sdks/accounting/README.md#createaccountingpaymentterm) - Create a paymentterm
 * [CreateAccountingProject](docs/sdks/accounting/README.md#createaccountingproject) - Create a project
 * [CreateAccountingPurchaseorder](docs/sdks/accounting/README.md#createaccountingpurchaseorder) - Create a purchaseorder
@@ -146,7 +146,7 @@ func main() {
 * [GetAccountingExpensereport](docs/sdks/accounting/README.md#getaccountingexpensereport) - Retrieve an expensereport
 * [GetAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve an invoice
 * [GetAccountingJournal](docs/sdks/accounting/README.md#getaccountingjournal) - Retrieve a journal
-* [GetAccountingOrder](docs/sdks/accounting/README.md#getaccountingorder) - Retrieve an order
+* [~~GetAccountingOrder~~](docs/sdks/accounting/README.md#getaccountingorder) - Retrieve an order :warning: **Deprecated**
 * [GetAccountingOrganization](docs/sdks/accounting/README.md#getaccountingorganization) - Retrieve an organization
 * [GetAccountingPaymentterm](docs/sdks/accounting/README.md#getaccountingpaymentterm) - Retrieve a paymentterm
 * [GetAccountingProfitloss](docs/sdks/accounting/README.md#getaccountingprofitloss) - Retrieve a profitloss
@@ -175,7 +175,7 @@ func main() {
 * [ListAccountingExpenses](docs/sdks/accounting/README.md#listaccountingexpenses) - List all expenses
 * [ListAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
 * [ListAccountingJournals](docs/sdks/accounting/README.md#listaccountingjournals) - List all journals
-* [ListAccountingOrders](docs/sdks/accounting/README.md#listaccountingorders) - List all orders
+* [~~ListAccountingOrders~~](docs/sdks/accounting/README.md#listaccountingorders) - List all orders :warning: **Deprecated**
 * [ListAccountingOrganizations](docs/sdks/accounting/README.md#listaccountingorganizations) - List all organizations
 * [ListAccountingPaymentterms](docs/sdks/accounting/README.md#listaccountingpaymentterms) - List all paymentterms
 * [ListAccountingProfitlosses](docs/sdks/accounting/README.md#listaccountingprofitlosses) - List all profitlosses
@@ -200,7 +200,7 @@ func main() {
 * [PatchAccountingExpensereport](docs/sdks/accounting/README.md#patchaccountingexpensereport) - Update an expensereport
 * [PatchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update an invoice
 * [PatchAccountingJournal](docs/sdks/accounting/README.md#patchaccountingjournal) - Update a journal
-* [PatchAccountingOrder](docs/sdks/accounting/README.md#patchaccountingorder) - Update an order
+* [~~PatchAccountingOrder~~](docs/sdks/accounting/README.md#patchaccountingorder) - Update an order :warning: **Deprecated**
 * [PatchAccountingPaymentterm](docs/sdks/accounting/README.md#patchaccountingpaymentterm) - Update a paymentterm
 * [PatchAccountingProject](docs/sdks/accounting/README.md#patchaccountingproject) - Update a project
 * [PatchAccountingPurchaseorder](docs/sdks/accounting/README.md#patchaccountingpurchaseorder) - Update a purchaseorder
@@ -220,7 +220,7 @@ func main() {
 * [RemoveAccountingExpensereport](docs/sdks/accounting/README.md#removeaccountingexpensereport) - Remove an expensereport
 * [RemoveAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove an invoice
 * [RemoveAccountingJournal](docs/sdks/accounting/README.md#removeaccountingjournal) - Remove a journal
-* [RemoveAccountingOrder](docs/sdks/accounting/README.md#removeaccountingorder) - Remove an order
+* [~~RemoveAccountingOrder~~](docs/sdks/accounting/README.md#removeaccountingorder) - Remove an order :warning: **Deprecated**
 * [RemoveAccountingPaymentterm](docs/sdks/accounting/README.md#removeaccountingpaymentterm) - Remove a paymentterm
 * [RemoveAccountingProject](docs/sdks/accounting/README.md#removeaccountingproject) - Remove a project
 * [RemoveAccountingPurchaseorder](docs/sdks/accounting/README.md#removeaccountingpurchaseorder) - Remove a purchaseorder
@@ -240,7 +240,7 @@ func main() {
 * [UpdateAccountingExpensereport](docs/sdks/accounting/README.md#updateaccountingexpensereport) - Update an expensereport
 * [UpdateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update an invoice
 * [UpdateAccountingJournal](docs/sdks/accounting/README.md#updateaccountingjournal) - Update a journal
-* [UpdateAccountingOrder](docs/sdks/accounting/README.md#updateaccountingorder) - Update an order
+* [~~UpdateAccountingOrder~~](docs/sdks/accounting/README.md#updateaccountingorder) - Update an order :warning: **Deprecated**
 * [UpdateAccountingPaymentterm](docs/sdks/accounting/README.md#updateaccountingpaymentterm) - Update a paymentterm
 * [UpdateAccountingProject](docs/sdks/accounting/README.md#updateaccountingproject) - Update a project
 * [UpdateAccountingPurchaseorder](docs/sdks/accounting/README.md#updateaccountingpurchaseorder) - Update a purchaseorder
@@ -1864,15 +1864,15 @@ func main() {
 
 ### [Order](docs/sdks/order/README.md)
 
-* [CreateAccountingOrder](docs/sdks/order/README.md#createaccountingorder) - Create an order
+* [~~CreateAccountingOrder~~](docs/sdks/order/README.md#createaccountingorder) - Create an order :warning: **Deprecated**
 * [CreateAssessmentOrder](docs/sdks/order/README.md#createassessmentorder) - Create an order
-* [GetAccountingOrder](docs/sdks/order/README.md#getaccountingorder) - Retrieve an order
+* [~~GetAccountingOrder~~](docs/sdks/order/README.md#getaccountingorder) - Retrieve an order :warning: **Deprecated**
 * [GetAssessmentOrder](docs/sdks/order/README.md#getassessmentorder) - Retrieve an order
-* [ListAccountingOrders](docs/sdks/order/README.md#listaccountingorders) - List all orders
-* [PatchAccountingOrder](docs/sdks/order/README.md#patchaccountingorder) - Update an order
+* [~~ListAccountingOrders~~](docs/sdks/order/README.md#listaccountingorders) - List all orders :warning: **Deprecated**
+* [~~PatchAccountingOrder~~](docs/sdks/order/README.md#patchaccountingorder) - Update an order :warning: **Deprecated**
 * [PatchAssessmentOrder](docs/sdks/order/README.md#patchassessmentorder) - Update an order
-* [RemoveAccountingOrder](docs/sdks/order/README.md#removeaccountingorder) - Remove an order
-* [UpdateAccountingOrder](docs/sdks/order/README.md#updateaccountingorder) - Update an order
+* [~~RemoveAccountingOrder~~](docs/sdks/order/README.md#removeaccountingorder) - Remove an order :warning: **Deprecated**
+* [~~UpdateAccountingOrder~~](docs/sdks/order/README.md#updateaccountingorder) - Update an order :warning: **Deprecated**
 * [UpdateAssessmentOrder](docs/sdks/order/README.md#updateassessmentorder) - Update an order
 
 ### [Organization](docs/sdks/organization/README.md)
@@ -2812,7 +2812,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("e1ef892f-3b71-470e-9366-7d11f6594355"),
+			ID:                  unifiedgosdk.Pointer("cf355b43-f7e4-4200-abd9-da8905ac9789"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -2825,7 +2825,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-06T21:40:54.101Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-07T03:43:27.331Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -2886,7 +2886,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("e1ef892f-3b71-470e-9366-7d11f6594355"),
+			ID:                  unifiedgosdk.Pointer("cf355b43-f7e4-4200-abd9-da8905ac9789"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -2899,7 +2899,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-06T21:40:54.101Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-07T03:43:27.331Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -2943,7 +2943,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("e1ef892f-3b71-470e-9366-7d11f6594355"),
+			ID:                  unifiedgosdk.Pointer("cf355b43-f7e4-4200-abd9-da8905ac9789"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -2956,7 +2956,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-06T21:40:54.101Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-07T03:43:27.331Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3043,7 +3043,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("e1ef892f-3b71-470e-9366-7d11f6594355"),
+			ID:                  unifiedgosdk.Pointer("cf355b43-f7e4-4200-abd9-da8905ac9789"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3056,7 +3056,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-06T21:40:54.101Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-07T03:43:27.331Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3105,7 +3105,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("e1ef892f-3b71-470e-9366-7d11f6594355"),
+			ID:                  unifiedgosdk.Pointer("cf355b43-f7e4-4200-abd9-da8905ac9789"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3118,7 +3118,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-06T21:40:54.101Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-07T03:43:27.331Z"),
 		},
 		ConnectionID: "<id>",
 	}, operations.WithRetries(
@@ -3181,7 +3181,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("e1ef892f-3b71-470e-9366-7d11f6594355"),
+			ID:                  unifiedgosdk.Pointer("cf355b43-f7e4-4200-abd9-da8905ac9789"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3194,7 +3194,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-06T21:40:54.101Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-07T03:43:27.331Z"),
 		},
 		ConnectionID: "<id>",
 	})

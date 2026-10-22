@@ -13,7 +13,7 @@
 
 ## CreatePaymentSubscription
 
-Create a subscription
+Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body; they are mapped to the provider's API. Returns the created PaymentSubscription.
 
 ### Example Usage
 
@@ -45,7 +45,7 @@ func main() {
             CurrentPeriodStartAt: types.MustNewTimeFromString("2023-05-08T10:11:03.414Z"),
             DayOfMonth: unifiedgosdk.Pointer[float64](8.0),
             Description: unifiedgosdk.Pointer("Innovative Mouse featuring important technology and Bamboo construction"),
-            ID: unifiedgosdk.Pointer("a394f325-5551-4a99-af71-bf68f958a0f6"),
+            ID: unifiedgosdk.Pointer("ec15d0db-8265-4e03-93fb-6af020431b8f"),
             Interval: unifiedgosdk.Pointer[float64](1.0),
             IntervalUnit: shared.IntervalUnitYear.ToPointer(),
             Lineitems: []shared.PaymentLineitem{},
@@ -54,7 +54,7 @@ func main() {
             StartAt: types.MustNewTimeFromString("2023-05-08T10:11:03.414Z"),
             Status: shared.PaymentSubscriptionStatusActive.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-04T12:52:53.384Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-04T15:41:28.097Z"),
         },
         ConnectionID: "<id>",
     })
@@ -87,7 +87,7 @@ func main() {
 
 ## GetPaymentSubscription
 
-Retrieve a subscription
+Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -142,7 +142,7 @@ func main() {
 
 ## ListPaymentSubscriptions
 
-List all subscriptions
+Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -196,7 +196,7 @@ func main() {
 
 ## PatchPaymentSubscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -228,7 +228,7 @@ func main() {
             CurrentPeriodStartAt: types.MustNewTimeFromString("2023-05-08T10:11:03.414Z"),
             DayOfMonth: unifiedgosdk.Pointer[float64](8.0),
             Description: unifiedgosdk.Pointer("Innovative Mouse featuring important technology and Bamboo construction"),
-            ID: unifiedgosdk.Pointer("a1331b76-e046-45c2-8dec-da55813f253f"),
+            ID: unifiedgosdk.Pointer("d45db3c0-8446-4d27-878e-56e3b0022611"),
             Interval: unifiedgosdk.Pointer[float64](1.0),
             IntervalUnit: shared.IntervalUnitYear.ToPointer(),
             Lineitems: []shared.PaymentLineitem{},
@@ -237,7 +237,7 @@ func main() {
             StartAt: types.MustNewTimeFromString("2023-05-08T10:11:03.414Z"),
             Status: shared.PaymentSubscriptionStatusActive.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-04T12:52:53.388Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-04T15:41:28.101Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -271,7 +271,7 @@ func main() {
 
 ## RemovePaymentSubscription
 
-Remove a subscription
+Deletes the PaymentSubscription identified by `id`.
 
 ### Example Usage
 
@@ -326,7 +326,7 @@ func main() {
 
 ## UpdatePaymentSubscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -358,7 +358,7 @@ func main() {
             CurrentPeriodStartAt: types.MustNewTimeFromString("2023-05-08T10:11:03.414Z"),
             DayOfMonth: unifiedgosdk.Pointer[float64](8.0),
             Description: unifiedgosdk.Pointer("Innovative Mouse featuring important technology and Bamboo construction"),
-            ID: unifiedgosdk.Pointer("a1331b76-e046-45c2-8dec-da55813f253f"),
+            ID: unifiedgosdk.Pointer("d45db3c0-8446-4d27-878e-56e3b0022611"),
             Interval: unifiedgosdk.Pointer[float64](1.0),
             IntervalUnit: shared.IntervalUnitYear.ToPointer(),
             Lineitems: []shared.PaymentLineitem{},
@@ -367,7 +367,7 @@ func main() {
             StartAt: types.MustNewTimeFromString("2023-05-08T10:11:03.414Z"),
             Status: shared.PaymentSubscriptionStatusActive.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-04T12:52:53.388Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-04T15:41:28.101Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

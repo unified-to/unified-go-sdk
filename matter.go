@@ -31,6 +31,7 @@ func newMatter(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 }
 
 // CreateLegalMatter - Create a matter
+// Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped to the provider's API. Returns the created LegalMatter.
 func (s *Matter) CreateLegalMatter(ctx context.Context, request operations.CreateLegalMatterRequest, opts ...operations.Option) (*operations.CreateLegalMatterResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Matter) CreateLegalMatter(ctx context.Context, request operations.Creat
 }
 
 // GetLegalMatter - Retrieve a matter
+// Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Matter) GetLegalMatter(ctx context.Context, request operations.GetLegalMatterRequest, opts ...operations.Option) (*operations.GetLegalMatterResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Matter) GetLegalMatter(ctx context.Context, request operations.GetLegal
 }
 
 // ListLegalMatters - List all matters
+// Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Matter) ListLegalMatters(ctx context.Context, request operations.ListLegalMattersRequest, opts ...operations.Option) (*operations.ListLegalMattersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Matter) ListLegalMatters(ctx context.Context, request operations.ListLe
 }
 
 // PatchLegalMatter - Update a matter
+// Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 func (s *Matter) PatchLegalMatter(ctx context.Context, request operations.PatchLegalMatterRequest, opts ...operations.Option) (*operations.PatchLegalMatterResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Matter) PatchLegalMatter(ctx context.Context, request operations.PatchL
 }
 
 // RemoveLegalMatter - Remove a matter
+// Deletes the LegalMatter identified by `id`.
 func (s *Matter) RemoveLegalMatter(ctx context.Context, request operations.RemoveLegalMatterRequest, opts ...operations.Option) (*operations.RemoveLegalMatterResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Matter) RemoveLegalMatter(ctx context.Context, request operations.Remov
 }
 
 // UpdateLegalMatter - Update a matter
+// Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 func (s *Matter) UpdateLegalMatter(ctx context.Context, request operations.UpdateLegalMatterRequest, opts ...operations.Option) (*operations.UpdateLegalMatterResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

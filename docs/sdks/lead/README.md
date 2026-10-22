@@ -13,7 +13,7 @@
 
 ## CreateCrmLead
 
-Create a lead
+Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the provider's API. Returns the created CrmLead.
 
 ### Example Usage
 
@@ -56,7 +56,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Velda"),
-            ID: unifiedgosdk.Pointer("fdf5c447-a048-4324-91ea-918517eaf80b"),
+            ID: unifiedgosdk.Pointer("a5ff2dbc-ac11-4d68-87c6-e797c08278bb"),
             IsActive: unifiedgosdk.Pointer(true),
             LastName: unifiedgosdk.Pointer("Sporer"),
             LinkUrls: []string{
@@ -70,7 +70,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("f9248f76-97df-44eb-9efe-20e1c22d7ac4"),
+                    ID: unifiedgosdk.Pointer("8a6b03f1-da64-4cf4-869c-768a877990b1"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -96,7 +96,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("International Factors Administrator"),
-            UpdatedAt: types.MustNewTimeFromString("2020-05-17T21:34:50.146Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-05-17T23:36:15.811Z"),
         },
         ConnectionID: "<id>",
     })
@@ -129,7 +129,7 @@ func main() {
 
 ## GetCrmLead
 
-Retrieve a lead
+Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -184,7 +184,7 @@ func main() {
 
 ## ListCrmLeads
 
-List all leads
+Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -238,7 +238,7 @@ func main() {
 
 ## PatchCrmLead
 
-Update a lead
+Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
 ### Example Usage
 
@@ -281,7 +281,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Velda"),
-            ID: unifiedgosdk.Pointer("6c8c585e-50d2-4a85-a7c8-7909fac94b4c"),
+            ID: unifiedgosdk.Pointer("52f44fbc-4a77-45dc-94c8-577758fff89f"),
             IsActive: unifiedgosdk.Pointer(true),
             LastName: unifiedgosdk.Pointer("Sporer"),
             LinkUrls: []string{
@@ -295,7 +295,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("8f740a58-690e-4ddc-9d90-630a91b6caa2"),
+                    ID: unifiedgosdk.Pointer("7d5aa530-b73a-44e0-93ca-7e6fa6eabd74"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -321,7 +321,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("International Factors Administrator"),
-            UpdatedAt: types.MustNewTimeFromString("2020-05-17T21:34:50.148Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-05-17T23:36:15.815Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -355,7 +355,7 @@ func main() {
 
 ## RemoveCrmLead
 
-Remove a lead
+Deletes the CrmLead identified by `id`.
 
 ### Example Usage
 
@@ -410,7 +410,7 @@ func main() {
 
 ## UpdateCrmLead
 
-Update a lead
+Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
 ### Example Usage
 
@@ -453,7 +453,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Velda"),
-            ID: unifiedgosdk.Pointer("6c8c585e-50d2-4a85-a7c8-7909fac94b4c"),
+            ID: unifiedgosdk.Pointer("52f44fbc-4a77-45dc-94c8-577758fff89f"),
             IsActive: unifiedgosdk.Pointer(true),
             LastName: unifiedgosdk.Pointer("Sporer"),
             LinkUrls: []string{
@@ -467,7 +467,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("8f740a58-690e-4ddc-9d90-630a91b6caa2"),
+                    ID: unifiedgosdk.Pointer("7d5aa530-b73a-44e0-93ca-7e6fa6eabd74"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -493,7 +493,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("International Factors Administrator"),
-            UpdatedAt: types.MustNewTimeFromString("2020-05-17T21:34:50.148Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-05-17T23:36:15.815Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -31,6 +31,7 @@ func newContact(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateAccountingContact - Create a contact
+// Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they are mapped to the provider's API. Returns the created AccountingContact.
 func (s *Contact) CreateAccountingContact(ctx context.Context, request operations.CreateAccountingContactRequest, opts ...operations.Option) (*operations.CreateAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Contact) CreateAccountingContact(ctx context.Context, request operation
 }
 
 // CreateCrmContact - Create a contact
+// Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to the provider's API. Returns the created CrmContact.
 func (s *Contact) CreateCrmContact(ctx context.Context, request operations.CreateCrmContactRequest, opts ...operations.Option) (*operations.CreateCrmContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Contact) CreateCrmContact(ctx context.Context, request operations.Creat
 }
 
 // CreateUcContact - Create a contact
+// Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to the provider's API. Returns the created UcContact.
 func (s *Contact) CreateUcContact(ctx context.Context, request operations.CreateUcContactRequest, opts ...operations.Option) (*operations.CreateUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Contact) CreateUcContact(ctx context.Context, request operations.Create
 }
 
 // GetAccountingContact - Retrieve a contact
+// Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Contact) GetAccountingContact(ctx context.Context, request operations.GetAccountingContactRequest, opts ...operations.Option) (*operations.GetAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -880,6 +884,7 @@ func (s *Contact) GetAccountingContact(ctx context.Context, request operations.G
 }
 
 // GetCrmContact - Retrieve a contact
+// Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Contact) GetCrmContact(ctx context.Context, request operations.GetCrmContactRequest, opts ...operations.Option) (*operations.GetCrmContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1087,6 +1092,7 @@ func (s *Contact) GetCrmContact(ctx context.Context, request operations.GetCrmCo
 }
 
 // GetUcContact - Retrieve a contact
+// Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Contact) GetUcContact(ctx context.Context, request operations.GetUcContactRequest, opts ...operations.Option) (*operations.GetUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1294,6 +1300,7 @@ func (s *Contact) GetUcContact(ctx context.Context, request operations.GetUcCont
 }
 
 // ListAccountingContacts - List all contacts
+// Returns a list of AccountingContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Contact) ListAccountingContacts(ctx context.Context, request operations.ListAccountingContactsRequest, opts ...operations.Option) (*operations.ListAccountingContactsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Contact) ListAccountingContacts(ctx context.Context, request operations
 }
 
 // ListCrmContacts - List all contacts
+// Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Contact) ListCrmContacts(ctx context.Context, request operations.ListCrmContactsRequest, opts ...operations.Option) (*operations.ListCrmContactsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1708,6 +1716,7 @@ func (s *Contact) ListCrmContacts(ctx context.Context, request operations.ListCr
 }
 
 // ListUcContacts - List all contacts
+// Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Contact) ListUcContacts(ctx context.Context, request operations.ListUcContactsRequest, opts ...operations.Option) (*operations.ListUcContactsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1915,6 +1924,7 @@ func (s *Contact) ListUcContacts(ctx context.Context, request operations.ListUcC
 }
 
 // PatchAccountingContact - Update a contact
+// Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 func (s *Contact) PatchAccountingContact(ctx context.Context, request operations.PatchAccountingContactRequest, opts ...operations.Option) (*operations.PatchAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2129,6 +2139,7 @@ func (s *Contact) PatchAccountingContact(ctx context.Context, request operations
 }
 
 // PatchCrmContact - Update a contact
+// Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 func (s *Contact) PatchCrmContact(ctx context.Context, request operations.PatchCrmContactRequest, opts ...operations.Option) (*operations.PatchCrmContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2343,6 +2354,7 @@ func (s *Contact) PatchCrmContact(ctx context.Context, request operations.PatchC
 }
 
 // PatchUcContact - Update a contact
+// Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 func (s *Contact) PatchUcContact(ctx context.Context, request operations.PatchUcContactRequest, opts ...operations.Option) (*operations.PatchUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2557,6 +2569,7 @@ func (s *Contact) PatchUcContact(ctx context.Context, request operations.PatchUc
 }
 
 // RemoveAccountingContact - Remove a contact
+// Deletes the AccountingContact identified by `id`.
 func (s *Contact) RemoveAccountingContact(ctx context.Context, request operations.RemoveAccountingContactRequest, opts ...operations.Option) (*operations.RemoveAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2739,6 +2752,7 @@ func (s *Contact) RemoveAccountingContact(ctx context.Context, request operation
 }
 
 // RemoveCrmContact - Remove a contact
+// Deletes the CrmContact identified by `id`.
 func (s *Contact) RemoveCrmContact(ctx context.Context, request operations.RemoveCrmContactRequest, opts ...operations.Option) (*operations.RemoveCrmContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2921,6 +2935,7 @@ func (s *Contact) RemoveCrmContact(ctx context.Context, request operations.Remov
 }
 
 // RemoveUcContact - Remove a contact
+// Deletes the UcContact identified by `id`.
 func (s *Contact) RemoveUcContact(ctx context.Context, request operations.RemoveUcContactRequest, opts ...operations.Option) (*operations.RemoveUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3103,6 +3118,7 @@ func (s *Contact) RemoveUcContact(ctx context.Context, request operations.Remove
 }
 
 // UpdateAccountingContact - Update a contact
+// Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 func (s *Contact) UpdateAccountingContact(ctx context.Context, request operations.UpdateAccountingContactRequest, opts ...operations.Option) (*operations.UpdateAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3317,6 +3333,7 @@ func (s *Contact) UpdateAccountingContact(ctx context.Context, request operation
 }
 
 // UpdateCrmContact - Update a contact
+// Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 func (s *Contact) UpdateCrmContact(ctx context.Context, request operations.UpdateCrmContactRequest, opts ...operations.Option) (*operations.UpdateCrmContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3531,6 +3548,7 @@ func (s *Contact) UpdateCrmContact(ctx context.Context, request operations.Updat
 }
 
 // UpdateUcContact - Update a contact
+// Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 func (s *Contact) UpdateUcContact(ctx context.Context, request operations.UpdateUcContactRequest, opts ...operations.Option) (*operations.UpdateUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -13,7 +13,7 @@
 
 ## CreateGenaiAgent
 
-Create an agent
+Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to the provider's API. Returns the created GenaiAgent.
 
 ### Example Usage
 
@@ -41,11 +41,11 @@ func main() {
         GenaiAgent: shared.GenaiAgent{
             CreatedAt: types.MustNewTimeFromString("2020-12-18T02:23:33.723Z"),
             Description: unifiedgosdk.Pointer("Assentator tero sequi."),
-            ID: unifiedgosdk.Pointer("bddafc1a-890a-4ac9-81f7-8a777f0d9001"),
+            ID: unifiedgosdk.Pointer("e6383f2d-b4d2-489e-9384-0cca840ad6f3"),
             Instructions: unifiedgosdk.Pointer("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum."),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("daughter with"),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-15T10:47:48.979Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-16T06:26:17.706Z"),
         },
         ConnectionID: "<id>",
     })
@@ -78,7 +78,7 @@ func main() {
 
 ## GetGenaiAgent
 
-Retrieve an agent
+Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -133,7 +133,7 @@ func main() {
 
 ## ListGenaiAgents
 
-List all agents
+Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -187,7 +187,7 @@ func main() {
 
 ## PatchGenaiAgent
 
-Update an agent
+Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 
 ### Example Usage
 
@@ -215,11 +215,11 @@ func main() {
         GenaiAgent: shared.GenaiAgent{
             CreatedAt: types.MustNewTimeFromString("2020-12-18T02:23:33.723Z"),
             Description: unifiedgosdk.Pointer("Assentator tero sequi."),
-            ID: unifiedgosdk.Pointer("84fc5f34-c274-43ed-9767-bf6338847936"),
+            ID: unifiedgosdk.Pointer("691117f4-f6f3-456b-90b6-e5ab838c6c45"),
             Instructions: unifiedgosdk.Pointer("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum."),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("daughter with"),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-15T10:47:48.983Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-16T06:26:17.713Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -253,7 +253,7 @@ func main() {
 
 ## RemoveGenaiAgent
 
-Remove an agent
+Deletes the GenaiAgent identified by `id`.
 
 ### Example Usage
 
@@ -308,7 +308,7 @@ func main() {
 
 ## UpdateGenaiAgent
 
-Update an agent
+Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 
 ### Example Usage
 
@@ -336,11 +336,11 @@ func main() {
         GenaiAgent: shared.GenaiAgent{
             CreatedAt: types.MustNewTimeFromString("2020-12-18T02:23:33.723Z"),
             Description: unifiedgosdk.Pointer("Assentator tero sequi."),
-            ID: unifiedgosdk.Pointer("84fc5f34-c274-43ed-9767-bf6338847936"),
+            ID: unifiedgosdk.Pointer("691117f4-f6f3-456b-90b6-e5ab838c6c45"),
             Instructions: unifiedgosdk.Pointer("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum."),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("daughter with"),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-15T10:47:48.983Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-16T06:26:17.713Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

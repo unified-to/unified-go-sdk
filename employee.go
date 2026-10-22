@@ -31,6 +31,7 @@ func newEmployee(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateHrisEmployee - Create an employee
+// Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped to the provider's API. Returns the created HrisEmployee.
 func (s *Employee) CreateHrisEmployee(ctx context.Context, request operations.CreateHrisEmployeeRequest, opts ...operations.Option) (*operations.CreateHrisEmployeeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Employee) CreateHrisEmployee(ctx context.Context, request operations.Cr
 }
 
 // GetHrisEmployee - Retrieve an employee
+// Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Employee) GetHrisEmployee(ctx context.Context, request operations.GetHrisEmployeeRequest, opts ...operations.Option) (*operations.GetHrisEmployeeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Employee) GetHrisEmployee(ctx context.Context, request operations.GetHr
 }
 
 // ListHrisEmployees - List all employees
+// Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Employee) ListHrisEmployees(ctx context.Context, request operations.ListHrisEmployeesRequest, opts ...operations.Option) (*operations.ListHrisEmployeesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Employee) ListHrisEmployees(ctx context.Context, request operations.Lis
 }
 
 // PatchHrisEmployee - Update an employee
+// Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 func (s *Employee) PatchHrisEmployee(ctx context.Context, request operations.PatchHrisEmployeeRequest, opts ...operations.Option) (*operations.PatchHrisEmployeeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Employee) PatchHrisEmployee(ctx context.Context, request operations.Pat
 }
 
 // RemoveHrisEmployee - Remove an employee
+// Deletes the HrisEmployee identified by `id`.
 func (s *Employee) RemoveHrisEmployee(ctx context.Context, request operations.RemoveHrisEmployeeRequest, opts ...operations.Option) (*operations.RemoveHrisEmployeeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Employee) RemoveHrisEmployee(ctx context.Context, request operations.Re
 }
 
 // UpdateHrisEmployee - Update an employee
+// Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 func (s *Employee) UpdateHrisEmployee(ctx context.Context, request operations.UpdateHrisEmployeeRequest, opts ...operations.Option) (*operations.UpdateHrisEmployeeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

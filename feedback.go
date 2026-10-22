@@ -31,6 +31,7 @@ func newFeedback(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreatePerformanceFeedback - Create a feedback
+// Creates a PerformanceFeedback. Provide the unified PerformanceFeedback fields in the request body; they are mapped to the provider's API. Returns the created PerformanceFeedback.
 func (s *Feedback) CreatePerformanceFeedback(ctx context.Context, request operations.CreatePerformanceFeedbackRequest, opts ...operations.Option) (*operations.CreatePerformanceFeedbackResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Feedback) CreatePerformanceFeedback(ctx context.Context, request operat
 }
 
 // GetPerformanceFeedback - Retrieve a feedback
+// Retrieves a single PerformanceFeedback by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Feedback) GetPerformanceFeedback(ctx context.Context, request operations.GetPerformanceFeedbackRequest, opts ...operations.Option) (*operations.GetPerformanceFeedbackResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Feedback) GetPerformanceFeedback(ctx context.Context, request operation
 }
 
 // ListPerformanceFeedbacks - List all feedbacks
+// Returns a list of PerformanceFeedbacks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Feedback) ListPerformanceFeedbacks(ctx context.Context, request operations.ListPerformanceFeedbacksRequest, opts ...operations.Option) (*operations.ListPerformanceFeedbacksResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

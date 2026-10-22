@@ -31,6 +31,7 @@ func newCampaign(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateAdsCampaign - Create a campaign
+// Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped to the provider's API. Returns the created AdsCampaign.
 func (s *Campaign) CreateAdsCampaign(ctx context.Context, request operations.CreateAdsCampaignRequest, opts ...operations.Option) (*operations.CreateAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Campaign) CreateAdsCampaign(ctx context.Context, request operations.Cre
 }
 
 // CreateMartechCampaign - Create a campaign
+// Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they are mapped to the provider's API. Returns the created MarketingCampaign.
 func (s *Campaign) CreateMartechCampaign(ctx context.Context, request operations.CreateMartechCampaignRequest, opts ...operations.Option) (*operations.CreateMartechCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Campaign) CreateMartechCampaign(ctx context.Context, request operations
 }
 
 // GetAdsCampaign - Retrieve a campaign
+// Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Campaign) GetAdsCampaign(ctx context.Context, request operations.GetAdsCampaignRequest, opts ...operations.Option) (*operations.GetAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -666,6 +669,7 @@ func (s *Campaign) GetAdsCampaign(ctx context.Context, request operations.GetAds
 }
 
 // GetMartechCampaign - Retrieve a campaign
+// Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Campaign) GetMartechCampaign(ctx context.Context, request operations.GetMartechCampaignRequest, opts ...operations.Option) (*operations.GetMartechCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Campaign) GetMartechCampaign(ctx context.Context, request operations.Ge
 }
 
 // ListAdsCampaigns - List all campaigns
+// Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Campaign) ListAdsCampaigns(ctx context.Context, request operations.ListAdsCampaignsRequest, opts ...operations.Option) (*operations.ListAdsCampaignsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1080,6 +1085,7 @@ func (s *Campaign) ListAdsCampaigns(ctx context.Context, request operations.List
 }
 
 // ListMartechCampaigns - List all campaigns
+// Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Campaign) ListMartechCampaigns(ctx context.Context, request operations.ListMartechCampaignsRequest, opts ...operations.Option) (*operations.ListMartechCampaignsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1287,6 +1293,7 @@ func (s *Campaign) ListMartechCampaigns(ctx context.Context, request operations.
 }
 
 // PatchAdsCampaign - Update a campaign
+// Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 func (s *Campaign) PatchAdsCampaign(ctx context.Context, request operations.PatchAdsCampaignRequest, opts ...operations.Option) (*operations.PatchAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Campaign) PatchAdsCampaign(ctx context.Context, request operations.Patc
 }
 
 // PatchMartechCampaign - Update a campaign
+// Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 func (s *Campaign) PatchMartechCampaign(ctx context.Context, request operations.PatchMartechCampaignRequest, opts ...operations.Option) (*operations.PatchMartechCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1715,6 +1723,7 @@ func (s *Campaign) PatchMartechCampaign(ctx context.Context, request operations.
 }
 
 // RemoveAdsCampaign - Remove a campaign
+// Deletes the AdsCampaign identified by `id`.
 func (s *Campaign) RemoveAdsCampaign(ctx context.Context, request operations.RemoveAdsCampaignRequest, opts ...operations.Option) (*operations.RemoveAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1897,6 +1906,7 @@ func (s *Campaign) RemoveAdsCampaign(ctx context.Context, request operations.Rem
 }
 
 // RemoveMartechCampaign - Remove a campaign
+// Deletes the MarketingCampaign identified by `id`.
 func (s *Campaign) RemoveMartechCampaign(ctx context.Context, request operations.RemoveMartechCampaignRequest, opts ...operations.Option) (*operations.RemoveMartechCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2079,6 +2089,7 @@ func (s *Campaign) RemoveMartechCampaign(ctx context.Context, request operations
 }
 
 // UpdateAdsCampaign - Update a campaign
+// Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 func (s *Campaign) UpdateAdsCampaign(ctx context.Context, request operations.UpdateAdsCampaignRequest, opts ...operations.Option) (*operations.UpdateAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2293,6 +2304,7 @@ func (s *Campaign) UpdateAdsCampaign(ctx context.Context, request operations.Upd
 }
 
 // UpdateMartechCampaign - Update a campaign
+// Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 func (s *Campaign) UpdateMartechCampaign(ctx context.Context, request operations.UpdateMartechCampaignRequest, opts ...operations.Option) (*operations.UpdateMartechCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

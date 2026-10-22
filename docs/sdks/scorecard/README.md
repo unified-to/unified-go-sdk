@@ -15,7 +15,7 @@
 
 ## CreateAtsScorecard
 
-Create a scorecard
+Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped to the provider's API. Returns the created AtsScorecard.
 
 ### Example Usage
 
@@ -43,7 +43,7 @@ func main() {
         AtsScorecard: shared.AtsScorecard{
             Comment: unifiedgosdk.Pointer("Maiores enim."),
             CreatedAt: types.MustNewTimeFromString("2022-02-20T17:09:45.498Z"),
-            ID: unifiedgosdk.Pointer("2dea7d23-46fb-48d0-a30a-b909d9a83d91"),
+            ID: unifiedgosdk.Pointer("edf3676f-3ef2-4767-bc7c-83962a8433f3"),
             Metadata: []shared.AtsMetadata{},
             Questions: []shared.AtsScorecardQuestion{
                 shared.AtsScorecardQuestion{
@@ -57,7 +57,7 @@ func main() {
                 },
             },
             Recommendation: shared.RecommendationStrongYes.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-05T13:40:04.404Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-05T20:13:30.676Z"),
         },
         ConnectionID: "<id>",
     })
@@ -90,7 +90,7 @@ func main() {
 
 ## GetAtsScorecard
 
-Retrieve a scorecard
+Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -145,7 +145,7 @@ func main() {
 
 ## GetUcScorecard
 
-Retrieve a scorecard
+Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -200,7 +200,7 @@ func main() {
 
 ## ListAtsScorecards
 
-List all scorecards
+Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -254,7 +254,7 @@ func main() {
 
 ## ListUcScorecards
 
-List all scorecards
+Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -308,7 +308,7 @@ func main() {
 
 ## PatchAtsScorecard
 
-Update a scorecard
+Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
 ### Example Usage
 
@@ -336,7 +336,7 @@ func main() {
         AtsScorecard: shared.AtsScorecard{
             Comment: unifiedgosdk.Pointer("Maiores enim."),
             CreatedAt: types.MustNewTimeFromString("2022-02-20T17:09:45.498Z"),
-            ID: unifiedgosdk.Pointer("b9b9b7a0-dae3-4133-a9d1-fa9a7b5843ed"),
+            ID: unifiedgosdk.Pointer("03c41823-53e4-40f4-ad4a-ea8f6aacc6f7"),
             Metadata: []shared.AtsMetadata{},
             Questions: []shared.AtsScorecardQuestion{
                 shared.AtsScorecardQuestion{
@@ -350,7 +350,7 @@ func main() {
                 },
             },
             Recommendation: shared.RecommendationStrongYes.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-05T13:40:04.409Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-05T20:13:30.679Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -384,7 +384,7 @@ func main() {
 
 ## RemoveAtsScorecard
 
-Remove a scorecard
+Deletes the AtsScorecard identified by `id`.
 
 ### Example Usage
 
@@ -439,7 +439,7 @@ func main() {
 
 ## UpdateAtsScorecard
 
-Update a scorecard
+Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
 ### Example Usage
 
@@ -467,7 +467,7 @@ func main() {
         AtsScorecard: shared.AtsScorecard{
             Comment: unifiedgosdk.Pointer("Maiores enim."),
             CreatedAt: types.MustNewTimeFromString("2022-02-20T17:09:45.498Z"),
-            ID: unifiedgosdk.Pointer("b9b9b7a0-dae3-4133-a9d1-fa9a7b5843ed"),
+            ID: unifiedgosdk.Pointer("03c41823-53e4-40f4-ad4a-ea8f6aacc6f7"),
             Metadata: []shared.AtsMetadata{},
             Questions: []shared.AtsScorecardQuestion{
                 shared.AtsScorecardQuestion{
@@ -481,7 +481,7 @@ func main() {
                 },
             },
             Recommendation: shared.RecommendationStrongYes.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-05T13:40:04.409Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-05T20:13:30.679Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

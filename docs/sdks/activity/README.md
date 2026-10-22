@@ -21,7 +21,7 @@
 
 ## CreateAtsActivity
 
-Create an activity
+Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
 
 ### Example Usage
 
@@ -49,7 +49,7 @@ func main() {
         AtsActivity: shared.AtsActivity{
             CreatedAt: types.MustNewTimeFromString("2022-08-07T03:16:43.865Z"),
             Description: unifiedgosdk.Pointer("Sapiente."),
-            ID: unifiedgosdk.Pointer("e8a2f1e7-5ef1-44d6-b9b0-dd4ae05406d4"),
+            ID: unifiedgosdk.Pointer("f31f8ba6-5c20-4ce8-91ff-b36db9861837"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -59,7 +59,7 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("e90754bb-3fc5-46ca-87c0-2ef0049e309a"),
+                    ID: unifiedgosdk.Pointer("ecf256cf-449b-41d7-93b4-7fe6a1aeff92"),
                     Namespace: unifiedgosdk.Pointer("activity"),
                     Slug: unifiedgosdk.Pointer("cimentarius"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
@@ -70,7 +70,7 @@ func main() {
             SubType: unifiedgosdk.Pointer("TASK"),
             Title: unifiedgosdk.Pointer("Venio blandior aureus."),
             Type: shared.AtsActivityTypeTask.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-04T06:38:15.355Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-05T03:19:02.969Z"),
         },
         ConnectionID: "<id>",
     })
@@ -103,7 +103,7 @@ func main() {
 
 ## CreateLmsActivity
 
-Create an activity
+Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped to the provider's API. Returns the created LmsActivity.
 
 ### Example Usage
 
@@ -130,15 +130,15 @@ func main() {
     res, err := s.Activity.CreateLmsActivity(ctx, operations.CreateLmsActivityRequest{
         LmsActivity: shared.LmsActivity{
             AssignedGrade: unifiedgosdk.Pointer("summopere"),
-            CompletedAt: types.MustNewTimeFromString("2023-12-05T23:40:40.743Z"),
+            CompletedAt: types.MustNewTimeFromString("2023-12-06T12:04:39.234Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-17T01:25:21.745Z"),
             DurationMinutes: unifiedgosdk.Pointer[float64](55.0),
-            ID: unifiedgosdk.Pointer("0b1206e4-ebf4-461d-ad66-a9ed815927b6"),
+            ID: unifiedgosdk.Pointer("0a87f169-efad-4aba-b463-b08da0add2bd"),
             IsCompleted: unifiedgosdk.Pointer(true),
             Metadata: []shared.LmsMetadata{},
             ProgressPercentage: unifiedgosdk.Pointer[float64](100.0),
-            StartedAt: types.MustNewTimeFromString("2021-04-25T04:23:32.793Z"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-30T23:41:21.299Z"),
+            StartedAt: types.MustNewTimeFromString("2021-04-25T06:27:05.348Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-31T04:47:21.858Z"),
         },
         ConnectionID: "<id>",
     })
@@ -171,7 +171,7 @@ func main() {
 
 ## GetAtsActivity
 
-Retrieve an activity
+Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -226,7 +226,7 @@ func main() {
 
 ## GetClubsActivity
 
-Retrieve an activity
+Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -281,7 +281,7 @@ func main() {
 
 ## GetLmsActivity
 
-Retrieve an activity
+Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -336,7 +336,7 @@ func main() {
 
 ## ListAtsActivities
 
-List all activities
+Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -390,7 +390,7 @@ func main() {
 
 ## ListClubsActivities
 
-List all activities
+Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -444,7 +444,7 @@ func main() {
 
 ## ListLmsActivities
 
-List all activities
+Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -498,7 +498,7 @@ func main() {
 
 ## PatchAtsActivity
 
-Update an activity
+Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -526,7 +526,7 @@ func main() {
         AtsActivity: shared.AtsActivity{
             CreatedAt: types.MustNewTimeFromString("2022-08-07T03:16:43.865Z"),
             Description: unifiedgosdk.Pointer("Sapiente."),
-            ID: unifiedgosdk.Pointer("1dd88965-536d-4641-a508-0b97b622bef5"),
+            ID: unifiedgosdk.Pointer("36bdb311-6067-41a5-ab75-6998e9b203d4"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -536,7 +536,7 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("26853e59-8a39-416d-88e8-757699c82c57"),
+                    ID: unifiedgosdk.Pointer("578f731c-d74a-4d7c-a885-88f5ca8458ed"),
                     Namespace: unifiedgosdk.Pointer("activity"),
                     Slug: unifiedgosdk.Pointer("cimentarius"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
@@ -547,7 +547,7 @@ func main() {
             SubType: unifiedgosdk.Pointer("TASK"),
             Title: unifiedgosdk.Pointer("Venio blandior aureus."),
             Type: shared.AtsActivityTypeTask.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-04T06:38:15.375Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-05T03:19:02.987Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -581,7 +581,7 @@ func main() {
 
 ## PatchLmsActivity
 
-Update an activity
+Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -608,15 +608,15 @@ func main() {
     res, err := s.Activity.PatchLmsActivity(ctx, operations.PatchLmsActivityRequest{
         LmsActivity: shared.LmsActivity{
             AssignedGrade: unifiedgosdk.Pointer("summopere"),
-            CompletedAt: types.MustNewTimeFromString("2023-12-05T23:40:40.748Z"),
+            CompletedAt: types.MustNewTimeFromString("2023-12-06T12:04:39.243Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-17T01:25:21.745Z"),
             DurationMinutes: unifiedgosdk.Pointer[float64](55.0),
-            ID: unifiedgosdk.Pointer("72d4119b-e5e6-45cd-9941-cd292c426d45"),
+            ID: unifiedgosdk.Pointer("5e21e9ae-106a-48db-8731-1534e0864f1f"),
             IsCompleted: unifiedgosdk.Pointer(true),
             Metadata: []shared.LmsMetadata{},
             ProgressPercentage: unifiedgosdk.Pointer[float64](100.0),
-            StartedAt: types.MustNewTimeFromString("2021-04-25T04:23:32.794Z"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-30T23:41:21.301Z"),
+            StartedAt: types.MustNewTimeFromString("2021-04-25T06:27:05.350Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-31T04:47:21.861Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -650,7 +650,7 @@ func main() {
 
 ## RemoveAtsActivity
 
-Remove an activity
+Deletes the AtsActivity identified by `id`.
 
 ### Example Usage
 
@@ -705,7 +705,7 @@ func main() {
 
 ## RemoveLmsActivity
 
-Remove an activity
+Deletes the LmsActivity identified by `id`.
 
 ### Example Usage
 
@@ -760,7 +760,7 @@ func main() {
 
 ## UpdateAtsActivity
 
-Update an activity
+Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -788,7 +788,7 @@ func main() {
         AtsActivity: shared.AtsActivity{
             CreatedAt: types.MustNewTimeFromString("2022-08-07T03:16:43.865Z"),
             Description: unifiedgosdk.Pointer("Sapiente."),
-            ID: unifiedgosdk.Pointer("1dd88965-536d-4641-a508-0b97b622bef5"),
+            ID: unifiedgosdk.Pointer("36bdb311-6067-41a5-ab75-6998e9b203d4"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -798,7 +798,7 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("26853e59-8a39-416d-88e8-757699c82c57"),
+                    ID: unifiedgosdk.Pointer("578f731c-d74a-4d7c-a885-88f5ca8458ed"),
                     Namespace: unifiedgosdk.Pointer("activity"),
                     Slug: unifiedgosdk.Pointer("cimentarius"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
@@ -809,7 +809,7 @@ func main() {
             SubType: unifiedgosdk.Pointer("TASK"),
             Title: unifiedgosdk.Pointer("Venio blandior aureus."),
             Type: shared.AtsActivityTypeTask.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-04T06:38:15.375Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-05T03:19:02.987Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -843,7 +843,7 @@ func main() {
 
 ## UpdateLmsActivity
 
-Update an activity
+Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -870,15 +870,15 @@ func main() {
     res, err := s.Activity.UpdateLmsActivity(ctx, operations.UpdateLmsActivityRequest{
         LmsActivity: shared.LmsActivity{
             AssignedGrade: unifiedgosdk.Pointer("summopere"),
-            CompletedAt: types.MustNewTimeFromString("2023-12-05T23:40:40.748Z"),
+            CompletedAt: types.MustNewTimeFromString("2023-12-06T12:04:39.243Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-17T01:25:21.745Z"),
             DurationMinutes: unifiedgosdk.Pointer[float64](55.0),
-            ID: unifiedgosdk.Pointer("72d4119b-e5e6-45cd-9941-cd292c426d45"),
+            ID: unifiedgosdk.Pointer("5e21e9ae-106a-48db-8731-1534e0864f1f"),
             IsCompleted: unifiedgosdk.Pointer(true),
             Metadata: []shared.LmsMetadata{},
             ProgressPercentage: unifiedgosdk.Pointer[float64](100.0),
-            StartedAt: types.MustNewTimeFromString("2021-04-25T04:23:32.794Z"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-30T23:41:21.301Z"),
+            StartedAt: types.MustNewTimeFromString("2021-04-25T06:27:05.350Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-31T04:47:21.861Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

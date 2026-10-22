@@ -31,6 +31,7 @@ func newHris(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 }
 
 // CreateHrisAttendance - Create an attendance
+// Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are mapped to the provider's API. Returns the created HrisAttendance.
 func (s *Hris) CreateHrisAttendance(ctx context.Context, request operations.CreateHrisAttendanceRequest, opts ...operations.Option) (*operations.CreateHrisAttendanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Hris) CreateHrisAttendance(ctx context.Context, request operations.Crea
 }
 
 // CreateHrisBankaccount - Create a bankaccount
+// Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are mapped to the provider's API. Returns the created HrisBankaccount.
 func (s *Hris) CreateHrisBankaccount(ctx context.Context, request operations.CreateHrisBankaccountRequest, opts ...operations.Option) (*operations.CreateHrisBankaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Hris) CreateHrisBankaccount(ctx context.Context, request operations.Cre
 }
 
 // CreateHrisBenefit - Create a benefit
+// Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped to the provider's API. Returns the created HrisBenefit.
 func (s *Hris) CreateHrisBenefit(ctx context.Context, request operations.CreateHrisBenefitRequest, opts ...operations.Option) (*operations.CreateHrisBenefitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Hris) CreateHrisBenefit(ctx context.Context, request operations.CreateH
 }
 
 // CreateHrisCompany - Create a company
+// Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
 func (s *Hris) CreateHrisCompany(ctx context.Context, request operations.CreateHrisCompanyRequest, opts ...operations.Option) (*operations.CreateHrisCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -887,6 +891,7 @@ func (s *Hris) CreateHrisCompany(ctx context.Context, request operations.CreateH
 }
 
 // CreateHrisDeduction - Create a deduction
+// Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are mapped to the provider's API. Returns the created HrisDeduction.
 func (s *Hris) CreateHrisDeduction(ctx context.Context, request operations.CreateHrisDeductionRequest, opts ...operations.Option) (*operations.CreateHrisDeductionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1101,6 +1106,7 @@ func (s *Hris) CreateHrisDeduction(ctx context.Context, request operations.Creat
 }
 
 // CreateHrisDevice - Create a device
+// Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to the provider's API. Returns the created HrisDevice.
 func (s *Hris) CreateHrisDevice(ctx context.Context, request operations.CreateHrisDeviceRequest, opts ...operations.Option) (*operations.CreateHrisDeviceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1315,6 +1321,7 @@ func (s *Hris) CreateHrisDevice(ctx context.Context, request operations.CreateHr
 }
 
 // CreateHrisDocument - Create a document
+// Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped to the provider's API. Returns the created HrisDocument.
 func (s *Hris) CreateHrisDocument(ctx context.Context, request operations.CreateHrisDocumentRequest, opts ...operations.Option) (*operations.CreateHrisDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1529,6 +1536,7 @@ func (s *Hris) CreateHrisDocument(ctx context.Context, request operations.Create
 }
 
 // CreateHrisEarning - Create an earning
+// Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped to the provider's API. Returns the created HrisEarning.
 func (s *Hris) CreateHrisEarning(ctx context.Context, request operations.CreateHrisEarningRequest, opts ...operations.Option) (*operations.CreateHrisEarningResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1743,6 +1751,7 @@ func (s *Hris) CreateHrisEarning(ctx context.Context, request operations.CreateH
 }
 
 // CreateHrisEmployee - Create an employee
+// Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped to the provider's API. Returns the created HrisEmployee.
 func (s *Hris) CreateHrisEmployee(ctx context.Context, request operations.CreateHrisEmployeeRequest, opts ...operations.Option) (*operations.CreateHrisEmployeeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1957,6 +1966,7 @@ func (s *Hris) CreateHrisEmployee(ctx context.Context, request operations.Create
 }
 
 // CreateHrisGroup - Create a group
+// Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
 func (s *Hris) CreateHrisGroup(ctx context.Context, request operations.CreateHrisGroupRequest, opts ...operations.Option) (*operations.CreateHrisGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2171,6 +2181,7 @@ func (s *Hris) CreateHrisGroup(ctx context.Context, request operations.CreateHri
 }
 
 // CreateHrisJob - Create a job
+// Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the provider's API. Returns the created HrisJob.
 func (s *Hris) CreateHrisJob(ctx context.Context, request operations.CreateHrisJobRequest, opts ...operations.Option) (*operations.CreateHrisJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2385,6 +2396,7 @@ func (s *Hris) CreateHrisJob(ctx context.Context, request operations.CreateHrisJ
 }
 
 // CreateHrisLocation - Create a location
+// Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
 func (s *Hris) CreateHrisLocation(ctx context.Context, request operations.CreateHrisLocationRequest, opts ...operations.Option) (*operations.CreateHrisLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2599,6 +2611,7 @@ func (s *Hris) CreateHrisLocation(ctx context.Context, request operations.Create
 }
 
 // CreateHrisTaxonomy - Create a taxonomy
+// Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped to the provider's API. Returns the created HrisTaxonomy.
 func (s *Hris) CreateHrisTaxonomy(ctx context.Context, request operations.CreateHrisTaxonomyRequest, opts ...operations.Option) (*operations.CreateHrisTaxonomyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2813,6 +2826,7 @@ func (s *Hris) CreateHrisTaxonomy(ctx context.Context, request operations.Create
 }
 
 // CreateHrisTimeoff - Create a timeoff
+// Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeoff.
 func (s *Hris) CreateHrisTimeoff(ctx context.Context, request operations.CreateHrisTimeoffRequest, opts ...operations.Option) (*operations.CreateHrisTimeoffResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3027,6 +3041,7 @@ func (s *Hris) CreateHrisTimeoff(ctx context.Context, request operations.CreateH
 }
 
 // CreateHrisTimeshift - Create a timeshift
+// Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeshift.
 func (s *Hris) CreateHrisTimeshift(ctx context.Context, request operations.CreateHrisTimeshiftRequest, opts ...operations.Option) (*operations.CreateHrisTimeshiftResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3241,6 +3256,7 @@ func (s *Hris) CreateHrisTimeshift(ctx context.Context, request operations.Creat
 }
 
 // GetHrisAttendance - Retrieve an attendance
+// Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Hris) GetHrisAttendance(ctx context.Context, request operations.GetHrisAttendanceRequest, opts ...operations.Option) (*operations.GetHrisAttendanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3448,6 +3464,7 @@ func (s *Hris) GetHrisAttendance(ctx context.Context, request operations.GetHris
 }
 
 // GetHrisBankaccount - Retrieve a bankaccount
+// Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Hris) GetHrisBankaccount(ctx context.Context, request operations.GetHrisBankaccountRequest, opts ...operations.Option) (*operations.GetHrisBankaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3655,6 +3672,7 @@ func (s *Hris) GetHrisBankaccount(ctx context.Context, request operations.GetHri
 }
 
 // GetHrisBenefit - Retrieve a benefit
+// Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Hris) GetHrisBenefit(ctx context.Context, request operations.GetHrisBenefitRequest, opts ...operations.Option) (*operations.GetHrisBenefitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3862,6 +3880,7 @@ func (s *Hris) GetHrisBenefit(ctx context.Context, request operations.GetHrisBen
 }
 
 // GetHrisCompany - Retrieve a company
+// Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Hris) GetHrisCompany(ctx context.Context, request operations.GetHrisCompanyRequest, opts ...operations.Option) (*operations.GetHrisCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4069,6 +4088,7 @@ func (s *Hris) GetHrisCompany(ctx context.Context, request operations.GetHrisCom
 }
 
 // GetHrisDeduction - Retrieve a deduction
+// Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Hris) GetHrisDeduction(ctx context.Context, request operations.GetHrisDeductionRequest, opts ...operations.Option) (*operations.GetHrisDeductionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4276,6 +4296,7 @@ func (s *Hris) GetHrisDeduction(ctx context.Context, request operations.GetHrisD
 }
 
 // GetHrisDevice - Retrieve a device
+// Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Hris) GetHrisDevice(ctx context.Context, request operations.GetHrisDeviceRequest, opts ...operations.Option) (*operations.GetHrisDeviceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4483,6 +4504,7 @@ func (s *Hris) GetHrisDevice(ctx context.Context, request operations.GetHrisDevi
 }
 
 // GetHrisDocument - Retrieve a document
+// Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Hris) GetHrisDocument(ctx context.Context, request operations.GetHrisDocumentRequest, opts ...operations.Option) (*operations.GetHrisDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4690,6 +4712,7 @@ func (s *Hris) GetHrisDocument(ctx context.Context, request operations.GetHrisDo
 }
 
 // GetHrisEarning - Retrieve an earning
+// Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Hris) GetHrisEarning(ctx context.Context, request operations.GetHrisEarningRequest, opts ...operations.Option) (*operations.GetHrisEarningResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4897,6 +4920,7 @@ func (s *Hris) GetHrisEarning(ctx context.Context, request operations.GetHrisEar
 }
 
 // GetHrisEmployee - Retrieve an employee
+// Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Hris) GetHrisEmployee(ctx context.Context, request operations.GetHrisEmployeeRequest, opts ...operations.Option) (*operations.GetHrisEmployeeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5104,6 +5128,7 @@ func (s *Hris) GetHrisEmployee(ctx context.Context, request operations.GetHrisEm
 }
 
 // GetHrisGroup - Retrieve a group
+// Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Hris) GetHrisGroup(ctx context.Context, request operations.GetHrisGroupRequest, opts ...operations.Option) (*operations.GetHrisGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5311,6 +5336,7 @@ func (s *Hris) GetHrisGroup(ctx context.Context, request operations.GetHrisGroup
 }
 
 // GetHrisJob - Retrieve a job
+// Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Hris) GetHrisJob(ctx context.Context, request operations.GetHrisJobRequest, opts ...operations.Option) (*operations.GetHrisJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5518,6 +5544,7 @@ func (s *Hris) GetHrisJob(ctx context.Context, request operations.GetHrisJobRequ
 }
 
 // GetHrisLocation - Retrieve a location
+// Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Hris) GetHrisLocation(ctx context.Context, request operations.GetHrisLocationRequest, opts ...operations.Option) (*operations.GetHrisLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5725,6 +5752,7 @@ func (s *Hris) GetHrisLocation(ctx context.Context, request operations.GetHrisLo
 }
 
 // GetHrisPaycode - Retrieve a paycode
+// Retrieves a single HrisPaycode by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Hris) GetHrisPaycode(ctx context.Context, request operations.GetHrisPaycodeRequest, opts ...operations.Option) (*operations.GetHrisPaycodeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5932,6 +5960,7 @@ func (s *Hris) GetHrisPaycode(ctx context.Context, request operations.GetHrisPay
 }
 
 // GetHrisPayroll - Retrieve a payroll
+// Retrieves a single HrisPayroll by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Hris) GetHrisPayroll(ctx context.Context, request operations.GetHrisPayrollRequest, opts ...operations.Option) (*operations.GetHrisPayrollResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6139,6 +6168,7 @@ func (s *Hris) GetHrisPayroll(ctx context.Context, request operations.GetHrisPay
 }
 
 // GetHrisPayslip - Retrieve a payslip
+// Retrieves a single HrisPayslip by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Hris) GetHrisPayslip(ctx context.Context, request operations.GetHrisPayslipRequest, opts ...operations.Option) (*operations.GetHrisPayslipResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6346,6 +6376,7 @@ func (s *Hris) GetHrisPayslip(ctx context.Context, request operations.GetHrisPay
 }
 
 // GetHrisTaxonomy - Retrieve a taxonomy
+// Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Hris) GetHrisTaxonomy(ctx context.Context, request operations.GetHrisTaxonomyRequest, opts ...operations.Option) (*operations.GetHrisTaxonomyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6553,6 +6584,7 @@ func (s *Hris) GetHrisTaxonomy(ctx context.Context, request operations.GetHrisTa
 }
 
 // GetHrisTimeoff - Retrieve a timeoff
+// Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Hris) GetHrisTimeoff(ctx context.Context, request operations.GetHrisTimeoffRequest, opts ...operations.Option) (*operations.GetHrisTimeoffResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6760,6 +6792,7 @@ func (s *Hris) GetHrisTimeoff(ctx context.Context, request operations.GetHrisTim
 }
 
 // GetHrisTimeshift - Retrieve a timeshift
+// Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Hris) GetHrisTimeshift(ctx context.Context, request operations.GetHrisTimeshiftRequest, opts ...operations.Option) (*operations.GetHrisTimeshiftResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6967,6 +7000,7 @@ func (s *Hris) GetHrisTimeshift(ctx context.Context, request operations.GetHrisT
 }
 
 // ListHrisAttendances - List all attendances
+// Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Hris) ListHrisAttendances(ctx context.Context, request operations.ListHrisAttendancesRequest, opts ...operations.Option) (*operations.ListHrisAttendancesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7174,6 +7208,7 @@ func (s *Hris) ListHrisAttendances(ctx context.Context, request operations.ListH
 }
 
 // ListHrisBankaccounts - List all bankaccounts
+// Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Hris) ListHrisBankaccounts(ctx context.Context, request operations.ListHrisBankaccountsRequest, opts ...operations.Option) (*operations.ListHrisBankaccountsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7381,6 +7416,7 @@ func (s *Hris) ListHrisBankaccounts(ctx context.Context, request operations.List
 }
 
 // ListHrisBenefits - List all benefits
+// Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Hris) ListHrisBenefits(ctx context.Context, request operations.ListHrisBenefitsRequest, opts ...operations.Option) (*operations.ListHrisBenefitsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7588,6 +7624,7 @@ func (s *Hris) ListHrisBenefits(ctx context.Context, request operations.ListHris
 }
 
 // ListHrisCompanies - List all companies
+// Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Hris) ListHrisCompanies(ctx context.Context, request operations.ListHrisCompaniesRequest, opts ...operations.Option) (*operations.ListHrisCompaniesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7795,6 +7832,7 @@ func (s *Hris) ListHrisCompanies(ctx context.Context, request operations.ListHri
 }
 
 // ListHrisDeductions - List all deductions
+// Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Hris) ListHrisDeductions(ctx context.Context, request operations.ListHrisDeductionsRequest, opts ...operations.Option) (*operations.ListHrisDeductionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8002,6 +8040,7 @@ func (s *Hris) ListHrisDeductions(ctx context.Context, request operations.ListHr
 }
 
 // ListHrisDevices - List all devices
+// Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Hris) ListHrisDevices(ctx context.Context, request operations.ListHrisDevicesRequest, opts ...operations.Option) (*operations.ListHrisDevicesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8209,6 +8248,7 @@ func (s *Hris) ListHrisDevices(ctx context.Context, request operations.ListHrisD
 }
 
 // ListHrisDocuments - List all documents
+// Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Hris) ListHrisDocuments(ctx context.Context, request operations.ListHrisDocumentsRequest, opts ...operations.Option) (*operations.ListHrisDocumentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8416,6 +8456,7 @@ func (s *Hris) ListHrisDocuments(ctx context.Context, request operations.ListHri
 }
 
 // ListHrisEarnings - List all earnings
+// Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Hris) ListHrisEarnings(ctx context.Context, request operations.ListHrisEarningsRequest, opts ...operations.Option) (*operations.ListHrisEarningsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8623,6 +8664,7 @@ func (s *Hris) ListHrisEarnings(ctx context.Context, request operations.ListHris
 }
 
 // ListHrisEmployees - List all employees
+// Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Hris) ListHrisEmployees(ctx context.Context, request operations.ListHrisEmployeesRequest, opts ...operations.Option) (*operations.ListHrisEmployeesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8830,6 +8872,7 @@ func (s *Hris) ListHrisEmployees(ctx context.Context, request operations.ListHri
 }
 
 // ListHrisGroups - List all groups
+// Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Hris) ListHrisGroups(ctx context.Context, request operations.ListHrisGroupsRequest, opts ...operations.Option) (*operations.ListHrisGroupsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9037,6 +9080,7 @@ func (s *Hris) ListHrisGroups(ctx context.Context, request operations.ListHrisGr
 }
 
 // ListHrisJobs - List all jobs
+// Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Hris) ListHrisJobs(ctx context.Context, request operations.ListHrisJobsRequest, opts ...operations.Option) (*operations.ListHrisJobsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9244,6 +9288,7 @@ func (s *Hris) ListHrisJobs(ctx context.Context, request operations.ListHrisJobs
 }
 
 // ListHrisLocations - List all locations
+// Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Hris) ListHrisLocations(ctx context.Context, request operations.ListHrisLocationsRequest, opts ...operations.Option) (*operations.ListHrisLocationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9451,6 +9496,7 @@ func (s *Hris) ListHrisLocations(ctx context.Context, request operations.ListHri
 }
 
 // ListHrisPaycodes - List all paycodes
+// Returns a list of HrisPaycodes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Hris) ListHrisPaycodes(ctx context.Context, request operations.ListHrisPaycodesRequest, opts ...operations.Option) (*operations.ListHrisPaycodesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9658,6 +9704,7 @@ func (s *Hris) ListHrisPaycodes(ctx context.Context, request operations.ListHris
 }
 
 // ListHrisPayrolls - List all payrolls
+// Returns a list of HrisPayrolls. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Hris) ListHrisPayrolls(ctx context.Context, request operations.ListHrisPayrollsRequest, opts ...operations.Option) (*operations.ListHrisPayrollsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9865,6 +9912,7 @@ func (s *Hris) ListHrisPayrolls(ctx context.Context, request operations.ListHris
 }
 
 // ListHrisPayslips - List all payslips
+// Returns a list of HrisPayslips. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Hris) ListHrisPayslips(ctx context.Context, request operations.ListHrisPayslipsRequest, opts ...operations.Option) (*operations.ListHrisPayslipsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -10072,6 +10120,7 @@ func (s *Hris) ListHrisPayslips(ctx context.Context, request operations.ListHris
 }
 
 // ListHrisTaxonomies - List all taxonomies
+// Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Hris) ListHrisTaxonomies(ctx context.Context, request operations.ListHrisTaxonomiesRequest, opts ...operations.Option) (*operations.ListHrisTaxonomiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -10279,6 +10328,7 @@ func (s *Hris) ListHrisTaxonomies(ctx context.Context, request operations.ListHr
 }
 
 // ListHrisTimeoffs - List all timeoffs
+// Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Hris) ListHrisTimeoffs(ctx context.Context, request operations.ListHrisTimeoffsRequest, opts ...operations.Option) (*operations.ListHrisTimeoffsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -10486,6 +10536,7 @@ func (s *Hris) ListHrisTimeoffs(ctx context.Context, request operations.ListHris
 }
 
 // ListHrisTimeshifts - List all timeshifts
+// Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Hris) ListHrisTimeshifts(ctx context.Context, request operations.ListHrisTimeshiftsRequest, opts ...operations.Option) (*operations.ListHrisTimeshiftsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -10693,6 +10744,7 @@ func (s *Hris) ListHrisTimeshifts(ctx context.Context, request operations.ListHr
 }
 
 // PatchHrisAttendance - Update an attendance
+// Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 func (s *Hris) PatchHrisAttendance(ctx context.Context, request operations.PatchHrisAttendanceRequest, opts ...operations.Option) (*operations.PatchHrisAttendanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -10907,6 +10959,7 @@ func (s *Hris) PatchHrisAttendance(ctx context.Context, request operations.Patch
 }
 
 // PatchHrisBankaccount - Update a bankaccount
+// Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 func (s *Hris) PatchHrisBankaccount(ctx context.Context, request operations.PatchHrisBankaccountRequest, opts ...operations.Option) (*operations.PatchHrisBankaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -11121,6 +11174,7 @@ func (s *Hris) PatchHrisBankaccount(ctx context.Context, request operations.Patc
 }
 
 // PatchHrisBenefit - Update a benefit
+// Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 func (s *Hris) PatchHrisBenefit(ctx context.Context, request operations.PatchHrisBenefitRequest, opts ...operations.Option) (*operations.PatchHrisBenefitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -11335,6 +11389,7 @@ func (s *Hris) PatchHrisBenefit(ctx context.Context, request operations.PatchHri
 }
 
 // PatchHrisCompany - Update a company
+// Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 func (s *Hris) PatchHrisCompany(ctx context.Context, request operations.PatchHrisCompanyRequest, opts ...operations.Option) (*operations.PatchHrisCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -11549,6 +11604,7 @@ func (s *Hris) PatchHrisCompany(ctx context.Context, request operations.PatchHri
 }
 
 // PatchHrisDeduction - Update a deduction
+// Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 func (s *Hris) PatchHrisDeduction(ctx context.Context, request operations.PatchHrisDeductionRequest, opts ...operations.Option) (*operations.PatchHrisDeductionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -11763,6 +11819,7 @@ func (s *Hris) PatchHrisDeduction(ctx context.Context, request operations.PatchH
 }
 
 // PatchHrisDevice - Update a device
+// Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 func (s *Hris) PatchHrisDevice(ctx context.Context, request operations.PatchHrisDeviceRequest, opts ...operations.Option) (*operations.PatchHrisDeviceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -11977,6 +12034,7 @@ func (s *Hris) PatchHrisDevice(ctx context.Context, request operations.PatchHris
 }
 
 // PatchHrisDocument - Update a document
+// Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 func (s *Hris) PatchHrisDocument(ctx context.Context, request operations.PatchHrisDocumentRequest, opts ...operations.Option) (*operations.PatchHrisDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -12191,6 +12249,7 @@ func (s *Hris) PatchHrisDocument(ctx context.Context, request operations.PatchHr
 }
 
 // PatchHrisEarning - Update an earning
+// Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 func (s *Hris) PatchHrisEarning(ctx context.Context, request operations.PatchHrisEarningRequest, opts ...operations.Option) (*operations.PatchHrisEarningResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -12405,6 +12464,7 @@ func (s *Hris) PatchHrisEarning(ctx context.Context, request operations.PatchHri
 }
 
 // PatchHrisEmployee - Update an employee
+// Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 func (s *Hris) PatchHrisEmployee(ctx context.Context, request operations.PatchHrisEmployeeRequest, opts ...operations.Option) (*operations.PatchHrisEmployeeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -12619,6 +12679,7 @@ func (s *Hris) PatchHrisEmployee(ctx context.Context, request operations.PatchHr
 }
 
 // PatchHrisGroup - Update a group
+// Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 func (s *Hris) PatchHrisGroup(ctx context.Context, request operations.PatchHrisGroupRequest, opts ...operations.Option) (*operations.PatchHrisGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -12833,6 +12894,7 @@ func (s *Hris) PatchHrisGroup(ctx context.Context, request operations.PatchHrisG
 }
 
 // PatchHrisJob - Update a job
+// Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 func (s *Hris) PatchHrisJob(ctx context.Context, request operations.PatchHrisJobRequest, opts ...operations.Option) (*operations.PatchHrisJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -13047,6 +13109,7 @@ func (s *Hris) PatchHrisJob(ctx context.Context, request operations.PatchHrisJob
 }
 
 // PatchHrisLocation - Update a location
+// Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 func (s *Hris) PatchHrisLocation(ctx context.Context, request operations.PatchHrisLocationRequest, opts ...operations.Option) (*operations.PatchHrisLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -13261,6 +13324,7 @@ func (s *Hris) PatchHrisLocation(ctx context.Context, request operations.PatchHr
 }
 
 // PatchHrisTimeoff - Update a timeoff
+// Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 func (s *Hris) PatchHrisTimeoff(ctx context.Context, request operations.PatchHrisTimeoffRequest, opts ...operations.Option) (*operations.PatchHrisTimeoffResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -13475,6 +13539,7 @@ func (s *Hris) PatchHrisTimeoff(ctx context.Context, request operations.PatchHri
 }
 
 // PatchHrisTimeshift - Update a timeshift
+// Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 func (s *Hris) PatchHrisTimeshift(ctx context.Context, request operations.PatchHrisTimeshiftRequest, opts ...operations.Option) (*operations.PatchHrisTimeshiftResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -13689,6 +13754,7 @@ func (s *Hris) PatchHrisTimeshift(ctx context.Context, request operations.PatchH
 }
 
 // RemoveHrisAttendance - Remove an attendance
+// Deletes the HrisAttendance identified by `id`.
 func (s *Hris) RemoveHrisAttendance(ctx context.Context, request operations.RemoveHrisAttendanceRequest, opts ...operations.Option) (*operations.RemoveHrisAttendanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -13871,6 +13937,7 @@ func (s *Hris) RemoveHrisAttendance(ctx context.Context, request operations.Remo
 }
 
 // RemoveHrisBankaccount - Remove a bankaccount
+// Deletes the HrisBankaccount identified by `id`.
 func (s *Hris) RemoveHrisBankaccount(ctx context.Context, request operations.RemoveHrisBankaccountRequest, opts ...operations.Option) (*operations.RemoveHrisBankaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -14053,6 +14120,7 @@ func (s *Hris) RemoveHrisBankaccount(ctx context.Context, request operations.Rem
 }
 
 // RemoveHrisBenefit - Remove a benefit
+// Deletes the HrisBenefit identified by `id`.
 func (s *Hris) RemoveHrisBenefit(ctx context.Context, request operations.RemoveHrisBenefitRequest, opts ...operations.Option) (*operations.RemoveHrisBenefitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -14235,6 +14303,7 @@ func (s *Hris) RemoveHrisBenefit(ctx context.Context, request operations.RemoveH
 }
 
 // RemoveHrisCompany - Remove a company
+// Deletes the HrisCompany identified by `id`.
 func (s *Hris) RemoveHrisCompany(ctx context.Context, request operations.RemoveHrisCompanyRequest, opts ...operations.Option) (*operations.RemoveHrisCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -14417,6 +14486,7 @@ func (s *Hris) RemoveHrisCompany(ctx context.Context, request operations.RemoveH
 }
 
 // RemoveHrisDeduction - Remove a deduction
+// Deletes the HrisDeduction identified by `id`.
 func (s *Hris) RemoveHrisDeduction(ctx context.Context, request operations.RemoveHrisDeductionRequest, opts ...operations.Option) (*operations.RemoveHrisDeductionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -14599,6 +14669,7 @@ func (s *Hris) RemoveHrisDeduction(ctx context.Context, request operations.Remov
 }
 
 // RemoveHrisDevice - Remove a device
+// Deletes the HrisDevice identified by `id`.
 func (s *Hris) RemoveHrisDevice(ctx context.Context, request operations.RemoveHrisDeviceRequest, opts ...operations.Option) (*operations.RemoveHrisDeviceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -14781,6 +14852,7 @@ func (s *Hris) RemoveHrisDevice(ctx context.Context, request operations.RemoveHr
 }
 
 // RemoveHrisDocument - Remove a document
+// Deletes the HrisDocument identified by `id`.
 func (s *Hris) RemoveHrisDocument(ctx context.Context, request operations.RemoveHrisDocumentRequest, opts ...operations.Option) (*operations.RemoveHrisDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -14963,6 +15035,7 @@ func (s *Hris) RemoveHrisDocument(ctx context.Context, request operations.Remove
 }
 
 // RemoveHrisEarning - Remove an earning
+// Deletes the HrisEarning identified by `id`.
 func (s *Hris) RemoveHrisEarning(ctx context.Context, request operations.RemoveHrisEarningRequest, opts ...operations.Option) (*operations.RemoveHrisEarningResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -15145,6 +15218,7 @@ func (s *Hris) RemoveHrisEarning(ctx context.Context, request operations.RemoveH
 }
 
 // RemoveHrisEmployee - Remove an employee
+// Deletes the HrisEmployee identified by `id`.
 func (s *Hris) RemoveHrisEmployee(ctx context.Context, request operations.RemoveHrisEmployeeRequest, opts ...operations.Option) (*operations.RemoveHrisEmployeeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -15327,6 +15401,7 @@ func (s *Hris) RemoveHrisEmployee(ctx context.Context, request operations.Remove
 }
 
 // RemoveHrisGroup - Remove a group
+// Deletes the HrisGroup identified by `id`.
 func (s *Hris) RemoveHrisGroup(ctx context.Context, request operations.RemoveHrisGroupRequest, opts ...operations.Option) (*operations.RemoveHrisGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -15509,6 +15584,7 @@ func (s *Hris) RemoveHrisGroup(ctx context.Context, request operations.RemoveHri
 }
 
 // RemoveHrisJob - Remove a job
+// Deletes the HrisJob identified by `id`.
 func (s *Hris) RemoveHrisJob(ctx context.Context, request operations.RemoveHrisJobRequest, opts ...operations.Option) (*operations.RemoveHrisJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -15691,6 +15767,7 @@ func (s *Hris) RemoveHrisJob(ctx context.Context, request operations.RemoveHrisJ
 }
 
 // RemoveHrisLocation - Remove a location
+// Deletes the HrisLocation identified by `id`.
 func (s *Hris) RemoveHrisLocation(ctx context.Context, request operations.RemoveHrisLocationRequest, opts ...operations.Option) (*operations.RemoveHrisLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -15873,6 +15950,7 @@ func (s *Hris) RemoveHrisLocation(ctx context.Context, request operations.Remove
 }
 
 // RemoveHrisTimeoff - Remove a timeoff
+// Deletes the HrisTimeoff identified by `id`.
 func (s *Hris) RemoveHrisTimeoff(ctx context.Context, request operations.RemoveHrisTimeoffRequest, opts ...operations.Option) (*operations.RemoveHrisTimeoffResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -16055,6 +16133,7 @@ func (s *Hris) RemoveHrisTimeoff(ctx context.Context, request operations.RemoveH
 }
 
 // RemoveHrisTimeshift - Remove a timeshift
+// Deletes the HrisTimeshift identified by `id`.
 func (s *Hris) RemoveHrisTimeshift(ctx context.Context, request operations.RemoveHrisTimeshiftRequest, opts ...operations.Option) (*operations.RemoveHrisTimeshiftResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -16237,6 +16316,7 @@ func (s *Hris) RemoveHrisTimeshift(ctx context.Context, request operations.Remov
 }
 
 // UpdateHrisAttendance - Update an attendance
+// Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 func (s *Hris) UpdateHrisAttendance(ctx context.Context, request operations.UpdateHrisAttendanceRequest, opts ...operations.Option) (*operations.UpdateHrisAttendanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -16451,6 +16531,7 @@ func (s *Hris) UpdateHrisAttendance(ctx context.Context, request operations.Upda
 }
 
 // UpdateHrisBankaccount - Update a bankaccount
+// Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 func (s *Hris) UpdateHrisBankaccount(ctx context.Context, request operations.UpdateHrisBankaccountRequest, opts ...operations.Option) (*operations.UpdateHrisBankaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -16665,6 +16746,7 @@ func (s *Hris) UpdateHrisBankaccount(ctx context.Context, request operations.Upd
 }
 
 // UpdateHrisBenefit - Update a benefit
+// Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 func (s *Hris) UpdateHrisBenefit(ctx context.Context, request operations.UpdateHrisBenefitRequest, opts ...operations.Option) (*operations.UpdateHrisBenefitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -16879,6 +16961,7 @@ func (s *Hris) UpdateHrisBenefit(ctx context.Context, request operations.UpdateH
 }
 
 // UpdateHrisCompany - Update a company
+// Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 func (s *Hris) UpdateHrisCompany(ctx context.Context, request operations.UpdateHrisCompanyRequest, opts ...operations.Option) (*operations.UpdateHrisCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -17093,6 +17176,7 @@ func (s *Hris) UpdateHrisCompany(ctx context.Context, request operations.UpdateH
 }
 
 // UpdateHrisDeduction - Update a deduction
+// Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 func (s *Hris) UpdateHrisDeduction(ctx context.Context, request operations.UpdateHrisDeductionRequest, opts ...operations.Option) (*operations.UpdateHrisDeductionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -17307,6 +17391,7 @@ func (s *Hris) UpdateHrisDeduction(ctx context.Context, request operations.Updat
 }
 
 // UpdateHrisDevice - Update a device
+// Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 func (s *Hris) UpdateHrisDevice(ctx context.Context, request operations.UpdateHrisDeviceRequest, opts ...operations.Option) (*operations.UpdateHrisDeviceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -17521,6 +17606,7 @@ func (s *Hris) UpdateHrisDevice(ctx context.Context, request operations.UpdateHr
 }
 
 // UpdateHrisDocument - Update a document
+// Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 func (s *Hris) UpdateHrisDocument(ctx context.Context, request operations.UpdateHrisDocumentRequest, opts ...operations.Option) (*operations.UpdateHrisDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -17735,6 +17821,7 @@ func (s *Hris) UpdateHrisDocument(ctx context.Context, request operations.Update
 }
 
 // UpdateHrisEarning - Update an earning
+// Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 func (s *Hris) UpdateHrisEarning(ctx context.Context, request operations.UpdateHrisEarningRequest, opts ...operations.Option) (*operations.UpdateHrisEarningResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -17949,6 +18036,7 @@ func (s *Hris) UpdateHrisEarning(ctx context.Context, request operations.UpdateH
 }
 
 // UpdateHrisEmployee - Update an employee
+// Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 func (s *Hris) UpdateHrisEmployee(ctx context.Context, request operations.UpdateHrisEmployeeRequest, opts ...operations.Option) (*operations.UpdateHrisEmployeeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -18163,6 +18251,7 @@ func (s *Hris) UpdateHrisEmployee(ctx context.Context, request operations.Update
 }
 
 // UpdateHrisGroup - Update a group
+// Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 func (s *Hris) UpdateHrisGroup(ctx context.Context, request operations.UpdateHrisGroupRequest, opts ...operations.Option) (*operations.UpdateHrisGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -18377,6 +18466,7 @@ func (s *Hris) UpdateHrisGroup(ctx context.Context, request operations.UpdateHri
 }
 
 // UpdateHrisJob - Update a job
+// Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 func (s *Hris) UpdateHrisJob(ctx context.Context, request operations.UpdateHrisJobRequest, opts ...operations.Option) (*operations.UpdateHrisJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -18591,6 +18681,7 @@ func (s *Hris) UpdateHrisJob(ctx context.Context, request operations.UpdateHrisJ
 }
 
 // UpdateHrisLocation - Update a location
+// Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 func (s *Hris) UpdateHrisLocation(ctx context.Context, request operations.UpdateHrisLocationRequest, opts ...operations.Option) (*operations.UpdateHrisLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -18805,6 +18896,7 @@ func (s *Hris) UpdateHrisLocation(ctx context.Context, request operations.Update
 }
 
 // UpdateHrisTimeoff - Update a timeoff
+// Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 func (s *Hris) UpdateHrisTimeoff(ctx context.Context, request operations.UpdateHrisTimeoffRequest, opts ...operations.Option) (*operations.UpdateHrisTimeoffResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -19019,6 +19111,7 @@ func (s *Hris) UpdateHrisTimeoff(ctx context.Context, request operations.UpdateH
 }
 
 // UpdateHrisTimeshift - Update a timeshift
+// Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 func (s *Hris) UpdateHrisTimeshift(ctx context.Context, request operations.UpdateHrisTimeshiftRequest, opts ...operations.Option) (*operations.UpdateHrisTimeshiftResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -31,6 +31,7 @@ func newApplication(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 }
 
 // CreateAtsApplication - Create an application
+// Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are mapped to the provider's API. Returns the created AtsApplication.
 func (s *Application) CreateAtsApplication(ctx context.Context, request operations.CreateAtsApplicationRequest, opts ...operations.Option) (*operations.CreateAtsApplicationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Application) CreateAtsApplication(ctx context.Context, request operatio
 }
 
 // GetAtsApplication - Retrieve an application
+// Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Application) GetAtsApplication(ctx context.Context, request operations.GetAtsApplicationRequest, opts ...operations.Option) (*operations.GetAtsApplicationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Application) GetAtsApplication(ctx context.Context, request operations.
 }
 
 // ListAtsApplications - List all applications
+// Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Application) ListAtsApplications(ctx context.Context, request operations.ListAtsApplicationsRequest, opts ...operations.Option) (*operations.ListAtsApplicationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Application) ListAtsApplications(ctx context.Context, request operation
 }
 
 // PatchAtsApplication - Update an application
+// Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 func (s *Application) PatchAtsApplication(ctx context.Context, request operations.PatchAtsApplicationRequest, opts ...operations.Option) (*operations.PatchAtsApplicationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Application) PatchAtsApplication(ctx context.Context, request operation
 }
 
 // RemoveAtsApplication - Remove an application
+// Deletes the AtsApplication identified by `id`.
 func (s *Application) RemoveAtsApplication(ctx context.Context, request operations.RemoveAtsApplicationRequest, opts ...operations.Option) (*operations.RemoveAtsApplicationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Application) RemoveAtsApplication(ctx context.Context, request operatio
 }
 
 // UpdateAtsApplication - Update an application
+// Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 func (s *Application) UpdateAtsApplication(ctx context.Context, request operations.UpdateAtsApplicationRequest, opts ...operations.Option) (*operations.UpdateAtsApplicationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

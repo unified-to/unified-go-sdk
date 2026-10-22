@@ -31,6 +31,7 @@ func newCondition(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 }
 
 // GetHealthcareCondition - Retrieve a condition
+// Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Condition) GetHealthcareCondition(ctx context.Context, request operations.GetHealthcareConditionRequest, opts ...operations.Option) (*operations.GetHealthcareConditionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -238,6 +239,7 @@ func (s *Condition) GetHealthcareCondition(ctx context.Context, request operatio
 }
 
 // ListHealthcareConditions - List all conditions
+// Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Condition) ListHealthcareConditions(ctx context.Context, request operations.ListHealthcareConditionsRequest, opts ...operations.Option) (*operations.ListHealthcareConditionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

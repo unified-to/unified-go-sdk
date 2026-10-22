@@ -13,7 +13,7 @@
 
 ## CreateRepoBranch
 
-Create a branch
+Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to the provider's API. Returns the created RepoBranch.
 
 ### Example Usage
 
@@ -40,11 +40,11 @@ func main() {
     res, err := s.Branch.CreateRepoBranch(ctx, operations.CreateRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
             CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
-            ID: unifiedgosdk.Pointer("d3de22aa-944f-4ed3-96e8-7b83f147ffae"),
+            ID: unifiedgosdk.Pointer("2e0abdc1-3bc6-4576-86b2-498ceec9b4b3"),
             Metadata: []shared.RepoMetadata{},
             Name: "transmitter-calculate",
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2020-01-07T08:02:55.995Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-01-07T10:44:37.774Z"),
         },
         ConnectionID: "<id>",
     })
@@ -77,7 +77,7 @@ func main() {
 
 ## GetRepoBranch
 
-Retrieve a branch
+Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -132,7 +132,7 @@ func main() {
 
 ## ListRepoBranches
 
-List all branches
+Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -186,7 +186,7 @@ func main() {
 
 ## PatchRepoBranch
 
-Update a branch
+Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 
 ### Example Usage
 
@@ -213,11 +213,11 @@ func main() {
     res, err := s.Branch.PatchRepoBranch(ctx, operations.PatchRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
             CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
-            ID: unifiedgosdk.Pointer("2d9cf7e3-a566-41e8-87b2-6bd47606fe69"),
+            ID: unifiedgosdk.Pointer("61096c53-c8e7-4fe5-b5b6-a2ff57e6c228"),
             Metadata: []shared.RepoMetadata{},
             Name: "transmitter-calculate",
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2020-01-07T08:02:55.996Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-01-07T10:44:37.776Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -251,7 +251,7 @@ func main() {
 
 ## RemoveRepoBranch
 
-Remove a branch
+Deletes the RepoBranch identified by `id`.
 
 ### Example Usage
 
@@ -306,7 +306,7 @@ func main() {
 
 ## UpdateRepoBranch
 
-Update a branch
+Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 
 ### Example Usage
 
@@ -333,11 +333,11 @@ func main() {
     res, err := s.Branch.UpdateRepoBranch(ctx, operations.UpdateRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
             CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
-            ID: unifiedgosdk.Pointer("2d9cf7e3-a566-41e8-87b2-6bd47606fe69"),
+            ID: unifiedgosdk.Pointer("61096c53-c8e7-4fe5-b5b6-a2ff57e6c228"),
             Metadata: []shared.RepoMetadata{},
             Name: "transmitter-calculate",
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2020-01-07T08:02:55.996Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-01-07T10:44:37.776Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

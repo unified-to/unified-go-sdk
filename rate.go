@@ -31,6 +31,7 @@ func newRate(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 }
 
 // CreateShippingRate - Create a rate
+// Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped to the provider's API. Returns the created ShippingRate.
 func (s *Rate) CreateShippingRate(ctx context.Context, request operations.CreateShippingRateRequest, opts ...operations.Option) (*operations.CreateShippingRateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

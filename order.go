@@ -31,6 +31,9 @@ func newOrder(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 }
 
 // CreateAccountingOrder - Create an order
+// Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are mapped to the provider's API. Returns the created AccountingOrder.
+//
+// Deprecated: This will be removed in a future release, please migrate away from it as soon as possible.
 func (s *Order) CreateAccountingOrder(ctx context.Context, request operations.CreateAccountingOrderRequest, opts ...operations.Option) (*operations.CreateAccountingOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +248,7 @@ func (s *Order) CreateAccountingOrder(ctx context.Context, request operations.Cr
 }
 
 // CreateAssessmentOrder - Create an order
+// Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
 func (s *Order) CreateAssessmentOrder(ctx context.Context, request operations.CreateAssessmentOrderRequest, opts ...operations.Option) (*operations.CreateAssessmentOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +463,9 @@ func (s *Order) CreateAssessmentOrder(ctx context.Context, request operations.Cr
 }
 
 // GetAccountingOrder - Retrieve an order
+// Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+//
+// Deprecated: This will be removed in a future release, please migrate away from it as soon as possible.
 func (s *Order) GetAccountingOrder(ctx context.Context, request operations.GetAccountingOrderRequest, opts ...operations.Option) (*operations.GetAccountingOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -666,6 +673,7 @@ func (s *Order) GetAccountingOrder(ctx context.Context, request operations.GetAc
 }
 
 // GetAssessmentOrder - Retrieve an order
+// Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Order) GetAssessmentOrder(ctx context.Context, request operations.GetAssessmentOrderRequest, opts ...operations.Option) (*operations.GetAssessmentOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +881,9 @@ func (s *Order) GetAssessmentOrder(ctx context.Context, request operations.GetAs
 }
 
 // ListAccountingOrders - List all orders
+// Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+//
+// Deprecated: This will be removed in a future release, please migrate away from it as soon as possible.
 func (s *Order) ListAccountingOrders(ctx context.Context, request operations.ListAccountingOrdersRequest, opts ...operations.Option) (*operations.ListAccountingOrdersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1080,6 +1091,9 @@ func (s *Order) ListAccountingOrders(ctx context.Context, request operations.Lis
 }
 
 // PatchAccountingOrder - Update an order
+// Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+//
+// Deprecated: This will be removed in a future release, please migrate away from it as soon as possible.
 func (s *Order) PatchAccountingOrder(ctx context.Context, request operations.PatchAccountingOrderRequest, opts ...operations.Option) (*operations.PatchAccountingOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1294,6 +1308,7 @@ func (s *Order) PatchAccountingOrder(ctx context.Context, request operations.Pat
 }
 
 // PatchAssessmentOrder - Update an order
+// Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 func (s *Order) PatchAssessmentOrder(ctx context.Context, request operations.PatchAssessmentOrderRequest, opts ...operations.Option) (*operations.PatchAssessmentOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1508,6 +1523,9 @@ func (s *Order) PatchAssessmentOrder(ctx context.Context, request operations.Pat
 }
 
 // RemoveAccountingOrder - Remove an order
+// Deletes the AccountingOrder identified by `id`.
+//
+// Deprecated: This will be removed in a future release, please migrate away from it as soon as possible.
 func (s *Order) RemoveAccountingOrder(ctx context.Context, request operations.RemoveAccountingOrderRequest, opts ...operations.Option) (*operations.RemoveAccountingOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1690,6 +1708,9 @@ func (s *Order) RemoveAccountingOrder(ctx context.Context, request operations.Re
 }
 
 // UpdateAccountingOrder - Update an order
+// Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+//
+// Deprecated: This will be removed in a future release, please migrate away from it as soon as possible.
 func (s *Order) UpdateAccountingOrder(ctx context.Context, request operations.UpdateAccountingOrderRequest, opts ...operations.Option) (*operations.UpdateAccountingOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1904,6 +1925,7 @@ func (s *Order) UpdateAccountingOrder(ctx context.Context, request operations.Up
 }
 
 // UpdateAssessmentOrder - Update an order
+// Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 func (s *Order) UpdateAssessmentOrder(ctx context.Context, request operations.UpdateAssessmentOrderRequest, opts ...operations.Option) (*operations.UpdateAssessmentOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -31,6 +31,7 @@ func newContent(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateLmsContent - Create a content
+// Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to the provider's API. Returns the created LmsContent.
 func (s *Content) CreateLmsContent(ctx context.Context, request operations.CreateLmsContentRequest, opts ...operations.Option) (*operations.CreateLmsContentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Content) CreateLmsContent(ctx context.Context, request operations.Creat
 }
 
 // GetLmsContent - Retrieve a content
+// Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Content) GetLmsContent(ctx context.Context, request operations.GetLmsContentRequest, opts ...operations.Option) (*operations.GetLmsContentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Content) GetLmsContent(ctx context.Context, request operations.GetLmsCo
 }
 
 // ListLmsContents - List all contents
+// Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Content) ListLmsContents(ctx context.Context, request operations.ListLmsContentsRequest, opts ...operations.Option) (*operations.ListLmsContentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Content) ListLmsContents(ctx context.Context, request operations.ListLm
 }
 
 // PatchLmsContent - Update a content
+// Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 func (s *Content) PatchLmsContent(ctx context.Context, request operations.PatchLmsContentRequest, opts ...operations.Option) (*operations.PatchLmsContentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Content) PatchLmsContent(ctx context.Context, request operations.PatchL
 }
 
 // RemoveLmsContent - Remove a content
+// Deletes the LmsContent identified by `id`.
 func (s *Content) RemoveLmsContent(ctx context.Context, request operations.RemoveLmsContentRequest, opts ...operations.Option) (*operations.RemoveLmsContentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Content) RemoveLmsContent(ctx context.Context, request operations.Remov
 }
 
 // UpdateLmsContent - Update a content
+// Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 func (s *Content) UpdateLmsContent(ctx context.Context, request operations.UpdateLmsContentRequest, opts ...operations.Option) (*operations.UpdateLmsContentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

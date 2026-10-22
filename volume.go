@@ -31,6 +31,7 @@ func newVolume(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 }
 
 // CreateComputeVolume - Create a volume
+// Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are mapped to the provider's API. Returns the created ComputeVolume.
 func (s *Volume) CreateComputeVolume(ctx context.Context, request operations.CreateComputeVolumeRequest, opts ...operations.Option) (*operations.CreateComputeVolumeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Volume) CreateComputeVolume(ctx context.Context, request operations.Cre
 }
 
 // GetComputeVolume - Retrieve a volume
+// Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Volume) GetComputeVolume(ctx context.Context, request operations.GetComputeVolumeRequest, opts ...operations.Option) (*operations.GetComputeVolumeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Volume) GetComputeVolume(ctx context.Context, request operations.GetCom
 }
 
 // ListComputeVolumes - List all volumes
+// Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Volume) ListComputeVolumes(ctx context.Context, request operations.ListComputeVolumesRequest, opts ...operations.Option) (*operations.ListComputeVolumesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Volume) ListComputeVolumes(ctx context.Context, request operations.List
 }
 
 // PatchComputeVolume - Update a volume
+// Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 func (s *Volume) PatchComputeVolume(ctx context.Context, request operations.PatchComputeVolumeRequest, opts ...operations.Option) (*operations.PatchComputeVolumeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Volume) PatchComputeVolume(ctx context.Context, request operations.Patc
 }
 
 // RemoveComputeVolume - Remove a volume
+// Deletes the ComputeVolume identified by `id`.
 func (s *Volume) RemoveComputeVolume(ctx context.Context, request operations.RemoveComputeVolumeRequest, opts ...operations.Option) (*operations.RemoveComputeVolumeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Volume) RemoveComputeVolume(ctx context.Context, request operations.Rem
 }
 
 // UpdateComputeVolume - Update a volume
+// Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 func (s *Volume) UpdateComputeVolume(ctx context.Context, request operations.UpdateComputeVolumeRequest, opts ...operations.Option) (*operations.UpdateComputeVolumeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

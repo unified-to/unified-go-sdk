@@ -31,6 +31,7 @@ func newDeduction(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 }
 
 // CreateHrisDeduction - Create a deduction
+// Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are mapped to the provider's API. Returns the created HrisDeduction.
 func (s *Deduction) CreateHrisDeduction(ctx context.Context, request operations.CreateHrisDeductionRequest, opts ...operations.Option) (*operations.CreateHrisDeductionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Deduction) CreateHrisDeduction(ctx context.Context, request operations.
 }
 
 // GetHrisDeduction - Retrieve a deduction
+// Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Deduction) GetHrisDeduction(ctx context.Context, request operations.GetHrisDeductionRequest, opts ...operations.Option) (*operations.GetHrisDeductionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Deduction) GetHrisDeduction(ctx context.Context, request operations.Get
 }
 
 // ListHrisDeductions - List all deductions
+// Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Deduction) ListHrisDeductions(ctx context.Context, request operations.ListHrisDeductionsRequest, opts ...operations.Option) (*operations.ListHrisDeductionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Deduction) ListHrisDeductions(ctx context.Context, request operations.L
 }
 
 // PatchHrisDeduction - Update a deduction
+// Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 func (s *Deduction) PatchHrisDeduction(ctx context.Context, request operations.PatchHrisDeductionRequest, opts ...operations.Option) (*operations.PatchHrisDeductionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Deduction) PatchHrisDeduction(ctx context.Context, request operations.P
 }
 
 // RemoveHrisDeduction - Remove a deduction
+// Deletes the HrisDeduction identified by `id`.
 func (s *Deduction) RemoveHrisDeduction(ctx context.Context, request operations.RemoveHrisDeductionRequest, opts ...operations.Option) (*operations.RemoveHrisDeductionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Deduction) RemoveHrisDeduction(ctx context.Context, request operations.
 }
 
 // UpdateHrisDeduction - Update a deduction
+// Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 func (s *Deduction) UpdateHrisDeduction(ctx context.Context, request operations.UpdateHrisDeductionRequest, opts ...operations.Option) (*operations.UpdateHrisDeductionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

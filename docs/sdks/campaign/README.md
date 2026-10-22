@@ -19,7 +19,7 @@
 
 ## CreateAdsCampaign
 
-Create a campaign
+Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped to the provider's API. Returns the created AdsCampaign.
 
 ### Example Usage
 
@@ -51,18 +51,18 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-05-21T08:51:41.868Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             EffectiveStatus: shared.EffectiveStatusNotEligible.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2025-05-31T23:30:23.660Z"),
-            ID: unifiedgosdk.Pointer("2a3e23ca-f2d4-472e-a1df-9bf34b6d51b8"),
+            EndAt: types.MustNewTimeFromString("2025-06-01T15:48:30.968Z"),
+            ID: unifiedgosdk.Pointer("8c38d467-ea17-49ad-b3b4-14d14a2dd364"),
             Labels: []string{
                 "comedo",
             },
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Emard Inc"),
-            StartAt: types.MustNewTimeFromString("2022-07-21T10:50:21.338Z"),
+            StartAt: types.MustNewTimeFromString("2022-07-21T11:44:20.746Z"),
             Status: shared.AdsCampaignStatusProcessingFailed.ToPointer(),
             Targeting: &shared.PropertyAdsCampaignTargeting{},
             TotalSpendAmount: unifiedgosdk.Pointer[float64](2349.8642875347286),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-01T14:07:49.917Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-02T09:35:38.689Z"),
         },
         ConnectionID: "<id>",
     })
@@ -95,7 +95,7 @@ func main() {
 
 ## CreateMartechCampaign
 
-Create a campaign
+Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they are mapped to the provider's API. Returns the created MarketingCampaign.
 
 ### Example Usage
 
@@ -124,7 +124,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-05-19T11:18:15.589Z"),
             FromEmail: unifiedgosdk.Pointer("graham.mertz@gmail.com"),
             FromName: unifiedgosdk.Pointer("Graham Mertz"),
-            ID: unifiedgosdk.Pointer("152b6a39-cc03-4bf3-820b-401d75975804"),
+            ID: unifiedgosdk.Pointer("a591e56d-25b4-4c99-a14f-1f4797173d84"),
             Metadata: []shared.MarketingMetadata{},
             Name: unifiedgosdk.Pointer("Consequatur atqui sustineo."),
             PreviewText: unifiedgosdk.Pointer("Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria."),
@@ -133,7 +133,7 @@ func main() {
             Status: shared.MarketingCampaignStatusScheduled.ToPointer(),
             SubjectLine: unifiedgosdk.Pointer("Trepide utpote conculco tibi solio supplanto peior tibi."),
             Type: unifiedgosdk.Pointer("absplit"),
-            UpdatedAt: types.MustNewTimeFromString("2022-06-22T02:50:23.723Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-06-22T12:44:35.270Z"),
         },
         ConnectionID: "<id>",
     })
@@ -166,7 +166,7 @@ func main() {
 
 ## GetAdsCampaign
 
-Retrieve a campaign
+Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -221,7 +221,7 @@ func main() {
 
 ## GetMartechCampaign
 
-Retrieve a campaign
+Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -276,7 +276,7 @@ func main() {
 
 ## ListAdsCampaigns
 
-List all campaigns
+Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -330,7 +330,7 @@ func main() {
 
 ## ListMartechCampaigns
 
-List all campaigns
+Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -384,7 +384,7 @@ func main() {
 
 ## PatchAdsCampaign
 
-Update a campaign
+Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -416,18 +416,18 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-05-21T08:51:41.868Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             EffectiveStatus: shared.EffectiveStatusNotEligible.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2025-05-31T23:30:23.735Z"),
-            ID: unifiedgosdk.Pointer("58a93fe5-d8d1-4977-b7f1-db6c66108cf2"),
+            EndAt: types.MustNewTimeFromString("2025-06-01T15:48:31.080Z"),
+            ID: unifiedgosdk.Pointer("6667bcc3-55d9-4772-a024-397885a1f44d"),
             Labels: []string{
                 "comedo",
             },
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Emard Inc"),
-            StartAt: types.MustNewTimeFromString("2022-07-21T10:50:21.342Z"),
+            StartAt: types.MustNewTimeFromString("2022-07-21T11:44:20.752Z"),
             Status: shared.AdsCampaignStatusProcessingFailed.ToPointer(),
             Targeting: &shared.PropertyAdsCampaignTargeting{},
             TotalSpendAmount: unifiedgosdk.Pointer[float64](2349.8642875347286),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-01T14:07:50.007Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-02T09:35:38.822Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -461,7 +461,7 @@ func main() {
 
 ## PatchMartechCampaign
 
-Update a campaign
+Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -490,7 +490,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-05-19T11:18:15.589Z"),
             FromEmail: unifiedgosdk.Pointer("graham.mertz@gmail.com"),
             FromName: unifiedgosdk.Pointer("Graham Mertz"),
-            ID: unifiedgosdk.Pointer("8d59a242-5d0d-4977-9089-a8e78c0a7e7e"),
+            ID: unifiedgosdk.Pointer("ec8cb37b-3c54-4034-9030-b192f698c29d"),
             Metadata: []shared.MarketingMetadata{},
             Name: unifiedgosdk.Pointer("Consequatur atqui sustineo."),
             PreviewText: unifiedgosdk.Pointer("Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria."),
@@ -499,7 +499,7 @@ func main() {
             Status: shared.MarketingCampaignStatusScheduled.ToPointer(),
             SubjectLine: unifiedgosdk.Pointer("Trepide utpote conculco tibi solio supplanto peior tibi."),
             Type: unifiedgosdk.Pointer("absplit"),
-            UpdatedAt: types.MustNewTimeFromString("2022-06-22T02:50:23.732Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-06-22T12:44:35.278Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -533,7 +533,7 @@ func main() {
 
 ## RemoveAdsCampaign
 
-Remove a campaign
+Deletes the AdsCampaign identified by `id`.
 
 ### Example Usage
 
@@ -588,7 +588,7 @@ func main() {
 
 ## RemoveMartechCampaign
 
-Remove a campaign
+Deletes the MarketingCampaign identified by `id`.
 
 ### Example Usage
 
@@ -643,7 +643,7 @@ func main() {
 
 ## UpdateAdsCampaign
 
-Update a campaign
+Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -675,18 +675,18 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-05-21T08:51:41.868Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             EffectiveStatus: shared.EffectiveStatusNotEligible.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2025-05-31T23:30:23.735Z"),
-            ID: unifiedgosdk.Pointer("58a93fe5-d8d1-4977-b7f1-db6c66108cf2"),
+            EndAt: types.MustNewTimeFromString("2025-06-01T15:48:31.080Z"),
+            ID: unifiedgosdk.Pointer("6667bcc3-55d9-4772-a024-397885a1f44d"),
             Labels: []string{
                 "comedo",
             },
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Emard Inc"),
-            StartAt: types.MustNewTimeFromString("2022-07-21T10:50:21.342Z"),
+            StartAt: types.MustNewTimeFromString("2022-07-21T11:44:20.752Z"),
             Status: shared.AdsCampaignStatusProcessingFailed.ToPointer(),
             Targeting: &shared.PropertyAdsCampaignTargeting{},
             TotalSpendAmount: unifiedgosdk.Pointer[float64](2349.8642875347286),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-01T14:07:50.007Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-02T09:35:38.822Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -720,7 +720,7 @@ func main() {
 
 ## UpdateMartechCampaign
 
-Update a campaign
+Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -749,7 +749,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-05-19T11:18:15.589Z"),
             FromEmail: unifiedgosdk.Pointer("graham.mertz@gmail.com"),
             FromName: unifiedgosdk.Pointer("Graham Mertz"),
-            ID: unifiedgosdk.Pointer("8d59a242-5d0d-4977-9089-a8e78c0a7e7e"),
+            ID: unifiedgosdk.Pointer("ec8cb37b-3c54-4034-9030-b192f698c29d"),
             Metadata: []shared.MarketingMetadata{},
             Name: unifiedgosdk.Pointer("Consequatur atqui sustineo."),
             PreviewText: unifiedgosdk.Pointer("Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria."),
@@ -758,7 +758,7 @@ func main() {
             Status: shared.MarketingCampaignStatusScheduled.ToPointer(),
             SubjectLine: unifiedgosdk.Pointer("Trepide utpote conculco tibi solio supplanto peior tibi."),
             Type: unifiedgosdk.Pointer("absplit"),
-            UpdatedAt: types.MustNewTimeFromString("2022-06-22T02:50:23.732Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-06-22T12:44:35.278Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

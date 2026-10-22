@@ -13,7 +13,7 @@
 
 ## CreateHrisEarning
 
-Create an earning
+Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped to the provider's API. Returns the created HrisEarning.
 
 ### Example Usage
 
@@ -43,12 +43,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-01-26T12:44:52.326Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             Frequency: shared.HrisEarningFrequencySemimonthly.ToPointer(),
-            ID: unifiedgosdk.Pointer("e217da60-71ee-4135-afac-bd2548e026c2"),
+            ID: unifiedgosdk.Pointer("fc526592-d3cd-43c8-b69a-04fc3f803646"),
             Metadata: []shared.HrisMetadata{},
             Notes: unifiedgosdk.Pointer("Deporto truculenter vinum beatae."),
-            StartAt: types.MustNewTimeFromString("2022-07-25T11:48:48.385Z"),
+            StartAt: types.MustNewTimeFromString("2022-07-25T22:33:07.377Z"),
             Status: shared.HrisEarningStatusEnded.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-02-08T20:32:52.338Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-02-08T23:43:54.807Z"),
         },
         ConnectionID: "<id>",
     })
@@ -81,7 +81,7 @@ func main() {
 
 ## GetHrisEarning
 
-Retrieve an earning
+Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -136,7 +136,7 @@ func main() {
 
 ## ListHrisEarnings
 
-List all earnings
+Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -190,7 +190,7 @@ func main() {
 
 ## PatchHrisEarning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -220,12 +220,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-01-26T12:44:52.326Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             Frequency: shared.HrisEarningFrequencySemimonthly.ToPointer(),
-            ID: unifiedgosdk.Pointer("ae74f559-3b04-412c-92c7-6b4867daa099"),
+            ID: unifiedgosdk.Pointer("c30ab4a5-6379-402f-94ce-29656bc968ac"),
             Metadata: []shared.HrisMetadata{},
             Notes: unifiedgosdk.Pointer("Deporto truculenter vinum beatae."),
-            StartAt: types.MustNewTimeFromString("2022-07-25T11:48:48.394Z"),
+            StartAt: types.MustNewTimeFromString("2022-07-25T22:33:07.384Z"),
             Status: shared.HrisEarningStatusEnded.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-02-08T20:32:52.341Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-02-08T23:43:54.809Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -259,7 +259,7 @@ func main() {
 
 ## RemoveHrisEarning
 
-Remove an earning
+Deletes the HrisEarning identified by `id`.
 
 ### Example Usage
 
@@ -314,7 +314,7 @@ func main() {
 
 ## UpdateHrisEarning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -344,12 +344,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-01-26T12:44:52.326Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             Frequency: shared.HrisEarningFrequencySemimonthly.ToPointer(),
-            ID: unifiedgosdk.Pointer("ae74f559-3b04-412c-92c7-6b4867daa099"),
+            ID: unifiedgosdk.Pointer("c30ab4a5-6379-402f-94ce-29656bc968ac"),
             Metadata: []shared.HrisMetadata{},
             Notes: unifiedgosdk.Pointer("Deporto truculenter vinum beatae."),
-            StartAt: types.MustNewTimeFromString("2022-07-25T11:48:48.394Z"),
+            StartAt: types.MustNewTimeFromString("2022-07-25T22:33:07.384Z"),
             Status: shared.HrisEarningStatusEnded.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-02-08T20:32:52.341Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-02-08T23:43:54.809Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

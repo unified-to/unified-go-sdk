@@ -31,6 +31,7 @@ func newShipment(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateShippingShipment - Create a shipment
+// Creates a ShippingShipment. Provide the unified ShippingShipment fields in the request body; they are mapped to the provider's API. Returns the created ShippingShipment.
 func (s *Shipment) CreateShippingShipment(ctx context.Context, request operations.CreateShippingShipmentRequest, opts ...operations.Option) (*operations.CreateShippingShipmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Shipment) CreateShippingShipment(ctx context.Context, request operation
 }
 
 // GetShippingShipment - Retrieve a shipment
+// Retrieves a single ShippingShipment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Shipment) GetShippingShipment(ctx context.Context, request operations.GetShippingShipmentRequest, opts ...operations.Option) (*operations.GetShippingShipmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Shipment) GetShippingShipment(ctx context.Context, request operations.G
 }
 
 // ListShippingShipments - List all shipments
+// Returns a list of ShippingShipments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Shipment) ListShippingShipments(ctx context.Context, request operations.ListShippingShipmentsRequest, opts ...operations.Option) (*operations.ListShippingShipmentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Shipment) ListShippingShipments(ctx context.Context, request operations
 }
 
 // PatchShippingShipment - Update a shipment
+// Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
 func (s *Shipment) PatchShippingShipment(ctx context.Context, request operations.PatchShippingShipmentRequest, opts ...operations.Option) (*operations.PatchShippingShipmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Shipment) PatchShippingShipment(ctx context.Context, request operations
 }
 
 // RemoveShippingShipment - Remove a shipment
+// Deletes the ShippingShipment identified by `id`.
 func (s *Shipment) RemoveShippingShipment(ctx context.Context, request operations.RemoveShippingShipmentRequest, opts ...operations.Option) (*operations.RemoveShippingShipmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Shipment) RemoveShippingShipment(ctx context.Context, request operation
 }
 
 // UpdateShippingShipment - Update a shipment
+// Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
 func (s *Shipment) UpdateShippingShipment(ctx context.Context, request operations.UpdateShippingShipmentRequest, opts ...operations.Option) (*operations.UpdateShippingShipmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

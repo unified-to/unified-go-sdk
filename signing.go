@@ -31,6 +31,7 @@ func newSigning(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateSigningDocument - Create a document
+// Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are mapped to the provider's API. Returns the created SigningDocument.
 func (s *Signing) CreateSigningDocument(ctx context.Context, request operations.CreateSigningDocumentRequest, opts ...operations.Option) (*operations.CreateSigningDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Signing) CreateSigningDocument(ctx context.Context, request operations.
 }
 
 // CreateSigningSignatory - Create a signatory
+// Creates a SigningSignatory. Provide the unified SigningSignatory fields in the request body; they are mapped to the provider's API. Returns the created SigningSignatory.
 func (s *Signing) CreateSigningSignatory(ctx context.Context, request operations.CreateSigningSignatoryRequest, opts ...operations.Option) (*operations.CreateSigningSignatoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Signing) CreateSigningSignatory(ctx context.Context, request operations
 }
 
 // GetSigningDocument - Retrieve a document
+// Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Signing) GetSigningDocument(ctx context.Context, request operations.GetSigningDocumentRequest, opts ...operations.Option) (*operations.GetSigningDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -666,6 +669,7 @@ func (s *Signing) GetSigningDocument(ctx context.Context, request operations.Get
 }
 
 // GetSigningSignatory - Retrieve a signatory
+// Retrieves a single SigningSignatory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Signing) GetSigningSignatory(ctx context.Context, request operations.GetSigningSignatoryRequest, opts ...operations.Option) (*operations.GetSigningSignatoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Signing) GetSigningSignatory(ctx context.Context, request operations.Ge
 }
 
 // GetSigningTemplate - Retrieve a template
+// Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Signing) GetSigningTemplate(ctx context.Context, request operations.GetSigningTemplateRequest, opts ...operations.Option) (*operations.GetSigningTemplateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1080,6 +1085,7 @@ func (s *Signing) GetSigningTemplate(ctx context.Context, request operations.Get
 }
 
 // ListSigningDocuments - List all documents
+// Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Signing) ListSigningDocuments(ctx context.Context, request operations.ListSigningDocumentsRequest, opts ...operations.Option) (*operations.ListSigningDocumentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1287,6 +1293,7 @@ func (s *Signing) ListSigningDocuments(ctx context.Context, request operations.L
 }
 
 // ListSigningSignatories - List all signatories
+// Returns a list of SigningSignatories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Signing) ListSigningSignatories(ctx context.Context, request operations.ListSigningSignatoriesRequest, opts ...operations.Option) (*operations.ListSigningSignatoriesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1494,6 +1501,7 @@ func (s *Signing) ListSigningSignatories(ctx context.Context, request operations
 }
 
 // ListSigningTemplates - List all templates
+// Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Signing) ListSigningTemplates(ctx context.Context, request operations.ListSigningTemplatesRequest, opts ...operations.Option) (*operations.ListSigningTemplatesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1701,6 +1709,7 @@ func (s *Signing) ListSigningTemplates(ctx context.Context, request operations.L
 }
 
 // PatchSigningDocument - Update a document
+// Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 func (s *Signing) PatchSigningDocument(ctx context.Context, request operations.PatchSigningDocumentRequest, opts ...operations.Option) (*operations.PatchSigningDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1915,6 +1924,7 @@ func (s *Signing) PatchSigningDocument(ctx context.Context, request operations.P
 }
 
 // PatchSigningSignatory - Update a signatory
+// Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
 func (s *Signing) PatchSigningSignatory(ctx context.Context, request operations.PatchSigningSignatoryRequest, opts ...operations.Option) (*operations.PatchSigningSignatoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2129,6 +2139,7 @@ func (s *Signing) PatchSigningSignatory(ctx context.Context, request operations.
 }
 
 // RemoveSigningDocument - Remove a document
+// Deletes the SigningDocument identified by `id`.
 func (s *Signing) RemoveSigningDocument(ctx context.Context, request operations.RemoveSigningDocumentRequest, opts ...operations.Option) (*operations.RemoveSigningDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2311,6 +2322,7 @@ func (s *Signing) RemoveSigningDocument(ctx context.Context, request operations.
 }
 
 // RemoveSigningSignatory - Remove a signatory
+// Deletes the SigningSignatory identified by `id`.
 func (s *Signing) RemoveSigningSignatory(ctx context.Context, request operations.RemoveSigningSignatoryRequest, opts ...operations.Option) (*operations.RemoveSigningSignatoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2493,6 +2505,7 @@ func (s *Signing) RemoveSigningSignatory(ctx context.Context, request operations
 }
 
 // UpdateSigningDocument - Update a document
+// Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 func (s *Signing) UpdateSigningDocument(ctx context.Context, request operations.UpdateSigningDocumentRequest, opts ...operations.Option) (*operations.UpdateSigningDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2707,6 +2720,7 @@ func (s *Signing) UpdateSigningDocument(ctx context.Context, request operations.
 }
 
 // UpdateSigningSignatory - Update a signatory
+// Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
 func (s *Signing) UpdateSigningSignatory(ctx context.Context, request operations.UpdateSigningSignatoryRequest, opts ...operations.Option) (*operations.UpdateSigningSignatoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

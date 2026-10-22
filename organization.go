@@ -31,6 +31,7 @@ func newOrganization(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hook
 }
 
 // CreateAdsOrganization - Create an organization
+// Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
 func (s *Organization) CreateAdsOrganization(ctx context.Context, request operations.CreateAdsOrganizationRequest, opts ...operations.Option) (*operations.CreateAdsOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Organization) CreateAdsOrganization(ctx context.Context, request operat
 }
 
 // CreateGenaiOrganization - Create an organization
+// Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they are mapped to the provider's API. Returns the created GenaiOrganization.
 func (s *Organization) CreateGenaiOrganization(ctx context.Context, request operations.CreateGenaiOrganizationRequest, opts ...operations.Option) (*operations.CreateGenaiOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Organization) CreateGenaiOrganization(ctx context.Context, request oper
 }
 
 // CreateRepoOrganization - Create an organization
+// Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
 func (s *Organization) CreateRepoOrganization(ctx context.Context, request operations.CreateRepoOrganizationRequest, opts ...operations.Option) (*operations.CreateRepoOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Organization) CreateRepoOrganization(ctx context.Context, request opera
 }
 
 // GetAccountingOrganization - Retrieve an organization
+// Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Organization) GetAccountingOrganization(ctx context.Context, request operations.GetAccountingOrganizationRequest, opts ...operations.Option) (*operations.GetAccountingOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -880,6 +884,7 @@ func (s *Organization) GetAccountingOrganization(ctx context.Context, request op
 }
 
 // GetAdsOrganization - Retrieve an organization
+// Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Organization) GetAdsOrganization(ctx context.Context, request operations.GetAdsOrganizationRequest, opts ...operations.Option) (*operations.GetAdsOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1087,6 +1092,7 @@ func (s *Organization) GetAdsOrganization(ctx context.Context, request operation
 }
 
 // GetGenaiOrganization - Retrieve an organization
+// Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Organization) GetGenaiOrganization(ctx context.Context, request operations.GetGenaiOrganizationRequest, opts ...operations.Option) (*operations.GetGenaiOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1294,6 +1300,7 @@ func (s *Organization) GetGenaiOrganization(ctx context.Context, request operati
 }
 
 // GetRepoOrganization - Retrieve an organization
+// Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Organization) GetRepoOrganization(ctx context.Context, request operations.GetRepoOrganizationRequest, opts ...operations.Option) (*operations.GetRepoOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Organization) GetRepoOrganization(ctx context.Context, request operatio
 }
 
 // ListAccountingOrganizations - List all organizations
+// Returns a list of AccountingOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Organization) ListAccountingOrganizations(ctx context.Context, request operations.ListAccountingOrganizationsRequest, opts ...operations.Option) (*operations.ListAccountingOrganizationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1708,6 +1716,7 @@ func (s *Organization) ListAccountingOrganizations(ctx context.Context, request 
 }
 
 // ListAdsOrganizations - List all organizations
+// Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Organization) ListAdsOrganizations(ctx context.Context, request operations.ListAdsOrganizationsRequest, opts ...operations.Option) (*operations.ListAdsOrganizationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1915,6 +1924,7 @@ func (s *Organization) ListAdsOrganizations(ctx context.Context, request operati
 }
 
 // ListGenaiOrganizations - List all organizations
+// Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Organization) ListGenaiOrganizations(ctx context.Context, request operations.ListGenaiOrganizationsRequest, opts ...operations.Option) (*operations.ListGenaiOrganizationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2122,6 +2132,7 @@ func (s *Organization) ListGenaiOrganizations(ctx context.Context, request opera
 }
 
 // ListRepoOrganizations - List all organizations
+// Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Organization) ListRepoOrganizations(ctx context.Context, request operations.ListRepoOrganizationsRequest, opts ...operations.Option) (*operations.ListRepoOrganizationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2329,6 +2340,7 @@ func (s *Organization) ListRepoOrganizations(ctx context.Context, request operat
 }
 
 // PatchAdsOrganization - Update an organization
+// Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 func (s *Organization) PatchAdsOrganization(ctx context.Context, request operations.PatchAdsOrganizationRequest, opts ...operations.Option) (*operations.PatchAdsOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2543,6 +2555,7 @@ func (s *Organization) PatchAdsOrganization(ctx context.Context, request operati
 }
 
 // PatchGenaiOrganization - Update an organization
+// Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 func (s *Organization) PatchGenaiOrganization(ctx context.Context, request operations.PatchGenaiOrganizationRequest, opts ...operations.Option) (*operations.PatchGenaiOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2757,6 +2770,7 @@ func (s *Organization) PatchGenaiOrganization(ctx context.Context, request opera
 }
 
 // PatchRepoOrganization - Update an organization
+// Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 func (s *Organization) PatchRepoOrganization(ctx context.Context, request operations.PatchRepoOrganizationRequest, opts ...operations.Option) (*operations.PatchRepoOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2971,6 +2985,7 @@ func (s *Organization) PatchRepoOrganization(ctx context.Context, request operat
 }
 
 // RemoveAdsOrganization - Remove an organization
+// Deletes the AdsOrganization identified by `id`.
 func (s *Organization) RemoveAdsOrganization(ctx context.Context, request operations.RemoveAdsOrganizationRequest, opts ...operations.Option) (*operations.RemoveAdsOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3153,6 +3168,7 @@ func (s *Organization) RemoveAdsOrganization(ctx context.Context, request operat
 }
 
 // RemoveGenaiOrganization - Remove an organization
+// Deletes the GenaiOrganization identified by `id`.
 func (s *Organization) RemoveGenaiOrganization(ctx context.Context, request operations.RemoveGenaiOrganizationRequest, opts ...operations.Option) (*operations.RemoveGenaiOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3335,6 +3351,7 @@ func (s *Organization) RemoveGenaiOrganization(ctx context.Context, request oper
 }
 
 // RemoveRepoOrganization - Remove an organization
+// Deletes the RepoOrganization identified by `id`.
 func (s *Organization) RemoveRepoOrganization(ctx context.Context, request operations.RemoveRepoOrganizationRequest, opts ...operations.Option) (*operations.RemoveRepoOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3517,6 +3534,7 @@ func (s *Organization) RemoveRepoOrganization(ctx context.Context, request opera
 }
 
 // UpdateAdsOrganization - Update an organization
+// Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 func (s *Organization) UpdateAdsOrganization(ctx context.Context, request operations.UpdateAdsOrganizationRequest, opts ...operations.Option) (*operations.UpdateAdsOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3731,6 +3749,7 @@ func (s *Organization) UpdateAdsOrganization(ctx context.Context, request operat
 }
 
 // UpdateGenaiOrganization - Update an organization
+// Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 func (s *Organization) UpdateGenaiOrganization(ctx context.Context, request operations.UpdateGenaiOrganizationRequest, opts ...operations.Option) (*operations.UpdateGenaiOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3945,6 +3964,7 @@ func (s *Organization) UpdateGenaiOrganization(ctx context.Context, request oper
 }
 
 // UpdateRepoOrganization - Update an organization
+// Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 func (s *Organization) UpdateRepoOrganization(ctx context.Context, request operations.UpdateRepoOrganizationRequest, opts ...operations.Option) (*operations.UpdateRepoOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

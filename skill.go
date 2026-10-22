@@ -31,6 +31,7 @@ func newSkill(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 }
 
 // GetGenaiSkill - Retrieve a skill
+// Retrieves a single GenaiSkill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Skill) GetGenaiSkill(ctx context.Context, request operations.GetGenaiSkillRequest, opts ...operations.Option) (*operations.GetGenaiSkillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -238,6 +239,7 @@ func (s *Skill) GetGenaiSkill(ctx context.Context, request operations.GetGenaiSk
 }
 
 // ListGenaiSkills - List all skills
+// Returns a list of GenaiSkills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Skill) ListGenaiSkills(ctx context.Context, request operations.ListGenaiSkillsRequest, opts ...operations.Option) (*operations.ListGenaiSkillsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -445,6 +447,7 @@ func (s *Skill) ListGenaiSkills(ctx context.Context, request operations.ListGena
 }
 
 // RemoveGenaiSkill - Remove a skill
+// Deletes the GenaiSkill identified by `id`.
 func (s *Skill) RemoveGenaiSkill(ctx context.Context, request operations.RemoveGenaiSkillRequest, opts ...operations.Option) (*operations.RemoveGenaiSkillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

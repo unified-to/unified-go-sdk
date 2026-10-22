@@ -31,6 +31,7 @@ func newPost(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 }
 
 // CreateSocialPost - Create a post
+// Creates a SocialPost. Provide the unified SocialPost fields in the request body; they are mapped to the provider's API. Returns the created SocialPost.
 func (s *Post) CreateSocialPost(ctx context.Context, request operations.CreateSocialPostRequest, opts ...operations.Option) (*operations.CreateSocialPostResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Post) CreateSocialPost(ctx context.Context, request operations.CreateSo
 }
 
 // GetSocialPost - Retrieve a post
+// Retrieves a single SocialPost by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Post) GetSocialPost(ctx context.Context, request operations.GetSocialPostRequest, opts ...operations.Option) (*operations.GetSocialPostResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Post) GetSocialPost(ctx context.Context, request operations.GetSocialPo
 }
 
 // ListSocialPosts - List all posts
+// Returns a list of SocialPosts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Post) ListSocialPosts(ctx context.Context, request operations.ListSocialPostsRequest, opts ...operations.Option) (*operations.ListSocialPostsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Post) ListSocialPosts(ctx context.Context, request operations.ListSocia
 }
 
 // PatchSocialPost - Update a post
+// Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the request body.
 func (s *Post) PatchSocialPost(ctx context.Context, request operations.PatchSocialPostRequest, opts ...operations.Option) (*operations.PatchSocialPostResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Post) PatchSocialPost(ctx context.Context, request operations.PatchSoci
 }
 
 // RemoveSocialPost - Remove a post
+// Deletes the SocialPost identified by `id`.
 func (s *Post) RemoveSocialPost(ctx context.Context, request operations.RemoveSocialPostRequest, opts ...operations.Option) (*operations.RemoveSocialPostResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Post) RemoveSocialPost(ctx context.Context, request operations.RemoveSo
 }
 
 // UpdateSocialPost - Update a post
+// Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the request body.
 func (s *Post) UpdateSocialPost(ctx context.Context, request operations.UpdateSocialPostRequest, opts ...operations.Option) (*operations.UpdateSocialPostResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// StorageFileType - Whether this is a file or a folder
 type StorageFileType string
 
 const (
@@ -36,19 +37,22 @@ type StorageFile struct {
 	Data        *string `json:"data,omitempty"`
 	Description *string `json:"description,omitempty"`
 	// This link expires after 1 hour. When you need to retrieve the contents of a file, call the "Retrieve a file" endpoint again to get a new download_url.
-	DownloadURL *string             `json:"download_url,omitempty"`
-	Hash        *string             `json:"hash,omitempty"`
-	ID          *string             `json:"id,omitempty"`
-	Metadata    []StorageMetadata   `json:"metadata,omitempty"`
-	MimeType    *string             `json:"mime_type,omitempty"`
+	DownloadURL *string           `json:"download_url,omitempty"`
+	Hash        *string           `json:"hash,omitempty"`
+	ID          *string           `json:"id,omitempty"`
+	Metadata    []StorageMetadata `json:"metadata,omitempty"`
+	MimeType    *string           `json:"mime_type,omitempty"`
+	// The file or folder name, including the file's extension
 	Name        *string             `json:"name,omitempty"`
 	ParentID    *string             `json:"parent_id,omitempty"`
 	Permissions []StoragePermission `json:"permissions,omitempty"`
 	Raw         map[string]any      `json:"raw,omitempty"`
-	References  []StorageReference  `json:"references,omitempty"`
-	Size        *float64            `json:"size,omitempty"`
+	// The records the file is attached to (e.g. an invoice or a candidate), each by its id and type
+	References []StorageReference `json:"references,omitempty"`
+	Size       *float64           `json:"size,omitempty"`
 	// labels
-	Tags []string         `json:"tags,omitempty"`
+	Tags []string `json:"tags,omitempty"`
+	// Whether this is a file or a folder
 	Type *StorageFileType `json:"type,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`

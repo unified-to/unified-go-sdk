@@ -27,7 +27,7 @@
 
 ## CreateAdsGroup
 
-Create a group
+Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
 
 ### Example Usage
 
@@ -59,15 +59,15 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-08-29T17:59:41.045Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             EffectiveStatus: shared.AdsGroupEffectiveStatusPaused.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2026-06-25T01:34:52.041Z"),
-            ID: unifiedgosdk.Pointer("a2c68603-1f08-42c7-bf47-91462bbd8ae3"),
+            EndAt: types.MustNewTimeFromString("2026-06-26T00:16:40.347Z"),
+            ID: unifiedgosdk.Pointer("12560f3e-69eb-4197-9710-683515cc09a8"),
             LanguageLocale: unifiedgosdk.Pointer("fr-FR"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Stark - Baumbach"),
-            StartAt: types.MustNewTimeFromString("2026-01-09T06:49:11.398Z"),
+            StartAt: types.MustNewTimeFromString("2026-01-10T03:59:49.722Z"),
             Status: shared.AdsGroupStatusProcessing.ToPointer(),
             Targeting: &shared.PropertyAdsGroupTargeting{},
-            UpdatedAt: types.MustNewTimeFromString("2022-01-13T16:14:01.125Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-14T00:08:26.728Z"),
         },
         ConnectionID: "<id>",
     })
@@ -100,7 +100,7 @@ func main() {
 
 ## CreateHrisGroup
 
-Create a group
+Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
 
 ### Example Usage
 
@@ -128,12 +128,12 @@ func main() {
         HrisGroup: shared.HrisGroup{
             CreatedAt: types.MustNewTimeFromString("2023-11-01T13:13:40.714Z"),
             Description: unifiedgosdk.Pointer("Absorbeo casso."),
-            ID: unifiedgosdk.Pointer("a367376f-3ee9-4b6c-8743-d83e2575917d"),
+            ID: unifiedgosdk.Pointer("1d18b974-d325-49fa-b0e1-a2e01f2dd256"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Games"),
             Type: shared.HrisGroupTypeBranch.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-05-21T23:27:42.075Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-22T19:54:01.894Z"),
         },
         ConnectionID: "<id>",
     })
@@ -224,7 +224,7 @@ func main() {
 
 ## GetAdsGroup
 
-Retrieve a group
+Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -279,7 +279,7 @@ func main() {
 
 ## GetClubsGroup
 
-Retrieve a group
+Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -334,7 +334,7 @@ func main() {
 
 ## GetHrisGroup
 
-Retrieve a group
+Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -444,7 +444,7 @@ func main() {
 
 ## ListAdsGroups
 
-List all groups
+Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -498,7 +498,7 @@ func main() {
 
 ## ListClubsGroups
 
-List all groups
+Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -552,7 +552,7 @@ func main() {
 
 ## ListHrisGroups
 
-List all groups
+Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -660,7 +660,7 @@ func main() {
 
 ## PatchAdsGroup
 
-Update a group
+Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -692,15 +692,15 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-08-29T17:59:41.045Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             EffectiveStatus: shared.AdsGroupEffectiveStatusPaused.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2026-06-25T01:34:52.194Z"),
-            ID: unifiedgosdk.Pointer("7881867d-720e-4bd6-9ea7-1347033a25c3"),
+            EndAt: types.MustNewTimeFromString("2026-06-26T00:16:40.530Z"),
+            ID: unifiedgosdk.Pointer("2bc07cae-346a-45af-9571-099f47cdbe81"),
             LanguageLocale: unifiedgosdk.Pointer("fr-FR"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Stark - Baumbach"),
-            StartAt: types.MustNewTimeFromString("2026-01-09T06:49:11.540Z"),
+            StartAt: types.MustNewTimeFromString("2026-01-10T03:59:49.894Z"),
             Status: shared.AdsGroupStatusProcessing.ToPointer(),
             Targeting: &shared.PropertyAdsGroupTargeting{},
-            UpdatedAt: types.MustNewTimeFromString("2022-01-13T16:14:01.179Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-14T00:08:26.792Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -734,7 +734,7 @@ func main() {
 
 ## PatchHrisGroup
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -762,12 +762,12 @@ func main() {
         HrisGroup: shared.HrisGroup{
             CreatedAt: types.MustNewTimeFromString("2023-11-01T13:13:40.714Z"),
             Description: unifiedgosdk.Pointer("Absorbeo casso."),
-            ID: unifiedgosdk.Pointer("0c7aa9a3-c25c-4e54-9338-a92812e404ce"),
+            ID: unifiedgosdk.Pointer("4a3e0f10-b197-48b9-b1d1-20f46e3874fd"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Games"),
             Type: shared.HrisGroupTypeBranch.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-05-21T23:27:42.085Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-22T19:54:01.911Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -860,7 +860,7 @@ func main() {
 
 ## RemoveAdsGroup
 
-Remove a group
+Deletes the AdsGroup identified by `id`.
 
 ### Example Usage
 
@@ -915,7 +915,7 @@ func main() {
 
 ## RemoveHrisGroup
 
-Remove a group
+Deletes the HrisGroup identified by `id`.
 
 ### Example Usage
 
@@ -1025,7 +1025,7 @@ func main() {
 
 ## UpdateAdsGroup
 
-Update a group
+Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -1057,15 +1057,15 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-08-29T17:59:41.045Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             EffectiveStatus: shared.AdsGroupEffectiveStatusPaused.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2026-06-25T01:34:52.194Z"),
-            ID: unifiedgosdk.Pointer("7881867d-720e-4bd6-9ea7-1347033a25c3"),
+            EndAt: types.MustNewTimeFromString("2026-06-26T00:16:40.530Z"),
+            ID: unifiedgosdk.Pointer("2bc07cae-346a-45af-9571-099f47cdbe81"),
             LanguageLocale: unifiedgosdk.Pointer("fr-FR"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Stark - Baumbach"),
-            StartAt: types.MustNewTimeFromString("2026-01-09T06:49:11.540Z"),
+            StartAt: types.MustNewTimeFromString("2026-01-10T03:59:49.894Z"),
             Status: shared.AdsGroupStatusProcessing.ToPointer(),
             Targeting: &shared.PropertyAdsGroupTargeting{},
-            UpdatedAt: types.MustNewTimeFromString("2022-01-13T16:14:01.179Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-14T00:08:26.792Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1099,7 +1099,7 @@ func main() {
 
 ## UpdateHrisGroup
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -1127,12 +1127,12 @@ func main() {
         HrisGroup: shared.HrisGroup{
             CreatedAt: types.MustNewTimeFromString("2023-11-01T13:13:40.714Z"),
             Description: unifiedgosdk.Pointer("Absorbeo casso."),
-            ID: unifiedgosdk.Pointer("0c7aa9a3-c25c-4e54-9338-a92812e404ce"),
+            ID: unifiedgosdk.Pointer("4a3e0f10-b197-48b9-b1d1-20f46e3874fd"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Games"),
             Type: shared.HrisGroupTypeBranch.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-05-21T23:27:42.085Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-22T19:54:01.911Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

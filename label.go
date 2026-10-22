@@ -31,6 +31,7 @@ func newLabel(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 }
 
 // CreateShippingLabel - Create a label
+// Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are mapped to the provider's API. Returns the created ShippingLabel.
 func (s *Label) CreateShippingLabel(ctx context.Context, request operations.CreateShippingLabelRequest, opts ...operations.Option) (*operations.CreateShippingLabelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Label) CreateShippingLabel(ctx context.Context, request operations.Crea
 }
 
 // GetShippingLabel - Retrieve a label
+// Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Label) GetShippingLabel(ctx context.Context, request operations.GetShippingLabelRequest, opts ...operations.Option) (*operations.GetShippingLabelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Label) GetShippingLabel(ctx context.Context, request operations.GetShip
 }
 
 // ListShippingLabels - List all labels
+// Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Label) ListShippingLabels(ctx context.Context, request operations.ListShippingLabelsRequest, opts ...operations.Option) (*operations.ListShippingLabelsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Label) ListShippingLabels(ctx context.Context, request operations.ListS
 }
 
 // PatchShippingLabel - Update a label
+// Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
 func (s *Label) PatchShippingLabel(ctx context.Context, request operations.PatchShippingLabelRequest, opts ...operations.Option) (*operations.PatchShippingLabelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Label) PatchShippingLabel(ctx context.Context, request operations.Patch
 }
 
 // RemoveShippingLabel - Remove a label
+// Deletes the ShippingLabel identified by `id`.
 func (s *Label) RemoveShippingLabel(ctx context.Context, request operations.RemoveShippingLabelRequest, opts ...operations.Option) (*operations.RemoveShippingLabelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Label) RemoveShippingLabel(ctx context.Context, request operations.Remo
 }
 
 // UpdateShippingLabel - Update a label
+// Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
 func (s *Label) UpdateShippingLabel(ctx context.Context, request operations.UpdateShippingLabelRequest, opts ...operations.Option) (*operations.UpdateShippingLabelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

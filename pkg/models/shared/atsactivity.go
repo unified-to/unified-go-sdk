@@ -33,13 +33,15 @@ func (e *AtsActivityType) IsExact() bool {
 type AtsActivity struct {
 	ApplicationID *string    `json:"application_id,omitempty"`
 	Bcc           []AtsEmail `json:"bcc,omitempty"`
-	CandidateID   *string    `json:"candidate_id,omitempty"`
-	Cc            []AtsEmail `json:"cc,omitempty"`
+	// The ID of the candidate the activity is about (an AtsCandidate ID)
+	CandidateID *string    `json:"candidate_id,omitempty"`
+	Cc          []AtsEmail `json:"cc,omitempty"`
 	// (reference to AtsCompany)
 	CompanyID *string `json:"company_id,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt   *time.Time `json:"created_at,omitempty"`
-	Description *string    `json:"description,omitempty"`
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// The activity's content, such as the text of a note or the body of an email
+	Description *string `json:"description,omitempty"`
 	// IDs for AtsDocument.get
 	DocumentIds []string                 `json:"document_ids,omitempty"`
 	From        *PropertyAtsActivityFrom `json:"from,omitempty"`

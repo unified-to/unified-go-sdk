@@ -13,7 +13,7 @@
 
 ## CreateComputeEnvvar
 
-Create an envvar
+Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are mapped to the provider's API. Returns the created ComputeEnvvar.
 
 ### Example Usage
 
@@ -43,11 +43,11 @@ func main() {
             Environments: []shared.PropertyComputeEnvvarEnvironments{
                 shared.PropertyComputeEnvvarEnvironmentsPreview,
             },
-            ID: unifiedgosdk.Pointer("5c354e68-66c7-4e3d-8c30-acdaee168414"),
+            ID: unifiedgosdk.Pointer("45267d80-0151-4bb4-8576-dce993a3529c"),
             IsSecret: unifiedgosdk.Pointer(true),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("AEGER_SUBSTANTIA"),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-03T14:22:07.159Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-04T08:10:42.741Z"),
         },
         ConnectionID: "<id>",
     })
@@ -80,7 +80,7 @@ func main() {
 
 ## GetComputeEnvvar
 
-Retrieve an envvar
+Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -135,7 +135,7 @@ func main() {
 
 ## ListComputeEnvvars
 
-List all envvars
+Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -189,7 +189,7 @@ func main() {
 
 ## PatchComputeEnvvar
 
-Update an envvar
+Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
 ### Example Usage
 
@@ -219,11 +219,11 @@ func main() {
             Environments: []shared.PropertyComputeEnvvarEnvironments{
                 shared.PropertyComputeEnvvarEnvironmentsPreview,
             },
-            ID: unifiedgosdk.Pointer("64c98e54-a680-4235-b4b7-03f073fc5eda"),
+            ID: unifiedgosdk.Pointer("f0db2170-df5b-4931-a32a-b0958fe98b2c"),
             IsSecret: unifiedgosdk.Pointer(true),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("AEGER_SUBSTANTIA"),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-03T14:22:07.165Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-04T08:10:42.750Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -257,7 +257,7 @@ func main() {
 
 ## RemoveComputeEnvvar
 
-Remove an envvar
+Deletes the ComputeEnvvar identified by `id`.
 
 ### Example Usage
 
@@ -312,7 +312,7 @@ func main() {
 
 ## UpdateComputeEnvvar
 
-Update an envvar
+Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
 ### Example Usage
 
@@ -342,11 +342,11 @@ func main() {
             Environments: []shared.PropertyComputeEnvvarEnvironments{
                 shared.PropertyComputeEnvvarEnvironmentsPreview,
             },
-            ID: unifiedgosdk.Pointer("64c98e54-a680-4235-b4b7-03f073fc5eda"),
+            ID: unifiedgosdk.Pointer("f0db2170-df5b-4931-a32a-b0958fe98b2c"),
             IsSecret: unifiedgosdk.Pointer(true),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("AEGER_SUBSTANTIA"),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-03T14:22:07.165Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-04T08:10:42.750Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

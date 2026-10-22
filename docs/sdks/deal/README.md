@@ -13,7 +13,7 @@
 
 ## CreateCrmDeal
 
-Create a deal
+Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the provider's API. Returns the created CrmDeal.
 
 ### Example Usage
 
@@ -40,12 +40,12 @@ func main() {
     res, err := s.Deal.CreateCrmDeal(ctx, operations.CreateCrmDealRequest{
         CrmDeal: shared.CrmDeal{
             Amount: unifiedgosdk.Pointer[float64](98162.0),
-            ClosedAt: types.MustNewTimeFromString("2024-03-10T10:06:36.060Z"),
-            ClosingAt: types.MustNewTimeFromString("2025-08-31T12:37:54.634Z"),
+            ClosedAt: types.MustNewTimeFromString("2024-03-10T15:02:30.290Z"),
+            ClosingAt: types.MustNewTimeFromString("2025-09-01T04:12:11.705Z"),
             CreatedAt: types.MustNewTimeFromString("2023-07-04T12:48:48.470Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             Description: unifiedgosdk.Pointer("Comis tepidus sit cavus crustulum trans tubineus adfectus."),
-            ID: unifiedgosdk.Pointer("7d6cd0b2-f9c5-42c1-a68b-d59f7680ea80"),
+            ID: unifiedgosdk.Pointer("14ef397c-6011-4e50-90b6-053bbdfd46aa"),
             Metadata: []shared.CrmMetadata{
                 shared.CrmMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateCrmMetadataExtraDataMapOfAny(
@@ -54,7 +54,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("de172c9b-9f28-4356-b8cd-d329d4ff5974"),
+                    ID: unifiedgosdk.Pointer("f71d3c5e-3680-4811-8ccf-9761d634c9a0"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -69,7 +69,7 @@ func main() {
                 "causa",
                 "suus",
             },
-            UpdatedAt: types.MustNewTimeFromString("2024-10-11T21:12:58.993Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-12T06:24:01.623Z"),
             WonReason: unifiedgosdk.Pointer("Usque libero soleo."),
         },
         ConnectionID: "<id>",
@@ -103,7 +103,7 @@ func main() {
 
 ## GetCrmDeal
 
-Retrieve a deal
+Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -158,7 +158,7 @@ func main() {
 
 ## ListCrmDeals
 
-List all deals
+Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -212,7 +212,7 @@ func main() {
 
 ## PatchCrmDeal
 
-Update a deal
+Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
 ### Example Usage
 
@@ -239,12 +239,12 @@ func main() {
     res, err := s.Deal.PatchCrmDeal(ctx, operations.PatchCrmDealRequest{
         CrmDeal: shared.CrmDeal{
             Amount: unifiedgosdk.Pointer[float64](98162.0),
-            ClosedAt: types.MustNewTimeFromString("2024-03-10T10:06:36.063Z"),
-            ClosingAt: types.MustNewTimeFromString("2025-08-31T12:37:54.643Z"),
+            ClosedAt: types.MustNewTimeFromString("2024-03-10T15:02:30.296Z"),
+            ClosingAt: types.MustNewTimeFromString("2025-09-01T04:12:11.724Z"),
             CreatedAt: types.MustNewTimeFromString("2023-07-04T12:48:48.470Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             Description: unifiedgosdk.Pointer("Comis tepidus sit cavus crustulum trans tubineus adfectus."),
-            ID: unifiedgosdk.Pointer("25cb1f3c-58e5-463c-b7e6-ab7a5e2dc1f3"),
+            ID: unifiedgosdk.Pointer("7b95c55d-c096-4489-9655-08807542832c"),
             Metadata: []shared.CrmMetadata{
                 shared.CrmMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateCrmMetadataExtraDataMapOfAny(
@@ -253,7 +253,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("4ce364e7-3ae1-4d8c-8353-0bcb57c73575"),
+                    ID: unifiedgosdk.Pointer("68c0b75f-f90f-4795-916c-ea0dc7f99352"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -268,7 +268,7 @@ func main() {
                 "causa",
                 "suus",
             },
-            UpdatedAt: types.MustNewTimeFromString("2024-10-11T21:12:58.999Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-12T06:24:01.634Z"),
             WonReason: unifiedgosdk.Pointer("Usque libero soleo."),
         },
         ConnectionID: "<id>",
@@ -303,7 +303,7 @@ func main() {
 
 ## RemoveCrmDeal
 
-Remove a deal
+Deletes the CrmDeal identified by `id`.
 
 ### Example Usage
 
@@ -358,7 +358,7 @@ func main() {
 
 ## UpdateCrmDeal
 
-Update a deal
+Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
 ### Example Usage
 
@@ -385,12 +385,12 @@ func main() {
     res, err := s.Deal.UpdateCrmDeal(ctx, operations.UpdateCrmDealRequest{
         CrmDeal: shared.CrmDeal{
             Amount: unifiedgosdk.Pointer[float64](98162.0),
-            ClosedAt: types.MustNewTimeFromString("2024-03-10T10:06:36.063Z"),
-            ClosingAt: types.MustNewTimeFromString("2025-08-31T12:37:54.643Z"),
+            ClosedAt: types.MustNewTimeFromString("2024-03-10T15:02:30.296Z"),
+            ClosingAt: types.MustNewTimeFromString("2025-09-01T04:12:11.724Z"),
             CreatedAt: types.MustNewTimeFromString("2023-07-04T12:48:48.470Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             Description: unifiedgosdk.Pointer("Comis tepidus sit cavus crustulum trans tubineus adfectus."),
-            ID: unifiedgosdk.Pointer("25cb1f3c-58e5-463c-b7e6-ab7a5e2dc1f3"),
+            ID: unifiedgosdk.Pointer("7b95c55d-c096-4489-9655-08807542832c"),
             Metadata: []shared.CrmMetadata{
                 shared.CrmMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateCrmMetadataExtraDataMapOfAny(
@@ -399,7 +399,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("4ce364e7-3ae1-4d8c-8353-0bcb57c73575"),
+                    ID: unifiedgosdk.Pointer("68c0b75f-f90f-4795-916c-ea0dc7f99352"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -414,7 +414,7 @@ func main() {
                 "causa",
                 "suus",
             },
-            UpdatedAt: types.MustNewTimeFromString("2024-10-11T21:12:58.999Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-12T06:24:01.634Z"),
             WonReason: unifiedgosdk.Pointer("Usque libero soleo."),
         },
         ConnectionID: "<id>",

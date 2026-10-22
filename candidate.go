@@ -31,6 +31,7 @@ func newCandidate(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 }
 
 // CreateAtsCandidate - Create a candidate
+// Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped to the provider's API. Returns the created AtsCandidate.
 func (s *Candidate) CreateAtsCandidate(ctx context.Context, request operations.CreateAtsCandidateRequest, opts ...operations.Option) (*operations.CreateAtsCandidateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Candidate) CreateAtsCandidate(ctx context.Context, request operations.C
 }
 
 // GetAtsCandidate - Retrieve a candidate
+// Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Candidate) GetAtsCandidate(ctx context.Context, request operations.GetAtsCandidateRequest, opts ...operations.Option) (*operations.GetAtsCandidateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Candidate) GetAtsCandidate(ctx context.Context, request operations.GetA
 }
 
 // ListAtsCandidates - List all candidates
+// Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Candidate) ListAtsCandidates(ctx context.Context, request operations.ListAtsCandidatesRequest, opts ...operations.Option) (*operations.ListAtsCandidatesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Candidate) ListAtsCandidates(ctx context.Context, request operations.Li
 }
 
 // PatchAtsCandidate - Update a candidate
+// Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 func (s *Candidate) PatchAtsCandidate(ctx context.Context, request operations.PatchAtsCandidateRequest, opts ...operations.Option) (*operations.PatchAtsCandidateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Candidate) PatchAtsCandidate(ctx context.Context, request operations.Pa
 }
 
 // RemoveAtsCandidate - Remove a candidate
+// Deletes the AtsCandidate identified by `id`.
 func (s *Candidate) RemoveAtsCandidate(ctx context.Context, request operations.RemoveAtsCandidateRequest, opts ...operations.Option) (*operations.RemoveAtsCandidateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Candidate) RemoveAtsCandidate(ctx context.Context, request operations.R
 }
 
 // UpdateAtsCandidate - Update a candidate
+// Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 func (s *Candidate) UpdateAtsCandidate(ctx context.Context, request operations.UpdateAtsCandidateRequest, opts ...operations.Option) (*operations.UpdateAtsCandidateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

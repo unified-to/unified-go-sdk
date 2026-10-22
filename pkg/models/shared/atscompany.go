@@ -10,9 +10,10 @@ import (
 type AtsCompany struct {
 	Address *PropertyAtsCompanyAddress `json:"address,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt    *time.Time     `json:"created_at,omitempty"`
-	ID           *string        `json:"id,omitempty"`
-	Metadata     []AtsMetadata  `json:"metadata,omitempty"`
+	CreatedAt *time.Time    `json:"created_at,omitempty"`
+	ID        *string       `json:"id,omitempty"`
+	Metadata  []AtsMetadata `json:"metadata,omitempty"`
+	// The company's name
 	Name         *string        `json:"name,omitempty"`
 	ParentID     *string        `json:"parent_id,omitempty"`
 	Phone        *string        `json:"phone,omitempty"`

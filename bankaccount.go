@@ -31,6 +31,7 @@ func newBankaccount(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 }
 
 // CreateHrisBankaccount - Create a bankaccount
+// Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are mapped to the provider's API. Returns the created HrisBankaccount.
 func (s *Bankaccount) CreateHrisBankaccount(ctx context.Context, request operations.CreateHrisBankaccountRequest, opts ...operations.Option) (*operations.CreateHrisBankaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Bankaccount) CreateHrisBankaccount(ctx context.Context, request operati
 }
 
 // GetHrisBankaccount - Retrieve a bankaccount
+// Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Bankaccount) GetHrisBankaccount(ctx context.Context, request operations.GetHrisBankaccountRequest, opts ...operations.Option) (*operations.GetHrisBankaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Bankaccount) GetHrisBankaccount(ctx context.Context, request operations
 }
 
 // ListHrisBankaccounts - List all bankaccounts
+// Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Bankaccount) ListHrisBankaccounts(ctx context.Context, request operations.ListHrisBankaccountsRequest, opts ...operations.Option) (*operations.ListHrisBankaccountsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Bankaccount) ListHrisBankaccounts(ctx context.Context, request operatio
 }
 
 // PatchHrisBankaccount - Update a bankaccount
+// Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 func (s *Bankaccount) PatchHrisBankaccount(ctx context.Context, request operations.PatchHrisBankaccountRequest, opts ...operations.Option) (*operations.PatchHrisBankaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Bankaccount) PatchHrisBankaccount(ctx context.Context, request operatio
 }
 
 // RemoveHrisBankaccount - Remove a bankaccount
+// Deletes the HrisBankaccount identified by `id`.
 func (s *Bankaccount) RemoveHrisBankaccount(ctx context.Context, request operations.RemoveHrisBankaccountRequest, opts ...operations.Option) (*operations.RemoveHrisBankaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Bankaccount) RemoveHrisBankaccount(ctx context.Context, request operati
 }
 
 // UpdateHrisBankaccount - Update a bankaccount
+// Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 func (s *Bankaccount) UpdateHrisBankaccount(ctx context.Context, request operations.UpdateHrisBankaccountRequest, opts ...operations.Option) (*operations.UpdateHrisBankaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

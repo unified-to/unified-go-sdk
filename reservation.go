@@ -31,6 +31,7 @@ func newReservation(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 }
 
 // CreateCommerceReservation - Create a reservation
+// Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body; they are mapped to the provider's API. Returns the created CommerceReservation.
 func (s *Reservation) CreateCommerceReservation(ctx context.Context, request operations.CreateCommerceReservationRequest, opts ...operations.Option) (*operations.CreateCommerceReservationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Reservation) CreateCommerceReservation(ctx context.Context, request ope
 }
 
 // GetCommerceReservation - Retrieve a reservation
+// Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Reservation) GetCommerceReservation(ctx context.Context, request operations.GetCommerceReservationRequest, opts ...operations.Option) (*operations.GetCommerceReservationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Reservation) GetCommerceReservation(ctx context.Context, request operat
 }
 
 // ListCommerceReservations - List all reservations
+// Returns a list of CommerceReservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Reservation) ListCommerceReservations(ctx context.Context, request operations.ListCommerceReservationsRequest, opts ...operations.Option) (*operations.ListCommerceReservationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Reservation) ListCommerceReservations(ctx context.Context, request oper
 }
 
 // PatchCommerceReservation - Update a reservation
+// Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 func (s *Reservation) PatchCommerceReservation(ctx context.Context, request operations.PatchCommerceReservationRequest, opts ...operations.Option) (*operations.PatchCommerceReservationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Reservation) PatchCommerceReservation(ctx context.Context, request oper
 }
 
 // RemoveCommerceReservation - Remove a reservation
+// Deletes the CommerceReservation identified by `id`.
 func (s *Reservation) RemoveCommerceReservation(ctx context.Context, request operations.RemoveCommerceReservationRequest, opts ...operations.Option) (*operations.RemoveCommerceReservationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Reservation) RemoveCommerceReservation(ctx context.Context, request ope
 }
 
 // UpdateCommerceReservation - Update a reservation
+// Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 func (s *Reservation) UpdateCommerceReservation(ctx context.Context, request operations.UpdateCommerceReservationRequest, opts ...operations.Option) (*operations.UpdateCommerceReservationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

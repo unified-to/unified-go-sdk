@@ -31,6 +31,7 @@ func newRepo(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 }
 
 // CreateRepoBranch - Create a branch
+// Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to the provider's API. Returns the created RepoBranch.
 func (s *Repo) CreateRepoBranch(ctx context.Context, request operations.CreateRepoBranchRequest, opts ...operations.Option) (*operations.CreateRepoBranchResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Repo) CreateRepoBranch(ctx context.Context, request operations.CreateRe
 }
 
 // CreateRepoCommit - Create a commit
+// Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to the provider's API. Returns the created RepoCommit.
 func (s *Repo) CreateRepoCommit(ctx context.Context, request operations.CreateRepoCommitRequest, opts ...operations.Option) (*operations.CreateRepoCommitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Repo) CreateRepoCommit(ctx context.Context, request operations.CreateRe
 }
 
 // CreateRepoOrganization - Create an organization
+// Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
 func (s *Repo) CreateRepoOrganization(ctx context.Context, request operations.CreateRepoOrganizationRequest, opts ...operations.Option) (*operations.CreateRepoOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Repo) CreateRepoOrganization(ctx context.Context, request operations.Cr
 }
 
 // CreateRepoPullrequest - Create a pullrequest
+// Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are mapped to the provider's API. Returns the created RepoPullrequest.
 func (s *Repo) CreateRepoPullrequest(ctx context.Context, request operations.CreateRepoPullrequestRequest, opts ...operations.Option) (*operations.CreateRepoPullrequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -887,6 +891,7 @@ func (s *Repo) CreateRepoPullrequest(ctx context.Context, request operations.Cre
 }
 
 // CreateRepoRepository - Create a repository
+// Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are mapped to the provider's API. Returns the created RepoRepository.
 func (s *Repo) CreateRepoRepository(ctx context.Context, request operations.CreateRepoRepositoryRequest, opts ...operations.Option) (*operations.CreateRepoRepositoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1101,6 +1106,7 @@ func (s *Repo) CreateRepoRepository(ctx context.Context, request operations.Crea
 }
 
 // GetRepoBranch - Retrieve a branch
+// Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Repo) GetRepoBranch(ctx context.Context, request operations.GetRepoBranchRequest, opts ...operations.Option) (*operations.GetRepoBranchResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1308,6 +1314,7 @@ func (s *Repo) GetRepoBranch(ctx context.Context, request operations.GetRepoBran
 }
 
 // GetRepoCommit - Retrieve a commit
+// Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Repo) GetRepoCommit(ctx context.Context, request operations.GetRepoCommitRequest, opts ...operations.Option) (*operations.GetRepoCommitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1515,6 +1522,7 @@ func (s *Repo) GetRepoCommit(ctx context.Context, request operations.GetRepoComm
 }
 
 // GetRepoOrganization - Retrieve an organization
+// Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Repo) GetRepoOrganization(ctx context.Context, request operations.GetRepoOrganizationRequest, opts ...operations.Option) (*operations.GetRepoOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1722,6 +1730,7 @@ func (s *Repo) GetRepoOrganization(ctx context.Context, request operations.GetRe
 }
 
 // GetRepoPullrequest - Retrieve a pullrequest
+// Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Repo) GetRepoPullrequest(ctx context.Context, request operations.GetRepoPullrequestRequest, opts ...operations.Option) (*operations.GetRepoPullrequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1929,6 +1938,7 @@ func (s *Repo) GetRepoPullrequest(ctx context.Context, request operations.GetRep
 }
 
 // GetRepoRepository - Retrieve a repository
+// Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Repo) GetRepoRepository(ctx context.Context, request operations.GetRepoRepositoryRequest, opts ...operations.Option) (*operations.GetRepoRepositoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2136,6 +2146,7 @@ func (s *Repo) GetRepoRepository(ctx context.Context, request operations.GetRepo
 }
 
 // ListRepoBranches - List all branches
+// Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Repo) ListRepoBranches(ctx context.Context, request operations.ListRepoBranchesRequest, opts ...operations.Option) (*operations.ListRepoBranchesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2343,6 +2354,7 @@ func (s *Repo) ListRepoBranches(ctx context.Context, request operations.ListRepo
 }
 
 // ListRepoCommits - List all commits
+// Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Repo) ListRepoCommits(ctx context.Context, request operations.ListRepoCommitsRequest, opts ...operations.Option) (*operations.ListRepoCommitsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2550,6 +2562,7 @@ func (s *Repo) ListRepoCommits(ctx context.Context, request operations.ListRepoC
 }
 
 // ListRepoOrganizations - List all organizations
+// Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Repo) ListRepoOrganizations(ctx context.Context, request operations.ListRepoOrganizationsRequest, opts ...operations.Option) (*operations.ListRepoOrganizationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2757,6 +2770,7 @@ func (s *Repo) ListRepoOrganizations(ctx context.Context, request operations.Lis
 }
 
 // ListRepoPullrequests - List all pullrequests
+// Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Repo) ListRepoPullrequests(ctx context.Context, request operations.ListRepoPullrequestsRequest, opts ...operations.Option) (*operations.ListRepoPullrequestsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2964,6 +2978,7 @@ func (s *Repo) ListRepoPullrequests(ctx context.Context, request operations.List
 }
 
 // ListRepoRepositories - List all repositories
+// Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Repo) ListRepoRepositories(ctx context.Context, request operations.ListRepoRepositoriesRequest, opts ...operations.Option) (*operations.ListRepoRepositoriesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3171,6 +3186,7 @@ func (s *Repo) ListRepoRepositories(ctx context.Context, request operations.List
 }
 
 // PatchRepoBranch - Update a branch
+// Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 func (s *Repo) PatchRepoBranch(ctx context.Context, request operations.PatchRepoBranchRequest, opts ...operations.Option) (*operations.PatchRepoBranchResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3385,6 +3401,7 @@ func (s *Repo) PatchRepoBranch(ctx context.Context, request operations.PatchRepo
 }
 
 // PatchRepoCommit - Update a commit
+// Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 func (s *Repo) PatchRepoCommit(ctx context.Context, request operations.PatchRepoCommitRequest, opts ...operations.Option) (*operations.PatchRepoCommitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3599,6 +3616,7 @@ func (s *Repo) PatchRepoCommit(ctx context.Context, request operations.PatchRepo
 }
 
 // PatchRepoOrganization - Update an organization
+// Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 func (s *Repo) PatchRepoOrganization(ctx context.Context, request operations.PatchRepoOrganizationRequest, opts ...operations.Option) (*operations.PatchRepoOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3813,6 +3831,7 @@ func (s *Repo) PatchRepoOrganization(ctx context.Context, request operations.Pat
 }
 
 // PatchRepoPullrequest - Update a pullrequest
+// Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 func (s *Repo) PatchRepoPullrequest(ctx context.Context, request operations.PatchRepoPullrequestRequest, opts ...operations.Option) (*operations.PatchRepoPullrequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4027,6 +4046,7 @@ func (s *Repo) PatchRepoPullrequest(ctx context.Context, request operations.Patc
 }
 
 // PatchRepoRepository - Update a repository
+// Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 func (s *Repo) PatchRepoRepository(ctx context.Context, request operations.PatchRepoRepositoryRequest, opts ...operations.Option) (*operations.PatchRepoRepositoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4241,6 +4261,7 @@ func (s *Repo) PatchRepoRepository(ctx context.Context, request operations.Patch
 }
 
 // RemoveRepoBranch - Remove a branch
+// Deletes the RepoBranch identified by `id`.
 func (s *Repo) RemoveRepoBranch(ctx context.Context, request operations.RemoveRepoBranchRequest, opts ...operations.Option) (*operations.RemoveRepoBranchResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4423,6 +4444,7 @@ func (s *Repo) RemoveRepoBranch(ctx context.Context, request operations.RemoveRe
 }
 
 // RemoveRepoCommit - Remove a commit
+// Deletes the RepoCommit identified by `id`.
 func (s *Repo) RemoveRepoCommit(ctx context.Context, request operations.RemoveRepoCommitRequest, opts ...operations.Option) (*operations.RemoveRepoCommitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4605,6 +4627,7 @@ func (s *Repo) RemoveRepoCommit(ctx context.Context, request operations.RemoveRe
 }
 
 // RemoveRepoOrganization - Remove an organization
+// Deletes the RepoOrganization identified by `id`.
 func (s *Repo) RemoveRepoOrganization(ctx context.Context, request operations.RemoveRepoOrganizationRequest, opts ...operations.Option) (*operations.RemoveRepoOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4787,6 +4810,7 @@ func (s *Repo) RemoveRepoOrganization(ctx context.Context, request operations.Re
 }
 
 // RemoveRepoPullrequest - Remove a pullrequest
+// Deletes the RepoPullrequest identified by `id`.
 func (s *Repo) RemoveRepoPullrequest(ctx context.Context, request operations.RemoveRepoPullrequestRequest, opts ...operations.Option) (*operations.RemoveRepoPullrequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4969,6 +4993,7 @@ func (s *Repo) RemoveRepoPullrequest(ctx context.Context, request operations.Rem
 }
 
 // RemoveRepoRepository - Remove a repository
+// Deletes the RepoRepository identified by `id`.
 func (s *Repo) RemoveRepoRepository(ctx context.Context, request operations.RemoveRepoRepositoryRequest, opts ...operations.Option) (*operations.RemoveRepoRepositoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5151,6 +5176,7 @@ func (s *Repo) RemoveRepoRepository(ctx context.Context, request operations.Remo
 }
 
 // UpdateRepoBranch - Update a branch
+// Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 func (s *Repo) UpdateRepoBranch(ctx context.Context, request operations.UpdateRepoBranchRequest, opts ...operations.Option) (*operations.UpdateRepoBranchResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5365,6 +5391,7 @@ func (s *Repo) UpdateRepoBranch(ctx context.Context, request operations.UpdateRe
 }
 
 // UpdateRepoCommit - Update a commit
+// Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 func (s *Repo) UpdateRepoCommit(ctx context.Context, request operations.UpdateRepoCommitRequest, opts ...operations.Option) (*operations.UpdateRepoCommitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5579,6 +5606,7 @@ func (s *Repo) UpdateRepoCommit(ctx context.Context, request operations.UpdateRe
 }
 
 // UpdateRepoOrganization - Update an organization
+// Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 func (s *Repo) UpdateRepoOrganization(ctx context.Context, request operations.UpdateRepoOrganizationRequest, opts ...operations.Option) (*operations.UpdateRepoOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5793,6 +5821,7 @@ func (s *Repo) UpdateRepoOrganization(ctx context.Context, request operations.Up
 }
 
 // UpdateRepoPullrequest - Update a pullrequest
+// Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 func (s *Repo) UpdateRepoPullrequest(ctx context.Context, request operations.UpdateRepoPullrequestRequest, opts ...operations.Option) (*operations.UpdateRepoPullrequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6007,6 +6036,7 @@ func (s *Repo) UpdateRepoPullrequest(ctx context.Context, request operations.Upd
 }
 
 // UpdateRepoRepository - Update a repository
+// Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 func (s *Repo) UpdateRepoRepository(ctx context.Context, request operations.UpdateRepoRepositoryRequest, opts ...operations.Option) (*operations.UpdateRepoRepositoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

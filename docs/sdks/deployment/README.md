@@ -13,7 +13,7 @@
 
 ## CreateComputeDeployment
 
-Create a deployment
+Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they are mapped to the provider's API. Returns the created ComputeDeployment.
 
 ### Example Usage
 
@@ -44,13 +44,13 @@ func main() {
             CommitMessage: unifiedgosdk.Pointer("copy primary pixel"),
             CreatedAt: types.MustNewTimeFromString("2022-06-07T03:52:04.613Z"),
             Environment: shared.EnvironmentPreview.ToPointer(),
-            FinishedAt: types.MustNewTimeFromString("2025-08-29T15:05:51.661Z"),
-            ID: unifiedgosdk.Pointer("ca841094-cd73-4024-bfea-725904a495cd"),
+            FinishedAt: types.MustNewTimeFromString("2025-08-30T08:39:21.131Z"),
+            ID: unifiedgosdk.Pointer("25ba96fd-fe07-48cd-b826-6741970cfc4f"),
             Metadata: []shared.ComputeMetadata{},
-            StartedAt: types.MustNewTimeFromString("2025-04-10T07:30:12.606Z"),
+            StartedAt: types.MustNewTimeFromString("2025-04-10T22:57:28.715Z"),
             Status: shared.ComputeDeploymentStatusLive.ToPointer(),
             Trigger: shared.TriggerAPI.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-28T18:03:13.449Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-01T14:20:16.768Z"),
             URL: unifiedgosdk.Pointer("https://comfortable-petal.name"),
         },
         ConnectionID: "<id>",
@@ -84,7 +84,7 @@ func main() {
 
 ## GetComputeDeployment
 
-Retrieve a deployment
+Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -139,7 +139,7 @@ func main() {
 
 ## ListComputeDeployments
 
-List all deployments
+Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -193,7 +193,7 @@ func main() {
 
 ## PatchComputeDeployment
 
-Update a deployment
+Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
 ### Example Usage
 
@@ -224,13 +224,13 @@ func main() {
             CommitMessage: unifiedgosdk.Pointer("copy primary pixel"),
             CreatedAt: types.MustNewTimeFromString("2022-06-07T03:52:04.613Z"),
             Environment: shared.EnvironmentPreview.ToPointer(),
-            FinishedAt: types.MustNewTimeFromString("2025-08-29T15:05:51.669Z"),
-            ID: unifiedgosdk.Pointer("9eed3546-cbe3-49c2-9354-a3897f19a658"),
+            FinishedAt: types.MustNewTimeFromString("2025-08-30T08:39:21.145Z"),
+            ID: unifiedgosdk.Pointer("d3cda7e1-1d2a-4128-8ecf-16721fcf731a"),
             Metadata: []shared.ComputeMetadata{},
-            StartedAt: types.MustNewTimeFromString("2025-04-10T07:30:12.613Z"),
+            StartedAt: types.MustNewTimeFromString("2025-04-10T22:57:28.727Z"),
             Status: shared.ComputeDeploymentStatusLive.ToPointer(),
             Trigger: shared.TriggerAPI.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-28T18:03:13.459Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-01T14:20:16.783Z"),
             URL: unifiedgosdk.Pointer("https://comfortable-petal.name"),
         },
         ConnectionID: "<id>",
@@ -265,7 +265,7 @@ func main() {
 
 ## RemoveComputeDeployment
 
-Remove a deployment
+Deletes the ComputeDeployment identified by `id`.
 
 ### Example Usage
 
@@ -320,7 +320,7 @@ func main() {
 
 ## UpdateComputeDeployment
 
-Update a deployment
+Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
 ### Example Usage
 
@@ -351,13 +351,13 @@ func main() {
             CommitMessage: unifiedgosdk.Pointer("copy primary pixel"),
             CreatedAt: types.MustNewTimeFromString("2022-06-07T03:52:04.613Z"),
             Environment: shared.EnvironmentPreview.ToPointer(),
-            FinishedAt: types.MustNewTimeFromString("2025-08-29T15:05:51.669Z"),
-            ID: unifiedgosdk.Pointer("9eed3546-cbe3-49c2-9354-a3897f19a658"),
+            FinishedAt: types.MustNewTimeFromString("2025-08-30T08:39:21.145Z"),
+            ID: unifiedgosdk.Pointer("d3cda7e1-1d2a-4128-8ecf-16721fcf731a"),
             Metadata: []shared.ComputeMetadata{},
-            StartedAt: types.MustNewTimeFromString("2025-04-10T07:30:12.613Z"),
+            StartedAt: types.MustNewTimeFromString("2025-04-10T22:57:28.727Z"),
             Status: shared.ComputeDeploymentStatusLive.ToPointer(),
             Trigger: shared.TriggerAPI.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-28T18:03:13.459Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-01T14:20:16.783Z"),
             URL: unifiedgosdk.Pointer("https://comfortable-petal.name"),
         },
         ConnectionID: "<id>",

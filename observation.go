@@ -31,6 +31,7 @@ func newObservation(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 }
 
 // CreateHealthcareObservation - Create an observation
+// Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request body; they are mapped to the provider's API. Returns the created HealthcareObservation.
 func (s *Observation) CreateHealthcareObservation(ctx context.Context, request operations.CreateHealthcareObservationRequest, opts ...operations.Option) (*operations.CreateHealthcareObservationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Observation) CreateHealthcareObservation(ctx context.Context, request o
 }
 
 // GetHealthcareObservation - Retrieve an observation
+// Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Observation) GetHealthcareObservation(ctx context.Context, request operations.GetHealthcareObservationRequest, opts ...operations.Option) (*operations.GetHealthcareObservationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Observation) GetHealthcareObservation(ctx context.Context, request oper
 }
 
 // ListHealthcareObservations - List all observations
+// Returns a list of HealthcareObservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Observation) ListHealthcareObservations(ctx context.Context, request operations.ListHealthcareObservationsRequest, opts ...operations.Option) (*operations.ListHealthcareObservationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

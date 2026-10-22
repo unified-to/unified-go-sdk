@@ -10,26 +10,29 @@ import (
 type CrmLead struct {
 	Address *PropertyCrmLeadAddress `json:"address,omitempty"`
 	// (reference to CrmCompany)
-	CompanyID   *string `json:"company_id,omitempty"`
+	CompanyID *string `json:"company_id,omitempty"`
+	// The name of the company the lead works for
 	CompanyName *string `json:"company_name,omitempty"`
 	// (reference to CrmContact)
 	ContactID *string `json:"contact_id,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// (reference to HrisEmployee)
-	CreatorUserID *string        `json:"creator_user_id,omitempty"`
-	Emails        []CrmEmail     `json:"emails,omitempty"`
-	FirstName     *string        `json:"first_name,omitempty"`
-	ID            *string        `json:"id,omitempty"`
-	IsActive      *bool          `json:"is_active,omitempty"`
-	LastName      *string        `json:"last_name,omitempty"`
-	LinkUrls      []string       `json:"link_urls,omitempty"`
-	Metadata      []CrmMetadata  `json:"metadata,omitempty"`
-	Name          *string        `json:"name,omitempty"`
-	Raw           map[string]any `json:"raw,omitempty"`
-	Source        *string        `json:"source,omitempty"`
-	Status        *string        `json:"status,omitempty"`
-	Telephones    []CrmTelephone `json:"telephones,omitempty"`
+	CreatorUserID *string    `json:"creator_user_id,omitempty"`
+	Emails        []CrmEmail `json:"emails,omitempty"`
+	FirstName     *string    `json:"first_name,omitempty"`
+	ID            *string    `json:"id,omitempty"`
+	IsActive      *bool      `json:"is_active,omitempty"`
+	LastName      *string    `json:"last_name,omitempty"`
+	LinkUrls      []string   `json:"link_urls,omitempty"`
+	// Custom field values. Include only existing custom fields and only the ones being set; omit to leave them unchanged.
+	Metadata []CrmMetadata `json:"metadata,omitempty"`
+	// The lead's full name
+	Name       *string        `json:"name,omitempty"`
+	Raw        map[string]any `json:"raw,omitempty"`
+	Source     *string        `json:"source,omitempty"`
+	Status     *string        `json:"status,omitempty"`
+	Telephones []CrmTelephone `json:"telephones,omitempty"`
 	// The job title of the lead
 	Title *string `json:"title,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)

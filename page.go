@@ -31,6 +31,7 @@ func newPage(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 }
 
 // CreateKmsPage - Create a page
+// Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the provider's API. Returns the created KmsPage.
 func (s *Page) CreateKmsPage(ctx context.Context, request operations.CreateKmsPageRequest, opts ...operations.Option) (*operations.CreateKmsPageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Page) CreateKmsPage(ctx context.Context, request operations.CreateKmsPa
 }
 
 // GetKmsPage - Retrieve a page
+// Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Page) GetKmsPage(ctx context.Context, request operations.GetKmsPageRequest, opts ...operations.Option) (*operations.GetKmsPageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Page) GetKmsPage(ctx context.Context, request operations.GetKmsPageRequ
 }
 
 // ListKmsPages - List all pages
+// Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Page) ListKmsPages(ctx context.Context, request operations.ListKmsPagesRequest, opts ...operations.Option) (*operations.ListKmsPagesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Page) ListKmsPages(ctx context.Context, request operations.ListKmsPages
 }
 
 // PatchKmsPage - Update a page
+// Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 func (s *Page) PatchKmsPage(ctx context.Context, request operations.PatchKmsPageRequest, opts ...operations.Option) (*operations.PatchKmsPageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Page) PatchKmsPage(ctx context.Context, request operations.PatchKmsPage
 }
 
 // RemoveKmsPage - Remove a page
+// Deletes the KmsPage identified by `id`.
 func (s *Page) RemoveKmsPage(ctx context.Context, request operations.RemoveKmsPageRequest, opts ...operations.Option) (*operations.RemoveKmsPageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Page) RemoveKmsPage(ctx context.Context, request operations.RemoveKmsPa
 }
 
 // UpdateKmsPage - Update a page
+// Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 func (s *Page) UpdateKmsPage(ctx context.Context, request operations.UpdateKmsPageRequest, opts ...operations.Option) (*operations.UpdateKmsPageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -31,6 +31,7 @@ func newReport(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 }
 
 // ListAdsReports - List all reports
+// Returns a list of AdsReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Report) ListAdsReports(ctx context.Context, request operations.ListAdsReportsRequest, opts ...operations.Option) (*operations.ListAdsReportsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -238,6 +239,7 @@ func (s *Report) ListAdsReports(ctx context.Context, request operations.ListAdsR
 }
 
 // ListAnalyticsReports - List all reports
+// Returns a list of AnalyticsReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Report) ListAnalyticsReports(ctx context.Context, request operations.ListAnalyticsReportsRequest, opts ...operations.Option) (*operations.ListAnalyticsReportsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -445,6 +447,7 @@ func (s *Report) ListAnalyticsReports(ctx context.Context, request operations.Li
 }
 
 // ListMartechReports - List all reports
+// Returns a list of MarketingReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Report) ListMartechReports(ctx context.Context, request operations.ListMartechReportsRequest, opts ...operations.Option) (*operations.ListMartechReportsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

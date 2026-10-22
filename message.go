@@ -31,6 +31,7 @@ func newMessage(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateMessagingMessage - Create a message
+// Creates a MessagingMessage. Provide the unified MessagingMessage fields in the request body; they are mapped to the provider's API. Returns the created MessagingMessage.
 func (s *Message) CreateMessagingMessage(ctx context.Context, request operations.CreateMessagingMessageRequest, opts ...operations.Option) (*operations.CreateMessagingMessageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Message) CreateMessagingMessage(ctx context.Context, request operations
 }
 
 // GetMessagingMessage - Retrieve a message
+// Retrieves a single MessagingMessage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Message) GetMessagingMessage(ctx context.Context, request operations.GetMessagingMessageRequest, opts ...operations.Option) (*operations.GetMessagingMessageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Message) GetMessagingMessage(ctx context.Context, request operations.Ge
 }
 
 // ListMessagingMessages - List all messages
+// Returns a list of MessagingMessages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Message) ListMessagingMessages(ctx context.Context, request operations.ListMessagingMessagesRequest, opts ...operations.Option) (*operations.ListMessagingMessagesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Message) ListMessagingMessages(ctx context.Context, request operations.
 }
 
 // PatchMessagingMessage - Update a message
+// Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to change in the request body.
 func (s *Message) PatchMessagingMessage(ctx context.Context, request operations.PatchMessagingMessageRequest, opts ...operations.Option) (*operations.PatchMessagingMessageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Message) PatchMessagingMessage(ctx context.Context, request operations.
 }
 
 // RemoveMessagingMessage - Remove a message
+// Deletes the MessagingMessage identified by `id`.
 func (s *Message) RemoveMessagingMessage(ctx context.Context, request operations.RemoveMessagingMessageRequest, opts ...operations.Option) (*operations.RemoveMessagingMessageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Message) RemoveMessagingMessage(ctx context.Context, request operations
 }
 
 // UpdateMessagingMessage - Update a message
+// Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to change in the request body.
 func (s *Message) UpdateMessagingMessage(ctx context.Context, request operations.UpdateMessagingMessageRequest, opts ...operations.Option) (*operations.UpdateMessagingMessageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

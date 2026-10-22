@@ -13,7 +13,7 @@
 
 ## CreateComputeDomain
 
-Create a domain
+Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are mapped to the provider's API. Returns the created ComputeDomain.
 
 ### Example Usage
 
@@ -40,12 +40,12 @@ func main() {
     res, err := s.Domain.CreateComputeDomain(ctx, operations.CreateComputeDomainRequest{
         ComputeDomain: shared.ComputeDomain{
             CreatedAt: types.MustNewTimeFromString("2019-11-22T16:38:26.009Z"),
-            ID: unifiedgosdk.Pointer("d1214327-0d8d-4738-b98c-02c549ea5128"),
+            ID: unifiedgosdk.Pointer("551bfdc5-f3f9-4bec-b4ac-aebb4840484d"),
             IsPrimary: unifiedgosdk.Pointer(false),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("mysterious-republican.usable-section.info"),
             Status: shared.ComputeDomainStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-03T15:11:50.494Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-04T04:46:33.831Z"),
         },
         ConnectionID: "<id>",
     })
@@ -78,7 +78,7 @@ func main() {
 
 ## GetComputeDomain
 
-Retrieve a domain
+Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -133,7 +133,7 @@ func main() {
 
 ## ListComputeDomains
 
-List all domains
+Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -187,7 +187,7 @@ func main() {
 
 ## PatchComputeDomain
 
-Update a domain
+Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 
 ### Example Usage
 
@@ -214,12 +214,12 @@ func main() {
     res, err := s.Domain.PatchComputeDomain(ctx, operations.PatchComputeDomainRequest{
         ComputeDomain: shared.ComputeDomain{
             CreatedAt: types.MustNewTimeFromString("2019-11-22T16:38:26.009Z"),
-            ID: unifiedgosdk.Pointer("e8f3231f-b9e3-46c7-8c74-885565e1ae9f"),
+            ID: unifiedgosdk.Pointer("0654d12c-42c7-4802-974c-08c6d4f0f544"),
             IsPrimary: unifiedgosdk.Pointer(false),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("mysterious-republican.usable-section.info"),
             Status: shared.ComputeDomainStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-03T15:11:50.499Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-04T04:46:33.838Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -253,7 +253,7 @@ func main() {
 
 ## RemoveComputeDomain
 
-Remove a domain
+Deletes the ComputeDomain identified by `id`.
 
 ### Example Usage
 
@@ -308,7 +308,7 @@ func main() {
 
 ## UpdateComputeDomain
 
-Update a domain
+Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 
 ### Example Usage
 
@@ -335,12 +335,12 @@ func main() {
     res, err := s.Domain.UpdateComputeDomain(ctx, operations.UpdateComputeDomainRequest{
         ComputeDomain: shared.ComputeDomain{
             CreatedAt: types.MustNewTimeFromString("2019-11-22T16:38:26.009Z"),
-            ID: unifiedgosdk.Pointer("e8f3231f-b9e3-46c7-8c74-885565e1ae9f"),
+            ID: unifiedgosdk.Pointer("0654d12c-42c7-4802-974c-08c6d4f0f544"),
             IsPrimary: unifiedgosdk.Pointer(false),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("mysterious-republican.usable-section.info"),
             Status: shared.ComputeDomainStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-03T15:11:50.499Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-04T04:46:33.838Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -49,10 +49,11 @@ type TaskTask struct {
 	HasChildren     *bool          `json:"has_children,omitempty"`
 	ID              *string        `json:"id,omitempty"`
 	Metadata        []TaskMetadata `json:"metadata,omitempty"`
-	Name            *string        `json:"name,omitempty"`
-	Notes           *string        `json:"notes,omitempty"`
-	ParentID        *string        `json:"parent_id,omitempty"`
-	Priority        *string        `json:"priority,omitempty"`
+	// The task's title
+	Name     *string `json:"name,omitempty"`
+	Notes    *string `json:"notes,omitempty"`
+	ParentID *string `json:"parent_id,omitempty"`
+	Priority *string `json:"priority,omitempty"`
 	// 0-100
 	Progress *float64 `json:"progress,omitempty"`
 	// (reference to TaskProject)

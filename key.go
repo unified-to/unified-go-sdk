@@ -31,6 +31,7 @@ func newKey(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks.
 }
 
 // CreateComputeKey - Create a key
+// Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to the provider's API. Returns the created ComputeKey.
 func (s *Key) CreateComputeKey(ctx context.Context, request operations.CreateComputeKeyRequest, opts ...operations.Option) (*operations.CreateComputeKeyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Key) CreateComputeKey(ctx context.Context, request operations.CreateCom
 }
 
 // GetComputeKey - Retrieve a key
+// Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Key) GetComputeKey(ctx context.Context, request operations.GetComputeKeyRequest, opts ...operations.Option) (*operations.GetComputeKeyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Key) GetComputeKey(ctx context.Context, request operations.GetComputeKe
 }
 
 // ListComputeKeys - List all keys
+// Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Key) ListComputeKeys(ctx context.Context, request operations.ListComputeKeysRequest, opts ...operations.Option) (*operations.ListComputeKeysResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Key) ListComputeKeys(ctx context.Context, request operations.ListComput
 }
 
 // PatchComputeKey - Update a key
+// Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 func (s *Key) PatchComputeKey(ctx context.Context, request operations.PatchComputeKeyRequest, opts ...operations.Option) (*operations.PatchComputeKeyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Key) PatchComputeKey(ctx context.Context, request operations.PatchCompu
 }
 
 // RemoveComputeKey - Remove a key
+// Deletes the ComputeKey identified by `id`.
 func (s *Key) RemoveComputeKey(ctx context.Context, request operations.RemoveComputeKeyRequest, opts ...operations.Option) (*operations.RemoveComputeKeyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Key) RemoveComputeKey(ctx context.Context, request operations.RemoveCom
 }
 
 // UpdateComputeKey - Update a key
+// Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 func (s *Key) UpdateComputeKey(ctx context.Context, request operations.UpdateComputeKeyRequest, opts ...operations.Option) (*operations.UpdateComputeKeyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

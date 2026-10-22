@@ -31,6 +31,7 @@ func newExpensereport(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hoo
 }
 
 // CreateAccountingExpensereport - Create an expensereport
+// Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
 func (s *Expensereport) CreateAccountingExpensereport(ctx context.Context, request operations.CreateAccountingExpensereportRequest, opts ...operations.Option) (*operations.CreateAccountingExpensereportResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Expensereport) CreateAccountingExpensereport(ctx context.Context, reque
 }
 
 // GetAccountingExpensereport - Retrieve an expensereport
+// Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Expensereport) GetAccountingExpensereport(ctx context.Context, request operations.GetAccountingExpensereportRequest, opts ...operations.Option) (*operations.GetAccountingExpensereportResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Expensereport) GetAccountingExpensereport(ctx context.Context, request 
 }
 
 // ListAccountingExpensereports - List all expensereports
+// Returns a list of AccountingExpensereports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Expensereport) ListAccountingExpensereports(ctx context.Context, request operations.ListAccountingExpensereportsRequest, opts ...operations.Option) (*operations.ListAccountingExpensereportsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Expensereport) ListAccountingExpensereports(ctx context.Context, reques
 }
 
 // PatchAccountingExpensereport - Update an expensereport
+// Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 func (s *Expensereport) PatchAccountingExpensereport(ctx context.Context, request operations.PatchAccountingExpensereportRequest, opts ...operations.Option) (*operations.PatchAccountingExpensereportResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Expensereport) PatchAccountingExpensereport(ctx context.Context, reques
 }
 
 // RemoveAccountingExpensereport - Remove an expensereport
+// Deletes the AccountingExpensereport identified by `id`.
 func (s *Expensereport) RemoveAccountingExpensereport(ctx context.Context, request operations.RemoveAccountingExpensereportRequest, opts ...operations.Option) (*operations.RemoveAccountingExpensereportResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Expensereport) RemoveAccountingExpensereport(ctx context.Context, reque
 }
 
 // UpdateAccountingExpensereport - Update an expensereport
+// Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 func (s *Expensereport) UpdateAccountingExpensereport(ctx context.Context, request operations.UpdateAccountingExpensereportRequest, opts ...operations.Option) (*operations.UpdateAccountingExpensereportResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

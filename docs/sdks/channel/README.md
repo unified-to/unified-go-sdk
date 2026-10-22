@@ -13,7 +13,7 @@
 
 ## CreateMessagingChannel
 
-Create a channel
+Creates a MessagingChannel. Provide the unified MessagingChannel fields in the request body; they are mapped to the provider's API. Returns the created MessagingChannel.
 
 ### Example Usage
 
@@ -42,13 +42,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-10-05T02:09:22.795Z"),
             Description: unifiedgosdk.Pointer("Dolores tutis."),
             HasSubchannels: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("d9e11e3c-2e30-4962-857a-b0faf012090c"),
+            ID: unifiedgosdk.Pointer("cee1e969-9044-4ce5-9796-0f9998ee811e"),
             IsActive: unifiedgosdk.Pointer(false),
             IsPrivate: unifiedgosdk.Pointer(true),
             Members: []shared.MessagingMember{},
             Metadata: []shared.MessagingMetadata{},
             Name: unifiedgosdk.Pointer("tego"),
-            UpdatedAt: types.MustNewTimeFromString("2026-05-21T13:53:36.504Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-22T10:24:21.806Z"),
             WebURL: unifiedgosdk.Pointer("https://svelte-rule.name/"),
         },
         ConnectionID: "<id>",
@@ -82,7 +82,7 @@ func main() {
 
 ## GetMessagingChannel
 
-Retrieve a channel
+Retrieves a single MessagingChannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -137,7 +137,7 @@ func main() {
 
 ## ListMessagingChannels
 
-List all channels
+Returns a list of MessagingChannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -191,7 +191,7 @@ func main() {
 
 ## PatchMessagingChannel
 
-Update a channel
+Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
 
 ### Example Usage
 
@@ -220,13 +220,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-10-05T02:09:22.795Z"),
             Description: unifiedgosdk.Pointer("Dolores tutis."),
             HasSubchannels: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("017f7008-218c-4aa0-ae0b-b5feeaffee37"),
+            ID: unifiedgosdk.Pointer("e830d3e5-6cca-4ac1-bc1a-19992f36ecd6"),
             IsActive: unifiedgosdk.Pointer(false),
             IsPrivate: unifiedgosdk.Pointer(true),
             Members: []shared.MessagingMember{},
             Metadata: []shared.MessagingMetadata{},
             Name: unifiedgosdk.Pointer("tego"),
-            UpdatedAt: types.MustNewTimeFromString("2026-05-21T13:53:36.518Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-22T10:24:21.821Z"),
             WebURL: unifiedgosdk.Pointer("https://svelte-rule.name/"),
         },
         ConnectionID: "<id>",
@@ -261,7 +261,7 @@ func main() {
 
 ## RemoveMessagingChannel
 
-Remove a channel
+Deletes the MessagingChannel identified by `id`.
 
 ### Example Usage
 
@@ -316,7 +316,7 @@ func main() {
 
 ## UpdateMessagingChannel
 
-Update a channel
+Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
 
 ### Example Usage
 
@@ -345,13 +345,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-10-05T02:09:22.795Z"),
             Description: unifiedgosdk.Pointer("Dolores tutis."),
             HasSubchannels: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("017f7008-218c-4aa0-ae0b-b5feeaffee37"),
+            ID: unifiedgosdk.Pointer("e830d3e5-6cca-4ac1-bc1a-19992f36ecd6"),
             IsActive: unifiedgosdk.Pointer(false),
             IsPrivate: unifiedgosdk.Pointer(true),
             Members: []shared.MessagingMember{},
             Metadata: []shared.MessagingMetadata{},
             Name: unifiedgosdk.Pointer("tego"),
-            UpdatedAt: types.MustNewTimeFromString("2026-05-21T13:53:36.518Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-22T10:24:21.821Z"),
             WebURL: unifiedgosdk.Pointer("https://svelte-rule.name/"),
         },
         ConnectionID: "<id>",

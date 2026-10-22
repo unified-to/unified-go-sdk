@@ -31,6 +31,7 @@ func newMemory(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 }
 
 // CreateGenaiMemory - Create a memory
+// Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped to the provider's API. Returns the created GenaiMemory.
 func (s *Memory) CreateGenaiMemory(ctx context.Context, request operations.CreateGenaiMemoryRequest, opts ...operations.Option) (*operations.CreateGenaiMemoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Memory) CreateGenaiMemory(ctx context.Context, request operations.Creat
 }
 
 // GetGenaiMemory - Retrieve a memory
+// Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Memory) GetGenaiMemory(ctx context.Context, request operations.GetGenaiMemoryRequest, opts ...operations.Option) (*operations.GetGenaiMemoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Memory) GetGenaiMemory(ctx context.Context, request operations.GetGenai
 }
 
 // ListGenaiMemories - List all memories
+// Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Memory) ListGenaiMemories(ctx context.Context, request operations.ListGenaiMemoriesRequest, opts ...operations.Option) (*operations.ListGenaiMemoriesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Memory) ListGenaiMemories(ctx context.Context, request operations.ListG
 }
 
 // PatchGenaiMemory - Update a memory
+// Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
 func (s *Memory) PatchGenaiMemory(ctx context.Context, request operations.PatchGenaiMemoryRequest, opts ...operations.Option) (*operations.PatchGenaiMemoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Memory) PatchGenaiMemory(ctx context.Context, request operations.PatchG
 }
 
 // RemoveGenaiMemory - Remove a memory
+// Deletes the GenaiMemory identified by `id`.
 func (s *Memory) RemoveGenaiMemory(ctx context.Context, request operations.RemoveGenaiMemoryRequest, opts ...operations.Option) (*operations.RemoveGenaiMemoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Memory) RemoveGenaiMemory(ctx context.Context, request operations.Remov
 }
 
 // UpdateGenaiMemory - Update a memory
+// Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
 func (s *Memory) UpdateGenaiMemory(ctx context.Context, request operations.UpdateGenaiMemoryRequest, opts ...operations.Option) (*operations.UpdateGenaiMemoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

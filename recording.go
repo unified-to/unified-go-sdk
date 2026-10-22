@@ -31,6 +31,7 @@ func newRecording(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 }
 
 // CreateUcRecording - Create a recording
+// Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped to the provider's API. Returns the created UcRecording.
 func (s *Recording) CreateUcRecording(ctx context.Context, request operations.CreateUcRecordingRequest, opts ...operations.Option) (*operations.CreateUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Recording) CreateUcRecording(ctx context.Context, request operations.Cr
 }
 
 // GetCalendarRecording - Retrieve a recording
+// Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Recording) GetCalendarRecording(ctx context.Context, request operations.GetCalendarRecordingRequest, opts ...operations.Option) (*operations.GetCalendarRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Recording) GetCalendarRecording(ctx context.Context, request operations
 }
 
 // GetUcRecording - Retrieve a recording
+// Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Recording) GetUcRecording(ctx context.Context, request operations.GetUcRecordingRequest, opts ...operations.Option) (*operations.GetUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Recording) GetUcRecording(ctx context.Context, request operations.GetUc
 }
 
 // ListCalendarRecordings - List all recordings
+// Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Recording) ListCalendarRecordings(ctx context.Context, request operations.ListCalendarRecordingsRequest, opts ...operations.Option) (*operations.ListCalendarRecordingsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -866,6 +870,7 @@ func (s *Recording) ListCalendarRecordings(ctx context.Context, request operatio
 }
 
 // ListUcRecordings - List all recordings
+// Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Recording) ListUcRecordings(ctx context.Context, request operations.ListUcRecordingsRequest, opts ...operations.Option) (*operations.ListUcRecordingsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1073,6 +1078,7 @@ func (s *Recording) ListUcRecordings(ctx context.Context, request operations.Lis
 }
 
 // PatchUcRecording - Update a recording
+// Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
 func (s *Recording) PatchUcRecording(ctx context.Context, request operations.PatchUcRecordingRequest, opts ...operations.Option) (*operations.PatchUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1287,6 +1293,7 @@ func (s *Recording) PatchUcRecording(ctx context.Context, request operations.Pat
 }
 
 // RemoveUcRecording - Remove a recording
+// Deletes the UcRecording identified by `id`.
 func (s *Recording) RemoveUcRecording(ctx context.Context, request operations.RemoveUcRecordingRequest, opts ...operations.Option) (*operations.RemoveUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1469,6 +1476,7 @@ func (s *Recording) RemoveUcRecording(ctx context.Context, request operations.Re
 }
 
 // UpdateUcRecording - Update a recording
+// Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
 func (s *Recording) UpdateUcRecording(ctx context.Context, request operations.UpdateUcRecordingRequest, opts ...operations.Option) (*operations.UpdateUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -10,7 +10,7 @@
 
 ## CreatePerformanceFeedback
 
-Create a feedback
+Creates a PerformanceFeedback. Provide the unified PerformanceFeedback fields in the request body; they are mapped to the provider's API. Returns the created PerformanceFeedback.
 
 ### Example Usage
 
@@ -37,7 +37,7 @@ func main() {
     res, err := s.Feedback.CreatePerformanceFeedback(ctx, operations.CreatePerformanceFeedbackRequest{
         PerformanceFeedback: shared.PerformanceFeedback{
             CreatedAt: types.MustNewTimeFromString("2023-04-11T16:21:53.862Z"),
-            ID: unifiedgosdk.Pointer("08b0e130-964c-4da1-9540-3eddd43399bb"),
+            ID: unifiedgosdk.Pointer("1925adda-3dcf-4de2-aaf7-90b30474314a"),
             IsVisible: unifiedgosdk.Pointer(true),
             Message: unifiedgosdk.Pointer("Tabernus corpus voluptate aestus."),
             Metadata: []shared.PerformanceMetadata{},
@@ -46,7 +46,7 @@ func main() {
                 "hexagon",
             },
             Type: shared.PerformanceFeedbackTypePraise.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-04T02:28:03.157Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-04T18:38:19.853Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",
@@ -80,7 +80,7 @@ func main() {
 
 ## GetPerformanceFeedback
 
-Retrieve a feedback
+Retrieves a single PerformanceFeedback by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -135,7 +135,7 @@ func main() {
 
 ## ListPerformanceFeedbacks
 
-List all feedbacks
+Returns a list of PerformanceFeedbacks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 

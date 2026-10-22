@@ -26,7 +26,7 @@
 
 ## CreateAtsCompany
 
-Create a company
+Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
 
 ### Example Usage
 
@@ -53,10 +53,10 @@ func main() {
     res, err := s.Company.CreateAtsCompany(ctx, operations.CreateAtsCompanyRequest{
         AtsCompany: shared.AtsCompany{
             CreatedAt: types.MustNewTimeFromString("2019-04-22T03:50:02.920Z"),
-            ID: unifiedgosdk.Pointer("bc88c053-d149-4889-9144-a45bbbbb011e"),
+            ID: unifiedgosdk.Pointer("fc717eb1-789d-4f47-8cb9-f011b597131a"),
             Name: unifiedgosdk.Pointer("Gulgowski, Dibbert and Wilderman"),
             Phone: unifiedgosdk.Pointer("1-882-360-2010"),
-            UpdatedAt: types.MustNewTimeFromString("2020-10-01T04:12:23.715Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-10-01T08:47:21.666Z"),
             WebsiteURL: unifiedgosdk.Pointer("https://www.gulgowskidibbert.com"),
         },
         ConnectionID: "<id>",
@@ -90,7 +90,7 @@ func main() {
 
 ## CreateCrmCompany
 
-Create a company
+Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to the provider's API. Returns the created CrmCompany.
 
 ### Example Usage
 
@@ -145,7 +145,7 @@ func main() {
                 },
             },
             Employees: unifiedgosdk.Pointer[float64](4177.0),
-            ID: unifiedgosdk.Pointer("76899288-87bf-4646-974b-44a0fd1b3acd"),
+            ID: unifiedgosdk.Pointer("45430102-9d60-4dcb-95de-6b3395a6edf2"),
             Industry: unifiedgosdk.Pointer("Metrics"),
             IsActive: unifiedgosdk.Pointer(true),
             LinkUrls: []string{
@@ -159,7 +159,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("31a67396-12ff-4ae0-b56e-f60d44ae7d5d"),
+                    ID: unifiedgosdk.Pointer("7d810a72-f45b-4353-9559-e181734fb9bd"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -180,7 +180,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("Atlantic/Azores"),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-03T03:44:26.054Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-03T21:28:57.322Z"),
             Websites: []string{
                 "https://www.goodwinsons.com",
             },
@@ -216,7 +216,7 @@ func main() {
 
 ## CreateHrisCompany
 
-Create a company
+Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
 
 ### Example Usage
 
@@ -251,11 +251,11 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CreatedAt: types.MustNewTimeFromString("2021-05-02T22:27:38.970Z"),
-            ID: unifiedgosdk.Pointer("c6c4605a-089e-4cfb-91a8-c88c7fcf7a68"),
+            ID: unifiedgosdk.Pointer("1e4e818e-c91c-4ce8-bb9f-87c290b58f50"),
             LegalName: unifiedgosdk.Pointer("Gottlieb Group LLC"),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Gottlieb Group"),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-08T16:22:56.386Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-09T16:00:24.278Z"),
         },
         ConnectionID: "<id>",
     })
@@ -288,7 +288,7 @@ func main() {
 
 ## GetAtsCompany
 
-Retrieve a company
+Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -343,7 +343,7 @@ func main() {
 
 ## GetCrmCompany
 
-Retrieve a company
+Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -398,7 +398,7 @@ func main() {
 
 ## GetHrisCompany
 
-Retrieve a company
+Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -453,7 +453,7 @@ func main() {
 
 ## ListAtsCompanies
 
-List all companies
+Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -507,7 +507,7 @@ func main() {
 
 ## ListCrmCompanies
 
-List all companies
+Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -615,7 +615,7 @@ func main() {
 
 ## ListHrisCompanies
 
-List all companies
+Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -669,7 +669,7 @@ func main() {
 
 ## PatchAtsCompany
 
-Update a company
+Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -696,10 +696,10 @@ func main() {
     res, err := s.Company.PatchAtsCompany(ctx, operations.PatchAtsCompanyRequest{
         AtsCompany: shared.AtsCompany{
             CreatedAt: types.MustNewTimeFromString("2019-04-22T03:50:02.920Z"),
-            ID: unifiedgosdk.Pointer("b636b5e8-021c-497e-9250-478a87440e00"),
+            ID: unifiedgosdk.Pointer("9919fbbc-af06-4156-8ed3-2d8d682ca7e2"),
             Name: unifiedgosdk.Pointer("Gulgowski, Dibbert and Wilderman"),
             Phone: unifiedgosdk.Pointer("1-882-360-2010"),
-            UpdatedAt: types.MustNewTimeFromString("2020-10-01T04:12:23.719Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-10-01T08:47:21.669Z"),
             WebsiteURL: unifiedgosdk.Pointer("https://www.gulgowskidibbert.com"),
         },
         ConnectionID: "<id>",
@@ -734,7 +734,7 @@ func main() {
 
 ## PatchCrmCompany
 
-Update a company
+Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -789,7 +789,7 @@ func main() {
                 },
             },
             Employees: unifiedgosdk.Pointer[float64](4177.0),
-            ID: unifiedgosdk.Pointer("cc28f72c-f444-453c-b4f6-2697156e25e2"),
+            ID: unifiedgosdk.Pointer("f6118c33-c025-4e57-8713-96353decbba9"),
             Industry: unifiedgosdk.Pointer("Metrics"),
             IsActive: unifiedgosdk.Pointer(true),
             LinkUrls: []string{
@@ -803,7 +803,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("01f0ae9f-23c2-49fe-a397-7f5bda43cc3e"),
+                    ID: unifiedgosdk.Pointer("eb7e0ab1-617c-42aa-9140-805dc92181d9"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -824,7 +824,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("Atlantic/Azores"),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-03T03:44:26.077Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-03T21:28:57.348Z"),
             Websites: []string{
                 "https://www.goodwinsons.com",
             },
@@ -861,7 +861,7 @@ func main() {
 
 ## PatchHrisCompany
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -896,11 +896,11 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CreatedAt: types.MustNewTimeFromString("2021-05-02T22:27:38.970Z"),
-            ID: unifiedgosdk.Pointer("1a037787-e022-401d-a3e7-32542733f2d2"),
+            ID: unifiedgosdk.Pointer("614c60e7-805a-4ebe-9b04-71aabf2ea7b8"),
             LegalName: unifiedgosdk.Pointer("Gottlieb Group LLC"),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Gottlieb Group"),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-08T16:22:56.398Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-09T16:00:24.302Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -934,7 +934,7 @@ func main() {
 
 ## RemoveAtsCompany
 
-Remove a company
+Deletes the AtsCompany identified by `id`.
 
 ### Example Usage
 
@@ -989,7 +989,7 @@ func main() {
 
 ## RemoveCrmCompany
 
-Remove a company
+Deletes the CrmCompany identified by `id`.
 
 ### Example Usage
 
@@ -1044,7 +1044,7 @@ func main() {
 
 ## RemoveHrisCompany
 
-Remove a company
+Deletes the HrisCompany identified by `id`.
 
 ### Example Usage
 
@@ -1099,7 +1099,7 @@ func main() {
 
 ## UpdateAtsCompany
 
-Update a company
+Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1126,10 +1126,10 @@ func main() {
     res, err := s.Company.UpdateAtsCompany(ctx, operations.UpdateAtsCompanyRequest{
         AtsCompany: shared.AtsCompany{
             CreatedAt: types.MustNewTimeFromString("2019-04-22T03:50:02.920Z"),
-            ID: unifiedgosdk.Pointer("b636b5e8-021c-497e-9250-478a87440e00"),
+            ID: unifiedgosdk.Pointer("9919fbbc-af06-4156-8ed3-2d8d682ca7e2"),
             Name: unifiedgosdk.Pointer("Gulgowski, Dibbert and Wilderman"),
             Phone: unifiedgosdk.Pointer("1-882-360-2010"),
-            UpdatedAt: types.MustNewTimeFromString("2020-10-01T04:12:23.719Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-10-01T08:47:21.669Z"),
             WebsiteURL: unifiedgosdk.Pointer("https://www.gulgowskidibbert.com"),
         },
         ConnectionID: "<id>",
@@ -1164,7 +1164,7 @@ func main() {
 
 ## UpdateCrmCompany
 
-Update a company
+Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1219,7 +1219,7 @@ func main() {
                 },
             },
             Employees: unifiedgosdk.Pointer[float64](4177.0),
-            ID: unifiedgosdk.Pointer("cc28f72c-f444-453c-b4f6-2697156e25e2"),
+            ID: unifiedgosdk.Pointer("f6118c33-c025-4e57-8713-96353decbba9"),
             Industry: unifiedgosdk.Pointer("Metrics"),
             IsActive: unifiedgosdk.Pointer(true),
             LinkUrls: []string{
@@ -1233,7 +1233,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("01f0ae9f-23c2-49fe-a397-7f5bda43cc3e"),
+                    ID: unifiedgosdk.Pointer("eb7e0ab1-617c-42aa-9140-805dc92181d9"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -1254,7 +1254,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("Atlantic/Azores"),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-03T03:44:26.077Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-03T21:28:57.348Z"),
             Websites: []string{
                 "https://www.goodwinsons.com",
             },
@@ -1291,7 +1291,7 @@ func main() {
 
 ## UpdateHrisCompany
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1326,11 +1326,11 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CreatedAt: types.MustNewTimeFromString("2021-05-02T22:27:38.970Z"),
-            ID: unifiedgosdk.Pointer("1a037787-e022-401d-a3e7-32542733f2d2"),
+            ID: unifiedgosdk.Pointer("614c60e7-805a-4ebe-9b04-71aabf2ea7b8"),
             LegalName: unifiedgosdk.Pointer("Gottlieb Group LLC"),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Gottlieb Group"),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-08T16:22:56.398Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-09T16:00:24.302Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

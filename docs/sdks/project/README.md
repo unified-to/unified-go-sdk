@@ -19,7 +19,7 @@
 
 ## CreateAccountingProject
 
-Create a project
+Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they are mapped to the provider's API. Returns the created AccountingProject.
 
 ### Example Usage
 
@@ -75,7 +75,7 @@ func main() {
 
 ## CreateTaskProject
 
-Create a project
+Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped to the provider's API. Returns the created TaskProject.
 
 ### Example Usage
 
@@ -105,7 +105,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Valetudo aggredior accommodo curiositas vox."),
             HasChildren: unifiedgosdk.Pointer(false),
             HasTasks: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("aeb39b9d-e5b0-4a0c-bcb3-cda26afa1b4c"),
+            ID: unifiedgosdk.Pointer("586e2b04-721f-4fb4-b1c9-ff0295b8f983"),
             Metadata: []shared.TaskMetadata{
                 shared.TaskMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
@@ -114,7 +114,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("d98f2b9a-ab7e-405e-8df0-fa5004566c47"),
+                    ID: unifiedgosdk.Pointer("ac6d7296-95fc-4c6c-b2b1-b41a06651184"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("decens"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -128,7 +128,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("c06402ac-1b9b-481d-9e29-7d11c4f81614"),
+                    ID: unifiedgosdk.Pointer("9bfa2064-4758-497f-942c-b3cc0ea19dfd"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("benevolentia"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -137,7 +137,7 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("Garden"),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-11T14:30:33.168Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-11T16:39:32.559Z"),
         },
         ConnectionID: "<id>",
     })
@@ -170,7 +170,7 @@ func main() {
 
 ## GetAccountingProject
 
-Retrieve a project
+Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -225,7 +225,7 @@ func main() {
 
 ## GetTaskProject
 
-Retrieve a project
+Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -280,7 +280,7 @@ func main() {
 
 ## ListAccountingProjects
 
-List all projects
+Returns a list of AccountingProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -334,7 +334,7 @@ func main() {
 
 ## ListTaskProjects
 
-List all projects
+Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -388,7 +388,7 @@ func main() {
 
 ## PatchAccountingProject
 
-Update a project
+Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
 ### Example Usage
 
@@ -445,7 +445,7 @@ func main() {
 
 ## PatchTaskProject
 
-Update a project
+Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
 
 ### Example Usage
 
@@ -475,7 +475,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Valetudo aggredior accommodo curiositas vox."),
             HasChildren: unifiedgosdk.Pointer(false),
             HasTasks: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("b4f834dc-8dc6-45c7-a5d5-5b99e2863128"),
+            ID: unifiedgosdk.Pointer("4b217ca0-ecb9-4c4b-ae3d-75b658e307e7"),
             Metadata: []shared.TaskMetadata{
                 shared.TaskMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
@@ -484,7 +484,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("dd0adf29-9721-4b90-9a60-ba85528e7dd8"),
+                    ID: unifiedgosdk.Pointer("b7b73d5c-f1ff-48b2-8a4c-101025b18919"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("decens"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -498,7 +498,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("3076015c-7c01-4e61-b07b-1a523274e786"),
+                    ID: unifiedgosdk.Pointer("279643ea-8251-402f-bc4c-eeb7f28d150a"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("benevolentia"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -507,7 +507,7 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("Garden"),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-11T14:30:33.169Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-11T16:39:32.560Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -541,7 +541,7 @@ func main() {
 
 ## RemoveAccountingProject
 
-Remove a project
+Deletes the AccountingProject identified by `id`.
 
 ### Example Usage
 
@@ -596,7 +596,7 @@ func main() {
 
 ## RemoveTaskProject
 
-Remove a project
+Deletes the TaskProject identified by `id`.
 
 ### Example Usage
 
@@ -651,7 +651,7 @@ func main() {
 
 ## UpdateAccountingProject
 
-Update a project
+Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
 ### Example Usage
 
@@ -708,7 +708,7 @@ func main() {
 
 ## UpdateTaskProject
 
-Update a project
+Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
 
 ### Example Usage
 
@@ -738,7 +738,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Valetudo aggredior accommodo curiositas vox."),
             HasChildren: unifiedgosdk.Pointer(false),
             HasTasks: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("b4f834dc-8dc6-45c7-a5d5-5b99e2863128"),
+            ID: unifiedgosdk.Pointer("4b217ca0-ecb9-4c4b-ae3d-75b658e307e7"),
             Metadata: []shared.TaskMetadata{
                 shared.TaskMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
@@ -747,7 +747,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("dd0adf29-9721-4b90-9a60-ba85528e7dd8"),
+                    ID: unifiedgosdk.Pointer("b7b73d5c-f1ff-48b2-8a4c-101025b18919"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("decens"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -761,7 +761,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("3076015c-7c01-4e61-b07b-1a523274e786"),
+                    ID: unifiedgosdk.Pointer("279643ea-8251-402f-bc4c-eeb7f28d150a"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("benevolentia"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -770,7 +770,7 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("Garden"),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-11T14:30:33.169Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-11T16:39:32.560Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

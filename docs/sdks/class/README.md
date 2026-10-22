@@ -13,7 +13,7 @@
 
 ## CreateLmsClass
 
-Create a class
+Creates a LmsClass. Provide the unified LmsClass fields in the request body; they are mapped to the provider's API. Returns the created LmsClass.
 
 ### Example Usage
 
@@ -41,7 +41,7 @@ func main() {
         LmsClass: shared.LmsClass{
             CreatedAt: types.MustNewTimeFromString("2020-02-20T14:48:51.845Z"),
             Description: unifiedgosdk.Pointer("Anser sperno decerno."),
-            ID: unifiedgosdk.Pointer("02c0fab5-b196-44ff-ac6f-aad22cd1d454"),
+            ID: unifiedgosdk.Pointer("d5601fe2-ef5f-477b-8c81-5a56dfdd5b83"),
             Instructors: []shared.LmsReference{},
             Languages: []string{
                 "in",
@@ -63,7 +63,7 @@ func main() {
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("virtus"),
             Students: []shared.LmsReference{},
-            UpdatedAt: types.MustNewTimeFromString("2025-08-03T21:30:44.537Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-04T16:57:24.398Z"),
         },
         ConnectionID: "<id>",
     })
@@ -96,7 +96,7 @@ func main() {
 
 ## GetLmsClass
 
-Retrieve a class
+Retrieves a single LmsClass by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -151,7 +151,7 @@ func main() {
 
 ## ListLmsClasses
 
-List all classes
+Returns a list of LmsClasses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -205,7 +205,7 @@ func main() {
 
 ## PatchLmsClass
 
-Update a class
+Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 
 ### Example Usage
 
@@ -233,7 +233,7 @@ func main() {
         LmsClass: shared.LmsClass{
             CreatedAt: types.MustNewTimeFromString("2020-02-20T14:48:51.845Z"),
             Description: unifiedgosdk.Pointer("Anser sperno decerno."),
-            ID: unifiedgosdk.Pointer("d27e8714-52ef-484e-904f-dea9aacb2d55"),
+            ID: unifiedgosdk.Pointer("1a61a532-a2d5-4710-a0c1-85adfa63eb39"),
             Instructors: []shared.LmsReference{},
             Languages: []string{
                 "in",
@@ -255,7 +255,7 @@ func main() {
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("virtus"),
             Students: []shared.LmsReference{},
-            UpdatedAt: types.MustNewTimeFromString("2025-08-03T21:30:44.550Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-04T16:57:24.422Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -289,7 +289,7 @@ func main() {
 
 ## RemoveLmsClass
 
-Remove a class
+Deletes the LmsClass identified by `id`.
 
 ### Example Usage
 
@@ -344,7 +344,7 @@ func main() {
 
 ## UpdateLmsClass
 
-Update a class
+Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 
 ### Example Usage
 
@@ -372,7 +372,7 @@ func main() {
         LmsClass: shared.LmsClass{
             CreatedAt: types.MustNewTimeFromString("2020-02-20T14:48:51.845Z"),
             Description: unifiedgosdk.Pointer("Anser sperno decerno."),
-            ID: unifiedgosdk.Pointer("d27e8714-52ef-484e-904f-dea9aacb2d55"),
+            ID: unifiedgosdk.Pointer("1a61a532-a2d5-4710-a0c1-85adfa63eb39"),
             Instructors: []shared.LmsReference{},
             Languages: []string{
                 "in",
@@ -394,7 +394,7 @@ func main() {
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("virtus"),
             Students: []shared.LmsReference{},
-            UpdatedAt: types.MustNewTimeFromString("2025-08-03T21:30:44.550Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-04T16:57:24.422Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

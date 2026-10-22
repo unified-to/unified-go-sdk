@@ -31,6 +31,7 @@ func newCompute(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateComputeDeployment - Create a deployment
+// Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they are mapped to the provider's API. Returns the created ComputeDeployment.
 func (s *Compute) CreateComputeDeployment(ctx context.Context, request operations.CreateComputeDeploymentRequest, opts ...operations.Option) (*operations.CreateComputeDeploymentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Compute) CreateComputeDeployment(ctx context.Context, request operation
 }
 
 // CreateComputeDomain - Create a domain
+// Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are mapped to the provider's API. Returns the created ComputeDomain.
 func (s *Compute) CreateComputeDomain(ctx context.Context, request operations.CreateComputeDomainRequest, opts ...operations.Option) (*operations.CreateComputeDomainResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Compute) CreateComputeDomain(ctx context.Context, request operations.Cr
 }
 
 // CreateComputeEnvvar - Create an envvar
+// Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are mapped to the provider's API. Returns the created ComputeEnvvar.
 func (s *Compute) CreateComputeEnvvar(ctx context.Context, request operations.CreateComputeEnvvarRequest, opts ...operations.Option) (*operations.CreateComputeEnvvarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Compute) CreateComputeEnvvar(ctx context.Context, request operations.Cr
 }
 
 // CreateComputeInstance - Create an instance
+// Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are mapped to the provider's API. Returns the created ComputeInstance.
 func (s *Compute) CreateComputeInstance(ctx context.Context, request operations.CreateComputeInstanceRequest, opts ...operations.Option) (*operations.CreateComputeInstanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -887,6 +891,7 @@ func (s *Compute) CreateComputeInstance(ctx context.Context, request operations.
 }
 
 // CreateComputeKey - Create a key
+// Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to the provider's API. Returns the created ComputeKey.
 func (s *Compute) CreateComputeKey(ctx context.Context, request operations.CreateComputeKeyRequest, opts ...operations.Option) (*operations.CreateComputeKeyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1101,6 +1106,7 @@ func (s *Compute) CreateComputeKey(ctx context.Context, request operations.Creat
 }
 
 // CreateComputeService - Create a service
+// Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are mapped to the provider's API. Returns the created ComputeService.
 func (s *Compute) CreateComputeService(ctx context.Context, request operations.CreateComputeServiceRequest, opts ...operations.Option) (*operations.CreateComputeServiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1315,6 +1321,7 @@ func (s *Compute) CreateComputeService(ctx context.Context, request operations.C
 }
 
 // CreateComputeSnapshot - Create a snapshot
+// Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are mapped to the provider's API. Returns the created ComputeSnapshot.
 func (s *Compute) CreateComputeSnapshot(ctx context.Context, request operations.CreateComputeSnapshotRequest, opts ...operations.Option) (*operations.CreateComputeSnapshotResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1529,6 +1536,7 @@ func (s *Compute) CreateComputeSnapshot(ctx context.Context, request operations.
 }
 
 // CreateComputeTemplate - Create a template
+// Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are mapped to the provider's API. Returns the created ComputeTemplate.
 func (s *Compute) CreateComputeTemplate(ctx context.Context, request operations.CreateComputeTemplateRequest, opts ...operations.Option) (*operations.CreateComputeTemplateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1743,6 +1751,7 @@ func (s *Compute) CreateComputeTemplate(ctx context.Context, request operations.
 }
 
 // CreateComputeVolume - Create a volume
+// Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are mapped to the provider's API. Returns the created ComputeVolume.
 func (s *Compute) CreateComputeVolume(ctx context.Context, request operations.CreateComputeVolumeRequest, opts ...operations.Option) (*operations.CreateComputeVolumeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1957,6 +1966,7 @@ func (s *Compute) CreateComputeVolume(ctx context.Context, request operations.Cr
 }
 
 // GetComputeDeployment - Retrieve a deployment
+// Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Compute) GetComputeDeployment(ctx context.Context, request operations.GetComputeDeploymentRequest, opts ...operations.Option) (*operations.GetComputeDeploymentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2164,6 +2174,7 @@ func (s *Compute) GetComputeDeployment(ctx context.Context, request operations.G
 }
 
 // GetComputeDomain - Retrieve a domain
+// Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Compute) GetComputeDomain(ctx context.Context, request operations.GetComputeDomainRequest, opts ...operations.Option) (*operations.GetComputeDomainResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2371,6 +2382,7 @@ func (s *Compute) GetComputeDomain(ctx context.Context, request operations.GetCo
 }
 
 // GetComputeEnvvar - Retrieve an envvar
+// Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Compute) GetComputeEnvvar(ctx context.Context, request operations.GetComputeEnvvarRequest, opts ...operations.Option) (*operations.GetComputeEnvvarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2578,6 +2590,7 @@ func (s *Compute) GetComputeEnvvar(ctx context.Context, request operations.GetCo
 }
 
 // GetComputeGputype - Retrieve a gputype
+// Retrieves a single ComputeGputype by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Compute) GetComputeGputype(ctx context.Context, request operations.GetComputeGputypeRequest, opts ...operations.Option) (*operations.GetComputeGputypeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2785,6 +2798,7 @@ func (s *Compute) GetComputeGputype(ctx context.Context, request operations.GetC
 }
 
 // GetComputeInstance - Retrieve an instance
+// Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Compute) GetComputeInstance(ctx context.Context, request operations.GetComputeInstanceRequest, opts ...operations.Option) (*operations.GetComputeInstanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2992,6 +3006,7 @@ func (s *Compute) GetComputeInstance(ctx context.Context, request operations.Get
 }
 
 // GetComputeKey - Retrieve a key
+// Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Compute) GetComputeKey(ctx context.Context, request operations.GetComputeKeyRequest, opts ...operations.Option) (*operations.GetComputeKeyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3199,6 +3214,7 @@ func (s *Compute) GetComputeKey(ctx context.Context, request operations.GetCompu
 }
 
 // GetComputeRegion - Retrieve a region
+// Retrieves a single ComputeRegion by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Compute) GetComputeRegion(ctx context.Context, request operations.GetComputeRegionRequest, opts ...operations.Option) (*operations.GetComputeRegionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3406,6 +3422,7 @@ func (s *Compute) GetComputeRegion(ctx context.Context, request operations.GetCo
 }
 
 // GetComputeService - Retrieve a service
+// Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Compute) GetComputeService(ctx context.Context, request operations.GetComputeServiceRequest, opts ...operations.Option) (*operations.GetComputeServiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3613,6 +3630,7 @@ func (s *Compute) GetComputeService(ctx context.Context, request operations.GetC
 }
 
 // GetComputeSnapshot - Retrieve a snapshot
+// Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Compute) GetComputeSnapshot(ctx context.Context, request operations.GetComputeSnapshotRequest, opts ...operations.Option) (*operations.GetComputeSnapshotResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3820,6 +3838,7 @@ func (s *Compute) GetComputeSnapshot(ctx context.Context, request operations.Get
 }
 
 // GetComputeTemplate - Retrieve a template
+// Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Compute) GetComputeTemplate(ctx context.Context, request operations.GetComputeTemplateRequest, opts ...operations.Option) (*operations.GetComputeTemplateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4027,6 +4046,7 @@ func (s *Compute) GetComputeTemplate(ctx context.Context, request operations.Get
 }
 
 // GetComputeVolume - Retrieve a volume
+// Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Compute) GetComputeVolume(ctx context.Context, request operations.GetComputeVolumeRequest, opts ...operations.Option) (*operations.GetComputeVolumeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4234,6 +4254,7 @@ func (s *Compute) GetComputeVolume(ctx context.Context, request operations.GetCo
 }
 
 // ListComputeDeployments - List all deployments
+// Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Compute) ListComputeDeployments(ctx context.Context, request operations.ListComputeDeploymentsRequest, opts ...operations.Option) (*operations.ListComputeDeploymentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4441,6 +4462,7 @@ func (s *Compute) ListComputeDeployments(ctx context.Context, request operations
 }
 
 // ListComputeDomains - List all domains
+// Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Compute) ListComputeDomains(ctx context.Context, request operations.ListComputeDomainsRequest, opts ...operations.Option) (*operations.ListComputeDomainsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4648,6 +4670,7 @@ func (s *Compute) ListComputeDomains(ctx context.Context, request operations.Lis
 }
 
 // ListComputeEnvvars - List all envvars
+// Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Compute) ListComputeEnvvars(ctx context.Context, request operations.ListComputeEnvvarsRequest, opts ...operations.Option) (*operations.ListComputeEnvvarsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4855,6 +4878,7 @@ func (s *Compute) ListComputeEnvvars(ctx context.Context, request operations.Lis
 }
 
 // ListComputeGputypes - List all gputypes
+// Returns a list of ComputeGputypes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Compute) ListComputeGputypes(ctx context.Context, request operations.ListComputeGputypesRequest, opts ...operations.Option) (*operations.ListComputeGputypesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5062,6 +5086,7 @@ func (s *Compute) ListComputeGputypes(ctx context.Context, request operations.Li
 }
 
 // ListComputeInstances - List all instances
+// Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Compute) ListComputeInstances(ctx context.Context, request operations.ListComputeInstancesRequest, opts ...operations.Option) (*operations.ListComputeInstancesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5269,6 +5294,7 @@ func (s *Compute) ListComputeInstances(ctx context.Context, request operations.L
 }
 
 // ListComputeKeys - List all keys
+// Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Compute) ListComputeKeys(ctx context.Context, request operations.ListComputeKeysRequest, opts ...operations.Option) (*operations.ListComputeKeysResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5476,6 +5502,7 @@ func (s *Compute) ListComputeKeys(ctx context.Context, request operations.ListCo
 }
 
 // ListComputeRegions - List all regions
+// Returns a list of ComputeRegions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Compute) ListComputeRegions(ctx context.Context, request operations.ListComputeRegionsRequest, opts ...operations.Option) (*operations.ListComputeRegionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5683,6 +5710,7 @@ func (s *Compute) ListComputeRegions(ctx context.Context, request operations.Lis
 }
 
 // ListComputeServices - List all services
+// Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Compute) ListComputeServices(ctx context.Context, request operations.ListComputeServicesRequest, opts ...operations.Option) (*operations.ListComputeServicesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5890,6 +5918,7 @@ func (s *Compute) ListComputeServices(ctx context.Context, request operations.Li
 }
 
 // ListComputeSnapshots - List all snapshots
+// Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Compute) ListComputeSnapshots(ctx context.Context, request operations.ListComputeSnapshotsRequest, opts ...operations.Option) (*operations.ListComputeSnapshotsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6097,6 +6126,7 @@ func (s *Compute) ListComputeSnapshots(ctx context.Context, request operations.L
 }
 
 // ListComputeTemplates - List all templates
+// Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Compute) ListComputeTemplates(ctx context.Context, request operations.ListComputeTemplatesRequest, opts ...operations.Option) (*operations.ListComputeTemplatesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6304,6 +6334,7 @@ func (s *Compute) ListComputeTemplates(ctx context.Context, request operations.L
 }
 
 // ListComputeUsages - List all usages
+// Returns a list of ComputeUsages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Compute) ListComputeUsages(ctx context.Context, request operations.ListComputeUsagesRequest, opts ...operations.Option) (*operations.ListComputeUsagesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6511,6 +6542,7 @@ func (s *Compute) ListComputeUsages(ctx context.Context, request operations.List
 }
 
 // ListComputeVolumes - List all volumes
+// Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Compute) ListComputeVolumes(ctx context.Context, request operations.ListComputeVolumesRequest, opts ...operations.Option) (*operations.ListComputeVolumesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6718,6 +6750,7 @@ func (s *Compute) ListComputeVolumes(ctx context.Context, request operations.Lis
 }
 
 // PatchComputeDeployment - Update a deployment
+// Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 func (s *Compute) PatchComputeDeployment(ctx context.Context, request operations.PatchComputeDeploymentRequest, opts ...operations.Option) (*operations.PatchComputeDeploymentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6932,6 +6965,7 @@ func (s *Compute) PatchComputeDeployment(ctx context.Context, request operations
 }
 
 // PatchComputeDomain - Update a domain
+// Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 func (s *Compute) PatchComputeDomain(ctx context.Context, request operations.PatchComputeDomainRequest, opts ...operations.Option) (*operations.PatchComputeDomainResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7146,6 +7180,7 @@ func (s *Compute) PatchComputeDomain(ctx context.Context, request operations.Pat
 }
 
 // PatchComputeEnvvar - Update an envvar
+// Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 func (s *Compute) PatchComputeEnvvar(ctx context.Context, request operations.PatchComputeEnvvarRequest, opts ...operations.Option) (*operations.PatchComputeEnvvarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7360,6 +7395,7 @@ func (s *Compute) PatchComputeEnvvar(ctx context.Context, request operations.Pat
 }
 
 // PatchComputeInstance - Update an instance
+// Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 func (s *Compute) PatchComputeInstance(ctx context.Context, request operations.PatchComputeInstanceRequest, opts ...operations.Option) (*operations.PatchComputeInstanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7574,6 +7610,7 @@ func (s *Compute) PatchComputeInstance(ctx context.Context, request operations.P
 }
 
 // PatchComputeKey - Update a key
+// Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 func (s *Compute) PatchComputeKey(ctx context.Context, request operations.PatchComputeKeyRequest, opts ...operations.Option) (*operations.PatchComputeKeyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7788,6 +7825,7 @@ func (s *Compute) PatchComputeKey(ctx context.Context, request operations.PatchC
 }
 
 // PatchComputeService - Update a service
+// Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 func (s *Compute) PatchComputeService(ctx context.Context, request operations.PatchComputeServiceRequest, opts ...operations.Option) (*operations.PatchComputeServiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8002,6 +8040,7 @@ func (s *Compute) PatchComputeService(ctx context.Context, request operations.Pa
 }
 
 // PatchComputeTemplate - Update a template
+// Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 func (s *Compute) PatchComputeTemplate(ctx context.Context, request operations.PatchComputeTemplateRequest, opts ...operations.Option) (*operations.PatchComputeTemplateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8216,6 +8255,7 @@ func (s *Compute) PatchComputeTemplate(ctx context.Context, request operations.P
 }
 
 // PatchComputeVolume - Update a volume
+// Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 func (s *Compute) PatchComputeVolume(ctx context.Context, request operations.PatchComputeVolumeRequest, opts ...operations.Option) (*operations.PatchComputeVolumeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8430,6 +8470,7 @@ func (s *Compute) PatchComputeVolume(ctx context.Context, request operations.Pat
 }
 
 // RemoveComputeDeployment - Remove a deployment
+// Deletes the ComputeDeployment identified by `id`.
 func (s *Compute) RemoveComputeDeployment(ctx context.Context, request operations.RemoveComputeDeploymentRequest, opts ...operations.Option) (*operations.RemoveComputeDeploymentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8612,6 +8653,7 @@ func (s *Compute) RemoveComputeDeployment(ctx context.Context, request operation
 }
 
 // RemoveComputeDomain - Remove a domain
+// Deletes the ComputeDomain identified by `id`.
 func (s *Compute) RemoveComputeDomain(ctx context.Context, request operations.RemoveComputeDomainRequest, opts ...operations.Option) (*operations.RemoveComputeDomainResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8794,6 +8836,7 @@ func (s *Compute) RemoveComputeDomain(ctx context.Context, request operations.Re
 }
 
 // RemoveComputeEnvvar - Remove an envvar
+// Deletes the ComputeEnvvar identified by `id`.
 func (s *Compute) RemoveComputeEnvvar(ctx context.Context, request operations.RemoveComputeEnvvarRequest, opts ...operations.Option) (*operations.RemoveComputeEnvvarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8976,6 +9019,7 @@ func (s *Compute) RemoveComputeEnvvar(ctx context.Context, request operations.Re
 }
 
 // RemoveComputeInstance - Remove an instance
+// Deletes the ComputeInstance identified by `id`.
 func (s *Compute) RemoveComputeInstance(ctx context.Context, request operations.RemoveComputeInstanceRequest, opts ...operations.Option) (*operations.RemoveComputeInstanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9158,6 +9202,7 @@ func (s *Compute) RemoveComputeInstance(ctx context.Context, request operations.
 }
 
 // RemoveComputeKey - Remove a key
+// Deletes the ComputeKey identified by `id`.
 func (s *Compute) RemoveComputeKey(ctx context.Context, request operations.RemoveComputeKeyRequest, opts ...operations.Option) (*operations.RemoveComputeKeyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9340,6 +9385,7 @@ func (s *Compute) RemoveComputeKey(ctx context.Context, request operations.Remov
 }
 
 // RemoveComputeService - Remove a service
+// Deletes the ComputeService identified by `id`.
 func (s *Compute) RemoveComputeService(ctx context.Context, request operations.RemoveComputeServiceRequest, opts ...operations.Option) (*operations.RemoveComputeServiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9522,6 +9568,7 @@ func (s *Compute) RemoveComputeService(ctx context.Context, request operations.R
 }
 
 // RemoveComputeSnapshot - Remove a snapshot
+// Deletes the ComputeSnapshot identified by `id`.
 func (s *Compute) RemoveComputeSnapshot(ctx context.Context, request operations.RemoveComputeSnapshotRequest, opts ...operations.Option) (*operations.RemoveComputeSnapshotResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9704,6 +9751,7 @@ func (s *Compute) RemoveComputeSnapshot(ctx context.Context, request operations.
 }
 
 // RemoveComputeTemplate - Remove a template
+// Deletes the ComputeTemplate identified by `id`.
 func (s *Compute) RemoveComputeTemplate(ctx context.Context, request operations.RemoveComputeTemplateRequest, opts ...operations.Option) (*operations.RemoveComputeTemplateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9886,6 +9934,7 @@ func (s *Compute) RemoveComputeTemplate(ctx context.Context, request operations.
 }
 
 // RemoveComputeVolume - Remove a volume
+// Deletes the ComputeVolume identified by `id`.
 func (s *Compute) RemoveComputeVolume(ctx context.Context, request operations.RemoveComputeVolumeRequest, opts ...operations.Option) (*operations.RemoveComputeVolumeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -10068,6 +10117,7 @@ func (s *Compute) RemoveComputeVolume(ctx context.Context, request operations.Re
 }
 
 // UpdateComputeDeployment - Update a deployment
+// Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 func (s *Compute) UpdateComputeDeployment(ctx context.Context, request operations.UpdateComputeDeploymentRequest, opts ...operations.Option) (*operations.UpdateComputeDeploymentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -10282,6 +10332,7 @@ func (s *Compute) UpdateComputeDeployment(ctx context.Context, request operation
 }
 
 // UpdateComputeDomain - Update a domain
+// Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 func (s *Compute) UpdateComputeDomain(ctx context.Context, request operations.UpdateComputeDomainRequest, opts ...operations.Option) (*operations.UpdateComputeDomainResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -10496,6 +10547,7 @@ func (s *Compute) UpdateComputeDomain(ctx context.Context, request operations.Up
 }
 
 // UpdateComputeEnvvar - Update an envvar
+// Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 func (s *Compute) UpdateComputeEnvvar(ctx context.Context, request operations.UpdateComputeEnvvarRequest, opts ...operations.Option) (*operations.UpdateComputeEnvvarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -10710,6 +10762,7 @@ func (s *Compute) UpdateComputeEnvvar(ctx context.Context, request operations.Up
 }
 
 // UpdateComputeInstance - Update an instance
+// Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 func (s *Compute) UpdateComputeInstance(ctx context.Context, request operations.UpdateComputeInstanceRequest, opts ...operations.Option) (*operations.UpdateComputeInstanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -10924,6 +10977,7 @@ func (s *Compute) UpdateComputeInstance(ctx context.Context, request operations.
 }
 
 // UpdateComputeKey - Update a key
+// Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 func (s *Compute) UpdateComputeKey(ctx context.Context, request operations.UpdateComputeKeyRequest, opts ...operations.Option) (*operations.UpdateComputeKeyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -11138,6 +11192,7 @@ func (s *Compute) UpdateComputeKey(ctx context.Context, request operations.Updat
 }
 
 // UpdateComputeService - Update a service
+// Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 func (s *Compute) UpdateComputeService(ctx context.Context, request operations.UpdateComputeServiceRequest, opts ...operations.Option) (*operations.UpdateComputeServiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -11352,6 +11407,7 @@ func (s *Compute) UpdateComputeService(ctx context.Context, request operations.U
 }
 
 // UpdateComputeTemplate - Update a template
+// Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 func (s *Compute) UpdateComputeTemplate(ctx context.Context, request operations.UpdateComputeTemplateRequest, opts ...operations.Option) (*operations.UpdateComputeTemplateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -11566,6 +11622,7 @@ func (s *Compute) UpdateComputeTemplate(ctx context.Context, request operations.
 }
 
 // UpdateComputeVolume - Update a volume
+// Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 func (s *Compute) UpdateComputeVolume(ctx context.Context, request operations.UpdateComputeVolumeRequest, opts ...operations.Option) (*operations.UpdateComputeVolumeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

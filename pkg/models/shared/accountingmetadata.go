@@ -272,6 +272,7 @@ func (u ExtraData) MarshalJSON() ([]byte, error) {
 	return nil, errors.New("could not marshal union type ExtraData: all fields are null")
 }
 
+// Format - The data type of the custom field, which determines how `value` is formatted.
 type Format string
 
 const (
@@ -446,6 +447,7 @@ const (
 	ValueTypeArrayOfAccountingMetadata5 ValueType = "arrayOfAccountingMetadata5"
 )
 
+// Value - The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false; MULTIPLE_SELECT as an array of option values; otherwise a string.
 type Value struct {
 	MapOfAny                   map[string]any        `queryParam:"inline" union:"member"`
 	Str                        *string               `queryParam:"inline" union:"member"`
@@ -574,11 +576,15 @@ func (u Value) MarshalJSON() ([]byte, error) {
 
 type AccountingMetadata struct {
 	ExtraData *ExtraData `json:"extra_data,omitempty"`
-	Format    *Format    `json:"format,omitempty"`
-	ID        *string    `json:"id,omitempty"`
-	Namespace *string    `json:"namespace,omitempty"`
-	Slug      *string    `json:"slug,omitempty"`
-	Value     *Value     `json:"value,omitempty"`
+	// The data type of the custom field, which determines how `value` is formatted.
+	Format *Format `json:"format,omitempty"`
+	// The ID of the custom field definition (from the metadata/metadata endpoint).
+	ID        *string `json:"id,omitempty"`
+	Namespace *string `json:"namespace,omitempty"`
+	// The integration's API name (key) of an existing custom field. List valid slugs for this object with the metadata/metadata endpoint; unknown slugs are rejected by the integration.
+	Slug *string `json:"slug,omitempty"`
+	// The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false; MULTIPLE_SELECT as an array of option values; otherwise a string.
+	Value *Value `json:"value,omitempty"`
 }
 
 func (a *AccountingMetadata) GetExtraData() *ExtraData {

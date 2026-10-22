@@ -21,7 +21,7 @@
 
 ## CreateSigningDocument
 
-Create a document
+Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are mapped to the provider's API. Returns the created SigningDocument.
 
 ### Example Usage
 
@@ -50,12 +50,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-05-02T09:35:23.679Z"),
             Description: unifiedgosdk.Pointer("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis."),
             ExpiresAt: types.MustNewTimeFromString("2021-06-04T01:21:34.949Z"),
-            ID: unifiedgosdk.Pointer("3d0e68e0-30df-45a8-a377-a3031f2cac8f"),
+            ID: unifiedgosdk.Pointer("aa295198-6095-4850-b56a-e9c7ab1f7094"),
             Metadata: []shared.SigningMetadata{},
             Name: unifiedgosdk.Pointer("Denesik Group NDA"),
-            SentAt: types.MustNewTimeFromString("2022-06-29T12:05:58.496Z"),
+            SentAt: types.MustNewTimeFromString("2022-06-29T17:08:04.191Z"),
             Status: shared.SigningDocumentStatusDraft.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-02T22:28:48.273Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-03T17:20:09.450Z"),
         },
         ConnectionID: "<id>",
     })
@@ -88,7 +88,7 @@ func main() {
 
 ## CreateSigningSignatory
 
-Create a signatory
+Creates a SigningSignatory. Provide the unified SigningSignatory fields in the request body; they are mapped to the provider's API. Returns the created SigningSignatory.
 
 ### Example Usage
 
@@ -116,12 +116,12 @@ func main() {
         SigningSignatory: shared.SigningSignatory{
             CreatedAt: types.MustNewTimeFromString("2022-04-16T19:25:01.966Z"),
             Email: unifiedgosdk.Pointer("anais.lakin@icloud.com"),
-            ID: unifiedgosdk.Pointer("a8d15dcb-4bb9-4c04-a1bf-19d786617b09"),
+            ID: unifiedgosdk.Pointer("4d4cb049-4282-4114-a32b-b585df2822e4"),
             Metadata: []shared.SigningMetadata{},
             Name: unifiedgosdk.Pointer("Anais Lakin"),
             Role: shared.SigningSignatoryRoleSigner.ToPointer(),
             Status: shared.SigningSignatoryStatusError.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-05-17T19:57:49.083Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-05-18T06:57:14.587Z"),
         },
         ConnectionID: "<id>",
     })
@@ -154,7 +154,7 @@ func main() {
 
 ## GetSigningDocument
 
-Retrieve a document
+Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -209,7 +209,7 @@ func main() {
 
 ## GetSigningSignatory
 
-Retrieve a signatory
+Retrieves a single SigningSignatory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -264,7 +264,7 @@ func main() {
 
 ## GetSigningTemplate
 
-Retrieve a template
+Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -319,7 +319,7 @@ func main() {
 
 ## ListSigningDocuments
 
-List all documents
+Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -373,7 +373,7 @@ func main() {
 
 ## ListSigningSignatories
 
-List all signatories
+Returns a list of SigningSignatories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -427,7 +427,7 @@ func main() {
 
 ## ListSigningTemplates
 
-List all templates
+Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -481,7 +481,7 @@ func main() {
 
 ## PatchSigningDocument
 
-Update a document
+Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -510,12 +510,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-05-02T09:35:23.679Z"),
             Description: unifiedgosdk.Pointer("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis."),
             ExpiresAt: types.MustNewTimeFromString("2021-06-04T01:21:34.949Z"),
-            ID: unifiedgosdk.Pointer("86e22960-9424-44eb-acf3-82ab31596d76"),
+            ID: unifiedgosdk.Pointer("07d3ae8f-b654-491c-a076-475c4af2897e"),
             Metadata: []shared.SigningMetadata{},
             Name: unifiedgosdk.Pointer("Denesik Group NDA"),
-            SentAt: types.MustNewTimeFromString("2022-06-29T12:05:58.499Z"),
+            SentAt: types.MustNewTimeFromString("2022-06-29T17:08:04.197Z"),
             Status: shared.SigningDocumentStatusDraft.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-02T22:28:48.283Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-03T17:20:09.472Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -549,7 +549,7 @@ func main() {
 
 ## PatchSigningSignatory
 
-Update a signatory
+Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
 
 ### Example Usage
 
@@ -577,12 +577,12 @@ func main() {
         SigningSignatory: shared.SigningSignatory{
             CreatedAt: types.MustNewTimeFromString("2022-04-16T19:25:01.966Z"),
             Email: unifiedgosdk.Pointer("anais.lakin@icloud.com"),
-            ID: unifiedgosdk.Pointer("b0c1cf50-f19c-478f-8ee0-6beabeda5c3d"),
+            ID: unifiedgosdk.Pointer("ac443cc0-b46c-48ba-9e3c-83ac067492cf"),
             Metadata: []shared.SigningMetadata{},
             Name: unifiedgosdk.Pointer("Anais Lakin"),
             Role: shared.SigningSignatoryRoleSigner.ToPointer(),
             Status: shared.SigningSignatoryStatusError.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-05-17T19:57:49.091Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-05-18T06:57:14.594Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -616,7 +616,7 @@ func main() {
 
 ## RemoveSigningDocument
 
-Remove a document
+Deletes the SigningDocument identified by `id`.
 
 ### Example Usage
 
@@ -671,7 +671,7 @@ func main() {
 
 ## RemoveSigningSignatory
 
-Remove a signatory
+Deletes the SigningSignatory identified by `id`.
 
 ### Example Usage
 
@@ -726,7 +726,7 @@ func main() {
 
 ## UpdateSigningDocument
 
-Update a document
+Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -755,12 +755,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-05-02T09:35:23.679Z"),
             Description: unifiedgosdk.Pointer("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis."),
             ExpiresAt: types.MustNewTimeFromString("2021-06-04T01:21:34.949Z"),
-            ID: unifiedgosdk.Pointer("86e22960-9424-44eb-acf3-82ab31596d76"),
+            ID: unifiedgosdk.Pointer("07d3ae8f-b654-491c-a076-475c4af2897e"),
             Metadata: []shared.SigningMetadata{},
             Name: unifiedgosdk.Pointer("Denesik Group NDA"),
-            SentAt: types.MustNewTimeFromString("2022-06-29T12:05:58.499Z"),
+            SentAt: types.MustNewTimeFromString("2022-06-29T17:08:04.197Z"),
             Status: shared.SigningDocumentStatusDraft.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-02T22:28:48.283Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-03T17:20:09.472Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -794,7 +794,7 @@ func main() {
 
 ## UpdateSigningSignatory
 
-Update a signatory
+Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
 
 ### Example Usage
 
@@ -822,12 +822,12 @@ func main() {
         SigningSignatory: shared.SigningSignatory{
             CreatedAt: types.MustNewTimeFromString("2022-04-16T19:25:01.966Z"),
             Email: unifiedgosdk.Pointer("anais.lakin@icloud.com"),
-            ID: unifiedgosdk.Pointer("b0c1cf50-f19c-478f-8ee0-6beabeda5c3d"),
+            ID: unifiedgosdk.Pointer("ac443cc0-b46c-48ba-9e3c-83ac067492cf"),
             Metadata: []shared.SigningMetadata{},
             Name: unifiedgosdk.Pointer("Anais Lakin"),
             Role: shared.SigningSignatoryRoleSigner.ToPointer(),
             Status: shared.SigningSignatoryStatusError.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-05-17T19:57:49.091Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-05-18T06:57:14.594Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

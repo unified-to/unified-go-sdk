@@ -31,6 +31,7 @@ func newItem(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 }
 
 // CreateCommerceItem - Create an item
+// Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped to the provider's API. Returns the created CommerceItem.
 func (s *Item) CreateCommerceItem(ctx context.Context, request operations.CreateCommerceItemRequest, opts ...operations.Option) (*operations.CreateCommerceItemResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Item) CreateCommerceItem(ctx context.Context, request operations.Create
 }
 
 // GetCommerceItem - Retrieve an item
+// Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Item) GetCommerceItem(ctx context.Context, request operations.GetCommerceItemRequest, opts ...operations.Option) (*operations.GetCommerceItemResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Item) GetCommerceItem(ctx context.Context, request operations.GetCommer
 }
 
 // ListCommerceItems - List all items
+// Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Item) ListCommerceItems(ctx context.Context, request operations.ListCommerceItemsRequest, opts ...operations.Option) (*operations.ListCommerceItemsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Item) ListCommerceItems(ctx context.Context, request operations.ListCom
 }
 
 // PatchCommerceItem - Update an item
+// Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
 func (s *Item) PatchCommerceItem(ctx context.Context, request operations.PatchCommerceItemRequest, opts ...operations.Option) (*operations.PatchCommerceItemResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Item) PatchCommerceItem(ctx context.Context, request operations.PatchCo
 }
 
 // RemoveCommerceItem - Remove an item
+// Deletes the CommerceItem identified by `id`.
 func (s *Item) RemoveCommerceItem(ctx context.Context, request operations.RemoveCommerceItemRequest, opts ...operations.Option) (*operations.RemoveCommerceItemResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Item) RemoveCommerceItem(ctx context.Context, request operations.Remove
 }
 
 // UpdateCommerceItem - Update an item
+// Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
 func (s *Item) UpdateCommerceItem(ctx context.Context, request operations.UpdateCommerceItemRequest, opts ...operations.Option) (*operations.UpdateCommerceItemResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

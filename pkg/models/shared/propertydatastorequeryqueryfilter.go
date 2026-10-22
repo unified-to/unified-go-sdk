@@ -26,13 +26,13 @@ func (e *PropertyDatastoreQueryQueryFilterType) IsExact() bool {
 }
 
 type PropertyDatastoreQueryQueryFilter struct {
-	And     []PropertyDatastoreQueryQueryFilter   `json:"and,omitempty"`
+	And     []DatastoreFilterGroup                `json:"and,omitempty"`
 	Filters []DatastoreFilter                     `json:"filters,omitempty"`
-	Or      []PropertyDatastoreQueryQueryFilter   `json:"or,omitempty"`
+	Or      []DatastoreFilterGroup                `json:"or,omitempty"`
 	Type    PropertyDatastoreQueryQueryFilterType `json:"type"`
 }
 
-func (p *PropertyDatastoreQueryQueryFilter) GetAnd() []PropertyDatastoreQueryQueryFilter {
+func (p *PropertyDatastoreQueryQueryFilter) GetAnd() []DatastoreFilterGroup {
 	if p == nil {
 		return nil
 	}
@@ -46,7 +46,7 @@ func (p *PropertyDatastoreQueryQueryFilter) GetFilters() []DatastoreFilter {
 	return p.Filters
 }
 
-func (p *PropertyDatastoreQueryQueryFilter) GetOr() []PropertyDatastoreQueryQueryFilter {
+func (p *PropertyDatastoreQueryQueryFilter) GetOr() []DatastoreFilterGroup {
 	if p == nil {
 		return nil
 	}

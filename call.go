@@ -31,6 +31,7 @@ func newCall(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 }
 
 // GetUcCall - Retrieve a call
+// Retrieves a single UcCall by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Call) GetUcCall(ctx context.Context, request operations.GetUcCallRequest, opts ...operations.Option) (*operations.GetUcCallResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -238,6 +239,7 @@ func (s *Call) GetUcCall(ctx context.Context, request operations.GetUcCallReques
 }
 
 // ListUcCalls - List all calls
+// Returns a list of UcCalls. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Call) ListUcCalls(ctx context.Context, request operations.ListUcCallsRequest, opts ...operations.Option) (*operations.ListUcCallsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -31,6 +31,7 @@ func newDatabase(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateDatastoreDatabase - Create a database
+// Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they are mapped to the provider's API. Returns the created DatastoreDatabase.
 func (s *Database) CreateDatastoreDatabase(ctx context.Context, request operations.CreateDatastoreDatabaseRequest, opts ...operations.Option) (*operations.CreateDatastoreDatabaseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Database) CreateDatastoreDatabase(ctx context.Context, request operatio
 }
 
 // GetDatastoreDatabase - Retrieve a database
+// Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Database) GetDatastoreDatabase(ctx context.Context, request operations.GetDatastoreDatabaseRequest, opts ...operations.Option) (*operations.GetDatastoreDatabaseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Database) GetDatastoreDatabase(ctx context.Context, request operations.
 }
 
 // ListDatastoreDatabases - List all databases
+// Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Database) ListDatastoreDatabases(ctx context.Context, request operations.ListDatastoreDatabasesRequest, opts ...operations.Option) (*operations.ListDatastoreDatabasesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Database) ListDatastoreDatabases(ctx context.Context, request operation
 }
 
 // PatchDatastoreDatabase - Update a database
+// Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
 func (s *Database) PatchDatastoreDatabase(ctx context.Context, request operations.PatchDatastoreDatabaseRequest, opts ...operations.Option) (*operations.PatchDatastoreDatabaseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Database) PatchDatastoreDatabase(ctx context.Context, request operation
 }
 
 // RemoveDatastoreDatabase - Remove a database
+// Deletes the DatastoreDatabase identified by `id`.
 func (s *Database) RemoveDatastoreDatabase(ctx context.Context, request operations.RemoveDatastoreDatabaseRequest, opts ...operations.Option) (*operations.RemoveDatastoreDatabaseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Database) RemoveDatastoreDatabase(ctx context.Context, request operatio
 }
 
 // UpdateDatastoreDatabase - Update a database
+// Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
 func (s *Database) UpdateDatastoreDatabase(ctx context.Context, request operations.UpdateDatastoreDatabaseRequest, opts ...operations.Option) (*operations.UpdateDatastoreDatabaseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -31,6 +31,7 @@ func newPayment(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreatePaymentLink - Create a link
+// Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
 func (s *Payment) CreatePaymentLink(ctx context.Context, request operations.CreatePaymentLinkRequest, opts ...operations.Option) (*operations.CreatePaymentLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Payment) CreatePaymentLink(ctx context.Context, request operations.Crea
 }
 
 // CreatePaymentPayment - Create a payment
+// Creates a PaymentPayment. Provide the unified PaymentPayment fields in the request body; they are mapped to the provider's API. Returns the created PaymentPayment.
 func (s *Payment) CreatePaymentPayment(ctx context.Context, request operations.CreatePaymentPaymentRequest, opts ...operations.Option) (*operations.CreatePaymentPaymentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Payment) CreatePaymentPayment(ctx context.Context, request operations.C
 }
 
 // CreatePaymentSubscription - Create a subscription
+// Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body; they are mapped to the provider's API. Returns the created PaymentSubscription.
 func (s *Payment) CreatePaymentSubscription(ctx context.Context, request operations.CreatePaymentSubscriptionRequest, opts ...operations.Option) (*operations.CreatePaymentSubscriptionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Payment) CreatePaymentSubscription(ctx context.Context, request operati
 }
 
 // GetPaymentLink - Retrieve a link
+// Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Payment) GetPaymentLink(ctx context.Context, request operations.GetPaymentLinkRequest, opts ...operations.Option) (*operations.GetPaymentLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -880,6 +884,7 @@ func (s *Payment) GetPaymentLink(ctx context.Context, request operations.GetPaym
 }
 
 // GetPaymentPayment - Retrieve a payment
+// Retrieves a single PaymentPayment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Payment) GetPaymentPayment(ctx context.Context, request operations.GetPaymentPaymentRequest, opts ...operations.Option) (*operations.GetPaymentPaymentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1087,6 +1092,7 @@ func (s *Payment) GetPaymentPayment(ctx context.Context, request operations.GetP
 }
 
 // GetPaymentPayout - Retrieve a payout
+// Retrieves a single PaymentPayout by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Payment) GetPaymentPayout(ctx context.Context, request operations.GetPaymentPayoutRequest, opts ...operations.Option) (*operations.GetPaymentPayoutResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1294,6 +1300,7 @@ func (s *Payment) GetPaymentPayout(ctx context.Context, request operations.GetPa
 }
 
 // GetPaymentRefund - Retrieve a refund
+// Retrieves a single PaymentRefund by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Payment) GetPaymentRefund(ctx context.Context, request operations.GetPaymentRefundRequest, opts ...operations.Option) (*operations.GetPaymentRefundResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Payment) GetPaymentRefund(ctx context.Context, request operations.GetPa
 }
 
 // GetPaymentSubscription - Retrieve a subscription
+// Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Payment) GetPaymentSubscription(ctx context.Context, request operations.GetPaymentSubscriptionRequest, opts ...operations.Option) (*operations.GetPaymentSubscriptionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1708,6 +1716,7 @@ func (s *Payment) GetPaymentSubscription(ctx context.Context, request operations
 }
 
 // ListPaymentLinks - List all links
+// Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Payment) ListPaymentLinks(ctx context.Context, request operations.ListPaymentLinksRequest, opts ...operations.Option) (*operations.ListPaymentLinksResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1915,6 +1924,7 @@ func (s *Payment) ListPaymentLinks(ctx context.Context, request operations.ListP
 }
 
 // ListPaymentPayments - List all payments
+// Returns a list of PaymentPayments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Payment) ListPaymentPayments(ctx context.Context, request operations.ListPaymentPaymentsRequest, opts ...operations.Option) (*operations.ListPaymentPaymentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2122,6 +2132,7 @@ func (s *Payment) ListPaymentPayments(ctx context.Context, request operations.Li
 }
 
 // ListPaymentPayouts - List all payouts
+// Returns a list of PaymentPayouts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Payment) ListPaymentPayouts(ctx context.Context, request operations.ListPaymentPayoutsRequest, opts ...operations.Option) (*operations.ListPaymentPayoutsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2329,6 +2340,7 @@ func (s *Payment) ListPaymentPayouts(ctx context.Context, request operations.Lis
 }
 
 // ListPaymentRefunds - List all refunds
+// Returns a list of PaymentRefunds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Payment) ListPaymentRefunds(ctx context.Context, request operations.ListPaymentRefundsRequest, opts ...operations.Option) (*operations.ListPaymentRefundsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2536,6 +2548,7 @@ func (s *Payment) ListPaymentRefunds(ctx context.Context, request operations.Lis
 }
 
 // ListPaymentSubscriptions - List all subscriptions
+// Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Payment) ListPaymentSubscriptions(ctx context.Context, request operations.ListPaymentSubscriptionsRequest, opts ...operations.Option) (*operations.ListPaymentSubscriptionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2743,6 +2756,7 @@ func (s *Payment) ListPaymentSubscriptions(ctx context.Context, request operatio
 }
 
 // PatchPaymentLink - Update a link
+// Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 func (s *Payment) PatchPaymentLink(ctx context.Context, request operations.PatchPaymentLinkRequest, opts ...operations.Option) (*operations.PatchPaymentLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2957,6 +2971,7 @@ func (s *Payment) PatchPaymentLink(ctx context.Context, request operations.Patch
 }
 
 // PatchPaymentPayment - Update a payment
+// Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
 func (s *Payment) PatchPaymentPayment(ctx context.Context, request operations.PatchPaymentPaymentRequest, opts ...operations.Option) (*operations.PatchPaymentPaymentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3171,6 +3186,7 @@ func (s *Payment) PatchPaymentPayment(ctx context.Context, request operations.Pa
 }
 
 // PatchPaymentSubscription - Update a subscription
+// Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 func (s *Payment) PatchPaymentSubscription(ctx context.Context, request operations.PatchPaymentSubscriptionRequest, opts ...operations.Option) (*operations.PatchPaymentSubscriptionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3385,6 +3401,7 @@ func (s *Payment) PatchPaymentSubscription(ctx context.Context, request operatio
 }
 
 // RemovePaymentLink - Remove a link
+// Deletes the PaymentLink identified by `id`.
 func (s *Payment) RemovePaymentLink(ctx context.Context, request operations.RemovePaymentLinkRequest, opts ...operations.Option) (*operations.RemovePaymentLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3567,6 +3584,7 @@ func (s *Payment) RemovePaymentLink(ctx context.Context, request operations.Remo
 }
 
 // RemovePaymentPayment - Remove a payment
+// Deletes the PaymentPayment identified by `id`.
 func (s *Payment) RemovePaymentPayment(ctx context.Context, request operations.RemovePaymentPaymentRequest, opts ...operations.Option) (*operations.RemovePaymentPaymentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3749,6 +3767,7 @@ func (s *Payment) RemovePaymentPayment(ctx context.Context, request operations.R
 }
 
 // RemovePaymentSubscription - Remove a subscription
+// Deletes the PaymentSubscription identified by `id`.
 func (s *Payment) RemovePaymentSubscription(ctx context.Context, request operations.RemovePaymentSubscriptionRequest, opts ...operations.Option) (*operations.RemovePaymentSubscriptionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3931,6 +3950,7 @@ func (s *Payment) RemovePaymentSubscription(ctx context.Context, request operati
 }
 
 // UpdatePaymentLink - Update a link
+// Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 func (s *Payment) UpdatePaymentLink(ctx context.Context, request operations.UpdatePaymentLinkRequest, opts ...operations.Option) (*operations.UpdatePaymentLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4145,6 +4165,7 @@ func (s *Payment) UpdatePaymentLink(ctx context.Context, request operations.Upda
 }
 
 // UpdatePaymentPayment - Update a payment
+// Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
 func (s *Payment) UpdatePaymentPayment(ctx context.Context, request operations.UpdatePaymentPaymentRequest, opts ...operations.Option) (*operations.UpdatePaymentPaymentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4359,6 +4380,7 @@ func (s *Payment) UpdatePaymentPayment(ctx context.Context, request operations.U
 }
 
 // UpdatePaymentSubscription - Update a subscription
+// Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 func (s *Payment) UpdatePaymentSubscription(ctx context.Context, request operations.UpdatePaymentSubscriptionRequest, opts ...operations.Option) (*operations.UpdatePaymentSubscriptionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

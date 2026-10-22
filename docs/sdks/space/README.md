@@ -13,7 +13,7 @@
 
 ## CreateKmsSpace
 
-Create a space
+Creates a KmsSpace. Provide the unified KmsSpace fields in the request body; they are mapped to the provider's API. Returns the created KmsSpace.
 
 ### Example Usage
 
@@ -41,11 +41,11 @@ func main() {
         KmsSpace: shared.KmsSpace{
             CreatedAt: types.MustNewTimeFromString("2022-10-31T00:56:54.246Z"),
             Description: unifiedgosdk.Pointer("Acer."),
-            ID: unifiedgosdk.Pointer("b21eed38-3f30-4a30-868f-0c292f061c9e"),
+            ID: unifiedgosdk.Pointer("446ff652-9d3f-47e2-8138-b6d4e60961ff"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.KmsPageMetadata{},
             Name: unifiedgosdk.Pointer("into nor afore"),
-            UpdatedAt: types.MustNewTimeFromString("2025-12-29T22:52:33.056Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-30T17:48:47.665Z"),
         },
         ConnectionID: "<id>",
     })
@@ -78,7 +78,7 @@ func main() {
 
 ## GetKmsSpace
 
-Retrieve a space
+Retrieves a single KmsSpace by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -133,7 +133,7 @@ func main() {
 
 ## ListKmsSpaces
 
-List all spaces
+Returns a list of KmsSpaces. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -187,7 +187,7 @@ func main() {
 
 ## PatchKmsSpace
 
-Update a space
+Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 
 ### Example Usage
 
@@ -215,11 +215,11 @@ func main() {
         KmsSpace: shared.KmsSpace{
             CreatedAt: types.MustNewTimeFromString("2022-10-31T00:56:54.246Z"),
             Description: unifiedgosdk.Pointer("Acer."),
-            ID: unifiedgosdk.Pointer("c6ed6ca0-1967-40b3-bd60-612e0db9ec51"),
+            ID: unifiedgosdk.Pointer("64d1bceb-c2c9-4d49-a9a6-82cc4c5ee096"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.KmsPageMetadata{},
             Name: unifiedgosdk.Pointer("into nor afore"),
-            UpdatedAt: types.MustNewTimeFromString("2025-12-29T22:52:33.064Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-30T17:48:47.677Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -253,7 +253,7 @@ func main() {
 
 ## RemoveKmsSpace
 
-Remove a space
+Deletes the KmsSpace identified by `id`.
 
 ### Example Usage
 
@@ -308,7 +308,7 @@ func main() {
 
 ## UpdateKmsSpace
 
-Update a space
+Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 
 ### Example Usage
 
@@ -336,11 +336,11 @@ func main() {
         KmsSpace: shared.KmsSpace{
             CreatedAt: types.MustNewTimeFromString("2022-10-31T00:56:54.246Z"),
             Description: unifiedgosdk.Pointer("Acer."),
-            ID: unifiedgosdk.Pointer("c6ed6ca0-1967-40b3-bd60-612e0db9ec51"),
+            ID: unifiedgosdk.Pointer("64d1bceb-c2c9-4d49-a9a6-82cc4c5ee096"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.KmsPageMetadata{},
             Name: unifiedgosdk.Pointer("into nor afore"),
-            UpdatedAt: types.MustNewTimeFromString("2025-12-29T22:52:33.064Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-30T17:48:47.677Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -31,6 +31,7 @@ func newCollection(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks 
 }
 
 // CreateCommerceCollection - Create a collection
+// Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body; they are mapped to the provider's API. Returns the created CommerceCollection.
 func (s *Collection) CreateCommerceCollection(ctx context.Context, request operations.CreateCommerceCollectionRequest, opts ...operations.Option) (*operations.CreateCommerceCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Collection) CreateCommerceCollection(ctx context.Context, request opera
 }
 
 // CreateLmsCollection - Create a collection
+// Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are mapped to the provider's API. Returns the created LmsCollection.
 func (s *Collection) CreateLmsCollection(ctx context.Context, request operations.CreateLmsCollectionRequest, opts ...operations.Option) (*operations.CreateLmsCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Collection) CreateLmsCollection(ctx context.Context, request operations
 }
 
 // GetCommerceCollection - Retrieve a collection
+// Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Collection) GetCommerceCollection(ctx context.Context, request operations.GetCommerceCollectionRequest, opts ...operations.Option) (*operations.GetCommerceCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -666,6 +669,7 @@ func (s *Collection) GetCommerceCollection(ctx context.Context, request operatio
 }
 
 // GetLmsCollection - Retrieve a collection
+// Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Collection) GetLmsCollection(ctx context.Context, request operations.GetLmsCollectionRequest, opts ...operations.Option) (*operations.GetLmsCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Collection) GetLmsCollection(ctx context.Context, request operations.Ge
 }
 
 // ListCommerceCollections - List all collections
+// Returns a list of CommerceCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Collection) ListCommerceCollections(ctx context.Context, request operations.ListCommerceCollectionsRequest, opts ...operations.Option) (*operations.ListCommerceCollectionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1080,6 +1085,7 @@ func (s *Collection) ListCommerceCollections(ctx context.Context, request operat
 }
 
 // ListLmsCollections - List all collections
+// Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Collection) ListLmsCollections(ctx context.Context, request operations.ListLmsCollectionsRequest, opts ...operations.Option) (*operations.ListLmsCollectionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1287,6 +1293,7 @@ func (s *Collection) ListLmsCollections(ctx context.Context, request operations.
 }
 
 // PatchCommerceCollection - Update a collection
+// Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 func (s *Collection) PatchCommerceCollection(ctx context.Context, request operations.PatchCommerceCollectionRequest, opts ...operations.Option) (*operations.PatchCommerceCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Collection) PatchCommerceCollection(ctx context.Context, request operat
 }
 
 // PatchLmsCollection - Update a collection
+// Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 func (s *Collection) PatchLmsCollection(ctx context.Context, request operations.PatchLmsCollectionRequest, opts ...operations.Option) (*operations.PatchLmsCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1715,6 +1723,7 @@ func (s *Collection) PatchLmsCollection(ctx context.Context, request operations.
 }
 
 // RemoveCommerceCollection - Remove a collection
+// Deletes the CommerceCollection identified by `id`.
 func (s *Collection) RemoveCommerceCollection(ctx context.Context, request operations.RemoveCommerceCollectionRequest, opts ...operations.Option) (*operations.RemoveCommerceCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1897,6 +1906,7 @@ func (s *Collection) RemoveCommerceCollection(ctx context.Context, request opera
 }
 
 // RemoveLmsCollection - Remove a collection
+// Deletes the LmsCollection identified by `id`.
 func (s *Collection) RemoveLmsCollection(ctx context.Context, request operations.RemoveLmsCollectionRequest, opts ...operations.Option) (*operations.RemoveLmsCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2079,6 +2089,7 @@ func (s *Collection) RemoveLmsCollection(ctx context.Context, request operations
 }
 
 // UpdateCommerceCollection - Update a collection
+// Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 func (s *Collection) UpdateCommerceCollection(ctx context.Context, request operations.UpdateCommerceCollectionRequest, opts ...operations.Option) (*operations.UpdateCommerceCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2293,6 +2304,7 @@ func (s *Collection) UpdateCommerceCollection(ctx context.Context, request opera
 }
 
 // UpdateLmsCollection - Update a collection
+// Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 func (s *Collection) UpdateLmsCollection(ctx context.Context, request operations.UpdateLmsCollectionRequest, opts ...operations.Option) (*operations.UpdateLmsCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

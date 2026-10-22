@@ -128,8 +128,9 @@ type PaymentPayment struct {
 	SalesorderID *string               `json:"salesorder_id,omitempty"`
 	Status       *PaymentPaymentStatus `json:"status,omitempty"`
 	// normalized tender category; the provider's original label stays in payment_method
-	TenderType  *TenderType         `json:"tender_type,omitempty"`
-	TipAmount   *float64            `json:"tip_amount,omitempty"`
+	TenderType *TenderType `json:"tender_type,omitempty"`
+	TipAmount  *float64    `json:"tip_amount,omitempty"`
+	// The amount paid, in the payment's currency
 	TotalAmount *float64            `json:"total_amount,omitempty"`
 	Type        *PaymentPaymentType `json:"type,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)

@@ -13,7 +13,7 @@
 
 ## CreateHrisDevice
 
-Create a device
+Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to the provider's API. Returns the created HrisDevice.
 
 ### Example Usage
 
@@ -47,7 +47,7 @@ func main() {
             HasHdEncrypted: unifiedgosdk.Pointer(true),
             HasPasswordManager: unifiedgosdk.Pointer(true),
             HasScreenlock: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("08f0179d-117e-4e0b-9712-d1fd2a9ab777"),
+            ID: unifiedgosdk.Pointer("8948d49b-375f-49ed-a723-905a47075ae9"),
             IsMissing: unifiedgosdk.Pointer(false),
             Manufacturer: unifiedgosdk.Pointer("Hackett Inc"),
             Metadata: []shared.HrisMetadata{},
@@ -55,7 +55,7 @@ func main() {
             Name: unifiedgosdk.Pointer("august-laptop"),
             Os: unifiedgosdk.Pointer("transmitter"),
             OsVersion: unifiedgosdk.Pointer("8.4.8"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-08T07:20:57.814Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-08T20:30:23.493Z"),
             Version: unifiedgosdk.Pointer("4.15.7"),
         },
         ConnectionID: "<id>",
@@ -89,7 +89,7 @@ func main() {
 
 ## GetHrisDevice
 
-Retrieve a device
+Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -144,7 +144,7 @@ func main() {
 
 ## ListHrisDevices
 
-List all devices
+Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -198,7 +198,7 @@ func main() {
 
 ## PatchHrisDevice
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -232,7 +232,7 @@ func main() {
             HasHdEncrypted: unifiedgosdk.Pointer(true),
             HasPasswordManager: unifiedgosdk.Pointer(true),
             HasScreenlock: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("23a8d248-5900-4fd8-9b12-17935dbde1f4"),
+            ID: unifiedgosdk.Pointer("afc52eb2-dd4b-4278-b6f0-3f16a2a2e6dd"),
             IsMissing: unifiedgosdk.Pointer(false),
             Manufacturer: unifiedgosdk.Pointer("Hackett Inc"),
             Metadata: []shared.HrisMetadata{},
@@ -240,7 +240,7 @@ func main() {
             Name: unifiedgosdk.Pointer("august-laptop"),
             Os: unifiedgosdk.Pointer("transmitter"),
             OsVersion: unifiedgosdk.Pointer("8.4.8"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-08T07:20:57.824Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-08T20:30:23.500Z"),
             Version: unifiedgosdk.Pointer("4.15.7"),
         },
         ConnectionID: "<id>",
@@ -275,7 +275,7 @@ func main() {
 
 ## RemoveHrisDevice
 
-Remove a device
+Deletes the HrisDevice identified by `id`.
 
 ### Example Usage
 
@@ -330,7 +330,7 @@ func main() {
 
 ## UpdateHrisDevice
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -364,7 +364,7 @@ func main() {
             HasHdEncrypted: unifiedgosdk.Pointer(true),
             HasPasswordManager: unifiedgosdk.Pointer(true),
             HasScreenlock: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("23a8d248-5900-4fd8-9b12-17935dbde1f4"),
+            ID: unifiedgosdk.Pointer("afc52eb2-dd4b-4278-b6f0-3f16a2a2e6dd"),
             IsMissing: unifiedgosdk.Pointer(false),
             Manufacturer: unifiedgosdk.Pointer("Hackett Inc"),
             Metadata: []shared.HrisMetadata{},
@@ -372,7 +372,7 @@ func main() {
             Name: unifiedgosdk.Pointer("august-laptop"),
             Os: unifiedgosdk.Pointer("transmitter"),
             OsVersion: unifiedgosdk.Pointer("8.4.8"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-08T07:20:57.824Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-08T20:30:23.500Z"),
             Version: unifiedgosdk.Pointer("4.15.7"),
         },
         ConnectionID: "<id>",

@@ -31,6 +31,7 @@ func newAssessment(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks 
 }
 
 // CreateAssessmentOrder - Create an order
+// Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
 func (s *Assessment) CreateAssessmentOrder(ctx context.Context, request operations.CreateAssessmentOrderRequest, opts ...operations.Option) (*operations.CreateAssessmentOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -455,6 +456,7 @@ func (s *Assessment) CreateAssessmentPackage(ctx context.Context, request operat
 }
 
 // GetAssessmentOrder - Retrieve an order
+// Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Assessment) GetAssessmentOrder(ctx context.Context, request operations.GetAssessmentOrderRequest, opts ...operations.Option) (*operations.GetAssessmentOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1072,6 +1074,7 @@ func (s *Assessment) ListAssessmentPackages(ctx context.Context, request operati
 }
 
 // PatchAssessmentOrder - Update an order
+// Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 func (s *Assessment) PatchAssessmentOrder(ctx context.Context, request operations.PatchAssessmentOrderRequest, opts ...operations.Option) (*operations.PatchAssessmentOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1678,6 +1681,7 @@ func (s *Assessment) RemoveAssessmentPackage(ctx context.Context, request operat
 }
 
 // UpdateAssessmentOrder - Update an order
+// Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 func (s *Assessment) UpdateAssessmentOrder(ctx context.Context, request operations.UpdateAssessmentOrderRequest, opts ...operations.Option) (*operations.UpdateAssessmentOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

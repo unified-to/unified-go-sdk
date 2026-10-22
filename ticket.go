@@ -31,6 +31,7 @@ func newTicket(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 }
 
 // CreateTicketingTicket - Create a ticket
+// Creates a TicketingTicket. Provide the unified TicketingTicket fields in the request body; they are mapped to the provider's API. Returns the created TicketingTicket.
 func (s *Ticket) CreateTicketingTicket(ctx context.Context, request operations.CreateTicketingTicketRequest, opts ...operations.Option) (*operations.CreateTicketingTicketResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Ticket) CreateTicketingTicket(ctx context.Context, request operations.C
 }
 
 // GetTicketingTicket - Retrieve a ticket
+// Retrieves a single TicketingTicket by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ticket) GetTicketingTicket(ctx context.Context, request operations.GetTicketingTicketRequest, opts ...operations.Option) (*operations.GetTicketingTicketResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Ticket) GetTicketingTicket(ctx context.Context, request operations.GetT
 }
 
 // ListTicketingTickets - List all tickets
+// Returns a list of TicketingTickets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ticket) ListTicketingTickets(ctx context.Context, request operations.ListTicketingTicketsRequest, opts ...operations.Option) (*operations.ListTicketingTicketsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Ticket) ListTicketingTickets(ctx context.Context, request operations.Li
 }
 
 // PatchTicketingTicket - Update a ticket
+// Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
 func (s *Ticket) PatchTicketingTicket(ctx context.Context, request operations.PatchTicketingTicketRequest, opts ...operations.Option) (*operations.PatchTicketingTicketResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Ticket) PatchTicketingTicket(ctx context.Context, request operations.Pa
 }
 
 // RemoveTicketingTicket - Remove a ticket
+// Deletes the TicketingTicket identified by `id`.
 func (s *Ticket) RemoveTicketingTicket(ctx context.Context, request operations.RemoveTicketingTicketRequest, opts ...operations.Option) (*operations.RemoveTicketingTicketResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Ticket) RemoveTicketingTicket(ctx context.Context, request operations.R
 }
 
 // UpdateTicketingTicket - Update a ticket
+// Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
 func (s *Ticket) UpdateTicketingTicket(ctx context.Context, request operations.UpdateTicketingTicketRequest, opts ...operations.Option) (*operations.UpdateTicketingTicketResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

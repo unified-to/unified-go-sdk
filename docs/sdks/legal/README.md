@@ -31,7 +31,7 @@
 
 ## CreateLegalExpense
 
-Create an expense
+Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
 
 ### Example Usage
 
@@ -61,7 +61,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-11-08T00:41:42.356Z"),
             Currency: unifiedgosdk.Pointer("MVR"),
             Description: unifiedgosdk.Pointer("Temporibus agnitio sui."),
-            ID: unifiedgosdk.Pointer("c69864e8-ba64-4b75-9084-fe989722d7cf"),
+            ID: unifiedgosdk.Pointer("21864e35-8eca-4e7f-81cc-e81c04f58bf5"),
             IncurredAt: types.MustNewTimeFromString("2020-11-08T00:41:42.356Z"),
             IsBilled: unifiedgosdk.Pointer(false),
             Metadata: []shared.LegalMetadata{},
@@ -69,7 +69,7 @@ func main() {
             Quantity: unifiedgosdk.Pointer[float64](3.0),
             TotalAmount: unifiedgosdk.Pointer[float64](300.0),
             Type: shared.LegalExpenseTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-03-30T23:21:13.014Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-31T12:54:25.595Z"),
         },
         ConnectionID: "<id>",
     })
@@ -102,7 +102,7 @@ func main() {
 
 ## CreateLegalMatter
 
-Create a matter
+Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped to the provider's API. Returns the created LegalMatter.
 
 ### Example Usage
 
@@ -135,11 +135,11 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-05-28T04:10:42.375Z"),
             Currency: unifiedgosdk.Pointer("BOB"),
             Description: unifiedgosdk.Pointer("Speciosus cresco aut cotidie temeritas arma."),
-            ID: unifiedgosdk.Pointer("758a09bf-ac35-4ca0-9297-ac6c2c6e768e"),
+            ID: unifiedgosdk.Pointer("0a3fcc05-e27a-4b82-949f-badc14cd9a55"),
             Metadata: []shared.LegalMetadata{},
             Name: unifiedgosdk.Pointer("Walter v. Franecki - Spinka"),
             Number: unifiedgosdk.Pointer("2023-3062"),
-            OpenedAt: types.MustNewTimeFromString("2023-07-05T06:18:43.614Z"),
+            OpenedAt: types.MustNewTimeFromString("2023-07-05T07:02:28.411Z"),
             Parties: []shared.LegalParty{
                 shared.LegalParty{
                     Description: unifiedgosdk.Pointer("Urban Walter"),
@@ -148,8 +148,8 @@ func main() {
             },
             Stage: unifiedgosdk.Pointer("currus"),
             Status: shared.LegalMatterStatusOpen.ToPointer(),
-            StatuteOfLimitationsAt: types.MustNewTimeFromString("2027-06-28T21:12:06.224Z"),
-            UpdatedAt: types.MustNewTimeFromString("2023-07-17T10:05:24.278Z"),
+            StatuteOfLimitationsAt: types.MustNewTimeFromString("2027-06-29T20:58:22.479Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-07-17T11:03:06.872Z"),
         },
         ConnectionID: "<id>",
     })
@@ -182,7 +182,7 @@ func main() {
 
 ## CreateLegalPracticearea
 
-Create a practicearea
+Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
 
 ### Example Usage
 
@@ -210,11 +210,11 @@ func main() {
         LegalPracticearea: shared.LegalPracticearea{
             Code: unifiedgosdk.Pointer("QCA"),
             CreatedAt: types.MustNewTimeFromString("2023-01-28T21:00:26.264Z"),
-            ID: unifiedgosdk.Pointer("ad6630d8-1aec-45c2-9620-ed1693d104c8"),
+            ID: unifiedgosdk.Pointer("14c1b0ec-9925-4ac1-a8ac-f6491f0df2a0"),
             Metadata: []shared.LegalMetadata{},
             Name: unifiedgosdk.Pointer("witty Law"),
             Type: shared.LegalPracticeareaTypeEducation.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-27T17:08:43.506Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-28T09:35:39.147Z"),
         },
         ConnectionID: "<id>",
     })
@@ -247,7 +247,7 @@ func main() {
 
 ## CreateLegalTimeentry
 
-Create a timeentry
+Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are mapped to the provider's API. Returns the created LegalTimeentry.
 
 ### Example Usage
 
@@ -277,13 +277,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-05-06T03:26:03.756Z"),
             Currency: unifiedgosdk.Pointer("ZAR"),
             Description: unifiedgosdk.Pointer("Ea derideo adulatio torrens."),
-            ID: unifiedgosdk.Pointer("5556370f-407c-48ae-aa6e-e4e3257f9514"),
+            ID: unifiedgosdk.Pointer("ae2c0d52-8cb7-4a6b-9d3d-ae3ff9f57b82"),
             IsBillable: unifiedgosdk.Pointer(true),
             Metadata: []shared.LegalMetadata{},
             Minutes: unifiedgosdk.Pointer[float64](390.0),
             RateAmount: unifiedgosdk.Pointer[float64](637.0),
             TotalAmount: unifiedgosdk.Pointer[float64](4140.5),
-            UpdatedAt: types.MustNewTimeFromString("2022-06-30T01:49:26.576Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-06-30T02:37:32.644Z"),
             WorkedAt: types.MustNewTimeFromString("2022-05-06T03:26:03.756Z"),
         },
         ConnectionID: "<id>",
@@ -317,7 +317,7 @@ func main() {
 
 ## GetLegalExpense
 
-Retrieve an expense
+Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -372,7 +372,7 @@ func main() {
 
 ## GetLegalMatter
 
-Retrieve a matter
+Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -427,7 +427,7 @@ func main() {
 
 ## GetLegalPracticearea
 
-Retrieve a practicearea
+Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -482,7 +482,7 @@ func main() {
 
 ## GetLegalTimeentry
 
-Retrieve a timeentry
+Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -537,7 +537,7 @@ func main() {
 
 ## ListLegalExpenses
 
-List all expenses
+Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -591,7 +591,7 @@ func main() {
 
 ## ListLegalMatters
 
-List all matters
+Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -645,7 +645,7 @@ func main() {
 
 ## ListLegalPracticeareas
 
-List all practiceareas
+Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -699,7 +699,7 @@ func main() {
 
 ## ListLegalTimeentries
 
-List all timeentries
+Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -753,7 +753,7 @@ func main() {
 
 ## PatchLegalExpense
 
-Update an expense
+Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -783,7 +783,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-11-08T00:41:42.356Z"),
             Currency: unifiedgosdk.Pointer("MVR"),
             Description: unifiedgosdk.Pointer("Temporibus agnitio sui."),
-            ID: unifiedgosdk.Pointer("17ac53c3-22e7-4a63-8a7f-7d7ad85275e4"),
+            ID: unifiedgosdk.Pointer("5b3cb8a3-5737-4b18-b126-5266526343a7"),
             IncurredAt: types.MustNewTimeFromString("2020-11-08T00:41:42.356Z"),
             IsBilled: unifiedgosdk.Pointer(false),
             Metadata: []shared.LegalMetadata{},
@@ -791,7 +791,7 @@ func main() {
             Quantity: unifiedgosdk.Pointer[float64](3.0),
             TotalAmount: unifiedgosdk.Pointer[float64](300.0),
             Type: shared.LegalExpenseTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-03-30T23:21:13.027Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-31T12:54:25.603Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -825,7 +825,7 @@ func main() {
 
 ## PatchLegalMatter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -858,11 +858,11 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-05-28T04:10:42.375Z"),
             Currency: unifiedgosdk.Pointer("BOB"),
             Description: unifiedgosdk.Pointer("Speciosus cresco aut cotidie temeritas arma."),
-            ID: unifiedgosdk.Pointer("a08b5258-b003-44e5-ad6e-92b4727c2be4"),
+            ID: unifiedgosdk.Pointer("0b6277a1-c527-4b4f-be63-395f7b3ff9b0"),
             Metadata: []shared.LegalMetadata{},
             Name: unifiedgosdk.Pointer("Walter v. Franecki - Spinka"),
             Number: unifiedgosdk.Pointer("2023-3062"),
-            OpenedAt: types.MustNewTimeFromString("2023-07-05T06:18:43.615Z"),
+            OpenedAt: types.MustNewTimeFromString("2023-07-05T07:02:28.412Z"),
             Parties: []shared.LegalParty{
                 shared.LegalParty{
                     Description: unifiedgosdk.Pointer("Urban Walter"),
@@ -871,8 +871,8 @@ func main() {
             },
             Stage: unifiedgosdk.Pointer("currus"),
             Status: shared.LegalMatterStatusOpen.ToPointer(),
-            StatuteOfLimitationsAt: types.MustNewTimeFromString("2027-06-28T21:12:06.253Z"),
-            UpdatedAt: types.MustNewTimeFromString("2023-07-17T10:05:24.279Z"),
+            StatuteOfLimitationsAt: types.MustNewTimeFromString("2027-06-29T20:58:22.506Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-07-17T11:03:06.873Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -906,7 +906,7 @@ func main() {
 
 ## PatchLegalPracticearea
 
-Update a practicearea
+Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
 ### Example Usage
 
@@ -934,11 +934,11 @@ func main() {
         LegalPracticearea: shared.LegalPracticearea{
             Code: unifiedgosdk.Pointer("QCA"),
             CreatedAt: types.MustNewTimeFromString("2023-01-28T21:00:26.264Z"),
-            ID: unifiedgosdk.Pointer("e61009e9-ee31-4608-b2c4-39e037f7d5e1"),
+            ID: unifiedgosdk.Pointer("592d6358-4956-42ee-8be7-964244924972"),
             Metadata: []shared.LegalMetadata{},
             Name: unifiedgosdk.Pointer("witty Law"),
             Type: shared.LegalPracticeareaTypeEducation.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-27T17:08:43.521Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-28T09:35:39.162Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -972,7 +972,7 @@ func main() {
 
 ## PatchLegalTimeentry
 
-Update a timeentry
+Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
 ### Example Usage
 
@@ -1002,13 +1002,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-05-06T03:26:03.756Z"),
             Currency: unifiedgosdk.Pointer("ZAR"),
             Description: unifiedgosdk.Pointer("Ea derideo adulatio torrens."),
-            ID: unifiedgosdk.Pointer("93c9e28c-8664-4e15-a188-ad57cf91af64"),
+            ID: unifiedgosdk.Pointer("4e531b0d-4ddd-4eee-9a69-1e4583eca5bc"),
             IsBillable: unifiedgosdk.Pointer(true),
             Metadata: []shared.LegalMetadata{},
             Minutes: unifiedgosdk.Pointer[float64](390.0),
             RateAmount: unifiedgosdk.Pointer[float64](637.0),
             TotalAmount: unifiedgosdk.Pointer[float64](4140.5),
-            UpdatedAt: types.MustNewTimeFromString("2022-06-30T01:49:26.577Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-06-30T02:37:32.645Z"),
             WorkedAt: types.MustNewTimeFromString("2022-05-06T03:26:03.756Z"),
         },
         ConnectionID: "<id>",
@@ -1043,7 +1043,7 @@ func main() {
 
 ## RemoveLegalExpense
 
-Remove an expense
+Deletes the LegalExpense identified by `id`.
 
 ### Example Usage
 
@@ -1098,7 +1098,7 @@ func main() {
 
 ## RemoveLegalMatter
 
-Remove a matter
+Deletes the LegalMatter identified by `id`.
 
 ### Example Usage
 
@@ -1153,7 +1153,7 @@ func main() {
 
 ## RemoveLegalPracticearea
 
-Remove a practicearea
+Deletes the LegalPracticearea identified by `id`.
 
 ### Example Usage
 
@@ -1208,7 +1208,7 @@ func main() {
 
 ## RemoveLegalTimeentry
 
-Remove a timeentry
+Deletes the LegalTimeentry identified by `id`.
 
 ### Example Usage
 
@@ -1263,7 +1263,7 @@ func main() {
 
 ## UpdateLegalExpense
 
-Update an expense
+Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -1293,7 +1293,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-11-08T00:41:42.356Z"),
             Currency: unifiedgosdk.Pointer("MVR"),
             Description: unifiedgosdk.Pointer("Temporibus agnitio sui."),
-            ID: unifiedgosdk.Pointer("17ac53c3-22e7-4a63-8a7f-7d7ad85275e4"),
+            ID: unifiedgosdk.Pointer("5b3cb8a3-5737-4b18-b126-5266526343a7"),
             IncurredAt: types.MustNewTimeFromString("2020-11-08T00:41:42.356Z"),
             IsBilled: unifiedgosdk.Pointer(false),
             Metadata: []shared.LegalMetadata{},
@@ -1301,7 +1301,7 @@ func main() {
             Quantity: unifiedgosdk.Pointer[float64](3.0),
             TotalAmount: unifiedgosdk.Pointer[float64](300.0),
             Type: shared.LegalExpenseTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-03-30T23:21:13.027Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-31T12:54:25.603Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1335,7 +1335,7 @@ func main() {
 
 ## UpdateLegalMatter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -1368,11 +1368,11 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-05-28T04:10:42.375Z"),
             Currency: unifiedgosdk.Pointer("BOB"),
             Description: unifiedgosdk.Pointer("Speciosus cresco aut cotidie temeritas arma."),
-            ID: unifiedgosdk.Pointer("a08b5258-b003-44e5-ad6e-92b4727c2be4"),
+            ID: unifiedgosdk.Pointer("0b6277a1-c527-4b4f-be63-395f7b3ff9b0"),
             Metadata: []shared.LegalMetadata{},
             Name: unifiedgosdk.Pointer("Walter v. Franecki - Spinka"),
             Number: unifiedgosdk.Pointer("2023-3062"),
-            OpenedAt: types.MustNewTimeFromString("2023-07-05T06:18:43.615Z"),
+            OpenedAt: types.MustNewTimeFromString("2023-07-05T07:02:28.412Z"),
             Parties: []shared.LegalParty{
                 shared.LegalParty{
                     Description: unifiedgosdk.Pointer("Urban Walter"),
@@ -1381,8 +1381,8 @@ func main() {
             },
             Stage: unifiedgosdk.Pointer("currus"),
             Status: shared.LegalMatterStatusOpen.ToPointer(),
-            StatuteOfLimitationsAt: types.MustNewTimeFromString("2027-06-28T21:12:06.253Z"),
-            UpdatedAt: types.MustNewTimeFromString("2023-07-17T10:05:24.279Z"),
+            StatuteOfLimitationsAt: types.MustNewTimeFromString("2027-06-29T20:58:22.506Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-07-17T11:03:06.873Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1416,7 +1416,7 @@ func main() {
 
 ## UpdateLegalPracticearea
 
-Update a practicearea
+Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
 ### Example Usage
 
@@ -1444,11 +1444,11 @@ func main() {
         LegalPracticearea: shared.LegalPracticearea{
             Code: unifiedgosdk.Pointer("QCA"),
             CreatedAt: types.MustNewTimeFromString("2023-01-28T21:00:26.264Z"),
-            ID: unifiedgosdk.Pointer("e61009e9-ee31-4608-b2c4-39e037f7d5e1"),
+            ID: unifiedgosdk.Pointer("592d6358-4956-42ee-8be7-964244924972"),
             Metadata: []shared.LegalMetadata{},
             Name: unifiedgosdk.Pointer("witty Law"),
             Type: shared.LegalPracticeareaTypeEducation.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-27T17:08:43.521Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-28T09:35:39.162Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1482,7 +1482,7 @@ func main() {
 
 ## UpdateLegalTimeentry
 
-Update a timeentry
+Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
 ### Example Usage
 
@@ -1512,13 +1512,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-05-06T03:26:03.756Z"),
             Currency: unifiedgosdk.Pointer("ZAR"),
             Description: unifiedgosdk.Pointer("Ea derideo adulatio torrens."),
-            ID: unifiedgosdk.Pointer("93c9e28c-8664-4e15-a188-ad57cf91af64"),
+            ID: unifiedgosdk.Pointer("4e531b0d-4ddd-4eee-9a69-1e4583eca5bc"),
             IsBillable: unifiedgosdk.Pointer(true),
             Metadata: []shared.LegalMetadata{},
             Minutes: unifiedgosdk.Pointer[float64](390.0),
             RateAmount: unifiedgosdk.Pointer[float64](637.0),
             TotalAmount: unifiedgosdk.Pointer[float64](4140.5),
-            UpdatedAt: types.MustNewTimeFromString("2022-06-30T01:49:26.577Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-06-30T02:37:32.645Z"),
             WorkedAt: types.MustNewTimeFromString("2022-05-06T03:26:03.756Z"),
         },
         ConnectionID: "<id>",

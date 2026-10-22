@@ -19,7 +19,7 @@
 
 ## CreateCommerceCollection
 
-Create a collection
+Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body; they are mapped to the provider's API. Returns the created CommerceCollection.
 
 ### Example Usage
 
@@ -47,7 +47,7 @@ func main() {
         CommerceCollection: shared.CommerceCollection{
             CreatedAt: types.MustNewTimeFromString("2023-07-14T00:42:54.742Z"),
             Description: unifiedgosdk.Pointer("The Integrated leading edge website Cheese offers reliable performance and productive design"),
-            ID: unifiedgosdk.Pointer("1991e4a2-1f34-47c0-8486-bcee77e5935d"),
+            ID: unifiedgosdk.Pointer("560e3cd0-8477-4d34-8817-5267ee4dd2e8"),
             IsActive: unifiedgosdk.Pointer(true),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsVisible: unifiedgosdk.Pointer(false),
@@ -56,10 +56,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Defungo adopto thorax."),
                     Height: unifiedgosdk.Pointer[float64](759.0),
-                    ID: unifiedgosdk.Pointer("d299b709-a77d-4d3b-b544-ec9239c78317"),
+                    ID: unifiedgosdk.Pointer("ccbbc897-00c8-45af-8cfe-3f86deb56e50"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("6df6510d-b37f-41f1-8606-9f92778811de"),
+                            ID: unifiedgosdk.Pointer("ddc27840-37e5-4eb7-8548-ea2dce367895"),
                             Slug: unifiedgosdk.Pointer("censura"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "toties",
@@ -74,7 +74,7 @@ func main() {
             },
             Metadata: []shared.CommerceMetadata{
                 shared.CommerceMetadata{
-                    ID: unifiedgosdk.Pointer("25c38385-e463-4e8f-a923-ecef43f8e92b"),
+                    ID: unifiedgosdk.Pointer("ae39db6a-f878-4ab2-8db7-5b7a0d697d3e"),
                     Slug: unifiedgosdk.Pointer("aetas"),
                     Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                         "consuasor",
@@ -90,7 +90,7 @@ func main() {
                 "contego",
             },
             Type: shared.CommerceCollectionTypeCollection.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-15T01:18:21.480Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-15T13:26:27.513Z"),
         },
         ConnectionID: "<id>",
     })
@@ -123,7 +123,7 @@ func main() {
 
 ## CreateLmsCollection
 
-Create a collection
+Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are mapped to the provider's API. Returns the created LmsCollection.
 
 ### Example Usage
 
@@ -151,7 +151,7 @@ func main() {
         LmsCollection: shared.LmsCollection{
             CreatedAt: types.MustNewTimeFromString("2019-08-19T14:40:29.227Z"),
             Description: unifiedgosdk.Pointer("Ab."),
-            ID: unifiedgosdk.Pointer("ad8c76c0-de0d-461e-99ec-2610973fca28"),
+            ID: unifiedgosdk.Pointer("0eef2f70-ca9e-44d8-9319-214f259637da"),
             IsActive: unifiedgosdk.Pointer(true),
             Media: []shared.LmsMedia{
                 shared.LmsMedia{
@@ -168,7 +168,7 @@ func main() {
             },
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ara"),
-            UpdatedAt: types.MustNewTimeFromString("2026-07-30T07:04:58.077Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-07-31T06:06:12.452Z"),
         },
         ConnectionID: "<id>",
     })
@@ -201,7 +201,7 @@ func main() {
 
 ## GetCommerceCollection
 
-Retrieve a collection
+Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -256,7 +256,7 @@ func main() {
 
 ## GetLmsCollection
 
-Retrieve a collection
+Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -311,7 +311,7 @@ func main() {
 
 ## ListCommerceCollections
 
-List all collections
+Returns a list of CommerceCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -365,7 +365,7 @@ func main() {
 
 ## ListLmsCollections
 
-List all collections
+Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -419,7 +419,7 @@ func main() {
 
 ## PatchCommerceCollection
 
-Update a collection
+Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -447,7 +447,7 @@ func main() {
         CommerceCollection: shared.CommerceCollection{
             CreatedAt: types.MustNewTimeFromString("2023-07-14T00:42:54.742Z"),
             Description: unifiedgosdk.Pointer("The Integrated leading edge website Cheese offers reliable performance and productive design"),
-            ID: unifiedgosdk.Pointer("b9e54251-c92b-4782-b1bb-926437414e65"),
+            ID: unifiedgosdk.Pointer("6661f3a1-7c4f-405f-b3a5-1163410c2d96"),
             IsActive: unifiedgosdk.Pointer(true),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsVisible: unifiedgosdk.Pointer(false),
@@ -456,10 +456,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Defungo adopto thorax."),
                     Height: unifiedgosdk.Pointer[float64](759.0),
-                    ID: unifiedgosdk.Pointer("b5d8356e-a5c4-4e37-88f1-f0f6c4baf524"),
+                    ID: unifiedgosdk.Pointer("bea5d4e2-18f3-4900-a6c6-8002a365d0d3"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("be896d4e-ad51-4055-86be-b2da90d4641b"),
+                            ID: unifiedgosdk.Pointer("1b01c6f9-cebf-4586-b996-c6351c02781a"),
                             Slug: unifiedgosdk.Pointer("censura"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "toties",
@@ -474,7 +474,7 @@ func main() {
             },
             Metadata: []shared.CommerceMetadata{
                 shared.CommerceMetadata{
-                    ID: unifiedgosdk.Pointer("e6a20238-d170-498a-be5d-6832a5df7d28"),
+                    ID: unifiedgosdk.Pointer("05eecd1d-72a1-4c34-b80c-a9b9fc79cd03"),
                     Slug: unifiedgosdk.Pointer("aetas"),
                     Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                         "consuasor",
@@ -490,7 +490,7 @@ func main() {
                 "contego",
             },
             Type: shared.CommerceCollectionTypeCollection.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-15T01:18:21.493Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-15T13:26:27.534Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -524,7 +524,7 @@ func main() {
 
 ## PatchLmsCollection
 
-Update a collection
+Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -552,7 +552,7 @@ func main() {
         LmsCollection: shared.LmsCollection{
             CreatedAt: types.MustNewTimeFromString("2019-08-19T14:40:29.227Z"),
             Description: unifiedgosdk.Pointer("Ab."),
-            ID: unifiedgosdk.Pointer("776423a0-c2ca-4984-93a0-d53a46ddee1b"),
+            ID: unifiedgosdk.Pointer("935b9a6d-4c66-441d-a9cb-34b4e9e56c7f"),
             IsActive: unifiedgosdk.Pointer(true),
             Media: []shared.LmsMedia{
                 shared.LmsMedia{
@@ -569,7 +569,7 @@ func main() {
             },
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ara"),
-            UpdatedAt: types.MustNewTimeFromString("2026-07-30T07:04:58.094Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-07-31T06:06:12.473Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -603,7 +603,7 @@ func main() {
 
 ## RemoveCommerceCollection
 
-Remove a collection
+Deletes the CommerceCollection identified by `id`.
 
 ### Example Usage
 
@@ -658,7 +658,7 @@ func main() {
 
 ## RemoveLmsCollection
 
-Remove a collection
+Deletes the LmsCollection identified by `id`.
 
 ### Example Usage
 
@@ -713,7 +713,7 @@ func main() {
 
 ## UpdateCommerceCollection
 
-Update a collection
+Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -741,7 +741,7 @@ func main() {
         CommerceCollection: shared.CommerceCollection{
             CreatedAt: types.MustNewTimeFromString("2023-07-14T00:42:54.742Z"),
             Description: unifiedgosdk.Pointer("The Integrated leading edge website Cheese offers reliable performance and productive design"),
-            ID: unifiedgosdk.Pointer("b9e54251-c92b-4782-b1bb-926437414e65"),
+            ID: unifiedgosdk.Pointer("6661f3a1-7c4f-405f-b3a5-1163410c2d96"),
             IsActive: unifiedgosdk.Pointer(true),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsVisible: unifiedgosdk.Pointer(false),
@@ -750,10 +750,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Defungo adopto thorax."),
                     Height: unifiedgosdk.Pointer[float64](759.0),
-                    ID: unifiedgosdk.Pointer("b5d8356e-a5c4-4e37-88f1-f0f6c4baf524"),
+                    ID: unifiedgosdk.Pointer("bea5d4e2-18f3-4900-a6c6-8002a365d0d3"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("be896d4e-ad51-4055-86be-b2da90d4641b"),
+                            ID: unifiedgosdk.Pointer("1b01c6f9-cebf-4586-b996-c6351c02781a"),
                             Slug: unifiedgosdk.Pointer("censura"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "toties",
@@ -768,7 +768,7 @@ func main() {
             },
             Metadata: []shared.CommerceMetadata{
                 shared.CommerceMetadata{
-                    ID: unifiedgosdk.Pointer("e6a20238-d170-498a-be5d-6832a5df7d28"),
+                    ID: unifiedgosdk.Pointer("05eecd1d-72a1-4c34-b80c-a9b9fc79cd03"),
                     Slug: unifiedgosdk.Pointer("aetas"),
                     Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                         "consuasor",
@@ -784,7 +784,7 @@ func main() {
                 "contego",
             },
             Type: shared.CommerceCollectionTypeCollection.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-15T01:18:21.493Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-15T13:26:27.534Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -818,7 +818,7 @@ func main() {
 
 ## UpdateLmsCollection
 
-Update a collection
+Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -846,7 +846,7 @@ func main() {
         LmsCollection: shared.LmsCollection{
             CreatedAt: types.MustNewTimeFromString("2019-08-19T14:40:29.227Z"),
             Description: unifiedgosdk.Pointer("Ab."),
-            ID: unifiedgosdk.Pointer("776423a0-c2ca-4984-93a0-d53a46ddee1b"),
+            ID: unifiedgosdk.Pointer("935b9a6d-4c66-441d-a9cb-34b4e9e56c7f"),
             IsActive: unifiedgosdk.Pointer(true),
             Media: []shared.LmsMedia{
                 shared.LmsMedia{
@@ -863,7 +863,7 @@ func main() {
             },
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ara"),
-            UpdatedAt: types.MustNewTimeFromString("2026-07-30T07:04:58.094Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-07-31T06:06:12.473Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

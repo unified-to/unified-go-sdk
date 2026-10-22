@@ -31,6 +31,7 @@ func newInvoice(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateAccountingInvoice - Create an invoice
+// Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they are mapped to the provider's API. Returns the created AccountingInvoice.
 func (s *Invoice) CreateAccountingInvoice(ctx context.Context, request operations.CreateAccountingInvoiceRequest, opts ...operations.Option) (*operations.CreateAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Invoice) CreateAccountingInvoice(ctx context.Context, request operation
 }
 
 // GetAccountingInvoice - Retrieve an invoice
+// Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Invoice) GetAccountingInvoice(ctx context.Context, request operations.GetAccountingInvoiceRequest, opts ...operations.Option) (*operations.GetAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Invoice) GetAccountingInvoice(ctx context.Context, request operations.G
 }
 
 // ListAccountingInvoices - List all invoices
+// Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Invoice) ListAccountingInvoices(ctx context.Context, request operations.ListAccountingInvoicesRequest, opts ...operations.Option) (*operations.ListAccountingInvoicesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Invoice) ListAccountingInvoices(ctx context.Context, request operations
 }
 
 // PatchAccountingInvoice - Update an invoice
+// Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 func (s *Invoice) PatchAccountingInvoice(ctx context.Context, request operations.PatchAccountingInvoiceRequest, opts ...operations.Option) (*operations.PatchAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Invoice) PatchAccountingInvoice(ctx context.Context, request operations
 }
 
 // RemoveAccountingInvoice - Remove an invoice
+// Deletes the AccountingInvoice identified by `id`.
 func (s *Invoice) RemoveAccountingInvoice(ctx context.Context, request operations.RemoveAccountingInvoiceRequest, opts ...operations.Option) (*operations.RemoveAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Invoice) RemoveAccountingInvoice(ctx context.Context, request operation
 }
 
 // UpdateAccountingInvoice - Update an invoice
+// Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 func (s *Invoice) UpdateAccountingInvoice(ctx context.Context, request operations.UpdateAccountingInvoiceRequest, opts ...operations.Option) (*operations.UpdateAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

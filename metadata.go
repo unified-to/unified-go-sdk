@@ -31,6 +31,7 @@ func newMetadata(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateMetadataMetadata - Create a metadata
+// Creates a MetadataMetadata. Provide the unified MetadataMetadata fields in the request body; they are mapped to the provider's API. Returns the created MetadataMetadata.
 func (s *Metadata) CreateMetadataMetadata(ctx context.Context, request operations.CreateMetadataMetadataRequest, opts ...operations.Option) (*operations.CreateMetadataMetadataResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Metadata) CreateMetadataMetadata(ctx context.Context, request operation
 }
 
 // GetMetadataMetadata - Retrieve a metadata
+// Retrieves a single MetadataMetadata by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Metadata) GetMetadataMetadata(ctx context.Context, request operations.GetMetadataMetadataRequest, opts ...operations.Option) (*operations.GetMetadataMetadataResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Metadata) GetMetadataMetadata(ctx context.Context, request operations.G
 }
 
 // ListMetadataMetadatas - List all metadatas
+// Returns a list of MetadataMetadatas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Metadata) ListMetadataMetadatas(ctx context.Context, request operations.ListMetadataMetadatasRequest, opts ...operations.Option) (*operations.ListMetadataMetadatasResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Metadata) ListMetadataMetadatas(ctx context.Context, request operations
 }
 
 // PatchMetadataMetadata - Update a metadata
+// Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to change in the request body.
 func (s *Metadata) PatchMetadataMetadata(ctx context.Context, request operations.PatchMetadataMetadataRequest, opts ...operations.Option) (*operations.PatchMetadataMetadataResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Metadata) PatchMetadataMetadata(ctx context.Context, request operations
 }
 
 // RemoveMetadataMetadata - Remove a metadata
+// Deletes the MetadataMetadata identified by `id`.
 func (s *Metadata) RemoveMetadataMetadata(ctx context.Context, request operations.RemoveMetadataMetadataRequest, opts ...operations.Option) (*operations.RemoveMetadataMetadataResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Metadata) RemoveMetadataMetadata(ctx context.Context, request operation
 }
 
 // UpdateMetadataMetadata - Update a metadata
+// Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to change in the request body.
 func (s *Metadata) UpdateMetadataMetadata(ctx context.Context, request operations.UpdateMetadataMetadataRequest, opts ...operations.Option) (*operations.UpdateMetadataMetadataResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

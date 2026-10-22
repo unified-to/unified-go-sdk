@@ -31,6 +31,7 @@ func newPaycode(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // GetHrisPaycode - Retrieve a paycode
+// Retrieves a single HrisPaycode by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Paycode) GetHrisPaycode(ctx context.Context, request operations.GetHrisPaycodeRequest, opts ...operations.Option) (*operations.GetHrisPaycodeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -238,6 +239,7 @@ func (s *Paycode) GetHrisPaycode(ctx context.Context, request operations.GetHris
 }
 
 // ListHrisPaycodes - List all paycodes
+// Returns a list of HrisPaycodes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Paycode) ListHrisPaycodes(ctx context.Context, request operations.ListHrisPaycodesRequest, opts ...operations.Option) (*operations.ListHrisPaycodesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

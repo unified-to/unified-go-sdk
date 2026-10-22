@@ -31,6 +31,7 @@ func newJournal(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateAccountingJournal - Create a journal
+// Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they are mapped to the provider's API. Returns the created AccountingJournal.
 func (s *Journal) CreateAccountingJournal(ctx context.Context, request operations.CreateAccountingJournalRequest, opts ...operations.Option) (*operations.CreateAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Journal) CreateAccountingJournal(ctx context.Context, request operation
 }
 
 // GetAccountingJournal - Retrieve a journal
+// Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Journal) GetAccountingJournal(ctx context.Context, request operations.GetAccountingJournalRequest, opts ...operations.Option) (*operations.GetAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Journal) GetAccountingJournal(ctx context.Context, request operations.G
 }
 
 // ListAccountingJournals - List all journals
+// Returns a list of AccountingJournals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Journal) ListAccountingJournals(ctx context.Context, request operations.ListAccountingJournalsRequest, opts ...operations.Option) (*operations.ListAccountingJournalsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Journal) ListAccountingJournals(ctx context.Context, request operations
 }
 
 // PatchAccountingJournal - Update a journal
+// Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 func (s *Journal) PatchAccountingJournal(ctx context.Context, request operations.PatchAccountingJournalRequest, opts ...operations.Option) (*operations.PatchAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Journal) PatchAccountingJournal(ctx context.Context, request operations
 }
 
 // RemoveAccountingJournal - Remove a journal
+// Deletes the AccountingJournal identified by `id`.
 func (s *Journal) RemoveAccountingJournal(ctx context.Context, request operations.RemoveAccountingJournalRequest, opts ...operations.Option) (*operations.RemoveAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Journal) RemoveAccountingJournal(ctx context.Context, request operation
 }
 
 // UpdateAccountingJournal - Update a journal
+// Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 func (s *Journal) UpdateAccountingJournal(ctx context.Context, request operations.UpdateAccountingJournalRequest, opts ...operations.Option) (*operations.UpdateAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

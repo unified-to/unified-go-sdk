@@ -25,9 +25,10 @@ type MessagingMessage struct {
 	IsUnread      *bool             `json:"is_unread,omitempty"`
 	// for email systems, this field represents the CC value
 	MentionedMembers []MessagingMember `json:"mentioned_members,omitempty"`
-	Message          *string           `json:"message,omitempty"`
-	MessageHTML      *string           `json:"message_html,omitempty"`
-	MessageMarkdown  *string           `json:"message_markdown,omitempty"`
+	// The message body as plain text
+	Message         *string `json:"message,omitempty"`
+	MessageHTML     *string `json:"message_html,omitempty"`
+	MessageMarkdown *string `json:"message_markdown,omitempty"`
 	// the opaque identifier for the first message in a thread
 	MessageThreadIdentifier *string             `json:"message_thread_identifier,omitempty"`
 	Metadata                []MessagingMetadata `json:"metadata,omitempty"`

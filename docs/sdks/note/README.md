@@ -13,7 +13,7 @@
 
 ## CreateTicketingNote
 
-Create a note
+Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are mapped to the provider's API. Returns the created TicketingNote.
 
 ### Example Usage
 
@@ -41,9 +41,9 @@ func main() {
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
             Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
-            ID: unifiedgosdk.Pointer("379fd407-2c1a-4c4f-9408-8cce16d25ad2"),
+            ID: unifiedgosdk.Pointer("86334ced-97d3-4ff2-9d8e-f069597c280d"),
             Metadata: []shared.TicketingMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2024-09-29T06:43:21.104Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-09-29T23:44:28.352Z"),
         },
         ConnectionID: "<id>",
     })
@@ -76,7 +76,7 @@ func main() {
 
 ## GetTicketingNote
 
-Retrieve a note
+Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -131,7 +131,7 @@ func main() {
 
 ## ListTicketingNotes
 
-List all notes
+Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -185,7 +185,7 @@ func main() {
 
 ## PatchTicketingNote
 
-Update a note
+Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 
 ### Example Usage
 
@@ -213,9 +213,9 @@ func main() {
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
             Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
-            ID: unifiedgosdk.Pointer("6a4cdc74-ca84-46cc-aae0-c8f72b91303e"),
+            ID: unifiedgosdk.Pointer("df11d5bd-3ba0-413e-b03a-41438bcf0f2a"),
             Metadata: []shared.TicketingMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2024-09-29T06:43:21.114Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-09-29T23:44:28.358Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -249,7 +249,7 @@ func main() {
 
 ## RemoveTicketingNote
 
-Remove a note
+Deletes the TicketingNote identified by `id`.
 
 ### Example Usage
 
@@ -304,7 +304,7 @@ func main() {
 
 ## UpdateTicketingNote
 
-Update a note
+Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 
 ### Example Usage
 
@@ -332,9 +332,9 @@ func main() {
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
             Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
-            ID: unifiedgosdk.Pointer("6a4cdc74-ca84-46cc-aae0-c8f72b91303e"),
+            ID: unifiedgosdk.Pointer("df11d5bd-3ba0-413e-b03a-41438bcf0f2a"),
             Metadata: []shared.TicketingMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2024-09-29T06:43:21.114Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-09-29T23:44:28.358Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

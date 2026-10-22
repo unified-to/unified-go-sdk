@@ -275,6 +275,7 @@ func (u CrmMetadataExtraData) MarshalJSON() ([]byte, error) {
 	return nil, errors.New("could not marshal union type CrmMetadataExtraData: all fields are null")
 }
 
+// CrmMetadataFormat - The data type of the custom field, which determines how `value` is formatted.
 type CrmMetadataFormat string
 
 const (
@@ -449,6 +450,7 @@ const (
 	CrmMetadataValueTypeArrayOfCrmMetadataSchemas5 CrmMetadataValueType = "arrayOfCrmMetadataSchemas5"
 )
 
+// CrmMetadataValue - The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false; MULTIPLE_SELECT as an array of option values; otherwise a string.
 type CrmMetadataValue struct {
 	MapOfAny                   map[string]any        `queryParam:"inline" union:"member"`
 	Str                        *string               `queryParam:"inline" union:"member"`
@@ -577,11 +579,15 @@ func (u CrmMetadataValue) MarshalJSON() ([]byte, error) {
 
 type CrmMetadata struct {
 	ExtraData *CrmMetadataExtraData `json:"extra_data,omitempty"`
-	Format    *CrmMetadataFormat    `json:"format,omitempty"`
-	ID        *string               `json:"id,omitempty"`
-	Namespace *string               `json:"namespace,omitempty"`
-	Slug      *string               `json:"slug,omitempty"`
-	Value     *CrmMetadataValue     `json:"value,omitempty"`
+	// The data type of the custom field, which determines how `value` is formatted.
+	Format *CrmMetadataFormat `json:"format,omitempty"`
+	// The ID of the custom field definition (from the metadata/metadata endpoint).
+	ID        *string `json:"id,omitempty"`
+	Namespace *string `json:"namespace,omitempty"`
+	// The integration's API name of an existing custom field (e.g. `Region__c` in Salesforce). List valid slugs for this object with the metadata/metadata endpoint; unknown slugs are rejected by the integration.
+	Slug *string `json:"slug,omitempty"`
+	// The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false; MULTIPLE_SELECT as an array of option values; otherwise a string.
+	Value *CrmMetadataValue `json:"value,omitempty"`
 }
 
 func (c *CrmMetadata) GetExtraData() *CrmMetadataExtraData {

@@ -31,6 +31,7 @@ func newCreditmemo(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks 
 }
 
 // CreateAccountingCreditmemo - Create a creditmemo
+// Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body; they are mapped to the provider's API. Returns the created AccountingCreditmemo.
 func (s *Creditmemo) CreateAccountingCreditmemo(ctx context.Context, request operations.CreateAccountingCreditmemoRequest, opts ...operations.Option) (*operations.CreateAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Creditmemo) CreateAccountingCreditmemo(ctx context.Context, request ope
 }
 
 // GetAccountingCreditmemo - Retrieve a creditmemo
+// Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Creditmemo) GetAccountingCreditmemo(ctx context.Context, request operations.GetAccountingCreditmemoRequest, opts ...operations.Option) (*operations.GetAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Creditmemo) GetAccountingCreditmemo(ctx context.Context, request operat
 }
 
 // ListAccountingCreditmemoes - List all creditmemoes
+// Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Creditmemo) ListAccountingCreditmemoes(ctx context.Context, request operations.ListAccountingCreditmemoesRequest, opts ...operations.Option) (*operations.ListAccountingCreditmemoesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Creditmemo) ListAccountingCreditmemoes(ctx context.Context, request ope
 }
 
 // PatchAccountingCreditmemo - Update a creditmemo
+// Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 func (s *Creditmemo) PatchAccountingCreditmemo(ctx context.Context, request operations.PatchAccountingCreditmemoRequest, opts ...operations.Option) (*operations.PatchAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Creditmemo) PatchAccountingCreditmemo(ctx context.Context, request oper
 }
 
 // RemoveAccountingCreditmemo - Remove a creditmemo
+// Deletes the AccountingCreditmemo identified by `id`.
 func (s *Creditmemo) RemoveAccountingCreditmemo(ctx context.Context, request operations.RemoveAccountingCreditmemoRequest, opts ...operations.Option) (*operations.RemoveAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Creditmemo) RemoveAccountingCreditmemo(ctx context.Context, request ope
 }
 
 // UpdateAccountingCreditmemo - Update a creditmemo
+// Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 func (s *Creditmemo) UpdateAccountingCreditmemo(ctx context.Context, request operations.UpdateAccountingCreditmemoRequest, opts ...operations.Option) (*operations.UpdateAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

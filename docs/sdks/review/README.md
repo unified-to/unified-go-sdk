@@ -19,7 +19,7 @@
 
 ## CreateCommerceReview
 
-Create a review
+Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are mapped to the provider's API. Returns the created CommerceReview.
 
 ### Example Usage
 
@@ -53,7 +53,7 @@ func main() {
             Content: unifiedgosdk.Pointer("Taedium thymum adipiscor amicitia cui."),
             CreatedAt: types.MustNewTimeFromString("2019-12-12T18:10:22.988Z"),
             HelpfulVotes: unifiedgosdk.Pointer[float64](66.0),
-            ID: unifiedgosdk.Pointer("a701a537-140d-43ca-82c9-18ce8f785886"),
+            ID: unifiedgosdk.Pointer("5511e647-c88b-49ec-a719-ff9102b72c8a"),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsPublic: unifiedgosdk.Pointer(true),
             IsVerified: unifiedgosdk.Pointer(false),
@@ -61,10 +61,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Desipio carpo sol laudantium colo."),
                     Height: unifiedgosdk.Pointer[float64](749.0),
-                    ID: unifiedgosdk.Pointer("7d289800-5f77-4fbe-92b2-b1eb3fa9e31e"),
+                    ID: unifiedgosdk.Pointer("655ee5a2-586f-49e6-b928-af0c396e311b"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("fdc2101f-e2db-4cd0-be49-c031a306184a"),
+                            ID: unifiedgosdk.Pointer("f431de97-875f-45bb-b368-5a2124680506"),
                             Slug: unifiedgosdk.Pointer("textor"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "quos",
@@ -79,10 +79,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Adopto teneo numquam."),
                     Height: unifiedgosdk.Pointer[float64](957.0),
-                    ID: unifiedgosdk.Pointer("6ee6be79-1ed9-45eb-a395-3bd13d182f01"),
+                    ID: unifiedgosdk.Pointer("8ab75126-17bf-45c6-b025-20689efa94a0"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("8b9b79fe-905f-496d-9674-d3111c203fe4"),
+                            ID: unifiedgosdk.Pointer("37f21345-4a56-42ee-bdba-e3331ac2b3a7"),
                             Slug: unifiedgosdk.Pointer("bos"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "casso",
@@ -100,7 +100,7 @@ func main() {
             Status: shared.CommerceReviewStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("Coepi adamo amicitia auxilium toties."),
             UnhelpfulVotes: unifiedgosdk.Pointer[float64](88.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-21T08:42:36.697Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-22T04:26:27.338Z"),
             URL: unifiedgosdk.Pointer("https://diligent-bandwidth.biz"),
             VerifiedPurchase: unifiedgosdk.Pointer(true),
         },
@@ -135,7 +135,7 @@ func main() {
 
 ## GetCommerceReview
 
-Retrieve a review
+Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -190,7 +190,7 @@ func main() {
 
 ## GetPerformanceReview
 
-Retrieve a review
+Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -245,7 +245,7 @@ func main() {
 
 ## GetSocialReview
 
-Retrieve a review
+Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -300,7 +300,7 @@ func main() {
 
 ## ListCommerceReviews
 
-List all reviews
+Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -354,7 +354,7 @@ func main() {
 
 ## ListPerformanceReviews
 
-List all reviews
+Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -408,7 +408,7 @@ func main() {
 
 ## ListSocialReviews
 
-List all reviews
+Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -462,7 +462,7 @@ func main() {
 
 ## PatchCommerceReview
 
-Update a review
+Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 
 ### Example Usage
 
@@ -496,7 +496,7 @@ func main() {
             Content: unifiedgosdk.Pointer("Taedium thymum adipiscor amicitia cui."),
             CreatedAt: types.MustNewTimeFromString("2019-12-12T18:10:22.988Z"),
             HelpfulVotes: unifiedgosdk.Pointer[float64](66.0),
-            ID: unifiedgosdk.Pointer("578fe127-194b-4d01-a25f-c54fc1709240"),
+            ID: unifiedgosdk.Pointer("68f33a18-c78b-4069-a9b5-44e7f13e5a51"),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsPublic: unifiedgosdk.Pointer(true),
             IsVerified: unifiedgosdk.Pointer(false),
@@ -504,10 +504,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Desipio carpo sol laudantium colo."),
                     Height: unifiedgosdk.Pointer[float64](749.0),
-                    ID: unifiedgosdk.Pointer("65be1798-462d-44e5-84c9-515cac1619eb"),
+                    ID: unifiedgosdk.Pointer("34369488-7bac-478b-9dcd-1a33de100275"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("9f916c18-3b91-4219-8d26-0639d2363609"),
+                            ID: unifiedgosdk.Pointer("54ecfb50-7895-4f9d-87d5-db6f71068c76"),
                             Slug: unifiedgosdk.Pointer("textor"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "quos",
@@ -522,10 +522,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Adopto teneo numquam."),
                     Height: unifiedgosdk.Pointer[float64](957.0),
-                    ID: unifiedgosdk.Pointer("c1af0dea-75ef-4e0b-a7aa-d6d3b840ec10"),
+                    ID: unifiedgosdk.Pointer("1e8a1d76-307a-42fa-aa87-d954fe49d115"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("9ad8d0f3-c8b8-4fd9-a4a7-53a7062bf74d"),
+                            ID: unifiedgosdk.Pointer("0cbc7a59-778a-4ad9-9e52-3788fb32cc25"),
                             Slug: unifiedgosdk.Pointer("bos"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "casso",
@@ -543,7 +543,7 @@ func main() {
             Status: shared.CommerceReviewStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("Coepi adamo amicitia auxilium toties."),
             UnhelpfulVotes: unifiedgosdk.Pointer[float64](88.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-21T08:42:36.722Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-22T04:26:27.383Z"),
             URL: unifiedgosdk.Pointer("https://diligent-bandwidth.biz"),
             VerifiedPurchase: unifiedgosdk.Pointer(true),
         },
@@ -579,7 +579,7 @@ func main() {
 
 ## PatchSocialReview
 
-Update a review
+Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
 
 ### Example Usage
 
@@ -636,7 +636,7 @@ func main() {
 
 ## RemoveCommerceReview
 
-Remove a review
+Deletes the CommerceReview identified by `id`.
 
 ### Example Usage
 
@@ -691,7 +691,7 @@ func main() {
 
 ## UpdateCommerceReview
 
-Update a review
+Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 
 ### Example Usage
 
@@ -725,7 +725,7 @@ func main() {
             Content: unifiedgosdk.Pointer("Taedium thymum adipiscor amicitia cui."),
             CreatedAt: types.MustNewTimeFromString("2019-12-12T18:10:22.988Z"),
             HelpfulVotes: unifiedgosdk.Pointer[float64](66.0),
-            ID: unifiedgosdk.Pointer("578fe127-194b-4d01-a25f-c54fc1709240"),
+            ID: unifiedgosdk.Pointer("68f33a18-c78b-4069-a9b5-44e7f13e5a51"),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsPublic: unifiedgosdk.Pointer(true),
             IsVerified: unifiedgosdk.Pointer(false),
@@ -733,10 +733,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Desipio carpo sol laudantium colo."),
                     Height: unifiedgosdk.Pointer[float64](749.0),
-                    ID: unifiedgosdk.Pointer("65be1798-462d-44e5-84c9-515cac1619eb"),
+                    ID: unifiedgosdk.Pointer("34369488-7bac-478b-9dcd-1a33de100275"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("9f916c18-3b91-4219-8d26-0639d2363609"),
+                            ID: unifiedgosdk.Pointer("54ecfb50-7895-4f9d-87d5-db6f71068c76"),
                             Slug: unifiedgosdk.Pointer("textor"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "quos",
@@ -751,10 +751,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Adopto teneo numquam."),
                     Height: unifiedgosdk.Pointer[float64](957.0),
-                    ID: unifiedgosdk.Pointer("c1af0dea-75ef-4e0b-a7aa-d6d3b840ec10"),
+                    ID: unifiedgosdk.Pointer("1e8a1d76-307a-42fa-aa87-d954fe49d115"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("9ad8d0f3-c8b8-4fd9-a4a7-53a7062bf74d"),
+                            ID: unifiedgosdk.Pointer("0cbc7a59-778a-4ad9-9e52-3788fb32cc25"),
                             Slug: unifiedgosdk.Pointer("bos"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "casso",
@@ -772,7 +772,7 @@ func main() {
             Status: shared.CommerceReviewStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("Coepi adamo amicitia auxilium toties."),
             UnhelpfulVotes: unifiedgosdk.Pointer[float64](88.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-21T08:42:36.722Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-22T04:26:27.383Z"),
             URL: unifiedgosdk.Pointer("https://diligent-bandwidth.biz"),
             VerifiedPurchase: unifiedgosdk.Pointer(true),
         },
@@ -808,7 +808,7 @@ func main() {
 
 ## UpdateSocialReview
 
-Update a review
+Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
 
 ### Example Usage
 

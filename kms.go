@@ -31,6 +31,7 @@ func newKms(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks.
 }
 
 // CreateKmsComment - Create a comment
+// Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to the provider's API. Returns the created KmsComment.
 func (s *Kms) CreateKmsComment(ctx context.Context, request operations.CreateKmsCommentRequest, opts ...operations.Option) (*operations.CreateKmsCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Kms) CreateKmsComment(ctx context.Context, request operations.CreateKms
 }
 
 // CreateKmsPage - Create a page
+// Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the provider's API. Returns the created KmsPage.
 func (s *Kms) CreateKmsPage(ctx context.Context, request operations.CreateKmsPageRequest, opts ...operations.Option) (*operations.CreateKmsPageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Kms) CreateKmsPage(ctx context.Context, request operations.CreateKmsPag
 }
 
 // CreateKmsSpace - Create a space
+// Creates a KmsSpace. Provide the unified KmsSpace fields in the request body; they are mapped to the provider's API. Returns the created KmsSpace.
 func (s *Kms) CreateKmsSpace(ctx context.Context, request operations.CreateKmsSpaceRequest, opts ...operations.Option) (*operations.CreateKmsSpaceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Kms) CreateKmsSpace(ctx context.Context, request operations.CreateKmsSp
 }
 
 // GetKmsComment - Retrieve a comment
+// Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Kms) GetKmsComment(ctx context.Context, request operations.GetKmsCommentRequest, opts ...operations.Option) (*operations.GetKmsCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -880,6 +884,7 @@ func (s *Kms) GetKmsComment(ctx context.Context, request operations.GetKmsCommen
 }
 
 // GetKmsPage - Retrieve a page
+// Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Kms) GetKmsPage(ctx context.Context, request operations.GetKmsPageRequest, opts ...operations.Option) (*operations.GetKmsPageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1087,6 +1092,7 @@ func (s *Kms) GetKmsPage(ctx context.Context, request operations.GetKmsPageReque
 }
 
 // GetKmsSpace - Retrieve a space
+// Retrieves a single KmsSpace by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Kms) GetKmsSpace(ctx context.Context, request operations.GetKmsSpaceRequest, opts ...operations.Option) (*operations.GetKmsSpaceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1294,6 +1300,7 @@ func (s *Kms) GetKmsSpace(ctx context.Context, request operations.GetKmsSpaceReq
 }
 
 // ListKmsComments - List all comments
+// Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Kms) ListKmsComments(ctx context.Context, request operations.ListKmsCommentsRequest, opts ...operations.Option) (*operations.ListKmsCommentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Kms) ListKmsComments(ctx context.Context, request operations.ListKmsCom
 }
 
 // ListKmsPages - List all pages
+// Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Kms) ListKmsPages(ctx context.Context, request operations.ListKmsPagesRequest, opts ...operations.Option) (*operations.ListKmsPagesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1708,6 +1716,7 @@ func (s *Kms) ListKmsPages(ctx context.Context, request operations.ListKmsPagesR
 }
 
 // ListKmsSpaces - List all spaces
+// Returns a list of KmsSpaces. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Kms) ListKmsSpaces(ctx context.Context, request operations.ListKmsSpacesRequest, opts ...operations.Option) (*operations.ListKmsSpacesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1915,6 +1924,7 @@ func (s *Kms) ListKmsSpaces(ctx context.Context, request operations.ListKmsSpace
 }
 
 // PatchKmsComment - Update a comment
+// Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 func (s *Kms) PatchKmsComment(ctx context.Context, request operations.PatchKmsCommentRequest, opts ...operations.Option) (*operations.PatchKmsCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2129,6 +2139,7 @@ func (s *Kms) PatchKmsComment(ctx context.Context, request operations.PatchKmsCo
 }
 
 // PatchKmsPage - Update a page
+// Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 func (s *Kms) PatchKmsPage(ctx context.Context, request operations.PatchKmsPageRequest, opts ...operations.Option) (*operations.PatchKmsPageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2343,6 +2354,7 @@ func (s *Kms) PatchKmsPage(ctx context.Context, request operations.PatchKmsPageR
 }
 
 // PatchKmsSpace - Update a space
+// Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 func (s *Kms) PatchKmsSpace(ctx context.Context, request operations.PatchKmsSpaceRequest, opts ...operations.Option) (*operations.PatchKmsSpaceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2557,6 +2569,7 @@ func (s *Kms) PatchKmsSpace(ctx context.Context, request operations.PatchKmsSpac
 }
 
 // RemoveKmsComment - Remove a comment
+// Deletes the KmsComment identified by `id`.
 func (s *Kms) RemoveKmsComment(ctx context.Context, request operations.RemoveKmsCommentRequest, opts ...operations.Option) (*operations.RemoveKmsCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2739,6 +2752,7 @@ func (s *Kms) RemoveKmsComment(ctx context.Context, request operations.RemoveKms
 }
 
 // RemoveKmsPage - Remove a page
+// Deletes the KmsPage identified by `id`.
 func (s *Kms) RemoveKmsPage(ctx context.Context, request operations.RemoveKmsPageRequest, opts ...operations.Option) (*operations.RemoveKmsPageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2921,6 +2935,7 @@ func (s *Kms) RemoveKmsPage(ctx context.Context, request operations.RemoveKmsPag
 }
 
 // RemoveKmsSpace - Remove a space
+// Deletes the KmsSpace identified by `id`.
 func (s *Kms) RemoveKmsSpace(ctx context.Context, request operations.RemoveKmsSpaceRequest, opts ...operations.Option) (*operations.RemoveKmsSpaceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3103,6 +3118,7 @@ func (s *Kms) RemoveKmsSpace(ctx context.Context, request operations.RemoveKmsSp
 }
 
 // UpdateKmsComment - Update a comment
+// Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 func (s *Kms) UpdateKmsComment(ctx context.Context, request operations.UpdateKmsCommentRequest, opts ...operations.Option) (*operations.UpdateKmsCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3317,6 +3333,7 @@ func (s *Kms) UpdateKmsComment(ctx context.Context, request operations.UpdateKms
 }
 
 // UpdateKmsPage - Update a page
+// Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 func (s *Kms) UpdateKmsPage(ctx context.Context, request operations.UpdateKmsPageRequest, opts ...operations.Option) (*operations.UpdateKmsPageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3531,6 +3548,7 @@ func (s *Kms) UpdateKmsPage(ctx context.Context, request operations.UpdateKmsPag
 }
 
 // UpdateKmsSpace - Update a space
+// Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 func (s *Kms) UpdateKmsSpace(ctx context.Context, request operations.UpdateKmsSpaceRequest, opts ...operations.Option) (*operations.UpdateKmsSpaceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

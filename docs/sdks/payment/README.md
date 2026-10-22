@@ -29,7 +29,7 @@
 
 ## CreatePaymentLink
 
-Create a link
+Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
 
 ### Example Usage
 
@@ -59,13 +59,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
             Currency: unifiedgosdk.Pointer("CAD"),
             Description: unifiedgosdk.Pointer("Savor the tender essence in our Ball, designed for dim culinary adventures"),
-            ID: unifiedgosdk.Pointer("44af6dd3-1389-49e9-8034-8adbc5265f45"),
+            ID: unifiedgosdk.Pointer("fc515664-3d8a-4056-95ed-aaf2662aefd8"),
             IsActive: unifiedgosdk.Pointer(true),
             IsChargeableNow: unifiedgosdk.Pointer(true),
             Lineitems: []shared.PaymentLineitem{
                 shared.PaymentLineitem{
                     CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
-                    ID: unifiedgosdk.Pointer("f9b9e527-2508-4223-bdf6-7fdebfada7ea"),
+                    ID: unifiedgosdk.Pointer("77b51887-c151-4811-aff1-67b93542f04a"),
                     ItemDescription: unifiedgosdk.Pointer("Discover the worst new Computer with an exciting mix of Steel ingredients"),
                     ItemName: unifiedgosdk.Pointer("Soft Marble Cheese"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -77,7 +77,7 @@ func main() {
                 shared.PaymentLineitem{
                     CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
                     DiscountAmount: unifiedgosdk.Pointer[float64](424.32),
-                    ID: unifiedgosdk.Pointer("1009ccc2-d6fe-4236-8c68-d0fdab642432"),
+                    ID: unifiedgosdk.Pointer("4a10838e-ed44-472c-b4ef-88a6d0b75590"),
                     ItemDescription: unifiedgosdk.Pointer("Innovative Shoes featuring utilized technology and Cotton construction"),
                     ItemName: unifiedgosdk.Pointer("Sleek Aluminum Shoes"),
                     Notes: unifiedgosdk.Pointer("Cervus decretum viridis doloremque."),
@@ -89,7 +89,7 @@ func main() {
                 },
                 shared.PaymentLineitem{
                     CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
-                    ID: unifiedgosdk.Pointer("35cf0b54-224b-4149-847c-02116695cc67"),
+                    ID: unifiedgosdk.Pointer("b19062d1-03db-4538-8b1a-d279ccaa2c70"),
                     ItemDescription: unifiedgosdk.Pointer("Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance"),
                     ItemName: unifiedgosdk.Pointer("Elegant Concrete Gloves"),
                     Notes: unifiedgosdk.Pointer("Desipio usque vacuus currus cetera testimonium."),
@@ -102,8 +102,8 @@ func main() {
             },
             Metadata: []shared.PaymentMetadata{},
             SuccessURL: unifiedgosdk.Pointer("https://tinted-jet.info"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-13T09:31:26.812Z"),
-            URL: unifiedgosdk.Pointer("https://pay.example.com/44af6dd3-1389-49e9-8034-8adbc5265f45"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-13T15:33:57.274Z"),
+            URL: unifiedgosdk.Pointer("https://pay.example.com/fc515664-3d8a-4056-95ed-aaf2662aefd8"),
         },
         ConnectionID: "<id>",
     })
@@ -136,7 +136,7 @@ func main() {
 
 ## CreatePaymentPayment
 
-Create a payment
+Creates a PaymentPayment. Provide the unified PaymentPayment fields in the request body; they are mapped to the provider's API. Returns the created PaymentPayment.
 
 ### Example Usage
 
@@ -169,7 +169,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-03-10T00:19:42.086Z"),
             Currency: unifiedgosdk.Pointer("EUR"),
             FeeAmount: unifiedgosdk.Pointer[float64](2055.82),
-            ID: unifiedgosdk.Pointer("3d3ebe10-9f28-42c2-b967-793cf13d2dcd"),
+            ID: unifiedgosdk.Pointer("6417fb64-0ec5-46b0-9311-17b57d95df10"),
             Metadata: []shared.PaymentMetadata{},
             NetAmount: unifiedgosdk.Pointer[float64](68824.18),
             Notes: unifiedgosdk.Pointer("Bibo tactus vilicus."),
@@ -181,7 +181,7 @@ func main() {
             TipAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](70880.0),
             Type: shared.PaymentPaymentTypeInvoice.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-08T00:35:44.643Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-08T19:02:15.634Z"),
         },
         ConnectionID: "<id>",
     })
@@ -214,7 +214,7 @@ func main() {
 
 ## CreatePaymentSubscription
 
-Create a subscription
+Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body; they are mapped to the provider's API. Returns the created PaymentSubscription.
 
 ### Example Usage
 
@@ -246,7 +246,7 @@ func main() {
             CurrentPeriodStartAt: types.MustNewTimeFromString("2023-05-08T10:11:03.414Z"),
             DayOfMonth: unifiedgosdk.Pointer[float64](8.0),
             Description: unifiedgosdk.Pointer("Innovative Mouse featuring important technology and Bamboo construction"),
-            ID: unifiedgosdk.Pointer("a394f325-5551-4a99-af71-bf68f958a0f6"),
+            ID: unifiedgosdk.Pointer("ec15d0db-8265-4e03-93fb-6af020431b8f"),
             Interval: unifiedgosdk.Pointer[float64](1.0),
             IntervalUnit: shared.IntervalUnitYear.ToPointer(),
             Lineitems: []shared.PaymentLineitem{},
@@ -255,7 +255,7 @@ func main() {
             StartAt: types.MustNewTimeFromString("2023-05-08T10:11:03.414Z"),
             Status: shared.PaymentSubscriptionStatusActive.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-04T12:52:53.384Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-04T15:41:28.097Z"),
         },
         ConnectionID: "<id>",
     })
@@ -288,7 +288,7 @@ func main() {
 
 ## GetPaymentLink
 
-Retrieve a link
+Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -343,7 +343,7 @@ func main() {
 
 ## GetPaymentPayment
 
-Retrieve a payment
+Retrieves a single PaymentPayment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -398,7 +398,7 @@ func main() {
 
 ## GetPaymentPayout
 
-Retrieve a payout
+Retrieves a single PaymentPayout by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -453,7 +453,7 @@ func main() {
 
 ## GetPaymentRefund
 
-Retrieve a refund
+Retrieves a single PaymentRefund by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -508,7 +508,7 @@ func main() {
 
 ## GetPaymentSubscription
 
-Retrieve a subscription
+Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -563,7 +563,7 @@ func main() {
 
 ## ListPaymentLinks
 
-List all links
+Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -617,7 +617,7 @@ func main() {
 
 ## ListPaymentPayments
 
-List all payments
+Returns a list of PaymentPayments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -671,7 +671,7 @@ func main() {
 
 ## ListPaymentPayouts
 
-List all payouts
+Returns a list of PaymentPayouts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -725,7 +725,7 @@ func main() {
 
 ## ListPaymentRefunds
 
-List all refunds
+Returns a list of PaymentRefunds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -779,7 +779,7 @@ func main() {
 
 ## ListPaymentSubscriptions
 
-List all subscriptions
+Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -833,7 +833,7 @@ func main() {
 
 ## PatchPaymentLink
 
-Update a link
+Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
 ### Example Usage
 
@@ -863,13 +863,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
             Currency: unifiedgosdk.Pointer("CAD"),
             Description: unifiedgosdk.Pointer("Savor the tender essence in our Ball, designed for dim culinary adventures"),
-            ID: unifiedgosdk.Pointer("0a44ac07-e03e-4d91-b1cc-dcb1f91dba36"),
+            ID: unifiedgosdk.Pointer("08f916f2-a958-486e-9292-d7529bd8ccba"),
             IsActive: unifiedgosdk.Pointer(true),
             IsChargeableNow: unifiedgosdk.Pointer(true),
             Lineitems: []shared.PaymentLineitem{
                 shared.PaymentLineitem{
                     CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
-                    ID: unifiedgosdk.Pointer("a4992b6e-470c-465d-b2ef-ed9254b71ac6"),
+                    ID: unifiedgosdk.Pointer("3530b134-abde-4de0-ac67-e0478bf02437"),
                     ItemDescription: unifiedgosdk.Pointer("Discover the worst new Computer with an exciting mix of Steel ingredients"),
                     ItemName: unifiedgosdk.Pointer("Soft Marble Cheese"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -881,7 +881,7 @@ func main() {
                 shared.PaymentLineitem{
                     CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
                     DiscountAmount: unifiedgosdk.Pointer[float64](424.32),
-                    ID: unifiedgosdk.Pointer("2cbd3403-33b5-4168-a882-a350fd62271b"),
+                    ID: unifiedgosdk.Pointer("37245c21-0f1d-4cb1-95ee-fdffdda2bc73"),
                     ItemDescription: unifiedgosdk.Pointer("Innovative Shoes featuring utilized technology and Cotton construction"),
                     ItemName: unifiedgosdk.Pointer("Sleek Aluminum Shoes"),
                     Notes: unifiedgosdk.Pointer("Cervus decretum viridis doloremque."),
@@ -893,7 +893,7 @@ func main() {
                 },
                 shared.PaymentLineitem{
                     CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
-                    ID: unifiedgosdk.Pointer("807d9e84-427d-4fd9-9060-9ca6fac75118"),
+                    ID: unifiedgosdk.Pointer("b60c42d8-7654-4944-b7a1-a96966847949"),
                     ItemDescription: unifiedgosdk.Pointer("Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance"),
                     ItemName: unifiedgosdk.Pointer("Elegant Concrete Gloves"),
                     Notes: unifiedgosdk.Pointer("Desipio usque vacuus currus cetera testimonium."),
@@ -906,8 +906,8 @@ func main() {
             },
             Metadata: []shared.PaymentMetadata{},
             SuccessURL: unifiedgosdk.Pointer("https://tinted-jet.info"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-13T09:31:26.816Z"),
-            URL: unifiedgosdk.Pointer("https://pay.example.com/0a44ac07-e03e-4d91-b1cc-dcb1f91dba36"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-13T15:33:57.282Z"),
+            URL: unifiedgosdk.Pointer("https://pay.example.com/08f916f2-a958-486e-9292-d7529bd8ccba"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -941,7 +941,7 @@ func main() {
 
 ## PatchPaymentPayment
 
-Update a payment
+Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
 
 ### Example Usage
 
@@ -974,7 +974,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-03-10T00:19:42.086Z"),
             Currency: unifiedgosdk.Pointer("EUR"),
             FeeAmount: unifiedgosdk.Pointer[float64](2055.82),
-            ID: unifiedgosdk.Pointer("8fffaf3e-a7e1-4753-b96e-207496205429"),
+            ID: unifiedgosdk.Pointer("08b1fd70-0071-4b52-838f-889911be728e"),
             Metadata: []shared.PaymentMetadata{},
             NetAmount: unifiedgosdk.Pointer[float64](68824.18),
             Notes: unifiedgosdk.Pointer("Bibo tactus vilicus."),
@@ -986,7 +986,7 @@ func main() {
             TipAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](70880.0),
             Type: shared.PaymentPaymentTypeInvoice.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-08T00:35:44.667Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-08T19:02:15.660Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1020,7 +1020,7 @@ func main() {
 
 ## PatchPaymentSubscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -1052,7 +1052,7 @@ func main() {
             CurrentPeriodStartAt: types.MustNewTimeFromString("2023-05-08T10:11:03.414Z"),
             DayOfMonth: unifiedgosdk.Pointer[float64](8.0),
             Description: unifiedgosdk.Pointer("Innovative Mouse featuring important technology and Bamboo construction"),
-            ID: unifiedgosdk.Pointer("a1331b76-e046-45c2-8dec-da55813f253f"),
+            ID: unifiedgosdk.Pointer("d45db3c0-8446-4d27-878e-56e3b0022611"),
             Interval: unifiedgosdk.Pointer[float64](1.0),
             IntervalUnit: shared.IntervalUnitYear.ToPointer(),
             Lineitems: []shared.PaymentLineitem{},
@@ -1061,7 +1061,7 @@ func main() {
             StartAt: types.MustNewTimeFromString("2023-05-08T10:11:03.414Z"),
             Status: shared.PaymentSubscriptionStatusActive.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-04T12:52:53.388Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-04T15:41:28.101Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1095,7 +1095,7 @@ func main() {
 
 ## RemovePaymentLink
 
-Remove a link
+Deletes the PaymentLink identified by `id`.
 
 ### Example Usage
 
@@ -1150,7 +1150,7 @@ func main() {
 
 ## RemovePaymentPayment
 
-Remove a payment
+Deletes the PaymentPayment identified by `id`.
 
 ### Example Usage
 
@@ -1205,7 +1205,7 @@ func main() {
 
 ## RemovePaymentSubscription
 
-Remove a subscription
+Deletes the PaymentSubscription identified by `id`.
 
 ### Example Usage
 
@@ -1260,7 +1260,7 @@ func main() {
 
 ## UpdatePaymentLink
 
-Update a link
+Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
 ### Example Usage
 
@@ -1290,13 +1290,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
             Currency: unifiedgosdk.Pointer("CAD"),
             Description: unifiedgosdk.Pointer("Savor the tender essence in our Ball, designed for dim culinary adventures"),
-            ID: unifiedgosdk.Pointer("0a44ac07-e03e-4d91-b1cc-dcb1f91dba36"),
+            ID: unifiedgosdk.Pointer("08f916f2-a958-486e-9292-d7529bd8ccba"),
             IsActive: unifiedgosdk.Pointer(true),
             IsChargeableNow: unifiedgosdk.Pointer(true),
             Lineitems: []shared.PaymentLineitem{
                 shared.PaymentLineitem{
                     CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
-                    ID: unifiedgosdk.Pointer("a4992b6e-470c-465d-b2ef-ed9254b71ac6"),
+                    ID: unifiedgosdk.Pointer("3530b134-abde-4de0-ac67-e0478bf02437"),
                     ItemDescription: unifiedgosdk.Pointer("Discover the worst new Computer with an exciting mix of Steel ingredients"),
                     ItemName: unifiedgosdk.Pointer("Soft Marble Cheese"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -1308,7 +1308,7 @@ func main() {
                 shared.PaymentLineitem{
                     CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
                     DiscountAmount: unifiedgosdk.Pointer[float64](424.32),
-                    ID: unifiedgosdk.Pointer("2cbd3403-33b5-4168-a882-a350fd62271b"),
+                    ID: unifiedgosdk.Pointer("37245c21-0f1d-4cb1-95ee-fdffdda2bc73"),
                     ItemDescription: unifiedgosdk.Pointer("Innovative Shoes featuring utilized technology and Cotton construction"),
                     ItemName: unifiedgosdk.Pointer("Sleek Aluminum Shoes"),
                     Notes: unifiedgosdk.Pointer("Cervus decretum viridis doloremque."),
@@ -1320,7 +1320,7 @@ func main() {
                 },
                 shared.PaymentLineitem{
                     CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
-                    ID: unifiedgosdk.Pointer("807d9e84-427d-4fd9-9060-9ca6fac75118"),
+                    ID: unifiedgosdk.Pointer("b60c42d8-7654-4944-b7a1-a96966847949"),
                     ItemDescription: unifiedgosdk.Pointer("Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance"),
                     ItemName: unifiedgosdk.Pointer("Elegant Concrete Gloves"),
                     Notes: unifiedgosdk.Pointer("Desipio usque vacuus currus cetera testimonium."),
@@ -1333,8 +1333,8 @@ func main() {
             },
             Metadata: []shared.PaymentMetadata{},
             SuccessURL: unifiedgosdk.Pointer("https://tinted-jet.info"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-13T09:31:26.816Z"),
-            URL: unifiedgosdk.Pointer("https://pay.example.com/0a44ac07-e03e-4d91-b1cc-dcb1f91dba36"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-13T15:33:57.282Z"),
+            URL: unifiedgosdk.Pointer("https://pay.example.com/08f916f2-a958-486e-9292-d7529bd8ccba"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1368,7 +1368,7 @@ func main() {
 
 ## UpdatePaymentPayment
 
-Update a payment
+Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
 
 ### Example Usage
 
@@ -1401,7 +1401,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-03-10T00:19:42.086Z"),
             Currency: unifiedgosdk.Pointer("EUR"),
             FeeAmount: unifiedgosdk.Pointer[float64](2055.82),
-            ID: unifiedgosdk.Pointer("8fffaf3e-a7e1-4753-b96e-207496205429"),
+            ID: unifiedgosdk.Pointer("08b1fd70-0071-4b52-838f-889911be728e"),
             Metadata: []shared.PaymentMetadata{},
             NetAmount: unifiedgosdk.Pointer[float64](68824.18),
             Notes: unifiedgosdk.Pointer("Bibo tactus vilicus."),
@@ -1413,7 +1413,7 @@ func main() {
             TipAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](70880.0),
             Type: shared.PaymentPaymentTypeInvoice.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-08T00:35:44.667Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-08T19:02:15.660Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1447,7 +1447,7 @@ func main() {
 
 ## UpdatePaymentSubscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -1479,7 +1479,7 @@ func main() {
             CurrentPeriodStartAt: types.MustNewTimeFromString("2023-05-08T10:11:03.414Z"),
             DayOfMonth: unifiedgosdk.Pointer[float64](8.0),
             Description: unifiedgosdk.Pointer("Innovative Mouse featuring important technology and Bamboo construction"),
-            ID: unifiedgosdk.Pointer("a1331b76-e046-45c2-8dec-da55813f253f"),
+            ID: unifiedgosdk.Pointer("d45db3c0-8446-4d27-878e-56e3b0022611"),
             Interval: unifiedgosdk.Pointer[float64](1.0),
             IntervalUnit: shared.IntervalUnitYear.ToPointer(),
             Lineitems: []shared.PaymentLineitem{},
@@ -1488,7 +1488,7 @@ func main() {
             StartAt: types.MustNewTimeFromString("2023-05-08T10:11:03.414Z"),
             Status: shared.PaymentSubscriptionStatusActive.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-04T12:52:53.388Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-04T15:41:28.101Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

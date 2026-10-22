@@ -31,6 +31,7 @@ func newCycle(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 }
 
 // GetPerformanceCycle - Retrieve a cycle
+// Retrieves a single PerformanceCycle by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Cycle) GetPerformanceCycle(ctx context.Context, request operations.GetPerformanceCycleRequest, opts ...operations.Option) (*operations.GetPerformanceCycleResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -238,6 +239,7 @@ func (s *Cycle) GetPerformanceCycle(ctx context.Context, request operations.GetP
 }
 
 // ListPerformanceCycles - List all cycles
+// Returns a list of PerformanceCycles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Cycle) ListPerformanceCycles(ctx context.Context, request operations.ListPerformanceCyclesRequest, opts ...operations.Option) (*operations.ListPerformanceCyclesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

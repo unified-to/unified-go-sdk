@@ -13,7 +13,7 @@
 
 ## CreateVerificationRequest
 
-Create a request
+Creates a VerificationRequest. Provide the unified VerificationRequest fields in the request body; they are mapped to the provider's API. Returns the created VerificationRequest.
 
 ### Example Usage
 
@@ -40,7 +40,7 @@ func main() {
     res, err := s.Request.CreateVerificationRequest(ctx, operations.CreateVerificationRequestRequest{
         VerificationRequest: shared.VerificationRequest{
             CreatedAt: types.MustNewTimeFromString("2023-11-20T08:17:29.950Z"),
-            ID: unifiedgosdk.Pointer("1a8fe6a0-7e21-4bc0-9457-1f5f5859be91"),
+            ID: unifiedgosdk.Pointer("c14f6a36-7d13-4ae6-9bfe-07855cae3d9b"),
             Metadata: []shared.VerificationMetadata{},
             Parameters: []shared.VerificationParameterInput{},
             ProfileAddresses: []shared.VerificationAddress{},
@@ -50,7 +50,7 @@ func main() {
             ResponseDownloadUrls: []string{},
             ResponseSource: unifiedgosdk.Pointer("Implemented regional protocol"),
             ResponseStatus: shared.VerificationRequestResponseStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-27T07:01:08.205Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-27T07:50:35.190Z"),
         },
         ConnectionID: "<id>",
     })
@@ -83,7 +83,7 @@ func main() {
 
 ## GetVerificationRequest
 
-Retrieve a request
+Retrieves a single VerificationRequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -138,7 +138,7 @@ func main() {
 
 ## ListVerificationRequests
 
-List all requests
+Returns a list of VerificationRequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -192,7 +192,7 @@ func main() {
 
 ## PatchVerificationRequest
 
-Update a request
+Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields to change in the request body.
 
 ### Example Usage
 
@@ -219,7 +219,7 @@ func main() {
     res, err := s.Request.PatchVerificationRequest(ctx, operations.PatchVerificationRequestRequest{
         VerificationRequest: shared.VerificationRequest{
             CreatedAt: types.MustNewTimeFromString("2023-11-20T08:17:29.950Z"),
-            ID: unifiedgosdk.Pointer("e99d027a-89a1-4f08-8c6c-bc0e20fd0f8a"),
+            ID: unifiedgosdk.Pointer("91a8b308-2168-487f-9993-9e68ed2309ca"),
             Metadata: []shared.VerificationMetadata{},
             Parameters: []shared.VerificationParameterInput{},
             ProfileAddresses: []shared.VerificationAddress{},
@@ -229,7 +229,7 @@ func main() {
             ResponseDownloadUrls: []string{},
             ResponseSource: unifiedgosdk.Pointer("Implemented regional protocol"),
             ResponseStatus: shared.VerificationRequestResponseStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-27T07:01:08.207Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-27T07:50:35.191Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -263,7 +263,7 @@ func main() {
 
 ## RemoveVerificationRequest
 
-Remove a request
+Deletes the VerificationRequest identified by `id`.
 
 ### Example Usage
 
@@ -318,7 +318,7 @@ func main() {
 
 ## UpdateVerificationRequest
 
-Update a request
+Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields to change in the request body.
 
 ### Example Usage
 
@@ -345,7 +345,7 @@ func main() {
     res, err := s.Request.UpdateVerificationRequest(ctx, operations.UpdateVerificationRequestRequest{
         VerificationRequest: shared.VerificationRequest{
             CreatedAt: types.MustNewTimeFromString("2023-11-20T08:17:29.950Z"),
-            ID: unifiedgosdk.Pointer("e99d027a-89a1-4f08-8c6c-bc0e20fd0f8a"),
+            ID: unifiedgosdk.Pointer("91a8b308-2168-487f-9993-9e68ed2309ca"),
             Metadata: []shared.VerificationMetadata{},
             Parameters: []shared.VerificationParameterInput{},
             ProfileAddresses: []shared.VerificationAddress{},
@@ -355,7 +355,7 @@ func main() {
             ResponseDownloadUrls: []string{},
             ResponseSource: unifiedgosdk.Pointer("Implemented regional protocol"),
             ResponseStatus: shared.VerificationRequestResponseStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-27T07:01:08.207Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-27T07:50:35.191Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

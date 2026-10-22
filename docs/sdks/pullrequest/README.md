@@ -13,7 +13,7 @@
 
 ## CreateRepoPullrequest
 
-Create a pullrequest
+Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are mapped to the provider's API. Returns the created RepoPullrequest.
 
 ### Example Usage
 
@@ -39,9 +39,9 @@ func main() {
 
     res, err := s.Pullrequest.CreateRepoPullrequest(ctx, operations.CreateRepoPullrequestRequest{
         RepoPullrequest: shared.RepoPullrequest{
-            ClosedAt: types.MustNewTimeFromString("2025-05-01T13:52:56.618Z"),
+            ClosedAt: types.MustNewTimeFromString("2025-05-02T04:03:35.410Z"),
             CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
-            ID: unifiedgosdk.Pointer("f056c8e3-203d-4efa-b38e-98ababfea7f3"),
+            ID: unifiedgosdk.Pointer("5d31e7a9-e7a6-4efe-a22d-7c351e02021d"),
             Labels: []string{
                 "creptio",
                 "tutamen",
@@ -50,7 +50,7 @@ func main() {
             Notes: unifiedgosdk.Pointer("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo."),
             Status: shared.RepoPullrequestStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("reboot mobile application"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-17T07:06:04.358Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-18T01:55:58.476Z"),
         },
         ConnectionID: "<id>",
     })
@@ -83,7 +83,7 @@ func main() {
 
 ## GetRepoPullrequest
 
-Retrieve a pullrequest
+Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -138,7 +138,7 @@ func main() {
 
 ## ListRepoPullrequests
 
-List all pullrequests
+Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -192,7 +192,7 @@ func main() {
 
 ## PatchRepoPullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -218,9 +218,9 @@ func main() {
 
     res, err := s.Pullrequest.PatchRepoPullrequest(ctx, operations.PatchRepoPullrequestRequest{
         RepoPullrequest: shared.RepoPullrequest{
-            ClosedAt: types.MustNewTimeFromString("2025-05-01T13:52:56.628Z"),
+            ClosedAt: types.MustNewTimeFromString("2025-05-02T04:03:35.421Z"),
             CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
-            ID: unifiedgosdk.Pointer("680f10ed-25c1-4071-ab27-a124bc8edbbd"),
+            ID: unifiedgosdk.Pointer("23ed0922-82e8-4b77-9733-8682bc9d3310"),
             Labels: []string{
                 "creptio",
                 "tutamen",
@@ -229,7 +229,7 @@ func main() {
             Notes: unifiedgosdk.Pointer("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo."),
             Status: shared.RepoPullrequestStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("reboot mobile application"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-17T07:06:04.372Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-18T01:55:58.490Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -263,7 +263,7 @@ func main() {
 
 ## RemoveRepoPullrequest
 
-Remove a pullrequest
+Deletes the RepoPullrequest identified by `id`.
 
 ### Example Usage
 
@@ -318,7 +318,7 @@ func main() {
 
 ## UpdateRepoPullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -344,9 +344,9 @@ func main() {
 
     res, err := s.Pullrequest.UpdateRepoPullrequest(ctx, operations.UpdateRepoPullrequestRequest{
         RepoPullrequest: shared.RepoPullrequest{
-            ClosedAt: types.MustNewTimeFromString("2025-05-01T13:52:56.628Z"),
+            ClosedAt: types.MustNewTimeFromString("2025-05-02T04:03:35.421Z"),
             CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
-            ID: unifiedgosdk.Pointer("680f10ed-25c1-4071-ab27-a124bc8edbbd"),
+            ID: unifiedgosdk.Pointer("23ed0922-82e8-4b77-9733-8682bc9d3310"),
             Labels: []string{
                 "creptio",
                 "tutamen",
@@ -355,7 +355,7 @@ func main() {
             Notes: unifiedgosdk.Pointer("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo."),
             Status: shared.RepoPullrequestStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("reboot mobile application"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-17T07:06:04.372Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-18T01:55:58.490Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

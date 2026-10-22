@@ -31,6 +31,7 @@ func newDevice(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 }
 
 // CreateHrisDevice - Create a device
+// Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to the provider's API. Returns the created HrisDevice.
 func (s *Device) CreateHrisDevice(ctx context.Context, request operations.CreateHrisDeviceRequest, opts ...operations.Option) (*operations.CreateHrisDeviceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Device) CreateHrisDevice(ctx context.Context, request operations.Create
 }
 
 // GetHrisDevice - Retrieve a device
+// Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Device) GetHrisDevice(ctx context.Context, request operations.GetHrisDeviceRequest, opts ...operations.Option) (*operations.GetHrisDeviceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Device) GetHrisDevice(ctx context.Context, request operations.GetHrisDe
 }
 
 // ListHrisDevices - List all devices
+// Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Device) ListHrisDevices(ctx context.Context, request operations.ListHrisDevicesRequest, opts ...operations.Option) (*operations.ListHrisDevicesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Device) ListHrisDevices(ctx context.Context, request operations.ListHri
 }
 
 // PatchHrisDevice - Update a device
+// Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 func (s *Device) PatchHrisDevice(ctx context.Context, request operations.PatchHrisDeviceRequest, opts ...operations.Option) (*operations.PatchHrisDeviceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Device) PatchHrisDevice(ctx context.Context, request operations.PatchHr
 }
 
 // RemoveHrisDevice - Remove a device
+// Deletes the HrisDevice identified by `id`.
 func (s *Device) RemoveHrisDevice(ctx context.Context, request operations.RemoveHrisDeviceRequest, opts ...operations.Option) (*operations.RemoveHrisDeviceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Device) RemoveHrisDevice(ctx context.Context, request operations.Remove
 }
 
 // UpdateHrisDevice - Update a device
+// Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 func (s *Device) UpdateHrisDevice(ctx context.Context, request operations.UpdateHrisDeviceRequest, opts ...operations.Option) (*operations.UpdateHrisDeviceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -31,6 +31,7 @@ func newItemvariant(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 }
 
 // CreateCommerceItemvariant - Create an itemvariant
+// Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body; they are mapped to the provider's API. Returns the created CommerceItemvariant.
 func (s *Itemvariant) CreateCommerceItemvariant(ctx context.Context, request operations.CreateCommerceItemvariantRequest, opts ...operations.Option) (*operations.CreateCommerceItemvariantResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Itemvariant) CreateCommerceItemvariant(ctx context.Context, request ope
 }
 
 // GetCommerceItemvariant - Retrieve an itemvariant
+// Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Itemvariant) GetCommerceItemvariant(ctx context.Context, request operations.GetCommerceItemvariantRequest, opts ...operations.Option) (*operations.GetCommerceItemvariantResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Itemvariant) GetCommerceItemvariant(ctx context.Context, request operat
 }
 
 // ListCommerceItemvariants - List all itemvariants
+// Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Itemvariant) ListCommerceItemvariants(ctx context.Context, request operations.ListCommerceItemvariantsRequest, opts ...operations.Option) (*operations.ListCommerceItemvariantsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Itemvariant) ListCommerceItemvariants(ctx context.Context, request oper
 }
 
 // PatchCommerceItemvariant - Update an itemvariant
+// Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 func (s *Itemvariant) PatchCommerceItemvariant(ctx context.Context, request operations.PatchCommerceItemvariantRequest, opts ...operations.Option) (*operations.PatchCommerceItemvariantResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Itemvariant) PatchCommerceItemvariant(ctx context.Context, request oper
 }
 
 // RemoveCommerceItemvariant - Remove an itemvariant
+// Deletes the CommerceItemvariant identified by `id`.
 func (s *Itemvariant) RemoveCommerceItemvariant(ctx context.Context, request operations.RemoveCommerceItemvariantRequest, opts ...operations.Option) (*operations.RemoveCommerceItemvariantResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Itemvariant) RemoveCommerceItemvariant(ctx context.Context, request ope
 }
 
 // UpdateCommerceItemvariant - Update an itemvariant
+// Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 func (s *Itemvariant) UpdateCommerceItemvariant(ctx context.Context, request operations.UpdateCommerceItemvariantRequest, opts ...operations.Option) (*operations.UpdateCommerceItemvariantResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -31,6 +31,7 @@ func newInsertionorder(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, ho
 }
 
 // CreateAdsInsertionorder - Create an insertionorder
+// Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they are mapped to the provider's API. Returns the created AdsInsertionorder.
 func (s *Insertionorder) CreateAdsInsertionorder(ctx context.Context, request operations.CreateAdsInsertionorderRequest, opts ...operations.Option) (*operations.CreateAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Insertionorder) CreateAdsInsertionorder(ctx context.Context, request op
 }
 
 // GetAdsInsertionorder - Retrieve an insertionorder
+// Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Insertionorder) GetAdsInsertionorder(ctx context.Context, request operations.GetAdsInsertionorderRequest, opts ...operations.Option) (*operations.GetAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Insertionorder) GetAdsInsertionorder(ctx context.Context, request opera
 }
 
 // ListAdsInsertionorders - List all insertionorders
+// Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Insertionorder) ListAdsInsertionorders(ctx context.Context, request operations.ListAdsInsertionordersRequest, opts ...operations.Option) (*operations.ListAdsInsertionordersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Insertionorder) ListAdsInsertionorders(ctx context.Context, request ope
 }
 
 // PatchAdsInsertionorder - Update an insertionorder
+// Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 func (s *Insertionorder) PatchAdsInsertionorder(ctx context.Context, request operations.PatchAdsInsertionorderRequest, opts ...operations.Option) (*operations.PatchAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Insertionorder) PatchAdsInsertionorder(ctx context.Context, request ope
 }
 
 // RemoveAdsInsertionorder - Remove an insertionorder
+// Deletes the AdsInsertionorder identified by `id`.
 func (s *Insertionorder) RemoveAdsInsertionorder(ctx context.Context, request operations.RemoveAdsInsertionorderRequest, opts ...operations.Option) (*operations.RemoveAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Insertionorder) RemoveAdsInsertionorder(ctx context.Context, request op
 }
 
 // UpdateAdsInsertionorder - Update an insertionorder
+// Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 func (s *Insertionorder) UpdateAdsInsertionorder(ctx context.Context, request operations.UpdateAdsInsertionorderRequest, opts ...operations.Option) (*operations.UpdateAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

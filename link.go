@@ -31,6 +31,7 @@ func newLink(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 }
 
 // CreateCalendarLink - Create a link
+// Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped to the provider's API. Returns the created CalendarLink.
 func (s *Link) CreateCalendarLink(ctx context.Context, request operations.CreateCalendarLinkRequest, opts ...operations.Option) (*operations.CreateCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Link) CreateCalendarLink(ctx context.Context, request operations.Create
 }
 
 // CreatePaymentLink - Create a link
+// Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
 func (s *Link) CreatePaymentLink(ctx context.Context, request operations.CreatePaymentLinkRequest, opts ...operations.Option) (*operations.CreatePaymentLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Link) CreatePaymentLink(ctx context.Context, request operations.CreateP
 }
 
 // GetCalendarLink - Retrieve a link
+// Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Link) GetCalendarLink(ctx context.Context, request operations.GetCalendarLinkRequest, opts ...operations.Option) (*operations.GetCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -666,6 +669,7 @@ func (s *Link) GetCalendarLink(ctx context.Context, request operations.GetCalend
 }
 
 // GetPaymentLink - Retrieve a link
+// Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Link) GetPaymentLink(ctx context.Context, request operations.GetPaymentLinkRequest, opts ...operations.Option) (*operations.GetPaymentLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Link) GetPaymentLink(ctx context.Context, request operations.GetPayment
 }
 
 // ListCalendarLinks - List all links
+// Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Link) ListCalendarLinks(ctx context.Context, request operations.ListCalendarLinksRequest, opts ...operations.Option) (*operations.ListCalendarLinksResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1080,6 +1085,7 @@ func (s *Link) ListCalendarLinks(ctx context.Context, request operations.ListCal
 }
 
 // ListPaymentLinks - List all links
+// Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Link) ListPaymentLinks(ctx context.Context, request operations.ListPaymentLinksRequest, opts ...operations.Option) (*operations.ListPaymentLinksResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1287,6 +1293,7 @@ func (s *Link) ListPaymentLinks(ctx context.Context, request operations.ListPaym
 }
 
 // PatchCalendarLink - Update a link
+// Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 func (s *Link) PatchCalendarLink(ctx context.Context, request operations.PatchCalendarLinkRequest, opts ...operations.Option) (*operations.PatchCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Link) PatchCalendarLink(ctx context.Context, request operations.PatchCa
 }
 
 // PatchPaymentLink - Update a link
+// Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 func (s *Link) PatchPaymentLink(ctx context.Context, request operations.PatchPaymentLinkRequest, opts ...operations.Option) (*operations.PatchPaymentLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1715,6 +1723,7 @@ func (s *Link) PatchPaymentLink(ctx context.Context, request operations.PatchPay
 }
 
 // RemoveCalendarLink - Remove a link
+// Deletes the CalendarLink identified by `id`.
 func (s *Link) RemoveCalendarLink(ctx context.Context, request operations.RemoveCalendarLinkRequest, opts ...operations.Option) (*operations.RemoveCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1897,6 +1906,7 @@ func (s *Link) RemoveCalendarLink(ctx context.Context, request operations.Remove
 }
 
 // RemovePaymentLink - Remove a link
+// Deletes the PaymentLink identified by `id`.
 func (s *Link) RemovePaymentLink(ctx context.Context, request operations.RemovePaymentLinkRequest, opts ...operations.Option) (*operations.RemovePaymentLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2079,6 +2089,7 @@ func (s *Link) RemovePaymentLink(ctx context.Context, request operations.RemoveP
 }
 
 // UpdateCalendarLink - Update a link
+// Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 func (s *Link) UpdateCalendarLink(ctx context.Context, request operations.UpdateCalendarLinkRequest, opts ...operations.Option) (*operations.UpdateCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2293,6 +2304,7 @@ func (s *Link) UpdateCalendarLink(ctx context.Context, request operations.Update
 }
 
 // UpdatePaymentLink - Update a link
+// Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 func (s *Link) UpdatePaymentLink(ctx context.Context, request operations.UpdatePaymentLinkRequest, opts ...operations.Option) (*operations.UpdatePaymentLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

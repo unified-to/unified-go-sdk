@@ -31,6 +31,7 @@ func newUc(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks.H
 }
 
 // CreateUcComment - Create a comment
+// Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to the provider's API. Returns the created UcComment.
 func (s *Uc) CreateUcComment(ctx context.Context, request operations.CreateUcCommentRequest, opts ...operations.Option) (*operations.CreateUcCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Uc) CreateUcComment(ctx context.Context, request operations.CreateUcCom
 }
 
 // CreateUcContact - Create a contact
+// Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to the provider's API. Returns the created UcContact.
 func (s *Uc) CreateUcContact(ctx context.Context, request operations.CreateUcContactRequest, opts ...operations.Option) (*operations.CreateUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Uc) CreateUcContact(ctx context.Context, request operations.CreateUcCon
 }
 
 // CreateUcRecording - Create a recording
+// Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped to the provider's API. Returns the created UcRecording.
 func (s *Uc) CreateUcRecording(ctx context.Context, request operations.CreateUcRecordingRequest, opts ...operations.Option) (*operations.CreateUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Uc) CreateUcRecording(ctx context.Context, request operations.CreateUcR
 }
 
 // GetUcCall - Retrieve a call
+// Retrieves a single UcCall by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Uc) GetUcCall(ctx context.Context, request operations.GetUcCallRequest, opts ...operations.Option) (*operations.GetUcCallResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -880,6 +884,7 @@ func (s *Uc) GetUcCall(ctx context.Context, request operations.GetUcCallRequest,
 }
 
 // GetUcComment - Retrieve a comment
+// Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Uc) GetUcComment(ctx context.Context, request operations.GetUcCommentRequest, opts ...operations.Option) (*operations.GetUcCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1087,6 +1092,7 @@ func (s *Uc) GetUcComment(ctx context.Context, request operations.GetUcCommentRe
 }
 
 // GetUcContact - Retrieve a contact
+// Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Uc) GetUcContact(ctx context.Context, request operations.GetUcContactRequest, opts ...operations.Option) (*operations.GetUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1294,6 +1300,7 @@ func (s *Uc) GetUcContact(ctx context.Context, request operations.GetUcContactRe
 }
 
 // GetUcRecording - Retrieve a recording
+// Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Uc) GetUcRecording(ctx context.Context, request operations.GetUcRecordingRequest, opts ...operations.Option) (*operations.GetUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Uc) GetUcRecording(ctx context.Context, request operations.GetUcRecordi
 }
 
 // GetUcScorecard - Retrieve a scorecard
+// Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Uc) GetUcScorecard(ctx context.Context, request operations.GetUcScorecardRequest, opts ...operations.Option) (*operations.GetUcScorecardResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1708,6 +1716,7 @@ func (s *Uc) GetUcScorecard(ctx context.Context, request operations.GetUcScoreca
 }
 
 // GetUcScorecardtemplate - Retrieve a scorecardtemplate
+// Retrieves a single UcScorecardtemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Uc) GetUcScorecardtemplate(ctx context.Context, request operations.GetUcScorecardtemplateRequest, opts ...operations.Option) (*operations.GetUcScorecardtemplateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1915,6 +1924,7 @@ func (s *Uc) GetUcScorecardtemplate(ctx context.Context, request operations.GetU
 }
 
 // ListUcCalls - List all calls
+// Returns a list of UcCalls. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Uc) ListUcCalls(ctx context.Context, request operations.ListUcCallsRequest, opts ...operations.Option) (*operations.ListUcCallsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2122,6 +2132,7 @@ func (s *Uc) ListUcCalls(ctx context.Context, request operations.ListUcCallsRequ
 }
 
 // ListUcComments - List all comments
+// Returns a list of UcComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Uc) ListUcComments(ctx context.Context, request operations.ListUcCommentsRequest, opts ...operations.Option) (*operations.ListUcCommentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2329,6 +2340,7 @@ func (s *Uc) ListUcComments(ctx context.Context, request operations.ListUcCommen
 }
 
 // ListUcContacts - List all contacts
+// Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Uc) ListUcContacts(ctx context.Context, request operations.ListUcContactsRequest, opts ...operations.Option) (*operations.ListUcContactsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2536,6 +2548,7 @@ func (s *Uc) ListUcContacts(ctx context.Context, request operations.ListUcContac
 }
 
 // ListUcRecordings - List all recordings
+// Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Uc) ListUcRecordings(ctx context.Context, request operations.ListUcRecordingsRequest, opts ...operations.Option) (*operations.ListUcRecordingsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2743,6 +2756,7 @@ func (s *Uc) ListUcRecordings(ctx context.Context, request operations.ListUcReco
 }
 
 // ListUcScorecards - List all scorecards
+// Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Uc) ListUcScorecards(ctx context.Context, request operations.ListUcScorecardsRequest, opts ...operations.Option) (*operations.ListUcScorecardsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2950,6 +2964,7 @@ func (s *Uc) ListUcScorecards(ctx context.Context, request operations.ListUcScor
 }
 
 // ListUcScorecardtemplates - List all scorecardtemplates
+// Returns a list of UcScorecardtemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Uc) ListUcScorecardtemplates(ctx context.Context, request operations.ListUcScorecardtemplatesRequest, opts ...operations.Option) (*operations.ListUcScorecardtemplatesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3157,6 +3172,7 @@ func (s *Uc) ListUcScorecardtemplates(ctx context.Context, request operations.Li
 }
 
 // PatchUcComment - Update a comment
+// Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 func (s *Uc) PatchUcComment(ctx context.Context, request operations.PatchUcCommentRequest, opts ...operations.Option) (*operations.PatchUcCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3371,6 +3387,7 @@ func (s *Uc) PatchUcComment(ctx context.Context, request operations.PatchUcComme
 }
 
 // PatchUcContact - Update a contact
+// Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 func (s *Uc) PatchUcContact(ctx context.Context, request operations.PatchUcContactRequest, opts ...operations.Option) (*operations.PatchUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3585,6 +3602,7 @@ func (s *Uc) PatchUcContact(ctx context.Context, request operations.PatchUcConta
 }
 
 // PatchUcRecording - Update a recording
+// Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
 func (s *Uc) PatchUcRecording(ctx context.Context, request operations.PatchUcRecordingRequest, opts ...operations.Option) (*operations.PatchUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3799,6 +3817,7 @@ func (s *Uc) PatchUcRecording(ctx context.Context, request operations.PatchUcRec
 }
 
 // RemoveUcComment - Remove a comment
+// Deletes the UcComment identified by `id`.
 func (s *Uc) RemoveUcComment(ctx context.Context, request operations.RemoveUcCommentRequest, opts ...operations.Option) (*operations.RemoveUcCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3981,6 +4000,7 @@ func (s *Uc) RemoveUcComment(ctx context.Context, request operations.RemoveUcCom
 }
 
 // RemoveUcContact - Remove a contact
+// Deletes the UcContact identified by `id`.
 func (s *Uc) RemoveUcContact(ctx context.Context, request operations.RemoveUcContactRequest, opts ...operations.Option) (*operations.RemoveUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4163,6 +4183,7 @@ func (s *Uc) RemoveUcContact(ctx context.Context, request operations.RemoveUcCon
 }
 
 // RemoveUcRecording - Remove a recording
+// Deletes the UcRecording identified by `id`.
 func (s *Uc) RemoveUcRecording(ctx context.Context, request operations.RemoveUcRecordingRequest, opts ...operations.Option) (*operations.RemoveUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4345,6 +4366,7 @@ func (s *Uc) RemoveUcRecording(ctx context.Context, request operations.RemoveUcR
 }
 
 // UpdateUcComment - Update a comment
+// Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 func (s *Uc) UpdateUcComment(ctx context.Context, request operations.UpdateUcCommentRequest, opts ...operations.Option) (*operations.UpdateUcCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4559,6 +4581,7 @@ func (s *Uc) UpdateUcComment(ctx context.Context, request operations.UpdateUcCom
 }
 
 // UpdateUcContact - Update a contact
+// Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 func (s *Uc) UpdateUcContact(ctx context.Context, request operations.UpdateUcContactRequest, opts ...operations.Option) (*operations.UpdateUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4773,6 +4796,7 @@ func (s *Uc) UpdateUcContact(ctx context.Context, request operations.UpdateUcCon
 }
 
 // UpdateUcRecording - Update a recording
+// Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
 func (s *Uc) UpdateUcRecording(ctx context.Context, request operations.UpdateUcRecordingRequest, opts ...operations.Option) (*operations.UpdateUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

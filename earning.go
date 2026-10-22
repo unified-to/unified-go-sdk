@@ -31,6 +31,7 @@ func newEarning(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateHrisEarning - Create an earning
+// Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped to the provider's API. Returns the created HrisEarning.
 func (s *Earning) CreateHrisEarning(ctx context.Context, request operations.CreateHrisEarningRequest, opts ...operations.Option) (*operations.CreateHrisEarningResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Earning) CreateHrisEarning(ctx context.Context, request operations.Crea
 }
 
 // GetHrisEarning - Retrieve an earning
+// Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Earning) GetHrisEarning(ctx context.Context, request operations.GetHrisEarningRequest, opts ...operations.Option) (*operations.GetHrisEarningResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Earning) GetHrisEarning(ctx context.Context, request operations.GetHris
 }
 
 // ListHrisEarnings - List all earnings
+// Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Earning) ListHrisEarnings(ctx context.Context, request operations.ListHrisEarningsRequest, opts ...operations.Option) (*operations.ListHrisEarningsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Earning) ListHrisEarnings(ctx context.Context, request operations.ListH
 }
 
 // PatchHrisEarning - Update an earning
+// Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 func (s *Earning) PatchHrisEarning(ctx context.Context, request operations.PatchHrisEarningRequest, opts ...operations.Option) (*operations.PatchHrisEarningResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Earning) PatchHrisEarning(ctx context.Context, request operations.Patch
 }
 
 // RemoveHrisEarning - Remove an earning
+// Deletes the HrisEarning identified by `id`.
 func (s *Earning) RemoveHrisEarning(ctx context.Context, request operations.RemoveHrisEarningRequest, opts ...operations.Option) (*operations.RemoveHrisEarningResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Earning) RemoveHrisEarning(ctx context.Context, request operations.Remo
 }
 
 // UpdateHrisEarning - Update an earning
+// Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 func (s *Earning) UpdateHrisEarning(ctx context.Context, request operations.UpdateHrisEarningRequest, opts ...operations.Option) (*operations.UpdateHrisEarningResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

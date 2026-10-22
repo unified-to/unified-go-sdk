@@ -25,7 +25,7 @@
 
 ## CreateKmsComment
 
-Create a comment
+Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to the provider's API. Returns the created KmsComment.
 
 ### Example Usage
 
@@ -54,10 +54,10 @@ func main() {
             Content: unifiedgosdk.Pointer("Decimus tolero viriliter usque."),
             ContentType: shared.ContentTypeHTML.ToPointer(),
             CreatedAt: types.MustNewTimeFromString("2022-08-26T14:40:49.732Z"),
-            ID: unifiedgosdk.Pointer("7d48c048-f83a-497e-932d-ae75226e4a84"),
+            ID: unifiedgosdk.Pointer("f70dadbf-c49e-4d15-b95b-76c9be0a9360"),
             Metadata: []shared.KmsPageMetadata{},
             Type: shared.KmsCommentTypePage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-26T06:47:39.913Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-26T13:57:11.798Z"),
         },
         ConnectionID: "<id>",
     })
@@ -90,7 +90,7 @@ func main() {
 
 ## CreateTaskComment
 
-Create a comment
+Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped to the provider's API. Returns the created TaskComment.
 
 ### Example Usage
 
@@ -118,10 +118,10 @@ func main() {
         TaskComment: shared.TaskComment{
             CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("2260f628-1f2b-4c01-8b8d-8f3b6ed16fd4"),
+            ID: unifiedgosdk.Pointer("0443a83e-d435-44b8-887a-9cbb133ec389"),
             Metadata: []shared.TaskMetadata{},
             Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
-            UpdatedAt: types.MustNewTimeFromString("2021-10-03T07:59:35.582Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-10-03T14:40:44.794Z"),
         },
         ConnectionID: "<id>",
     })
@@ -154,7 +154,7 @@ func main() {
 
 ## CreateUcComment
 
-Create a comment
+Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to the provider's API. Returns the created UcComment.
 
 ### Example Usage
 
@@ -181,9 +181,9 @@ func main() {
         UcComment: shared.UcComment{
             Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
             CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
-            ID: unifiedgosdk.Pointer("121f972a-c2c1-475c-ba1e-5c6f63ee28fa"),
+            ID: unifiedgosdk.Pointer("b9065532-34c2-4db6-87db-7596b91ab742"),
             Metadata: []shared.UcMetadata{},
-            UpdatedAt: unifiedgosdk.Pointer("2024-02-09T18:30:03.825Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-10T00:14:01.047Z"),
         },
         ConnectionID: "<id>",
     })
@@ -216,7 +216,7 @@ func main() {
 
 ## GetKmsComment
 
-Retrieve a comment
+Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -271,7 +271,7 @@ func main() {
 
 ## GetTaskComment
 
-Retrieve a comment
+Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -326,7 +326,7 @@ func main() {
 
 ## GetUcComment
 
-Retrieve a comment
+Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -381,7 +381,7 @@ func main() {
 
 ## ListKmsComments
 
-List all comments
+Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -435,7 +435,7 @@ func main() {
 
 ## ListTaskComments
 
-List all comments
+Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -489,7 +489,7 @@ func main() {
 
 ## ListUcComments
 
-List all comments
+Returns a list of UcComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -543,7 +543,7 @@ func main() {
 
 ## PatchKmsComment
 
-Update a comment
+Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
 ### Example Usage
 
@@ -572,10 +572,10 @@ func main() {
             Content: unifiedgosdk.Pointer("Decimus tolero viriliter usque."),
             ContentType: shared.ContentTypeHTML.ToPointer(),
             CreatedAt: types.MustNewTimeFromString("2022-08-26T14:40:49.732Z"),
-            ID: unifiedgosdk.Pointer("481c0558-3e28-4883-a956-58b21d1bee75"),
+            ID: unifiedgosdk.Pointer("a08fa0b1-2d59-4bd9-afd2-b70b50910414"),
             Metadata: []shared.KmsPageMetadata{},
             Type: shared.KmsCommentTypePage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-26T06:47:39.916Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-26T13:57:11.803Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -609,7 +609,7 @@ func main() {
 
 ## PatchTaskComment
 
-Update a comment
+Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 
 ### Example Usage
 
@@ -637,10 +637,10 @@ func main() {
         TaskComment: shared.TaskComment{
             CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("395e2851-8f13-4a9b-b5af-b0ad7d2c8495"),
+            ID: unifiedgosdk.Pointer("7327dfbd-4c0c-4c6c-b2f8-f9a1b36b2677"),
             Metadata: []shared.TaskMetadata{},
             Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
-            UpdatedAt: types.MustNewTimeFromString("2021-10-03T07:59:35.584Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-10-03T14:40:44.798Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -674,7 +674,7 @@ func main() {
 
 ## PatchUcComment
 
-Update a comment
+Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 
 ### Example Usage
 
@@ -701,9 +701,9 @@ func main() {
         UcComment: shared.UcComment{
             Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
             CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
-            ID: unifiedgosdk.Pointer("30263a06-2d22-4649-8857-dab9e9ac5b3a"),
+            ID: unifiedgosdk.Pointer("f9542e44-6a26-42ef-b104-7bb1a17b8698"),
             Metadata: []shared.UcMetadata{},
-            UpdatedAt: unifiedgosdk.Pointer("2024-02-09T18:30:03.828Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-10T00:14:01.049Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -737,7 +737,7 @@ func main() {
 
 ## RemoveKmsComment
 
-Remove a comment
+Deletes the KmsComment identified by `id`.
 
 ### Example Usage
 
@@ -792,7 +792,7 @@ func main() {
 
 ## RemoveTaskComment
 
-Remove a comment
+Deletes the TaskComment identified by `id`.
 
 ### Example Usage
 
@@ -847,7 +847,7 @@ func main() {
 
 ## RemoveUcComment
 
-Remove a comment
+Deletes the UcComment identified by `id`.
 
 ### Example Usage
 
@@ -902,7 +902,7 @@ func main() {
 
 ## UpdateKmsComment
 
-Update a comment
+Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
 ### Example Usage
 
@@ -931,10 +931,10 @@ func main() {
             Content: unifiedgosdk.Pointer("Decimus tolero viriliter usque."),
             ContentType: shared.ContentTypeHTML.ToPointer(),
             CreatedAt: types.MustNewTimeFromString("2022-08-26T14:40:49.732Z"),
-            ID: unifiedgosdk.Pointer("481c0558-3e28-4883-a956-58b21d1bee75"),
+            ID: unifiedgosdk.Pointer("a08fa0b1-2d59-4bd9-afd2-b70b50910414"),
             Metadata: []shared.KmsPageMetadata{},
             Type: shared.KmsCommentTypePage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-26T06:47:39.916Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-26T13:57:11.803Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -968,7 +968,7 @@ func main() {
 
 ## UpdateTaskComment
 
-Update a comment
+Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 
 ### Example Usage
 
@@ -996,10 +996,10 @@ func main() {
         TaskComment: shared.TaskComment{
             CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("395e2851-8f13-4a9b-b5af-b0ad7d2c8495"),
+            ID: unifiedgosdk.Pointer("7327dfbd-4c0c-4c6c-b2f8-f9a1b36b2677"),
             Metadata: []shared.TaskMetadata{},
             Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
-            UpdatedAt: types.MustNewTimeFromString("2021-10-03T07:59:35.584Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-10-03T14:40:44.798Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1033,7 +1033,7 @@ func main() {
 
 ## UpdateUcComment
 
-Update a comment
+Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 
 ### Example Usage
 
@@ -1060,9 +1060,9 @@ func main() {
         UcComment: shared.UcComment{
             Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
             CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
-            ID: unifiedgosdk.Pointer("30263a06-2d22-4649-8857-dab9e9ac5b3a"),
+            ID: unifiedgosdk.Pointer("f9542e44-6a26-42ef-b104-7bb1a17b8698"),
             Metadata: []shared.UcMetadata{},
-            UpdatedAt: unifiedgosdk.Pointer("2024-02-09T18:30:03.828Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-10T00:14:01.049Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

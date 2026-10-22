@@ -13,7 +13,7 @@
 
 ## CreateAccountingPurchaseorder
 
-Create a purchaseorder
+Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
 
 ### Example Usage
 
@@ -52,7 +52,7 @@ func main() {
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
             Currency: unifiedgosdk.Pointer("EUR"),
-            ID: unifiedgosdk.Pointer("95fc4c52-e984-4e27-a4ce-4dbf003425b2"),
+            ID: unifiedgosdk.Pointer("e2480d4a-e417-498a-aa01-91742640660d"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             PostedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
@@ -66,7 +66,7 @@ func main() {
             },
             Status: shared.AccountingPurchaseorderStatusSubmitted.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2021-08-11T06:00:23.901Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-08-11T08:41:44.885Z"),
         },
         ConnectionID: "<id>",
     })
@@ -99,7 +99,7 @@ func main() {
 
 ## GetAccountingPurchaseorder
 
-Retrieve a purchaseorder
+Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -154,7 +154,7 @@ func main() {
 
 ## ListAccountingPurchaseorders
 
-List all purchaseorders
+Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -208,7 +208,7 @@ func main() {
 
 ## PatchAccountingPurchaseorder
 
-Update a purchaseorder
+Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 
 ### Example Usage
 
@@ -247,7 +247,7 @@ func main() {
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
             Currency: unifiedgosdk.Pointer("EUR"),
-            ID: unifiedgosdk.Pointer("48e97068-ce4d-4074-985d-773cfe1d221d"),
+            ID: unifiedgosdk.Pointer("a416ea74-f483-42a8-8e48-58535d9028ce"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             PostedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
@@ -261,7 +261,7 @@ func main() {
             },
             Status: shared.AccountingPurchaseorderStatusSubmitted.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2021-08-11T06:00:23.906Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-08-11T08:41:44.890Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -295,7 +295,7 @@ func main() {
 
 ## RemoveAccountingPurchaseorder
 
-Remove a purchaseorder
+Deletes the AccountingPurchaseorder identified by `id`.
 
 ### Example Usage
 
@@ -350,7 +350,7 @@ func main() {
 
 ## UpdateAccountingPurchaseorder
 
-Update a purchaseorder
+Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 
 ### Example Usage
 
@@ -389,7 +389,7 @@ func main() {
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
             Currency: unifiedgosdk.Pointer("EUR"),
-            ID: unifiedgosdk.Pointer("48e97068-ce4d-4074-985d-773cfe1d221d"),
+            ID: unifiedgosdk.Pointer("a416ea74-f483-42a8-8e48-58535d9028ce"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             PostedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
@@ -403,7 +403,7 @@ func main() {
             },
             Status: shared.AccountingPurchaseorderStatusSubmitted.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2021-08-11T06:00:23.906Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-08-11T08:41:44.890Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

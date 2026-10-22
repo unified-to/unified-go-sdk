@@ -31,6 +31,7 @@ func newVisitor(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateAnalyticsVisitor - Create a visitor
+// Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsVisitor.
 func (s *Visitor) CreateAnalyticsVisitor(ctx context.Context, request operations.CreateAnalyticsVisitorRequest, opts ...operations.Option) (*operations.CreateAnalyticsVisitorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Visitor) CreateAnalyticsVisitor(ctx context.Context, request operations
 }
 
 // GetAnalyticsVisitor - Retrieve a visitor
+// Retrieves a single AnalyticsVisitor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Visitor) GetAnalyticsVisitor(ctx context.Context, request operations.GetAnalyticsVisitorRequest, opts ...operations.Option) (*operations.GetAnalyticsVisitorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Visitor) GetAnalyticsVisitor(ctx context.Context, request operations.Ge
 }
 
 // ListAnalyticsVisitors - List all visitors
+// Returns a list of AnalyticsVisitors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Visitor) ListAnalyticsVisitors(ctx context.Context, request operations.ListAnalyticsVisitorsRequest, opts ...operations.Option) (*operations.ListAnalyticsVisitorsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Visitor) ListAnalyticsVisitors(ctx context.Context, request operations.
 }
 
 // PatchAnalyticsVisitor - Update a visitor
+// Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
 func (s *Visitor) PatchAnalyticsVisitor(ctx context.Context, request operations.PatchAnalyticsVisitorRequest, opts ...operations.Option) (*operations.PatchAnalyticsVisitorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Visitor) PatchAnalyticsVisitor(ctx context.Context, request operations.
 }
 
 // RemoveAnalyticsVisitor - Remove a visitor
+// Deletes the AnalyticsVisitor identified by `id`.
 func (s *Visitor) RemoveAnalyticsVisitor(ctx context.Context, request operations.RemoveAnalyticsVisitorRequest, opts ...operations.Option) (*operations.RemoveAnalyticsVisitorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Visitor) RemoveAnalyticsVisitor(ctx context.Context, request operations
 }
 
 // UpdateAnalyticsVisitor - Update a visitor
+// Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
 func (s *Visitor) UpdateAnalyticsVisitor(ctx context.Context, request operations.UpdateAnalyticsVisitorRequest, opts ...operations.Option) (*operations.UpdateAnalyticsVisitorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

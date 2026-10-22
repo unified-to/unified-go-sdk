@@ -31,6 +31,7 @@ func newBankfeedtransaction(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguratio
 }
 
 // CreateAccountingBankfeedtransaction - Create a bankfeedtransaction
+// Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedtransaction.
 func (s *Bankfeedtransaction) CreateAccountingBankfeedtransaction(ctx context.Context, request operations.CreateAccountingBankfeedtransactionRequest, opts ...operations.Option) (*operations.CreateAccountingBankfeedtransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Bankfeedtransaction) CreateAccountingBankfeedtransaction(ctx context.Co
 }
 
 // GetAccountingBankfeedtransaction - Retrieve a bankfeedtransaction
+// Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Bankfeedtransaction) GetAccountingBankfeedtransaction(ctx context.Context, request operations.GetAccountingBankfeedtransactionRequest, opts ...operations.Option) (*operations.GetAccountingBankfeedtransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Bankfeedtransaction) GetAccountingBankfeedtransaction(ctx context.Conte
 }
 
 // ListAccountingBankfeedtransactions - List all bankfeedtransactions
+// Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Bankfeedtransaction) ListAccountingBankfeedtransactions(ctx context.Context, request operations.ListAccountingBankfeedtransactionsRequest, opts ...operations.Option) (*operations.ListAccountingBankfeedtransactionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Bankfeedtransaction) ListAccountingBankfeedtransactions(ctx context.Con
 }
 
 // PatchAccountingBankfeedtransaction - Update a bankfeedtransaction
+// Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 func (s *Bankfeedtransaction) PatchAccountingBankfeedtransaction(ctx context.Context, request operations.PatchAccountingBankfeedtransactionRequest, opts ...operations.Option) (*operations.PatchAccountingBankfeedtransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Bankfeedtransaction) PatchAccountingBankfeedtransaction(ctx context.Con
 }
 
 // RemoveAccountingBankfeedtransaction - Remove a bankfeedtransaction
+// Deletes the AccountingBankfeedtransaction identified by `id`.
 func (s *Bankfeedtransaction) RemoveAccountingBankfeedtransaction(ctx context.Context, request operations.RemoveAccountingBankfeedtransactionRequest, opts ...operations.Option) (*operations.RemoveAccountingBankfeedtransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Bankfeedtransaction) RemoveAccountingBankfeedtransaction(ctx context.Co
 }
 
 // UpdateAccountingBankfeedtransaction - Update a bankfeedtransaction
+// Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 func (s *Bankfeedtransaction) UpdateAccountingBankfeedtransaction(ctx context.Context, request operations.UpdateAccountingBankfeedtransactionRequest, opts ...operations.Option) (*operations.UpdateAccountingBankfeedtransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -31,6 +31,7 @@ func newGroup(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 }
 
 // CreateAdsGroup - Create a group
+// Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
 func (s *Group) CreateAdsGroup(ctx context.Context, request operations.CreateAdsGroupRequest, opts ...operations.Option) (*operations.CreateAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Group) CreateAdsGroup(ctx context.Context, request operations.CreateAds
 }
 
 // CreateHrisGroup - Create a group
+// Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
 func (s *Group) CreateHrisGroup(ctx context.Context, request operations.CreateHrisGroupRequest, opts ...operations.Option) (*operations.CreateHrisGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -669,6 +671,7 @@ func (s *Group) CreateScimGroups(ctx context.Context, request operations.CreateS
 }
 
 // GetAdsGroup - Retrieve a group
+// Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Group) GetAdsGroup(ctx context.Context, request operations.GetAdsGroupRequest, opts ...operations.Option) (*operations.GetAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -876,6 +879,7 @@ func (s *Group) GetAdsGroup(ctx context.Context, request operations.GetAdsGroupR
 }
 
 // GetClubsGroup - Retrieve a group
+// Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Group) GetClubsGroup(ctx context.Context, request operations.GetClubsGroupRequest, opts ...operations.Option) (*operations.GetClubsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1083,6 +1087,7 @@ func (s *Group) GetClubsGroup(ctx context.Context, request operations.GetClubsGr
 }
 
 // GetHrisGroup - Retrieve a group
+// Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Group) GetHrisGroup(ctx context.Context, request operations.GetHrisGroupRequest, opts ...operations.Option) (*operations.GetHrisGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1493,6 +1498,7 @@ func (s *Group) GetScimGroups(ctx context.Context, request operations.GetScimGro
 }
 
 // ListAdsGroups - List all groups
+// Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Group) ListAdsGroups(ctx context.Context, request operations.ListAdsGroupsRequest, opts ...operations.Option) (*operations.ListAdsGroupsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1700,6 +1706,7 @@ func (s *Group) ListAdsGroups(ctx context.Context, request operations.ListAdsGro
 }
 
 // ListClubsGroups - List all groups
+// Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Group) ListClubsGroups(ctx context.Context, request operations.ListClubsGroupsRequest, opts ...operations.Option) (*operations.ListClubsGroupsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1907,6 +1914,7 @@ func (s *Group) ListClubsGroups(ctx context.Context, request operations.ListClub
 }
 
 // ListHrisGroups - List all groups
+// Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Group) ListHrisGroups(ctx context.Context, request operations.ListHrisGroupsRequest, opts ...operations.Option) (*operations.ListHrisGroupsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2321,6 +2329,7 @@ func (s *Group) ListScimGroups(ctx context.Context, request operations.ListScimG
 }
 
 // PatchAdsGroup - Update a group
+// Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 func (s *Group) PatchAdsGroup(ctx context.Context, request operations.PatchAdsGroupRequest, opts ...operations.Option) (*operations.PatchAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2535,6 +2544,7 @@ func (s *Group) PatchAdsGroup(ctx context.Context, request operations.PatchAdsGr
 }
 
 // PatchHrisGroup - Update a group
+// Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 func (s *Group) PatchHrisGroup(ctx context.Context, request operations.PatchHrisGroupRequest, opts ...operations.Option) (*operations.PatchHrisGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2959,6 +2969,7 @@ func (s *Group) PatchScimGroups(ctx context.Context, request operations.PatchSci
 }
 
 // RemoveAdsGroup - Remove a group
+// Deletes the AdsGroup identified by `id`.
 func (s *Group) RemoveAdsGroup(ctx context.Context, request operations.RemoveAdsGroupRequest, opts ...operations.Option) (*operations.RemoveAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3141,6 +3152,7 @@ func (s *Group) RemoveAdsGroup(ctx context.Context, request operations.RemoveAds
 }
 
 // RemoveHrisGroup - Remove a group
+// Deletes the HrisGroup identified by `id`.
 func (s *Group) RemoveHrisGroup(ctx context.Context, request operations.RemoveHrisGroupRequest, opts ...operations.Option) (*operations.RemoveHrisGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3505,6 +3517,7 @@ func (s *Group) RemoveScimGroups(ctx context.Context, request operations.RemoveS
 }
 
 // UpdateAdsGroup - Update a group
+// Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 func (s *Group) UpdateAdsGroup(ctx context.Context, request operations.UpdateAdsGroupRequest, opts ...operations.Option) (*operations.UpdateAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3719,6 +3732,7 @@ func (s *Group) UpdateAdsGroup(ctx context.Context, request operations.UpdateAds
 }
 
 // UpdateHrisGroup - Update a group
+// Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 func (s *Group) UpdateHrisGroup(ctx context.Context, request operations.UpdateHrisGroupRequest, opts ...operations.Option) (*operations.UpdateHrisGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

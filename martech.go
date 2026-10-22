@@ -31,6 +31,7 @@ func newMartech(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateMartechCampaign - Create a campaign
+// Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they are mapped to the provider's API. Returns the created MarketingCampaign.
 func (s *Martech) CreateMartechCampaign(ctx context.Context, request operations.CreateMartechCampaignRequest, opts ...operations.Option) (*operations.CreateMartechCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Martech) CreateMartechCampaign(ctx context.Context, request operations.
 }
 
 // CreateMartechList - Create a list
+// Creates a MarketingList. Provide the unified MarketingList fields in the request body; they are mapped to the provider's API. Returns the created MarketingList.
 func (s *Martech) CreateMartechList(ctx context.Context, request operations.CreateMartechListRequest, opts ...operations.Option) (*operations.CreateMartechListResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Martech) CreateMartechList(ctx context.Context, request operations.Crea
 }
 
 // CreateMartechMember - Create a member
+// Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are mapped to the provider's API. Returns the created MarketingMember.
 func (s *Martech) CreateMartechMember(ctx context.Context, request operations.CreateMartechMemberRequest, opts ...operations.Option) (*operations.CreateMartechMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Martech) CreateMartechMember(ctx context.Context, request operations.Cr
 }
 
 // GetMartechCampaign - Retrieve a campaign
+// Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Martech) GetMartechCampaign(ctx context.Context, request operations.GetMartechCampaignRequest, opts ...operations.Option) (*operations.GetMartechCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -880,6 +884,7 @@ func (s *Martech) GetMartechCampaign(ctx context.Context, request operations.Get
 }
 
 // GetMartechList - Retrieve a list
+// Retrieves a single MarketingList by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Martech) GetMartechList(ctx context.Context, request operations.GetMartechListRequest, opts ...operations.Option) (*operations.GetMartechListResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1087,6 +1092,7 @@ func (s *Martech) GetMartechList(ctx context.Context, request operations.GetMart
 }
 
 // GetMartechMember - Retrieve a member
+// Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Martech) GetMartechMember(ctx context.Context, request operations.GetMartechMemberRequest, opts ...operations.Option) (*operations.GetMartechMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1294,6 +1300,7 @@ func (s *Martech) GetMartechMember(ctx context.Context, request operations.GetMa
 }
 
 // ListMartechCampaigns - List all campaigns
+// Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Martech) ListMartechCampaigns(ctx context.Context, request operations.ListMartechCampaignsRequest, opts ...operations.Option) (*operations.ListMartechCampaignsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Martech) ListMartechCampaigns(ctx context.Context, request operations.L
 }
 
 // ListMartechLists - List all lists
+// Returns a list of MarketingLists. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Martech) ListMartechLists(ctx context.Context, request operations.ListMartechListsRequest, opts ...operations.Option) (*operations.ListMartechListsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1708,6 +1716,7 @@ func (s *Martech) ListMartechLists(ctx context.Context, request operations.ListM
 }
 
 // ListMartechMembers - List all members
+// Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Martech) ListMartechMembers(ctx context.Context, request operations.ListMartechMembersRequest, opts ...operations.Option) (*operations.ListMartechMembersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1915,6 +1924,7 @@ func (s *Martech) ListMartechMembers(ctx context.Context, request operations.Lis
 }
 
 // ListMartechReports - List all reports
+// Returns a list of MarketingReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Martech) ListMartechReports(ctx context.Context, request operations.ListMartechReportsRequest, opts ...operations.Option) (*operations.ListMartechReportsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2122,6 +2132,7 @@ func (s *Martech) ListMartechReports(ctx context.Context, request operations.Lis
 }
 
 // PatchMartechCampaign - Update a campaign
+// Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 func (s *Martech) PatchMartechCampaign(ctx context.Context, request operations.PatchMartechCampaignRequest, opts ...operations.Option) (*operations.PatchMartechCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2336,6 +2347,7 @@ func (s *Martech) PatchMartechCampaign(ctx context.Context, request operations.P
 }
 
 // PatchMartechList - Update a list
+// Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
 func (s *Martech) PatchMartechList(ctx context.Context, request operations.PatchMartechListRequest, opts ...operations.Option) (*operations.PatchMartechListResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2550,6 +2562,7 @@ func (s *Martech) PatchMartechList(ctx context.Context, request operations.Patch
 }
 
 // PatchMartechMember - Update a member
+// Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
 func (s *Martech) PatchMartechMember(ctx context.Context, request operations.PatchMartechMemberRequest, opts ...operations.Option) (*operations.PatchMartechMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2764,6 +2777,7 @@ func (s *Martech) PatchMartechMember(ctx context.Context, request operations.Pat
 }
 
 // RemoveMartechCampaign - Remove a campaign
+// Deletes the MarketingCampaign identified by `id`.
 func (s *Martech) RemoveMartechCampaign(ctx context.Context, request operations.RemoveMartechCampaignRequest, opts ...operations.Option) (*operations.RemoveMartechCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2946,6 +2960,7 @@ func (s *Martech) RemoveMartechCampaign(ctx context.Context, request operations.
 }
 
 // RemoveMartechList - Remove a list
+// Deletes the MarketingList identified by `id`.
 func (s *Martech) RemoveMartechList(ctx context.Context, request operations.RemoveMartechListRequest, opts ...operations.Option) (*operations.RemoveMartechListResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3128,6 +3143,7 @@ func (s *Martech) RemoveMartechList(ctx context.Context, request operations.Remo
 }
 
 // RemoveMartechMember - Remove a member
+// Deletes the MarketingMember identified by `id`.
 func (s *Martech) RemoveMartechMember(ctx context.Context, request operations.RemoveMartechMemberRequest, opts ...operations.Option) (*operations.RemoveMartechMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3310,6 +3326,7 @@ func (s *Martech) RemoveMartechMember(ctx context.Context, request operations.Re
 }
 
 // UpdateMartechCampaign - Update a campaign
+// Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 func (s *Martech) UpdateMartechCampaign(ctx context.Context, request operations.UpdateMartechCampaignRequest, opts ...operations.Option) (*operations.UpdateMartechCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3524,6 +3541,7 @@ func (s *Martech) UpdateMartechCampaign(ctx context.Context, request operations.
 }
 
 // UpdateMartechList - Update a list
+// Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
 func (s *Martech) UpdateMartechList(ctx context.Context, request operations.UpdateMartechListRequest, opts ...operations.Option) (*operations.UpdateMartechListResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3738,6 +3756,7 @@ func (s *Martech) UpdateMartechList(ctx context.Context, request operations.Upda
 }
 
 // UpdateMartechMember - Update a member
+// Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
 func (s *Martech) UpdateMartechMember(ctx context.Context, request operations.UpdateMartechMemberRequest, opts ...operations.Option) (*operations.UpdateMartechMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

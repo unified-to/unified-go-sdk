@@ -13,7 +13,7 @@
 
 ## CreateAtsInterview
 
-Create an interview
+Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped to the provider's API. Returns the created AtsInterview.
 
 ### Example Usage
 
@@ -41,13 +41,13 @@ func main() {
         AtsInterview: shared.AtsInterview{
             CreatedAt: types.MustNewTimeFromString("2021-11-28T03:14:47.774Z"),
             EndAt: types.MustNewTimeFromString("2021-12-08T06:33:19.583Z"),
-            ID: unifiedgosdk.Pointer("75d45222-2444-450b-8db6-d716949cdd12"),
+            ID: unifiedgosdk.Pointer("bbff662e-1b0a-4b74-ae44-126c9ba08ca6"),
             Location: unifiedgosdk.Pointer("26596 Halle Trafficway"),
             MeetingURL: unifiedgosdk.Pointer("https://immaculate-foodstuffs.biz"),
             Metadata: []shared.AtsMetadata{},
             StartAt: types.MustNewTimeFromString("2021-12-08T06:03:19.583Z"),
             Status: shared.AtsInterviewStatusScheduled.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-09-23T16:39:11.717Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-09-24T01:29:20.700Z"),
         },
         ConnectionID: "<id>",
     })
@@ -80,7 +80,7 @@ func main() {
 
 ## GetAtsInterview
 
-Retrieve an interview
+Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -135,7 +135,7 @@ func main() {
 
 ## ListAtsInterviews
 
-List all interviews
+Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -189,7 +189,7 @@ func main() {
 
 ## PatchAtsInterview
 
-Update an interview
+Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
 ### Example Usage
 
@@ -217,13 +217,13 @@ func main() {
         AtsInterview: shared.AtsInterview{
             CreatedAt: types.MustNewTimeFromString("2021-11-28T03:14:47.774Z"),
             EndAt: types.MustNewTimeFromString("2021-12-08T06:33:19.583Z"),
-            ID: unifiedgosdk.Pointer("e4f6fa22-60cf-4f9b-98c5-bf66341af9c5"),
+            ID: unifiedgosdk.Pointer("233684a9-a898-473b-a48f-b075574510d6"),
             Location: unifiedgosdk.Pointer("26596 Halle Trafficway"),
             MeetingURL: unifiedgosdk.Pointer("https://immaculate-foodstuffs.biz"),
             Metadata: []shared.AtsMetadata{},
             StartAt: types.MustNewTimeFromString("2021-12-08T06:03:19.583Z"),
             Status: shared.AtsInterviewStatusScheduled.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-09-23T16:39:11.723Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-09-24T01:29:20.706Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -257,7 +257,7 @@ func main() {
 
 ## RemoveAtsInterview
 
-Remove an interview
+Deletes the AtsInterview identified by `id`.
 
 ### Example Usage
 
@@ -312,7 +312,7 @@ func main() {
 
 ## UpdateAtsInterview
 
-Update an interview
+Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
 ### Example Usage
 
@@ -340,13 +340,13 @@ func main() {
         AtsInterview: shared.AtsInterview{
             CreatedAt: types.MustNewTimeFromString("2021-11-28T03:14:47.774Z"),
             EndAt: types.MustNewTimeFromString("2021-12-08T06:33:19.583Z"),
-            ID: unifiedgosdk.Pointer("e4f6fa22-60cf-4f9b-98c5-bf66341af9c5"),
+            ID: unifiedgosdk.Pointer("233684a9-a898-473b-a48f-b075574510d6"),
             Location: unifiedgosdk.Pointer("26596 Halle Trafficway"),
             MeetingURL: unifiedgosdk.Pointer("https://immaculate-foodstuffs.biz"),
             Metadata: []shared.AtsMetadata{},
             StartAt: types.MustNewTimeFromString("2021-12-08T06:03:19.583Z"),
             Status: shared.AtsInterviewStatusScheduled.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-09-23T16:39:11.723Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-09-24T01:29:20.706Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

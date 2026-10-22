@@ -31,6 +31,7 @@ func newAnalytics(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 }
 
 // CreateAnalyticsEvent - Create an event
+// Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsEvent.
 func (s *Analytics) CreateAnalyticsEvent(ctx context.Context, request operations.CreateAnalyticsEventRequest, opts ...operations.Option) (*operations.CreateAnalyticsEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Analytics) CreateAnalyticsEvent(ctx context.Context, request operations
 }
 
 // CreateAnalyticsProperty - Create a property
+// Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsProperty.
 func (s *Analytics) CreateAnalyticsProperty(ctx context.Context, request operations.CreateAnalyticsPropertyRequest, opts ...operations.Option) (*operations.CreateAnalyticsPropertyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Analytics) CreateAnalyticsProperty(ctx context.Context, request operati
 }
 
 // CreateAnalyticsVisitor - Create a visitor
+// Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsVisitor.
 func (s *Analytics) CreateAnalyticsVisitor(ctx context.Context, request operations.CreateAnalyticsVisitorRequest, opts ...operations.Option) (*operations.CreateAnalyticsVisitorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Analytics) CreateAnalyticsVisitor(ctx context.Context, request operatio
 }
 
 // GetAnalyticsEvent - Retrieve an event
+// Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Analytics) GetAnalyticsEvent(ctx context.Context, request operations.GetAnalyticsEventRequest, opts ...operations.Option) (*operations.GetAnalyticsEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -880,6 +884,7 @@ func (s *Analytics) GetAnalyticsEvent(ctx context.Context, request operations.Ge
 }
 
 // GetAnalyticsProperty - Retrieve a property
+// Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Analytics) GetAnalyticsProperty(ctx context.Context, request operations.GetAnalyticsPropertyRequest, opts ...operations.Option) (*operations.GetAnalyticsPropertyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1087,6 +1092,7 @@ func (s *Analytics) GetAnalyticsProperty(ctx context.Context, request operations
 }
 
 // GetAnalyticsSession - Retrieve a session
+// Retrieves a single AnalyticsSession by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Analytics) GetAnalyticsSession(ctx context.Context, request operations.GetAnalyticsSessionRequest, opts ...operations.Option) (*operations.GetAnalyticsSessionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1294,6 +1300,7 @@ func (s *Analytics) GetAnalyticsSession(ctx context.Context, request operations.
 }
 
 // GetAnalyticsVisitor - Retrieve a visitor
+// Retrieves a single AnalyticsVisitor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Analytics) GetAnalyticsVisitor(ctx context.Context, request operations.GetAnalyticsVisitorRequest, opts ...operations.Option) (*operations.GetAnalyticsVisitorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Analytics) GetAnalyticsVisitor(ctx context.Context, request operations.
 }
 
 // ListAnalyticsEvents - List all events
+// Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Analytics) ListAnalyticsEvents(ctx context.Context, request operations.ListAnalyticsEventsRequest, opts ...operations.Option) (*operations.ListAnalyticsEventsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1708,6 +1716,7 @@ func (s *Analytics) ListAnalyticsEvents(ctx context.Context, request operations.
 }
 
 // ListAnalyticsProperties - List all properties
+// Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Analytics) ListAnalyticsProperties(ctx context.Context, request operations.ListAnalyticsPropertiesRequest, opts ...operations.Option) (*operations.ListAnalyticsPropertiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1915,6 +1924,7 @@ func (s *Analytics) ListAnalyticsProperties(ctx context.Context, request operati
 }
 
 // ListAnalyticsReports - List all reports
+// Returns a list of AnalyticsReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Analytics) ListAnalyticsReports(ctx context.Context, request operations.ListAnalyticsReportsRequest, opts ...operations.Option) (*operations.ListAnalyticsReportsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2122,6 +2132,7 @@ func (s *Analytics) ListAnalyticsReports(ctx context.Context, request operations
 }
 
 // ListAnalyticsSessions - List all sessions
+// Returns a list of AnalyticsSessions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Analytics) ListAnalyticsSessions(ctx context.Context, request operations.ListAnalyticsSessionsRequest, opts ...operations.Option) (*operations.ListAnalyticsSessionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2329,6 +2340,7 @@ func (s *Analytics) ListAnalyticsSessions(ctx context.Context, request operation
 }
 
 // ListAnalyticsVisitors - List all visitors
+// Returns a list of AnalyticsVisitors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Analytics) ListAnalyticsVisitors(ctx context.Context, request operations.ListAnalyticsVisitorsRequest, opts ...operations.Option) (*operations.ListAnalyticsVisitorsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2536,6 +2548,7 @@ func (s *Analytics) ListAnalyticsVisitors(ctx context.Context, request operation
 }
 
 // PatchAnalyticsProperty - Update a property
+// Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
 func (s *Analytics) PatchAnalyticsProperty(ctx context.Context, request operations.PatchAnalyticsPropertyRequest, opts ...operations.Option) (*operations.PatchAnalyticsPropertyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2750,6 +2763,7 @@ func (s *Analytics) PatchAnalyticsProperty(ctx context.Context, request operatio
 }
 
 // PatchAnalyticsVisitor - Update a visitor
+// Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
 func (s *Analytics) PatchAnalyticsVisitor(ctx context.Context, request operations.PatchAnalyticsVisitorRequest, opts ...operations.Option) (*operations.PatchAnalyticsVisitorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2964,6 +2978,7 @@ func (s *Analytics) PatchAnalyticsVisitor(ctx context.Context, request operation
 }
 
 // RemoveAnalyticsProperty - Remove a property
+// Deletes the AnalyticsProperty identified by `id`.
 func (s *Analytics) RemoveAnalyticsProperty(ctx context.Context, request operations.RemoveAnalyticsPropertyRequest, opts ...operations.Option) (*operations.RemoveAnalyticsPropertyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3146,6 +3161,7 @@ func (s *Analytics) RemoveAnalyticsProperty(ctx context.Context, request operati
 }
 
 // RemoveAnalyticsVisitor - Remove a visitor
+// Deletes the AnalyticsVisitor identified by `id`.
 func (s *Analytics) RemoveAnalyticsVisitor(ctx context.Context, request operations.RemoveAnalyticsVisitorRequest, opts ...operations.Option) (*operations.RemoveAnalyticsVisitorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3328,6 +3344,7 @@ func (s *Analytics) RemoveAnalyticsVisitor(ctx context.Context, request operatio
 }
 
 // UpdateAnalyticsProperty - Update a property
+// Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
 func (s *Analytics) UpdateAnalyticsProperty(ctx context.Context, request operations.UpdateAnalyticsPropertyRequest, opts ...operations.Option) (*operations.UpdateAnalyticsPropertyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3542,6 +3559,7 @@ func (s *Analytics) UpdateAnalyticsProperty(ctx context.Context, request operati
 }
 
 // UpdateAnalyticsVisitor - Update a visitor
+// Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
 func (s *Analytics) UpdateAnalyticsVisitor(ctx context.Context, request operations.UpdateAnalyticsVisitorRequest, opts ...operations.Option) (*operations.UpdateAnalyticsVisitorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

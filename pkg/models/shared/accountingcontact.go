@@ -76,18 +76,20 @@ type AccountingContact struct {
 	BillingAddress *PropertyAccountingContactBillingAddress `json:"billing_address,omitempty"`
 	CompanyName    *string                                  `json:"company_name,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt *time.Time        `json:"created_at,omitempty"`
-	Currency  *string           `default:"USD" json:"currency"`
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `default:"USD" json:"currency"`
+	// The contact's email addresses
 	Emails    []AccountingEmail `json:"emails,omitempty"`
 	FirstName *string           `json:"first_name,omitempty"`
 	ID        *string           `json:"id,omitempty"`
 	// contact account numbers such as registration, A membership or identification reference to help to identify and search customers
-	Identification *string                          `json:"identification,omitempty"`
-	IsActive       *bool                            `json:"is_active,omitempty"`
-	IsCustomer     *bool                            `json:"is_customer,omitempty"`
-	IsSupplier     *bool                            `json:"is_supplier,omitempty"`
-	LastName       *string                          `json:"last_name,omitempty"`
-	Metadata       []AccountingMetadata             `json:"metadata,omitempty"`
+	Identification *string              `json:"identification,omitempty"`
+	IsActive       *bool                `json:"is_active,omitempty"`
+	IsCustomer     *bool                `json:"is_customer,omitempty"`
+	IsSupplier     *bool                `json:"is_supplier,omitempty"`
+	LastName       *string              `json:"last_name,omitempty"`
+	Metadata       []AccountingMetadata `json:"metadata,omitempty"`
+	// The contact's display name: the company name for a business, or the person's full name
 	Name           *string                          `json:"name,omitempty"`
 	Notes          *string                          `json:"notes,omitempty"`
 	OrganizationID *string                          `json:"organization_id,omitempty"`

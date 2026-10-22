@@ -31,6 +31,7 @@ func newService(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateComputeService - Create a service
+// Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are mapped to the provider's API. Returns the created ComputeService.
 func (s *Service) CreateComputeService(ctx context.Context, request operations.CreateComputeServiceRequest, opts ...operations.Option) (*operations.CreateComputeServiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Service) CreateComputeService(ctx context.Context, request operations.C
 }
 
 // GetComputeService - Retrieve a service
+// Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Service) GetComputeService(ctx context.Context, request operations.GetComputeServiceRequest, opts ...operations.Option) (*operations.GetComputeServiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Service) GetComputeService(ctx context.Context, request operations.GetC
 }
 
 // ListComputeServices - List all services
+// Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Service) ListComputeServices(ctx context.Context, request operations.ListComputeServicesRequest, opts ...operations.Option) (*operations.ListComputeServicesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Service) ListComputeServices(ctx context.Context, request operations.Li
 }
 
 // PatchComputeService - Update a service
+// Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 func (s *Service) PatchComputeService(ctx context.Context, request operations.PatchComputeServiceRequest, opts ...operations.Option) (*operations.PatchComputeServiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Service) PatchComputeService(ctx context.Context, request operations.Pa
 }
 
 // RemoveComputeService - Remove a service
+// Deletes the ComputeService identified by `id`.
 func (s *Service) RemoveComputeService(ctx context.Context, request operations.RemoveComputeServiceRequest, opts ...operations.Option) (*operations.RemoveComputeServiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Service) RemoveComputeService(ctx context.Context, request operations.R
 }
 
 // UpdateComputeService - Update a service
+// Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 func (s *Service) UpdateComputeService(ctx context.Context, request operations.UpdateComputeServiceRequest, opts ...operations.Option) (*operations.UpdateComputeServiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -13,7 +13,7 @@
 
 ## CreateHrisTimeshift
 
-Create a timeshift
+Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeshift.
 
 ### Example Usage
 
@@ -39,7 +39,7 @@ func main() {
 
     res, err := s.Timeshift.CreateHrisTimeshift(ctx, operations.CreateHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
-            ApprovedAt: types.MustNewTimeFromString("2022-07-18T01:51:06.464Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-07-18T11:45:36.212Z"),
             Compensation: []shared.HrisCompensation{
                 shared.HrisCompensation{
                     Amount: unifiedgosdk.Pointer[float64](76761.0),
@@ -51,13 +51,13 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
-            EndAt: types.MustNewTimeFromString("2026-09-27T01:26:47.942Z"),
+            EndAt: types.MustNewTimeFromString("2026-09-28T01:00:15.668Z"),
             Hours: unifiedgosdk.Pointer[float64](6.0),
-            ID: unifiedgosdk.Pointer("6b0e3410-8eef-4221-b88e-e4d4be208730"),
+            ID: unifiedgosdk.Pointer("92b01fd8-ed4d-4643-95ba-0d8a8b541854"),
             IsApproved: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-07-13T00:30:36.291Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-07-01T21:53:01.115Z"),
+            StartAt: types.MustNewTimeFromString("2023-07-13T13:37:31.157Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-02T04:23:45.080Z"),
         },
         ConnectionID: "<id>",
     })
@@ -90,7 +90,7 @@ func main() {
 
 ## GetHrisTimeshift
 
-Retrieve a timeshift
+Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -145,7 +145,7 @@ func main() {
 
 ## ListHrisTimeshifts
 
-List all timeshifts
+Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -199,7 +199,7 @@ func main() {
 
 ## PatchHrisTimeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -225,7 +225,7 @@ func main() {
 
     res, err := s.Timeshift.PatchHrisTimeshift(ctx, operations.PatchHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
-            ApprovedAt: types.MustNewTimeFromString("2022-07-18T01:51:06.472Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-07-18T11:45:36.221Z"),
             Compensation: []shared.HrisCompensation{
                 shared.HrisCompensation{
                     Amount: unifiedgosdk.Pointer[float64](76761.0),
@@ -237,13 +237,13 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
-            EndAt: types.MustNewTimeFromString("2026-09-27T01:26:47.962Z"),
+            EndAt: types.MustNewTimeFromString("2026-09-28T01:00:15.689Z"),
             Hours: unifiedgosdk.Pointer[float64](6.0),
-            ID: unifiedgosdk.Pointer("860cce82-b177-4974-b6a6-dda841cb1baa"),
+            ID: unifiedgosdk.Pointer("be8b2098-4454-4b17-a20f-c3f23a1d0e71"),
             IsApproved: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-07-13T00:30:36.302Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-07-01T21:53:01.120Z"),
+            StartAt: types.MustNewTimeFromString("2023-07-13T13:37:31.169Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-02T04:23:45.085Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -277,7 +277,7 @@ func main() {
 
 ## RemoveHrisTimeshift
 
-Remove a timeshift
+Deletes the HrisTimeshift identified by `id`.
 
 ### Example Usage
 
@@ -332,7 +332,7 @@ func main() {
 
 ## UpdateHrisTimeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -358,7 +358,7 @@ func main() {
 
     res, err := s.Timeshift.UpdateHrisTimeshift(ctx, operations.UpdateHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
-            ApprovedAt: types.MustNewTimeFromString("2022-07-18T01:51:06.472Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-07-18T11:45:36.221Z"),
             Compensation: []shared.HrisCompensation{
                 shared.HrisCompensation{
                     Amount: unifiedgosdk.Pointer[float64](76761.0),
@@ -370,13 +370,13 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
-            EndAt: types.MustNewTimeFromString("2026-09-27T01:26:47.962Z"),
+            EndAt: types.MustNewTimeFromString("2026-09-28T01:00:15.689Z"),
             Hours: unifiedgosdk.Pointer[float64](6.0),
-            ID: unifiedgosdk.Pointer("860cce82-b177-4974-b6a6-dda841cb1baa"),
+            ID: unifiedgosdk.Pointer("be8b2098-4454-4b17-a20f-c3f23a1d0e71"),
             IsApproved: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-07-13T00:30:36.302Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-07-01T21:53:01.120Z"),
+            StartAt: types.MustNewTimeFromString("2023-07-13T13:37:31.169Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-02T04:23:45.085Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

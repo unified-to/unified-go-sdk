@@ -31,6 +31,7 @@ func newCarrier(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // GetShippingCarrier - Retrieve a carrier
+// Retrieves a single ShippingCarrier by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Carrier) GetShippingCarrier(ctx context.Context, request operations.GetShippingCarrierRequest, opts ...operations.Option) (*operations.GetShippingCarrierResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -238,6 +239,7 @@ func (s *Carrier) GetShippingCarrier(ctx context.Context, request operations.Get
 }
 
 // ListShippingCarriers - List all carriers
+// Returns a list of ShippingCarriers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Carrier) ListShippingCarriers(ctx context.Context, request operations.ListShippingCarriersRequest, opts ...operations.Option) (*operations.ListShippingCarriersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

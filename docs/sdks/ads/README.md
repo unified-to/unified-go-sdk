@@ -51,7 +51,7 @@
 
 ## CreateAdsAd
 
-Create an ad
+Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the provider's API. Returns the created AdsAd.
 
 ### Example Usage
 
@@ -84,11 +84,11 @@ func main() {
             CreativeAssetURL: unifiedgosdk.Pointer("https://picsum.photos/seed/LwOzrpr9/948/2793"),
             Description: unifiedgosdk.Pointer("Accedo vespillo carpo dolor decet stillicidium comptus tenuis."),
             FinalURL: unifiedgosdk.Pointer("https://improbable-sanity.com"),
-            ID: unifiedgosdk.Pointer("1607f143-283d-4a82-ace1-3ebc68008f8f"),
+            ID: unifiedgosdk.Pointer("79efa2ba-b89a-4321-9695-db7067961ed4"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Hermiston Group"),
             Status: shared.AdsAdStatusArchived.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-06-18T13:39:37.415Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-06-18T23:21:17.005Z"),
         },
         ConnectionID: "<id>",
     })
@@ -121,7 +121,7 @@ func main() {
 
 ## CreateAdsAsset
 
-Create an asset
+Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the provider's API. Returns the created AdsAsset.
 
 ### Example Usage
 
@@ -149,12 +149,12 @@ func main() {
         AdsAsset: shared.AdsAsset{
             CreatedAt: types.MustNewTimeFromString("2020-03-27T20:14:38.603Z"),
             Height: unifiedgosdk.Pointer[float64](400.0),
-            ID: unifiedgosdk.Pointer("b9d2a5ac-0942-44da-aeb7-c1bc675f2148"),
+            ID: unifiedgosdk.Pointer("e4b861f2-f87e-490d-bc8f-298724c180d9"),
             Metadata: []shared.AdsMetadata{},
             MimeType: unifiedgosdk.Pointer("IMAGE_PNG"),
             Name: unifiedgosdk.Pointer("Lockman - DuBuque"),
             Type: shared.AdsAssetTypeImage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-03-25T04:39:03.974Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-03-25T11:51:38.865Z"),
             URL: unifiedgosdk.Pointer("https://informal-perfection.com/"),
             Width: unifiedgosdk.Pointer[float64](600.0),
         },
@@ -189,7 +189,7 @@ func main() {
 
 ## CreateAdsCampaign
 
-Create a campaign
+Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped to the provider's API. Returns the created AdsCampaign.
 
 ### Example Usage
 
@@ -221,18 +221,18 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-05-21T08:51:41.868Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             EffectiveStatus: shared.EffectiveStatusNotEligible.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2025-05-31T23:30:23.660Z"),
-            ID: unifiedgosdk.Pointer("2a3e23ca-f2d4-472e-a1df-9bf34b6d51b8"),
+            EndAt: types.MustNewTimeFromString("2025-06-01T15:48:30.968Z"),
+            ID: unifiedgosdk.Pointer("8c38d467-ea17-49ad-b3b4-14d14a2dd364"),
             Labels: []string{
                 "comedo",
             },
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Emard Inc"),
-            StartAt: types.MustNewTimeFromString("2022-07-21T10:50:21.338Z"),
+            StartAt: types.MustNewTimeFromString("2022-07-21T11:44:20.746Z"),
             Status: shared.AdsCampaignStatusProcessingFailed.ToPointer(),
             Targeting: &shared.PropertyAdsCampaignTargeting{},
             TotalSpendAmount: unifiedgosdk.Pointer[float64](2349.8642875347286),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-01T14:07:49.917Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-02T09:35:38.689Z"),
         },
         ConnectionID: "<id>",
     })
@@ -265,7 +265,7 @@ func main() {
 
 ## CreateAdsCreative
 
-Create a creative
+Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped to the provider's API. Returns the created AdsCreative.
 
 ### Example Usage
 
@@ -292,7 +292,7 @@ func main() {
     res, err := s.Ads.CreateAdsCreative(ctx, operations.CreateAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{
             CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
-            ID: unifiedgosdk.Pointer("33196397-83ce-4cf2-8917-2ebd3417a486"),
+            ID: unifiedgosdk.Pointer("ac28e829-d356-4981-a84e-754e20ddac77"),
             Labels: []string{
                 "coma",
                 "accedo",
@@ -301,7 +301,7 @@ func main() {
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Brekke, Bradtke and Robel"),
             Status: shared.AdsCreativeStatusPaused.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-06-27T18:17:32.459Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-27T23:07:56.004Z"),
         },
         ConnectionID: "<id>",
     })
@@ -334,7 +334,7 @@ func main() {
 
 ## CreateAdsGroup
 
-Create a group
+Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
 
 ### Example Usage
 
@@ -366,15 +366,15 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-08-29T17:59:41.045Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             EffectiveStatus: shared.AdsGroupEffectiveStatusPaused.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2026-06-25T01:34:52.041Z"),
-            ID: unifiedgosdk.Pointer("a2c68603-1f08-42c7-bf47-91462bbd8ae3"),
+            EndAt: types.MustNewTimeFromString("2026-06-26T00:16:40.347Z"),
+            ID: unifiedgosdk.Pointer("12560f3e-69eb-4197-9710-683515cc09a8"),
             LanguageLocale: unifiedgosdk.Pointer("fr-FR"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Stark - Baumbach"),
-            StartAt: types.MustNewTimeFromString("2026-01-09T06:49:11.398Z"),
+            StartAt: types.MustNewTimeFromString("2026-01-10T03:59:49.722Z"),
             Status: shared.AdsGroupStatusProcessing.ToPointer(),
             Targeting: &shared.PropertyAdsGroupTargeting{},
-            UpdatedAt: types.MustNewTimeFromString("2022-01-13T16:14:01.125Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-14T00:08:26.728Z"),
         },
         ConnectionID: "<id>",
     })
@@ -407,7 +407,7 @@ func main() {
 
 ## CreateAdsInsertionorder
 
-Create an insertionorder
+Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they are mapped to the provider's API. Returns the created AdsInsertionorder.
 
 ### Example Usage
 
@@ -434,11 +434,11 @@ func main() {
     res, err := s.Ads.CreateAdsInsertionorder(ctx, operations.CreateAdsInsertionorderRequest{
         AdsInsertionorder: shared.AdsInsertionorder{
             CreatedAt: types.MustNewTimeFromString("2021-04-10T06:57:36.611Z"),
-            ID: unifiedgosdk.Pointer("29e470ca-1a4f-4c5c-91fc-6a28fa9d22d7"),
+            ID: unifiedgosdk.Pointer("d9d82f2b-7a23-44c2-85d8-f8c463819d02"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Kunde, Smith and Reinger"),
             Status: shared.AdsInsertionorderStatusUnspecified.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-28T19:47:29.630Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-28T20:00:34.954Z"),
         },
         ConnectionID: "<id>",
     })
@@ -471,7 +471,7 @@ func main() {
 
 ## CreateAdsOrganization
 
-Create an organization
+Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
 
 ### Example Usage
 
@@ -500,13 +500,13 @@ func main() {
             AccountNumber: unifiedgosdk.Pointer("LQUJx8zQBW"),
             CreatedAt: types.MustNewTimeFromString("2020-07-23T21:47:11.440Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("37fa02a7-2485-4c88-a329-c38febfa1be4"),
+            ID: unifiedgosdk.Pointer("f5896d7a-b8b5-4867-832d-d97788717610"),
             Managers: []shared.AdsManager{},
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Ankunding Inc"),
             Status: shared.AdsOrganizationStatusProcessing.ToPointer(),
             Timezone: unifiedgosdk.Pointer("Europe/Chisinau"),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-29T03:04:47.129Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-30T00:42:16.467Z"),
         },
         ConnectionID: "<id>",
     })
@@ -539,7 +539,7 @@ func main() {
 
 ## GetAdsAd
 
-Retrieve an ad
+Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -594,7 +594,7 @@ func main() {
 
 ## GetAdsAsset
 
-Retrieve an asset
+Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -649,7 +649,7 @@ func main() {
 
 ## GetAdsCampaign
 
-Retrieve a campaign
+Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -704,7 +704,7 @@ func main() {
 
 ## GetAdsCreative
 
-Retrieve a creative
+Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -759,7 +759,7 @@ func main() {
 
 ## GetAdsGroup
 
-Retrieve a group
+Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -814,7 +814,7 @@ func main() {
 
 ## GetAdsInsertionorder
 
-Retrieve an insertionorder
+Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -869,7 +869,7 @@ func main() {
 
 ## GetAdsOrganization
 
-Retrieve an organization
+Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -924,7 +924,7 @@ func main() {
 
 ## GetAdsPromoted
 
-Retrieve a promoted
+Retrieves a single AdsPromoted by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -979,7 +979,7 @@ func main() {
 
 ## GetAdsTarget
 
-Retrieve a target
+Retrieves a single AdsTarget by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1034,7 +1034,7 @@ func main() {
 
 ## ListAdsAds
 
-List all ads
+Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1088,7 +1088,7 @@ func main() {
 
 ## ListAdsAssets
 
-List all assets
+Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1142,7 +1142,7 @@ func main() {
 
 ## ListAdsCampaigns
 
-List all campaigns
+Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1196,7 +1196,7 @@ func main() {
 
 ## ListAdsCreatives
 
-List all creatives
+Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1250,7 +1250,7 @@ func main() {
 
 ## ListAdsGroups
 
-List all groups
+Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1304,7 +1304,7 @@ func main() {
 
 ## ListAdsInsertionorders
 
-List all insertionorders
+Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1358,7 +1358,7 @@ func main() {
 
 ## ListAdsOrganizations
 
-List all organizations
+Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1412,7 +1412,7 @@ func main() {
 
 ## ListAdsPromoteds
 
-List all promoteds
+Returns a list of AdsPromoteds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1466,7 +1466,7 @@ func main() {
 
 ## ListAdsReports
 
-List all reports
+Returns a list of AdsReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1520,7 +1520,7 @@ func main() {
 
 ## ListAdsTargets
 
-List all targets
+Returns a list of AdsTargets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1574,7 +1574,7 @@ func main() {
 
 ## PatchAdsAd
 
-Update an ad
+Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
 ### Example Usage
 
@@ -1607,11 +1607,11 @@ func main() {
             CreativeAssetURL: unifiedgosdk.Pointer("https://picsum.photos/seed/LwOzrpr9/948/2793"),
             Description: unifiedgosdk.Pointer("Accedo vespillo carpo dolor decet stillicidium comptus tenuis."),
             FinalURL: unifiedgosdk.Pointer("https://improbable-sanity.com"),
-            ID: unifiedgosdk.Pointer("95185ea9-82a3-415a-b9ce-ae773a1ace06"),
+            ID: unifiedgosdk.Pointer("e492fe18-8c3c-4017-9124-e101e5326ca6"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Hermiston Group"),
             Status: shared.AdsAdStatusArchived.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-06-18T13:39:37.425Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-06-18T23:21:17.023Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1645,7 +1645,7 @@ func main() {
 
 ## PatchAdsCampaign
 
-Update a campaign
+Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -1677,18 +1677,18 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-05-21T08:51:41.868Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             EffectiveStatus: shared.EffectiveStatusNotEligible.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2025-05-31T23:30:23.735Z"),
-            ID: unifiedgosdk.Pointer("58a93fe5-d8d1-4977-b7f1-db6c66108cf2"),
+            EndAt: types.MustNewTimeFromString("2025-06-01T15:48:31.080Z"),
+            ID: unifiedgosdk.Pointer("6667bcc3-55d9-4772-a024-397885a1f44d"),
             Labels: []string{
                 "comedo",
             },
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Emard Inc"),
-            StartAt: types.MustNewTimeFromString("2022-07-21T10:50:21.342Z"),
+            StartAt: types.MustNewTimeFromString("2022-07-21T11:44:20.752Z"),
             Status: shared.AdsCampaignStatusProcessingFailed.ToPointer(),
             Targeting: &shared.PropertyAdsCampaignTargeting{},
             TotalSpendAmount: unifiedgosdk.Pointer[float64](2349.8642875347286),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-01T14:07:50.007Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-02T09:35:38.822Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1722,7 +1722,7 @@ func main() {
 
 ## PatchAdsCreative
 
-Update a creative
+Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 
 ### Example Usage
 
@@ -1749,7 +1749,7 @@ func main() {
     res, err := s.Ads.PatchAdsCreative(ctx, operations.PatchAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{
             CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
-            ID: unifiedgosdk.Pointer("4407d11b-7581-4e75-aed6-04f91230f880"),
+            ID: unifiedgosdk.Pointer("1c96b97d-6841-4fe2-8d1b-0daa7ddf2854"),
             Labels: []string{
                 "coma",
                 "accedo",
@@ -1758,7 +1758,7 @@ func main() {
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Brekke, Bradtke and Robel"),
             Status: shared.AdsCreativeStatusPaused.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-06-27T18:17:32.465Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-27T23:07:56.013Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1792,7 +1792,7 @@ func main() {
 
 ## PatchAdsGroup
 
-Update a group
+Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -1824,15 +1824,15 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-08-29T17:59:41.045Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             EffectiveStatus: shared.AdsGroupEffectiveStatusPaused.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2026-06-25T01:34:52.194Z"),
-            ID: unifiedgosdk.Pointer("7881867d-720e-4bd6-9ea7-1347033a25c3"),
+            EndAt: types.MustNewTimeFromString("2026-06-26T00:16:40.530Z"),
+            ID: unifiedgosdk.Pointer("2bc07cae-346a-45af-9571-099f47cdbe81"),
             LanguageLocale: unifiedgosdk.Pointer("fr-FR"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Stark - Baumbach"),
-            StartAt: types.MustNewTimeFromString("2026-01-09T06:49:11.540Z"),
+            StartAt: types.MustNewTimeFromString("2026-01-10T03:59:49.894Z"),
             Status: shared.AdsGroupStatusProcessing.ToPointer(),
             Targeting: &shared.PropertyAdsGroupTargeting{},
-            UpdatedAt: types.MustNewTimeFromString("2022-01-13T16:14:01.179Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-14T00:08:26.792Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1866,7 +1866,7 @@ func main() {
 
 ## PatchAdsInsertionorder
 
-Update an insertionorder
+Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
 ### Example Usage
 
@@ -1893,11 +1893,11 @@ func main() {
     res, err := s.Ads.PatchAdsInsertionorder(ctx, operations.PatchAdsInsertionorderRequest{
         AdsInsertionorder: shared.AdsInsertionorder{
             CreatedAt: types.MustNewTimeFromString("2021-04-10T06:57:36.611Z"),
-            ID: unifiedgosdk.Pointer("e53f2bec-eced-427d-9568-4b613573b749"),
+            ID: unifiedgosdk.Pointer("d8e61816-9b36-4ba0-a417-2c6160c1d42a"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Kunde, Smith and Reinger"),
             Status: shared.AdsInsertionorderStatusUnspecified.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-28T19:47:29.630Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-28T20:00:34.954Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1931,7 +1931,7 @@ func main() {
 
 ## PatchAdsOrganization
 
-Update an organization
+Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1960,13 +1960,13 @@ func main() {
             AccountNumber: unifiedgosdk.Pointer("LQUJx8zQBW"),
             CreatedAt: types.MustNewTimeFromString("2020-07-23T21:47:11.440Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("dc95b21f-c5ad-4cb6-b1db-4c172e0343f0"),
+            ID: unifiedgosdk.Pointer("d88adc9e-4dfa-4add-881f-5451e79f73a9"),
             Managers: []shared.AdsManager{},
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Ankunding Inc"),
             Status: shared.AdsOrganizationStatusProcessing.ToPointer(),
             Timezone: unifiedgosdk.Pointer("Europe/Chisinau"),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-29T03:04:47.143Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-30T00:42:16.483Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2000,7 +2000,7 @@ func main() {
 
 ## RemoveAdsAd
 
-Remove an ad
+Deletes the AdsAd identified by `id`.
 
 ### Example Usage
 
@@ -2055,7 +2055,7 @@ func main() {
 
 ## RemoveAdsCampaign
 
-Remove a campaign
+Deletes the AdsCampaign identified by `id`.
 
 ### Example Usage
 
@@ -2110,7 +2110,7 @@ func main() {
 
 ## RemoveAdsCreative
 
-Remove a creative
+Deletes the AdsCreative identified by `id`.
 
 ### Example Usage
 
@@ -2165,7 +2165,7 @@ func main() {
 
 ## RemoveAdsGroup
 
-Remove a group
+Deletes the AdsGroup identified by `id`.
 
 ### Example Usage
 
@@ -2220,7 +2220,7 @@ func main() {
 
 ## RemoveAdsInsertionorder
 
-Remove an insertionorder
+Deletes the AdsInsertionorder identified by `id`.
 
 ### Example Usage
 
@@ -2275,7 +2275,7 @@ func main() {
 
 ## RemoveAdsOrganization
 
-Remove an organization
+Deletes the AdsOrganization identified by `id`.
 
 ### Example Usage
 
@@ -2330,7 +2330,7 @@ func main() {
 
 ## UpdateAdsAd
 
-Update an ad
+Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
 ### Example Usage
 
@@ -2363,11 +2363,11 @@ func main() {
             CreativeAssetURL: unifiedgosdk.Pointer("https://picsum.photos/seed/LwOzrpr9/948/2793"),
             Description: unifiedgosdk.Pointer("Accedo vespillo carpo dolor decet stillicidium comptus tenuis."),
             FinalURL: unifiedgosdk.Pointer("https://improbable-sanity.com"),
-            ID: unifiedgosdk.Pointer("95185ea9-82a3-415a-b9ce-ae773a1ace06"),
+            ID: unifiedgosdk.Pointer("e492fe18-8c3c-4017-9124-e101e5326ca6"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Hermiston Group"),
             Status: shared.AdsAdStatusArchived.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-06-18T13:39:37.425Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-06-18T23:21:17.023Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2401,7 +2401,7 @@ func main() {
 
 ## UpdateAdsCampaign
 
-Update a campaign
+Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -2433,18 +2433,18 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-05-21T08:51:41.868Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             EffectiveStatus: shared.EffectiveStatusNotEligible.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2025-05-31T23:30:23.735Z"),
-            ID: unifiedgosdk.Pointer("58a93fe5-d8d1-4977-b7f1-db6c66108cf2"),
+            EndAt: types.MustNewTimeFromString("2025-06-01T15:48:31.080Z"),
+            ID: unifiedgosdk.Pointer("6667bcc3-55d9-4772-a024-397885a1f44d"),
             Labels: []string{
                 "comedo",
             },
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Emard Inc"),
-            StartAt: types.MustNewTimeFromString("2022-07-21T10:50:21.342Z"),
+            StartAt: types.MustNewTimeFromString("2022-07-21T11:44:20.752Z"),
             Status: shared.AdsCampaignStatusProcessingFailed.ToPointer(),
             Targeting: &shared.PropertyAdsCampaignTargeting{},
             TotalSpendAmount: unifiedgosdk.Pointer[float64](2349.8642875347286),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-01T14:07:50.007Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-02T09:35:38.822Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2478,7 +2478,7 @@ func main() {
 
 ## UpdateAdsCreative
 
-Update a creative
+Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 
 ### Example Usage
 
@@ -2505,7 +2505,7 @@ func main() {
     res, err := s.Ads.UpdateAdsCreative(ctx, operations.UpdateAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{
             CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
-            ID: unifiedgosdk.Pointer("4407d11b-7581-4e75-aed6-04f91230f880"),
+            ID: unifiedgosdk.Pointer("1c96b97d-6841-4fe2-8d1b-0daa7ddf2854"),
             Labels: []string{
                 "coma",
                 "accedo",
@@ -2514,7 +2514,7 @@ func main() {
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Brekke, Bradtke and Robel"),
             Status: shared.AdsCreativeStatusPaused.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-06-27T18:17:32.465Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-27T23:07:56.013Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2548,7 +2548,7 @@ func main() {
 
 ## UpdateAdsGroup
 
-Update a group
+Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -2580,15 +2580,15 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-08-29T17:59:41.045Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             EffectiveStatus: shared.AdsGroupEffectiveStatusPaused.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2026-06-25T01:34:52.194Z"),
-            ID: unifiedgosdk.Pointer("7881867d-720e-4bd6-9ea7-1347033a25c3"),
+            EndAt: types.MustNewTimeFromString("2026-06-26T00:16:40.530Z"),
+            ID: unifiedgosdk.Pointer("2bc07cae-346a-45af-9571-099f47cdbe81"),
             LanguageLocale: unifiedgosdk.Pointer("fr-FR"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Stark - Baumbach"),
-            StartAt: types.MustNewTimeFromString("2026-01-09T06:49:11.540Z"),
+            StartAt: types.MustNewTimeFromString("2026-01-10T03:59:49.894Z"),
             Status: shared.AdsGroupStatusProcessing.ToPointer(),
             Targeting: &shared.PropertyAdsGroupTargeting{},
-            UpdatedAt: types.MustNewTimeFromString("2022-01-13T16:14:01.179Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-14T00:08:26.792Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2622,7 +2622,7 @@ func main() {
 
 ## UpdateAdsInsertionorder
 
-Update an insertionorder
+Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
 ### Example Usage
 
@@ -2649,11 +2649,11 @@ func main() {
     res, err := s.Ads.UpdateAdsInsertionorder(ctx, operations.UpdateAdsInsertionorderRequest{
         AdsInsertionorder: shared.AdsInsertionorder{
             CreatedAt: types.MustNewTimeFromString("2021-04-10T06:57:36.611Z"),
-            ID: unifiedgosdk.Pointer("e53f2bec-eced-427d-9568-4b613573b749"),
+            ID: unifiedgosdk.Pointer("d8e61816-9b36-4ba0-a417-2c6160c1d42a"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Kunde, Smith and Reinger"),
             Status: shared.AdsInsertionorderStatusUnspecified.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-28T19:47:29.630Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-28T20:00:34.954Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2687,7 +2687,7 @@ func main() {
 
 ## UpdateAdsOrganization
 
-Update an organization
+Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -2716,13 +2716,13 @@ func main() {
             AccountNumber: unifiedgosdk.Pointer("LQUJx8zQBW"),
             CreatedAt: types.MustNewTimeFromString("2020-07-23T21:47:11.440Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("dc95b21f-c5ad-4cb6-b1db-4c172e0343f0"),
+            ID: unifiedgosdk.Pointer("d88adc9e-4dfa-4add-881f-5451e79f73a9"),
             Managers: []shared.AdsManager{},
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Ankunding Inc"),
             Status: shared.AdsOrganizationStatusProcessing.ToPointer(),
             Timezone: unifiedgosdk.Pointer("Europe/Chisinau"),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-29T03:04:47.143Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-30T00:42:16.483Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

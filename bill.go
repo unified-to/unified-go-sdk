@@ -31,6 +31,7 @@ func newBill(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 }
 
 // CreateAccountingBill - Create a bill
+// Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are mapped to the provider's API. Returns the created AccountingBill.
 func (s *Bill) CreateAccountingBill(ctx context.Context, request operations.CreateAccountingBillRequest, opts ...operations.Option) (*operations.CreateAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Bill) CreateAccountingBill(ctx context.Context, request operations.Crea
 }
 
 // GetAccountingBill - Retrieve a bill
+// Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Bill) GetAccountingBill(ctx context.Context, request operations.GetAccountingBillRequest, opts ...operations.Option) (*operations.GetAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Bill) GetAccountingBill(ctx context.Context, request operations.GetAcco
 }
 
 // ListAccountingBills - List all bills
+// Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Bill) ListAccountingBills(ctx context.Context, request operations.ListAccountingBillsRequest, opts ...operations.Option) (*operations.ListAccountingBillsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Bill) ListAccountingBills(ctx context.Context, request operations.ListA
 }
 
 // PatchAccountingBill - Update a bill
+// Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 func (s *Bill) PatchAccountingBill(ctx context.Context, request operations.PatchAccountingBillRequest, opts ...operations.Option) (*operations.PatchAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Bill) PatchAccountingBill(ctx context.Context, request operations.Patch
 }
 
 // RemoveAccountingBill - Remove a bill
+// Deletes the AccountingBill identified by `id`.
 func (s *Bill) RemoveAccountingBill(ctx context.Context, request operations.RemoveAccountingBillRequest, opts ...operations.Option) (*operations.RemoveAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Bill) RemoveAccountingBill(ctx context.Context, request operations.Remo
 }
 
 // UpdateAccountingBill - Update a bill
+// Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 func (s *Bill) UpdateAccountingBill(ctx context.Context, request operations.UpdateAccountingBillRequest, opts ...operations.Option) (*operations.UpdateAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

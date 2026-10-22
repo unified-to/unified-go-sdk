@@ -13,7 +13,7 @@
 
 ## CreateHrisBankaccount
 
-Create a bankaccount
+Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are mapped to the provider's API. Returns the created HrisBankaccount.
 
 ### Example Usage
 
@@ -46,7 +46,7 @@ func main() {
             CountryCode: unifiedgosdk.Pointer("US"),
             CreatedAt: types.MustNewTimeFromString("2019-11-16T16:43:45.976Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("873b3ffd-2308-487d-a12d-eaadd026c278"),
+            ID: unifiedgosdk.Pointer("3468ebd9-250e-4abe-9b97-508bf2361433"),
             IsPrimary: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Granville Schumm - Checking"),
@@ -54,7 +54,7 @@ func main() {
             RoutingNumber: unifiedgosdk.Pointer("448650724"),
             SplitAmount: unifiedgosdk.Pointer[float64](98.0),
             SplitType: shared.SplitTypePercentage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-01T06:21:20.400Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-02T01:38:52.642Z"),
         },
         ConnectionID: "<id>",
     })
@@ -87,7 +87,7 @@ func main() {
 
 ## GetHrisBankaccount
 
-Retrieve a bankaccount
+Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -142,7 +142,7 @@ func main() {
 
 ## ListHrisBankaccounts
 
-List all bankaccounts
+Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -196,7 +196,7 @@ func main() {
 
 ## PatchHrisBankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -229,7 +229,7 @@ func main() {
             CountryCode: unifiedgosdk.Pointer("US"),
             CreatedAt: types.MustNewTimeFromString("2019-11-16T16:43:45.976Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("226e7e5d-1767-47a1-b0fd-6b38c5ed69ab"),
+            ID: unifiedgosdk.Pointer("b83bd056-9674-4f6e-a525-95182b7b0bd0"),
             IsPrimary: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Granville Schumm - Checking"),
@@ -237,7 +237,7 @@ func main() {
             RoutingNumber: unifiedgosdk.Pointer("448650724"),
             SplitAmount: unifiedgosdk.Pointer[float64](98.0),
             SplitType: shared.SplitTypePercentage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-01T06:21:20.416Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-02T01:38:52.658Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -271,7 +271,7 @@ func main() {
 
 ## RemoveHrisBankaccount
 
-Remove a bankaccount
+Deletes the HrisBankaccount identified by `id`.
 
 ### Example Usage
 
@@ -326,7 +326,7 @@ func main() {
 
 ## UpdateHrisBankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -359,7 +359,7 @@ func main() {
             CountryCode: unifiedgosdk.Pointer("US"),
             CreatedAt: types.MustNewTimeFromString("2019-11-16T16:43:45.976Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("226e7e5d-1767-47a1-b0fd-6b38c5ed69ab"),
+            ID: unifiedgosdk.Pointer("b83bd056-9674-4f6e-a525-95182b7b0bd0"),
             IsPrimary: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Granville Schumm - Checking"),
@@ -367,7 +367,7 @@ func main() {
             RoutingNumber: unifiedgosdk.Pointer("448650724"),
             SplitAmount: unifiedgosdk.Pointer[float64](98.0),
             SplitType: shared.SplitTypePercentage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-01T06:21:20.416Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-02T01:38:52.658Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

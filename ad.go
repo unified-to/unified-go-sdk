@@ -31,6 +31,7 @@ func newAd(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks.H
 }
 
 // CreateAdsAd - Create an ad
+// Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the provider's API. Returns the created AdsAd.
 func (s *Ad) CreateAdsAd(ctx context.Context, request operations.CreateAdsAdRequest, opts ...operations.Option) (*operations.CreateAdsAdResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Ad) CreateAdsAd(ctx context.Context, request operations.CreateAdsAdRequ
 }
 
 // GetAdsAd - Retrieve an ad
+// Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ad) GetAdsAd(ctx context.Context, request operations.GetAdsAdRequest, opts ...operations.Option) (*operations.GetAdsAdResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Ad) GetAdsAd(ctx context.Context, request operations.GetAdsAdRequest, o
 }
 
 // ListAdsAds - List all ads
+// Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ad) ListAdsAds(ctx context.Context, request operations.ListAdsAdsRequest, opts ...operations.Option) (*operations.ListAdsAdsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Ad) ListAdsAds(ctx context.Context, request operations.ListAdsAdsReques
 }
 
 // PatchAdsAd - Update an ad
+// Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 func (s *Ad) PatchAdsAd(ctx context.Context, request operations.PatchAdsAdRequest, opts ...operations.Option) (*operations.PatchAdsAdResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Ad) PatchAdsAd(ctx context.Context, request operations.PatchAdsAdReques
 }
 
 // RemoveAdsAd - Remove an ad
+// Deletes the AdsAd identified by `id`.
 func (s *Ad) RemoveAdsAd(ctx context.Context, request operations.RemoveAdsAdRequest, opts ...operations.Option) (*operations.RemoveAdsAdResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Ad) RemoveAdsAd(ctx context.Context, request operations.RemoveAdsAdRequ
 }
 
 // UpdateAdsAd - Update an ad
+// Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 func (s *Ad) UpdateAdsAd(ctx context.Context, request operations.UpdateAdsAdRequest, opts ...operations.Option) (*operations.UpdateAdsAdResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

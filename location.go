@@ -31,6 +31,7 @@ func newLocation(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateCommerceLocation - Create a location
+// Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they are mapped to the provider's API. Returns the created CommerceLocation.
 func (s *Location) CreateCommerceLocation(ctx context.Context, request operations.CreateCommerceLocationRequest, opts ...operations.Option) (*operations.CreateCommerceLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Location) CreateCommerceLocation(ctx context.Context, request operation
 }
 
 // CreateHrisLocation - Create a location
+// Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
 func (s *Location) CreateHrisLocation(ctx context.Context, request operations.CreateHrisLocationRequest, opts ...operations.Option) (*operations.CreateHrisLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Location) CreateHrisLocation(ctx context.Context, request operations.Cr
 }
 
 // GetClubsLocation - Retrieve a location
+// Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Location) GetClubsLocation(ctx context.Context, request operations.GetClubsLocationRequest, opts ...operations.Option) (*operations.GetClubsLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -666,6 +669,7 @@ func (s *Location) GetClubsLocation(ctx context.Context, request operations.GetC
 }
 
 // GetCommerceLocation - Retrieve a location
+// Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Location) GetCommerceLocation(ctx context.Context, request operations.GetCommerceLocationRequest, opts ...operations.Option) (*operations.GetCommerceLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Location) GetCommerceLocation(ctx context.Context, request operations.G
 }
 
 // GetHealthcareLocation - Retrieve a location
+// Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Location) GetHealthcareLocation(ctx context.Context, request operations.GetHealthcareLocationRequest, opts ...operations.Option) (*operations.GetHealthcareLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1080,6 +1085,7 @@ func (s *Location) GetHealthcareLocation(ctx context.Context, request operations
 }
 
 // GetHrisLocation - Retrieve a location
+// Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Location) GetHrisLocation(ctx context.Context, request operations.GetHrisLocationRequest, opts ...operations.Option) (*operations.GetHrisLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1287,6 +1293,7 @@ func (s *Location) GetHrisLocation(ctx context.Context, request operations.GetHr
 }
 
 // ListClubsLocations - List all locations
+// Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Location) ListClubsLocations(ctx context.Context, request operations.ListClubsLocationsRequest, opts ...operations.Option) (*operations.ListClubsLocationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1494,6 +1501,7 @@ func (s *Location) ListClubsLocations(ctx context.Context, request operations.Li
 }
 
 // ListCommerceLocations - List all locations
+// Returns a list of CommerceLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Location) ListCommerceLocations(ctx context.Context, request operations.ListCommerceLocationsRequest, opts ...operations.Option) (*operations.ListCommerceLocationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1701,6 +1709,7 @@ func (s *Location) ListCommerceLocations(ctx context.Context, request operations
 }
 
 // ListHealthcareLocations - List all locations
+// Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Location) ListHealthcareLocations(ctx context.Context, request operations.ListHealthcareLocationsRequest, opts ...operations.Option) (*operations.ListHealthcareLocationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1908,6 +1917,7 @@ func (s *Location) ListHealthcareLocations(ctx context.Context, request operatio
 }
 
 // ListHrisLocations - List all locations
+// Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Location) ListHrisLocations(ctx context.Context, request operations.ListHrisLocationsRequest, opts ...operations.Option) (*operations.ListHrisLocationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2115,6 +2125,7 @@ func (s *Location) ListHrisLocations(ctx context.Context, request operations.Lis
 }
 
 // PatchCommerceLocation - Update a location
+// Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 func (s *Location) PatchCommerceLocation(ctx context.Context, request operations.PatchCommerceLocationRequest, opts ...operations.Option) (*operations.PatchCommerceLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2329,6 +2340,7 @@ func (s *Location) PatchCommerceLocation(ctx context.Context, request operations
 }
 
 // PatchHrisLocation - Update a location
+// Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 func (s *Location) PatchHrisLocation(ctx context.Context, request operations.PatchHrisLocationRequest, opts ...operations.Option) (*operations.PatchHrisLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2543,6 +2555,7 @@ func (s *Location) PatchHrisLocation(ctx context.Context, request operations.Pat
 }
 
 // RemoveCommerceLocation - Remove a location
+// Deletes the CommerceLocation identified by `id`.
 func (s *Location) RemoveCommerceLocation(ctx context.Context, request operations.RemoveCommerceLocationRequest, opts ...operations.Option) (*operations.RemoveCommerceLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2725,6 +2738,7 @@ func (s *Location) RemoveCommerceLocation(ctx context.Context, request operation
 }
 
 // RemoveHrisLocation - Remove a location
+// Deletes the HrisLocation identified by `id`.
 func (s *Location) RemoveHrisLocation(ctx context.Context, request operations.RemoveHrisLocationRequest, opts ...operations.Option) (*operations.RemoveHrisLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2907,6 +2921,7 @@ func (s *Location) RemoveHrisLocation(ctx context.Context, request operations.Re
 }
 
 // UpdateCommerceLocation - Update a location
+// Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 func (s *Location) UpdateCommerceLocation(ctx context.Context, request operations.UpdateCommerceLocationRequest, opts ...operations.Option) (*operations.UpdateCommerceLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3121,6 +3136,7 @@ func (s *Location) UpdateCommerceLocation(ctx context.Context, request operation
 }
 
 // UpdateHrisLocation - Update a location
+// Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 func (s *Location) UpdateHrisLocation(ctx context.Context, request operations.UpdateHrisLocationRequest, opts ...operations.Option) (*operations.UpdateHrisLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -13,7 +13,7 @@
 
 ## CreateRepoRepository
 
-Create a repository
+Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are mapped to the provider's API. Returns the created RepoRepository.
 
 ### Example Usage
 
@@ -41,11 +41,11 @@ func main() {
         RepoRepository: shared.RepoRepository{
             CreatedAt: types.MustNewTimeFromString("2023-06-12T09:42:00.080Z"),
             Description: unifiedgosdk.Pointer("Sed somnus crastinus armarium."),
-            ID: unifiedgosdk.Pointer("1becda54-75c5-4934-8961-9ca4ffa219f1"),
+            ID: unifiedgosdk.Pointer("86f236b6-8cd3-488a-b7b2-ce93a56c7517"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.RepoMetadata{},
             Name: "bah-bogus",
-            UpdatedAt: types.MustNewTimeFromString("2024-03-01T02:05:05.865Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-01T07:10:32.663Z"),
             WebURL: unifiedgosdk.Pointer("https://neat-birdbath.org"),
         },
         ConnectionID: "<id>",
@@ -79,7 +79,7 @@ func main() {
 
 ## GetRepoRepository
 
-Retrieve a repository
+Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -134,7 +134,7 @@ func main() {
 
 ## ListRepoRepositories
 
-List all repositories
+Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -188,7 +188,7 @@ func main() {
 
 ## PatchRepoRepository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -216,11 +216,11 @@ func main() {
         RepoRepository: shared.RepoRepository{
             CreatedAt: types.MustNewTimeFromString("2023-06-12T09:42:00.080Z"),
             Description: unifiedgosdk.Pointer("Sed somnus crastinus armarium."),
-            ID: unifiedgosdk.Pointer("03073f42-04d8-46d4-8264-186828af3e72"),
+            ID: unifiedgosdk.Pointer("2702d848-a85c-4e23-af94-267ef6cff2da"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.RepoMetadata{},
             Name: "bah-bogus",
-            UpdatedAt: types.MustNewTimeFromString("2024-03-01T02:05:05.868Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-01T07:10:32.666Z"),
             WebURL: unifiedgosdk.Pointer("https://neat-birdbath.org"),
         },
         ConnectionID: "<id>",
@@ -255,7 +255,7 @@ func main() {
 
 ## RemoveRepoRepository
 
-Remove a repository
+Deletes the RepoRepository identified by `id`.
 
 ### Example Usage
 
@@ -310,7 +310,7 @@ func main() {
 
 ## UpdateRepoRepository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -338,11 +338,11 @@ func main() {
         RepoRepository: shared.RepoRepository{
             CreatedAt: types.MustNewTimeFromString("2023-06-12T09:42:00.080Z"),
             Description: unifiedgosdk.Pointer("Sed somnus crastinus armarium."),
-            ID: unifiedgosdk.Pointer("03073f42-04d8-46d4-8264-186828af3e72"),
+            ID: unifiedgosdk.Pointer("2702d848-a85c-4e23-af94-267ef6cff2da"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.RepoMetadata{},
             Name: "bah-bogus",
-            UpdatedAt: types.MustNewTimeFromString("2024-03-01T02:05:05.868Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-01T07:10:32.666Z"),
             WebURL: unifiedgosdk.Pointer("https://neat-birdbath.org"),
         },
         ConnectionID: "<id>",

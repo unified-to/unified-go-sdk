@@ -31,6 +31,7 @@ func newTimeshift(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 }
 
 // CreateHrisTimeshift - Create a timeshift
+// Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeshift.
 func (s *Timeshift) CreateHrisTimeshift(ctx context.Context, request operations.CreateHrisTimeshiftRequest, opts ...operations.Option) (*operations.CreateHrisTimeshiftResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Timeshift) CreateHrisTimeshift(ctx context.Context, request operations.
 }
 
 // GetHrisTimeshift - Retrieve a timeshift
+// Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Timeshift) GetHrisTimeshift(ctx context.Context, request operations.GetHrisTimeshiftRequest, opts ...operations.Option) (*operations.GetHrisTimeshiftResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Timeshift) GetHrisTimeshift(ctx context.Context, request operations.Get
 }
 
 // ListHrisTimeshifts - List all timeshifts
+// Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Timeshift) ListHrisTimeshifts(ctx context.Context, request operations.ListHrisTimeshiftsRequest, opts ...operations.Option) (*operations.ListHrisTimeshiftsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Timeshift) ListHrisTimeshifts(ctx context.Context, request operations.L
 }
 
 // PatchHrisTimeshift - Update a timeshift
+// Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 func (s *Timeshift) PatchHrisTimeshift(ctx context.Context, request operations.PatchHrisTimeshiftRequest, opts ...operations.Option) (*operations.PatchHrisTimeshiftResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Timeshift) PatchHrisTimeshift(ctx context.Context, request operations.P
 }
 
 // RemoveHrisTimeshift - Remove a timeshift
+// Deletes the HrisTimeshift identified by `id`.
 func (s *Timeshift) RemoveHrisTimeshift(ctx context.Context, request operations.RemoveHrisTimeshiftRequest, opts ...operations.Option) (*operations.RemoveHrisTimeshiftResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Timeshift) RemoveHrisTimeshift(ctx context.Context, request operations.
 }
 
 // UpdateHrisTimeshift - Update a timeshift
+// Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 func (s *Timeshift) UpdateHrisTimeshift(ctx context.Context, request operations.UpdateHrisTimeshiftRequest, opts ...operations.Option) (*operations.UpdateHrisTimeshiftResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -31,6 +31,7 @@ func newForm(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 }
 
 // CreateFormsForm - Create a form
+// Creates a FormsForm. Provide the unified FormsForm fields in the request body; they are mapped to the provider's API. Returns the created FormsForm.
 func (s *Form) CreateFormsForm(ctx context.Context, request operations.CreateFormsFormRequest, opts ...operations.Option) (*operations.CreateFormsFormResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Form) CreateFormsForm(ctx context.Context, request operations.CreateFor
 }
 
 // GetFormsForm - Retrieve a form
+// Retrieves a single FormsForm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Form) GetFormsForm(ctx context.Context, request operations.GetFormsFormRequest, opts ...operations.Option) (*operations.GetFormsFormResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Form) GetFormsForm(ctx context.Context, request operations.GetFormsForm
 }
 
 // ListFormsForms - List all forms
+// Returns a list of FormsForms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Form) ListFormsForms(ctx context.Context, request operations.ListFormsFormsRequest, opts ...operations.Option) (*operations.ListFormsFormsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Form) ListFormsForms(ctx context.Context, request operations.ListFormsF
 }
 
 // PatchFormsForm - Update a form
+// Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
 func (s *Form) PatchFormsForm(ctx context.Context, request operations.PatchFormsFormRequest, opts ...operations.Option) (*operations.PatchFormsFormResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Form) PatchFormsForm(ctx context.Context, request operations.PatchForms
 }
 
 // RemoveFormsForm - Remove a form
+// Deletes the FormsForm identified by `id`.
 func (s *Form) RemoveFormsForm(ctx context.Context, request operations.RemoveFormsFormRequest, opts ...operations.Option) (*operations.RemoveFormsFormResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Form) RemoveFormsForm(ctx context.Context, request operations.RemoveFor
 }
 
 // UpdateFormsForm - Update a form
+// Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
 func (s *Form) UpdateFormsForm(ctx context.Context, request operations.UpdateFormsFormRequest, opts ...operations.Option) (*operations.UpdateFormsFormResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

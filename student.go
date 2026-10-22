@@ -31,6 +31,7 @@ func newStudent(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateLmsStudent - Create a student
+// Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to the provider's API. Returns the created LmsStudent.
 func (s *Student) CreateLmsStudent(ctx context.Context, request operations.CreateLmsStudentRequest, opts ...operations.Option) (*operations.CreateLmsStudentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Student) CreateLmsStudent(ctx context.Context, request operations.Creat
 }
 
 // GetLmsStudent - Retrieve a student
+// Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Student) GetLmsStudent(ctx context.Context, request operations.GetLmsStudentRequest, opts ...operations.Option) (*operations.GetLmsStudentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Student) GetLmsStudent(ctx context.Context, request operations.GetLmsSt
 }
 
 // ListLmsStudents - List all students
+// Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Student) ListLmsStudents(ctx context.Context, request operations.ListLmsStudentsRequest, opts ...operations.Option) (*operations.ListLmsStudentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Student) ListLmsStudents(ctx context.Context, request operations.ListLm
 }
 
 // PatchLmsStudent - Update a student
+// Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 func (s *Student) PatchLmsStudent(ctx context.Context, request operations.PatchLmsStudentRequest, opts ...operations.Option) (*operations.PatchLmsStudentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Student) PatchLmsStudent(ctx context.Context, request operations.PatchL
 }
 
 // RemoveLmsStudent - Remove a student
+// Deletes the LmsStudent identified by `id`.
 func (s *Student) RemoveLmsStudent(ctx context.Context, request operations.RemoveLmsStudentRequest, opts ...operations.Option) (*operations.RemoveLmsStudentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Student) RemoveLmsStudent(ctx context.Context, request operations.Remov
 }
 
 // UpdateLmsStudent - Update a student
+// Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 func (s *Student) UpdateLmsStudent(ctx context.Context, request operations.UpdateLmsStudentRequest, opts ...operations.Option) (*operations.UpdateLmsStudentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

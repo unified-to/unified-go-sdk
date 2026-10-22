@@ -13,7 +13,7 @@
 
 ## CreateHrisBenefit
 
-Create a benefit
+Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped to the provider's API. Returns the created HrisBenefit.
 
 ### Example Usage
 
@@ -47,13 +47,13 @@ func main() {
             EmployerContributionMaxAmount: unifiedgosdk.Pointer[float64](179093.0),
             EmployerContributionType: shared.EmployerContributionTypePercentage.ToPointer(),
             Frequency: shared.HrisBenefitFrequencyMonth.ToPointer(),
-            ID: unifiedgosdk.Pointer("cb407db1-1a01-42f0-a62e-30e0f329f245"),
+            ID: unifiedgosdk.Pointer("100e64a1-48f0-479c-90df-02d8e4b037cc"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Frozen Wooden Ball"),
             Tax: shared.TaxPreTax.ToPointer(),
             Type: shared.HrisBenefitTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-03-20T20:21:01.309Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-21T06:42:51.802Z"),
         },
         ConnectionID: "<id>",
     })
@@ -86,7 +86,7 @@ func main() {
 
 ## GetHrisBenefit
 
-Retrieve a benefit
+Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -141,7 +141,7 @@ func main() {
 
 ## ListHrisBenefits
 
-List all benefits
+Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -195,7 +195,7 @@ func main() {
 
 ## PatchHrisBenefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -229,13 +229,13 @@ func main() {
             EmployerContributionMaxAmount: unifiedgosdk.Pointer[float64](179093.0),
             EmployerContributionType: shared.EmployerContributionTypePercentage.ToPointer(),
             Frequency: shared.HrisBenefitFrequencyMonth.ToPointer(),
-            ID: unifiedgosdk.Pointer("9e16e0e2-62b1-474c-9f90-11fd9ee0ed8c"),
+            ID: unifiedgosdk.Pointer("b36c4fbf-0ca7-4e3c-8e02-7d201f16ca93"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Frozen Wooden Ball"),
             Tax: shared.TaxPreTax.ToPointer(),
             Type: shared.HrisBenefitTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-03-20T20:21:01.318Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-21T06:42:51.811Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -269,7 +269,7 @@ func main() {
 
 ## RemoveHrisBenefit
 
-Remove a benefit
+Deletes the HrisBenefit identified by `id`.
 
 ### Example Usage
 
@@ -324,7 +324,7 @@ func main() {
 
 ## UpdateHrisBenefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -358,13 +358,13 @@ func main() {
             EmployerContributionMaxAmount: unifiedgosdk.Pointer[float64](179093.0),
             EmployerContributionType: shared.EmployerContributionTypePercentage.ToPointer(),
             Frequency: shared.HrisBenefitFrequencyMonth.ToPointer(),
-            ID: unifiedgosdk.Pointer("9e16e0e2-62b1-474c-9f90-11fd9ee0ed8c"),
+            ID: unifiedgosdk.Pointer("b36c4fbf-0ca7-4e3c-8e02-7d201f16ca93"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Frozen Wooden Ball"),
             Tax: shared.TaxPreTax.ToPointer(),
             Type: shared.HrisBenefitTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-03-20T20:21:01.318Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-21T06:42:51.811Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

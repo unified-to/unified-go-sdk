@@ -31,6 +31,7 @@ func newEmbedding(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 }
 
 // CreateGenaiEmbedding - Create an embedding
+// Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are mapped to the provider's API. Returns the created GenaiEmbedding.
 func (s *Embedding) CreateGenaiEmbedding(ctx context.Context, request operations.CreateGenaiEmbeddingRequest, opts ...operations.Option) (*operations.CreateGenaiEmbeddingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

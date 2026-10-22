@@ -13,7 +13,7 @@
 
 ## CreateAccountingJournal
 
-Create a journal
+Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they are mapped to the provider's API. Returns the created AccountingJournal.
 
 ### Example Usage
 
@@ -44,16 +44,16 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-02-20T15:14:55.881Z"),
             Currency: unifiedgosdk.Pointer("CAD"),
             Description: unifiedgosdk.Pointer("Cilicium minima calco constans adipisci."),
-            ID: unifiedgosdk.Pointer("fb4cb023-dbc9-43ae-bb15-ccbfbf28de12"),
+            ID: unifiedgosdk.Pointer("b9302d8f-af88-40b1-a888-c2f2f8fe9263"),
             IsInclusiveOfTax: unifiedgosdk.Pointer(true),
             Lineitems: []shared.AccountingJournalLineitem{},
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2023-11-06T10:40:52.829Z"),
+            PostedAt: types.MustNewTimeFromString("2023-11-06T23:54:38.642Z"),
             Reference: unifiedgosdk.Pointer("JE-78884"),
             Source: unifiedgosdk.Pointer("crustulum"),
             Status: shared.AccountingJournalStatusVoid.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-10T19:42:52.129Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-11T02:27:14.336Z"),
         },
         ConnectionID: "<id>",
     })
@@ -86,7 +86,7 @@ func main() {
 
 ## GetAccountingJournal
 
-Retrieve a journal
+Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -141,7 +141,7 @@ func main() {
 
 ## ListAccountingJournals
 
-List all journals
+Returns a list of AccountingJournals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -195,7 +195,7 @@ func main() {
 
 ## PatchAccountingJournal
 
-Update a journal
+Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
 ### Example Usage
 
@@ -226,16 +226,16 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-02-20T15:14:55.881Z"),
             Currency: unifiedgosdk.Pointer("CAD"),
             Description: unifiedgosdk.Pointer("Cilicium minima calco constans adipisci."),
-            ID: unifiedgosdk.Pointer("d31da702-1e25-44be-a4d9-de209d629dab"),
+            ID: unifiedgosdk.Pointer("3975395e-fb4b-446b-9434-0530f747cc4f"),
             IsInclusiveOfTax: unifiedgosdk.Pointer(true),
             Lineitems: []shared.AccountingJournalLineitem{},
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2023-11-06T10:40:52.844Z"),
+            PostedAt: types.MustNewTimeFromString("2023-11-06T23:54:38.655Z"),
             Reference: unifiedgosdk.Pointer("JE-78884"),
             Source: unifiedgosdk.Pointer("crustulum"),
             Status: shared.AccountingJournalStatusVoid.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-10T19:42:52.137Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-11T02:27:14.342Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -269,7 +269,7 @@ func main() {
 
 ## RemoveAccountingJournal
 
-Remove a journal
+Deletes the AccountingJournal identified by `id`.
 
 ### Example Usage
 
@@ -324,7 +324,7 @@ func main() {
 
 ## UpdateAccountingJournal
 
-Update a journal
+Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
 ### Example Usage
 
@@ -355,16 +355,16 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-02-20T15:14:55.881Z"),
             Currency: unifiedgosdk.Pointer("CAD"),
             Description: unifiedgosdk.Pointer("Cilicium minima calco constans adipisci."),
-            ID: unifiedgosdk.Pointer("d31da702-1e25-44be-a4d9-de209d629dab"),
+            ID: unifiedgosdk.Pointer("3975395e-fb4b-446b-9434-0530f747cc4f"),
             IsInclusiveOfTax: unifiedgosdk.Pointer(true),
             Lineitems: []shared.AccountingJournalLineitem{},
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2023-11-06T10:40:52.844Z"),
+            PostedAt: types.MustNewTimeFromString("2023-11-06T23:54:38.655Z"),
             Reference: unifiedgosdk.Pointer("JE-78884"),
             Source: unifiedgosdk.Pointer("crustulum"),
             Status: shared.AccountingJournalStatusVoid.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-10T19:42:52.137Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-11T02:27:14.342Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

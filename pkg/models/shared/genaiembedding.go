@@ -29,6 +29,7 @@ func (e *EncondingFormat) IsExact() bool {
 }
 
 type GenaiEmbedding struct {
+	// The texts to create embeddings for
 	Content []GenaiEmbeddingContent `json:"content,omitempty"`
 	// 256, 512, 1024, and 1536
 	Dimension *float64 `json:"dimension,omitempty"`

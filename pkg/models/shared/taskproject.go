@@ -18,6 +18,7 @@ type TaskProject struct {
 	HasTasks *bool          `json:"has_tasks,omitempty"`
 	ID       *string        `json:"id,omitempty"`
 	Metadata []TaskMetadata `json:"metadata,omitempty"`
+	// The project's name
 	Name     *string        `json:"name,omitempty"`
 	ParentID *string        `json:"parent_id,omitempty"`
 	Raw      map[string]any `json:"raw,omitempty"`

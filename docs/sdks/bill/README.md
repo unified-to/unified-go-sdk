@@ -13,7 +13,7 @@
 
 ## CreateAccountingBill
 
-Create a bill
+Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are mapped to the provider's API. Returns the created AccountingBill.
 
 ### Example Usage
 
@@ -42,13 +42,13 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://puny-foodstuffs.name"),
-                    ID: unifiedgosdk.Pointer("cebeee36-97bb-4330-9a85-5c69fc343f29"),
+                    ID: unifiedgosdk.Pointer("6c9209f9-761e-4b05-bad7-d11aada20346"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("BILL-2466.pdf"),
                 },
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://grimy-characterization.net"),
-                    ID: unifiedgosdk.Pointer("668457df-b516-4b78-9532-eb2cf6d62589"),
+                    ID: unifiedgosdk.Pointer("043c0df2-d8b5-4766-856e-78913fedeec5"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("BILL-2466-1.pdf"),
                 },
@@ -61,7 +61,7 @@ func main() {
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2019-09-07T23:03:14.104Z"),
             ExtendedNotes: []shared.AccountingExtendedNote{},
-            ID: unifiedgosdk.Pointer("7e27068a-669c-4caa-8506-8d9a42328ae2"),
+            ID: unifiedgosdk.Pointer("b0d3a065-8e95-4707-848a-38944e7d7452"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Admiratio deporto tutamen cilicium infit amissio ante demulceo."),
@@ -77,7 +77,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             Term: shared.TermNet90.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2020-06-01T05:48:10.626Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-06-01T08:26:07.744Z"),
             URL: unifiedgosdk.Pointer("https://cluttered-importance.org/bills/BILL-2466"),
         },
         ConnectionID: "<id>",
@@ -111,7 +111,7 @@ func main() {
 
 ## GetAccountingBill
 
-Retrieve a bill
+Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -166,7 +166,7 @@ func main() {
 
 ## ListAccountingBills
 
-List all bills
+Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -220,7 +220,7 @@ func main() {
 
 ## PatchAccountingBill
 
-Update a bill
+Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
 ### Example Usage
 
@@ -249,13 +249,13 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://puny-foodstuffs.name"),
-                    ID: unifiedgosdk.Pointer("5f7b5dee-8c62-4964-bedd-56fd074ac361"),
+                    ID: unifiedgosdk.Pointer("4527ae4f-25b4-4131-a05b-228a6f649e97"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("BILL-2466.pdf"),
                 },
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://grimy-characterization.net"),
-                    ID: unifiedgosdk.Pointer("5095116b-b393-4afd-87bc-d967ca04b70f"),
+                    ID: unifiedgosdk.Pointer("5743dca5-30a1-4e95-92ce-8a27d46e5b0c"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("BILL-2466-1.pdf"),
                 },
@@ -268,7 +268,7 @@ func main() {
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2019-09-07T23:03:14.104Z"),
             ExtendedNotes: []shared.AccountingExtendedNote{},
-            ID: unifiedgosdk.Pointer("c1f11f76-1eff-43e7-8f44-6a829c9ec2c4"),
+            ID: unifiedgosdk.Pointer("ebe23029-ea98-4dc0-a1ec-eb5de14a04e5"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Admiratio deporto tutamen cilicium infit amissio ante demulceo."),
@@ -284,7 +284,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             Term: shared.TermNet90.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2020-06-01T05:48:10.630Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-06-01T08:26:07.748Z"),
             URL: unifiedgosdk.Pointer("https://cluttered-importance.org/bills/BILL-2466"),
         },
         ConnectionID: "<id>",
@@ -319,7 +319,7 @@ func main() {
 
 ## RemoveAccountingBill
 
-Remove a bill
+Deletes the AccountingBill identified by `id`.
 
 ### Example Usage
 
@@ -374,7 +374,7 @@ func main() {
 
 ## UpdateAccountingBill
 
-Update a bill
+Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
 ### Example Usage
 
@@ -403,13 +403,13 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://puny-foodstuffs.name"),
-                    ID: unifiedgosdk.Pointer("5f7b5dee-8c62-4964-bedd-56fd074ac361"),
+                    ID: unifiedgosdk.Pointer("4527ae4f-25b4-4131-a05b-228a6f649e97"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("BILL-2466.pdf"),
                 },
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://grimy-characterization.net"),
-                    ID: unifiedgosdk.Pointer("5095116b-b393-4afd-87bc-d967ca04b70f"),
+                    ID: unifiedgosdk.Pointer("5743dca5-30a1-4e95-92ce-8a27d46e5b0c"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("BILL-2466-1.pdf"),
                 },
@@ -422,7 +422,7 @@ func main() {
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2019-09-07T23:03:14.104Z"),
             ExtendedNotes: []shared.AccountingExtendedNote{},
-            ID: unifiedgosdk.Pointer("c1f11f76-1eff-43e7-8f44-6a829c9ec2c4"),
+            ID: unifiedgosdk.Pointer("ebe23029-ea98-4dc0-a1ec-eb5de14a04e5"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Admiratio deporto tutamen cilicium infit amissio ante demulceo."),
@@ -438,7 +438,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             Term: shared.TermNet90.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2020-06-01T05:48:10.630Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-06-01T08:26:07.748Z"),
             URL: unifiedgosdk.Pointer("https://cluttered-importance.org/bills/BILL-2466"),
         },
         ConnectionID: "<id>",

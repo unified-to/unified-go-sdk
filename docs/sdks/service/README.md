@@ -13,7 +13,7 @@
 
 ## CreateComputeService
 
-Create a service
+Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are mapped to the provider's API. Returns the created ComputeService.
 
 ### Example Usage
 
@@ -42,7 +42,7 @@ func main() {
             Branch: unifiedgosdk.Pointer("main"),
             BuildCommand: unifiedgosdk.Pointer("npm run build"),
             CreatedAt: types.MustNewTimeFromString("2023-10-04T02:06:29.391Z"),
-            ID: unifiedgosdk.Pointer("b1ada32d-e859-4f4d-9be6-71cddc9e2727"),
+            ID: unifiedgosdk.Pointer("5aa4a9da-3136-44d7-b67a-774ca43245eb"),
             InstanceCount: unifiedgosdk.Pointer[float64](6.0),
             MaxInstanceCount: unifiedgosdk.Pointer[float64](6.0),
             Metadata: []shared.ComputeMetadata{},
@@ -53,7 +53,7 @@ func main() {
             Runtime: unifiedgosdk.Pointer("python"),
             Status: shared.ComputeServiceStatusSuspended.ToPointer(),
             Type: shared.ComputeServiceTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-04-04T16:30:27.060Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-05T04:13:31.628Z"),
             URL: unifiedgosdk.Pointer("https://tame-sideboard.rotating-shoulder.biz"),
         },
         ConnectionID: "<id>",
@@ -87,7 +87,7 @@ func main() {
 
 ## GetComputeService
 
-Retrieve a service
+Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -142,7 +142,7 @@ func main() {
 
 ## ListComputeServices
 
-List all services
+Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -196,7 +196,7 @@ func main() {
 
 ## PatchComputeService
 
-Update a service
+Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
 ### Example Usage
 
@@ -225,7 +225,7 @@ func main() {
             Branch: unifiedgosdk.Pointer("main"),
             BuildCommand: unifiedgosdk.Pointer("npm run build"),
             CreatedAt: types.MustNewTimeFromString("2023-10-04T02:06:29.391Z"),
-            ID: unifiedgosdk.Pointer("43273ad6-5268-461f-88b5-814d999d20b3"),
+            ID: unifiedgosdk.Pointer("8ce46942-4d37-431a-b3d0-f3fb463c15a9"),
             InstanceCount: unifiedgosdk.Pointer[float64](6.0),
             MaxInstanceCount: unifiedgosdk.Pointer[float64](6.0),
             Metadata: []shared.ComputeMetadata{},
@@ -236,7 +236,7 @@ func main() {
             Runtime: unifiedgosdk.Pointer("python"),
             Status: shared.ComputeServiceStatusSuspended.ToPointer(),
             Type: shared.ComputeServiceTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-04-04T16:30:27.072Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-05T04:13:31.639Z"),
             URL: unifiedgosdk.Pointer("https://tame-sideboard.rotating-shoulder.biz"),
         },
         ConnectionID: "<id>",
@@ -271,7 +271,7 @@ func main() {
 
 ## RemoveComputeService
 
-Remove a service
+Deletes the ComputeService identified by `id`.
 
 ### Example Usage
 
@@ -326,7 +326,7 @@ func main() {
 
 ## UpdateComputeService
 
-Update a service
+Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
 ### Example Usage
 
@@ -355,7 +355,7 @@ func main() {
             Branch: unifiedgosdk.Pointer("main"),
             BuildCommand: unifiedgosdk.Pointer("npm run build"),
             CreatedAt: types.MustNewTimeFromString("2023-10-04T02:06:29.391Z"),
-            ID: unifiedgosdk.Pointer("43273ad6-5268-461f-88b5-814d999d20b3"),
+            ID: unifiedgosdk.Pointer("8ce46942-4d37-431a-b3d0-f3fb463c15a9"),
             InstanceCount: unifiedgosdk.Pointer[float64](6.0),
             MaxInstanceCount: unifiedgosdk.Pointer[float64](6.0),
             Metadata: []shared.ComputeMetadata{},
@@ -366,7 +366,7 @@ func main() {
             Runtime: unifiedgosdk.Pointer("python"),
             Status: shared.ComputeServiceStatusSuspended.ToPointer(),
             Type: shared.ComputeServiceTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-04-04T16:30:27.072Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-05T04:13:31.639Z"),
             URL: unifiedgosdk.Pointer("https://tame-sideboard.rotating-shoulder.biz"),
         },
         ConnectionID: "<id>",

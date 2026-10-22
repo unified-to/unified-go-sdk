@@ -275,6 +275,7 @@ func (u TaskMetadataExtraData) MarshalJSON() ([]byte, error) {
 	return nil, errors.New("could not marshal union type TaskMetadataExtraData: all fields are null")
 }
 
+// TaskMetadataFormat - The data type of the custom field, which determines how `value` is formatted.
 type TaskMetadataFormat string
 
 const (
@@ -449,6 +450,7 @@ const (
 	TaskMetadataValueTypeArrayOfTaskMetadataSchemas5 TaskMetadataValueType = "arrayOfTaskMetadataSchemas5"
 )
 
+// TaskMetadataValue - The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false; MULTIPLE_SELECT as an array of option values; otherwise a string.
 type TaskMetadataValue struct {
 	MapOfAny                    map[string]any         `queryParam:"inline" union:"member"`
 	Str                         *string                `queryParam:"inline" union:"member"`
@@ -577,11 +579,15 @@ func (u TaskMetadataValue) MarshalJSON() ([]byte, error) {
 
 type TaskMetadata struct {
 	ExtraData *TaskMetadataExtraData `json:"extra_data,omitempty"`
-	Format    *TaskMetadataFormat    `json:"format,omitempty"`
-	ID        *string                `json:"id,omitempty"`
-	Namespace *string                `json:"namespace,omitempty"`
-	Slug      *string                `json:"slug,omitempty"`
-	Value     *TaskMetadataValue     `json:"value,omitempty"`
+	// The data type of the custom field, which determines how `value` is formatted.
+	Format *TaskMetadataFormat `json:"format,omitempty"`
+	// The ID of the custom field definition (from the metadata/metadata endpoint).
+	ID        *string `json:"id,omitempty"`
+	Namespace *string `json:"namespace,omitempty"`
+	// The integration's API name (key) of an existing custom field. List valid slugs for this object with the metadata/metadata endpoint; unknown slugs are rejected by the integration.
+	Slug *string `json:"slug,omitempty"`
+	// The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false; MULTIPLE_SELECT as an array of option values; otherwise a string.
+	Value *TaskMetadataValue `json:"value,omitempty"`
 }
 
 func (t *TaskMetadata) GetExtraData() *TaskMetadataExtraData {

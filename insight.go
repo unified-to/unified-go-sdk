@@ -31,6 +31,7 @@ func newInsight(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // GetSocialInsight - Retrieve an insight
+// Retrieves a single SocialInsight by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Insight) GetSocialInsight(ctx context.Context, request operations.GetSocialInsightRequest, opts ...operations.Option) (*operations.GetSocialInsightResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -238,6 +239,7 @@ func (s *Insight) GetSocialInsight(ctx context.Context, request operations.GetSo
 }
 
 // ListSocialInsights - List all insights
+// Returns a list of SocialInsights. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Insight) ListSocialInsights(ctx context.Context, request operations.ListSocialInsightsRequest, opts ...operations.Option) (*operations.ListSocialInsightsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

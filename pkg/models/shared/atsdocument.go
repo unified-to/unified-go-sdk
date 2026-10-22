@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// AtsDocumentType - The kind of document
 type AtsDocumentType string
 
 const (
@@ -35,19 +36,22 @@ func (e *AtsDocumentType) IsExact() bool {
 
 type AtsDocument struct {
 	ApplicationID *string `json:"application_id,omitempty"`
-	CandidateID   *string `json:"candidate_id,omitempty"`
+	// The ID of the candidate the document belongs to (an AtsCandidate ID)
+	CandidateID *string `json:"candidate_id,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// base64 encoded file contents used for create/update actions. Use this field to send an attachment e.g. a resume, a profile, or other text content
 	DocumentData *string `json:"document_data,omitempty"`
 	// This link expires after 1 hour.
-	DocumentURL *string          `json:"document_url,omitempty"`
-	Filename    *string          `json:"filename,omitempty"`
-	ID          *string          `json:"id,omitempty"`
-	JobID       *string          `json:"job_id,omitempty"`
-	Metadata    []AtsMetadata    `json:"metadata,omitempty"`
-	Raw         map[string]any   `json:"raw,omitempty"`
-	Type        *AtsDocumentType `json:"type,omitempty"`
+	DocumentURL *string `json:"document_url,omitempty"`
+	// The document's file name, including its extension (e.g. resume.pdf)
+	Filename *string        `json:"filename,omitempty"`
+	ID       *string        `json:"id,omitempty"`
+	JobID    *string        `json:"job_id,omitempty"`
+	Metadata []AtsMetadata  `json:"metadata,omitempty"`
+	Raw      map[string]any `json:"raw,omitempty"`
+	// The kind of document
+	Type *AtsDocumentType `json:"type,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	// (reference to HrisEmployee)

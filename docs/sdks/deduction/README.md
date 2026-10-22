@@ -13,7 +13,7 @@
 
 ## CreateHrisDeduction
 
-Create a deduction
+Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are mapped to the provider's API. Returns the created HrisDeduction.
 
 ### Example Usage
 
@@ -46,14 +46,14 @@ func main() {
             EmployerType: shared.EmployerTypePercentage.ToPointer(),
             Frequency: shared.HrisDeductionFrequencyOneTime.ToPointer(),
             GarnishmentType: shared.GarnishmentTypeChildSupport.ToPointer(),
-            ID: unifiedgosdk.Pointer("b93fdf66-995f-4f76-b945-d3a17ab7254b"),
+            ID: unifiedgosdk.Pointer("a86ffc16-9876-48ec-aaf3-43e7a64c206d"),
             IsActive: unifiedgosdk.Pointer(true),
             MaxAmount: unifiedgosdk.Pointer[float64](21794.0),
             Metadata: []shared.HrisMetadata{},
             Notes: unifiedgosdk.Pointer("Carmen desidero."),
-            StartAt: types.MustNewTimeFromString("2025-03-15T07:40:47.474Z"),
+            StartAt: types.MustNewTimeFromString("2025-03-16T01:46:40.270Z"),
             Type: shared.HrisDeductionTypeFixed.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-03-22T06:59:33.108Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-22T21:37:00.011Z"),
         },
         ConnectionID: "<id>",
     })
@@ -86,7 +86,7 @@ func main() {
 
 ## GetHrisDeduction
 
-Retrieve a deduction
+Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -141,7 +141,7 @@ func main() {
 
 ## ListHrisDeductions
 
-List all deductions
+Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -195,7 +195,7 @@ func main() {
 
 ## PatchHrisDeduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -228,14 +228,14 @@ func main() {
             EmployerType: shared.EmployerTypePercentage.ToPointer(),
             Frequency: shared.HrisDeductionFrequencyOneTime.ToPointer(),
             GarnishmentType: shared.GarnishmentTypeChildSupport.ToPointer(),
-            ID: unifiedgosdk.Pointer("c3213a23-98f3-4a00-85e5-4297c58c69b9"),
+            ID: unifiedgosdk.Pointer("2b0eecf4-4ef5-4c58-952b-20761e9d8c04"),
             IsActive: unifiedgosdk.Pointer(true),
             MaxAmount: unifiedgosdk.Pointer[float64](21794.0),
             Metadata: []shared.HrisMetadata{},
             Notes: unifiedgosdk.Pointer("Carmen desidero."),
-            StartAt: types.MustNewTimeFromString("2025-03-15T07:40:47.491Z"),
+            StartAt: types.MustNewTimeFromString("2025-03-16T01:46:40.283Z"),
             Type: shared.HrisDeductionTypeFixed.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-03-22T06:59:33.122Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-22T21:37:00.022Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -269,7 +269,7 @@ func main() {
 
 ## RemoveHrisDeduction
 
-Remove a deduction
+Deletes the HrisDeduction identified by `id`.
 
 ### Example Usage
 
@@ -324,7 +324,7 @@ func main() {
 
 ## UpdateHrisDeduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -357,14 +357,14 @@ func main() {
             EmployerType: shared.EmployerTypePercentage.ToPointer(),
             Frequency: shared.HrisDeductionFrequencyOneTime.ToPointer(),
             GarnishmentType: shared.GarnishmentTypeChildSupport.ToPointer(),
-            ID: unifiedgosdk.Pointer("c3213a23-98f3-4a00-85e5-4297c58c69b9"),
+            ID: unifiedgosdk.Pointer("2b0eecf4-4ef5-4c58-952b-20761e9d8c04"),
             IsActive: unifiedgosdk.Pointer(true),
             MaxAmount: unifiedgosdk.Pointer[float64](21794.0),
             Metadata: []shared.HrisMetadata{},
             Notes: unifiedgosdk.Pointer("Carmen desidero."),
-            StartAt: types.MustNewTimeFromString("2025-03-15T07:40:47.491Z"),
+            StartAt: types.MustNewTimeFromString("2025-03-16T01:46:40.283Z"),
             Type: shared.HrisDeductionTypeFixed.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-03-22T06:59:33.122Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-22T21:37:00.022Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

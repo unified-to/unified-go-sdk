@@ -42,9 +42,10 @@ type KmsPage struct {
 	ParentID    *string           `json:"parent_id,omitempty"`
 	Raw         map[string]any    `json:"raw,omitempty"`
 	// (reference to KmsSpace)
-	SpaceID *string     `json:"space_id,omitempty"`
-	Title   *string     `json:"title,omitempty"`
-	Type    KmsPageType `json:"type"`
+	SpaceID *string `json:"space_id,omitempty"`
+	// The page's title
+	Title *string     `json:"title,omitempty"`
+	Type  KmsPageType `json:"type"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	// (reference to HrisEmployee)

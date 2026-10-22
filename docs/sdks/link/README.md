@@ -19,7 +19,7 @@
 
 ## CreateCalendarLink
 
-Create a link
+Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped to the provider's API. Returns the created CalendarLink.
 
 ### Example Usage
 
@@ -47,13 +47,13 @@ func main() {
             CreatedAt: unifiedgosdk.Pointer("2023-03-07T13:34:11.959Z"),
             Description: unifiedgosdk.Pointer("Vitium clibanus laboriosam uxor denuncio."),
             Duration: unifiedgosdk.Pointer[float64](74.0),
-            ID: unifiedgosdk.Pointer("ac5a258c-077d-4fdd-988e-bad749ee7965"),
+            ID: unifiedgosdk.Pointer("bd90d587-d2a9-4c4e-ac90-3966a5ceec25"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.CalendarMetadata{},
             Name: unifiedgosdk.Pointer("Sopor sopor ancilla animus anser dignissimos vito confero utilis."),
             PriceAmount: unifiedgosdk.Pointer[float64](44.0),
             PriceCurrency: unifiedgosdk.Pointer("USD"),
-            UpdatedAt: unifiedgosdk.Pointer("2024-03-15T13:01:57.661Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-03-15T19:44:59.931Z"),
             URL: "https://annual-apricot.info/",
         },
         ConnectionID: "<id>",
@@ -87,7 +87,7 @@ func main() {
 
 ## CreatePaymentLink
 
-Create a link
+Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
 
 ### Example Usage
 
@@ -117,13 +117,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
             Currency: unifiedgosdk.Pointer("CAD"),
             Description: unifiedgosdk.Pointer("Savor the tender essence in our Ball, designed for dim culinary adventures"),
-            ID: unifiedgosdk.Pointer("44af6dd3-1389-49e9-8034-8adbc5265f45"),
+            ID: unifiedgosdk.Pointer("fc515664-3d8a-4056-95ed-aaf2662aefd8"),
             IsActive: unifiedgosdk.Pointer(true),
             IsChargeableNow: unifiedgosdk.Pointer(true),
             Lineitems: []shared.PaymentLineitem{
                 shared.PaymentLineitem{
                     CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
-                    ID: unifiedgosdk.Pointer("f9b9e527-2508-4223-bdf6-7fdebfada7ea"),
+                    ID: unifiedgosdk.Pointer("77b51887-c151-4811-aff1-67b93542f04a"),
                     ItemDescription: unifiedgosdk.Pointer("Discover the worst new Computer with an exciting mix of Steel ingredients"),
                     ItemName: unifiedgosdk.Pointer("Soft Marble Cheese"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -135,7 +135,7 @@ func main() {
                 shared.PaymentLineitem{
                     CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
                     DiscountAmount: unifiedgosdk.Pointer[float64](424.32),
-                    ID: unifiedgosdk.Pointer("1009ccc2-d6fe-4236-8c68-d0fdab642432"),
+                    ID: unifiedgosdk.Pointer("4a10838e-ed44-472c-b4ef-88a6d0b75590"),
                     ItemDescription: unifiedgosdk.Pointer("Innovative Shoes featuring utilized technology and Cotton construction"),
                     ItemName: unifiedgosdk.Pointer("Sleek Aluminum Shoes"),
                     Notes: unifiedgosdk.Pointer("Cervus decretum viridis doloremque."),
@@ -147,7 +147,7 @@ func main() {
                 },
                 shared.PaymentLineitem{
                     CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
-                    ID: unifiedgosdk.Pointer("35cf0b54-224b-4149-847c-02116695cc67"),
+                    ID: unifiedgosdk.Pointer("b19062d1-03db-4538-8b1a-d279ccaa2c70"),
                     ItemDescription: unifiedgosdk.Pointer("Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance"),
                     ItemName: unifiedgosdk.Pointer("Elegant Concrete Gloves"),
                     Notes: unifiedgosdk.Pointer("Desipio usque vacuus currus cetera testimonium."),
@@ -160,8 +160,8 @@ func main() {
             },
             Metadata: []shared.PaymentMetadata{},
             SuccessURL: unifiedgosdk.Pointer("https://tinted-jet.info"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-13T09:31:26.812Z"),
-            URL: unifiedgosdk.Pointer("https://pay.example.com/44af6dd3-1389-49e9-8034-8adbc5265f45"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-13T15:33:57.274Z"),
+            URL: unifiedgosdk.Pointer("https://pay.example.com/fc515664-3d8a-4056-95ed-aaf2662aefd8"),
         },
         ConnectionID: "<id>",
     })
@@ -194,7 +194,7 @@ func main() {
 
 ## GetCalendarLink
 
-Retrieve a link
+Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -249,7 +249,7 @@ func main() {
 
 ## GetPaymentLink
 
-Retrieve a link
+Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -304,7 +304,7 @@ func main() {
 
 ## ListCalendarLinks
 
-List all links
+Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -358,7 +358,7 @@ func main() {
 
 ## ListPaymentLinks
 
-List all links
+Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -412,7 +412,7 @@ func main() {
 
 ## PatchCalendarLink
 
-Update a link
+Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 
 ### Example Usage
 
@@ -440,13 +440,13 @@ func main() {
             CreatedAt: unifiedgosdk.Pointer("2023-03-07T13:34:11.959Z"),
             Description: unifiedgosdk.Pointer("Vitium clibanus laboriosam uxor denuncio."),
             Duration: unifiedgosdk.Pointer[float64](74.0),
-            ID: unifiedgosdk.Pointer("d5c1154a-0df1-447f-9a79-a861d4aa4320"),
+            ID: unifiedgosdk.Pointer("4f70f5c3-d6f9-4560-b50f-04fb279a483e"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.CalendarMetadata{},
             Name: unifiedgosdk.Pointer("Sopor sopor ancilla animus anser dignissimos vito confero utilis."),
             PriceAmount: unifiedgosdk.Pointer[float64](44.0),
             PriceCurrency: unifiedgosdk.Pointer("USD"),
-            UpdatedAt: unifiedgosdk.Pointer("2024-03-15T13:01:57.665Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-03-15T19:44:59.936Z"),
             URL: "https://annual-apricot.info/",
         },
         ConnectionID: "<id>",
@@ -481,7 +481,7 @@ func main() {
 
 ## PatchPaymentLink
 
-Update a link
+Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
 ### Example Usage
 
@@ -511,13 +511,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
             Currency: unifiedgosdk.Pointer("CAD"),
             Description: unifiedgosdk.Pointer("Savor the tender essence in our Ball, designed for dim culinary adventures"),
-            ID: unifiedgosdk.Pointer("0a44ac07-e03e-4d91-b1cc-dcb1f91dba36"),
+            ID: unifiedgosdk.Pointer("08f916f2-a958-486e-9292-d7529bd8ccba"),
             IsActive: unifiedgosdk.Pointer(true),
             IsChargeableNow: unifiedgosdk.Pointer(true),
             Lineitems: []shared.PaymentLineitem{
                 shared.PaymentLineitem{
                     CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
-                    ID: unifiedgosdk.Pointer("a4992b6e-470c-465d-b2ef-ed9254b71ac6"),
+                    ID: unifiedgosdk.Pointer("3530b134-abde-4de0-ac67-e0478bf02437"),
                     ItemDescription: unifiedgosdk.Pointer("Discover the worst new Computer with an exciting mix of Steel ingredients"),
                     ItemName: unifiedgosdk.Pointer("Soft Marble Cheese"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -529,7 +529,7 @@ func main() {
                 shared.PaymentLineitem{
                     CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
                     DiscountAmount: unifiedgosdk.Pointer[float64](424.32),
-                    ID: unifiedgosdk.Pointer("2cbd3403-33b5-4168-a882-a350fd62271b"),
+                    ID: unifiedgosdk.Pointer("37245c21-0f1d-4cb1-95ee-fdffdda2bc73"),
                     ItemDescription: unifiedgosdk.Pointer("Innovative Shoes featuring utilized technology and Cotton construction"),
                     ItemName: unifiedgosdk.Pointer("Sleek Aluminum Shoes"),
                     Notes: unifiedgosdk.Pointer("Cervus decretum viridis doloremque."),
@@ -541,7 +541,7 @@ func main() {
                 },
                 shared.PaymentLineitem{
                     CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
-                    ID: unifiedgosdk.Pointer("807d9e84-427d-4fd9-9060-9ca6fac75118"),
+                    ID: unifiedgosdk.Pointer("b60c42d8-7654-4944-b7a1-a96966847949"),
                     ItemDescription: unifiedgosdk.Pointer("Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance"),
                     ItemName: unifiedgosdk.Pointer("Elegant Concrete Gloves"),
                     Notes: unifiedgosdk.Pointer("Desipio usque vacuus currus cetera testimonium."),
@@ -554,8 +554,8 @@ func main() {
             },
             Metadata: []shared.PaymentMetadata{},
             SuccessURL: unifiedgosdk.Pointer("https://tinted-jet.info"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-13T09:31:26.816Z"),
-            URL: unifiedgosdk.Pointer("https://pay.example.com/0a44ac07-e03e-4d91-b1cc-dcb1f91dba36"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-13T15:33:57.282Z"),
+            URL: unifiedgosdk.Pointer("https://pay.example.com/08f916f2-a958-486e-9292-d7529bd8ccba"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -589,7 +589,7 @@ func main() {
 
 ## RemoveCalendarLink
 
-Remove a link
+Deletes the CalendarLink identified by `id`.
 
 ### Example Usage
 
@@ -644,7 +644,7 @@ func main() {
 
 ## RemovePaymentLink
 
-Remove a link
+Deletes the PaymentLink identified by `id`.
 
 ### Example Usage
 
@@ -699,7 +699,7 @@ func main() {
 
 ## UpdateCalendarLink
 
-Update a link
+Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 
 ### Example Usage
 
@@ -727,13 +727,13 @@ func main() {
             CreatedAt: unifiedgosdk.Pointer("2023-03-07T13:34:11.959Z"),
             Description: unifiedgosdk.Pointer("Vitium clibanus laboriosam uxor denuncio."),
             Duration: unifiedgosdk.Pointer[float64](74.0),
-            ID: unifiedgosdk.Pointer("d5c1154a-0df1-447f-9a79-a861d4aa4320"),
+            ID: unifiedgosdk.Pointer("4f70f5c3-d6f9-4560-b50f-04fb279a483e"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.CalendarMetadata{},
             Name: unifiedgosdk.Pointer("Sopor sopor ancilla animus anser dignissimos vito confero utilis."),
             PriceAmount: unifiedgosdk.Pointer[float64](44.0),
             PriceCurrency: unifiedgosdk.Pointer("USD"),
-            UpdatedAt: unifiedgosdk.Pointer("2024-03-15T13:01:57.665Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-03-15T19:44:59.936Z"),
             URL: "https://annual-apricot.info/",
         },
         ConnectionID: "<id>",
@@ -768,7 +768,7 @@ func main() {
 
 ## UpdatePaymentLink
 
-Update a link
+Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
 ### Example Usage
 
@@ -798,13 +798,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
             Currency: unifiedgosdk.Pointer("CAD"),
             Description: unifiedgosdk.Pointer("Savor the tender essence in our Ball, designed for dim culinary adventures"),
-            ID: unifiedgosdk.Pointer("0a44ac07-e03e-4d91-b1cc-dcb1f91dba36"),
+            ID: unifiedgosdk.Pointer("08f916f2-a958-486e-9292-d7529bd8ccba"),
             IsActive: unifiedgosdk.Pointer(true),
             IsChargeableNow: unifiedgosdk.Pointer(true),
             Lineitems: []shared.PaymentLineitem{
                 shared.PaymentLineitem{
                     CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
-                    ID: unifiedgosdk.Pointer("a4992b6e-470c-465d-b2ef-ed9254b71ac6"),
+                    ID: unifiedgosdk.Pointer("3530b134-abde-4de0-ac67-e0478bf02437"),
                     ItemDescription: unifiedgosdk.Pointer("Discover the worst new Computer with an exciting mix of Steel ingredients"),
                     ItemName: unifiedgosdk.Pointer("Soft Marble Cheese"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -816,7 +816,7 @@ func main() {
                 shared.PaymentLineitem{
                     CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
                     DiscountAmount: unifiedgosdk.Pointer[float64](424.32),
-                    ID: unifiedgosdk.Pointer("2cbd3403-33b5-4168-a882-a350fd62271b"),
+                    ID: unifiedgosdk.Pointer("37245c21-0f1d-4cb1-95ee-fdffdda2bc73"),
                     ItemDescription: unifiedgosdk.Pointer("Innovative Shoes featuring utilized technology and Cotton construction"),
                     ItemName: unifiedgosdk.Pointer("Sleek Aluminum Shoes"),
                     Notes: unifiedgosdk.Pointer("Cervus decretum viridis doloremque."),
@@ -828,7 +828,7 @@ func main() {
                 },
                 shared.PaymentLineitem{
                     CreatedAt: types.MustNewTimeFromString("2023-06-04T16:11:45.685Z"),
-                    ID: unifiedgosdk.Pointer("807d9e84-427d-4fd9-9060-9ca6fac75118"),
+                    ID: unifiedgosdk.Pointer("b60c42d8-7654-4944-b7a1-a96966847949"),
                     ItemDescription: unifiedgosdk.Pointer("Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance"),
                     ItemName: unifiedgosdk.Pointer("Elegant Concrete Gloves"),
                     Notes: unifiedgosdk.Pointer("Desipio usque vacuus currus cetera testimonium."),
@@ -841,8 +841,8 @@ func main() {
             },
             Metadata: []shared.PaymentMetadata{},
             SuccessURL: unifiedgosdk.Pointer("https://tinted-jet.info"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-13T09:31:26.816Z"),
-            URL: unifiedgosdk.Pointer("https://pay.example.com/0a44ac07-e03e-4d91-b1cc-dcb1f91dba36"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-13T15:33:57.282Z"),
+            URL: unifiedgosdk.Pointer("https://pay.example.com/08f916f2-a958-486e-9292-d7529bd8ccba"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

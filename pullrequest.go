@@ -31,6 +31,7 @@ func newPullrequest(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 }
 
 // CreateRepoPullrequest - Create a pullrequest
+// Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are mapped to the provider's API. Returns the created RepoPullrequest.
 func (s *Pullrequest) CreateRepoPullrequest(ctx context.Context, request operations.CreateRepoPullrequestRequest, opts ...operations.Option) (*operations.CreateRepoPullrequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Pullrequest) CreateRepoPullrequest(ctx context.Context, request operati
 }
 
 // GetRepoPullrequest - Retrieve a pullrequest
+// Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Pullrequest) GetRepoPullrequest(ctx context.Context, request operations.GetRepoPullrequestRequest, opts ...operations.Option) (*operations.GetRepoPullrequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Pullrequest) GetRepoPullrequest(ctx context.Context, request operations
 }
 
 // ListRepoPullrequests - List all pullrequests
+// Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Pullrequest) ListRepoPullrequests(ctx context.Context, request operations.ListRepoPullrequestsRequest, opts ...operations.Option) (*operations.ListRepoPullrequestsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Pullrequest) ListRepoPullrequests(ctx context.Context, request operatio
 }
 
 // PatchRepoPullrequest - Update a pullrequest
+// Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 func (s *Pullrequest) PatchRepoPullrequest(ctx context.Context, request operations.PatchRepoPullrequestRequest, opts ...operations.Option) (*operations.PatchRepoPullrequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Pullrequest) PatchRepoPullrequest(ctx context.Context, request operatio
 }
 
 // RemoveRepoPullrequest - Remove a pullrequest
+// Deletes the RepoPullrequest identified by `id`.
 func (s *Pullrequest) RemoveRepoPullrequest(ctx context.Context, request operations.RemoveRepoPullrequestRequest, opts ...operations.Option) (*operations.RemoveRepoPullrequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Pullrequest) RemoveRepoPullrequest(ctx context.Context, request operati
 }
 
 // UpdateRepoPullrequest - Update a pullrequest
+// Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 func (s *Pullrequest) UpdateRepoPullrequest(ctx context.Context, request operations.UpdateRepoPullrequestRequest, opts ...operations.Option) (*operations.UpdateRepoPullrequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

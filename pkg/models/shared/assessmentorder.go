@@ -57,6 +57,7 @@ func (e *ResponseStatus) IsExact() bool {
 	return false
 }
 
+// AssessmentOrderStatus - The current state of the assessment order
 type AssessmentOrderStatus string
 
 const (
@@ -140,8 +141,9 @@ type AssessmentOrder struct {
 	ResponseSource *string         `json:"response_source,omitempty"`
 	ResponseStatus *ResponseStatus `json:"response_status,omitempty"`
 	// URL to view detailed results
-	ResponseURL *string                `json:"response_url,omitempty"`
-	Status      *AssessmentOrderStatus `json:"status,omitempty"`
+	ResponseURL *string `json:"response_url,omitempty"`
+	// The current state of the assessment order
+	Status *AssessmentOrderStatus `json:"status,omitempty"`
 	// URL to redirect user to after assessment
 	TargetURL *string `json:"target_url,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)

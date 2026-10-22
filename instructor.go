@@ -31,6 +31,7 @@ func newInstructor(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks 
 }
 
 // CreateLmsInstructor - Create an instructor
+// Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request body; they are mapped to the provider's API. Returns the created LmsInstructor.
 func (s *Instructor) CreateLmsInstructor(ctx context.Context, request operations.CreateLmsInstructorRequest, opts ...operations.Option) (*operations.CreateLmsInstructorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Instructor) CreateLmsInstructor(ctx context.Context, request operations
 }
 
 // GetLmsInstructor - Retrieve an instructor
+// Retrieves a single LmsInstructor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Instructor) GetLmsInstructor(ctx context.Context, request operations.GetLmsInstructorRequest, opts ...operations.Option) (*operations.GetLmsInstructorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Instructor) GetLmsInstructor(ctx context.Context, request operations.Ge
 }
 
 // ListLmsInstructors - List all instructors
+// Returns a list of LmsInstructors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Instructor) ListLmsInstructors(ctx context.Context, request operations.ListLmsInstructorsRequest, opts ...operations.Option) (*operations.ListLmsInstructorsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Instructor) ListLmsInstructors(ctx context.Context, request operations.
 }
 
 // PatchLmsInstructor - Update an instructor
+// Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 func (s *Instructor) PatchLmsInstructor(ctx context.Context, request operations.PatchLmsInstructorRequest, opts ...operations.Option) (*operations.PatchLmsInstructorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Instructor) PatchLmsInstructor(ctx context.Context, request operations.
 }
 
 // RemoveLmsInstructor - Remove an instructor
+// Deletes the LmsInstructor identified by `id`.
 func (s *Instructor) RemoveLmsInstructor(ctx context.Context, request operations.RemoveLmsInstructorRequest, opts ...operations.Option) (*operations.RemoveLmsInstructorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Instructor) RemoveLmsInstructor(ctx context.Context, request operations
 }
 
 // UpdateLmsInstructor - Update an instructor
+// Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 func (s *Instructor) UpdateLmsInstructor(ctx context.Context, request operations.UpdateLmsInstructorRequest, opts ...operations.Option) (*operations.UpdateLmsInstructorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

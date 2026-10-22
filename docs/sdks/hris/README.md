@@ -100,7 +100,7 @@
 
 ## CreateHrisAttendance
 
-Create an attendance
+Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are mapped to the provider's API. Returns the created HrisAttendance.
 
 ### Example Usage
 
@@ -134,32 +134,32 @@ func main() {
                 Region: unifiedgosdk.Pointer("Tennessee"),
                 RegionCode: unifiedgosdk.Pointer("CA"),
             },
-            ApprovedAt: types.MustNewTimeFromString("2021-09-19T14:06:30.623Z"),
+            ApprovedAt: types.MustNewTimeFromString("2021-09-19T14:36:24.348Z"),
             Breaks: []shared.HrisAttendanceBreak{
                 shared.HrisAttendanceBreak{
                     DurationMinutes: unifiedgosdk.Pointer[float64](51.0),
-                    EndAt: types.MustNewTimeFromString("2024-02-14T13:16:00.525Z"),
-                    ID: unifiedgosdk.Pointer("90e38399-cdd9-4d0f-9dea-ce081a3fdf76"),
+                    EndAt: types.MustNewTimeFromString("2024-02-15T00:45:56.493Z"),
+                    ID: unifiedgosdk.Pointer("2febbb18-e9d7-4d0b-b18b-58013d50e9ae"),
                     IsPaid: unifiedgosdk.Pointer(false),
                     Name: unifiedgosdk.Pointer("Lunch"),
-                    StartAt: types.MustNewTimeFromString("2023-10-29T23:03:00.394Z"),
+                    StartAt: types.MustNewTimeFromString("2023-10-30T09:12:03.208Z"),
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2021-08-10T19:43:18.452Z"),
             Currency: unifiedgosdk.Pointer("EUR"),
             DeclaredTipsAmount: unifiedgosdk.Pointer[float64](54.0),
             EmployeeUserID: "<id>",
-            EndAt: types.MustTimeFromString("2024-04-23T07:48:11.832Z"),
+            EndAt: types.MustTimeFromString("2024-04-23T20:09:49.905Z"),
             HourlyRate: unifiedgosdk.Pointer[float64](16.0),
             Hours: unifiedgosdk.Pointer[float64](10.0),
-            ID: unifiedgosdk.Pointer("d6a7c321-3372-4891-9b5d-f2d24e9a30c5"),
+            ID: unifiedgosdk.Pointer("5e087bcc-2314-41cf-bef5-c866d0a6f59a"),
             JobName: unifiedgosdk.Pointer("Human Accountability Administrator"),
             Metadata: []shared.HrisMetadata{},
             NonCashTipsAmount: unifiedgosdk.Pointer[float64](167.0),
-            StartAt: types.MustTimeFromString("2021-11-11T00:56:01.833Z"),
+            StartAt: types.MustTimeFromString("2021-11-11T02:05:21.460Z"),
             Status: shared.HrisAttendanceStatusOpen.ToPointer(),
             Timezone: unifiedgosdk.Pointer("America/Atikokan"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-19T21:04:34.807Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-19T23:06:24.665Z"),
         },
         ConnectionID: "<id>",
     })
@@ -192,7 +192,7 @@ func main() {
 
 ## CreateHrisBankaccount
 
-Create a bankaccount
+Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are mapped to the provider's API. Returns the created HrisBankaccount.
 
 ### Example Usage
 
@@ -225,7 +225,7 @@ func main() {
             CountryCode: unifiedgosdk.Pointer("US"),
             CreatedAt: types.MustNewTimeFromString("2019-11-16T16:43:45.976Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("873b3ffd-2308-487d-a12d-eaadd026c278"),
+            ID: unifiedgosdk.Pointer("3468ebd9-250e-4abe-9b97-508bf2361433"),
             IsPrimary: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Granville Schumm - Checking"),
@@ -233,7 +233,7 @@ func main() {
             RoutingNumber: unifiedgosdk.Pointer("448650724"),
             SplitAmount: unifiedgosdk.Pointer[float64](98.0),
             SplitType: shared.SplitTypePercentage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-01T06:21:20.400Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-02T01:38:52.642Z"),
         },
         ConnectionID: "<id>",
     })
@@ -266,7 +266,7 @@ func main() {
 
 ## CreateHrisBenefit
 
-Create a benefit
+Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped to the provider's API. Returns the created HrisBenefit.
 
 ### Example Usage
 
@@ -300,13 +300,13 @@ func main() {
             EmployerContributionMaxAmount: unifiedgosdk.Pointer[float64](179093.0),
             EmployerContributionType: shared.EmployerContributionTypePercentage.ToPointer(),
             Frequency: shared.HrisBenefitFrequencyMonth.ToPointer(),
-            ID: unifiedgosdk.Pointer("cb407db1-1a01-42f0-a62e-30e0f329f245"),
+            ID: unifiedgosdk.Pointer("100e64a1-48f0-479c-90df-02d8e4b037cc"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Frozen Wooden Ball"),
             Tax: shared.TaxPreTax.ToPointer(),
             Type: shared.HrisBenefitTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-03-20T20:21:01.309Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-21T06:42:51.802Z"),
         },
         ConnectionID: "<id>",
     })
@@ -339,7 +339,7 @@ func main() {
 
 ## CreateHrisCompany
 
-Create a company
+Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
 
 ### Example Usage
 
@@ -374,11 +374,11 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CreatedAt: types.MustNewTimeFromString("2021-05-02T22:27:38.970Z"),
-            ID: unifiedgosdk.Pointer("c6c4605a-089e-4cfb-91a8-c88c7fcf7a68"),
+            ID: unifiedgosdk.Pointer("1e4e818e-c91c-4ce8-bb9f-87c290b58f50"),
             LegalName: unifiedgosdk.Pointer("Gottlieb Group LLC"),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Gottlieb Group"),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-08T16:22:56.386Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-09T16:00:24.278Z"),
         },
         ConnectionID: "<id>",
     })
@@ -411,7 +411,7 @@ func main() {
 
 ## CreateHrisDeduction
 
-Create a deduction
+Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are mapped to the provider's API. Returns the created HrisDeduction.
 
 ### Example Usage
 
@@ -444,14 +444,14 @@ func main() {
             EmployerType: shared.EmployerTypePercentage.ToPointer(),
             Frequency: shared.HrisDeductionFrequencyOneTime.ToPointer(),
             GarnishmentType: shared.GarnishmentTypeChildSupport.ToPointer(),
-            ID: unifiedgosdk.Pointer("b93fdf66-995f-4f76-b945-d3a17ab7254b"),
+            ID: unifiedgosdk.Pointer("a86ffc16-9876-48ec-aaf3-43e7a64c206d"),
             IsActive: unifiedgosdk.Pointer(true),
             MaxAmount: unifiedgosdk.Pointer[float64](21794.0),
             Metadata: []shared.HrisMetadata{},
             Notes: unifiedgosdk.Pointer("Carmen desidero."),
-            StartAt: types.MustNewTimeFromString("2025-03-15T07:40:47.474Z"),
+            StartAt: types.MustNewTimeFromString("2025-03-16T01:46:40.270Z"),
             Type: shared.HrisDeductionTypeFixed.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-03-22T06:59:33.108Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-22T21:37:00.011Z"),
         },
         ConnectionID: "<id>",
     })
@@ -484,7 +484,7 @@ func main() {
 
 ## CreateHrisDevice
 
-Create a device
+Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to the provider's API. Returns the created HrisDevice.
 
 ### Example Usage
 
@@ -518,7 +518,7 @@ func main() {
             HasHdEncrypted: unifiedgosdk.Pointer(true),
             HasPasswordManager: unifiedgosdk.Pointer(true),
             HasScreenlock: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("08f0179d-117e-4e0b-9712-d1fd2a9ab777"),
+            ID: unifiedgosdk.Pointer("8948d49b-375f-49ed-a723-905a47075ae9"),
             IsMissing: unifiedgosdk.Pointer(false),
             Manufacturer: unifiedgosdk.Pointer("Hackett Inc"),
             Metadata: []shared.HrisMetadata{},
@@ -526,7 +526,7 @@ func main() {
             Name: unifiedgosdk.Pointer("august-laptop"),
             Os: unifiedgosdk.Pointer("transmitter"),
             OsVersion: unifiedgosdk.Pointer("8.4.8"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-08T07:20:57.814Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-08T20:30:23.493Z"),
             Version: unifiedgosdk.Pointer("4.15.7"),
         },
         ConnectionID: "<id>",
@@ -560,7 +560,7 @@ func main() {
 
 ## CreateHrisDocument
 
-Create a document
+Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped to the provider's API. Returns the created HrisDocument.
 
 ### Example Usage
 
@@ -589,10 +589,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-27T11:47:26.086Z"),
             DocumentURL: unifiedgosdk.Pointer("https://sore-decision.biz/"),
             Filename: unifiedgosdk.Pointer("ridge_forager.xsl"),
-            ID: unifiedgosdk.Pointer("b25835b6-2aaf-4225-a1f4-e0249d981e29"),
+            ID: unifiedgosdk.Pointer("4fcc4bf2-5c06-437d-8c9c-cb0f58e4ac41"),
             Metadata: []shared.HrisMetadata{},
             Type: shared.HrisDocumentTypePolicy.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-11T14:06:05.581Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-12T07:45:12.953Z"),
         },
         ConnectionID: "<id>",
     })
@@ -625,7 +625,7 @@ func main() {
 
 ## CreateHrisEarning
 
-Create an earning
+Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped to the provider's API. Returns the created HrisEarning.
 
 ### Example Usage
 
@@ -655,12 +655,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-01-26T12:44:52.326Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             Frequency: shared.HrisEarningFrequencySemimonthly.ToPointer(),
-            ID: unifiedgosdk.Pointer("e217da60-71ee-4135-afac-bd2548e026c2"),
+            ID: unifiedgosdk.Pointer("fc526592-d3cd-43c8-b69a-04fc3f803646"),
             Metadata: []shared.HrisMetadata{},
             Notes: unifiedgosdk.Pointer("Deporto truculenter vinum beatae."),
-            StartAt: types.MustNewTimeFromString("2022-07-25T11:48:48.385Z"),
+            StartAt: types.MustNewTimeFromString("2022-07-25T22:33:07.377Z"),
             Status: shared.HrisEarningStatusEnded.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-02-08T20:32:52.338Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-02-08T23:43:54.807Z"),
         },
         ConnectionID: "<id>",
     })
@@ -693,7 +693,7 @@ func main() {
 
 ## CreateHrisEmployee
 
-Create an employee
+Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped to the provider's API. Returns the created HrisEmployee.
 
 ### Example Usage
 
@@ -755,7 +755,7 @@ func main() {
             Gender: shared.HrisEmployeeGenderMale.ToPointer(),
             HasMfa: unifiedgosdk.Pointer(true),
             HiredAt: types.MustNewTimeFromString("2019-09-16T15:08:53.262Z"),
-            ID: unifiedgosdk.Pointer("5ece6f77-35df-48e1-9496-7d1879563189"),
+            ID: unifiedgosdk.Pointer("f0059d37-f7f5-475f-ba3a-ae687313ebe6"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg"),
             LanguageLocale: unifiedgosdk.Pointer("in"),
             LastName: unifiedgosdk.Pointer("Prohaska"),
@@ -769,7 +769,7 @@ func main() {
                         },
                     )),
                     Format: shared.HrisMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("db8a06c6-9b85-4baa-8142-748cdc88efd4"),
+                    ID: unifiedgosdk.Pointer("a100a8c6-503b-48c0-b130-a362a3c5bdad"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateHrisMetadataValueStr(
@@ -819,7 +819,7 @@ func main() {
             TimeoffDaysUsed: unifiedgosdk.Pointer[float64](9.0),
             Timezone: unifiedgosdk.Pointer("Europe/Ljubljana"),
             Title: unifiedgosdk.Pointer("District Branding Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2020-07-19T04:12:43.588Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-07-19T07:01:26.701Z"),
         },
         ConnectionID: "<id>",
     })
@@ -852,7 +852,7 @@ func main() {
 
 ## CreateHrisGroup
 
-Create a group
+Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
 
 ### Example Usage
 
@@ -880,12 +880,12 @@ func main() {
         HrisGroup: shared.HrisGroup{
             CreatedAt: types.MustNewTimeFromString("2023-11-01T13:13:40.714Z"),
             Description: unifiedgosdk.Pointer("Absorbeo casso."),
-            ID: unifiedgosdk.Pointer("a367376f-3ee9-4b6c-8743-d83e2575917d"),
+            ID: unifiedgosdk.Pointer("1d18b974-d325-49fa-b0e1-a2e01f2dd256"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Games"),
             Type: shared.HrisGroupTypeBranch.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-05-21T23:27:42.075Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-22T19:54:01.894Z"),
         },
         ConnectionID: "<id>",
     })
@@ -918,7 +918,7 @@ func main() {
 
 ## CreateHrisJob
 
-Create a job
+Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the provider's API. Returns the created HrisJob.
 
 ### Example Usage
 
@@ -948,11 +948,11 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-10-28T01:13:19.491Z"),
             Description: unifiedgosdk.Pointer("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo."),
             EmploymentType: shared.HrisJobEmploymentTypeFreelance.ToPointer(),
-            ID: unifiedgosdk.Pointer("9a3cb5cb-f487-4b03-8119-62f5eec3c16a"),
+            ID: unifiedgosdk.Pointer("40d8a395-8f3c-45c7-9458-c256a829c475"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Internal Integration Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-30T05:18:40.719Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-30T14:16:54.965Z"),
         },
         ConnectionID: "<id>",
     })
@@ -985,7 +985,7 @@ func main() {
 
 ## CreateHrisLocation
 
-Create a location
+Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
 
 ### Example Usage
 
@@ -1023,7 +1023,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-07-18T10:32:01.414Z"),
             Currency: unifiedgosdk.Pointer("MNT"),
             Description: unifiedgosdk.Pointer("Commemoro acervus."),
-            ID: unifiedgosdk.Pointer("9d705c51-711f-45a7-a73a-717ad8e2b7b3"),
+            ID: unifiedgosdk.Pointer("1ecb6270-3dbb-4d0c-b876-5c1c8bb0ddef"),
             IsActive: unifiedgosdk.Pointer(false),
             IsHq: unifiedgosdk.Pointer(true),
             LanguageLocale: unifiedgosdk.Pointer("it"),
@@ -1044,7 +1044,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("Asia/Jerusalem"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-21T02:27:35.009Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-21T11:09:24.068Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1077,7 +1077,7 @@ func main() {
 
 ## CreateHrisTaxonomy
 
-Create a taxonomy
+Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped to the provider's API. Returns the created HrisTaxonomy.
 
 ### Example Usage
 
@@ -1110,13 +1110,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-06-23T02:10:00.789Z"),
             Description: unifiedgosdk.Pointer("Uterque vespillo adnuo ea commodo turbo suscipio condico."),
             Domain: unifiedgosdk.Pointer("Health"),
-            ID: unifiedgosdk.Pointer("2181864e-6f7a-4346-aea3-29f05f968d16"),
+            ID: unifiedgosdk.Pointer("563a331c-0d6e-47dc-9fe1-fbd0303dc9fa"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("International Functionality Architect"),
             Subcategory: unifiedgosdk.Pointer("Marble"),
             Type: shared.HrisTaxonomyTypeKnowledge.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-05-29T07:25:03.542Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-29T12:31:59.841Z"),
             URL: unifiedgosdk.Pointer("https://fixed-membership.biz/"),
         },
         ConnectionID: "<id>",
@@ -1150,7 +1150,7 @@ func main() {
 
 ## CreateHrisTimeoff
 
-Create a timeoff
+Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeoff.
 
 ### Example Usage
 
@@ -1176,21 +1176,21 @@ func main() {
 
     res, err := s.Hris.CreateHrisTimeoff(ctx, operations.CreateHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
-            ApprovedAt: types.MustNewTimeFromString("2022-02-23T09:08:38.740Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-02-23T10:56:51.892Z"),
             Comments: unifiedgosdk.Pointer("Blandior ventus curiositas amplitudo."),
             CreatedAt: types.MustNewTimeFromString("2021-10-06T18:00:20.615Z"),
             Duration: unifiedgosdk.Pointer[float64](4.0),
             DurationType: shared.DurationTypeDay.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2024-12-28T17:18:17.498Z"),
-            ID: unifiedgosdk.Pointer("f0b66e32-63b5-4634-8ced-df6263f431d8"),
+            EndAt: types.MustNewTimeFromString("2024-12-29T08:32:02.355Z"),
+            ID: unifiedgosdk.Pointer("9cb84118-4f94-475f-9ce1-f629fe9fdc82"),
             IsPaid: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             OriginalType: unifiedgosdk.Pointer("acerbitas ut"),
             Reason: unifiedgosdk.Pointer("verto"),
-            StartAt: types.MustNewTimeFromString("2023-09-04T19:24:22.037Z"),
+            StartAt: types.MustNewTimeFromString("2023-09-05T04:25:23.358Z"),
             Status: shared.HrisTimeoffStatusDenied.ToPointer(),
             Type: shared.HrisTimeoffTypeInLieu.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-07-12T19:42:00.487Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-12T23:18:17.913Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",
@@ -1224,7 +1224,7 @@ func main() {
 
 ## CreateHrisTimeshift
 
-Create a timeshift
+Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeshift.
 
 ### Example Usage
 
@@ -1250,7 +1250,7 @@ func main() {
 
     res, err := s.Hris.CreateHrisTimeshift(ctx, operations.CreateHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
-            ApprovedAt: types.MustNewTimeFromString("2022-07-18T01:51:06.464Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-07-18T11:45:36.212Z"),
             Compensation: []shared.HrisCompensation{
                 shared.HrisCompensation{
                     Amount: unifiedgosdk.Pointer[float64](76761.0),
@@ -1262,13 +1262,13 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
-            EndAt: types.MustNewTimeFromString("2026-09-27T01:26:47.942Z"),
+            EndAt: types.MustNewTimeFromString("2026-09-28T01:00:15.668Z"),
             Hours: unifiedgosdk.Pointer[float64](6.0),
-            ID: unifiedgosdk.Pointer("6b0e3410-8eef-4221-b88e-e4d4be208730"),
+            ID: unifiedgosdk.Pointer("92b01fd8-ed4d-4643-95ba-0d8a8b541854"),
             IsApproved: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-07-13T00:30:36.291Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-07-01T21:53:01.115Z"),
+            StartAt: types.MustNewTimeFromString("2023-07-13T13:37:31.157Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-02T04:23:45.080Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1301,7 +1301,7 @@ func main() {
 
 ## GetHrisAttendance
 
-Retrieve an attendance
+Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1356,7 +1356,7 @@ func main() {
 
 ## GetHrisBankaccount
 
-Retrieve a bankaccount
+Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1411,7 +1411,7 @@ func main() {
 
 ## GetHrisBenefit
 
-Retrieve a benefit
+Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1466,7 +1466,7 @@ func main() {
 
 ## GetHrisCompany
 
-Retrieve a company
+Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1521,7 +1521,7 @@ func main() {
 
 ## GetHrisDeduction
 
-Retrieve a deduction
+Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1576,7 +1576,7 @@ func main() {
 
 ## GetHrisDevice
 
-Retrieve a device
+Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1631,7 +1631,7 @@ func main() {
 
 ## GetHrisDocument
 
-Retrieve a document
+Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1686,7 +1686,7 @@ func main() {
 
 ## GetHrisEarning
 
-Retrieve an earning
+Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1741,7 +1741,7 @@ func main() {
 
 ## GetHrisEmployee
 
-Retrieve an employee
+Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1796,7 +1796,7 @@ func main() {
 
 ## GetHrisGroup
 
-Retrieve a group
+Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1851,7 +1851,7 @@ func main() {
 
 ## GetHrisJob
 
-Retrieve a job
+Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1906,7 +1906,7 @@ func main() {
 
 ## GetHrisLocation
 
-Retrieve a location
+Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1961,7 +1961,7 @@ func main() {
 
 ## GetHrisPaycode
 
-Retrieve a paycode
+Retrieves a single HrisPaycode by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2016,7 +2016,7 @@ func main() {
 
 ## GetHrisPayroll
 
-Retrieve a payroll
+Retrieves a single HrisPayroll by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2071,7 +2071,7 @@ func main() {
 
 ## GetHrisPayslip
 
-Retrieve a payslip
+Retrieves a single HrisPayslip by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2126,7 +2126,7 @@ func main() {
 
 ## GetHrisTaxonomy
 
-Retrieve a taxonomy
+Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2181,7 +2181,7 @@ func main() {
 
 ## GetHrisTimeoff
 
-Retrieve a timeoff
+Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2236,7 +2236,7 @@ func main() {
 
 ## GetHrisTimeshift
 
-Retrieve a timeshift
+Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2291,7 +2291,7 @@ func main() {
 
 ## ListHrisAttendances
 
-List all attendances
+Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2345,7 +2345,7 @@ func main() {
 
 ## ListHrisBankaccounts
 
-List all bankaccounts
+Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2399,7 +2399,7 @@ func main() {
 
 ## ListHrisBenefits
 
-List all benefits
+Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2453,7 +2453,7 @@ func main() {
 
 ## ListHrisCompanies
 
-List all companies
+Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2507,7 +2507,7 @@ func main() {
 
 ## ListHrisDeductions
 
-List all deductions
+Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2561,7 +2561,7 @@ func main() {
 
 ## ListHrisDevices
 
-List all devices
+Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2615,7 +2615,7 @@ func main() {
 
 ## ListHrisDocuments
 
-List all documents
+Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2669,7 +2669,7 @@ func main() {
 
 ## ListHrisEarnings
 
-List all earnings
+Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2723,7 +2723,7 @@ func main() {
 
 ## ListHrisEmployees
 
-List all employees
+Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2777,7 +2777,7 @@ func main() {
 
 ## ListHrisGroups
 
-List all groups
+Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2831,7 +2831,7 @@ func main() {
 
 ## ListHrisJobs
 
-List all jobs
+Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2885,7 +2885,7 @@ func main() {
 
 ## ListHrisLocations
 
-List all locations
+Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2939,7 +2939,7 @@ func main() {
 
 ## ListHrisPaycodes
 
-List all paycodes
+Returns a list of HrisPaycodes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2993,7 +2993,7 @@ func main() {
 
 ## ListHrisPayrolls
 
-List all payrolls
+Returns a list of HrisPayrolls. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3047,7 +3047,7 @@ func main() {
 
 ## ListHrisPayslips
 
-List all payslips
+Returns a list of HrisPayslips. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3101,7 +3101,7 @@ func main() {
 
 ## ListHrisTaxonomies
 
-List all taxonomies
+Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3155,7 +3155,7 @@ func main() {
 
 ## ListHrisTimeoffs
 
-List all timeoffs
+Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3209,7 +3209,7 @@ func main() {
 
 ## ListHrisTimeshifts
 
-List all timeshifts
+Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3263,7 +3263,7 @@ func main() {
 
 ## PatchHrisAttendance
 
-Update an attendance
+Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
 ### Example Usage
 
@@ -3297,32 +3297,32 @@ func main() {
                 Region: unifiedgosdk.Pointer("Tennessee"),
                 RegionCode: unifiedgosdk.Pointer("CA"),
             },
-            ApprovedAt: types.MustNewTimeFromString("2021-09-19T14:06:30.624Z"),
+            ApprovedAt: types.MustNewTimeFromString("2021-09-19T14:36:24.348Z"),
             Breaks: []shared.HrisAttendanceBreak{
                 shared.HrisAttendanceBreak{
                     DurationMinutes: unifiedgosdk.Pointer[float64](51.0),
-                    EndAt: types.MustNewTimeFromString("2024-02-14T13:16:00.540Z"),
-                    ID: unifiedgosdk.Pointer("939123d3-e26b-44f5-855a-b592fc011641"),
+                    EndAt: types.MustNewTimeFromString("2024-02-15T00:45:56.503Z"),
+                    ID: unifiedgosdk.Pointer("6aaf0655-e6e5-451b-8099-50e6f3a2a33d"),
                     IsPaid: unifiedgosdk.Pointer(false),
                     Name: unifiedgosdk.Pointer("Lunch"),
-                    StartAt: types.MustNewTimeFromString("2023-10-29T23:03:00.407Z"),
+                    StartAt: types.MustNewTimeFromString("2023-10-30T09:12:03.217Z"),
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2021-08-10T19:43:18.452Z"),
             Currency: unifiedgosdk.Pointer("EUR"),
             DeclaredTipsAmount: unifiedgosdk.Pointer[float64](54.0),
             EmployeeUserID: "<id>",
-            EndAt: types.MustTimeFromString("2024-04-23T07:48:11.848Z"),
+            EndAt: types.MustTimeFromString("2024-04-23T20:09:49.916Z"),
             HourlyRate: unifiedgosdk.Pointer[float64](16.0),
             Hours: unifiedgosdk.Pointer[float64](10.0),
-            ID: unifiedgosdk.Pointer("de583745-c602-4069-9149-69ec0f9587aa"),
+            ID: unifiedgosdk.Pointer("31e79ecd-e0a3-43a4-b3a8-492aff61cb64"),
             JobName: unifiedgosdk.Pointer("Human Accountability Administrator"),
             Metadata: []shared.HrisMetadata{},
             NonCashTipsAmount: unifiedgosdk.Pointer[float64](167.0),
-            StartAt: types.MustTimeFromString("2021-11-11T00:56:01.835Z"),
+            StartAt: types.MustTimeFromString("2021-11-11T02:05:21.461Z"),
             Status: shared.HrisAttendanceStatusOpen.ToPointer(),
             Timezone: unifiedgosdk.Pointer("America/Atikokan"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-19T21:04:34.810Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-19T23:06:24.667Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3356,7 +3356,7 @@ func main() {
 
 ## PatchHrisBankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -3389,7 +3389,7 @@ func main() {
             CountryCode: unifiedgosdk.Pointer("US"),
             CreatedAt: types.MustNewTimeFromString("2019-11-16T16:43:45.976Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("226e7e5d-1767-47a1-b0fd-6b38c5ed69ab"),
+            ID: unifiedgosdk.Pointer("b83bd056-9674-4f6e-a525-95182b7b0bd0"),
             IsPrimary: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Granville Schumm - Checking"),
@@ -3397,7 +3397,7 @@ func main() {
             RoutingNumber: unifiedgosdk.Pointer("448650724"),
             SplitAmount: unifiedgosdk.Pointer[float64](98.0),
             SplitType: shared.SplitTypePercentage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-01T06:21:20.416Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-02T01:38:52.658Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3431,7 +3431,7 @@ func main() {
 
 ## PatchHrisBenefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -3465,13 +3465,13 @@ func main() {
             EmployerContributionMaxAmount: unifiedgosdk.Pointer[float64](179093.0),
             EmployerContributionType: shared.EmployerContributionTypePercentage.ToPointer(),
             Frequency: shared.HrisBenefitFrequencyMonth.ToPointer(),
-            ID: unifiedgosdk.Pointer("9e16e0e2-62b1-474c-9f90-11fd9ee0ed8c"),
+            ID: unifiedgosdk.Pointer("b36c4fbf-0ca7-4e3c-8e02-7d201f16ca93"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Frozen Wooden Ball"),
             Tax: shared.TaxPreTax.ToPointer(),
             Type: shared.HrisBenefitTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-03-20T20:21:01.318Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-21T06:42:51.811Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3505,7 +3505,7 @@ func main() {
 
 ## PatchHrisCompany
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -3540,11 +3540,11 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CreatedAt: types.MustNewTimeFromString("2021-05-02T22:27:38.970Z"),
-            ID: unifiedgosdk.Pointer("1a037787-e022-401d-a3e7-32542733f2d2"),
+            ID: unifiedgosdk.Pointer("614c60e7-805a-4ebe-9b04-71aabf2ea7b8"),
             LegalName: unifiedgosdk.Pointer("Gottlieb Group LLC"),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Gottlieb Group"),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-08T16:22:56.398Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-09T16:00:24.302Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3578,7 +3578,7 @@ func main() {
 
 ## PatchHrisDeduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -3611,14 +3611,14 @@ func main() {
             EmployerType: shared.EmployerTypePercentage.ToPointer(),
             Frequency: shared.HrisDeductionFrequencyOneTime.ToPointer(),
             GarnishmentType: shared.GarnishmentTypeChildSupport.ToPointer(),
-            ID: unifiedgosdk.Pointer("c3213a23-98f3-4a00-85e5-4297c58c69b9"),
+            ID: unifiedgosdk.Pointer("2b0eecf4-4ef5-4c58-952b-20761e9d8c04"),
             IsActive: unifiedgosdk.Pointer(true),
             MaxAmount: unifiedgosdk.Pointer[float64](21794.0),
             Metadata: []shared.HrisMetadata{},
             Notes: unifiedgosdk.Pointer("Carmen desidero."),
-            StartAt: types.MustNewTimeFromString("2025-03-15T07:40:47.491Z"),
+            StartAt: types.MustNewTimeFromString("2025-03-16T01:46:40.283Z"),
             Type: shared.HrisDeductionTypeFixed.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-03-22T06:59:33.122Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-22T21:37:00.022Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3652,7 +3652,7 @@ func main() {
 
 ## PatchHrisDevice
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -3686,7 +3686,7 @@ func main() {
             HasHdEncrypted: unifiedgosdk.Pointer(true),
             HasPasswordManager: unifiedgosdk.Pointer(true),
             HasScreenlock: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("23a8d248-5900-4fd8-9b12-17935dbde1f4"),
+            ID: unifiedgosdk.Pointer("afc52eb2-dd4b-4278-b6f0-3f16a2a2e6dd"),
             IsMissing: unifiedgosdk.Pointer(false),
             Manufacturer: unifiedgosdk.Pointer("Hackett Inc"),
             Metadata: []shared.HrisMetadata{},
@@ -3694,7 +3694,7 @@ func main() {
             Name: unifiedgosdk.Pointer("august-laptop"),
             Os: unifiedgosdk.Pointer("transmitter"),
             OsVersion: unifiedgosdk.Pointer("8.4.8"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-08T07:20:57.824Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-08T20:30:23.500Z"),
             Version: unifiedgosdk.Pointer("4.15.7"),
         },
         ConnectionID: "<id>",
@@ -3729,7 +3729,7 @@ func main() {
 
 ## PatchHrisDocument
 
-Update a document
+Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -3758,10 +3758,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-27T11:47:26.086Z"),
             DocumentURL: unifiedgosdk.Pointer("https://sore-decision.biz/"),
             Filename: unifiedgosdk.Pointer("ridge_forager.xsl"),
-            ID: unifiedgosdk.Pointer("b54cade5-8f1a-4f99-99b1-63b35119660c"),
+            ID: unifiedgosdk.Pointer("7d80c112-dc78-40ac-9983-b4e0e520055f"),
             Metadata: []shared.HrisMetadata{},
             Type: shared.HrisDocumentTypePolicy.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-11T14:06:05.593Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-12T07:45:12.961Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3795,7 +3795,7 @@ func main() {
 
 ## PatchHrisEarning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -3825,12 +3825,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-01-26T12:44:52.326Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             Frequency: shared.HrisEarningFrequencySemimonthly.ToPointer(),
-            ID: unifiedgosdk.Pointer("ae74f559-3b04-412c-92c7-6b4867daa099"),
+            ID: unifiedgosdk.Pointer("c30ab4a5-6379-402f-94ce-29656bc968ac"),
             Metadata: []shared.HrisMetadata{},
             Notes: unifiedgosdk.Pointer("Deporto truculenter vinum beatae."),
-            StartAt: types.MustNewTimeFromString("2022-07-25T11:48:48.394Z"),
+            StartAt: types.MustNewTimeFromString("2022-07-25T22:33:07.384Z"),
             Status: shared.HrisEarningStatusEnded.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-02-08T20:32:52.341Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-02-08T23:43:54.809Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3864,7 +3864,7 @@ func main() {
 
 ## PatchHrisEmployee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -3926,7 +3926,7 @@ func main() {
             Gender: shared.HrisEmployeeGenderMale.ToPointer(),
             HasMfa: unifiedgosdk.Pointer(true),
             HiredAt: types.MustNewTimeFromString("2019-09-16T15:08:53.262Z"),
-            ID: unifiedgosdk.Pointer("9609249d-8821-468a-b0ee-7d78f4b1ae6a"),
+            ID: unifiedgosdk.Pointer("af401a62-954a-4750-b0f9-c63eb87066ea"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg"),
             LanguageLocale: unifiedgosdk.Pointer("in"),
             LastName: unifiedgosdk.Pointer("Prohaska"),
@@ -3940,7 +3940,7 @@ func main() {
                         },
                     )),
                     Format: shared.HrisMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("20b100c1-0a48-47af-920c-3385a2834306"),
+                    ID: unifiedgosdk.Pointer("cea3e721-d03d-409d-b8f2-ca5f08895117"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateHrisMetadataValueStr(
@@ -3990,7 +3990,7 @@ func main() {
             TimeoffDaysUsed: unifiedgosdk.Pointer[float64](9.0),
             Timezone: unifiedgosdk.Pointer("Europe/Ljubljana"),
             Title: unifiedgosdk.Pointer("District Branding Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2020-07-19T04:12:43.602Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-07-19T07:01:26.712Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -4024,7 +4024,7 @@ func main() {
 
 ## PatchHrisGroup
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -4052,12 +4052,12 @@ func main() {
         HrisGroup: shared.HrisGroup{
             CreatedAt: types.MustNewTimeFromString("2023-11-01T13:13:40.714Z"),
             Description: unifiedgosdk.Pointer("Absorbeo casso."),
-            ID: unifiedgosdk.Pointer("0c7aa9a3-c25c-4e54-9338-a92812e404ce"),
+            ID: unifiedgosdk.Pointer("4a3e0f10-b197-48b9-b1d1-20f46e3874fd"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Games"),
             Type: shared.HrisGroupTypeBranch.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-05-21T23:27:42.085Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-22T19:54:01.911Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -4091,7 +4091,7 @@ func main() {
 
 ## PatchHrisJob
 
-Update a job
+Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
 ### Example Usage
 
@@ -4121,11 +4121,11 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-10-28T01:13:19.491Z"),
             Description: unifiedgosdk.Pointer("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo."),
             EmploymentType: shared.HrisJobEmploymentTypeFreelance.ToPointer(),
-            ID: unifiedgosdk.Pointer("51987954-bfbe-4f6d-8e56-6f516c79198d"),
+            ID: unifiedgosdk.Pointer("efdd1e58-1ea2-4e0c-b5c0-6a8691cdab7a"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Internal Integration Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-30T05:18:40.762Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-30T14:16:55.027Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -4159,7 +4159,7 @@ func main() {
 
 ## PatchHrisLocation
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -4197,7 +4197,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-07-18T10:32:01.414Z"),
             Currency: unifiedgosdk.Pointer("MNT"),
             Description: unifiedgosdk.Pointer("Commemoro acervus."),
-            ID: unifiedgosdk.Pointer("c28a0039-b5ac-4680-a8cc-2afb4f82d97b"),
+            ID: unifiedgosdk.Pointer("f595f8c1-17ee-4c09-9c8a-d9d6fe90e62f"),
             IsActive: unifiedgosdk.Pointer(false),
             IsHq: unifiedgosdk.Pointer(true),
             LanguageLocale: unifiedgosdk.Pointer("it"),
@@ -4218,7 +4218,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("Asia/Jerusalem"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-21T02:27:35.015Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-21T11:09:24.079Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -4252,7 +4252,7 @@ func main() {
 
 ## PatchHrisTimeoff
 
-Update a timeoff
+Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
 ### Example Usage
 
@@ -4278,21 +4278,21 @@ func main() {
 
     res, err := s.Hris.PatchHrisTimeoff(ctx, operations.PatchHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
-            ApprovedAt: types.MustNewTimeFromString("2022-02-23T09:08:38.741Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-02-23T10:56:51.893Z"),
             Comments: unifiedgosdk.Pointer("Blandior ventus curiositas amplitudo."),
             CreatedAt: types.MustNewTimeFromString("2021-10-06T18:00:20.615Z"),
             Duration: unifiedgosdk.Pointer[float64](4.0),
             DurationType: shared.DurationTypeDay.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2024-12-28T17:18:17.511Z"),
-            ID: unifiedgosdk.Pointer("d8855007-ff38-4e99-8643-55c97eb6ff18"),
+            EndAt: types.MustNewTimeFromString("2024-12-29T08:32:02.364Z"),
+            ID: unifiedgosdk.Pointer("9453aff1-d935-4270-a1e8-4e535ec124e9"),
             IsPaid: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             OriginalType: unifiedgosdk.Pointer("acerbitas ut"),
             Reason: unifiedgosdk.Pointer("verto"),
-            StartAt: types.MustNewTimeFromString("2023-09-04T19:24:22.045Z"),
+            StartAt: types.MustNewTimeFromString("2023-09-05T04:25:23.363Z"),
             Status: shared.HrisTimeoffStatusDenied.ToPointer(),
             Type: shared.HrisTimeoffTypeInLieu.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-07-12T19:42:00.490Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-12T23:18:17.915Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",
@@ -4327,7 +4327,7 @@ func main() {
 
 ## PatchHrisTimeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -4353,7 +4353,7 @@ func main() {
 
     res, err := s.Hris.PatchHrisTimeshift(ctx, operations.PatchHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
-            ApprovedAt: types.MustNewTimeFromString("2022-07-18T01:51:06.472Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-07-18T11:45:36.221Z"),
             Compensation: []shared.HrisCompensation{
                 shared.HrisCompensation{
                     Amount: unifiedgosdk.Pointer[float64](76761.0),
@@ -4365,13 +4365,13 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
-            EndAt: types.MustNewTimeFromString("2026-09-27T01:26:47.962Z"),
+            EndAt: types.MustNewTimeFromString("2026-09-28T01:00:15.689Z"),
             Hours: unifiedgosdk.Pointer[float64](6.0),
-            ID: unifiedgosdk.Pointer("860cce82-b177-4974-b6a6-dda841cb1baa"),
+            ID: unifiedgosdk.Pointer("be8b2098-4454-4b17-a20f-c3f23a1d0e71"),
             IsApproved: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-07-13T00:30:36.302Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-07-01T21:53:01.120Z"),
+            StartAt: types.MustNewTimeFromString("2023-07-13T13:37:31.169Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-02T04:23:45.085Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -4405,7 +4405,7 @@ func main() {
 
 ## RemoveHrisAttendance
 
-Remove an attendance
+Deletes the HrisAttendance identified by `id`.
 
 ### Example Usage
 
@@ -4460,7 +4460,7 @@ func main() {
 
 ## RemoveHrisBankaccount
 
-Remove a bankaccount
+Deletes the HrisBankaccount identified by `id`.
 
 ### Example Usage
 
@@ -4515,7 +4515,7 @@ func main() {
 
 ## RemoveHrisBenefit
 
-Remove a benefit
+Deletes the HrisBenefit identified by `id`.
 
 ### Example Usage
 
@@ -4570,7 +4570,7 @@ func main() {
 
 ## RemoveHrisCompany
 
-Remove a company
+Deletes the HrisCompany identified by `id`.
 
 ### Example Usage
 
@@ -4625,7 +4625,7 @@ func main() {
 
 ## RemoveHrisDeduction
 
-Remove a deduction
+Deletes the HrisDeduction identified by `id`.
 
 ### Example Usage
 
@@ -4680,7 +4680,7 @@ func main() {
 
 ## RemoveHrisDevice
 
-Remove a device
+Deletes the HrisDevice identified by `id`.
 
 ### Example Usage
 
@@ -4735,7 +4735,7 @@ func main() {
 
 ## RemoveHrisDocument
 
-Remove a document
+Deletes the HrisDocument identified by `id`.
 
 ### Example Usage
 
@@ -4790,7 +4790,7 @@ func main() {
 
 ## RemoveHrisEarning
 
-Remove an earning
+Deletes the HrisEarning identified by `id`.
 
 ### Example Usage
 
@@ -4845,7 +4845,7 @@ func main() {
 
 ## RemoveHrisEmployee
 
-Remove an employee
+Deletes the HrisEmployee identified by `id`.
 
 ### Example Usage
 
@@ -4900,7 +4900,7 @@ func main() {
 
 ## RemoveHrisGroup
 
-Remove a group
+Deletes the HrisGroup identified by `id`.
 
 ### Example Usage
 
@@ -4955,7 +4955,7 @@ func main() {
 
 ## RemoveHrisJob
 
-Remove a job
+Deletes the HrisJob identified by `id`.
 
 ### Example Usage
 
@@ -5010,7 +5010,7 @@ func main() {
 
 ## RemoveHrisLocation
 
-Remove a location
+Deletes the HrisLocation identified by `id`.
 
 ### Example Usage
 
@@ -5065,7 +5065,7 @@ func main() {
 
 ## RemoveHrisTimeoff
 
-Remove a timeoff
+Deletes the HrisTimeoff identified by `id`.
 
 ### Example Usage
 
@@ -5120,7 +5120,7 @@ func main() {
 
 ## RemoveHrisTimeshift
 
-Remove a timeshift
+Deletes the HrisTimeshift identified by `id`.
 
 ### Example Usage
 
@@ -5175,7 +5175,7 @@ func main() {
 
 ## UpdateHrisAttendance
 
-Update an attendance
+Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
 ### Example Usage
 
@@ -5209,32 +5209,32 @@ func main() {
                 Region: unifiedgosdk.Pointer("Tennessee"),
                 RegionCode: unifiedgosdk.Pointer("CA"),
             },
-            ApprovedAt: types.MustNewTimeFromString("2021-09-19T14:06:30.624Z"),
+            ApprovedAt: types.MustNewTimeFromString("2021-09-19T14:36:24.348Z"),
             Breaks: []shared.HrisAttendanceBreak{
                 shared.HrisAttendanceBreak{
                     DurationMinutes: unifiedgosdk.Pointer[float64](51.0),
-                    EndAt: types.MustNewTimeFromString("2024-02-14T13:16:00.540Z"),
-                    ID: unifiedgosdk.Pointer("939123d3-e26b-44f5-855a-b592fc011641"),
+                    EndAt: types.MustNewTimeFromString("2024-02-15T00:45:56.503Z"),
+                    ID: unifiedgosdk.Pointer("6aaf0655-e6e5-451b-8099-50e6f3a2a33d"),
                     IsPaid: unifiedgosdk.Pointer(false),
                     Name: unifiedgosdk.Pointer("Lunch"),
-                    StartAt: types.MustNewTimeFromString("2023-10-29T23:03:00.407Z"),
+                    StartAt: types.MustNewTimeFromString("2023-10-30T09:12:03.217Z"),
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2021-08-10T19:43:18.452Z"),
             Currency: unifiedgosdk.Pointer("EUR"),
             DeclaredTipsAmount: unifiedgosdk.Pointer[float64](54.0),
             EmployeeUserID: "<id>",
-            EndAt: types.MustTimeFromString("2024-04-23T07:48:11.848Z"),
+            EndAt: types.MustTimeFromString("2024-04-23T20:09:49.916Z"),
             HourlyRate: unifiedgosdk.Pointer[float64](16.0),
             Hours: unifiedgosdk.Pointer[float64](10.0),
-            ID: unifiedgosdk.Pointer("de583745-c602-4069-9149-69ec0f9587aa"),
+            ID: unifiedgosdk.Pointer("31e79ecd-e0a3-43a4-b3a8-492aff61cb64"),
             JobName: unifiedgosdk.Pointer("Human Accountability Administrator"),
             Metadata: []shared.HrisMetadata{},
             NonCashTipsAmount: unifiedgosdk.Pointer[float64](167.0),
-            StartAt: types.MustTimeFromString("2021-11-11T00:56:01.835Z"),
+            StartAt: types.MustTimeFromString("2021-11-11T02:05:21.461Z"),
             Status: shared.HrisAttendanceStatusOpen.ToPointer(),
             Timezone: unifiedgosdk.Pointer("America/Atikokan"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-19T21:04:34.810Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-19T23:06:24.667Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5268,7 +5268,7 @@ func main() {
 
 ## UpdateHrisBankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -5301,7 +5301,7 @@ func main() {
             CountryCode: unifiedgosdk.Pointer("US"),
             CreatedAt: types.MustNewTimeFromString("2019-11-16T16:43:45.976Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("226e7e5d-1767-47a1-b0fd-6b38c5ed69ab"),
+            ID: unifiedgosdk.Pointer("b83bd056-9674-4f6e-a525-95182b7b0bd0"),
             IsPrimary: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Granville Schumm - Checking"),
@@ -5309,7 +5309,7 @@ func main() {
             RoutingNumber: unifiedgosdk.Pointer("448650724"),
             SplitAmount: unifiedgosdk.Pointer[float64](98.0),
             SplitType: shared.SplitTypePercentage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-01T06:21:20.416Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-02T01:38:52.658Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5343,7 +5343,7 @@ func main() {
 
 ## UpdateHrisBenefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -5377,13 +5377,13 @@ func main() {
             EmployerContributionMaxAmount: unifiedgosdk.Pointer[float64](179093.0),
             EmployerContributionType: shared.EmployerContributionTypePercentage.ToPointer(),
             Frequency: shared.HrisBenefitFrequencyMonth.ToPointer(),
-            ID: unifiedgosdk.Pointer("9e16e0e2-62b1-474c-9f90-11fd9ee0ed8c"),
+            ID: unifiedgosdk.Pointer("b36c4fbf-0ca7-4e3c-8e02-7d201f16ca93"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Frozen Wooden Ball"),
             Tax: shared.TaxPreTax.ToPointer(),
             Type: shared.HrisBenefitTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-03-20T20:21:01.318Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-21T06:42:51.811Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5417,7 +5417,7 @@ func main() {
 
 ## UpdateHrisCompany
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -5452,11 +5452,11 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CreatedAt: types.MustNewTimeFromString("2021-05-02T22:27:38.970Z"),
-            ID: unifiedgosdk.Pointer("1a037787-e022-401d-a3e7-32542733f2d2"),
+            ID: unifiedgosdk.Pointer("614c60e7-805a-4ebe-9b04-71aabf2ea7b8"),
             LegalName: unifiedgosdk.Pointer("Gottlieb Group LLC"),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Gottlieb Group"),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-08T16:22:56.398Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-09T16:00:24.302Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5490,7 +5490,7 @@ func main() {
 
 ## UpdateHrisDeduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -5523,14 +5523,14 @@ func main() {
             EmployerType: shared.EmployerTypePercentage.ToPointer(),
             Frequency: shared.HrisDeductionFrequencyOneTime.ToPointer(),
             GarnishmentType: shared.GarnishmentTypeChildSupport.ToPointer(),
-            ID: unifiedgosdk.Pointer("c3213a23-98f3-4a00-85e5-4297c58c69b9"),
+            ID: unifiedgosdk.Pointer("2b0eecf4-4ef5-4c58-952b-20761e9d8c04"),
             IsActive: unifiedgosdk.Pointer(true),
             MaxAmount: unifiedgosdk.Pointer[float64](21794.0),
             Metadata: []shared.HrisMetadata{},
             Notes: unifiedgosdk.Pointer("Carmen desidero."),
-            StartAt: types.MustNewTimeFromString("2025-03-15T07:40:47.491Z"),
+            StartAt: types.MustNewTimeFromString("2025-03-16T01:46:40.283Z"),
             Type: shared.HrisDeductionTypeFixed.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-03-22T06:59:33.122Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-22T21:37:00.022Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5564,7 +5564,7 @@ func main() {
 
 ## UpdateHrisDevice
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -5598,7 +5598,7 @@ func main() {
             HasHdEncrypted: unifiedgosdk.Pointer(true),
             HasPasswordManager: unifiedgosdk.Pointer(true),
             HasScreenlock: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("23a8d248-5900-4fd8-9b12-17935dbde1f4"),
+            ID: unifiedgosdk.Pointer("afc52eb2-dd4b-4278-b6f0-3f16a2a2e6dd"),
             IsMissing: unifiedgosdk.Pointer(false),
             Manufacturer: unifiedgosdk.Pointer("Hackett Inc"),
             Metadata: []shared.HrisMetadata{},
@@ -5606,7 +5606,7 @@ func main() {
             Name: unifiedgosdk.Pointer("august-laptop"),
             Os: unifiedgosdk.Pointer("transmitter"),
             OsVersion: unifiedgosdk.Pointer("8.4.8"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-08T07:20:57.824Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-08T20:30:23.500Z"),
             Version: unifiedgosdk.Pointer("4.15.7"),
         },
         ConnectionID: "<id>",
@@ -5641,7 +5641,7 @@ func main() {
 
 ## UpdateHrisDocument
 
-Update a document
+Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -5670,10 +5670,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-27T11:47:26.086Z"),
             DocumentURL: unifiedgosdk.Pointer("https://sore-decision.biz/"),
             Filename: unifiedgosdk.Pointer("ridge_forager.xsl"),
-            ID: unifiedgosdk.Pointer("b54cade5-8f1a-4f99-99b1-63b35119660c"),
+            ID: unifiedgosdk.Pointer("7d80c112-dc78-40ac-9983-b4e0e520055f"),
             Metadata: []shared.HrisMetadata{},
             Type: shared.HrisDocumentTypePolicy.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-11T14:06:05.593Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-12T07:45:12.961Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5707,7 +5707,7 @@ func main() {
 
 ## UpdateHrisEarning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -5737,12 +5737,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-01-26T12:44:52.326Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             Frequency: shared.HrisEarningFrequencySemimonthly.ToPointer(),
-            ID: unifiedgosdk.Pointer("ae74f559-3b04-412c-92c7-6b4867daa099"),
+            ID: unifiedgosdk.Pointer("c30ab4a5-6379-402f-94ce-29656bc968ac"),
             Metadata: []shared.HrisMetadata{},
             Notes: unifiedgosdk.Pointer("Deporto truculenter vinum beatae."),
-            StartAt: types.MustNewTimeFromString("2022-07-25T11:48:48.394Z"),
+            StartAt: types.MustNewTimeFromString("2022-07-25T22:33:07.384Z"),
             Status: shared.HrisEarningStatusEnded.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-02-08T20:32:52.341Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-02-08T23:43:54.809Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5776,7 +5776,7 @@ func main() {
 
 ## UpdateHrisEmployee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -5838,7 +5838,7 @@ func main() {
             Gender: shared.HrisEmployeeGenderMale.ToPointer(),
             HasMfa: unifiedgosdk.Pointer(true),
             HiredAt: types.MustNewTimeFromString("2019-09-16T15:08:53.262Z"),
-            ID: unifiedgosdk.Pointer("9609249d-8821-468a-b0ee-7d78f4b1ae6a"),
+            ID: unifiedgosdk.Pointer("af401a62-954a-4750-b0f9-c63eb87066ea"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg"),
             LanguageLocale: unifiedgosdk.Pointer("in"),
             LastName: unifiedgosdk.Pointer("Prohaska"),
@@ -5852,7 +5852,7 @@ func main() {
                         },
                     )),
                     Format: shared.HrisMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("20b100c1-0a48-47af-920c-3385a2834306"),
+                    ID: unifiedgosdk.Pointer("cea3e721-d03d-409d-b8f2-ca5f08895117"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateHrisMetadataValueStr(
@@ -5902,7 +5902,7 @@ func main() {
             TimeoffDaysUsed: unifiedgosdk.Pointer[float64](9.0),
             Timezone: unifiedgosdk.Pointer("Europe/Ljubljana"),
             Title: unifiedgosdk.Pointer("District Branding Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2020-07-19T04:12:43.602Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-07-19T07:01:26.712Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5936,7 +5936,7 @@ func main() {
 
 ## UpdateHrisGroup
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -5964,12 +5964,12 @@ func main() {
         HrisGroup: shared.HrisGroup{
             CreatedAt: types.MustNewTimeFromString("2023-11-01T13:13:40.714Z"),
             Description: unifiedgosdk.Pointer("Absorbeo casso."),
-            ID: unifiedgosdk.Pointer("0c7aa9a3-c25c-4e54-9338-a92812e404ce"),
+            ID: unifiedgosdk.Pointer("4a3e0f10-b197-48b9-b1d1-20f46e3874fd"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Games"),
             Type: shared.HrisGroupTypeBranch.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-05-21T23:27:42.085Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-22T19:54:01.911Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -6003,7 +6003,7 @@ func main() {
 
 ## UpdateHrisJob
 
-Update a job
+Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
 ### Example Usage
 
@@ -6033,11 +6033,11 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-10-28T01:13:19.491Z"),
             Description: unifiedgosdk.Pointer("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo."),
             EmploymentType: shared.HrisJobEmploymentTypeFreelance.ToPointer(),
-            ID: unifiedgosdk.Pointer("51987954-bfbe-4f6d-8e56-6f516c79198d"),
+            ID: unifiedgosdk.Pointer("efdd1e58-1ea2-4e0c-b5c0-6a8691cdab7a"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Internal Integration Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-30T05:18:40.762Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-30T14:16:55.027Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -6071,7 +6071,7 @@ func main() {
 
 ## UpdateHrisLocation
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -6109,7 +6109,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-07-18T10:32:01.414Z"),
             Currency: unifiedgosdk.Pointer("MNT"),
             Description: unifiedgosdk.Pointer("Commemoro acervus."),
-            ID: unifiedgosdk.Pointer("c28a0039-b5ac-4680-a8cc-2afb4f82d97b"),
+            ID: unifiedgosdk.Pointer("f595f8c1-17ee-4c09-9c8a-d9d6fe90e62f"),
             IsActive: unifiedgosdk.Pointer(false),
             IsHq: unifiedgosdk.Pointer(true),
             LanguageLocale: unifiedgosdk.Pointer("it"),
@@ -6130,7 +6130,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("Asia/Jerusalem"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-21T02:27:35.015Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-21T11:09:24.079Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -6164,7 +6164,7 @@ func main() {
 
 ## UpdateHrisTimeoff
 
-Update a timeoff
+Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
 ### Example Usage
 
@@ -6190,21 +6190,21 @@ func main() {
 
     res, err := s.Hris.UpdateHrisTimeoff(ctx, operations.UpdateHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
-            ApprovedAt: types.MustNewTimeFromString("2022-02-23T09:08:38.741Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-02-23T10:56:51.893Z"),
             Comments: unifiedgosdk.Pointer("Blandior ventus curiositas amplitudo."),
             CreatedAt: types.MustNewTimeFromString("2021-10-06T18:00:20.615Z"),
             Duration: unifiedgosdk.Pointer[float64](4.0),
             DurationType: shared.DurationTypeDay.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2024-12-28T17:18:17.511Z"),
-            ID: unifiedgosdk.Pointer("d8855007-ff38-4e99-8643-55c97eb6ff18"),
+            EndAt: types.MustNewTimeFromString("2024-12-29T08:32:02.364Z"),
+            ID: unifiedgosdk.Pointer("9453aff1-d935-4270-a1e8-4e535ec124e9"),
             IsPaid: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             OriginalType: unifiedgosdk.Pointer("acerbitas ut"),
             Reason: unifiedgosdk.Pointer("verto"),
-            StartAt: types.MustNewTimeFromString("2023-09-04T19:24:22.045Z"),
+            StartAt: types.MustNewTimeFromString("2023-09-05T04:25:23.363Z"),
             Status: shared.HrisTimeoffStatusDenied.ToPointer(),
             Type: shared.HrisTimeoffTypeInLieu.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-07-12T19:42:00.490Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-12T23:18:17.915Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",
@@ -6239,7 +6239,7 @@ func main() {
 
 ## UpdateHrisTimeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -6265,7 +6265,7 @@ func main() {
 
     res, err := s.Hris.UpdateHrisTimeshift(ctx, operations.UpdateHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
-            ApprovedAt: types.MustNewTimeFromString("2022-07-18T01:51:06.472Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-07-18T11:45:36.221Z"),
             Compensation: []shared.HrisCompensation{
                 shared.HrisCompensation{
                     Amount: unifiedgosdk.Pointer[float64](76761.0),
@@ -6277,13 +6277,13 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
-            EndAt: types.MustNewTimeFromString("2026-09-27T01:26:47.962Z"),
+            EndAt: types.MustNewTimeFromString("2026-09-28T01:00:15.689Z"),
             Hours: unifiedgosdk.Pointer[float64](6.0),
-            ID: unifiedgosdk.Pointer("860cce82-b177-4974-b6a6-dda841cb1baa"),
+            ID: unifiedgosdk.Pointer("be8b2098-4454-4b17-a20f-c3f23a1d0e71"),
             IsApproved: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-07-13T00:30:36.302Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-07-01T21:53:01.120Z"),
+            StartAt: types.MustNewTimeFromString("2023-07-13T13:37:31.169Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-02T04:23:45.085Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

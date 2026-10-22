@@ -31,6 +31,7 @@ func newCalendar(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateCalendarCalendar - Create a calendar
+// Creates a CalendarCalendar. Provide the unified CalendarCalendar fields in the request body; they are mapped to the provider's API. Returns the created CalendarCalendar.
 func (s *Calendar) CreateCalendarCalendar(ctx context.Context, request operations.CreateCalendarCalendarRequest, opts ...operations.Option) (*operations.CreateCalendarCalendarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Calendar) CreateCalendarCalendar(ctx context.Context, request operation
 }
 
 // CreateCalendarEvent - Create an event
+// Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are mapped to the provider's API. Returns the created CalendarEvent.
 func (s *Calendar) CreateCalendarEvent(ctx context.Context, request operations.CreateCalendarEventRequest, opts ...operations.Option) (*operations.CreateCalendarEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Calendar) CreateCalendarEvent(ctx context.Context, request operations.C
 }
 
 // CreateCalendarLink - Create a link
+// Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped to the provider's API. Returns the created CalendarLink.
 func (s *Calendar) CreateCalendarLink(ctx context.Context, request operations.CreateCalendarLinkRequest, opts ...operations.Option) (*operations.CreateCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Calendar) CreateCalendarLink(ctx context.Context, request operations.Cr
 }
 
 // CreateCalendarWebinar - Create a webinar
+// Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the request body; they are mapped to the provider's API. Returns the created CalendarWebinar.
 func (s *Calendar) CreateCalendarWebinar(ctx context.Context, request operations.CreateCalendarWebinarRequest, opts ...operations.Option) (*operations.CreateCalendarWebinarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -887,6 +891,7 @@ func (s *Calendar) CreateCalendarWebinar(ctx context.Context, request operations
 }
 
 // GetCalendarCalendar - Retrieve a calendar
+// Retrieves a single CalendarCalendar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Calendar) GetCalendarCalendar(ctx context.Context, request operations.GetCalendarCalendarRequest, opts ...operations.Option) (*operations.GetCalendarCalendarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1094,6 +1099,7 @@ func (s *Calendar) GetCalendarCalendar(ctx context.Context, request operations.G
 }
 
 // GetCalendarEvent - Retrieve an event
+// Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Calendar) GetCalendarEvent(ctx context.Context, request operations.GetCalendarEventRequest, opts ...operations.Option) (*operations.GetCalendarEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1301,6 +1307,7 @@ func (s *Calendar) GetCalendarEvent(ctx context.Context, request operations.GetC
 }
 
 // GetCalendarLink - Retrieve a link
+// Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Calendar) GetCalendarLink(ctx context.Context, request operations.GetCalendarLinkRequest, opts ...operations.Option) (*operations.GetCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1508,6 +1515,7 @@ func (s *Calendar) GetCalendarLink(ctx context.Context, request operations.GetCa
 }
 
 // GetCalendarRecording - Retrieve a recording
+// Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Calendar) GetCalendarRecording(ctx context.Context, request operations.GetCalendarRecordingRequest, opts ...operations.Option) (*operations.GetCalendarRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1715,6 +1723,7 @@ func (s *Calendar) GetCalendarRecording(ctx context.Context, request operations.
 }
 
 // GetCalendarWebinar - Retrieve a webinar
+// Retrieves a single CalendarWebinar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Calendar) GetCalendarWebinar(ctx context.Context, request operations.GetCalendarWebinarRequest, opts ...operations.Option) (*operations.GetCalendarWebinarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1922,6 +1931,7 @@ func (s *Calendar) GetCalendarWebinar(ctx context.Context, request operations.Ge
 }
 
 // ListCalendarBusies - List all busies
+// Returns a list of CalendarBusies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Calendar) ListCalendarBusies(ctx context.Context, request operations.ListCalendarBusiesRequest, opts ...operations.Option) (*operations.ListCalendarBusiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2129,6 +2139,7 @@ func (s *Calendar) ListCalendarBusies(ctx context.Context, request operations.Li
 }
 
 // ListCalendarCalendars - List all calendars
+// Returns a list of CalendarCalendars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Calendar) ListCalendarCalendars(ctx context.Context, request operations.ListCalendarCalendarsRequest, opts ...operations.Option) (*operations.ListCalendarCalendarsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2336,6 +2347,7 @@ func (s *Calendar) ListCalendarCalendars(ctx context.Context, request operations
 }
 
 // ListCalendarEvents - List all events
+// Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Calendar) ListCalendarEvents(ctx context.Context, request operations.ListCalendarEventsRequest, opts ...operations.Option) (*operations.ListCalendarEventsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2543,6 +2555,7 @@ func (s *Calendar) ListCalendarEvents(ctx context.Context, request operations.Li
 }
 
 // ListCalendarLinks - List all links
+// Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Calendar) ListCalendarLinks(ctx context.Context, request operations.ListCalendarLinksRequest, opts ...operations.Option) (*operations.ListCalendarLinksResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2750,6 +2763,7 @@ func (s *Calendar) ListCalendarLinks(ctx context.Context, request operations.Lis
 }
 
 // ListCalendarRecordings - List all recordings
+// Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Calendar) ListCalendarRecordings(ctx context.Context, request operations.ListCalendarRecordingsRequest, opts ...operations.Option) (*operations.ListCalendarRecordingsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2957,6 +2971,7 @@ func (s *Calendar) ListCalendarRecordings(ctx context.Context, request operation
 }
 
 // ListCalendarWebinars - List all webinars
+// Returns a list of CalendarWebinars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Calendar) ListCalendarWebinars(ctx context.Context, request operations.ListCalendarWebinarsRequest, opts ...operations.Option) (*operations.ListCalendarWebinarsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3164,6 +3179,7 @@ func (s *Calendar) ListCalendarWebinars(ctx context.Context, request operations.
 }
 
 // PatchCalendarCalendar - Update a calendar
+// Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to change in the request body.
 func (s *Calendar) PatchCalendarCalendar(ctx context.Context, request operations.PatchCalendarCalendarRequest, opts ...operations.Option) (*operations.PatchCalendarCalendarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3378,6 +3394,7 @@ func (s *Calendar) PatchCalendarCalendar(ctx context.Context, request operations
 }
 
 // PatchCalendarEvent - Update an event
+// Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 func (s *Calendar) PatchCalendarEvent(ctx context.Context, request operations.PatchCalendarEventRequest, opts ...operations.Option) (*operations.PatchCalendarEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3592,6 +3609,7 @@ func (s *Calendar) PatchCalendarEvent(ctx context.Context, request operations.Pa
 }
 
 // PatchCalendarLink - Update a link
+// Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 func (s *Calendar) PatchCalendarLink(ctx context.Context, request operations.PatchCalendarLinkRequest, opts ...operations.Option) (*operations.PatchCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3806,6 +3824,7 @@ func (s *Calendar) PatchCalendarLink(ctx context.Context, request operations.Pat
 }
 
 // PatchCalendarWebinar - Update a webinar
+// Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
 func (s *Calendar) PatchCalendarWebinar(ctx context.Context, request operations.PatchCalendarWebinarRequest, opts ...operations.Option) (*operations.PatchCalendarWebinarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4020,6 +4039,7 @@ func (s *Calendar) PatchCalendarWebinar(ctx context.Context, request operations.
 }
 
 // RemoveCalendarCalendar - Remove a calendar
+// Deletes the CalendarCalendar identified by `id`.
 func (s *Calendar) RemoveCalendarCalendar(ctx context.Context, request operations.RemoveCalendarCalendarRequest, opts ...operations.Option) (*operations.RemoveCalendarCalendarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4202,6 +4222,7 @@ func (s *Calendar) RemoveCalendarCalendar(ctx context.Context, request operation
 }
 
 // RemoveCalendarEvent - Remove an event
+// Deletes the CalendarEvent identified by `id`.
 func (s *Calendar) RemoveCalendarEvent(ctx context.Context, request operations.RemoveCalendarEventRequest, opts ...operations.Option) (*operations.RemoveCalendarEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4384,6 +4405,7 @@ func (s *Calendar) RemoveCalendarEvent(ctx context.Context, request operations.R
 }
 
 // RemoveCalendarLink - Remove a link
+// Deletes the CalendarLink identified by `id`.
 func (s *Calendar) RemoveCalendarLink(ctx context.Context, request operations.RemoveCalendarLinkRequest, opts ...operations.Option) (*operations.RemoveCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4566,6 +4588,7 @@ func (s *Calendar) RemoveCalendarLink(ctx context.Context, request operations.Re
 }
 
 // RemoveCalendarWebinar - Remove a webinar
+// Deletes the CalendarWebinar identified by `id`.
 func (s *Calendar) RemoveCalendarWebinar(ctx context.Context, request operations.RemoveCalendarWebinarRequest, opts ...operations.Option) (*operations.RemoveCalendarWebinarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4748,6 +4771,7 @@ func (s *Calendar) RemoveCalendarWebinar(ctx context.Context, request operations
 }
 
 // UpdateCalendarCalendar - Update a calendar
+// Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to change in the request body.
 func (s *Calendar) UpdateCalendarCalendar(ctx context.Context, request operations.UpdateCalendarCalendarRequest, opts ...operations.Option) (*operations.UpdateCalendarCalendarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4962,6 +4986,7 @@ func (s *Calendar) UpdateCalendarCalendar(ctx context.Context, request operation
 }
 
 // UpdateCalendarEvent - Update an event
+// Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 func (s *Calendar) UpdateCalendarEvent(ctx context.Context, request operations.UpdateCalendarEventRequest, opts ...operations.Option) (*operations.UpdateCalendarEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5176,6 +5201,7 @@ func (s *Calendar) UpdateCalendarEvent(ctx context.Context, request operations.U
 }
 
 // UpdateCalendarLink - Update a link
+// Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 func (s *Calendar) UpdateCalendarLink(ctx context.Context, request operations.UpdateCalendarLinkRequest, opts ...operations.Option) (*operations.UpdateCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5390,6 +5416,7 @@ func (s *Calendar) UpdateCalendarLink(ctx context.Context, request operations.Up
 }
 
 // UpdateCalendarWebinar - Update a webinar
+// Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
 func (s *Calendar) UpdateCalendarWebinar(ctx context.Context, request operations.UpdateCalendarWebinarRequest, opts ...operations.Option) (*operations.UpdateCalendarWebinarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

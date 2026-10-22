@@ -13,7 +13,7 @@
 
 ## CreateComputeKey
 
-Create a key
+Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to the provider's API. Returns the created ComputeKey.
 
 ### Example Usage
 
@@ -40,11 +40,11 @@ func main() {
     res, err := s.Key.CreateComputeKey(ctx, operations.CreateComputeKeyRequest{
         ComputeKey: shared.ComputeKey{
             CreatedAt: types.MustNewTimeFromString("2023-08-19T14:31:46.492Z"),
-            ID: unifiedgosdk.Pointer("54e64597-39da-487e-a0d4-40da5496fb18"),
+            ID: unifiedgosdk.Pointer("725133a7-c506-47e4-81d0-3b0553657a5f"),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("nienow-secret"),
             Type: shared.ComputeKeyTypeSecret.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-10-06T23:20:44.187Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-07T07:50:55.892Z"),
         },
         ConnectionID: "<id>",
     })
@@ -77,7 +77,7 @@ func main() {
 
 ## GetComputeKey
 
-Retrieve a key
+Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -132,7 +132,7 @@ func main() {
 
 ## ListComputeKeys
 
-List all keys
+Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -186,7 +186,7 @@ func main() {
 
 ## PatchComputeKey
 
-Update a key
+Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 
 ### Example Usage
 
@@ -213,11 +213,11 @@ func main() {
     res, err := s.Key.PatchComputeKey(ctx, operations.PatchComputeKeyRequest{
         ComputeKey: shared.ComputeKey{
             CreatedAt: types.MustNewTimeFromString("2023-08-19T14:31:46.492Z"),
-            ID: unifiedgosdk.Pointer("29896d38-9bc4-4ba4-b23b-324c0c78a71a"),
+            ID: unifiedgosdk.Pointer("75e89696-fc90-4cd8-8c31-b54eb0d5c71f"),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("nienow-secret"),
             Type: shared.ComputeKeyTypeSecret.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-10-06T23:20:44.193Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-07T07:50:55.897Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -251,7 +251,7 @@ func main() {
 
 ## RemoveComputeKey
 
-Remove a key
+Deletes the ComputeKey identified by `id`.
 
 ### Example Usage
 
@@ -306,7 +306,7 @@ func main() {
 
 ## UpdateComputeKey
 
-Update a key
+Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 
 ### Example Usage
 
@@ -333,11 +333,11 @@ func main() {
     res, err := s.Key.UpdateComputeKey(ctx, operations.UpdateComputeKeyRequest{
         ComputeKey: shared.ComputeKey{
             CreatedAt: types.MustNewTimeFromString("2023-08-19T14:31:46.492Z"),
-            ID: unifiedgosdk.Pointer("29896d38-9bc4-4ba4-b23b-324c0c78a71a"),
+            ID: unifiedgosdk.Pointer("75e89696-fc90-4cd8-8c31-b54eb0d5c71f"),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("nienow-secret"),
             Type: shared.ComputeKeyTypeSecret.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-10-06T23:20:44.193Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-07T07:50:55.897Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

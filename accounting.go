@@ -31,6 +31,7 @@ func newAccounting(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks 
 }
 
 // CreateAccountingAccount - Create an account
+// Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingAccount.
 func (s *Accounting) CreateAccountingAccount(ctx context.Context, request operations.CreateAccountingAccountRequest, opts ...operations.Option) (*operations.CreateAccountingAccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Accounting) CreateAccountingAccount(ctx context.Context, request operat
 }
 
 // CreateAccountingBankfeedaccount - Create a bankfeedaccount
+// Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
 func (s *Accounting) CreateAccountingBankfeedaccount(ctx context.Context, request operations.CreateAccountingBankfeedaccountRequest, opts ...operations.Option) (*operations.CreateAccountingBankfeedaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Accounting) CreateAccountingBankfeedaccount(ctx context.Context, reques
 }
 
 // CreateAccountingBankfeedtransaction - Create a bankfeedtransaction
+// Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedtransaction.
 func (s *Accounting) CreateAccountingBankfeedtransaction(ctx context.Context, request operations.CreateAccountingBankfeedtransactionRequest, opts ...operations.Option) (*operations.CreateAccountingBankfeedtransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Accounting) CreateAccountingBankfeedtransaction(ctx context.Context, re
 }
 
 // CreateAccountingBill - Create a bill
+// Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are mapped to the provider's API. Returns the created AccountingBill.
 func (s *Accounting) CreateAccountingBill(ctx context.Context, request operations.CreateAccountingBillRequest, opts ...operations.Option) (*operations.CreateAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -887,6 +891,7 @@ func (s *Accounting) CreateAccountingBill(ctx context.Context, request operation
 }
 
 // CreateAccountingCategory - Create a category
+// Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body; they are mapped to the provider's API. Returns the created AccountingCategory.
 func (s *Accounting) CreateAccountingCategory(ctx context.Context, request operations.CreateAccountingCategoryRequest, opts ...operations.Option) (*operations.CreateAccountingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1101,6 +1106,7 @@ func (s *Accounting) CreateAccountingCategory(ctx context.Context, request opera
 }
 
 // CreateAccountingContact - Create a contact
+// Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they are mapped to the provider's API. Returns the created AccountingContact.
 func (s *Accounting) CreateAccountingContact(ctx context.Context, request operations.CreateAccountingContactRequest, opts ...operations.Option) (*operations.CreateAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1315,6 +1321,7 @@ func (s *Accounting) CreateAccountingContact(ctx context.Context, request operat
 }
 
 // CreateAccountingCreditmemo - Create a creditmemo
+// Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body; they are mapped to the provider's API. Returns the created AccountingCreditmemo.
 func (s *Accounting) CreateAccountingCreditmemo(ctx context.Context, request operations.CreateAccountingCreditmemoRequest, opts ...operations.Option) (*operations.CreateAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1529,6 +1536,7 @@ func (s *Accounting) CreateAccountingCreditmemo(ctx context.Context, request ope
 }
 
 // CreateAccountingExpense - Create an expense
+// Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpense.
 func (s *Accounting) CreateAccountingExpense(ctx context.Context, request operations.CreateAccountingExpenseRequest, opts ...operations.Option) (*operations.CreateAccountingExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1743,6 +1751,7 @@ func (s *Accounting) CreateAccountingExpense(ctx context.Context, request operat
 }
 
 // CreateAccountingExpensereport - Create an expensereport
+// Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
 func (s *Accounting) CreateAccountingExpensereport(ctx context.Context, request operations.CreateAccountingExpensereportRequest, opts ...operations.Option) (*operations.CreateAccountingExpensereportResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1957,6 +1966,7 @@ func (s *Accounting) CreateAccountingExpensereport(ctx context.Context, request 
 }
 
 // CreateAccountingInvoice - Create an invoice
+// Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they are mapped to the provider's API. Returns the created AccountingInvoice.
 func (s *Accounting) CreateAccountingInvoice(ctx context.Context, request operations.CreateAccountingInvoiceRequest, opts ...operations.Option) (*operations.CreateAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2171,6 +2181,7 @@ func (s *Accounting) CreateAccountingInvoice(ctx context.Context, request operat
 }
 
 // CreateAccountingJournal - Create a journal
+// Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they are mapped to the provider's API. Returns the created AccountingJournal.
 func (s *Accounting) CreateAccountingJournal(ctx context.Context, request operations.CreateAccountingJournalRequest, opts ...operations.Option) (*operations.CreateAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2385,6 +2396,9 @@ func (s *Accounting) CreateAccountingJournal(ctx context.Context, request operat
 }
 
 // CreateAccountingOrder - Create an order
+// Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are mapped to the provider's API. Returns the created AccountingOrder.
+//
+// Deprecated: This will be removed in a future release, please migrate away from it as soon as possible.
 func (s *Accounting) CreateAccountingOrder(ctx context.Context, request operations.CreateAccountingOrderRequest, opts ...operations.Option) (*operations.CreateAccountingOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2599,6 +2613,7 @@ func (s *Accounting) CreateAccountingOrder(ctx context.Context, request operatio
 }
 
 // CreateAccountingPaymentterm - Create a paymentterm
+// Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
 func (s *Accounting) CreateAccountingPaymentterm(ctx context.Context, request operations.CreateAccountingPaymenttermRequest, opts ...operations.Option) (*operations.CreateAccountingPaymenttermResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2813,6 +2828,7 @@ func (s *Accounting) CreateAccountingPaymentterm(ctx context.Context, request op
 }
 
 // CreateAccountingProject - Create a project
+// Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they are mapped to the provider's API. Returns the created AccountingProject.
 func (s *Accounting) CreateAccountingProject(ctx context.Context, request operations.CreateAccountingProjectRequest, opts ...operations.Option) (*operations.CreateAccountingProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3027,6 +3043,7 @@ func (s *Accounting) CreateAccountingProject(ctx context.Context, request operat
 }
 
 // CreateAccountingPurchaseorder - Create a purchaseorder
+// Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
 func (s *Accounting) CreateAccountingPurchaseorder(ctx context.Context, request operations.CreateAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.CreateAccountingPurchaseorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3241,6 +3258,7 @@ func (s *Accounting) CreateAccountingPurchaseorder(ctx context.Context, request 
 }
 
 // CreateAccountingQuote - Create a quote
+// Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are mapped to the provider's API. Returns the created AccountingQuote.
 func (s *Accounting) CreateAccountingQuote(ctx context.Context, request operations.CreateAccountingQuoteRequest, opts ...operations.Option) (*operations.CreateAccountingQuoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3455,6 +3473,7 @@ func (s *Accounting) CreateAccountingQuote(ctx context.Context, request operatio
 }
 
 // CreateAccountingSalesorder - Create a salesorder
+// Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingSalesorder.
 func (s *Accounting) CreateAccountingSalesorder(ctx context.Context, request operations.CreateAccountingSalesorderRequest, opts ...operations.Option) (*operations.CreateAccountingSalesorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3669,6 +3688,7 @@ func (s *Accounting) CreateAccountingSalesorder(ctx context.Context, request ope
 }
 
 // CreateAccountingTaxrate - Create a taxrate
+// Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the request body; they are mapped to the provider's API. Returns the created AccountingTaxrate.
 func (s *Accounting) CreateAccountingTaxrate(ctx context.Context, request operations.CreateAccountingTaxrateRequest, opts ...operations.Option) (*operations.CreateAccountingTaxrateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3883,6 +3903,7 @@ func (s *Accounting) CreateAccountingTaxrate(ctx context.Context, request operat
 }
 
 // CreateAccountingTransaction - Create a transaction
+// Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingTransaction.
 func (s *Accounting) CreateAccountingTransaction(ctx context.Context, request operations.CreateAccountingTransactionRequest, opts ...operations.Option) (*operations.CreateAccountingTransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4097,6 +4118,7 @@ func (s *Accounting) CreateAccountingTransaction(ctx context.Context, request op
 }
 
 // CreateAccountingVendorcredit - Create a vendorcredit
+// Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
 func (s *Accounting) CreateAccountingVendorcredit(ctx context.Context, request operations.CreateAccountingVendorcreditRequest, opts ...operations.Option) (*operations.CreateAccountingVendorcreditResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4311,6 +4333,7 @@ func (s *Accounting) CreateAccountingVendorcredit(ctx context.Context, request o
 }
 
 // GetAccountingAccount - Retrieve an account
+// Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingAccount(ctx context.Context, request operations.GetAccountingAccountRequest, opts ...operations.Option) (*operations.GetAccountingAccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4518,6 +4541,7 @@ func (s *Accounting) GetAccountingAccount(ctx context.Context, request operation
 }
 
 // GetAccountingAgedpayable - Retrieve an agedpayable
+// Retrieves a single AccountingAgedpayable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingAgedpayable(ctx context.Context, request operations.GetAccountingAgedpayableRequest, opts ...operations.Option) (*operations.GetAccountingAgedpayableResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4725,6 +4749,7 @@ func (s *Accounting) GetAccountingAgedpayable(ctx context.Context, request opera
 }
 
 // GetAccountingAgedreceivable - Retrieve an agedreceivable
+// Retrieves a single AccountingAgedreceivable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingAgedreceivable(ctx context.Context, request operations.GetAccountingAgedreceivableRequest, opts ...operations.Option) (*operations.GetAccountingAgedreceivableResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4932,6 +4957,7 @@ func (s *Accounting) GetAccountingAgedreceivable(ctx context.Context, request op
 }
 
 // GetAccountingBalancesheet - Retrieve a balancesheet
+// Retrieves a single AccountingBalancesheet by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingBalancesheet(ctx context.Context, request operations.GetAccountingBalancesheetRequest, opts ...operations.Option) (*operations.GetAccountingBalancesheetResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5139,6 +5165,7 @@ func (s *Accounting) GetAccountingBalancesheet(ctx context.Context, request oper
 }
 
 // GetAccountingBankfeedaccount - Retrieve a bankfeedaccount
+// Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingBankfeedaccount(ctx context.Context, request operations.GetAccountingBankfeedaccountRequest, opts ...operations.Option) (*operations.GetAccountingBankfeedaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5346,6 +5373,7 @@ func (s *Accounting) GetAccountingBankfeedaccount(ctx context.Context, request o
 }
 
 // GetAccountingBankfeedtransaction - Retrieve a bankfeedtransaction
+// Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingBankfeedtransaction(ctx context.Context, request operations.GetAccountingBankfeedtransactionRequest, opts ...operations.Option) (*operations.GetAccountingBankfeedtransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5553,6 +5581,7 @@ func (s *Accounting) GetAccountingBankfeedtransaction(ctx context.Context, reque
 }
 
 // GetAccountingBill - Retrieve a bill
+// Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingBill(ctx context.Context, request operations.GetAccountingBillRequest, opts ...operations.Option) (*operations.GetAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5760,6 +5789,7 @@ func (s *Accounting) GetAccountingBill(ctx context.Context, request operations.G
 }
 
 // GetAccountingCashflow - Retrieve a cashflow
+// Retrieves a single AccountingCashflow by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingCashflow(ctx context.Context, request operations.GetAccountingCashflowRequest, opts ...operations.Option) (*operations.GetAccountingCashflowResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5967,6 +5997,7 @@ func (s *Accounting) GetAccountingCashflow(ctx context.Context, request operatio
 }
 
 // GetAccountingCategory - Retrieve a category
+// Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingCategory(ctx context.Context, request operations.GetAccountingCategoryRequest, opts ...operations.Option) (*operations.GetAccountingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6174,6 +6205,7 @@ func (s *Accounting) GetAccountingCategory(ctx context.Context, request operatio
 }
 
 // GetAccountingContact - Retrieve a contact
+// Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingContact(ctx context.Context, request operations.GetAccountingContactRequest, opts ...operations.Option) (*operations.GetAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6381,6 +6413,7 @@ func (s *Accounting) GetAccountingContact(ctx context.Context, request operation
 }
 
 // GetAccountingCreditmemo - Retrieve a creditmemo
+// Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingCreditmemo(ctx context.Context, request operations.GetAccountingCreditmemoRequest, opts ...operations.Option) (*operations.GetAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6588,6 +6621,7 @@ func (s *Accounting) GetAccountingCreditmemo(ctx context.Context, request operat
 }
 
 // GetAccountingExpense - Retrieve an expense
+// Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingExpense(ctx context.Context, request operations.GetAccountingExpenseRequest, opts ...operations.Option) (*operations.GetAccountingExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6795,6 +6829,7 @@ func (s *Accounting) GetAccountingExpense(ctx context.Context, request operation
 }
 
 // GetAccountingExpensereport - Retrieve an expensereport
+// Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingExpensereport(ctx context.Context, request operations.GetAccountingExpensereportRequest, opts ...operations.Option) (*operations.GetAccountingExpensereportResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7002,6 +7037,7 @@ func (s *Accounting) GetAccountingExpensereport(ctx context.Context, request ope
 }
 
 // GetAccountingInvoice - Retrieve an invoice
+// Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingInvoice(ctx context.Context, request operations.GetAccountingInvoiceRequest, opts ...operations.Option) (*operations.GetAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7209,6 +7245,7 @@ func (s *Accounting) GetAccountingInvoice(ctx context.Context, request operation
 }
 
 // GetAccountingJournal - Retrieve a journal
+// Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingJournal(ctx context.Context, request operations.GetAccountingJournalRequest, opts ...operations.Option) (*operations.GetAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7416,6 +7453,9 @@ func (s *Accounting) GetAccountingJournal(ctx context.Context, request operation
 }
 
 // GetAccountingOrder - Retrieve an order
+// Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+//
+// Deprecated: This will be removed in a future release, please migrate away from it as soon as possible.
 func (s *Accounting) GetAccountingOrder(ctx context.Context, request operations.GetAccountingOrderRequest, opts ...operations.Option) (*operations.GetAccountingOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7623,6 +7663,7 @@ func (s *Accounting) GetAccountingOrder(ctx context.Context, request operations.
 }
 
 // GetAccountingOrganization - Retrieve an organization
+// Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingOrganization(ctx context.Context, request operations.GetAccountingOrganizationRequest, opts ...operations.Option) (*operations.GetAccountingOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7830,6 +7871,7 @@ func (s *Accounting) GetAccountingOrganization(ctx context.Context, request oper
 }
 
 // GetAccountingPaymentterm - Retrieve a paymentterm
+// Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingPaymentterm(ctx context.Context, request operations.GetAccountingPaymenttermRequest, opts ...operations.Option) (*operations.GetAccountingPaymenttermResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8037,6 +8079,7 @@ func (s *Accounting) GetAccountingPaymentterm(ctx context.Context, request opera
 }
 
 // GetAccountingProfitloss - Retrieve a profitloss
+// Retrieves a single AccountingProfitloss by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingProfitloss(ctx context.Context, request operations.GetAccountingProfitlossRequest, opts ...operations.Option) (*operations.GetAccountingProfitlossResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8244,6 +8287,7 @@ func (s *Accounting) GetAccountingProfitloss(ctx context.Context, request operat
 }
 
 // GetAccountingProject - Retrieve a project
+// Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingProject(ctx context.Context, request operations.GetAccountingProjectRequest, opts ...operations.Option) (*operations.GetAccountingProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8451,6 +8495,7 @@ func (s *Accounting) GetAccountingProject(ctx context.Context, request operation
 }
 
 // GetAccountingPurchaseorder - Retrieve a purchaseorder
+// Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingPurchaseorder(ctx context.Context, request operations.GetAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.GetAccountingPurchaseorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8658,6 +8703,7 @@ func (s *Accounting) GetAccountingPurchaseorder(ctx context.Context, request ope
 }
 
 // GetAccountingPurchasereceipt - Retrieve a purchasereceipt
+// Retrieves a single AccountingPurchasereceipt by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingPurchasereceipt(ctx context.Context, request operations.GetAccountingPurchasereceiptRequest, opts ...operations.Option) (*operations.GetAccountingPurchasereceiptResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8865,6 +8911,7 @@ func (s *Accounting) GetAccountingPurchasereceipt(ctx context.Context, request o
 }
 
 // GetAccountingQuote - Retrieve a quote
+// Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingQuote(ctx context.Context, request operations.GetAccountingQuoteRequest, opts ...operations.Option) (*operations.GetAccountingQuoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9072,6 +9119,7 @@ func (s *Accounting) GetAccountingQuote(ctx context.Context, request operations.
 }
 
 // GetAccountingSalesorder - Retrieve a salesorder
+// Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingSalesorder(ctx context.Context, request operations.GetAccountingSalesorderRequest, opts ...operations.Option) (*operations.GetAccountingSalesorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9279,6 +9327,7 @@ func (s *Accounting) GetAccountingSalesorder(ctx context.Context, request operat
 }
 
 // GetAccountingSalesreceipt - Retrieve a salesreceipt
+// Retrieves a single AccountingSalesreceipt by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingSalesreceipt(ctx context.Context, request operations.GetAccountingSalesreceiptRequest, opts ...operations.Option) (*operations.GetAccountingSalesreceiptResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9486,6 +9535,7 @@ func (s *Accounting) GetAccountingSalesreceipt(ctx context.Context, request oper
 }
 
 // GetAccountingTaxrate - Retrieve a taxrate
+// Retrieves a single AccountingTaxrate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingTaxrate(ctx context.Context, request operations.GetAccountingTaxrateRequest, opts ...operations.Option) (*operations.GetAccountingTaxrateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9693,6 +9743,7 @@ func (s *Accounting) GetAccountingTaxrate(ctx context.Context, request operation
 }
 
 // GetAccountingTransaction - Retrieve a transaction
+// Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingTransaction(ctx context.Context, request operations.GetAccountingTransactionRequest, opts ...operations.Option) (*operations.GetAccountingTransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9900,6 +9951,7 @@ func (s *Accounting) GetAccountingTransaction(ctx context.Context, request opera
 }
 
 // GetAccountingTrialbalance - Retrieve a trialbalance
+// Retrieves a single AccountingTrialbalance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingTrialbalance(ctx context.Context, request operations.GetAccountingTrialbalanceRequest, opts ...operations.Option) (*operations.GetAccountingTrialbalanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -10107,6 +10159,7 @@ func (s *Accounting) GetAccountingTrialbalance(ctx context.Context, request oper
 }
 
 // GetAccountingVendorcredit - Retrieve a vendorcredit
+// Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Accounting) GetAccountingVendorcredit(ctx context.Context, request operations.GetAccountingVendorcreditRequest, opts ...operations.Option) (*operations.GetAccountingVendorcreditResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -10314,6 +10367,7 @@ func (s *Accounting) GetAccountingVendorcredit(ctx context.Context, request oper
 }
 
 // ListAccountingAccounts - List all accounts
+// Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingAccounts(ctx context.Context, request operations.ListAccountingAccountsRequest, opts ...operations.Option) (*operations.ListAccountingAccountsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -10521,6 +10575,7 @@ func (s *Accounting) ListAccountingAccounts(ctx context.Context, request operati
 }
 
 // ListAccountingAgedpayables - List all agedpayables
+// Returns a list of AccountingAgedpayables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingAgedpayables(ctx context.Context, request operations.ListAccountingAgedpayablesRequest, opts ...operations.Option) (*operations.ListAccountingAgedpayablesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -10728,6 +10783,7 @@ func (s *Accounting) ListAccountingAgedpayables(ctx context.Context, request ope
 }
 
 // ListAccountingAgedreceivables - List all agedreceivables
+// Returns a list of AccountingAgedreceivables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingAgedreceivables(ctx context.Context, request operations.ListAccountingAgedreceivablesRequest, opts ...operations.Option) (*operations.ListAccountingAgedreceivablesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -10935,6 +10991,7 @@ func (s *Accounting) ListAccountingAgedreceivables(ctx context.Context, request 
 }
 
 // ListAccountingBalancesheets - List all balancesheets
+// Returns a list of AccountingBalancesheets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingBalancesheets(ctx context.Context, request operations.ListAccountingBalancesheetsRequest, opts ...operations.Option) (*operations.ListAccountingBalancesheetsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -11142,6 +11199,7 @@ func (s *Accounting) ListAccountingBalancesheets(ctx context.Context, request op
 }
 
 // ListAccountingBankfeedaccounts - List all bankfeedaccounts
+// Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingBankfeedaccounts(ctx context.Context, request operations.ListAccountingBankfeedaccountsRequest, opts ...operations.Option) (*operations.ListAccountingBankfeedaccountsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -11349,6 +11407,7 @@ func (s *Accounting) ListAccountingBankfeedaccounts(ctx context.Context, request
 }
 
 // ListAccountingBankfeedtransactions - List all bankfeedtransactions
+// Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingBankfeedtransactions(ctx context.Context, request operations.ListAccountingBankfeedtransactionsRequest, opts ...operations.Option) (*operations.ListAccountingBankfeedtransactionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -11556,6 +11615,7 @@ func (s *Accounting) ListAccountingBankfeedtransactions(ctx context.Context, req
 }
 
 // ListAccountingBills - List all bills
+// Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingBills(ctx context.Context, request operations.ListAccountingBillsRequest, opts ...operations.Option) (*operations.ListAccountingBillsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -11763,6 +11823,7 @@ func (s *Accounting) ListAccountingBills(ctx context.Context, request operations
 }
 
 // ListAccountingCashflows - List all cashflows
+// Returns a list of AccountingCashflows. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingCashflows(ctx context.Context, request operations.ListAccountingCashflowsRequest, opts ...operations.Option) (*operations.ListAccountingCashflowsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -11970,6 +12031,7 @@ func (s *Accounting) ListAccountingCashflows(ctx context.Context, request operat
 }
 
 // ListAccountingCategories - List all categories
+// Returns a list of AccountingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingCategories(ctx context.Context, request operations.ListAccountingCategoriesRequest, opts ...operations.Option) (*operations.ListAccountingCategoriesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -12177,6 +12239,7 @@ func (s *Accounting) ListAccountingCategories(ctx context.Context, request opera
 }
 
 // ListAccountingContacts - List all contacts
+// Returns a list of AccountingContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingContacts(ctx context.Context, request operations.ListAccountingContactsRequest, opts ...operations.Option) (*operations.ListAccountingContactsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -12384,6 +12447,7 @@ func (s *Accounting) ListAccountingContacts(ctx context.Context, request operati
 }
 
 // ListAccountingCreditmemoes - List all creditmemoes
+// Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingCreditmemoes(ctx context.Context, request operations.ListAccountingCreditmemoesRequest, opts ...operations.Option) (*operations.ListAccountingCreditmemoesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -12591,6 +12655,7 @@ func (s *Accounting) ListAccountingCreditmemoes(ctx context.Context, request ope
 }
 
 // ListAccountingExpensereports - List all expensereports
+// Returns a list of AccountingExpensereports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingExpensereports(ctx context.Context, request operations.ListAccountingExpensereportsRequest, opts ...operations.Option) (*operations.ListAccountingExpensereportsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -12798,6 +12863,7 @@ func (s *Accounting) ListAccountingExpensereports(ctx context.Context, request o
 }
 
 // ListAccountingExpenses - List all expenses
+// Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingExpenses(ctx context.Context, request operations.ListAccountingExpensesRequest, opts ...operations.Option) (*operations.ListAccountingExpensesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -13005,6 +13071,7 @@ func (s *Accounting) ListAccountingExpenses(ctx context.Context, request operati
 }
 
 // ListAccountingInvoices - List all invoices
+// Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingInvoices(ctx context.Context, request operations.ListAccountingInvoicesRequest, opts ...operations.Option) (*operations.ListAccountingInvoicesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -13212,6 +13279,7 @@ func (s *Accounting) ListAccountingInvoices(ctx context.Context, request operati
 }
 
 // ListAccountingJournals - List all journals
+// Returns a list of AccountingJournals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingJournals(ctx context.Context, request operations.ListAccountingJournalsRequest, opts ...operations.Option) (*operations.ListAccountingJournalsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -13419,6 +13487,9 @@ func (s *Accounting) ListAccountingJournals(ctx context.Context, request operati
 }
 
 // ListAccountingOrders - List all orders
+// Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+//
+// Deprecated: This will be removed in a future release, please migrate away from it as soon as possible.
 func (s *Accounting) ListAccountingOrders(ctx context.Context, request operations.ListAccountingOrdersRequest, opts ...operations.Option) (*operations.ListAccountingOrdersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -13626,6 +13697,7 @@ func (s *Accounting) ListAccountingOrders(ctx context.Context, request operation
 }
 
 // ListAccountingOrganizations - List all organizations
+// Returns a list of AccountingOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingOrganizations(ctx context.Context, request operations.ListAccountingOrganizationsRequest, opts ...operations.Option) (*operations.ListAccountingOrganizationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -13833,6 +13905,7 @@ func (s *Accounting) ListAccountingOrganizations(ctx context.Context, request op
 }
 
 // ListAccountingPaymentterms - List all paymentterms
+// Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingPaymentterms(ctx context.Context, request operations.ListAccountingPaymenttermsRequest, opts ...operations.Option) (*operations.ListAccountingPaymenttermsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -14040,6 +14113,7 @@ func (s *Accounting) ListAccountingPaymentterms(ctx context.Context, request ope
 }
 
 // ListAccountingProfitlosses - List all profitlosses
+// Returns a list of AccountingProfitlosses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingProfitlosses(ctx context.Context, request operations.ListAccountingProfitlossesRequest, opts ...operations.Option) (*operations.ListAccountingProfitlossesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -14247,6 +14321,7 @@ func (s *Accounting) ListAccountingProfitlosses(ctx context.Context, request ope
 }
 
 // ListAccountingProjects - List all projects
+// Returns a list of AccountingProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingProjects(ctx context.Context, request operations.ListAccountingProjectsRequest, opts ...operations.Option) (*operations.ListAccountingProjectsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -14454,6 +14529,7 @@ func (s *Accounting) ListAccountingProjects(ctx context.Context, request operati
 }
 
 // ListAccountingPurchaseorders - List all purchaseorders
+// Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingPurchaseorders(ctx context.Context, request operations.ListAccountingPurchaseordersRequest, opts ...operations.Option) (*operations.ListAccountingPurchaseordersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -14661,6 +14737,7 @@ func (s *Accounting) ListAccountingPurchaseorders(ctx context.Context, request o
 }
 
 // ListAccountingPurchasereceipts - List all purchasereceipts
+// Returns a list of AccountingPurchasereceipts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingPurchasereceipts(ctx context.Context, request operations.ListAccountingPurchasereceiptsRequest, opts ...operations.Option) (*operations.ListAccountingPurchasereceiptsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -14868,6 +14945,7 @@ func (s *Accounting) ListAccountingPurchasereceipts(ctx context.Context, request
 }
 
 // ListAccountingQuotes - List all quotes
+// Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingQuotes(ctx context.Context, request operations.ListAccountingQuotesRequest, opts ...operations.Option) (*operations.ListAccountingQuotesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -15075,6 +15153,7 @@ func (s *Accounting) ListAccountingQuotes(ctx context.Context, request operation
 }
 
 // ListAccountingSalesorders - List all salesorders
+// Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingSalesorders(ctx context.Context, request operations.ListAccountingSalesordersRequest, opts ...operations.Option) (*operations.ListAccountingSalesordersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -15282,6 +15361,7 @@ func (s *Accounting) ListAccountingSalesorders(ctx context.Context, request oper
 }
 
 // ListAccountingSalesreceipts - List all salesreceipts
+// Returns a list of AccountingSalesreceipts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingSalesreceipts(ctx context.Context, request operations.ListAccountingSalesreceiptsRequest, opts ...operations.Option) (*operations.ListAccountingSalesreceiptsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -15489,6 +15569,7 @@ func (s *Accounting) ListAccountingSalesreceipts(ctx context.Context, request op
 }
 
 // ListAccountingTaxrates - List all taxrates
+// Returns a list of AccountingTaxrates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingTaxrates(ctx context.Context, request operations.ListAccountingTaxratesRequest, opts ...operations.Option) (*operations.ListAccountingTaxratesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -15696,6 +15777,7 @@ func (s *Accounting) ListAccountingTaxrates(ctx context.Context, request operati
 }
 
 // ListAccountingTransactions - List all transactions
+// Returns a list of AccountingTransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingTransactions(ctx context.Context, request operations.ListAccountingTransactionsRequest, opts ...operations.Option) (*operations.ListAccountingTransactionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -15903,6 +15985,7 @@ func (s *Accounting) ListAccountingTransactions(ctx context.Context, request ope
 }
 
 // ListAccountingTrialbalances - List all trialbalances
+// Returns a list of AccountingTrialbalances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingTrialbalances(ctx context.Context, request operations.ListAccountingTrialbalancesRequest, opts ...operations.Option) (*operations.ListAccountingTrialbalancesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -16110,6 +16193,7 @@ func (s *Accounting) ListAccountingTrialbalances(ctx context.Context, request op
 }
 
 // ListAccountingVendorcredits - List all vendorcredits
+// Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Accounting) ListAccountingVendorcredits(ctx context.Context, request operations.ListAccountingVendorcreditsRequest, opts ...operations.Option) (*operations.ListAccountingVendorcreditsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -16317,6 +16401,7 @@ func (s *Accounting) ListAccountingVendorcredits(ctx context.Context, request op
 }
 
 // PatchAccountingAccount - Update an account
+// Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 func (s *Accounting) PatchAccountingAccount(ctx context.Context, request operations.PatchAccountingAccountRequest, opts ...operations.Option) (*operations.PatchAccountingAccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -16531,6 +16616,7 @@ func (s *Accounting) PatchAccountingAccount(ctx context.Context, request operati
 }
 
 // PatchAccountingBankfeedaccount - Update a bankfeedaccount
+// Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 func (s *Accounting) PatchAccountingBankfeedaccount(ctx context.Context, request operations.PatchAccountingBankfeedaccountRequest, opts ...operations.Option) (*operations.PatchAccountingBankfeedaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -16745,6 +16831,7 @@ func (s *Accounting) PatchAccountingBankfeedaccount(ctx context.Context, request
 }
 
 // PatchAccountingBankfeedtransaction - Update a bankfeedtransaction
+// Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 func (s *Accounting) PatchAccountingBankfeedtransaction(ctx context.Context, request operations.PatchAccountingBankfeedtransactionRequest, opts ...operations.Option) (*operations.PatchAccountingBankfeedtransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -16959,6 +17046,7 @@ func (s *Accounting) PatchAccountingBankfeedtransaction(ctx context.Context, req
 }
 
 // PatchAccountingBill - Update a bill
+// Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 func (s *Accounting) PatchAccountingBill(ctx context.Context, request operations.PatchAccountingBillRequest, opts ...operations.Option) (*operations.PatchAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -17173,6 +17261,7 @@ func (s *Accounting) PatchAccountingBill(ctx context.Context, request operations
 }
 
 // PatchAccountingCategory - Update a category
+// Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 func (s *Accounting) PatchAccountingCategory(ctx context.Context, request operations.PatchAccountingCategoryRequest, opts ...operations.Option) (*operations.PatchAccountingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -17387,6 +17476,7 @@ func (s *Accounting) PatchAccountingCategory(ctx context.Context, request operat
 }
 
 // PatchAccountingContact - Update a contact
+// Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 func (s *Accounting) PatchAccountingContact(ctx context.Context, request operations.PatchAccountingContactRequest, opts ...operations.Option) (*operations.PatchAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -17601,6 +17691,7 @@ func (s *Accounting) PatchAccountingContact(ctx context.Context, request operati
 }
 
 // PatchAccountingCreditmemo - Update a creditmemo
+// Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 func (s *Accounting) PatchAccountingCreditmemo(ctx context.Context, request operations.PatchAccountingCreditmemoRequest, opts ...operations.Option) (*operations.PatchAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -17815,6 +17906,7 @@ func (s *Accounting) PatchAccountingCreditmemo(ctx context.Context, request oper
 }
 
 // PatchAccountingExpense - Update an expense
+// Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 func (s *Accounting) PatchAccountingExpense(ctx context.Context, request operations.PatchAccountingExpenseRequest, opts ...operations.Option) (*operations.PatchAccountingExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -18029,6 +18121,7 @@ func (s *Accounting) PatchAccountingExpense(ctx context.Context, request operati
 }
 
 // PatchAccountingExpensereport - Update an expensereport
+// Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 func (s *Accounting) PatchAccountingExpensereport(ctx context.Context, request operations.PatchAccountingExpensereportRequest, opts ...operations.Option) (*operations.PatchAccountingExpensereportResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -18243,6 +18336,7 @@ func (s *Accounting) PatchAccountingExpensereport(ctx context.Context, request o
 }
 
 // PatchAccountingInvoice - Update an invoice
+// Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 func (s *Accounting) PatchAccountingInvoice(ctx context.Context, request operations.PatchAccountingInvoiceRequest, opts ...operations.Option) (*operations.PatchAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -18457,6 +18551,7 @@ func (s *Accounting) PatchAccountingInvoice(ctx context.Context, request operati
 }
 
 // PatchAccountingJournal - Update a journal
+// Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 func (s *Accounting) PatchAccountingJournal(ctx context.Context, request operations.PatchAccountingJournalRequest, opts ...operations.Option) (*operations.PatchAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -18671,6 +18766,9 @@ func (s *Accounting) PatchAccountingJournal(ctx context.Context, request operati
 }
 
 // PatchAccountingOrder - Update an order
+// Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+//
+// Deprecated: This will be removed in a future release, please migrate away from it as soon as possible.
 func (s *Accounting) PatchAccountingOrder(ctx context.Context, request operations.PatchAccountingOrderRequest, opts ...operations.Option) (*operations.PatchAccountingOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -18885,6 +18983,7 @@ func (s *Accounting) PatchAccountingOrder(ctx context.Context, request operation
 }
 
 // PatchAccountingPaymentterm - Update a paymentterm
+// Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 func (s *Accounting) PatchAccountingPaymentterm(ctx context.Context, request operations.PatchAccountingPaymenttermRequest, opts ...operations.Option) (*operations.PatchAccountingPaymenttermResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -19099,6 +19198,7 @@ func (s *Accounting) PatchAccountingPaymentterm(ctx context.Context, request ope
 }
 
 // PatchAccountingProject - Update a project
+// Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 func (s *Accounting) PatchAccountingProject(ctx context.Context, request operations.PatchAccountingProjectRequest, opts ...operations.Option) (*operations.PatchAccountingProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -19313,6 +19413,7 @@ func (s *Accounting) PatchAccountingProject(ctx context.Context, request operati
 }
 
 // PatchAccountingPurchaseorder - Update a purchaseorder
+// Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 func (s *Accounting) PatchAccountingPurchaseorder(ctx context.Context, request operations.PatchAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.PatchAccountingPurchaseorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -19527,6 +19628,7 @@ func (s *Accounting) PatchAccountingPurchaseorder(ctx context.Context, request o
 }
 
 // PatchAccountingQuote - Update a quote
+// Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
 func (s *Accounting) PatchAccountingQuote(ctx context.Context, request operations.PatchAccountingQuoteRequest, opts ...operations.Option) (*operations.PatchAccountingQuoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -19741,6 +19843,7 @@ func (s *Accounting) PatchAccountingQuote(ctx context.Context, request operation
 }
 
 // PatchAccountingSalesorder - Update a salesorder
+// Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 func (s *Accounting) PatchAccountingSalesorder(ctx context.Context, request operations.PatchAccountingSalesorderRequest, opts ...operations.Option) (*operations.PatchAccountingSalesorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -19955,6 +20058,7 @@ func (s *Accounting) PatchAccountingSalesorder(ctx context.Context, request oper
 }
 
 // PatchAccountingTaxrate - Update a taxrate
+// Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
 func (s *Accounting) PatchAccountingTaxrate(ctx context.Context, request operations.PatchAccountingTaxrateRequest, opts ...operations.Option) (*operations.PatchAccountingTaxrateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -20169,6 +20273,7 @@ func (s *Accounting) PatchAccountingTaxrate(ctx context.Context, request operati
 }
 
 // PatchAccountingTransaction - Update a transaction
+// Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 func (s *Accounting) PatchAccountingTransaction(ctx context.Context, request operations.PatchAccountingTransactionRequest, opts ...operations.Option) (*operations.PatchAccountingTransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -20383,6 +20488,7 @@ func (s *Accounting) PatchAccountingTransaction(ctx context.Context, request ope
 }
 
 // PatchAccountingVendorcredit - Update a vendorcredit
+// Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 func (s *Accounting) PatchAccountingVendorcredit(ctx context.Context, request operations.PatchAccountingVendorcreditRequest, opts ...operations.Option) (*operations.PatchAccountingVendorcreditResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -20597,6 +20703,7 @@ func (s *Accounting) PatchAccountingVendorcredit(ctx context.Context, request op
 }
 
 // RemoveAccountingAccount - Remove an account
+// Deletes the AccountingAccount identified by `id`.
 func (s *Accounting) RemoveAccountingAccount(ctx context.Context, request operations.RemoveAccountingAccountRequest, opts ...operations.Option) (*operations.RemoveAccountingAccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -20779,6 +20886,7 @@ func (s *Accounting) RemoveAccountingAccount(ctx context.Context, request operat
 }
 
 // RemoveAccountingBankfeedaccount - Remove a bankfeedaccount
+// Deletes the AccountingBankfeedaccount identified by `id`.
 func (s *Accounting) RemoveAccountingBankfeedaccount(ctx context.Context, request operations.RemoveAccountingBankfeedaccountRequest, opts ...operations.Option) (*operations.RemoveAccountingBankfeedaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -20961,6 +21069,7 @@ func (s *Accounting) RemoveAccountingBankfeedaccount(ctx context.Context, reques
 }
 
 // RemoveAccountingBankfeedtransaction - Remove a bankfeedtransaction
+// Deletes the AccountingBankfeedtransaction identified by `id`.
 func (s *Accounting) RemoveAccountingBankfeedtransaction(ctx context.Context, request operations.RemoveAccountingBankfeedtransactionRequest, opts ...operations.Option) (*operations.RemoveAccountingBankfeedtransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -21143,6 +21252,7 @@ func (s *Accounting) RemoveAccountingBankfeedtransaction(ctx context.Context, re
 }
 
 // RemoveAccountingBill - Remove a bill
+// Deletes the AccountingBill identified by `id`.
 func (s *Accounting) RemoveAccountingBill(ctx context.Context, request operations.RemoveAccountingBillRequest, opts ...operations.Option) (*operations.RemoveAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -21325,6 +21435,7 @@ func (s *Accounting) RemoveAccountingBill(ctx context.Context, request operation
 }
 
 // RemoveAccountingCategory - Remove a category
+// Deletes the AccountingCategory identified by `id`.
 func (s *Accounting) RemoveAccountingCategory(ctx context.Context, request operations.RemoveAccountingCategoryRequest, opts ...operations.Option) (*operations.RemoveAccountingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -21507,6 +21618,7 @@ func (s *Accounting) RemoveAccountingCategory(ctx context.Context, request opera
 }
 
 // RemoveAccountingContact - Remove a contact
+// Deletes the AccountingContact identified by `id`.
 func (s *Accounting) RemoveAccountingContact(ctx context.Context, request operations.RemoveAccountingContactRequest, opts ...operations.Option) (*operations.RemoveAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -21689,6 +21801,7 @@ func (s *Accounting) RemoveAccountingContact(ctx context.Context, request operat
 }
 
 // RemoveAccountingCreditmemo - Remove a creditmemo
+// Deletes the AccountingCreditmemo identified by `id`.
 func (s *Accounting) RemoveAccountingCreditmemo(ctx context.Context, request operations.RemoveAccountingCreditmemoRequest, opts ...operations.Option) (*operations.RemoveAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -21871,6 +21984,7 @@ func (s *Accounting) RemoveAccountingCreditmemo(ctx context.Context, request ope
 }
 
 // RemoveAccountingExpense - Remove an expense
+// Deletes the AccountingExpense identified by `id`.
 func (s *Accounting) RemoveAccountingExpense(ctx context.Context, request operations.RemoveAccountingExpenseRequest, opts ...operations.Option) (*operations.RemoveAccountingExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -22053,6 +22167,7 @@ func (s *Accounting) RemoveAccountingExpense(ctx context.Context, request operat
 }
 
 // RemoveAccountingExpensereport - Remove an expensereport
+// Deletes the AccountingExpensereport identified by `id`.
 func (s *Accounting) RemoveAccountingExpensereport(ctx context.Context, request operations.RemoveAccountingExpensereportRequest, opts ...operations.Option) (*operations.RemoveAccountingExpensereportResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -22235,6 +22350,7 @@ func (s *Accounting) RemoveAccountingExpensereport(ctx context.Context, request 
 }
 
 // RemoveAccountingInvoice - Remove an invoice
+// Deletes the AccountingInvoice identified by `id`.
 func (s *Accounting) RemoveAccountingInvoice(ctx context.Context, request operations.RemoveAccountingInvoiceRequest, opts ...operations.Option) (*operations.RemoveAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -22417,6 +22533,7 @@ func (s *Accounting) RemoveAccountingInvoice(ctx context.Context, request operat
 }
 
 // RemoveAccountingJournal - Remove a journal
+// Deletes the AccountingJournal identified by `id`.
 func (s *Accounting) RemoveAccountingJournal(ctx context.Context, request operations.RemoveAccountingJournalRequest, opts ...operations.Option) (*operations.RemoveAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -22599,6 +22716,9 @@ func (s *Accounting) RemoveAccountingJournal(ctx context.Context, request operat
 }
 
 // RemoveAccountingOrder - Remove an order
+// Deletes the AccountingOrder identified by `id`.
+//
+// Deprecated: This will be removed in a future release, please migrate away from it as soon as possible.
 func (s *Accounting) RemoveAccountingOrder(ctx context.Context, request operations.RemoveAccountingOrderRequest, opts ...operations.Option) (*operations.RemoveAccountingOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -22781,6 +22901,7 @@ func (s *Accounting) RemoveAccountingOrder(ctx context.Context, request operatio
 }
 
 // RemoveAccountingPaymentterm - Remove a paymentterm
+// Deletes the AccountingPaymentterm identified by `id`.
 func (s *Accounting) RemoveAccountingPaymentterm(ctx context.Context, request operations.RemoveAccountingPaymenttermRequest, opts ...operations.Option) (*operations.RemoveAccountingPaymenttermResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -22963,6 +23084,7 @@ func (s *Accounting) RemoveAccountingPaymentterm(ctx context.Context, request op
 }
 
 // RemoveAccountingProject - Remove a project
+// Deletes the AccountingProject identified by `id`.
 func (s *Accounting) RemoveAccountingProject(ctx context.Context, request operations.RemoveAccountingProjectRequest, opts ...operations.Option) (*operations.RemoveAccountingProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -23145,6 +23267,7 @@ func (s *Accounting) RemoveAccountingProject(ctx context.Context, request operat
 }
 
 // RemoveAccountingPurchaseorder - Remove a purchaseorder
+// Deletes the AccountingPurchaseorder identified by `id`.
 func (s *Accounting) RemoveAccountingPurchaseorder(ctx context.Context, request operations.RemoveAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.RemoveAccountingPurchaseorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -23327,6 +23450,7 @@ func (s *Accounting) RemoveAccountingPurchaseorder(ctx context.Context, request 
 }
 
 // RemoveAccountingQuote - Remove a quote
+// Deletes the AccountingQuote identified by `id`.
 func (s *Accounting) RemoveAccountingQuote(ctx context.Context, request operations.RemoveAccountingQuoteRequest, opts ...operations.Option) (*operations.RemoveAccountingQuoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -23509,6 +23633,7 @@ func (s *Accounting) RemoveAccountingQuote(ctx context.Context, request operatio
 }
 
 // RemoveAccountingSalesorder - Remove a salesorder
+// Deletes the AccountingSalesorder identified by `id`.
 func (s *Accounting) RemoveAccountingSalesorder(ctx context.Context, request operations.RemoveAccountingSalesorderRequest, opts ...operations.Option) (*operations.RemoveAccountingSalesorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -23691,6 +23816,7 @@ func (s *Accounting) RemoveAccountingSalesorder(ctx context.Context, request ope
 }
 
 // RemoveAccountingTaxrate - Remove a taxrate
+// Deletes the AccountingTaxrate identified by `id`.
 func (s *Accounting) RemoveAccountingTaxrate(ctx context.Context, request operations.RemoveAccountingTaxrateRequest, opts ...operations.Option) (*operations.RemoveAccountingTaxrateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -23873,6 +23999,7 @@ func (s *Accounting) RemoveAccountingTaxrate(ctx context.Context, request operat
 }
 
 // RemoveAccountingTransaction - Remove a transaction
+// Deletes the AccountingTransaction identified by `id`.
 func (s *Accounting) RemoveAccountingTransaction(ctx context.Context, request operations.RemoveAccountingTransactionRequest, opts ...operations.Option) (*operations.RemoveAccountingTransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -24055,6 +24182,7 @@ func (s *Accounting) RemoveAccountingTransaction(ctx context.Context, request op
 }
 
 // RemoveAccountingVendorcredit - Remove a vendorcredit
+// Deletes the AccountingVendorcredit identified by `id`.
 func (s *Accounting) RemoveAccountingVendorcredit(ctx context.Context, request operations.RemoveAccountingVendorcreditRequest, opts ...operations.Option) (*operations.RemoveAccountingVendorcreditResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -24237,6 +24365,7 @@ func (s *Accounting) RemoveAccountingVendorcredit(ctx context.Context, request o
 }
 
 // UpdateAccountingAccount - Update an account
+// Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 func (s *Accounting) UpdateAccountingAccount(ctx context.Context, request operations.UpdateAccountingAccountRequest, opts ...operations.Option) (*operations.UpdateAccountingAccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -24451,6 +24580,7 @@ func (s *Accounting) UpdateAccountingAccount(ctx context.Context, request operat
 }
 
 // UpdateAccountingBankfeedaccount - Update a bankfeedaccount
+// Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 func (s *Accounting) UpdateAccountingBankfeedaccount(ctx context.Context, request operations.UpdateAccountingBankfeedaccountRequest, opts ...operations.Option) (*operations.UpdateAccountingBankfeedaccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -24665,6 +24795,7 @@ func (s *Accounting) UpdateAccountingBankfeedaccount(ctx context.Context, reques
 }
 
 // UpdateAccountingBankfeedtransaction - Update a bankfeedtransaction
+// Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 func (s *Accounting) UpdateAccountingBankfeedtransaction(ctx context.Context, request operations.UpdateAccountingBankfeedtransactionRequest, opts ...operations.Option) (*operations.UpdateAccountingBankfeedtransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -24879,6 +25010,7 @@ func (s *Accounting) UpdateAccountingBankfeedtransaction(ctx context.Context, re
 }
 
 // UpdateAccountingBill - Update a bill
+// Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 func (s *Accounting) UpdateAccountingBill(ctx context.Context, request operations.UpdateAccountingBillRequest, opts ...operations.Option) (*operations.UpdateAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -25093,6 +25225,7 @@ func (s *Accounting) UpdateAccountingBill(ctx context.Context, request operation
 }
 
 // UpdateAccountingCategory - Update a category
+// Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 func (s *Accounting) UpdateAccountingCategory(ctx context.Context, request operations.UpdateAccountingCategoryRequest, opts ...operations.Option) (*operations.UpdateAccountingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -25307,6 +25440,7 @@ func (s *Accounting) UpdateAccountingCategory(ctx context.Context, request opera
 }
 
 // UpdateAccountingContact - Update a contact
+// Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 func (s *Accounting) UpdateAccountingContact(ctx context.Context, request operations.UpdateAccountingContactRequest, opts ...operations.Option) (*operations.UpdateAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -25521,6 +25655,7 @@ func (s *Accounting) UpdateAccountingContact(ctx context.Context, request operat
 }
 
 // UpdateAccountingCreditmemo - Update a creditmemo
+// Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 func (s *Accounting) UpdateAccountingCreditmemo(ctx context.Context, request operations.UpdateAccountingCreditmemoRequest, opts ...operations.Option) (*operations.UpdateAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -25735,6 +25870,7 @@ func (s *Accounting) UpdateAccountingCreditmemo(ctx context.Context, request ope
 }
 
 // UpdateAccountingExpense - Update an expense
+// Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 func (s *Accounting) UpdateAccountingExpense(ctx context.Context, request operations.UpdateAccountingExpenseRequest, opts ...operations.Option) (*operations.UpdateAccountingExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -25949,6 +26085,7 @@ func (s *Accounting) UpdateAccountingExpense(ctx context.Context, request operat
 }
 
 // UpdateAccountingExpensereport - Update an expensereport
+// Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 func (s *Accounting) UpdateAccountingExpensereport(ctx context.Context, request operations.UpdateAccountingExpensereportRequest, opts ...operations.Option) (*operations.UpdateAccountingExpensereportResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -26163,6 +26300,7 @@ func (s *Accounting) UpdateAccountingExpensereport(ctx context.Context, request 
 }
 
 // UpdateAccountingInvoice - Update an invoice
+// Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 func (s *Accounting) UpdateAccountingInvoice(ctx context.Context, request operations.UpdateAccountingInvoiceRequest, opts ...operations.Option) (*operations.UpdateAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -26377,6 +26515,7 @@ func (s *Accounting) UpdateAccountingInvoice(ctx context.Context, request operat
 }
 
 // UpdateAccountingJournal - Update a journal
+// Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 func (s *Accounting) UpdateAccountingJournal(ctx context.Context, request operations.UpdateAccountingJournalRequest, opts ...operations.Option) (*operations.UpdateAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -26591,6 +26730,9 @@ func (s *Accounting) UpdateAccountingJournal(ctx context.Context, request operat
 }
 
 // UpdateAccountingOrder - Update an order
+// Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+//
+// Deprecated: This will be removed in a future release, please migrate away from it as soon as possible.
 func (s *Accounting) UpdateAccountingOrder(ctx context.Context, request operations.UpdateAccountingOrderRequest, opts ...operations.Option) (*operations.UpdateAccountingOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -26805,6 +26947,7 @@ func (s *Accounting) UpdateAccountingOrder(ctx context.Context, request operatio
 }
 
 // UpdateAccountingPaymentterm - Update a paymentterm
+// Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 func (s *Accounting) UpdateAccountingPaymentterm(ctx context.Context, request operations.UpdateAccountingPaymenttermRequest, opts ...operations.Option) (*operations.UpdateAccountingPaymenttermResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -27019,6 +27162,7 @@ func (s *Accounting) UpdateAccountingPaymentterm(ctx context.Context, request op
 }
 
 // UpdateAccountingProject - Update a project
+// Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 func (s *Accounting) UpdateAccountingProject(ctx context.Context, request operations.UpdateAccountingProjectRequest, opts ...operations.Option) (*operations.UpdateAccountingProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -27233,6 +27377,7 @@ func (s *Accounting) UpdateAccountingProject(ctx context.Context, request operat
 }
 
 // UpdateAccountingPurchaseorder - Update a purchaseorder
+// Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 func (s *Accounting) UpdateAccountingPurchaseorder(ctx context.Context, request operations.UpdateAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.UpdateAccountingPurchaseorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -27447,6 +27592,7 @@ func (s *Accounting) UpdateAccountingPurchaseorder(ctx context.Context, request 
 }
 
 // UpdateAccountingQuote - Update a quote
+// Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
 func (s *Accounting) UpdateAccountingQuote(ctx context.Context, request operations.UpdateAccountingQuoteRequest, opts ...operations.Option) (*operations.UpdateAccountingQuoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -27661,6 +27807,7 @@ func (s *Accounting) UpdateAccountingQuote(ctx context.Context, request operatio
 }
 
 // UpdateAccountingSalesorder - Update a salesorder
+// Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 func (s *Accounting) UpdateAccountingSalesorder(ctx context.Context, request operations.UpdateAccountingSalesorderRequest, opts ...operations.Option) (*operations.UpdateAccountingSalesorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -27875,6 +28022,7 @@ func (s *Accounting) UpdateAccountingSalesorder(ctx context.Context, request ope
 }
 
 // UpdateAccountingTaxrate - Update a taxrate
+// Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
 func (s *Accounting) UpdateAccountingTaxrate(ctx context.Context, request operations.UpdateAccountingTaxrateRequest, opts ...operations.Option) (*operations.UpdateAccountingTaxrateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -28089,6 +28237,7 @@ func (s *Accounting) UpdateAccountingTaxrate(ctx context.Context, request operat
 }
 
 // UpdateAccountingTransaction - Update a transaction
+// Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 func (s *Accounting) UpdateAccountingTransaction(ctx context.Context, request operations.UpdateAccountingTransactionRequest, opts ...operations.Option) (*operations.UpdateAccountingTransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -28303,6 +28452,7 @@ func (s *Accounting) UpdateAccountingTransaction(ctx context.Context, request op
 }
 
 // UpdateAccountingVendorcredit - Update a vendorcredit
+// Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 func (s *Accounting) UpdateAccountingVendorcredit(ctx context.Context, request operations.UpdateAccountingVendorcreditRequest, opts ...operations.Option) (*operations.UpdateAccountingVendorcreditResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

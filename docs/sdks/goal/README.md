@@ -13,7 +13,7 @@
 
 ## CreatePerformanceGoal
 
-Create a goal
+Creates a PerformanceGoal. Provide the unified PerformanceGoal fields in the request body; they are mapped to the provider's API. Returns the created PerformanceGoal.
 
 ### Example Usage
 
@@ -41,14 +41,14 @@ func main() {
         PerformanceGoal: shared.PerformanceGoal{
             CreatedAt: types.MustNewTimeFromString("2020-01-09T20:43:07.380Z"),
             Description: unifiedgosdk.Pointer("Suscipit suspendo vulnero vel facere valeo vallum degero."),
-            DueAt: types.MustNewTimeFromString("2026-07-29T18:24:47.134Z"),
-            ID: unifiedgosdk.Pointer("1064e514-6d78-4c8b-9814-8ecc8f63bc60"),
+            DueAt: types.MustNewTimeFromString("2026-07-30T17:23:07.289Z"),
+            ID: unifiedgosdk.Pointer("2af9ac23-5de2-4a56-9530-1e0cd5867ad9"),
             Metadata: []shared.PerformanceMetadata{},
             Milestones: []shared.PerformanceGoalMilestone{
                 shared.PerformanceGoalMilestone{
                     CurrentValue: unifiedgosdk.Pointer[float64](10.0),
-                    DueAt: types.MustNewTimeFromString("2026-06-03T21:06:37.643Z"),
-                    ID: unifiedgosdk.Pointer("638b749b-62db-4019-9481-ad391608e0d5"),
+                    DueAt: types.MustNewTimeFromString("2026-06-04T19:32:46.289Z"),
+                    ID: unifiedgosdk.Pointer("b0e89a29-773a-4b00-bf37-835e0da3250e"),
                     IsCompleted: unifiedgosdk.Pointer(true),
                     Name: "Team-oriented secondary matrix",
                     TargetValue: unifiedgosdk.Pointer[float64](32.0),
@@ -57,8 +57,8 @@ func main() {
                 },
                 shared.PerformanceGoalMilestone{
                     CurrentValue: unifiedgosdk.Pointer[float64](0.0),
-                    DueAt: types.MustNewTimeFromString("2026-08-08T11:15:35.390Z"),
-                    ID: unifiedgosdk.Pointer("6f61a364-8d6a-483e-b3bb-cf48ca41bf46"),
+                    DueAt: types.MustNewTimeFromString("2026-08-09T10:19:30.851Z"),
+                    ID: unifiedgosdk.Pointer("2fafc757-3e25-4370-9b17-0dae0f996db8"),
                     IsCompleted: unifiedgosdk.Pointer(true),
                     Name: "Exclusive client-server conglomeration",
                     TargetValue: unifiedgosdk.Pointer[float64](32.0),
@@ -67,8 +67,8 @@ func main() {
                 shared.PerformanceGoalMilestone{
                     CurrentValue: unifiedgosdk.Pointer[float64](31.0),
                     Description: unifiedgosdk.Pointer("Hic explicabo odit."),
-                    DueAt: types.MustNewTimeFromString("2026-10-10T10:05:35.566Z"),
-                    ID: unifiedgosdk.Pointer("cf4ac1bb-2569-43a8-9a63-68bb5b4d6c9e"),
+                    DueAt: types.MustNewTimeFromString("2026-10-11T09:45:46.663Z"),
+                    ID: unifiedgosdk.Pointer("caca93b8-8244-486e-a5f5-464bf85d5f66"),
                     IsCompleted: unifiedgosdk.Pointer(true),
                     Name: "Synchronised immersive success",
                     TargetValue: unifiedgosdk.Pointer[float64](32.0),
@@ -77,10 +77,10 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("Proactive national protocol"),
             Progress: unifiedgosdk.Pointer[float64](3.0),
-            StartAt: types.MustNewTimeFromString("2025-07-23T09:11:53.948Z"),
+            StartAt: types.MustNewTimeFromString("2025-07-24T04:36:18.857Z"),
             Status: shared.PerformanceGoalStatusClosed.ToPointer(),
             Type: shared.PerformanceGoalSchemasTypeCompany.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-09-13T01:29:05.592Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-09-13T10:51:58.145Z"),
             Weight: unifiedgosdk.Pointer[float64](5.0),
         },
         ConnectionID: "<id>",
@@ -114,7 +114,7 @@ func main() {
 
 ## GetPerformanceGoal
 
-Retrieve a goal
+Retrieves a single PerformanceGoal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -169,7 +169,7 @@ func main() {
 
 ## ListPerformanceGoals
 
-List all goals
+Returns a list of PerformanceGoals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -223,7 +223,7 @@ func main() {
 
 ## PatchPerformanceGoal
 
-Update a goal
+Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
 
 ### Example Usage
 
@@ -251,14 +251,14 @@ func main() {
         PerformanceGoal: shared.PerformanceGoal{
             CreatedAt: types.MustNewTimeFromString("2020-01-09T20:43:07.380Z"),
             Description: unifiedgosdk.Pointer("Suscipit suspendo vulnero vel facere valeo vallum degero."),
-            DueAt: types.MustNewTimeFromString("2026-07-29T18:24:47.159Z"),
-            ID: unifiedgosdk.Pointer("c7e8b855-ca2e-41b1-a761-37e22b0d52ec"),
+            DueAt: types.MustNewTimeFromString("2026-07-30T17:23:07.323Z"),
+            ID: unifiedgosdk.Pointer("0e3120ea-cef1-4683-a066-891e77bff314"),
             Metadata: []shared.PerformanceMetadata{},
             Milestones: []shared.PerformanceGoalMilestone{
                 shared.PerformanceGoalMilestone{
                     CurrentValue: unifiedgosdk.Pointer[float64](10.0),
-                    DueAt: types.MustNewTimeFromString("2026-06-03T21:06:37.667Z"),
-                    ID: unifiedgosdk.Pointer("78ac582b-9c36-4639-8990-9aefddcd94fc"),
+                    DueAt: types.MustNewTimeFromString("2026-06-04T19:32:46.322Z"),
+                    ID: unifiedgosdk.Pointer("5806bb07-8f07-4de2-82ed-696f039bd333"),
                     IsCompleted: unifiedgosdk.Pointer(true),
                     Name: "Team-oriented secondary matrix",
                     TargetValue: unifiedgosdk.Pointer[float64](32.0),
@@ -267,8 +267,8 @@ func main() {
                 },
                 shared.PerformanceGoalMilestone{
                     CurrentValue: unifiedgosdk.Pointer[float64](0.0),
-                    DueAt: types.MustNewTimeFromString("2026-08-08T11:15:35.415Z"),
-                    ID: unifiedgosdk.Pointer("932c298e-5031-4948-ad1c-53d1b63946b8"),
+                    DueAt: types.MustNewTimeFromString("2026-08-09T10:19:30.884Z"),
+                    ID: unifiedgosdk.Pointer("af7cdbf3-3076-498c-8cd5-64936f755cc9"),
                     IsCompleted: unifiedgosdk.Pointer(true),
                     Name: "Exclusive client-server conglomeration",
                     TargetValue: unifiedgosdk.Pointer[float64](32.0),
@@ -277,8 +277,8 @@ func main() {
                 shared.PerformanceGoalMilestone{
                     CurrentValue: unifiedgosdk.Pointer[float64](31.0),
                     Description: unifiedgosdk.Pointer("Hic explicabo odit."),
-                    DueAt: types.MustNewTimeFromString("2026-10-10T10:05:35.592Z"),
-                    ID: unifiedgosdk.Pointer("be0f4797-77a9-424f-b085-5b45c77558b2"),
+                    DueAt: types.MustNewTimeFromString("2026-10-11T09:45:46.697Z"),
+                    ID: unifiedgosdk.Pointer("d01d1dcf-1edb-4339-b4d8-06d3be264e16"),
                     IsCompleted: unifiedgosdk.Pointer(true),
                     Name: "Synchronised immersive success",
                     TargetValue: unifiedgosdk.Pointer[float64](32.0),
@@ -287,10 +287,10 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("Proactive national protocol"),
             Progress: unifiedgosdk.Pointer[float64](3.0),
-            StartAt: types.MustNewTimeFromString("2025-07-23T09:11:53.968Z"),
+            StartAt: types.MustNewTimeFromString("2025-07-24T04:36:18.885Z"),
             Status: shared.PerformanceGoalStatusClosed.ToPointer(),
             Type: shared.PerformanceGoalSchemasTypeCompany.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-09-13T01:29:05.603Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-09-13T10:51:58.159Z"),
             Weight: unifiedgosdk.Pointer[float64](5.0),
         },
         ConnectionID: "<id>",
@@ -325,7 +325,7 @@ func main() {
 
 ## RemovePerformanceGoal
 
-Remove a goal
+Deletes the PerformanceGoal identified by `id`.
 
 ### Example Usage
 
@@ -380,7 +380,7 @@ func main() {
 
 ## UpdatePerformanceGoal
 
-Update a goal
+Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
 
 ### Example Usage
 
@@ -408,14 +408,14 @@ func main() {
         PerformanceGoal: shared.PerformanceGoal{
             CreatedAt: types.MustNewTimeFromString("2020-01-09T20:43:07.380Z"),
             Description: unifiedgosdk.Pointer("Suscipit suspendo vulnero vel facere valeo vallum degero."),
-            DueAt: types.MustNewTimeFromString("2026-07-29T18:24:47.159Z"),
-            ID: unifiedgosdk.Pointer("c7e8b855-ca2e-41b1-a761-37e22b0d52ec"),
+            DueAt: types.MustNewTimeFromString("2026-07-30T17:23:07.323Z"),
+            ID: unifiedgosdk.Pointer("0e3120ea-cef1-4683-a066-891e77bff314"),
             Metadata: []shared.PerformanceMetadata{},
             Milestones: []shared.PerformanceGoalMilestone{
                 shared.PerformanceGoalMilestone{
                     CurrentValue: unifiedgosdk.Pointer[float64](10.0),
-                    DueAt: types.MustNewTimeFromString("2026-06-03T21:06:37.667Z"),
-                    ID: unifiedgosdk.Pointer("78ac582b-9c36-4639-8990-9aefddcd94fc"),
+                    DueAt: types.MustNewTimeFromString("2026-06-04T19:32:46.322Z"),
+                    ID: unifiedgosdk.Pointer("5806bb07-8f07-4de2-82ed-696f039bd333"),
                     IsCompleted: unifiedgosdk.Pointer(true),
                     Name: "Team-oriented secondary matrix",
                     TargetValue: unifiedgosdk.Pointer[float64](32.0),
@@ -424,8 +424,8 @@ func main() {
                 },
                 shared.PerformanceGoalMilestone{
                     CurrentValue: unifiedgosdk.Pointer[float64](0.0),
-                    DueAt: types.MustNewTimeFromString("2026-08-08T11:15:35.415Z"),
-                    ID: unifiedgosdk.Pointer("932c298e-5031-4948-ad1c-53d1b63946b8"),
+                    DueAt: types.MustNewTimeFromString("2026-08-09T10:19:30.884Z"),
+                    ID: unifiedgosdk.Pointer("af7cdbf3-3076-498c-8cd5-64936f755cc9"),
                     IsCompleted: unifiedgosdk.Pointer(true),
                     Name: "Exclusive client-server conglomeration",
                     TargetValue: unifiedgosdk.Pointer[float64](32.0),
@@ -434,8 +434,8 @@ func main() {
                 shared.PerformanceGoalMilestone{
                     CurrentValue: unifiedgosdk.Pointer[float64](31.0),
                     Description: unifiedgosdk.Pointer("Hic explicabo odit."),
-                    DueAt: types.MustNewTimeFromString("2026-10-10T10:05:35.592Z"),
-                    ID: unifiedgosdk.Pointer("be0f4797-77a9-424f-b085-5b45c77558b2"),
+                    DueAt: types.MustNewTimeFromString("2026-10-11T09:45:46.697Z"),
+                    ID: unifiedgosdk.Pointer("d01d1dcf-1edb-4339-b4d8-06d3be264e16"),
                     IsCompleted: unifiedgosdk.Pointer(true),
                     Name: "Synchronised immersive success",
                     TargetValue: unifiedgosdk.Pointer[float64](32.0),
@@ -444,10 +444,10 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("Proactive national protocol"),
             Progress: unifiedgosdk.Pointer[float64](3.0),
-            StartAt: types.MustNewTimeFromString("2025-07-23T09:11:53.968Z"),
+            StartAt: types.MustNewTimeFromString("2025-07-24T04:36:18.885Z"),
             Status: shared.PerformanceGoalStatusClosed.ToPointer(),
             Type: shared.PerformanceGoalSchemasTypeCompany.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-09-13T01:29:05.603Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-09-13T10:51:58.159Z"),
             Weight: unifiedgosdk.Pointer[float64](5.0),
         },
         ConnectionID: "<id>",

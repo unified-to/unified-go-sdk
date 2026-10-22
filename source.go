@@ -31,6 +31,7 @@ func newSource(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 }
 
 // CreateCdpSource - Create a source
+// Creates a CdpSource. Provide the unified CdpSource fields in the request body; they are mapped to the provider's API. Returns the created CdpSource.
 func (s *Source) CreateCdpSource(ctx context.Context, request operations.CreateCdpSourceRequest, opts ...operations.Option) (*operations.CreateCdpSourceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Source) CreateCdpSource(ctx context.Context, request operations.CreateC
 }
 
 // GetCdpSource - Retrieve a source
+// Retrieves a single CdpSource by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Source) GetCdpSource(ctx context.Context, request operations.GetCdpSourceRequest, opts ...operations.Option) (*operations.GetCdpSourceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Source) GetCdpSource(ctx context.Context, request operations.GetCdpSour
 }
 
 // ListCdpSources - List all sources
+// Returns a list of CdpSources. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Source) ListCdpSources(ctx context.Context, request operations.ListCdpSourcesRequest, opts ...operations.Option) (*operations.ListCdpSourcesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Source) ListCdpSources(ctx context.Context, request operations.ListCdpS
 }
 
 // PatchCdpSource - Update a source
+// Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the request body.
 func (s *Source) PatchCdpSource(ctx context.Context, request operations.PatchCdpSourceRequest, opts ...operations.Option) (*operations.PatchCdpSourceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Source) PatchCdpSource(ctx context.Context, request operations.PatchCdp
 }
 
 // RemoveCdpSource - Remove a source
+// Deletes the CdpSource identified by `id`.
 func (s *Source) RemoveCdpSource(ctx context.Context, request operations.RemoveCdpSourceRequest, opts ...operations.Option) (*operations.RemoveCdpSourceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Source) RemoveCdpSource(ctx context.Context, request operations.RemoveC
 }
 
 // UpdateCdpSource - Update a source
+// Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the request body.
 func (s *Source) UpdateCdpSource(ctx context.Context, request operations.UpdateCdpSourceRequest, opts ...operations.Option) (*operations.UpdateCdpSourceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

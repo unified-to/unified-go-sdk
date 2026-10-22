@@ -31,6 +31,7 @@ func newAllergy(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // GetHealthcareAllergy - Retrieve an allergy
+// Retrieves a single HealthcareAllergy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Allergy) GetHealthcareAllergy(ctx context.Context, request operations.GetHealthcareAllergyRequest, opts ...operations.Option) (*operations.GetHealthcareAllergyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -238,6 +239,7 @@ func (s *Allergy) GetHealthcareAllergy(ctx context.Context, request operations.G
 }
 
 // ListHealthcareAllergies - List all allergies
+// Returns a list of HealthcareAllergies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Allergy) ListHealthcareAllergies(ctx context.Context, request operations.ListHealthcareAllergiesRequest, opts ...operations.Option) (*operations.ListHealthcareAllergiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

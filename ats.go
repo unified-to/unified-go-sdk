@@ -31,6 +31,7 @@ func newAts(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks.
 }
 
 // CreateAtsActivity - Create an activity
+// Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
 func (s *Ats) CreateAtsActivity(ctx context.Context, request operations.CreateAtsActivityRequest, opts ...operations.Option) (*operations.CreateAtsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Ats) CreateAtsActivity(ctx context.Context, request operations.CreateAt
 }
 
 // CreateAtsApplication - Create an application
+// Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are mapped to the provider's API. Returns the created AtsApplication.
 func (s *Ats) CreateAtsApplication(ctx context.Context, request operations.CreateAtsApplicationRequest, opts ...operations.Option) (*operations.CreateAtsApplicationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Ats) CreateAtsApplication(ctx context.Context, request operations.Creat
 }
 
 // CreateAtsCandidate - Create a candidate
+// Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped to the provider's API. Returns the created AtsCandidate.
 func (s *Ats) CreateAtsCandidate(ctx context.Context, request operations.CreateAtsCandidateRequest, opts ...operations.Option) (*operations.CreateAtsCandidateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Ats) CreateAtsCandidate(ctx context.Context, request operations.CreateA
 }
 
 // CreateAtsCompany - Create a company
+// Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
 func (s *Ats) CreateAtsCompany(ctx context.Context, request operations.CreateAtsCompanyRequest, opts ...operations.Option) (*operations.CreateAtsCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -887,6 +891,7 @@ func (s *Ats) CreateAtsCompany(ctx context.Context, request operations.CreateAts
 }
 
 // CreateAtsDocument - Create a document
+// Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped to the provider's API. Returns the created AtsDocument.
 func (s *Ats) CreateAtsDocument(ctx context.Context, request operations.CreateAtsDocumentRequest, opts ...operations.Option) (*operations.CreateAtsDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1101,6 +1106,7 @@ func (s *Ats) CreateAtsDocument(ctx context.Context, request operations.CreateAt
 }
 
 // CreateAtsInterview - Create an interview
+// Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped to the provider's API. Returns the created AtsInterview.
 func (s *Ats) CreateAtsInterview(ctx context.Context, request operations.CreateAtsInterviewRequest, opts ...operations.Option) (*operations.CreateAtsInterviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1315,6 +1321,7 @@ func (s *Ats) CreateAtsInterview(ctx context.Context, request operations.CreateA
 }
 
 // CreateAtsJob - Create a job
+// Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the provider's API. Returns the created AtsJob.
 func (s *Ats) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobRequest, opts ...operations.Option) (*operations.CreateAtsJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1529,6 +1536,7 @@ func (s *Ats) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobR
 }
 
 // CreateAtsScorecard - Create a scorecard
+// Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped to the provider's API. Returns the created AtsScorecard.
 func (s *Ats) CreateAtsScorecard(ctx context.Context, request operations.CreateAtsScorecardRequest, opts ...operations.Option) (*operations.CreateAtsScorecardResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1743,6 +1751,7 @@ func (s *Ats) CreateAtsScorecard(ctx context.Context, request operations.CreateA
 }
 
 // GetAtsActivity - Retrieve an activity
+// Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ats) GetAtsActivity(ctx context.Context, request operations.GetAtsActivityRequest, opts ...operations.Option) (*operations.GetAtsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1950,6 +1959,7 @@ func (s *Ats) GetAtsActivity(ctx context.Context, request operations.GetAtsActiv
 }
 
 // GetAtsApplication - Retrieve an application
+// Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ats) GetAtsApplication(ctx context.Context, request operations.GetAtsApplicationRequest, opts ...operations.Option) (*operations.GetAtsApplicationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2157,6 +2167,7 @@ func (s *Ats) GetAtsApplication(ctx context.Context, request operations.GetAtsAp
 }
 
 // GetAtsApplicationstatus - Retrieve an applicationstatus
+// Retrieves a single AtsStatus by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ats) GetAtsApplicationstatus(ctx context.Context, request operations.GetAtsApplicationstatusRequest, opts ...operations.Option) (*operations.GetAtsApplicationstatusResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2364,6 +2375,7 @@ func (s *Ats) GetAtsApplicationstatus(ctx context.Context, request operations.Ge
 }
 
 // GetAtsCandidate - Retrieve a candidate
+// Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ats) GetAtsCandidate(ctx context.Context, request operations.GetAtsCandidateRequest, opts ...operations.Option) (*operations.GetAtsCandidateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2571,6 +2583,7 @@ func (s *Ats) GetAtsCandidate(ctx context.Context, request operations.GetAtsCand
 }
 
 // GetAtsCompany - Retrieve a company
+// Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ats) GetAtsCompany(ctx context.Context, request operations.GetAtsCompanyRequest, opts ...operations.Option) (*operations.GetAtsCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2778,6 +2791,7 @@ func (s *Ats) GetAtsCompany(ctx context.Context, request operations.GetAtsCompan
 }
 
 // GetAtsDocument - Retrieve a document
+// Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ats) GetAtsDocument(ctx context.Context, request operations.GetAtsDocumentRequest, opts ...operations.Option) (*operations.GetAtsDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2985,6 +2999,7 @@ func (s *Ats) GetAtsDocument(ctx context.Context, request operations.GetAtsDocum
 }
 
 // GetAtsInterview - Retrieve an interview
+// Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ats) GetAtsInterview(ctx context.Context, request operations.GetAtsInterviewRequest, opts ...operations.Option) (*operations.GetAtsInterviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3192,6 +3207,7 @@ func (s *Ats) GetAtsInterview(ctx context.Context, request operations.GetAtsInte
 }
 
 // GetAtsJob - Retrieve a job
+// Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ats) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest, opts ...operations.Option) (*operations.GetAtsJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3399,6 +3415,7 @@ func (s *Ats) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest
 }
 
 // GetAtsScorecard - Retrieve a scorecard
+// Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Ats) GetAtsScorecard(ctx context.Context, request operations.GetAtsScorecardRequest, opts ...operations.Option) (*operations.GetAtsScorecardResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3606,6 +3623,7 @@ func (s *Ats) GetAtsScorecard(ctx context.Context, request operations.GetAtsScor
 }
 
 // ListAtsActivities - List all activities
+// Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ats) ListAtsActivities(ctx context.Context, request operations.ListAtsActivitiesRequest, opts ...operations.Option) (*operations.ListAtsActivitiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3813,6 +3831,7 @@ func (s *Ats) ListAtsActivities(ctx context.Context, request operations.ListAtsA
 }
 
 // ListAtsApplications - List all applications
+// Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ats) ListAtsApplications(ctx context.Context, request operations.ListAtsApplicationsRequest, opts ...operations.Option) (*operations.ListAtsApplicationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4020,6 +4039,7 @@ func (s *Ats) ListAtsApplications(ctx context.Context, request operations.ListAt
 }
 
 // ListAtsApplicationstatuses - List all applicationstatuses
+// Returns a list of AtsStatuses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ats) ListAtsApplicationstatuses(ctx context.Context, request operations.ListAtsApplicationstatusesRequest, opts ...operations.Option) (*operations.ListAtsApplicationstatusesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4227,6 +4247,7 @@ func (s *Ats) ListAtsApplicationstatuses(ctx context.Context, request operations
 }
 
 // ListAtsCandidates - List all candidates
+// Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ats) ListAtsCandidates(ctx context.Context, request operations.ListAtsCandidatesRequest, opts ...operations.Option) (*operations.ListAtsCandidatesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4434,6 +4455,7 @@ func (s *Ats) ListAtsCandidates(ctx context.Context, request operations.ListAtsC
 }
 
 // ListAtsCompanies - List all companies
+// Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ats) ListAtsCompanies(ctx context.Context, request operations.ListAtsCompaniesRequest, opts ...operations.Option) (*operations.ListAtsCompaniesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4641,6 +4663,7 @@ func (s *Ats) ListAtsCompanies(ctx context.Context, request operations.ListAtsCo
 }
 
 // ListAtsDocuments - List all documents
+// Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ats) ListAtsDocuments(ctx context.Context, request operations.ListAtsDocumentsRequest, opts ...operations.Option) (*operations.ListAtsDocumentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4848,6 +4871,7 @@ func (s *Ats) ListAtsDocuments(ctx context.Context, request operations.ListAtsDo
 }
 
 // ListAtsInterviews - List all interviews
+// Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ats) ListAtsInterviews(ctx context.Context, request operations.ListAtsInterviewsRequest, opts ...operations.Option) (*operations.ListAtsInterviewsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5055,6 +5079,7 @@ func (s *Ats) ListAtsInterviews(ctx context.Context, request operations.ListAtsI
 }
 
 // ListAtsJobs - List all jobs
+// Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ats) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsRequest, opts ...operations.Option) (*operations.ListAtsJobsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5262,6 +5287,7 @@ func (s *Ats) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsReq
 }
 
 // ListAtsScorecards - List all scorecards
+// Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Ats) ListAtsScorecards(ctx context.Context, request operations.ListAtsScorecardsRequest, opts ...operations.Option) (*operations.ListAtsScorecardsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5469,6 +5495,7 @@ func (s *Ats) ListAtsScorecards(ctx context.Context, request operations.ListAtsS
 }
 
 // PatchAtsActivity - Update an activity
+// Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 func (s *Ats) PatchAtsActivity(ctx context.Context, request operations.PatchAtsActivityRequest, opts ...operations.Option) (*operations.PatchAtsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5683,6 +5710,7 @@ func (s *Ats) PatchAtsActivity(ctx context.Context, request operations.PatchAtsA
 }
 
 // PatchAtsApplication - Update an application
+// Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 func (s *Ats) PatchAtsApplication(ctx context.Context, request operations.PatchAtsApplicationRequest, opts ...operations.Option) (*operations.PatchAtsApplicationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5897,6 +5925,7 @@ func (s *Ats) PatchAtsApplication(ctx context.Context, request operations.PatchA
 }
 
 // PatchAtsCandidate - Update a candidate
+// Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 func (s *Ats) PatchAtsCandidate(ctx context.Context, request operations.PatchAtsCandidateRequest, opts ...operations.Option) (*operations.PatchAtsCandidateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6111,6 +6140,7 @@ func (s *Ats) PatchAtsCandidate(ctx context.Context, request operations.PatchAts
 }
 
 // PatchAtsCompany - Update a company
+// Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 func (s *Ats) PatchAtsCompany(ctx context.Context, request operations.PatchAtsCompanyRequest, opts ...operations.Option) (*operations.PatchAtsCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6325,6 +6355,7 @@ func (s *Ats) PatchAtsCompany(ctx context.Context, request operations.PatchAtsCo
 }
 
 // PatchAtsDocument - Update a document
+// Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 func (s *Ats) PatchAtsDocument(ctx context.Context, request operations.PatchAtsDocumentRequest, opts ...operations.Option) (*operations.PatchAtsDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6539,6 +6570,7 @@ func (s *Ats) PatchAtsDocument(ctx context.Context, request operations.PatchAtsD
 }
 
 // PatchAtsInterview - Update an interview
+// Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 func (s *Ats) PatchAtsInterview(ctx context.Context, request operations.PatchAtsInterviewRequest, opts ...operations.Option) (*operations.PatchAtsInterviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6753,6 +6785,7 @@ func (s *Ats) PatchAtsInterview(ctx context.Context, request operations.PatchAts
 }
 
 // PatchAtsJob - Update a job
+// Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 func (s *Ats) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobRequest, opts ...operations.Option) (*operations.PatchAtsJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6967,6 +7000,7 @@ func (s *Ats) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobReq
 }
 
 // PatchAtsScorecard - Update a scorecard
+// Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 func (s *Ats) PatchAtsScorecard(ctx context.Context, request operations.PatchAtsScorecardRequest, opts ...operations.Option) (*operations.PatchAtsScorecardResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7181,6 +7215,7 @@ func (s *Ats) PatchAtsScorecard(ctx context.Context, request operations.PatchAts
 }
 
 // RemoveAtsActivity - Remove an activity
+// Deletes the AtsActivity identified by `id`.
 func (s *Ats) RemoveAtsActivity(ctx context.Context, request operations.RemoveAtsActivityRequest, opts ...operations.Option) (*operations.RemoveAtsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7363,6 +7398,7 @@ func (s *Ats) RemoveAtsActivity(ctx context.Context, request operations.RemoveAt
 }
 
 // RemoveAtsApplication - Remove an application
+// Deletes the AtsApplication identified by `id`.
 func (s *Ats) RemoveAtsApplication(ctx context.Context, request operations.RemoveAtsApplicationRequest, opts ...operations.Option) (*operations.RemoveAtsApplicationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7545,6 +7581,7 @@ func (s *Ats) RemoveAtsApplication(ctx context.Context, request operations.Remov
 }
 
 // RemoveAtsCandidate - Remove a candidate
+// Deletes the AtsCandidate identified by `id`.
 func (s *Ats) RemoveAtsCandidate(ctx context.Context, request operations.RemoveAtsCandidateRequest, opts ...operations.Option) (*operations.RemoveAtsCandidateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7727,6 +7764,7 @@ func (s *Ats) RemoveAtsCandidate(ctx context.Context, request operations.RemoveA
 }
 
 // RemoveAtsCompany - Remove a company
+// Deletes the AtsCompany identified by `id`.
 func (s *Ats) RemoveAtsCompany(ctx context.Context, request operations.RemoveAtsCompanyRequest, opts ...operations.Option) (*operations.RemoveAtsCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7909,6 +7947,7 @@ func (s *Ats) RemoveAtsCompany(ctx context.Context, request operations.RemoveAts
 }
 
 // RemoveAtsDocument - Remove a document
+// Deletes the AtsDocument identified by `id`.
 func (s *Ats) RemoveAtsDocument(ctx context.Context, request operations.RemoveAtsDocumentRequest, opts ...operations.Option) (*operations.RemoveAtsDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8091,6 +8130,7 @@ func (s *Ats) RemoveAtsDocument(ctx context.Context, request operations.RemoveAt
 }
 
 // RemoveAtsInterview - Remove an interview
+// Deletes the AtsInterview identified by `id`.
 func (s *Ats) RemoveAtsInterview(ctx context.Context, request operations.RemoveAtsInterviewRequest, opts ...operations.Option) (*operations.RemoveAtsInterviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8273,6 +8313,7 @@ func (s *Ats) RemoveAtsInterview(ctx context.Context, request operations.RemoveA
 }
 
 // RemoveAtsJob - Remove a job
+// Deletes the AtsJob identified by `id`.
 func (s *Ats) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobRequest, opts ...operations.Option) (*operations.RemoveAtsJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8455,6 +8496,7 @@ func (s *Ats) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobR
 }
 
 // RemoveAtsScorecard - Remove a scorecard
+// Deletes the AtsScorecard identified by `id`.
 func (s *Ats) RemoveAtsScorecard(ctx context.Context, request operations.RemoveAtsScorecardRequest, opts ...operations.Option) (*operations.RemoveAtsScorecardResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8637,6 +8679,7 @@ func (s *Ats) RemoveAtsScorecard(ctx context.Context, request operations.RemoveA
 }
 
 // UpdateAtsActivity - Update an activity
+// Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 func (s *Ats) UpdateAtsActivity(ctx context.Context, request operations.UpdateAtsActivityRequest, opts ...operations.Option) (*operations.UpdateAtsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8851,6 +8894,7 @@ func (s *Ats) UpdateAtsActivity(ctx context.Context, request operations.UpdateAt
 }
 
 // UpdateAtsApplication - Update an application
+// Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 func (s *Ats) UpdateAtsApplication(ctx context.Context, request operations.UpdateAtsApplicationRequest, opts ...operations.Option) (*operations.UpdateAtsApplicationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9065,6 +9109,7 @@ func (s *Ats) UpdateAtsApplication(ctx context.Context, request operations.Updat
 }
 
 // UpdateAtsCandidate - Update a candidate
+// Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 func (s *Ats) UpdateAtsCandidate(ctx context.Context, request operations.UpdateAtsCandidateRequest, opts ...operations.Option) (*operations.UpdateAtsCandidateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9279,6 +9324,7 @@ func (s *Ats) UpdateAtsCandidate(ctx context.Context, request operations.UpdateA
 }
 
 // UpdateAtsCompany - Update a company
+// Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 func (s *Ats) UpdateAtsCompany(ctx context.Context, request operations.UpdateAtsCompanyRequest, opts ...operations.Option) (*operations.UpdateAtsCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9493,6 +9539,7 @@ func (s *Ats) UpdateAtsCompany(ctx context.Context, request operations.UpdateAts
 }
 
 // UpdateAtsDocument - Update a document
+// Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 func (s *Ats) UpdateAtsDocument(ctx context.Context, request operations.UpdateAtsDocumentRequest, opts ...operations.Option) (*operations.UpdateAtsDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9707,6 +9754,7 @@ func (s *Ats) UpdateAtsDocument(ctx context.Context, request operations.UpdateAt
 }
 
 // UpdateAtsInterview - Update an interview
+// Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 func (s *Ats) UpdateAtsInterview(ctx context.Context, request operations.UpdateAtsInterviewRequest, opts ...operations.Option) (*operations.UpdateAtsInterviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9921,6 +9969,7 @@ func (s *Ats) UpdateAtsInterview(ctx context.Context, request operations.UpdateA
 }
 
 // UpdateAtsJob - Update a job
+// Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 func (s *Ats) UpdateAtsJob(ctx context.Context, request operations.UpdateAtsJobRequest, opts ...operations.Option) (*operations.UpdateAtsJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -10135,6 +10184,7 @@ func (s *Ats) UpdateAtsJob(ctx context.Context, request operations.UpdateAtsJobR
 }
 
 // UpdateAtsScorecard - Update a scorecard
+// Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 func (s *Ats) UpdateAtsScorecard(ctx context.Context, request operations.UpdateAtsScorecardRequest, opts ...operations.Option) (*operations.UpdateAtsScorecardResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

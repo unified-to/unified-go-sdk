@@ -61,18 +61,21 @@ type VerificationRequest struct {
 	// points to ATS Candidate
 	CandidateID *string `json:"candidate_id,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt        *time.Time                   `json:"created_at,omitempty"`
-	ID               *string                      `json:"id,omitempty"`
-	Metadata         []VerificationMetadata       `json:"metadata,omitempty"`
+	CreatedAt *time.Time             `json:"created_at,omitempty"`
+	ID        *string                `json:"id,omitempty"`
+	Metadata  []VerificationMetadata `json:"metadata,omitempty"`
+	// The ID of the verification package (the check) to run (a VerificationPackage ID)
 	PackageID        *string                      `json:"package_id,omitempty"`
 	Parameters       []VerificationParameterInput `json:"parameters,omitempty"`
 	ProfileAddresses []VerificationAddress        `json:"profile_addresses,omitempty"`
 	// YYYY-MM-DD
-	ProfileDateOfBirth *string                           `json:"profile_date_of_birth,omitempty"`
-	ProfileEmails      []string                          `json:"profile_emails,omitempty"`
-	ProfileGender      *VerificationRequestProfileGender `json:"profile_gender,omitempty"`
+	ProfileDateOfBirth *string `json:"profile_date_of_birth,omitempty"`
+	// The email addresses of the person being verified
+	ProfileEmails []string                          `json:"profile_emails,omitempty"`
+	ProfileGender *VerificationRequestProfileGender `json:"profile_gender,omitempty"`
 	// XXX.XXX.XXX.XXX
-	ProfileIPAddress          *string        `json:"profile_ip_address,omitempty"`
+	ProfileIPAddress *string `json:"profile_ip_address,omitempty"`
+	// The full name of the person being verified
 	ProfileName               *string        `json:"profile_name,omitempty"`
 	ProfileNationalIdentifier *string        `json:"profile_national_identifier,omitempty"`
 	ProfileTelephones         []string       `json:"profile_telephones,omitempty"`

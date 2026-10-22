@@ -31,6 +31,7 @@ func newCustomer(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateTicketingCustomer - Create a customer
+// Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the request body; they are mapped to the provider's API. Returns the created TicketingCustomer.
 func (s *Customer) CreateTicketingCustomer(ctx context.Context, request operations.CreateTicketingCustomerRequest, opts ...operations.Option) (*operations.CreateTicketingCustomerResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Customer) CreateTicketingCustomer(ctx context.Context, request operatio
 }
 
 // GetTicketingCustomer - Retrieve a customer
+// Retrieves a single TicketingCustomer by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Customer) GetTicketingCustomer(ctx context.Context, request operations.GetTicketingCustomerRequest, opts ...operations.Option) (*operations.GetTicketingCustomerResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Customer) GetTicketingCustomer(ctx context.Context, request operations.
 }
 
 // ListTicketingCustomers - List all customers
+// Returns a list of TicketingCustomers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Customer) ListTicketingCustomers(ctx context.Context, request operations.ListTicketingCustomersRequest, opts ...operations.Option) (*operations.ListTicketingCustomersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Customer) ListTicketingCustomers(ctx context.Context, request operation
 }
 
 // PatchTicketingCustomer - Update a customer
+// Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
 func (s *Customer) PatchTicketingCustomer(ctx context.Context, request operations.PatchTicketingCustomerRequest, opts ...operations.Option) (*operations.PatchTicketingCustomerResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Customer) PatchTicketingCustomer(ctx context.Context, request operation
 }
 
 // RemoveTicketingCustomer - Remove a customer
+// Deletes the TicketingCustomer identified by `id`.
 func (s *Customer) RemoveTicketingCustomer(ctx context.Context, request operations.RemoveTicketingCustomerRequest, opts ...operations.Option) (*operations.RemoveTicketingCustomerResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Customer) RemoveTicketingCustomer(ctx context.Context, request operatio
 }
 
 // UpdateTicketingCustomer - Update a customer
+// Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
 func (s *Customer) UpdateTicketingCustomer(ctx context.Context, request operations.UpdateTicketingCustomerRequest, opts ...operations.Option) (*operations.UpdateTicketingCustomerResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -44,13 +44,15 @@ func (e *AtsApplicationStatus) IsExact() bool {
 type AtsApplication struct {
 	Answers []AtsApplicationAnswer `json:"answers,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	AppliedAt   *time.Time `json:"applied_at,omitempty"`
-	CandidateID *string    `json:"candidate_id,omitempty"`
+	AppliedAt *time.Time `json:"applied_at,omitempty"`
+	// The ID of the candidate who is applying (an AtsCandidate ID)
+	CandidateID *string `json:"candidate_id,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	HiredAt  *time.Time    `json:"hired_at,omitempty"`
-	ID       *string       `json:"id,omitempty"`
+	HiredAt *time.Time `json:"hired_at,omitempty"`
+	ID      *string    `json:"id,omitempty"`
+	// The ID of the job being applied to (an AtsJob ID)
 	JobID    *string       `json:"job_id,omitempty"`
 	Metadata []AtsMetadata `json:"metadata,omitempty"`
 	Offers   []AtsOffer    `json:"offers,omitempty"`

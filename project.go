@@ -31,6 +31,7 @@ func newProject(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateAccountingProject - Create a project
+// Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they are mapped to the provider's API. Returns the created AccountingProject.
 func (s *Project) CreateAccountingProject(ctx context.Context, request operations.CreateAccountingProjectRequest, opts ...operations.Option) (*operations.CreateAccountingProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Project) CreateAccountingProject(ctx context.Context, request operation
 }
 
 // CreateTaskProject - Create a project
+// Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped to the provider's API. Returns the created TaskProject.
 func (s *Project) CreateTaskProject(ctx context.Context, request operations.CreateTaskProjectRequest, opts ...operations.Option) (*operations.CreateTaskProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Project) CreateTaskProject(ctx context.Context, request operations.Crea
 }
 
 // GetAccountingProject - Retrieve a project
+// Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Project) GetAccountingProject(ctx context.Context, request operations.GetAccountingProjectRequest, opts ...operations.Option) (*operations.GetAccountingProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -666,6 +669,7 @@ func (s *Project) GetAccountingProject(ctx context.Context, request operations.G
 }
 
 // GetTaskProject - Retrieve a project
+// Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Project) GetTaskProject(ctx context.Context, request operations.GetTaskProjectRequest, opts ...operations.Option) (*operations.GetTaskProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Project) GetTaskProject(ctx context.Context, request operations.GetTask
 }
 
 // ListAccountingProjects - List all projects
+// Returns a list of AccountingProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Project) ListAccountingProjects(ctx context.Context, request operations.ListAccountingProjectsRequest, opts ...operations.Option) (*operations.ListAccountingProjectsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1080,6 +1085,7 @@ func (s *Project) ListAccountingProjects(ctx context.Context, request operations
 }
 
 // ListTaskProjects - List all projects
+// Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Project) ListTaskProjects(ctx context.Context, request operations.ListTaskProjectsRequest, opts ...operations.Option) (*operations.ListTaskProjectsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1287,6 +1293,7 @@ func (s *Project) ListTaskProjects(ctx context.Context, request operations.ListT
 }
 
 // PatchAccountingProject - Update a project
+// Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 func (s *Project) PatchAccountingProject(ctx context.Context, request operations.PatchAccountingProjectRequest, opts ...operations.Option) (*operations.PatchAccountingProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Project) PatchAccountingProject(ctx context.Context, request operations
 }
 
 // PatchTaskProject - Update a project
+// Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
 func (s *Project) PatchTaskProject(ctx context.Context, request operations.PatchTaskProjectRequest, opts ...operations.Option) (*operations.PatchTaskProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1715,6 +1723,7 @@ func (s *Project) PatchTaskProject(ctx context.Context, request operations.Patch
 }
 
 // RemoveAccountingProject - Remove a project
+// Deletes the AccountingProject identified by `id`.
 func (s *Project) RemoveAccountingProject(ctx context.Context, request operations.RemoveAccountingProjectRequest, opts ...operations.Option) (*operations.RemoveAccountingProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1897,6 +1906,7 @@ func (s *Project) RemoveAccountingProject(ctx context.Context, request operation
 }
 
 // RemoveTaskProject - Remove a project
+// Deletes the TaskProject identified by `id`.
 func (s *Project) RemoveTaskProject(ctx context.Context, request operations.RemoveTaskProjectRequest, opts ...operations.Option) (*operations.RemoveTaskProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2079,6 +2089,7 @@ func (s *Project) RemoveTaskProject(ctx context.Context, request operations.Remo
 }
 
 // UpdateAccountingProject - Update a project
+// Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 func (s *Project) UpdateAccountingProject(ctx context.Context, request operations.UpdateAccountingProjectRequest, opts ...operations.Option) (*operations.UpdateAccountingProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2293,6 +2304,7 @@ func (s *Project) UpdateAccountingProject(ctx context.Context, request operation
 }
 
 // UpdateTaskProject - Update a project
+// Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
 func (s *Project) UpdateTaskProject(ctx context.Context, request operations.UpdateTaskProjectRequest, opts ...operations.Option) (*operations.UpdateTaskProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

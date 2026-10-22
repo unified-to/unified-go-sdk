@@ -13,7 +13,7 @@
 
 ## CreateRepoCommit
 
-Create a commit
+Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to the provider's API. Returns the created RepoCommit.
 
 ### Example Usage
 
@@ -40,14 +40,14 @@ func main() {
     res, err := s.Commit.CreateRepoCommit(ctx, operations.CreateRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
             CreatedAt: types.MustNewTimeFromString("2020-07-12T16:20:42.520Z"),
-            ID: unifiedgosdk.Pointer("8faaf651-733b-4d26-92d1-0103bdcae980"),
+            ID: unifiedgosdk.Pointer("592bcae2-bd76-458c-98cd-2ab53079eb09"),
             LinesAdded: unifiedgosdk.Pointer[float64](313.0),
             LinesChanged: unifiedgosdk.Pointer[float64](659.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](482.0),
             Message: unifiedgosdk.Pointer("quantify bluetooth bandwidth"),
             Metadata: []shared.RepoMetadata{},
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2023-05-31T06:51:27.908Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-31T17:46:40.721Z"),
         },
         ConnectionID: "<id>",
     })
@@ -80,7 +80,7 @@ func main() {
 
 ## GetRepoCommit
 
-Retrieve a commit
+Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -135,7 +135,7 @@ func main() {
 
 ## ListRepoCommits
 
-List all commits
+Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -189,7 +189,7 @@ func main() {
 
 ## PatchRepoCommit
 
-Update a commit
+Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
 ### Example Usage
 
@@ -216,14 +216,14 @@ func main() {
     res, err := s.Commit.PatchRepoCommit(ctx, operations.PatchRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
             CreatedAt: types.MustNewTimeFromString("2020-07-12T16:20:42.520Z"),
-            ID: unifiedgosdk.Pointer("eced1575-116e-4bb5-92fe-18bea53520fd"),
+            ID: unifiedgosdk.Pointer("f72dc39a-23be-4866-b859-2830fde4bcf8"),
             LinesAdded: unifiedgosdk.Pointer[float64](313.0),
             LinesChanged: unifiedgosdk.Pointer[float64](659.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](482.0),
             Message: unifiedgosdk.Pointer("quantify bluetooth bandwidth"),
             Metadata: []shared.RepoMetadata{},
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2023-05-31T06:51:27.914Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-31T17:46:40.728Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -257,7 +257,7 @@ func main() {
 
 ## RemoveRepoCommit
 
-Remove a commit
+Deletes the RepoCommit identified by `id`.
 
 ### Example Usage
 
@@ -312,7 +312,7 @@ func main() {
 
 ## UpdateRepoCommit
 
-Update a commit
+Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
 ### Example Usage
 
@@ -339,14 +339,14 @@ func main() {
     res, err := s.Commit.UpdateRepoCommit(ctx, operations.UpdateRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
             CreatedAt: types.MustNewTimeFromString("2020-07-12T16:20:42.520Z"),
-            ID: unifiedgosdk.Pointer("eced1575-116e-4bb5-92fe-18bea53520fd"),
+            ID: unifiedgosdk.Pointer("f72dc39a-23be-4866-b859-2830fde4bcf8"),
             LinesAdded: unifiedgosdk.Pointer[float64](313.0),
             LinesChanged: unifiedgosdk.Pointer[float64](659.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](482.0),
             Message: unifiedgosdk.Pointer("quantify bluetooth bandwidth"),
             Metadata: []shared.RepoMetadata{},
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2023-05-31T06:51:27.914Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-31T17:46:40.728Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

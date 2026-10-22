@@ -31,6 +31,7 @@ func newQuote(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 }
 
 // CreateAccountingQuote - Create a quote
+// Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are mapped to the provider's API. Returns the created AccountingQuote.
 func (s *Quote) CreateAccountingQuote(ctx context.Context, request operations.CreateAccountingQuoteRequest, opts ...operations.Option) (*operations.CreateAccountingQuoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Quote) CreateAccountingQuote(ctx context.Context, request operations.Cr
 }
 
 // GetAccountingQuote - Retrieve a quote
+// Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Quote) GetAccountingQuote(ctx context.Context, request operations.GetAccountingQuoteRequest, opts ...operations.Option) (*operations.GetAccountingQuoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Quote) GetAccountingQuote(ctx context.Context, request operations.GetAc
 }
 
 // ListAccountingQuotes - List all quotes
+// Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Quote) ListAccountingQuotes(ctx context.Context, request operations.ListAccountingQuotesRequest, opts ...operations.Option) (*operations.ListAccountingQuotesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Quote) ListAccountingQuotes(ctx context.Context, request operations.Lis
 }
 
 // PatchAccountingQuote - Update a quote
+// Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
 func (s *Quote) PatchAccountingQuote(ctx context.Context, request operations.PatchAccountingQuoteRequest, opts ...operations.Option) (*operations.PatchAccountingQuoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Quote) PatchAccountingQuote(ctx context.Context, request operations.Pat
 }
 
 // RemoveAccountingQuote - Remove a quote
+// Deletes the AccountingQuote identified by `id`.
 func (s *Quote) RemoveAccountingQuote(ctx context.Context, request operations.RemoveAccountingQuoteRequest, opts ...operations.Option) (*operations.RemoveAccountingQuoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Quote) RemoveAccountingQuote(ctx context.Context, request operations.Re
 }
 
 // UpdateAccountingQuote - Update a quote
+// Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
 func (s *Quote) UpdateAccountingQuote(ctx context.Context, request operations.UpdateAccountingQuoteRequest, opts ...operations.Option) (*operations.UpdateAccountingQuoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

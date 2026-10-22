@@ -15,7 +15,7 @@
 * [CreateAccountingExpensereport](#createaccountingexpensereport) - Create an expensereport
 * [CreateAccountingInvoice](#createaccountinginvoice) - Create an invoice
 * [CreateAccountingJournal](#createaccountingjournal) - Create a journal
-* [CreateAccountingOrder](#createaccountingorder) - Create an order
+* [~~CreateAccountingOrder~~](#createaccountingorder) - Create an order :warning: **Deprecated**
 * [CreateAccountingPaymentterm](#createaccountingpaymentterm) - Create a paymentterm
 * [CreateAccountingProject](#createaccountingproject) - Create a project
 * [CreateAccountingPurchaseorder](#createaccountingpurchaseorder) - Create a purchaseorder
@@ -39,7 +39,7 @@
 * [GetAccountingExpensereport](#getaccountingexpensereport) - Retrieve an expensereport
 * [GetAccountingInvoice](#getaccountinginvoice) - Retrieve an invoice
 * [GetAccountingJournal](#getaccountingjournal) - Retrieve a journal
-* [GetAccountingOrder](#getaccountingorder) - Retrieve an order
+* [~~GetAccountingOrder~~](#getaccountingorder) - Retrieve an order :warning: **Deprecated**
 * [GetAccountingOrganization](#getaccountingorganization) - Retrieve an organization
 * [GetAccountingPaymentterm](#getaccountingpaymentterm) - Retrieve a paymentterm
 * [GetAccountingProfitloss](#getaccountingprofitloss) - Retrieve a profitloss
@@ -68,7 +68,7 @@
 * [ListAccountingExpenses](#listaccountingexpenses) - List all expenses
 * [ListAccountingInvoices](#listaccountinginvoices) - List all invoices
 * [ListAccountingJournals](#listaccountingjournals) - List all journals
-* [ListAccountingOrders](#listaccountingorders) - List all orders
+* [~~ListAccountingOrders~~](#listaccountingorders) - List all orders :warning: **Deprecated**
 * [ListAccountingOrganizations](#listaccountingorganizations) - List all organizations
 * [ListAccountingPaymentterms](#listaccountingpaymentterms) - List all paymentterms
 * [ListAccountingProfitlosses](#listaccountingprofitlosses) - List all profitlosses
@@ -93,7 +93,7 @@
 * [PatchAccountingExpensereport](#patchaccountingexpensereport) - Update an expensereport
 * [PatchAccountingInvoice](#patchaccountinginvoice) - Update an invoice
 * [PatchAccountingJournal](#patchaccountingjournal) - Update a journal
-* [PatchAccountingOrder](#patchaccountingorder) - Update an order
+* [~~PatchAccountingOrder~~](#patchaccountingorder) - Update an order :warning: **Deprecated**
 * [PatchAccountingPaymentterm](#patchaccountingpaymentterm) - Update a paymentterm
 * [PatchAccountingProject](#patchaccountingproject) - Update a project
 * [PatchAccountingPurchaseorder](#patchaccountingpurchaseorder) - Update a purchaseorder
@@ -113,7 +113,7 @@
 * [RemoveAccountingExpensereport](#removeaccountingexpensereport) - Remove an expensereport
 * [RemoveAccountingInvoice](#removeaccountinginvoice) - Remove an invoice
 * [RemoveAccountingJournal](#removeaccountingjournal) - Remove a journal
-* [RemoveAccountingOrder](#removeaccountingorder) - Remove an order
+* [~~RemoveAccountingOrder~~](#removeaccountingorder) - Remove an order :warning: **Deprecated**
 * [RemoveAccountingPaymentterm](#removeaccountingpaymentterm) - Remove a paymentterm
 * [RemoveAccountingProject](#removeaccountingproject) - Remove a project
 * [RemoveAccountingPurchaseorder](#removeaccountingpurchaseorder) - Remove a purchaseorder
@@ -133,7 +133,7 @@
 * [UpdateAccountingExpensereport](#updateaccountingexpensereport) - Update an expensereport
 * [UpdateAccountingInvoice](#updateaccountinginvoice) - Update an invoice
 * [UpdateAccountingJournal](#updateaccountingjournal) - Update a journal
-* [UpdateAccountingOrder](#updateaccountingorder) - Update an order
+* [~~UpdateAccountingOrder~~](#updateaccountingorder) - Update an order :warning: **Deprecated**
 * [UpdateAccountingPaymentterm](#updateaccountingpaymentterm) - Update a paymentterm
 * [UpdateAccountingProject](#updateaccountingproject) - Update a project
 * [UpdateAccountingPurchaseorder](#updateaccountingpurchaseorder) - Update a purchaseorder
@@ -145,7 +145,7 @@
 
 ## CreateAccountingAccount
 
-Create an account
+Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingAccount.
 
 ### Example Usage
 
@@ -176,7 +176,7 @@ func main() {
             Currency: unifiedgosdk.Pointer("CAD"),
             CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
             Description: unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-            ID: unifiedgosdk.Pointer("e1ef892f-3b71-470e-9366-7d11f6594355"),
+            ID: unifiedgosdk.Pointer("cf355b43-f7e4-4200-abd9-da8905ac9789"),
             IsPayable: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Auto Loan Account"),
@@ -189,7 +189,7 @@ func main() {
                 },
             },
             Type: shared.TypeAccountsReceivable.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-06T21:40:54.101Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-07T03:43:27.331Z"),
         },
         ConnectionID: "<id>",
     })
@@ -222,7 +222,7 @@ func main() {
 
 ## CreateAccountingBankfeedaccount
 
-Create a bankfeedaccount
+Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
 
 ### Example Usage
 
@@ -256,12 +256,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
             Currency: unifiedgosdk.Pointer("AUD"),
             FeedStartAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
-            ID: unifiedgosdk.Pointer("35586384-5900-42ac-a8d5-c8921d6c4e69"),
+            ID: unifiedgosdk.Pointer("329766c9-e779-4893-a2d5-4ea17f4c2e0f"),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Corwin, Donnelly and Connelly Checking"),
             RoutingNumber: unifiedgosdk.Pointer("694667752"),
             Status: shared.AccountingBankfeedaccountStatusActive.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-23T19:56:22.321Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-24T04:47:33.222Z"),
         },
         ConnectionID: "<id>",
     })
@@ -294,7 +294,7 @@ func main() {
 
 ## CreateAccountingBankfeedtransaction
 
-Create a bankfeedtransaction
+Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedtransaction.
 
 ### Example Usage
 
@@ -326,15 +326,15 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-03-24T23:41:08.374Z"),
             Currency: unifiedgosdk.Pointer("CAD"),
             Description: unifiedgosdk.Pointer("Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781."),
-            ID: unifiedgosdk.Pointer("e0f4b5f3-8bf9-44f4-b365-f37524184310"),
+            ID: unifiedgosdk.Pointer("7554558e-75d6-4b22-a53e-2fb82bd0a8bc"),
             IsPending: unifiedgosdk.Pointer(true),
             MerchantName: unifiedgosdk.Pointer("Buckridge - Feest"),
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2025-04-14T19:58:00.131Z"),
+            PostedAt: types.MustNewTimeFromString("2025-04-15T11:51:15.882Z"),
             Reference: unifiedgosdk.Pointer("79574105"),
-            TransactionAt: types.MustNewTimeFromString("2022-07-30T08:10:12.137Z"),
+            TransactionAt: types.MustNewTimeFromString("2022-07-30T09:58:54.151Z"),
             Type: shared.AccountingBankfeedtransactionTypeCredit.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-05-25T01:44:39.014Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-05-25T02:36:47.333Z"),
         },
         ConnectionID: "<id>",
     })
@@ -367,7 +367,7 @@ func main() {
 
 ## CreateAccountingBill
 
-Create a bill
+Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are mapped to the provider's API. Returns the created AccountingBill.
 
 ### Example Usage
 
@@ -396,13 +396,13 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://puny-foodstuffs.name"),
-                    ID: unifiedgosdk.Pointer("cebeee36-97bb-4330-9a85-5c69fc343f29"),
+                    ID: unifiedgosdk.Pointer("6c9209f9-761e-4b05-bad7-d11aada20346"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("BILL-2466.pdf"),
                 },
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://grimy-characterization.net"),
-                    ID: unifiedgosdk.Pointer("668457df-b516-4b78-9532-eb2cf6d62589"),
+                    ID: unifiedgosdk.Pointer("043c0df2-d8b5-4766-856e-78913fedeec5"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("BILL-2466-1.pdf"),
                 },
@@ -415,7 +415,7 @@ func main() {
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2019-09-07T23:03:14.104Z"),
             ExtendedNotes: []shared.AccountingExtendedNote{},
-            ID: unifiedgosdk.Pointer("7e27068a-669c-4caa-8506-8d9a42328ae2"),
+            ID: unifiedgosdk.Pointer("b0d3a065-8e95-4707-848a-38944e7d7452"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Admiratio deporto tutamen cilicium infit amissio ante demulceo."),
@@ -431,7 +431,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             Term: shared.TermNet90.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2020-06-01T05:48:10.626Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-06-01T08:26:07.744Z"),
             URL: unifiedgosdk.Pointer("https://cluttered-importance.org/bills/BILL-2466"),
         },
         ConnectionID: "<id>",
@@ -465,7 +465,7 @@ func main() {
 
 ## CreateAccountingCategory
 
-Create a category
+Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body; they are mapped to the provider's API. Returns the created AccountingCategory.
 
 ### Example Usage
 
@@ -493,11 +493,11 @@ func main() {
         AccountingCategory: shared.AccountingCategory{
             CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
             Description: unifiedgosdk.Pointer("Textus ab thymum labore basium."),
-            ID: unifiedgosdk.Pointer("8733e54b-0f49-4e96-9275-b45e190a6975"),
+            ID: unifiedgosdk.Pointer("1c264a31-fc6d-404c-a395-87fd00ef7a9b"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Beauty"),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-11T12:11:02.648Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-12T04:11:51.669Z"),
         },
         ConnectionID: "<id>",
     })
@@ -530,7 +530,7 @@ func main() {
 
 ## CreateAccountingContact
 
-Create a contact
+Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they are mapped to the provider's API. Returns the created AccountingContact.
 
 ### Example Usage
 
@@ -580,7 +580,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Delores"),
-            ID: unifiedgosdk.Pointer("5ed9cc63-e0d5-4b24-8c5f-3e0e3ae59897"),
+            ID: unifiedgosdk.Pointer("fdf93d62-2079-4d04-a659-6a963caddc00"),
             Identification: unifiedgosdk.Pointer("531850872"),
             IsActive: unifiedgosdk.Pointer(true),
             IsCustomer: unifiedgosdk.Pointer(true),
@@ -591,7 +591,7 @@ func main() {
             PaymentMethods: []shared.AccountingContactPaymentMethod{
                 shared.AccountingContactPaymentMethod{
                     Default: unifiedgosdk.Pointer(true),
-                    ID: unifiedgosdk.Pointer("e1e27032-ccb2-4ac9-b501-b3a64c114b9f"),
+                    ID: unifiedgosdk.Pointer("8636e7f8-2c88-4c9e-9549-3751ae2979e6"),
                     Name: unifiedgosdk.Pointer("Visa 7844"),
                     Type: shared.AccountingContactPaymentMethodTypeCard,
                 },
@@ -613,7 +613,7 @@ func main() {
                     Type: shared.AccountingTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2023-12-19T20:51:25.364Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-20T07:36:45.907Z"),
             Website: unifiedgosdk.Pointer("https://kertzmanngroup.com"),
         },
         ConnectionID: "<id>",
@@ -647,7 +647,7 @@ func main() {
 
 ## CreateAccountingCreditmemo
 
-Create a creditmemo
+Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body; they are mapped to the provider's API. Returns the created AccountingCreditmemo.
 
 ### Example Usage
 
@@ -680,7 +680,7 @@ func main() {
             CreditmemoNumber: unifiedgosdk.Pointer("CM-99537"),
             Currency: unifiedgosdk.Pointer("AUD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("9c7c8eca-81ef-4776-840b-210a14223b3c"),
+            ID: unifiedgosdk.Pointer("abafb946-a93b-47e1-a26b-a262d14db967"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Hic vorax dedecor amo adfero torqueo quas victoria."),
@@ -689,7 +689,7 @@ func main() {
             Status: shared.AccountingCreditmemoStatusAuthorized.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-11T07:57:22.889Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-11T23:11:29.386Z"),
         },
         ConnectionID: "<id>",
     })
@@ -722,7 +722,7 @@ func main() {
 
 ## CreateAccountingExpense
 
-Create an expense
+Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpense.
 
 ### Example Usage
 
@@ -751,13 +751,13 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://rubbery-couch.biz/"),
-                    ID: unifiedgosdk.Pointer("5edd15cd-3ee2-41e4-a439-cf81408cf82f"),
+                    ID: unifiedgosdk.Pointer("9aabf60d-0097-4632-aaf4-994d747eae41"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("receipt-9696.pdf"),
                 },
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://appropriate-smog.biz/"),
-                    ID: unifiedgosdk.Pointer("73fd5b4c-31e3-4336-a108-759567af0a3f"),
+                    ID: unifiedgosdk.Pointer("e86d99a2-10c8-4f17-9bad-f9d328ac4f39"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("receipt-9696-1.pdf"),
                 },
@@ -766,10 +766,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-06-11T03:39:37.305Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
             ExternalNumber: unifiedgosdk.Pointer("EXP-38303"),
-            ID: unifiedgosdk.Pointer("e7de8dcf-e617-4a6e-975f-acf17d8382ca"),
+            ID: unifiedgosdk.Pointer("fc5b3f57-18bd-4021-a137-4246201f6077"),
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("6d3e2ee5-06b5-4989-a6e9-665b2b9819a2"),
+                    ID: unifiedgosdk.Pointer("d2e7ed56-b5e3-45c7-9fa6-e0e7a5a555a3"),
                     ItemName: unifiedgosdk.Pointer("Client dinner"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](364.74),
@@ -777,7 +777,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("cb82d68a-1992-402a-9cf6-0ae358ead56c"),
+                    ID: unifiedgosdk.Pointer("a74ba4b7-02a3-4d2c-aec0-9ae6bb4ec6cf"),
                     ItemName: unifiedgosdk.Pointer("Client dinner"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](258.35),
@@ -785,7 +785,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("7b15d942-74d8-467f-8356-46ace7e92225"),
+                    ID: unifiedgosdk.Pointer("04917fce-3562-48b4-b20b-868a6fefebf3"),
                     ItemName: unifiedgosdk.Pointer("Conference ticket"),
                     Notes: unifiedgosdk.Pointer("Casus umquam conicio cinis demitto sint."),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -794,7 +794,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("5160b1b1-9a99-4700-af18-a01383019a6f"),
+                    ID: unifiedgosdk.Pointer("3219eb0f-659b-491e-bc64-9d497ef1055d"),
                     ItemName: unifiedgosdk.Pointer("Hotel"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](157.04),
@@ -802,7 +802,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("799420c6-5830-4d0d-ac14-6c143e72a5e7"),
+                    ID: unifiedgosdk.Pointer("217d79c7-ec0c-4226-9351-944aa1f6ef6f"),
                     ItemName: unifiedgosdk.Pointer("Hotel"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](164.02),
@@ -818,7 +818,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](972.29),
             Type: shared.AccountingExpenseTypeCompany.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-09-02T07:17:12.137Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-09-02T08:08:15.486Z"),
         },
         ConnectionID: "<id>",
     })
@@ -851,7 +851,7 @@ func main() {
 
 ## CreateAccountingExpensereport
 
-Create an expensereport
+Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
 
 ### Example Usage
 
@@ -877,16 +877,16 @@ func main() {
 
     res, err := s.Accounting.CreateAccountingExpensereport(ctx, operations.CreateAccountingExpensereportRequest{
         AccountingExpensereport: shared.AccountingExpensereport{
-            ApprovedAt: types.MustNewTimeFromString("2021-04-19T11:29:13.790Z"),
+            ApprovedAt: types.MustNewTimeFromString("2021-04-19T14:47:54.423Z"),
             Attachments: []shared.AccountingAttachment{},
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-05-29T02:04:59.078Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
             ExternalNumber: unifiedgosdk.Pointer("ER-31240"),
-            ID: unifiedgosdk.Pointer("47fc5f29-63b1-4967-8d17-2c4118094a90"),
+            ID: unifiedgosdk.Pointer("eff22fdd-5648-4116-8ab6-24ed493db75e"),
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("f0a59367-a39b-4ec9-a43f-490649722cd0"),
+                    ID: unifiedgosdk.Pointer("9baccfe5-705f-4d5e-b5c0-8e97007892a9"),
                     ItemName: unifiedgosdk.Pointer("Conference ticket"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](39.9),
@@ -894,7 +894,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("8f35dff7-42c8-46de-9a69-2c1c1c24e7b7"),
+                    ID: unifiedgosdk.Pointer("04c541a5-881d-458c-8cda-74565ba46f9d"),
                     ItemName: unifiedgosdk.Pointer("Flight"),
                     Notes: unifiedgosdk.Pointer("Soluta omnis dolor."),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -903,7 +903,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("33b44f34-a048-4d08-8b99-b7f36a8d55b2"),
+                    ID: unifiedgosdk.Pointer("5c0c84dd-7ffb-439a-add9-cd76e3822a27"),
                     ItemName: unifiedgosdk.Pointer("Client dinner"),
                     Notes: unifiedgosdk.Pointer("Altus caveo capio."),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -912,7 +912,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("2cb1b50d-0517-48c1-a724-381f15ffb276"),
+                    ID: unifiedgosdk.Pointer("5dee1ff0-0a81-4a52-85dd-b530f20136e8"),
                     ItemName: unifiedgosdk.Pointer("Flight"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](445.27),
@@ -924,11 +924,11 @@ func main() {
             Name: unifiedgosdk.Pointer("Lolita Kunde - October expenses"),
             PostedAt: types.MustNewTimeFromString("2020-05-29T02:04:59.078Z"),
             ReimbursedAmount: unifiedgosdk.Pointer[float64](908.46),
-            ReimbursedAt: types.MustNewTimeFromString("2021-04-19T11:29:13.790Z"),
+            ReimbursedAt: types.MustNewTimeFromString("2021-04-19T14:47:54.423Z"),
             Status: shared.AccountingExpensereportStatusPaid.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](908.46),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-19T11:29:13.790Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-19T14:47:54.423Z"),
         },
         ConnectionID: "<id>",
     })
@@ -961,7 +961,7 @@ func main() {
 
 ## CreateAccountingInvoice
 
-Create an invoice
+Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they are mapped to the provider's API. Returns the created AccountingInvoice.
 
 ### Example Usage
 
@@ -990,13 +990,13 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://glossy-markup.net/"),
-                    ID: unifiedgosdk.Pointer("8785a531-c170-4e0a-a23b-6026aeb2808f"),
+                    ID: unifiedgosdk.Pointer("af834e8b-1f37-45e1-a6da-09cde99b20c9"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("INV-77705.pdf"),
                 },
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://earnest-giggle.net"),
-                    ID: unifiedgosdk.Pointer("795784ec-1677-4171-87a9-191b7246647a"),
+                    ID: unifiedgosdk.Pointer("89fae7cd-e0cc-487d-b776-164dc14d6664"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("INV-77705-1.pdf"),
                 },
@@ -1008,7 +1008,7 @@ func main() {
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2022-12-07T14:17:29.587Z"),
             ExtendedNotes: []shared.AccountingExtendedNote{},
-            ID: unifiedgosdk.Pointer("96f21cc2-029b-451f-bf63-27b0da867a12"),
+            ID: unifiedgosdk.Pointer("05c0496e-f40e-433d-85e0-7982db3c2176"),
             InvoiceNumber: unifiedgosdk.Pointer("INV-77705"),
             IsInclusiveOfTax: unifiedgosdk.Pointer(false),
             Lineitems: []shared.AccountingLineitem{},
@@ -1026,7 +1026,7 @@ func main() {
             Term: shared.AccountingInvoiceTermNet25.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingInvoiceTypeInvoice.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-23T13:03:42.762Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-24T09:51:39.852Z"),
             URL: unifiedgosdk.Pointer("https://gifted-yarmulke.info/invoices/INV-77705"),
         },
         ConnectionID: "<id>",
@@ -1060,7 +1060,7 @@ func main() {
 
 ## CreateAccountingJournal
 
-Create a journal
+Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they are mapped to the provider's API. Returns the created AccountingJournal.
 
 ### Example Usage
 
@@ -1091,16 +1091,16 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-02-20T15:14:55.881Z"),
             Currency: unifiedgosdk.Pointer("CAD"),
             Description: unifiedgosdk.Pointer("Cilicium minima calco constans adipisci."),
-            ID: unifiedgosdk.Pointer("fb4cb023-dbc9-43ae-bb15-ccbfbf28de12"),
+            ID: unifiedgosdk.Pointer("b9302d8f-af88-40b1-a888-c2f2f8fe9263"),
             IsInclusiveOfTax: unifiedgosdk.Pointer(true),
             Lineitems: []shared.AccountingJournalLineitem{},
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2023-11-06T10:40:52.829Z"),
+            PostedAt: types.MustNewTimeFromString("2023-11-06T23:54:38.642Z"),
             Reference: unifiedgosdk.Pointer("JE-78884"),
             Source: unifiedgosdk.Pointer("crustulum"),
             Status: shared.AccountingJournalStatusVoid.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-10T19:42:52.129Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-11T02:27:14.336Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1131,9 +1131,11 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## CreateAccountingOrder
+## ~~CreateAccountingOrder~~
 
-Create an order
+Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are mapped to the provider's API. Returns the created AccountingOrder.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -1169,7 +1171,7 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
-            ID: unifiedgosdk.Pointer("f86dd8f6-a014-47f6-9134-f31f328acb2f"),
+            ID: unifiedgosdk.Pointer("28d3b89f-0446-43dd-9b12-88dae6df1211"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             PostedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
@@ -1184,7 +1186,7 @@ func main() {
             Status: shared.AccountingOrderStatusAuthorized.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingOrderTypeSales.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-02-08T07:18:52.782Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-08T12:12:41.888Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1217,7 +1219,7 @@ func main() {
 
 ## CreateAccountingPaymentterm
 
-Create a paymentterm
+Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
 
 ### Example Usage
 
@@ -1252,12 +1254,12 @@ func main() {
             DiscountPercent: unifiedgosdk.Pointer[float64](5.0),
             DueDays: unifiedgosdk.Pointer[float64](57.0),
             DueNextMonthDays: unifiedgosdk.Pointer[float64](9.0),
-            ID: unifiedgosdk.Pointer("0817d982-6c5a-41a4-9212-68862cf6c0b1"),
+            ID: unifiedgosdk.Pointer("8e092a25-d81d-4f02-99ec-9d392ada484c"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Net 30"),
             Type: shared.AccountingPaymenttermTypeNet15.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-08T11:12:46.138Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-09T07:22:59.460Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1290,7 +1292,7 @@ func main() {
 
 ## CreateAccountingProject
 
-Create a project
+Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they are mapped to the provider's API. Returns the created AccountingProject.
 
 ### Example Usage
 
@@ -1346,7 +1348,7 @@ func main() {
 
 ## CreateAccountingPurchaseorder
 
-Create a purchaseorder
+Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
 
 ### Example Usage
 
@@ -1385,7 +1387,7 @@ func main() {
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
             Currency: unifiedgosdk.Pointer("EUR"),
-            ID: unifiedgosdk.Pointer("95fc4c52-e984-4e27-a4ce-4dbf003425b2"),
+            ID: unifiedgosdk.Pointer("e2480d4a-e417-498a-aa01-91742640660d"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             PostedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
@@ -1399,7 +1401,7 @@ func main() {
             },
             Status: shared.AccountingPurchaseorderStatusSubmitted.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2021-08-11T06:00:23.901Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-08-11T08:41:44.885Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1432,7 +1434,7 @@ func main() {
 
 ## CreateAccountingQuote
 
-Create a quote
+Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are mapped to the provider's API. Returns the created AccountingQuote.
 
 ### Example Usage
 
@@ -1488,7 +1490,7 @@ func main() {
 
 ## CreateAccountingSalesorder
 
-Create a salesorder
+Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingSalesorder.
 
 ### Example Usage
 
@@ -1524,13 +1526,13 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CategoryIds: []string{},
-            ClosedAt: types.MustNewTimeFromString("2023-03-25T12:57:23.155Z"),
+            ClosedAt: types.MustNewTimeFromString("2023-03-25T18:51:55.584Z"),
             CreatedAt: types.MustNewTimeFromString("2022-01-17T16:11:50.310Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             Fees: []shared.AccountingFee{},
             FulfillmentType: shared.FulfillmentTypeOther.ToPointer(),
-            ID: unifiedgosdk.Pointer("2ee1a550-d200-4b90-84de-64861a01cf0a"),
+            ID: unifiedgosdk.Pointer("31b40f4c-8c74-473c-834c-108a496eb083"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             OrderNumber: unifiedgosdk.Pointer("832663"),
@@ -1552,7 +1554,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TipAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-03-25T12:57:23.155Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-25T18:51:55.584Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1585,7 +1587,7 @@ func main() {
 
 ## CreateAccountingTaxrate
 
-Create a taxrate
+Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the request body; they are mapped to the provider's API. Returns the created AccountingTaxrate.
 
 ### Example Usage
 
@@ -1622,7 +1624,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-01-04T10:37:56.894Z"),
             Description: unifiedgosdk.Pointer("Exempt (0%)"),
             EffectiveRate: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("1eeede99-19ce-4185-9054-69df8fb32710"),
+            ID: unifiedgosdk.Pointer("01c2eb64-87ee-4c55-9300-b6e0dfec82ad"),
             IsActive: unifiedgosdk.Pointer(false),
             IsCompound: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
@@ -1631,7 +1633,7 @@ func main() {
             Region: unifiedgosdk.Pointer("KS"),
             TotalRate: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingTaxrateTypeSales.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-02-13T05:09:51.173Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-02-13T05:32:42.700Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1664,7 +1666,7 @@ func main() {
 
 ## CreateAccountingTransaction
 
-Create a transaction
+Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingTransaction.
 
 ### Example Usage
 
@@ -1691,12 +1693,12 @@ func main() {
     res, err := s.Accounting.CreateAccountingTransaction(ctx, operations.CreateAccountingTransactionRequest{
         AccountingTransaction: shared.AccountingTransaction{
             CreatedAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
-            ID: unifiedgosdk.Pointer("8c13a9ec-0a69-4abd-b610-a83a0fba33cf"),
+            ID: unifiedgosdk.Pointer("52dd8af7-7cd7-4625-ab77-a9d341b24d4c"),
             Lineitems: []shared.AccountingTransactionLineItem{
                 shared.AccountingTransactionLineItem{
                     CategoryIds: []string{},
                     Description: unifiedgosdk.Pointer("The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability"),
-                    ID: unifiedgosdk.Pointer("9c79732b-0fb8-4393-bed0-bfbd5b8e002e"),
+                    ID: unifiedgosdk.Pointer("d314aa8e-2877-4e1f-8e2d-e1854503d98a"),
                     Name: unifiedgosdk.Pointer("Shirt"),
                     TotalAmount: unifiedgosdk.Pointer[float64](10184.0),
                     UnitAmount: unifiedgosdk.Pointer[float64](536.0),
@@ -1708,7 +1710,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](10184.0),
             TransactionAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
-            UpdatedAt: types.MustNewTimeFromString("2019-10-14T06:08:29.411Z"),
+            UpdatedAt: types.MustNewTimeFromString("2019-10-14T06:18:51.360Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1741,7 +1743,7 @@ func main() {
 
 ## CreateAccountingVendorcredit
 
-Create a vendorcredit
+Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
 
 ### Example Usage
 
@@ -1771,14 +1773,14 @@ func main() {
             BalanceAmount: unifiedgosdk.Pointer[float64](0.0),
             CreatedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("fe3ac716-b436-4a30-adb2-714237b7c28f"),
+            ID: unifiedgosdk.Pointer("e0ad29dd-9fb5-4e4f-8296-935abcee8fd1"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Volup conatus cruciamentum decor avaritia."),
             PostedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
             Status: shared.AccountingVendorcreditStatusAuthorized.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-03T01:42:12.409Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-03T04:51:13.945Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1811,7 +1813,7 @@ func main() {
 
 ## GetAccountingAccount
 
-Retrieve an account
+Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1866,7 +1868,7 @@ func main() {
 
 ## GetAccountingAgedpayable
 
-Retrieve an agedpayable
+Retrieves a single AccountingAgedpayable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1921,7 +1923,7 @@ func main() {
 
 ## GetAccountingAgedreceivable
 
-Retrieve an agedreceivable
+Retrieves a single AccountingAgedreceivable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1976,7 +1978,7 @@ func main() {
 
 ## GetAccountingBalancesheet
 
-Retrieve a balancesheet
+Retrieves a single AccountingBalancesheet by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2031,7 +2033,7 @@ func main() {
 
 ## GetAccountingBankfeedaccount
 
-Retrieve a bankfeedaccount
+Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2086,7 +2088,7 @@ func main() {
 
 ## GetAccountingBankfeedtransaction
 
-Retrieve a bankfeedtransaction
+Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2141,7 +2143,7 @@ func main() {
 
 ## GetAccountingBill
 
-Retrieve a bill
+Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2196,7 +2198,7 @@ func main() {
 
 ## GetAccountingCashflow
 
-Retrieve a cashflow
+Retrieves a single AccountingCashflow by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2251,7 +2253,7 @@ func main() {
 
 ## GetAccountingCategory
 
-Retrieve a category
+Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2306,7 +2308,7 @@ func main() {
 
 ## GetAccountingContact
 
-Retrieve a contact
+Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2361,7 +2363,7 @@ func main() {
 
 ## GetAccountingCreditmemo
 
-Retrieve a creditmemo
+Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2416,7 +2418,7 @@ func main() {
 
 ## GetAccountingExpense
 
-Retrieve an expense
+Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2471,7 +2473,7 @@ func main() {
 
 ## GetAccountingExpensereport
 
-Retrieve an expensereport
+Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2526,7 +2528,7 @@ func main() {
 
 ## GetAccountingInvoice
 
-Retrieve an invoice
+Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2581,7 +2583,7 @@ func main() {
 
 ## GetAccountingJournal
 
-Retrieve a journal
+Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2634,9 +2636,11 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetAccountingOrder
+## ~~GetAccountingOrder~~
 
-Retrieve an order
+Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -2691,7 +2695,7 @@ func main() {
 
 ## GetAccountingOrganization
 
-Retrieve an organization
+Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2746,7 +2750,7 @@ func main() {
 
 ## GetAccountingPaymentterm
 
-Retrieve a paymentterm
+Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2801,7 +2805,7 @@ func main() {
 
 ## GetAccountingProfitloss
 
-Retrieve a profitloss
+Retrieves a single AccountingProfitloss by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2856,7 +2860,7 @@ func main() {
 
 ## GetAccountingProject
 
-Retrieve a project
+Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2911,7 +2915,7 @@ func main() {
 
 ## GetAccountingPurchaseorder
 
-Retrieve a purchaseorder
+Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2966,7 +2970,7 @@ func main() {
 
 ## GetAccountingPurchasereceipt
 
-Retrieve a purchasereceipt
+Retrieves a single AccountingPurchasereceipt by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3021,7 +3025,7 @@ func main() {
 
 ## GetAccountingQuote
 
-Retrieve a quote
+Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3076,7 +3080,7 @@ func main() {
 
 ## GetAccountingSalesorder
 
-Retrieve a salesorder
+Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3131,7 +3135,7 @@ func main() {
 
 ## GetAccountingSalesreceipt
 
-Retrieve a salesreceipt
+Retrieves a single AccountingSalesreceipt by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3186,7 +3190,7 @@ func main() {
 
 ## GetAccountingTaxrate
 
-Retrieve a taxrate
+Retrieves a single AccountingTaxrate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3241,7 +3245,7 @@ func main() {
 
 ## GetAccountingTransaction
 
-Retrieve a transaction
+Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3296,7 +3300,7 @@ func main() {
 
 ## GetAccountingTrialbalance
 
-Retrieve a trialbalance
+Retrieves a single AccountingTrialbalance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3351,7 +3355,7 @@ func main() {
 
 ## GetAccountingVendorcredit
 
-Retrieve a vendorcredit
+Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3406,7 +3410,7 @@ func main() {
 
 ## ListAccountingAccounts
 
-List all accounts
+Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3460,7 +3464,7 @@ func main() {
 
 ## ListAccountingAgedpayables
 
-List all agedpayables
+Returns a list of AccountingAgedpayables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3514,7 +3518,7 @@ func main() {
 
 ## ListAccountingAgedreceivables
 
-List all agedreceivables
+Returns a list of AccountingAgedreceivables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3568,7 +3572,7 @@ func main() {
 
 ## ListAccountingBalancesheets
 
-List all balancesheets
+Returns a list of AccountingBalancesheets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3622,7 +3626,7 @@ func main() {
 
 ## ListAccountingBankfeedaccounts
 
-List all bankfeedaccounts
+Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3676,7 +3680,7 @@ func main() {
 
 ## ListAccountingBankfeedtransactions
 
-List all bankfeedtransactions
+Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3730,7 +3734,7 @@ func main() {
 
 ## ListAccountingBills
 
-List all bills
+Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3784,7 +3788,7 @@ func main() {
 
 ## ListAccountingCashflows
 
-List all cashflows
+Returns a list of AccountingCashflows. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3838,7 +3842,7 @@ func main() {
 
 ## ListAccountingCategories
 
-List all categories
+Returns a list of AccountingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3892,7 +3896,7 @@ func main() {
 
 ## ListAccountingContacts
 
-List all contacts
+Returns a list of AccountingContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3946,7 +3950,7 @@ func main() {
 
 ## ListAccountingCreditmemoes
 
-List all creditmemoes
+Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4000,7 +4004,7 @@ func main() {
 
 ## ListAccountingExpensereports
 
-List all expensereports
+Returns a list of AccountingExpensereports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4054,7 +4058,7 @@ func main() {
 
 ## ListAccountingExpenses
 
-List all expenses
+Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4108,7 +4112,7 @@ func main() {
 
 ## ListAccountingInvoices
 
-List all invoices
+Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4162,7 +4166,7 @@ func main() {
 
 ## ListAccountingJournals
 
-List all journals
+Returns a list of AccountingJournals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4214,9 +4218,11 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAccountingOrders
+## ~~ListAccountingOrders~~
 
-List all orders
+Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -4270,7 +4276,7 @@ func main() {
 
 ## ListAccountingOrganizations
 
-List all organizations
+Returns a list of AccountingOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4324,7 +4330,7 @@ func main() {
 
 ## ListAccountingPaymentterms
 
-List all paymentterms
+Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4378,7 +4384,7 @@ func main() {
 
 ## ListAccountingProfitlosses
 
-List all profitlosses
+Returns a list of AccountingProfitlosses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4432,7 +4438,7 @@ func main() {
 
 ## ListAccountingProjects
 
-List all projects
+Returns a list of AccountingProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4486,7 +4492,7 @@ func main() {
 
 ## ListAccountingPurchaseorders
 
-List all purchaseorders
+Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4540,7 +4546,7 @@ func main() {
 
 ## ListAccountingPurchasereceipts
 
-List all purchasereceipts
+Returns a list of AccountingPurchasereceipts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4594,7 +4600,7 @@ func main() {
 
 ## ListAccountingQuotes
 
-List all quotes
+Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4648,7 +4654,7 @@ func main() {
 
 ## ListAccountingSalesorders
 
-List all salesorders
+Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4702,7 +4708,7 @@ func main() {
 
 ## ListAccountingSalesreceipts
 
-List all salesreceipts
+Returns a list of AccountingSalesreceipts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4756,7 +4762,7 @@ func main() {
 
 ## ListAccountingTaxrates
 
-List all taxrates
+Returns a list of AccountingTaxrates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4810,7 +4816,7 @@ func main() {
 
 ## ListAccountingTransactions
 
-List all transactions
+Returns a list of AccountingTransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4864,7 +4870,7 @@ func main() {
 
 ## ListAccountingTrialbalances
 
-List all trialbalances
+Returns a list of AccountingTrialbalances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4918,7 +4924,7 @@ func main() {
 
 ## ListAccountingVendorcredits
 
-List all vendorcredits
+Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4972,7 +4978,7 @@ func main() {
 
 ## PatchAccountingAccount
 
-Update an account
+Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
 ### Example Usage
 
@@ -5003,7 +5009,7 @@ func main() {
             Currency: unifiedgosdk.Pointer("CAD"),
             CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
             Description: unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-            ID: unifiedgosdk.Pointer("b89164f4-16d4-421e-842f-56eca530ec45"),
+            ID: unifiedgosdk.Pointer("b074017e-1dd1-4e9c-9a9a-ba6ae9afe0cc"),
             IsPayable: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Auto Loan Account"),
@@ -5016,7 +5022,7 @@ func main() {
                 },
             },
             Type: shared.TypeAccountsReceivable.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-06T21:40:54.106Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-07T03:43:27.336Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5050,7 +5056,7 @@ func main() {
 
 ## PatchAccountingBankfeedaccount
 
-Update a bankfeedaccount
+Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -5084,12 +5090,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
             Currency: unifiedgosdk.Pointer("AUD"),
             FeedStartAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
-            ID: unifiedgosdk.Pointer("1905f24b-d20f-459e-9b76-57cdbb658dea"),
+            ID: unifiedgosdk.Pointer("8ec2518c-6f9b-4290-93cb-17782db67db4"),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Corwin, Donnelly and Connelly Checking"),
             RoutingNumber: unifiedgosdk.Pointer("694667752"),
             Status: shared.AccountingBankfeedaccountStatusActive.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-23T19:56:22.329Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-24T04:47:33.229Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5123,7 +5129,7 @@ func main() {
 
 ## PatchAccountingBankfeedtransaction
 
-Update a bankfeedtransaction
+Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -5155,15 +5161,15 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-03-24T23:41:08.374Z"),
             Currency: unifiedgosdk.Pointer("CAD"),
             Description: unifiedgosdk.Pointer("Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781."),
-            ID: unifiedgosdk.Pointer("37cd0e2a-1f6a-43b1-a20e-2cdd60ec6423"),
+            ID: unifiedgosdk.Pointer("b3decb3e-ed00-4600-8302-27158f3ab3e0"),
             IsPending: unifiedgosdk.Pointer(true),
             MerchantName: unifiedgosdk.Pointer("Buckridge - Feest"),
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2025-04-14T19:58:00.144Z"),
+            PostedAt: types.MustNewTimeFromString("2025-04-15T11:51:15.898Z"),
             Reference: unifiedgosdk.Pointer("79574105"),
-            TransactionAt: types.MustNewTimeFromString("2022-07-30T08:10:12.138Z"),
+            TransactionAt: types.MustNewTimeFromString("2022-07-30T09:58:54.153Z"),
             Type: shared.AccountingBankfeedtransactionTypeCredit.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-05-25T01:44:39.015Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-05-25T02:36:47.333Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5197,7 +5203,7 @@ func main() {
 
 ## PatchAccountingBill
 
-Update a bill
+Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
 ### Example Usage
 
@@ -5226,13 +5232,13 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://puny-foodstuffs.name"),
-                    ID: unifiedgosdk.Pointer("5f7b5dee-8c62-4964-bedd-56fd074ac361"),
+                    ID: unifiedgosdk.Pointer("4527ae4f-25b4-4131-a05b-228a6f649e97"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("BILL-2466.pdf"),
                 },
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://grimy-characterization.net"),
-                    ID: unifiedgosdk.Pointer("5095116b-b393-4afd-87bc-d967ca04b70f"),
+                    ID: unifiedgosdk.Pointer("5743dca5-30a1-4e95-92ce-8a27d46e5b0c"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("BILL-2466-1.pdf"),
                 },
@@ -5245,7 +5251,7 @@ func main() {
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2019-09-07T23:03:14.104Z"),
             ExtendedNotes: []shared.AccountingExtendedNote{},
-            ID: unifiedgosdk.Pointer("c1f11f76-1eff-43e7-8f44-6a829c9ec2c4"),
+            ID: unifiedgosdk.Pointer("ebe23029-ea98-4dc0-a1ec-eb5de14a04e5"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Admiratio deporto tutamen cilicium infit amissio ante demulceo."),
@@ -5261,7 +5267,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             Term: shared.TermNet90.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2020-06-01T05:48:10.630Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-06-01T08:26:07.748Z"),
             URL: unifiedgosdk.Pointer("https://cluttered-importance.org/bills/BILL-2466"),
         },
         ConnectionID: "<id>",
@@ -5296,7 +5302,7 @@ func main() {
 
 ## PatchAccountingCategory
 
-Update a category
+Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -5324,11 +5330,11 @@ func main() {
         AccountingCategory: shared.AccountingCategory{
             CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
             Description: unifiedgosdk.Pointer("Textus ab thymum labore basium."),
-            ID: unifiedgosdk.Pointer("19d65ff6-bd39-4539-9f5e-2d62aeaa23a0"),
+            ID: unifiedgosdk.Pointer("20661dee-4099-4eee-9e2e-d361dd190255"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Beauty"),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-11T12:11:02.655Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-12T04:11:51.679Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5362,7 +5368,7 @@ func main() {
 
 ## PatchAccountingContact
 
-Update a contact
+Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
 ### Example Usage
 
@@ -5412,7 +5418,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Delores"),
-            ID: unifiedgosdk.Pointer("f99279d9-5e04-4e2f-aac5-98630e0e6481"),
+            ID: unifiedgosdk.Pointer("2094babf-af16-43a0-af2f-3f8e8126dab1"),
             Identification: unifiedgosdk.Pointer("531850872"),
             IsActive: unifiedgosdk.Pointer(true),
             IsCustomer: unifiedgosdk.Pointer(true),
@@ -5423,7 +5429,7 @@ func main() {
             PaymentMethods: []shared.AccountingContactPaymentMethod{
                 shared.AccountingContactPaymentMethod{
                     Default: unifiedgosdk.Pointer(true),
-                    ID: unifiedgosdk.Pointer("c10d1ec1-1157-467d-97e9-a468cfcb5576"),
+                    ID: unifiedgosdk.Pointer("4b732532-2bc6-4d80-8805-357304c02d5a"),
                     Name: unifiedgosdk.Pointer("Visa 7844"),
                     Type: shared.AccountingContactPaymentMethodTypeCard,
                 },
@@ -5445,7 +5451,7 @@ func main() {
                     Type: shared.AccountingTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2023-12-19T20:51:25.388Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-20T07:36:45.925Z"),
             Website: unifiedgosdk.Pointer("https://kertzmanngroup.com"),
         },
         ConnectionID: "<id>",
@@ -5480,7 +5486,7 @@ func main() {
 
 ## PatchAccountingCreditmemo
 
-Update a creditmemo
+Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
 ### Example Usage
 
@@ -5513,7 +5519,7 @@ func main() {
             CreditmemoNumber: unifiedgosdk.Pointer("CM-99537"),
             Currency: unifiedgosdk.Pointer("AUD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("568d9318-1556-4402-88ff-ea980ec43dbe"),
+            ID: unifiedgosdk.Pointer("8a145713-1fbd-40e2-b361-bdd9b06ef0da"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Hic vorax dedecor amo adfero torqueo quas victoria."),
@@ -5522,7 +5528,7 @@ func main() {
             Status: shared.AccountingCreditmemoStatusAuthorized.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-11T07:57:22.916Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-11T23:11:29.409Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5556,7 +5562,7 @@ func main() {
 
 ## PatchAccountingExpense
 
-Update an expense
+Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -5585,13 +5591,13 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://rubbery-couch.biz/"),
-                    ID: unifiedgosdk.Pointer("6c24dd53-2b45-4334-bbcf-75c636f28f60"),
+                    ID: unifiedgosdk.Pointer("d58b40c5-3bab-4eb8-8953-45045eb60e9f"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("receipt-9696.pdf"),
                 },
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://appropriate-smog.biz/"),
-                    ID: unifiedgosdk.Pointer("e1a08bed-3ed0-4fdc-b9ee-fc332c88cd5f"),
+                    ID: unifiedgosdk.Pointer("77647132-cdbd-485d-a2c5-c2ea5ce89131"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("receipt-9696-1.pdf"),
                 },
@@ -5600,10 +5606,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-06-11T03:39:37.305Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
             ExternalNumber: unifiedgosdk.Pointer("EXP-38303"),
-            ID: unifiedgosdk.Pointer("3c876856-b200-4d87-b983-23fea5ab9ebe"),
+            ID: unifiedgosdk.Pointer("542e253e-9be2-4769-9e7b-513144533652"),
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("81fbe3f0-5c73-41bd-9bbc-612377427866"),
+                    ID: unifiedgosdk.Pointer("077d67ff-ee2e-4c5f-ac4f-bb6481113a38"),
                     ItemName: unifiedgosdk.Pointer("Client dinner"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](364.74),
@@ -5611,7 +5617,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("0d93bd35-f966-4737-a0c1-2a6f5b7f9429"),
+                    ID: unifiedgosdk.Pointer("0906ed39-7dae-456f-9c82-077543591acd"),
                     ItemName: unifiedgosdk.Pointer("Client dinner"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](258.35),
@@ -5619,7 +5625,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("6f9434e8-5db2-474b-8f0e-3ae4fb4de269"),
+                    ID: unifiedgosdk.Pointer("f4ae5862-e96c-4dbc-a116-2f9d71403708"),
                     ItemName: unifiedgosdk.Pointer("Conference ticket"),
                     Notes: unifiedgosdk.Pointer("Casus umquam conicio cinis demitto sint."),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -5628,7 +5634,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("be81f7a9-a03d-4972-be6a-ff45503fa595"),
+                    ID: unifiedgosdk.Pointer("9ad8a271-29b8-4c2f-a966-e56e1d5fa671"),
                     ItemName: unifiedgosdk.Pointer("Hotel"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](157.04),
@@ -5636,7 +5642,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("be6beea5-ab5d-4c48-93ee-b9e4551935ff"),
+                    ID: unifiedgosdk.Pointer("e783cbf5-5d97-4777-8798-596b0362a0c4"),
                     ItemName: unifiedgosdk.Pointer("Hotel"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](164.02),
@@ -5652,7 +5658,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](972.29),
             Type: shared.AccountingExpenseTypeCompany.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-09-02T07:17:12.139Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-09-02T08:08:15.489Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5686,7 +5692,7 @@ func main() {
 
 ## PatchAccountingExpensereport
 
-Update an expensereport
+Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 
 ### Example Usage
 
@@ -5712,16 +5718,16 @@ func main() {
 
     res, err := s.Accounting.PatchAccountingExpensereport(ctx, operations.PatchAccountingExpensereportRequest{
         AccountingExpensereport: shared.AccountingExpensereport{
-            ApprovedAt: types.MustNewTimeFromString("2021-04-19T11:29:13.798Z"),
+            ApprovedAt: types.MustNewTimeFromString("2021-04-19T14:47:54.430Z"),
             Attachments: []shared.AccountingAttachment{},
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-05-29T02:04:59.078Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
             ExternalNumber: unifiedgosdk.Pointer("ER-31240"),
-            ID: unifiedgosdk.Pointer("69060eb7-1248-4734-8695-92f015020820"),
+            ID: unifiedgosdk.Pointer("1b57eed0-0948-4c2c-ba32-0a52df93900d"),
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("736d934a-f77b-47de-a5c1-82c06e7a0566"),
+                    ID: unifiedgosdk.Pointer("4e409aba-062b-4ec0-b9af-9462ba902709"),
                     ItemName: unifiedgosdk.Pointer("Conference ticket"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](39.9),
@@ -5729,7 +5735,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("1fd15cda-8fdd-4d91-bb47-d80121e55172"),
+                    ID: unifiedgosdk.Pointer("1dd8e1a0-b6d8-4a6c-8239-d72cb82a1105"),
                     ItemName: unifiedgosdk.Pointer("Flight"),
                     Notes: unifiedgosdk.Pointer("Soluta omnis dolor."),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -5738,7 +5744,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("ba79aa66-d7d6-4454-b09f-d90f5c60ac9e"),
+                    ID: unifiedgosdk.Pointer("1ad82fac-e61b-4489-a4f7-d30d02679c5b"),
                     ItemName: unifiedgosdk.Pointer("Client dinner"),
                     Notes: unifiedgosdk.Pointer("Altus caveo capio."),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -5747,7 +5753,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("9d01fb30-5963-46c4-a6f6-fc0409d4ab78"),
+                    ID: unifiedgosdk.Pointer("37c9f695-3e6f-44d4-9276-53746b40a05c"),
                     ItemName: unifiedgosdk.Pointer("Flight"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](445.27),
@@ -5759,11 +5765,11 @@ func main() {
             Name: unifiedgosdk.Pointer("Lolita Kunde - October expenses"),
             PostedAt: types.MustNewTimeFromString("2020-05-29T02:04:59.078Z"),
             ReimbursedAmount: unifiedgosdk.Pointer[float64](908.46),
-            ReimbursedAt: types.MustNewTimeFromString("2021-04-19T11:29:13.798Z"),
+            ReimbursedAt: types.MustNewTimeFromString("2021-04-19T14:47:54.430Z"),
             Status: shared.AccountingExpensereportStatusPaid.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](908.46),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-19T11:29:13.798Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-19T14:47:54.430Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5797,7 +5803,7 @@ func main() {
 
 ## PatchAccountingInvoice
 
-Update an invoice
+Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 
 ### Example Usage
 
@@ -5826,13 +5832,13 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://glossy-markup.net/"),
-                    ID: unifiedgosdk.Pointer("21a65956-7898-49fe-954e-657be9079de1"),
+                    ID: unifiedgosdk.Pointer("1614570e-8426-44b9-a5b3-9ed962bb37fe"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("INV-77705.pdf"),
                 },
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://earnest-giggle.net"),
-                    ID: unifiedgosdk.Pointer("0de07f5c-0422-4bf1-8312-b38a6e63a87d"),
+                    ID: unifiedgosdk.Pointer("e4c33475-8125-472b-b327-5a7e63b662ad"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("INV-77705-1.pdf"),
                 },
@@ -5844,7 +5850,7 @@ func main() {
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2022-12-07T14:17:29.587Z"),
             ExtendedNotes: []shared.AccountingExtendedNote{},
-            ID: unifiedgosdk.Pointer("896edd87-b896-4ec1-9035-22e2a216a31b"),
+            ID: unifiedgosdk.Pointer("3b31841e-3d5f-4920-ae4f-5fbe81bd9de0"),
             InvoiceNumber: unifiedgosdk.Pointer("INV-77705"),
             IsInclusiveOfTax: unifiedgosdk.Pointer(false),
             Lineitems: []shared.AccountingLineitem{},
@@ -5862,7 +5868,7 @@ func main() {
             Term: shared.AccountingInvoiceTermNet25.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingInvoiceTypeInvoice.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-23T13:03:42.816Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-24T09:51:39.899Z"),
             URL: unifiedgosdk.Pointer("https://gifted-yarmulke.info/invoices/INV-77705"),
         },
         ConnectionID: "<id>",
@@ -5897,7 +5903,7 @@ func main() {
 
 ## PatchAccountingJournal
 
-Update a journal
+Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
 ### Example Usage
 
@@ -5928,16 +5934,16 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-02-20T15:14:55.881Z"),
             Currency: unifiedgosdk.Pointer("CAD"),
             Description: unifiedgosdk.Pointer("Cilicium minima calco constans adipisci."),
-            ID: unifiedgosdk.Pointer("d31da702-1e25-44be-a4d9-de209d629dab"),
+            ID: unifiedgosdk.Pointer("3975395e-fb4b-446b-9434-0530f747cc4f"),
             IsInclusiveOfTax: unifiedgosdk.Pointer(true),
             Lineitems: []shared.AccountingJournalLineitem{},
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2023-11-06T10:40:52.844Z"),
+            PostedAt: types.MustNewTimeFromString("2023-11-06T23:54:38.655Z"),
             Reference: unifiedgosdk.Pointer("JE-78884"),
             Source: unifiedgosdk.Pointer("crustulum"),
             Status: shared.AccountingJournalStatusVoid.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-10T19:42:52.137Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-11T02:27:14.342Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5969,9 +5975,11 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchAccountingOrder
+## ~~PatchAccountingOrder~~
 
-Update an order
+Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -6007,7 +6015,7 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
-            ID: unifiedgosdk.Pointer("4c2c437b-fa37-41d5-a10b-c8e726820b58"),
+            ID: unifiedgosdk.Pointer("a2722865-e3c2-4eb8-9c96-bde5f90cfaf2"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             PostedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
@@ -6022,7 +6030,7 @@ func main() {
             Status: shared.AccountingOrderStatusAuthorized.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingOrderTypeSales.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-02-08T07:18:52.791Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-08T12:12:41.895Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -6056,7 +6064,7 @@ func main() {
 
 ## PatchAccountingPaymentterm
 
-Update a paymentterm
+Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 
 ### Example Usage
 
@@ -6091,12 +6099,12 @@ func main() {
             DiscountPercent: unifiedgosdk.Pointer[float64](5.0),
             DueDays: unifiedgosdk.Pointer[float64](57.0),
             DueNextMonthDays: unifiedgosdk.Pointer[float64](9.0),
-            ID: unifiedgosdk.Pointer("454eabd4-960c-4e98-97ff-7883db6f63e6"),
+            ID: unifiedgosdk.Pointer("61ff1f8f-4985-4e40-a8d4-ff7eb3f02792"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Net 30"),
             Type: shared.AccountingPaymenttermTypeNet15.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-08T11:12:46.149Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-09T07:22:59.471Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -6130,7 +6138,7 @@ func main() {
 
 ## PatchAccountingProject
 
-Update a project
+Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
 ### Example Usage
 
@@ -6187,7 +6195,7 @@ func main() {
 
 ## PatchAccountingPurchaseorder
 
-Update a purchaseorder
+Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 
 ### Example Usage
 
@@ -6226,7 +6234,7 @@ func main() {
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
             Currency: unifiedgosdk.Pointer("EUR"),
-            ID: unifiedgosdk.Pointer("48e97068-ce4d-4074-985d-773cfe1d221d"),
+            ID: unifiedgosdk.Pointer("a416ea74-f483-42a8-8e48-58535d9028ce"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             PostedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
@@ -6240,7 +6248,7 @@ func main() {
             },
             Status: shared.AccountingPurchaseorderStatusSubmitted.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2021-08-11T06:00:23.906Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-08-11T08:41:44.890Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -6274,7 +6282,7 @@ func main() {
 
 ## PatchAccountingQuote
 
-Update a quote
+Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
 
 ### Example Usage
 
@@ -6331,7 +6339,7 @@ func main() {
 
 ## PatchAccountingSalesorder
 
-Update a salesorder
+Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
 ### Example Usage
 
@@ -6367,13 +6375,13 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CategoryIds: []string{},
-            ClosedAt: types.MustNewTimeFromString("2023-03-25T12:57:23.174Z"),
+            ClosedAt: types.MustNewTimeFromString("2023-03-25T18:51:55.597Z"),
             CreatedAt: types.MustNewTimeFromString("2022-01-17T16:11:50.310Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             Fees: []shared.AccountingFee{},
             FulfillmentType: shared.FulfillmentTypeOther.ToPointer(),
-            ID: unifiedgosdk.Pointer("81444e74-2438-4d48-a12a-446390d8c063"),
+            ID: unifiedgosdk.Pointer("eb857dee-e60e-475f-bdcd-edb5a376f942"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             OrderNumber: unifiedgosdk.Pointer("832663"),
@@ -6395,7 +6403,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TipAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-03-25T12:57:23.174Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-25T18:51:55.597Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -6429,7 +6437,7 @@ func main() {
 
 ## PatchAccountingTaxrate
 
-Update a taxrate
+Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
 
 ### Example Usage
 
@@ -6466,7 +6474,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-01-04T10:37:56.894Z"),
             Description: unifiedgosdk.Pointer("Exempt (0%)"),
             EffectiveRate: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("7efef66d-926b-4c67-9803-216a861ed3ec"),
+            ID: unifiedgosdk.Pointer("6fadebf2-8c72-4fb3-97f5-5057ddd19842"),
             IsActive: unifiedgosdk.Pointer(false),
             IsCompound: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
@@ -6475,7 +6483,7 @@ func main() {
             Region: unifiedgosdk.Pointer("KS"),
             TotalRate: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingTaxrateTypeSales.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-02-13T05:09:51.173Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-02-13T05:32:42.700Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -6509,7 +6517,7 @@ func main() {
 
 ## PatchAccountingTransaction
 
-Update a transaction
+Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -6536,12 +6544,12 @@ func main() {
     res, err := s.Accounting.PatchAccountingTransaction(ctx, operations.PatchAccountingTransactionRequest{
         AccountingTransaction: shared.AccountingTransaction{
             CreatedAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
-            ID: unifiedgosdk.Pointer("3fc62cc2-c890-432a-baa8-21b3a333e541"),
+            ID: unifiedgosdk.Pointer("22225963-66fb-48f2-9300-11e70830bb12"),
             Lineitems: []shared.AccountingTransactionLineItem{
                 shared.AccountingTransactionLineItem{
                     CategoryIds: []string{},
                     Description: unifiedgosdk.Pointer("The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability"),
-                    ID: unifiedgosdk.Pointer("b4303d20-48f1-49bc-9d58-f21e053cdbcc"),
+                    ID: unifiedgosdk.Pointer("577033d5-6fa9-46c2-938e-3831528b30c8"),
                     Name: unifiedgosdk.Pointer("Shirt"),
                     TotalAmount: unifiedgosdk.Pointer[float64](10184.0),
                     UnitAmount: unifiedgosdk.Pointer[float64](536.0),
@@ -6553,7 +6561,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](10184.0),
             TransactionAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
-            UpdatedAt: types.MustNewTimeFromString("2019-10-14T06:08:29.411Z"),
+            UpdatedAt: types.MustNewTimeFromString("2019-10-14T06:18:51.360Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -6587,7 +6595,7 @@ func main() {
 
 ## PatchAccountingVendorcredit
 
-Update a vendorcredit
+Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 
 ### Example Usage
 
@@ -6617,14 +6625,14 @@ func main() {
             BalanceAmount: unifiedgosdk.Pointer[float64](0.0),
             CreatedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("421efb11-574f-4a58-b1b3-c13d3675e8d3"),
+            ID: unifiedgosdk.Pointer("4e28d8ea-334a-44d8-a5ac-bdb5cce5570b"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Volup conatus cruciamentum decor avaritia."),
             PostedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
             Status: shared.AccountingVendorcreditStatusAuthorized.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-03T01:42:12.414Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-03T04:51:13.949Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -6658,7 +6666,7 @@ func main() {
 
 ## RemoveAccountingAccount
 
-Remove an account
+Deletes the AccountingAccount identified by `id`.
 
 ### Example Usage
 
@@ -6713,7 +6721,7 @@ func main() {
 
 ## RemoveAccountingBankfeedaccount
 
-Remove a bankfeedaccount
+Deletes the AccountingBankfeedaccount identified by `id`.
 
 ### Example Usage
 
@@ -6768,7 +6776,7 @@ func main() {
 
 ## RemoveAccountingBankfeedtransaction
 
-Remove a bankfeedtransaction
+Deletes the AccountingBankfeedtransaction identified by `id`.
 
 ### Example Usage
 
@@ -6823,7 +6831,7 @@ func main() {
 
 ## RemoveAccountingBill
 
-Remove a bill
+Deletes the AccountingBill identified by `id`.
 
 ### Example Usage
 
@@ -6878,7 +6886,7 @@ func main() {
 
 ## RemoveAccountingCategory
 
-Remove a category
+Deletes the AccountingCategory identified by `id`.
 
 ### Example Usage
 
@@ -6933,7 +6941,7 @@ func main() {
 
 ## RemoveAccountingContact
 
-Remove a contact
+Deletes the AccountingContact identified by `id`.
 
 ### Example Usage
 
@@ -6988,7 +6996,7 @@ func main() {
 
 ## RemoveAccountingCreditmemo
 
-Remove a creditmemo
+Deletes the AccountingCreditmemo identified by `id`.
 
 ### Example Usage
 
@@ -7043,7 +7051,7 @@ func main() {
 
 ## RemoveAccountingExpense
 
-Remove an expense
+Deletes the AccountingExpense identified by `id`.
 
 ### Example Usage
 
@@ -7098,7 +7106,7 @@ func main() {
 
 ## RemoveAccountingExpensereport
 
-Remove an expensereport
+Deletes the AccountingExpensereport identified by `id`.
 
 ### Example Usage
 
@@ -7153,7 +7161,7 @@ func main() {
 
 ## RemoveAccountingInvoice
 
-Remove an invoice
+Deletes the AccountingInvoice identified by `id`.
 
 ### Example Usage
 
@@ -7208,7 +7216,7 @@ func main() {
 
 ## RemoveAccountingJournal
 
-Remove a journal
+Deletes the AccountingJournal identified by `id`.
 
 ### Example Usage
 
@@ -7261,9 +7269,11 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveAccountingOrder
+## ~~RemoveAccountingOrder~~
 
-Remove an order
+Deletes the AccountingOrder identified by `id`.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -7318,7 +7328,7 @@ func main() {
 
 ## RemoveAccountingPaymentterm
 
-Remove a paymentterm
+Deletes the AccountingPaymentterm identified by `id`.
 
 ### Example Usage
 
@@ -7373,7 +7383,7 @@ func main() {
 
 ## RemoveAccountingProject
 
-Remove a project
+Deletes the AccountingProject identified by `id`.
 
 ### Example Usage
 
@@ -7428,7 +7438,7 @@ func main() {
 
 ## RemoveAccountingPurchaseorder
 
-Remove a purchaseorder
+Deletes the AccountingPurchaseorder identified by `id`.
 
 ### Example Usage
 
@@ -7483,7 +7493,7 @@ func main() {
 
 ## RemoveAccountingQuote
 
-Remove a quote
+Deletes the AccountingQuote identified by `id`.
 
 ### Example Usage
 
@@ -7538,7 +7548,7 @@ func main() {
 
 ## RemoveAccountingSalesorder
 
-Remove a salesorder
+Deletes the AccountingSalesorder identified by `id`.
 
 ### Example Usage
 
@@ -7593,7 +7603,7 @@ func main() {
 
 ## RemoveAccountingTaxrate
 
-Remove a taxrate
+Deletes the AccountingTaxrate identified by `id`.
 
 ### Example Usage
 
@@ -7648,7 +7658,7 @@ func main() {
 
 ## RemoveAccountingTransaction
 
-Remove a transaction
+Deletes the AccountingTransaction identified by `id`.
 
 ### Example Usage
 
@@ -7703,7 +7713,7 @@ func main() {
 
 ## RemoveAccountingVendorcredit
 
-Remove a vendorcredit
+Deletes the AccountingVendorcredit identified by `id`.
 
 ### Example Usage
 
@@ -7758,7 +7768,7 @@ func main() {
 
 ## UpdateAccountingAccount
 
-Update an account
+Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
 ### Example Usage
 
@@ -7789,7 +7799,7 @@ func main() {
             Currency: unifiedgosdk.Pointer("CAD"),
             CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
             Description: unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-            ID: unifiedgosdk.Pointer("b89164f4-16d4-421e-842f-56eca530ec45"),
+            ID: unifiedgosdk.Pointer("b074017e-1dd1-4e9c-9a9a-ba6ae9afe0cc"),
             IsPayable: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Auto Loan Account"),
@@ -7802,7 +7812,7 @@ func main() {
                 },
             },
             Type: shared.TypeAccountsReceivable.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-06T21:40:54.106Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-07T03:43:27.336Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -7836,7 +7846,7 @@ func main() {
 
 ## UpdateAccountingBankfeedaccount
 
-Update a bankfeedaccount
+Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -7870,12 +7880,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
             Currency: unifiedgosdk.Pointer("AUD"),
             FeedStartAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
-            ID: unifiedgosdk.Pointer("1905f24b-d20f-459e-9b76-57cdbb658dea"),
+            ID: unifiedgosdk.Pointer("8ec2518c-6f9b-4290-93cb-17782db67db4"),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Corwin, Donnelly and Connelly Checking"),
             RoutingNumber: unifiedgosdk.Pointer("694667752"),
             Status: shared.AccountingBankfeedaccountStatusActive.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-23T19:56:22.329Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-24T04:47:33.229Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -7909,7 +7919,7 @@ func main() {
 
 ## UpdateAccountingBankfeedtransaction
 
-Update a bankfeedtransaction
+Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -7941,15 +7951,15 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-03-24T23:41:08.374Z"),
             Currency: unifiedgosdk.Pointer("CAD"),
             Description: unifiedgosdk.Pointer("Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781."),
-            ID: unifiedgosdk.Pointer("37cd0e2a-1f6a-43b1-a20e-2cdd60ec6423"),
+            ID: unifiedgosdk.Pointer("b3decb3e-ed00-4600-8302-27158f3ab3e0"),
             IsPending: unifiedgosdk.Pointer(true),
             MerchantName: unifiedgosdk.Pointer("Buckridge - Feest"),
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2025-04-14T19:58:00.144Z"),
+            PostedAt: types.MustNewTimeFromString("2025-04-15T11:51:15.898Z"),
             Reference: unifiedgosdk.Pointer("79574105"),
-            TransactionAt: types.MustNewTimeFromString("2022-07-30T08:10:12.138Z"),
+            TransactionAt: types.MustNewTimeFromString("2022-07-30T09:58:54.153Z"),
             Type: shared.AccountingBankfeedtransactionTypeCredit.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-05-25T01:44:39.015Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-05-25T02:36:47.333Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -7983,7 +7993,7 @@ func main() {
 
 ## UpdateAccountingBill
 
-Update a bill
+Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
 ### Example Usage
 
@@ -8012,13 +8022,13 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://puny-foodstuffs.name"),
-                    ID: unifiedgosdk.Pointer("5f7b5dee-8c62-4964-bedd-56fd074ac361"),
+                    ID: unifiedgosdk.Pointer("4527ae4f-25b4-4131-a05b-228a6f649e97"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("BILL-2466.pdf"),
                 },
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://grimy-characterization.net"),
-                    ID: unifiedgosdk.Pointer("5095116b-b393-4afd-87bc-d967ca04b70f"),
+                    ID: unifiedgosdk.Pointer("5743dca5-30a1-4e95-92ce-8a27d46e5b0c"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("BILL-2466-1.pdf"),
                 },
@@ -8031,7 +8041,7 @@ func main() {
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2019-09-07T23:03:14.104Z"),
             ExtendedNotes: []shared.AccountingExtendedNote{},
-            ID: unifiedgosdk.Pointer("c1f11f76-1eff-43e7-8f44-6a829c9ec2c4"),
+            ID: unifiedgosdk.Pointer("ebe23029-ea98-4dc0-a1ec-eb5de14a04e5"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Admiratio deporto tutamen cilicium infit amissio ante demulceo."),
@@ -8047,7 +8057,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             Term: shared.TermNet90.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2020-06-01T05:48:10.630Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-06-01T08:26:07.748Z"),
             URL: unifiedgosdk.Pointer("https://cluttered-importance.org/bills/BILL-2466"),
         },
         ConnectionID: "<id>",
@@ -8082,7 +8092,7 @@ func main() {
 
 ## UpdateAccountingCategory
 
-Update a category
+Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -8110,11 +8120,11 @@ func main() {
         AccountingCategory: shared.AccountingCategory{
             CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
             Description: unifiedgosdk.Pointer("Textus ab thymum labore basium."),
-            ID: unifiedgosdk.Pointer("19d65ff6-bd39-4539-9f5e-2d62aeaa23a0"),
+            ID: unifiedgosdk.Pointer("20661dee-4099-4eee-9e2e-d361dd190255"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Beauty"),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-11T12:11:02.655Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-12T04:11:51.679Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -8148,7 +8158,7 @@ func main() {
 
 ## UpdateAccountingContact
 
-Update a contact
+Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
 ### Example Usage
 
@@ -8198,7 +8208,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Delores"),
-            ID: unifiedgosdk.Pointer("f99279d9-5e04-4e2f-aac5-98630e0e6481"),
+            ID: unifiedgosdk.Pointer("2094babf-af16-43a0-af2f-3f8e8126dab1"),
             Identification: unifiedgosdk.Pointer("531850872"),
             IsActive: unifiedgosdk.Pointer(true),
             IsCustomer: unifiedgosdk.Pointer(true),
@@ -8209,7 +8219,7 @@ func main() {
             PaymentMethods: []shared.AccountingContactPaymentMethod{
                 shared.AccountingContactPaymentMethod{
                     Default: unifiedgosdk.Pointer(true),
-                    ID: unifiedgosdk.Pointer("c10d1ec1-1157-467d-97e9-a468cfcb5576"),
+                    ID: unifiedgosdk.Pointer("4b732532-2bc6-4d80-8805-357304c02d5a"),
                     Name: unifiedgosdk.Pointer("Visa 7844"),
                     Type: shared.AccountingContactPaymentMethodTypeCard,
                 },
@@ -8231,7 +8241,7 @@ func main() {
                     Type: shared.AccountingTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2023-12-19T20:51:25.388Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-20T07:36:45.925Z"),
             Website: unifiedgosdk.Pointer("https://kertzmanngroup.com"),
         },
         ConnectionID: "<id>",
@@ -8266,7 +8276,7 @@ func main() {
 
 ## UpdateAccountingCreditmemo
 
-Update a creditmemo
+Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
 ### Example Usage
 
@@ -8299,7 +8309,7 @@ func main() {
             CreditmemoNumber: unifiedgosdk.Pointer("CM-99537"),
             Currency: unifiedgosdk.Pointer("AUD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("568d9318-1556-4402-88ff-ea980ec43dbe"),
+            ID: unifiedgosdk.Pointer("8a145713-1fbd-40e2-b361-bdd9b06ef0da"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Hic vorax dedecor amo adfero torqueo quas victoria."),
@@ -8308,7 +8318,7 @@ func main() {
             Status: shared.AccountingCreditmemoStatusAuthorized.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-11T07:57:22.916Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-11T23:11:29.409Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -8342,7 +8352,7 @@ func main() {
 
 ## UpdateAccountingExpense
 
-Update an expense
+Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -8371,13 +8381,13 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://rubbery-couch.biz/"),
-                    ID: unifiedgosdk.Pointer("6c24dd53-2b45-4334-bbcf-75c636f28f60"),
+                    ID: unifiedgosdk.Pointer("d58b40c5-3bab-4eb8-8953-45045eb60e9f"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("receipt-9696.pdf"),
                 },
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://appropriate-smog.biz/"),
-                    ID: unifiedgosdk.Pointer("e1a08bed-3ed0-4fdc-b9ee-fc332c88cd5f"),
+                    ID: unifiedgosdk.Pointer("77647132-cdbd-485d-a2c5-c2ea5ce89131"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("receipt-9696-1.pdf"),
                 },
@@ -8386,10 +8396,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-06-11T03:39:37.305Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
             ExternalNumber: unifiedgosdk.Pointer("EXP-38303"),
-            ID: unifiedgosdk.Pointer("3c876856-b200-4d87-b983-23fea5ab9ebe"),
+            ID: unifiedgosdk.Pointer("542e253e-9be2-4769-9e7b-513144533652"),
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("81fbe3f0-5c73-41bd-9bbc-612377427866"),
+                    ID: unifiedgosdk.Pointer("077d67ff-ee2e-4c5f-ac4f-bb6481113a38"),
                     ItemName: unifiedgosdk.Pointer("Client dinner"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](364.74),
@@ -8397,7 +8407,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("0d93bd35-f966-4737-a0c1-2a6f5b7f9429"),
+                    ID: unifiedgosdk.Pointer("0906ed39-7dae-456f-9c82-077543591acd"),
                     ItemName: unifiedgosdk.Pointer("Client dinner"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](258.35),
@@ -8405,7 +8415,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("6f9434e8-5db2-474b-8f0e-3ae4fb4de269"),
+                    ID: unifiedgosdk.Pointer("f4ae5862-e96c-4dbc-a116-2f9d71403708"),
                     ItemName: unifiedgosdk.Pointer("Conference ticket"),
                     Notes: unifiedgosdk.Pointer("Casus umquam conicio cinis demitto sint."),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -8414,7 +8424,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("be81f7a9-a03d-4972-be6a-ff45503fa595"),
+                    ID: unifiedgosdk.Pointer("9ad8a271-29b8-4c2f-a966-e56e1d5fa671"),
                     ItemName: unifiedgosdk.Pointer("Hotel"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](157.04),
@@ -8422,7 +8432,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("be6beea5-ab5d-4c48-93ee-b9e4551935ff"),
+                    ID: unifiedgosdk.Pointer("e783cbf5-5d97-4777-8798-596b0362a0c4"),
                     ItemName: unifiedgosdk.Pointer("Hotel"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](164.02),
@@ -8438,7 +8448,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](972.29),
             Type: shared.AccountingExpenseTypeCompany.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-09-02T07:17:12.139Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-09-02T08:08:15.489Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -8472,7 +8482,7 @@ func main() {
 
 ## UpdateAccountingExpensereport
 
-Update an expensereport
+Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 
 ### Example Usage
 
@@ -8498,16 +8508,16 @@ func main() {
 
     res, err := s.Accounting.UpdateAccountingExpensereport(ctx, operations.UpdateAccountingExpensereportRequest{
         AccountingExpensereport: shared.AccountingExpensereport{
-            ApprovedAt: types.MustNewTimeFromString("2021-04-19T11:29:13.798Z"),
+            ApprovedAt: types.MustNewTimeFromString("2021-04-19T14:47:54.430Z"),
             Attachments: []shared.AccountingAttachment{},
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-05-29T02:04:59.078Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
             ExternalNumber: unifiedgosdk.Pointer("ER-31240"),
-            ID: unifiedgosdk.Pointer("69060eb7-1248-4734-8695-92f015020820"),
+            ID: unifiedgosdk.Pointer("1b57eed0-0948-4c2c-ba32-0a52df93900d"),
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("736d934a-f77b-47de-a5c1-82c06e7a0566"),
+                    ID: unifiedgosdk.Pointer("4e409aba-062b-4ec0-b9af-9462ba902709"),
                     ItemName: unifiedgosdk.Pointer("Conference ticket"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](39.9),
@@ -8515,7 +8525,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("1fd15cda-8fdd-4d91-bb47-d80121e55172"),
+                    ID: unifiedgosdk.Pointer("1dd8e1a0-b6d8-4a6c-8239-d72cb82a1105"),
                     ItemName: unifiedgosdk.Pointer("Flight"),
                     Notes: unifiedgosdk.Pointer("Soluta omnis dolor."),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -8524,7 +8534,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("ba79aa66-d7d6-4454-b09f-d90f5c60ac9e"),
+                    ID: unifiedgosdk.Pointer("1ad82fac-e61b-4489-a4f7-d30d02679c5b"),
                     ItemName: unifiedgosdk.Pointer("Client dinner"),
                     Notes: unifiedgosdk.Pointer("Altus caveo capio."),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -8533,7 +8543,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("9d01fb30-5963-46c4-a6f6-fc0409d4ab78"),
+                    ID: unifiedgosdk.Pointer("37c9f695-3e6f-44d4-9276-53746b40a05c"),
                     ItemName: unifiedgosdk.Pointer("Flight"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](445.27),
@@ -8545,11 +8555,11 @@ func main() {
             Name: unifiedgosdk.Pointer("Lolita Kunde - October expenses"),
             PostedAt: types.MustNewTimeFromString("2020-05-29T02:04:59.078Z"),
             ReimbursedAmount: unifiedgosdk.Pointer[float64](908.46),
-            ReimbursedAt: types.MustNewTimeFromString("2021-04-19T11:29:13.798Z"),
+            ReimbursedAt: types.MustNewTimeFromString("2021-04-19T14:47:54.430Z"),
             Status: shared.AccountingExpensereportStatusPaid.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](908.46),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-19T11:29:13.798Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-19T14:47:54.430Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -8583,7 +8593,7 @@ func main() {
 
 ## UpdateAccountingInvoice
 
-Update an invoice
+Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 
 ### Example Usage
 
@@ -8612,13 +8622,13 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://glossy-markup.net/"),
-                    ID: unifiedgosdk.Pointer("21a65956-7898-49fe-954e-657be9079de1"),
+                    ID: unifiedgosdk.Pointer("1614570e-8426-44b9-a5b3-9ed962bb37fe"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("INV-77705.pdf"),
                 },
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://earnest-giggle.net"),
-                    ID: unifiedgosdk.Pointer("0de07f5c-0422-4bf1-8312-b38a6e63a87d"),
+                    ID: unifiedgosdk.Pointer("e4c33475-8125-472b-b327-5a7e63b662ad"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("INV-77705-1.pdf"),
                 },
@@ -8630,7 +8640,7 @@ func main() {
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2022-12-07T14:17:29.587Z"),
             ExtendedNotes: []shared.AccountingExtendedNote{},
-            ID: unifiedgosdk.Pointer("896edd87-b896-4ec1-9035-22e2a216a31b"),
+            ID: unifiedgosdk.Pointer("3b31841e-3d5f-4920-ae4f-5fbe81bd9de0"),
             InvoiceNumber: unifiedgosdk.Pointer("INV-77705"),
             IsInclusiveOfTax: unifiedgosdk.Pointer(false),
             Lineitems: []shared.AccountingLineitem{},
@@ -8648,7 +8658,7 @@ func main() {
             Term: shared.AccountingInvoiceTermNet25.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingInvoiceTypeInvoice.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-23T13:03:42.816Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-24T09:51:39.899Z"),
             URL: unifiedgosdk.Pointer("https://gifted-yarmulke.info/invoices/INV-77705"),
         },
         ConnectionID: "<id>",
@@ -8683,7 +8693,7 @@ func main() {
 
 ## UpdateAccountingJournal
 
-Update a journal
+Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
 ### Example Usage
 
@@ -8714,16 +8724,16 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-02-20T15:14:55.881Z"),
             Currency: unifiedgosdk.Pointer("CAD"),
             Description: unifiedgosdk.Pointer("Cilicium minima calco constans adipisci."),
-            ID: unifiedgosdk.Pointer("d31da702-1e25-44be-a4d9-de209d629dab"),
+            ID: unifiedgosdk.Pointer("3975395e-fb4b-446b-9434-0530f747cc4f"),
             IsInclusiveOfTax: unifiedgosdk.Pointer(true),
             Lineitems: []shared.AccountingJournalLineitem{},
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2023-11-06T10:40:52.844Z"),
+            PostedAt: types.MustNewTimeFromString("2023-11-06T23:54:38.655Z"),
             Reference: unifiedgosdk.Pointer("JE-78884"),
             Source: unifiedgosdk.Pointer("crustulum"),
             Status: shared.AccountingJournalStatusVoid.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-10T19:42:52.137Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-11T02:27:14.342Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -8755,9 +8765,11 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateAccountingOrder
+## ~~UpdateAccountingOrder~~
 
-Update an order
+Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -8793,7 +8805,7 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
-            ID: unifiedgosdk.Pointer("4c2c437b-fa37-41d5-a10b-c8e726820b58"),
+            ID: unifiedgosdk.Pointer("a2722865-e3c2-4eb8-9c96-bde5f90cfaf2"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             PostedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
@@ -8808,7 +8820,7 @@ func main() {
             Status: shared.AccountingOrderStatusAuthorized.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingOrderTypeSales.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-02-08T07:18:52.791Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-08T12:12:41.895Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -8842,7 +8854,7 @@ func main() {
 
 ## UpdateAccountingPaymentterm
 
-Update a paymentterm
+Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 
 ### Example Usage
 
@@ -8877,12 +8889,12 @@ func main() {
             DiscountPercent: unifiedgosdk.Pointer[float64](5.0),
             DueDays: unifiedgosdk.Pointer[float64](57.0),
             DueNextMonthDays: unifiedgosdk.Pointer[float64](9.0),
-            ID: unifiedgosdk.Pointer("454eabd4-960c-4e98-97ff-7883db6f63e6"),
+            ID: unifiedgosdk.Pointer("61ff1f8f-4985-4e40-a8d4-ff7eb3f02792"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Net 30"),
             Type: shared.AccountingPaymenttermTypeNet15.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-08T11:12:46.149Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-09T07:22:59.471Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -8916,7 +8928,7 @@ func main() {
 
 ## UpdateAccountingProject
 
-Update a project
+Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
 ### Example Usage
 
@@ -8973,7 +8985,7 @@ func main() {
 
 ## UpdateAccountingPurchaseorder
 
-Update a purchaseorder
+Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 
 ### Example Usage
 
@@ -9012,7 +9024,7 @@ func main() {
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
             Currency: unifiedgosdk.Pointer("EUR"),
-            ID: unifiedgosdk.Pointer("48e97068-ce4d-4074-985d-773cfe1d221d"),
+            ID: unifiedgosdk.Pointer("a416ea74-f483-42a8-8e48-58535d9028ce"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             PostedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
@@ -9026,7 +9038,7 @@ func main() {
             },
             Status: shared.AccountingPurchaseorderStatusSubmitted.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2021-08-11T06:00:23.906Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-08-11T08:41:44.890Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -9060,7 +9072,7 @@ func main() {
 
 ## UpdateAccountingQuote
 
-Update a quote
+Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
 
 ### Example Usage
 
@@ -9117,7 +9129,7 @@ func main() {
 
 ## UpdateAccountingSalesorder
 
-Update a salesorder
+Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
 ### Example Usage
 
@@ -9153,13 +9165,13 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CategoryIds: []string{},
-            ClosedAt: types.MustNewTimeFromString("2023-03-25T12:57:23.174Z"),
+            ClosedAt: types.MustNewTimeFromString("2023-03-25T18:51:55.597Z"),
             CreatedAt: types.MustNewTimeFromString("2022-01-17T16:11:50.310Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             Fees: []shared.AccountingFee{},
             FulfillmentType: shared.FulfillmentTypeOther.ToPointer(),
-            ID: unifiedgosdk.Pointer("81444e74-2438-4d48-a12a-446390d8c063"),
+            ID: unifiedgosdk.Pointer("eb857dee-e60e-475f-bdcd-edb5a376f942"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             OrderNumber: unifiedgosdk.Pointer("832663"),
@@ -9181,7 +9193,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TipAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-03-25T12:57:23.174Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-25T18:51:55.597Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -9215,7 +9227,7 @@ func main() {
 
 ## UpdateAccountingTaxrate
 
-Update a taxrate
+Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
 
 ### Example Usage
 
@@ -9252,7 +9264,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-01-04T10:37:56.894Z"),
             Description: unifiedgosdk.Pointer("Exempt (0%)"),
             EffectiveRate: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("7efef66d-926b-4c67-9803-216a861ed3ec"),
+            ID: unifiedgosdk.Pointer("6fadebf2-8c72-4fb3-97f5-5057ddd19842"),
             IsActive: unifiedgosdk.Pointer(false),
             IsCompound: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
@@ -9261,7 +9273,7 @@ func main() {
             Region: unifiedgosdk.Pointer("KS"),
             TotalRate: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingTaxrateTypeSales.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-02-13T05:09:51.173Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-02-13T05:32:42.700Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -9295,7 +9307,7 @@ func main() {
 
 ## UpdateAccountingTransaction
 
-Update a transaction
+Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -9322,12 +9334,12 @@ func main() {
     res, err := s.Accounting.UpdateAccountingTransaction(ctx, operations.UpdateAccountingTransactionRequest{
         AccountingTransaction: shared.AccountingTransaction{
             CreatedAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
-            ID: unifiedgosdk.Pointer("3fc62cc2-c890-432a-baa8-21b3a333e541"),
+            ID: unifiedgosdk.Pointer("22225963-66fb-48f2-9300-11e70830bb12"),
             Lineitems: []shared.AccountingTransactionLineItem{
                 shared.AccountingTransactionLineItem{
                     CategoryIds: []string{},
                     Description: unifiedgosdk.Pointer("The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability"),
-                    ID: unifiedgosdk.Pointer("b4303d20-48f1-49bc-9d58-f21e053cdbcc"),
+                    ID: unifiedgosdk.Pointer("577033d5-6fa9-46c2-938e-3831528b30c8"),
                     Name: unifiedgosdk.Pointer("Shirt"),
                     TotalAmount: unifiedgosdk.Pointer[float64](10184.0),
                     UnitAmount: unifiedgosdk.Pointer[float64](536.0),
@@ -9339,7 +9351,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](10184.0),
             TransactionAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
-            UpdatedAt: types.MustNewTimeFromString("2019-10-14T06:08:29.411Z"),
+            UpdatedAt: types.MustNewTimeFromString("2019-10-14T06:18:51.360Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -9373,7 +9385,7 @@ func main() {
 
 ## UpdateAccountingVendorcredit
 
-Update a vendorcredit
+Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 
 ### Example Usage
 
@@ -9403,14 +9415,14 @@ func main() {
             BalanceAmount: unifiedgosdk.Pointer[float64](0.0),
             CreatedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("421efb11-574f-4a58-b1b3-c13d3675e8d3"),
+            ID: unifiedgosdk.Pointer("4e28d8ea-334a-44d8-a5ac-bdb5cce5570b"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Volup conatus cruciamentum decor avaritia."),
             PostedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
             Status: shared.AccountingVendorcreditStatusAuthorized.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-03T01:42:12.414Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-03T04:51:13.949Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

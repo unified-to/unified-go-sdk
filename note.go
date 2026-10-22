@@ -31,6 +31,7 @@ func newNote(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 }
 
 // CreateTicketingNote - Create a note
+// Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are mapped to the provider's API. Returns the created TicketingNote.
 func (s *Note) CreateTicketingNote(ctx context.Context, request operations.CreateTicketingNoteRequest, opts ...operations.Option) (*operations.CreateTicketingNoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Note) CreateTicketingNote(ctx context.Context, request operations.Creat
 }
 
 // GetTicketingNote - Retrieve a note
+// Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Note) GetTicketingNote(ctx context.Context, request operations.GetTicketingNoteRequest, opts ...operations.Option) (*operations.GetTicketingNoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Note) GetTicketingNote(ctx context.Context, request operations.GetTicke
 }
 
 // ListTicketingNotes - List all notes
+// Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Note) ListTicketingNotes(ctx context.Context, request operations.ListTicketingNotesRequest, opts ...operations.Option) (*operations.ListTicketingNotesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Note) ListTicketingNotes(ctx context.Context, request operations.ListTi
 }
 
 // PatchTicketingNote - Update a note
+// Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 func (s *Note) PatchTicketingNote(ctx context.Context, request operations.PatchTicketingNoteRequest, opts ...operations.Option) (*operations.PatchTicketingNoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Note) PatchTicketingNote(ctx context.Context, request operations.PatchT
 }
 
 // RemoveTicketingNote - Remove a note
+// Deletes the TicketingNote identified by `id`.
 func (s *Note) RemoveTicketingNote(ctx context.Context, request operations.RemoveTicketingNoteRequest, opts ...operations.Option) (*operations.RemoveTicketingNoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Note) RemoveTicketingNote(ctx context.Context, request operations.Remov
 }
 
 // UpdateTicketingNote - Update a note
+// Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 func (s *Note) UpdateTicketingNote(ctx context.Context, request operations.UpdateTicketingNoteRequest, opts ...operations.Option) (*operations.UpdateTicketingNoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

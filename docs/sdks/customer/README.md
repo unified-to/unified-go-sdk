@@ -13,7 +13,7 @@
 
 ## CreateTicketingCustomer
 
-Create a customer
+Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the request body; they are mapped to the provider's API. Returns the created TicketingCustomer.
 
 ### Example Usage
 
@@ -46,7 +46,7 @@ func main() {
                     Type: shared.TicketingEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.Pointer("e3cc0375-1503-474f-afb3-f694c49cd371"),
+            ID: unifiedgosdk.Pointer("38d3e52b-6c67-4c04-b23b-3bedf6eb02e3"),
             Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("Christian Windler"),
             Tags: []string{
@@ -67,7 +67,7 @@ func main() {
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-04T01:56:17.625Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-05T00:05:41.433Z"),
         },
         ConnectionID: "<id>",
     })
@@ -100,7 +100,7 @@ func main() {
 
 ## GetTicketingCustomer
 
-Retrieve a customer
+Retrieves a single TicketingCustomer by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -155,7 +155,7 @@ func main() {
 
 ## ListTicketingCustomers
 
-List all customers
+Returns a list of TicketingCustomers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -209,7 +209,7 @@ func main() {
 
 ## PatchTicketingCustomer
 
-Update a customer
+Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
 
 ### Example Usage
 
@@ -242,7 +242,7 @@ func main() {
                     Type: shared.TicketingEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.Pointer("75ff56c0-e087-452f-821a-1b48af1f3273"),
+            ID: unifiedgosdk.Pointer("62c31562-749a-4426-b29d-11fbc7ad2b53"),
             Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("Christian Windler"),
             Tags: []string{
@@ -263,7 +263,7 @@ func main() {
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-04T01:56:17.639Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-05T00:05:41.449Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -297,7 +297,7 @@ func main() {
 
 ## RemoveTicketingCustomer
 
-Remove a customer
+Deletes the TicketingCustomer identified by `id`.
 
 ### Example Usage
 
@@ -352,7 +352,7 @@ func main() {
 
 ## UpdateTicketingCustomer
 
-Update a customer
+Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
 
 ### Example Usage
 
@@ -385,7 +385,7 @@ func main() {
                     Type: shared.TicketingEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.Pointer("75ff56c0-e087-452f-821a-1b48af1f3273"),
+            ID: unifiedgosdk.Pointer("62c31562-749a-4426-b29d-11fbc7ad2b53"),
             Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("Christian Windler"),
             Tags: []string{
@@ -406,7 +406,7 @@ func main() {
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-04T01:56:17.639Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-05T00:05:41.449Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

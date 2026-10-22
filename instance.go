@@ -31,6 +31,7 @@ func newInstance(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateComputeInstance - Create an instance
+// Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are mapped to the provider's API. Returns the created ComputeInstance.
 func (s *Instance) CreateComputeInstance(ctx context.Context, request operations.CreateComputeInstanceRequest, opts ...operations.Option) (*operations.CreateComputeInstanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Instance) CreateComputeInstance(ctx context.Context, request operations
 }
 
 // GetComputeInstance - Retrieve an instance
+// Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Instance) GetComputeInstance(ctx context.Context, request operations.GetComputeInstanceRequest, opts ...operations.Option) (*operations.GetComputeInstanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Instance) GetComputeInstance(ctx context.Context, request operations.Ge
 }
 
 // ListComputeInstances - List all instances
+// Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Instance) ListComputeInstances(ctx context.Context, request operations.ListComputeInstancesRequest, opts ...operations.Option) (*operations.ListComputeInstancesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Instance) ListComputeInstances(ctx context.Context, request operations.
 }
 
 // PatchComputeInstance - Update an instance
+// Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 func (s *Instance) PatchComputeInstance(ctx context.Context, request operations.PatchComputeInstanceRequest, opts ...operations.Option) (*operations.PatchComputeInstanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Instance) PatchComputeInstance(ctx context.Context, request operations.
 }
 
 // RemoveComputeInstance - Remove an instance
+// Deletes the ComputeInstance identified by `id`.
 func (s *Instance) RemoveComputeInstance(ctx context.Context, request operations.RemoveComputeInstanceRequest, opts ...operations.Option) (*operations.RemoveComputeInstanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Instance) RemoveComputeInstance(ctx context.Context, request operations
 }
 
 // UpdateComputeInstance - Update an instance
+// Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 func (s *Instance) UpdateComputeInstance(ctx context.Context, request operations.UpdateComputeInstanceRequest, opts ...operations.Option) (*operations.UpdateComputeInstanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

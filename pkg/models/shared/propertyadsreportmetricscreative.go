@@ -116,10 +116,11 @@ type PropertyAdsReportMetricsCreative struct {
 	ItemID *string  `json:"item_id,omitempty"`
 	Labels []string `json:"labels,omitempty"`
 	// Destination URL for creatives with links
-	LinkURL        *string       `json:"link_url,omitempty"`
-	Metadata       []AdsMetadata `json:"metadata,omitempty"`
-	Name           *string       `json:"name,omitempty"`
-	OrganizationID *string       `json:"organization_id,omitempty"`
+	LinkURL  *string       `json:"link_url,omitempty"`
+	Metadata []AdsMetadata `json:"metadata,omitempty"`
+	// The creative's name
+	Name           *string `json:"name,omitempty"`
+	OrganizationID *string `json:"organization_id,omitempty"`
 	// Display URL path 1 (Microsoft RSA Path1)
 	Path1 *string `json:"path1,omitempty"`
 	// Display URL path 2 (Microsoft RSA Path2)

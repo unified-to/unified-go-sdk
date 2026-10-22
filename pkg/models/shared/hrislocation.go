@@ -19,14 +19,15 @@ type HrisLocation struct {
 	ID                 *string    `json:"id,omitempty"`
 	IsActive           *bool      `json:"is_active,omitempty"`
 	// if this location is the headquarters of the company
-	IsHq           *bool           `json:"is_hq,omitempty"`
-	LanguageLocale *string         `json:"language_locale,omitempty"`
-	Metadata       []HrisMetadata  `json:"metadata,omitempty"`
-	Name           *string         `json:"name,omitempty"`
-	ParentID       *string         `json:"parent_id,omitempty"`
-	Raw            map[string]any  `json:"raw,omitempty"`
-	Telephones     []HrisTelephone `json:"telephones,omitempty"`
-	Timezone       *string         `json:"timezone,omitempty"`
+	IsHq           *bool          `json:"is_hq,omitempty"`
+	LanguageLocale *string        `json:"language_locale,omitempty"`
+	Metadata       []HrisMetadata `json:"metadata,omitempty"`
+	// The name of the location
+	Name       *string         `json:"name,omitempty"`
+	ParentID   *string         `json:"parent_id,omitempty"`
+	Raw        map[string]any  `json:"raw,omitempty"`
+	Telephones []HrisTelephone `json:"telephones,omitempty"`
+	Timezone   *string         `json:"timezone,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }

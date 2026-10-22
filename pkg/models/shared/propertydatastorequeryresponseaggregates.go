@@ -3,8 +3,9 @@
 package shared
 
 type PropertyDatastoreQueryResponseAggregates struct {
-	Avg    map[string]float64               `json:"avg,omitempty"`
-	Count  *float64                         `json:"count,omitempty"`
+	Avg   map[string]float64 `json:"avg,omitempty"`
+	Count *float64           `json:"count,omitempty"`
+	// Each item is one group row: a map of field name to value
 	Groups []map[string]DatastoreFieldValue `json:"groups,omitempty"`
 	Max    map[string]float64               `json:"max,omitempty"`
 	Min    map[string]float64               `json:"min,omitempty"`

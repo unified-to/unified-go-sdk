@@ -13,7 +13,7 @@
 
 ## CreateAccountingBankfeedtransaction
 
-Create a bankfeedtransaction
+Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedtransaction.
 
 ### Example Usage
 
@@ -45,15 +45,15 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-03-24T23:41:08.374Z"),
             Currency: unifiedgosdk.Pointer("CAD"),
             Description: unifiedgosdk.Pointer("Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781."),
-            ID: unifiedgosdk.Pointer("e0f4b5f3-8bf9-44f4-b365-f37524184310"),
+            ID: unifiedgosdk.Pointer("7554558e-75d6-4b22-a53e-2fb82bd0a8bc"),
             IsPending: unifiedgosdk.Pointer(true),
             MerchantName: unifiedgosdk.Pointer("Buckridge - Feest"),
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2025-04-14T19:58:00.131Z"),
+            PostedAt: types.MustNewTimeFromString("2025-04-15T11:51:15.882Z"),
             Reference: unifiedgosdk.Pointer("79574105"),
-            TransactionAt: types.MustNewTimeFromString("2022-07-30T08:10:12.137Z"),
+            TransactionAt: types.MustNewTimeFromString("2022-07-30T09:58:54.151Z"),
             Type: shared.AccountingBankfeedtransactionTypeCredit.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-05-25T01:44:39.014Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-05-25T02:36:47.333Z"),
         },
         ConnectionID: "<id>",
     })
@@ -86,7 +86,7 @@ func main() {
 
 ## GetAccountingBankfeedtransaction
 
-Retrieve a bankfeedtransaction
+Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -141,7 +141,7 @@ func main() {
 
 ## ListAccountingBankfeedtransactions
 
-List all bankfeedtransactions
+Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -195,7 +195,7 @@ func main() {
 
 ## PatchAccountingBankfeedtransaction
 
-Update a bankfeedtransaction
+Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -227,15 +227,15 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-03-24T23:41:08.374Z"),
             Currency: unifiedgosdk.Pointer("CAD"),
             Description: unifiedgosdk.Pointer("Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781."),
-            ID: unifiedgosdk.Pointer("37cd0e2a-1f6a-43b1-a20e-2cdd60ec6423"),
+            ID: unifiedgosdk.Pointer("b3decb3e-ed00-4600-8302-27158f3ab3e0"),
             IsPending: unifiedgosdk.Pointer(true),
             MerchantName: unifiedgosdk.Pointer("Buckridge - Feest"),
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2025-04-14T19:58:00.144Z"),
+            PostedAt: types.MustNewTimeFromString("2025-04-15T11:51:15.898Z"),
             Reference: unifiedgosdk.Pointer("79574105"),
-            TransactionAt: types.MustNewTimeFromString("2022-07-30T08:10:12.138Z"),
+            TransactionAt: types.MustNewTimeFromString("2022-07-30T09:58:54.153Z"),
             Type: shared.AccountingBankfeedtransactionTypeCredit.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-05-25T01:44:39.015Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-05-25T02:36:47.333Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -269,7 +269,7 @@ func main() {
 
 ## RemoveAccountingBankfeedtransaction
 
-Remove a bankfeedtransaction
+Deletes the AccountingBankfeedtransaction identified by `id`.
 
 ### Example Usage
 
@@ -324,7 +324,7 @@ func main() {
 
 ## UpdateAccountingBankfeedtransaction
 
-Update a bankfeedtransaction
+Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -356,15 +356,15 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-03-24T23:41:08.374Z"),
             Currency: unifiedgosdk.Pointer("CAD"),
             Description: unifiedgosdk.Pointer("Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781."),
-            ID: unifiedgosdk.Pointer("37cd0e2a-1f6a-43b1-a20e-2cdd60ec6423"),
+            ID: unifiedgosdk.Pointer("b3decb3e-ed00-4600-8302-27158f3ab3e0"),
             IsPending: unifiedgosdk.Pointer(true),
             MerchantName: unifiedgosdk.Pointer("Buckridge - Feest"),
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2025-04-14T19:58:00.144Z"),
+            PostedAt: types.MustNewTimeFromString("2025-04-15T11:51:15.898Z"),
             Reference: unifiedgosdk.Pointer("79574105"),
-            TransactionAt: types.MustNewTimeFromString("2022-07-30T08:10:12.138Z"),
+            TransactionAt: types.MustNewTimeFromString("2022-07-30T09:58:54.153Z"),
             Type: shared.AccountingBankfeedtransactionTypeCredit.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-05-25T01:44:39.015Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-05-25T02:36:47.333Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -31,6 +31,7 @@ func newSignatory(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 }
 
 // CreateSigningSignatory - Create a signatory
+// Creates a SigningSignatory. Provide the unified SigningSignatory fields in the request body; they are mapped to the provider's API. Returns the created SigningSignatory.
 func (s *Signatory) CreateSigningSignatory(ctx context.Context, request operations.CreateSigningSignatoryRequest, opts ...operations.Option) (*operations.CreateSigningSignatoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Signatory) CreateSigningSignatory(ctx context.Context, request operatio
 }
 
 // GetSigningSignatory - Retrieve a signatory
+// Retrieves a single SigningSignatory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Signatory) GetSigningSignatory(ctx context.Context, request operations.GetSigningSignatoryRequest, opts ...operations.Option) (*operations.GetSigningSignatoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Signatory) GetSigningSignatory(ctx context.Context, request operations.
 }
 
 // ListSigningSignatories - List all signatories
+// Returns a list of SigningSignatories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Signatory) ListSigningSignatories(ctx context.Context, request operations.ListSigningSignatoriesRequest, opts ...operations.Option) (*operations.ListSigningSignatoriesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Signatory) ListSigningSignatories(ctx context.Context, request operatio
 }
 
 // PatchSigningSignatory - Update a signatory
+// Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
 func (s *Signatory) PatchSigningSignatory(ctx context.Context, request operations.PatchSigningSignatoryRequest, opts ...operations.Option) (*operations.PatchSigningSignatoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Signatory) PatchSigningSignatory(ctx context.Context, request operation
 }
 
 // RemoveSigningSignatory - Remove a signatory
+// Deletes the SigningSignatory identified by `id`.
 func (s *Signatory) RemoveSigningSignatory(ctx context.Context, request operations.RemoveSigningSignatoryRequest, opts ...operations.Option) (*operations.RemoveSigningSignatoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Signatory) RemoveSigningSignatory(ctx context.Context, request operatio
 }
 
 // UpdateSigningSignatory - Update a signatory
+// Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
 func (s *Signatory) UpdateSigningSignatory(ctx context.Context, request operations.UpdateSigningSignatoryRequest, opts ...operations.Option) (*operations.UpdateSigningSignatoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

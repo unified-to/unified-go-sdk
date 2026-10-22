@@ -13,7 +13,7 @@
 
 ## CreateAccountingInvoice
 
-Create an invoice
+Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they are mapped to the provider's API. Returns the created AccountingInvoice.
 
 ### Example Usage
 
@@ -42,13 +42,13 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://glossy-markup.net/"),
-                    ID: unifiedgosdk.Pointer("8785a531-c170-4e0a-a23b-6026aeb2808f"),
+                    ID: unifiedgosdk.Pointer("af834e8b-1f37-45e1-a6da-09cde99b20c9"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("INV-77705.pdf"),
                 },
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://earnest-giggle.net"),
-                    ID: unifiedgosdk.Pointer("795784ec-1677-4171-87a9-191b7246647a"),
+                    ID: unifiedgosdk.Pointer("89fae7cd-e0cc-487d-b776-164dc14d6664"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("INV-77705-1.pdf"),
                 },
@@ -60,7 +60,7 @@ func main() {
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2022-12-07T14:17:29.587Z"),
             ExtendedNotes: []shared.AccountingExtendedNote{},
-            ID: unifiedgosdk.Pointer("96f21cc2-029b-451f-bf63-27b0da867a12"),
+            ID: unifiedgosdk.Pointer("05c0496e-f40e-433d-85e0-7982db3c2176"),
             InvoiceNumber: unifiedgosdk.Pointer("INV-77705"),
             IsInclusiveOfTax: unifiedgosdk.Pointer(false),
             Lineitems: []shared.AccountingLineitem{},
@@ -78,7 +78,7 @@ func main() {
             Term: shared.AccountingInvoiceTermNet25.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingInvoiceTypeInvoice.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-23T13:03:42.762Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-24T09:51:39.852Z"),
             URL: unifiedgosdk.Pointer("https://gifted-yarmulke.info/invoices/INV-77705"),
         },
         ConnectionID: "<id>",
@@ -112,7 +112,7 @@ func main() {
 
 ## GetAccountingInvoice
 
-Retrieve an invoice
+Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -167,7 +167,7 @@ func main() {
 
 ## ListAccountingInvoices
 
-List all invoices
+Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -221,7 +221,7 @@ func main() {
 
 ## PatchAccountingInvoice
 
-Update an invoice
+Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 
 ### Example Usage
 
@@ -250,13 +250,13 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://glossy-markup.net/"),
-                    ID: unifiedgosdk.Pointer("21a65956-7898-49fe-954e-657be9079de1"),
+                    ID: unifiedgosdk.Pointer("1614570e-8426-44b9-a5b3-9ed962bb37fe"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("INV-77705.pdf"),
                 },
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://earnest-giggle.net"),
-                    ID: unifiedgosdk.Pointer("0de07f5c-0422-4bf1-8312-b38a6e63a87d"),
+                    ID: unifiedgosdk.Pointer("e4c33475-8125-472b-b327-5a7e63b662ad"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("INV-77705-1.pdf"),
                 },
@@ -268,7 +268,7 @@ func main() {
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2022-12-07T14:17:29.587Z"),
             ExtendedNotes: []shared.AccountingExtendedNote{},
-            ID: unifiedgosdk.Pointer("896edd87-b896-4ec1-9035-22e2a216a31b"),
+            ID: unifiedgosdk.Pointer("3b31841e-3d5f-4920-ae4f-5fbe81bd9de0"),
             InvoiceNumber: unifiedgosdk.Pointer("INV-77705"),
             IsInclusiveOfTax: unifiedgosdk.Pointer(false),
             Lineitems: []shared.AccountingLineitem{},
@@ -286,7 +286,7 @@ func main() {
             Term: shared.AccountingInvoiceTermNet25.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingInvoiceTypeInvoice.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-23T13:03:42.816Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-24T09:51:39.899Z"),
             URL: unifiedgosdk.Pointer("https://gifted-yarmulke.info/invoices/INV-77705"),
         },
         ConnectionID: "<id>",
@@ -321,7 +321,7 @@ func main() {
 
 ## RemoveAccountingInvoice
 
-Remove an invoice
+Deletes the AccountingInvoice identified by `id`.
 
 ### Example Usage
 
@@ -376,7 +376,7 @@ func main() {
 
 ## UpdateAccountingInvoice
 
-Update an invoice
+Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 
 ### Example Usage
 
@@ -405,13 +405,13 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://glossy-markup.net/"),
-                    ID: unifiedgosdk.Pointer("21a65956-7898-49fe-954e-657be9079de1"),
+                    ID: unifiedgosdk.Pointer("1614570e-8426-44b9-a5b3-9ed962bb37fe"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("INV-77705.pdf"),
                 },
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://earnest-giggle.net"),
-                    ID: unifiedgosdk.Pointer("0de07f5c-0422-4bf1-8312-b38a6e63a87d"),
+                    ID: unifiedgosdk.Pointer("e4c33475-8125-472b-b327-5a7e63b662ad"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("INV-77705-1.pdf"),
                 },
@@ -423,7 +423,7 @@ func main() {
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2022-12-07T14:17:29.587Z"),
             ExtendedNotes: []shared.AccountingExtendedNote{},
-            ID: unifiedgosdk.Pointer("896edd87-b896-4ec1-9035-22e2a216a31b"),
+            ID: unifiedgosdk.Pointer("3b31841e-3d5f-4920-ae4f-5fbe81bd9de0"),
             InvoiceNumber: unifiedgosdk.Pointer("INV-77705"),
             IsInclusiveOfTax: unifiedgosdk.Pointer(false),
             Lineitems: []shared.AccountingLineitem{},
@@ -441,7 +441,7 @@ func main() {
             Term: shared.AccountingInvoiceTermNet25.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingInvoiceTypeInvoice.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-23T13:03:42.816Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-24T09:51:39.899Z"),
             URL: unifiedgosdk.Pointer("https://gifted-yarmulke.info/invoices/INV-77705"),
         },
         ConnectionID: "<id>",

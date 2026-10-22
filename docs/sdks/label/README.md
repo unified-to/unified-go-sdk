@@ -13,7 +13,7 @@
 
 ## CreateShippingLabel
 
-Create a label
+Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are mapped to the provider's API. Returns the created ShippingLabel.
 
 ### Example Usage
 
@@ -40,17 +40,17 @@ func main() {
     res, err := s.Label.CreateShippingLabel(ctx, operations.CreateShippingLabelRequest{
         ShippingLabel: shared.ShippingLabel{
             CreatedAt: types.MustNewTimeFromString("2022-11-18T16:45:38.067Z"),
-            ID: unifiedgosdk.Pointer("d84cfc51-3ee3-43f1-85b1-a3f3e9704c6a"),
+            ID: unifiedgosdk.Pointer("0a7687ba-1b2d-4861-a73f-bd0f245ecb14"),
             IsVoided: unifiedgosdk.Pointer(false),
             LabelCost: unifiedgosdk.Pointer[float64](40.83653403213248),
             LabelCostCurrency: unifiedgosdk.Pointer("USD"),
             LabelFormat: shared.LabelFormatPng.ToPointer(),
-            LabelURL: unifiedgosdk.Pointer("https://labels.example.com/d84cfc51-3ee3-43f1-85b1-a3f3e9704c6a.pdf"),
+            LabelURL: unifiedgosdk.Pointer("https://labels.example.com/0a7687ba-1b2d-4861-a73f-bd0f245ecb14.pdf"),
             Metadata: []shared.ShippingMetadata{},
             ServiceCode: unifiedgosdk.Pointer("Dzy"),
             Status: shared.ShippingLabelStatusException.ToPointer(),
             TrackingNumber: unifiedgosdk.Pointer("ZYV60FOIBUJ6"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-28T21:53:50.785Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-29T06:38:50.663Z"),
         },
         ConnectionID: "<id>",
     })
@@ -83,7 +83,7 @@ func main() {
 
 ## GetShippingLabel
 
-Retrieve a label
+Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -138,7 +138,7 @@ func main() {
 
 ## ListShippingLabels
 
-List all labels
+Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -192,7 +192,7 @@ func main() {
 
 ## PatchShippingLabel
 
-Update a label
+Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
 
 ### Example Usage
 
@@ -219,17 +219,17 @@ func main() {
     res, err := s.Label.PatchShippingLabel(ctx, operations.PatchShippingLabelRequest{
         ShippingLabel: shared.ShippingLabel{
             CreatedAt: types.MustNewTimeFromString("2022-11-18T16:45:38.067Z"),
-            ID: unifiedgosdk.Pointer("b135e7ce-742d-4e70-9ad5-86820cfc5773"),
+            ID: unifiedgosdk.Pointer("dc4fada4-942f-4b74-95d8-576e6405865f"),
             IsVoided: unifiedgosdk.Pointer(false),
             LabelCost: unifiedgosdk.Pointer[float64](40.83653403213248),
             LabelCostCurrency: unifiedgosdk.Pointer("USD"),
             LabelFormat: shared.LabelFormatPng.ToPointer(),
-            LabelURL: unifiedgosdk.Pointer("https://labels.example.com/b135e7ce-742d-4e70-9ad5-86820cfc5773.pdf"),
+            LabelURL: unifiedgosdk.Pointer("https://labels.example.com/dc4fada4-942f-4b74-95d8-576e6405865f.pdf"),
             Metadata: []shared.ShippingMetadata{},
             ServiceCode: unifiedgosdk.Pointer("Dzy"),
             Status: shared.ShippingLabelStatusException.ToPointer(),
             TrackingNumber: unifiedgosdk.Pointer("ZYV60FOIBUJ6"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-28T21:53:50.790Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-29T06:38:50.677Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -263,7 +263,7 @@ func main() {
 
 ## RemoveShippingLabel
 
-Remove a label
+Deletes the ShippingLabel identified by `id`.
 
 ### Example Usage
 
@@ -318,7 +318,7 @@ func main() {
 
 ## UpdateShippingLabel
 
-Update a label
+Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
 
 ### Example Usage
 
@@ -345,17 +345,17 @@ func main() {
     res, err := s.Label.UpdateShippingLabel(ctx, operations.UpdateShippingLabelRequest{
         ShippingLabel: shared.ShippingLabel{
             CreatedAt: types.MustNewTimeFromString("2022-11-18T16:45:38.067Z"),
-            ID: unifiedgosdk.Pointer("b135e7ce-742d-4e70-9ad5-86820cfc5773"),
+            ID: unifiedgosdk.Pointer("dc4fada4-942f-4b74-95d8-576e6405865f"),
             IsVoided: unifiedgosdk.Pointer(false),
             LabelCost: unifiedgosdk.Pointer[float64](40.83653403213248),
             LabelCostCurrency: unifiedgosdk.Pointer("USD"),
             LabelFormat: shared.LabelFormatPng.ToPointer(),
-            LabelURL: unifiedgosdk.Pointer("https://labels.example.com/b135e7ce-742d-4e70-9ad5-86820cfc5773.pdf"),
+            LabelURL: unifiedgosdk.Pointer("https://labels.example.com/dc4fada4-942f-4b74-95d8-576e6405865f.pdf"),
             Metadata: []shared.ShippingMetadata{},
             ServiceCode: unifiedgosdk.Pointer("Dzy"),
             Status: shared.ShippingLabelStatusException.ToPointer(),
             TrackingNumber: unifiedgosdk.Pointer("ZYV60FOIBUJ6"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-28T21:53:50.790Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-29T06:38:50.677Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

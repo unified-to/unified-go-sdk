@@ -31,6 +31,7 @@ func newCategory(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateAccountingCategory - Create a category
+// Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body; they are mapped to the provider's API. Returns the created AccountingCategory.
 func (s *Category) CreateAccountingCategory(ctx context.Context, request operations.CreateAccountingCategoryRequest, opts ...operations.Option) (*operations.CreateAccountingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Category) CreateAccountingCategory(ctx context.Context, request operati
 }
 
 // CreateTicketingCategory - Create a category
+// Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they are mapped to the provider's API. Returns the created TicketingCategory.
 func (s *Category) CreateTicketingCategory(ctx context.Context, request operations.CreateTicketingCategoryRequest, opts ...operations.Option) (*operations.CreateTicketingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Category) CreateTicketingCategory(ctx context.Context, request operatio
 }
 
 // GetAccountingCategory - Retrieve a category
+// Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Category) GetAccountingCategory(ctx context.Context, request operations.GetAccountingCategoryRequest, opts ...operations.Option) (*operations.GetAccountingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -666,6 +669,7 @@ func (s *Category) GetAccountingCategory(ctx context.Context, request operations
 }
 
 // GetTicketingCategory - Retrieve a category
+// Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Category) GetTicketingCategory(ctx context.Context, request operations.GetTicketingCategoryRequest, opts ...operations.Option) (*operations.GetTicketingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Category) GetTicketingCategory(ctx context.Context, request operations.
 }
 
 // ListAccountingCategories - List all categories
+// Returns a list of AccountingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Category) ListAccountingCategories(ctx context.Context, request operations.ListAccountingCategoriesRequest, opts ...operations.Option) (*operations.ListAccountingCategoriesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1080,6 +1085,7 @@ func (s *Category) ListAccountingCategories(ctx context.Context, request operati
 }
 
 // ListTicketingCategories - List all categories
+// Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Category) ListTicketingCategories(ctx context.Context, request operations.ListTicketingCategoriesRequest, opts ...operations.Option) (*operations.ListTicketingCategoriesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1287,6 +1293,7 @@ func (s *Category) ListTicketingCategories(ctx context.Context, request operatio
 }
 
 // PatchAccountingCategory - Update a category
+// Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 func (s *Category) PatchAccountingCategory(ctx context.Context, request operations.PatchAccountingCategoryRequest, opts ...operations.Option) (*operations.PatchAccountingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Category) PatchAccountingCategory(ctx context.Context, request operatio
 }
 
 // PatchTicketingCategory - Update a category
+// Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 func (s *Category) PatchTicketingCategory(ctx context.Context, request operations.PatchTicketingCategoryRequest, opts ...operations.Option) (*operations.PatchTicketingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1715,6 +1723,7 @@ func (s *Category) PatchTicketingCategory(ctx context.Context, request operation
 }
 
 // RemoveAccountingCategory - Remove a category
+// Deletes the AccountingCategory identified by `id`.
 func (s *Category) RemoveAccountingCategory(ctx context.Context, request operations.RemoveAccountingCategoryRequest, opts ...operations.Option) (*operations.RemoveAccountingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1897,6 +1906,7 @@ func (s *Category) RemoveAccountingCategory(ctx context.Context, request operati
 }
 
 // RemoveTicketingCategory - Remove a category
+// Deletes the TicketingCategory identified by `id`.
 func (s *Category) RemoveTicketingCategory(ctx context.Context, request operations.RemoveTicketingCategoryRequest, opts ...operations.Option) (*operations.RemoveTicketingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2079,6 +2089,7 @@ func (s *Category) RemoveTicketingCategory(ctx context.Context, request operatio
 }
 
 // UpdateAccountingCategory - Update a category
+// Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 func (s *Category) UpdateAccountingCategory(ctx context.Context, request operations.UpdateAccountingCategoryRequest, opts ...operations.Option) (*operations.UpdateAccountingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2293,6 +2304,7 @@ func (s *Category) UpdateAccountingCategory(ctx context.Context, request operati
 }
 
 // UpdateTicketingCategory - Update a category
+// Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 func (s *Category) UpdateTicketingCategory(ctx context.Context, request operations.UpdateTicketingCategoryRequest, opts ...operations.Option) (*operations.UpdateTicketingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

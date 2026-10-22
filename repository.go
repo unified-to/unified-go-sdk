@@ -31,6 +31,7 @@ func newRepository(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks 
 }
 
 // CreateRepoRepository - Create a repository
+// Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are mapped to the provider's API. Returns the created RepoRepository.
 func (s *Repository) CreateRepoRepository(ctx context.Context, request operations.CreateRepoRepositoryRequest, opts ...operations.Option) (*operations.CreateRepoRepositoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Repository) CreateRepoRepository(ctx context.Context, request operation
 }
 
 // GetRepoRepository - Retrieve a repository
+// Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Repository) GetRepoRepository(ctx context.Context, request operations.GetRepoRepositoryRequest, opts ...operations.Option) (*operations.GetRepoRepositoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Repository) GetRepoRepository(ctx context.Context, request operations.G
 }
 
 // ListRepoRepositories - List all repositories
+// Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Repository) ListRepoRepositories(ctx context.Context, request operations.ListRepoRepositoriesRequest, opts ...operations.Option) (*operations.ListRepoRepositoriesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Repository) ListRepoRepositories(ctx context.Context, request operation
 }
 
 // PatchRepoRepository - Update a repository
+// Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 func (s *Repository) PatchRepoRepository(ctx context.Context, request operations.PatchRepoRepositoryRequest, opts ...operations.Option) (*operations.PatchRepoRepositoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Repository) PatchRepoRepository(ctx context.Context, request operations
 }
 
 // RemoveRepoRepository - Remove a repository
+// Deletes the RepoRepository identified by `id`.
 func (s *Repository) RemoveRepoRepository(ctx context.Context, request operations.RemoveRepoRepositoryRequest, opts ...operations.Option) (*operations.RemoveRepoRepositoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Repository) RemoveRepoRepository(ctx context.Context, request operation
 }
 
 // UpdateRepoRepository - Update a repository
+// Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 func (s *Repository) UpdateRepoRepository(ctx context.Context, request operations.UpdateRepoRepositoryRequest, opts ...operations.Option) (*operations.UpdateRepoRepositoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

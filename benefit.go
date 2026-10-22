@@ -31,6 +31,7 @@ func newBenefit(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateHrisBenefit - Create a benefit
+// Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped to the provider's API. Returns the created HrisBenefit.
 func (s *Benefit) CreateHrisBenefit(ctx context.Context, request operations.CreateHrisBenefitRequest, opts ...operations.Option) (*operations.CreateHrisBenefitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Benefit) CreateHrisBenefit(ctx context.Context, request operations.Crea
 }
 
 // GetHrisBenefit - Retrieve a benefit
+// Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Benefit) GetHrisBenefit(ctx context.Context, request operations.GetHrisBenefitRequest, opts ...operations.Option) (*operations.GetHrisBenefitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Benefit) GetHrisBenefit(ctx context.Context, request operations.GetHris
 }
 
 // ListHrisBenefits - List all benefits
+// Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Benefit) ListHrisBenefits(ctx context.Context, request operations.ListHrisBenefitsRequest, opts ...operations.Option) (*operations.ListHrisBenefitsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Benefit) ListHrisBenefits(ctx context.Context, request operations.ListH
 }
 
 // PatchHrisBenefit - Update a benefit
+// Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 func (s *Benefit) PatchHrisBenefit(ctx context.Context, request operations.PatchHrisBenefitRequest, opts ...operations.Option) (*operations.PatchHrisBenefitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Benefit) PatchHrisBenefit(ctx context.Context, request operations.Patch
 }
 
 // RemoveHrisBenefit - Remove a benefit
+// Deletes the HrisBenefit identified by `id`.
 func (s *Benefit) RemoveHrisBenefit(ctx context.Context, request operations.RemoveHrisBenefitRequest, opts ...operations.Option) (*operations.RemoveHrisBenefitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Benefit) RemoveHrisBenefit(ctx context.Context, request operations.Remo
 }
 
 // UpdateHrisBenefit - Update a benefit
+// Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 func (s *Benefit) UpdateHrisBenefit(ctx context.Context, request operations.UpdateHrisBenefitRequest, opts ...operations.Option) (*operations.UpdateHrisBenefitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

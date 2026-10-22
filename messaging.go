@@ -31,6 +31,7 @@ func newMessaging(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 }
 
 // CreateMessagingChannel - Create a channel
+// Creates a MessagingChannel. Provide the unified MessagingChannel fields in the request body; they are mapped to the provider's API. Returns the created MessagingChannel.
 func (s *Messaging) CreateMessagingChannel(ctx context.Context, request operations.CreateMessagingChannelRequest, opts ...operations.Option) (*operations.CreateMessagingChannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Messaging) CreateMessagingChannel(ctx context.Context, request operatio
 }
 
 // CreateMessagingMessage - Create a message
+// Creates a MessagingMessage. Provide the unified MessagingMessage fields in the request body; they are mapped to the provider's API. Returns the created MessagingMessage.
 func (s *Messaging) CreateMessagingMessage(ctx context.Context, request operations.CreateMessagingMessageRequest, opts ...operations.Option) (*operations.CreateMessagingMessageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Messaging) CreateMessagingMessage(ctx context.Context, request operatio
 }
 
 // GetMessagingChannel - Retrieve a channel
+// Retrieves a single MessagingChannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Messaging) GetMessagingChannel(ctx context.Context, request operations.GetMessagingChannelRequest, opts ...operations.Option) (*operations.GetMessagingChannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -666,6 +669,7 @@ func (s *Messaging) GetMessagingChannel(ctx context.Context, request operations.
 }
 
 // GetMessagingMessage - Retrieve a message
+// Retrieves a single MessagingMessage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Messaging) GetMessagingMessage(ctx context.Context, request operations.GetMessagingMessageRequest, opts ...operations.Option) (*operations.GetMessagingMessageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Messaging) GetMessagingMessage(ctx context.Context, request operations.
 }
 
 // ListMessagingChannels - List all channels
+// Returns a list of MessagingChannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Messaging) ListMessagingChannels(ctx context.Context, request operations.ListMessagingChannelsRequest, opts ...operations.Option) (*operations.ListMessagingChannelsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1080,6 +1085,7 @@ func (s *Messaging) ListMessagingChannels(ctx context.Context, request operation
 }
 
 // ListMessagingMessages - List all messages
+// Returns a list of MessagingMessages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Messaging) ListMessagingMessages(ctx context.Context, request operations.ListMessagingMessagesRequest, opts ...operations.Option) (*operations.ListMessagingMessagesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1287,6 +1293,7 @@ func (s *Messaging) ListMessagingMessages(ctx context.Context, request operation
 }
 
 // PatchMessagingChannel - Update a channel
+// Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
 func (s *Messaging) PatchMessagingChannel(ctx context.Context, request operations.PatchMessagingChannelRequest, opts ...operations.Option) (*operations.PatchMessagingChannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Messaging) PatchMessagingChannel(ctx context.Context, request operation
 }
 
 // PatchMessagingEvent - Update an event
+// Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 func (s *Messaging) PatchMessagingEvent(ctx context.Context, request operations.PatchMessagingEventRequest, opts ...operations.Option) (*operations.PatchMessagingEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1715,6 +1723,7 @@ func (s *Messaging) PatchMessagingEvent(ctx context.Context, request operations.
 }
 
 // PatchMessagingMessage - Update a message
+// Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to change in the request body.
 func (s *Messaging) PatchMessagingMessage(ctx context.Context, request operations.PatchMessagingMessageRequest, opts ...operations.Option) (*operations.PatchMessagingMessageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1929,6 +1938,7 @@ func (s *Messaging) PatchMessagingMessage(ctx context.Context, request operation
 }
 
 // RemoveMessagingChannel - Remove a channel
+// Deletes the MessagingChannel identified by `id`.
 func (s *Messaging) RemoveMessagingChannel(ctx context.Context, request operations.RemoveMessagingChannelRequest, opts ...operations.Option) (*operations.RemoveMessagingChannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2111,6 +2121,7 @@ func (s *Messaging) RemoveMessagingChannel(ctx context.Context, request operatio
 }
 
 // RemoveMessagingMessage - Remove a message
+// Deletes the MessagingMessage identified by `id`.
 func (s *Messaging) RemoveMessagingMessage(ctx context.Context, request operations.RemoveMessagingMessageRequest, opts ...operations.Option) (*operations.RemoveMessagingMessageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2293,6 +2304,7 @@ func (s *Messaging) RemoveMessagingMessage(ctx context.Context, request operatio
 }
 
 // UpdateMessagingChannel - Update a channel
+// Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
 func (s *Messaging) UpdateMessagingChannel(ctx context.Context, request operations.UpdateMessagingChannelRequest, opts ...operations.Option) (*operations.UpdateMessagingChannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2507,6 +2519,7 @@ func (s *Messaging) UpdateMessagingChannel(ctx context.Context, request operatio
 }
 
 // UpdateMessagingEvent - Update an event
+// Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 func (s *Messaging) UpdateMessagingEvent(ctx context.Context, request operations.UpdateMessagingEventRequest, opts ...operations.Option) (*operations.UpdateMessagingEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2721,6 +2734,7 @@ func (s *Messaging) UpdateMessagingEvent(ctx context.Context, request operations
 }
 
 // UpdateMessagingMessage - Update a message
+// Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to change in the request body.
 func (s *Messaging) UpdateMessagingMessage(ctx context.Context, request operations.UpdateMessagingMessageRequest, opts ...operations.Option) (*operations.UpdateMessagingMessageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

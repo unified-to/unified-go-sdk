@@ -13,7 +13,7 @@
 
 ## CreateDatastoreRecord
 
-Create a record
+Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are mapped to the provider's API. Returns the created DatastoreRecord.
 
 ### Example Usage
 
@@ -43,10 +43,10 @@ func main() {
             Fields: map[string]shared.DatastoreFieldValue{
 
             },
-            ID: unifiedgosdk.Pointer("d276c856-0316-471f-ae0b-5aa447ef6069"),
+            ID: unifiedgosdk.Pointer("6e2ea78d-c347-472e-9b7d-fd7b2425fec5"),
             Metadata: []shared.DatastoreMetadata{},
             RowNumber: unifiedgosdk.Pointer[float64](33.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-05T03:10:26.342Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-05T17:54:09.893Z"),
         },
         ConnectionID: "<id>",
     })
@@ -79,7 +79,7 @@ func main() {
 
 ## GetDatastoreRecord
 
-Retrieve a record
+Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -134,7 +134,7 @@ func main() {
 
 ## ListDatastoreRecords
 
-List all records
+Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -188,7 +188,7 @@ func main() {
 
 ## PatchDatastoreRecord
 
-Update a record
+Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
 
 ### Example Usage
 
@@ -218,10 +218,10 @@ func main() {
             Fields: map[string]shared.DatastoreFieldValue{
 
             },
-            ID: unifiedgosdk.Pointer("0923ff5a-b6a3-439c-a463-aa7ee864ee65"),
+            ID: unifiedgosdk.Pointer("d93d5bfd-375d-4bed-a8a9-51f442ee8942"),
             Metadata: []shared.DatastoreMetadata{},
             RowNumber: unifiedgosdk.Pointer[float64](33.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-05T03:10:26.355Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-05T17:54:09.904Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -255,7 +255,7 @@ func main() {
 
 ## RemoveDatastoreRecord
 
-Remove a record
+Deletes the DatastoreRecord identified by `id`.
 
 ### Example Usage
 
@@ -310,7 +310,7 @@ func main() {
 
 ## UpdateDatastoreRecord
 
-Update a record
+Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
 
 ### Example Usage
 
@@ -340,10 +340,10 @@ func main() {
             Fields: map[string]shared.DatastoreFieldValue{
 
             },
-            ID: unifiedgosdk.Pointer("0923ff5a-b6a3-439c-a463-aa7ee864ee65"),
+            ID: unifiedgosdk.Pointer("d93d5bfd-375d-4bed-a8a9-51f442ee8942"),
             Metadata: []shared.DatastoreMetadata{},
             RowNumber: unifiedgosdk.Pointer[float64](33.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-05T03:10:26.355Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-05T17:54:09.904Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

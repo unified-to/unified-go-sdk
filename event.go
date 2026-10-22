@@ -31,6 +31,7 @@ func newEvent(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 }
 
 // CreateAnalyticsEvent - Create an event
+// Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsEvent.
 func (s *Event) CreateAnalyticsEvent(ctx context.Context, request operations.CreateAnalyticsEventRequest, opts ...operations.Option) (*operations.CreateAnalyticsEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Event) CreateAnalyticsEvent(ctx context.Context, request operations.Cre
 }
 
 // CreateCalendarEvent - Create an event
+// Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are mapped to the provider's API. Returns the created CalendarEvent.
 func (s *Event) CreateCalendarEvent(ctx context.Context, request operations.CreateCalendarEventRequest, opts ...operations.Option) (*operations.CreateCalendarEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Event) CreateCalendarEvent(ctx context.Context, request operations.Crea
 }
 
 // CreateCdpEvent - Create an event
+// Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the provider's API. Returns the created CdpEvent.
 func (s *Event) CreateCdpEvent(ctx context.Context, request operations.CreateCdpEventRequest, opts ...operations.Option) (*operations.CreateCdpEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Event) CreateCdpEvent(ctx context.Context, request operations.CreateCdp
 }
 
 // CreateCrmEvent - Create an event
+// Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the provider's API. Returns the created CrmEvent.
 func (s *Event) CreateCrmEvent(ctx context.Context, request operations.CreateCrmEventRequest, opts ...operations.Option) (*operations.CreateCrmEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -887,6 +891,7 @@ func (s *Event) CreateCrmEvent(ctx context.Context, request operations.CreateCrm
 }
 
 // GetAnalyticsEvent - Retrieve an event
+// Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Event) GetAnalyticsEvent(ctx context.Context, request operations.GetAnalyticsEventRequest, opts ...operations.Option) (*operations.GetAnalyticsEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1094,6 +1099,7 @@ func (s *Event) GetAnalyticsEvent(ctx context.Context, request operations.GetAna
 }
 
 // GetCalendarEvent - Retrieve an event
+// Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Event) GetCalendarEvent(ctx context.Context, request operations.GetCalendarEventRequest, opts ...operations.Option) (*operations.GetCalendarEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1301,6 +1307,7 @@ func (s *Event) GetCalendarEvent(ctx context.Context, request operations.GetCale
 }
 
 // GetCdpEvent - Retrieve an event
+// Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Event) GetCdpEvent(ctx context.Context, request operations.GetCdpEventRequest, opts ...operations.Option) (*operations.GetCdpEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1508,6 +1515,7 @@ func (s *Event) GetCdpEvent(ctx context.Context, request operations.GetCdpEventR
 }
 
 // GetClubsEvent - Retrieve an event
+// Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Event) GetClubsEvent(ctx context.Context, request operations.GetClubsEventRequest, opts ...operations.Option) (*operations.GetClubsEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1715,6 +1723,7 @@ func (s *Event) GetClubsEvent(ctx context.Context, request operations.GetClubsEv
 }
 
 // GetCrmEvent - Retrieve an event
+// Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Event) GetCrmEvent(ctx context.Context, request operations.GetCrmEventRequest, opts ...operations.Option) (*operations.GetCrmEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1922,6 +1931,7 @@ func (s *Event) GetCrmEvent(ctx context.Context, request operations.GetCrmEventR
 }
 
 // ListAnalyticsEvents - List all events
+// Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Event) ListAnalyticsEvents(ctx context.Context, request operations.ListAnalyticsEventsRequest, opts ...operations.Option) (*operations.ListAnalyticsEventsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2129,6 +2139,7 @@ func (s *Event) ListAnalyticsEvents(ctx context.Context, request operations.List
 }
 
 // ListCalendarEvents - List all events
+// Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Event) ListCalendarEvents(ctx context.Context, request operations.ListCalendarEventsRequest, opts ...operations.Option) (*operations.ListCalendarEventsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2336,6 +2347,7 @@ func (s *Event) ListCalendarEvents(ctx context.Context, request operations.ListC
 }
 
 // ListCdpEvents - List all events
+// Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Event) ListCdpEvents(ctx context.Context, request operations.ListCdpEventsRequest, opts ...operations.Option) (*operations.ListCdpEventsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2543,6 +2555,7 @@ func (s *Event) ListCdpEvents(ctx context.Context, request operations.ListCdpEve
 }
 
 // ListClubsEvents - List all events
+// Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Event) ListClubsEvents(ctx context.Context, request operations.ListClubsEventsRequest, opts ...operations.Option) (*operations.ListClubsEventsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2750,6 +2763,7 @@ func (s *Event) ListClubsEvents(ctx context.Context, request operations.ListClub
 }
 
 // ListCrmEvents - List all events
+// Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Event) ListCrmEvents(ctx context.Context, request operations.ListCrmEventsRequest, opts ...operations.Option) (*operations.ListCrmEventsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2957,6 +2971,7 @@ func (s *Event) ListCrmEvents(ctx context.Context, request operations.ListCrmEve
 }
 
 // PatchCalendarEvent - Update an event
+// Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 func (s *Event) PatchCalendarEvent(ctx context.Context, request operations.PatchCalendarEventRequest, opts ...operations.Option) (*operations.PatchCalendarEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3171,6 +3186,7 @@ func (s *Event) PatchCalendarEvent(ctx context.Context, request operations.Patch
 }
 
 // PatchCdpEvent - Update an event
+// Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 func (s *Event) PatchCdpEvent(ctx context.Context, request operations.PatchCdpEventRequest, opts ...operations.Option) (*operations.PatchCdpEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3385,6 +3401,7 @@ func (s *Event) PatchCdpEvent(ctx context.Context, request operations.PatchCdpEv
 }
 
 // PatchCrmEvent - Update an event
+// Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 func (s *Event) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEventRequest, opts ...operations.Option) (*operations.PatchCrmEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3599,6 +3616,7 @@ func (s *Event) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEv
 }
 
 // PatchMessagingEvent - Update an event
+// Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 func (s *Event) PatchMessagingEvent(ctx context.Context, request operations.PatchMessagingEventRequest, opts ...operations.Option) (*operations.PatchMessagingEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3813,6 +3831,7 @@ func (s *Event) PatchMessagingEvent(ctx context.Context, request operations.Patc
 }
 
 // RemoveCalendarEvent - Remove an event
+// Deletes the CalendarEvent identified by `id`.
 func (s *Event) RemoveCalendarEvent(ctx context.Context, request operations.RemoveCalendarEventRequest, opts ...operations.Option) (*operations.RemoveCalendarEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3995,6 +4014,7 @@ func (s *Event) RemoveCalendarEvent(ctx context.Context, request operations.Remo
 }
 
 // RemoveCdpEvent - Remove an event
+// Deletes the CdpEvent identified by `id`.
 func (s *Event) RemoveCdpEvent(ctx context.Context, request operations.RemoveCdpEventRequest, opts ...operations.Option) (*operations.RemoveCdpEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4177,6 +4197,7 @@ func (s *Event) RemoveCdpEvent(ctx context.Context, request operations.RemoveCdp
 }
 
 // RemoveCrmEvent - Remove an event
+// Deletes the CrmEvent identified by `id`.
 func (s *Event) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEventRequest, opts ...operations.Option) (*operations.RemoveCrmEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4359,6 +4380,7 @@ func (s *Event) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrm
 }
 
 // UpdateCalendarEvent - Update an event
+// Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 func (s *Event) UpdateCalendarEvent(ctx context.Context, request operations.UpdateCalendarEventRequest, opts ...operations.Option) (*operations.UpdateCalendarEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4573,6 +4595,7 @@ func (s *Event) UpdateCalendarEvent(ctx context.Context, request operations.Upda
 }
 
 // UpdateCdpEvent - Update an event
+// Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 func (s *Event) UpdateCdpEvent(ctx context.Context, request operations.UpdateCdpEventRequest, opts ...operations.Option) (*operations.UpdateCdpEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4787,6 +4810,7 @@ func (s *Event) UpdateCdpEvent(ctx context.Context, request operations.UpdateCdp
 }
 
 // UpdateCrmEvent - Update an event
+// Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 func (s *Event) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrmEventRequest, opts ...operations.Option) (*operations.UpdateCrmEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5001,6 +5025,7 @@ func (s *Event) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrm
 }
 
 // UpdateMessagingEvent - Update an event
+// Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 func (s *Event) UpdateMessagingEvent(ctx context.Context, request operations.UpdateMessagingEventRequest, opts ...operations.Option) (*operations.UpdateMessagingEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

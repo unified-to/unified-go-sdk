@@ -31,6 +31,7 @@ func newPatient(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateHealthcarePatient - Create a patient
+// Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they are mapped to the provider's API. Returns the created HealthcarePatient.
 func (s *Patient) CreateHealthcarePatient(ctx context.Context, request operations.CreateHealthcarePatientRequest, opts ...operations.Option) (*operations.CreateHealthcarePatientResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Patient) CreateHealthcarePatient(ctx context.Context, request operation
 }
 
 // GetHealthcarePatient - Retrieve a patient
+// Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Patient) GetHealthcarePatient(ctx context.Context, request operations.GetHealthcarePatientRequest, opts ...operations.Option) (*operations.GetHealthcarePatientResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Patient) GetHealthcarePatient(ctx context.Context, request operations.G
 }
 
 // ListHealthcarePatients - List all patients
+// Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Patient) ListHealthcarePatients(ctx context.Context, request operations.ListHealthcarePatientsRequest, opts ...operations.Option) (*operations.ListHealthcarePatientsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Patient) ListHealthcarePatients(ctx context.Context, request operations
 }
 
 // PatchHealthcarePatient - Update a patient
+// Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 func (s *Patient) PatchHealthcarePatient(ctx context.Context, request operations.PatchHealthcarePatientRequest, opts ...operations.Option) (*operations.PatchHealthcarePatientResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Patient) PatchHealthcarePatient(ctx context.Context, request operations
 }
 
 // UpdateHealthcarePatient - Update a patient
+// Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 func (s *Patient) UpdateHealthcarePatient(ctx context.Context, request operations.UpdateHealthcarePatientRequest, opts ...operations.Option) (*operations.UpdateHealthcarePatientResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

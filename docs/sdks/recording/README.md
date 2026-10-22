@@ -15,7 +15,7 @@
 
 ## CreateUcRecording
 
-Create a recording
+Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped to the provider's API. Returns the created UcRecording.
 
 ### Example Usage
 
@@ -42,36 +42,36 @@ func main() {
     res, err := s.Recording.CreateUcRecording(ctx, operations.CreateUcRecordingRequest{
         UcRecording: shared.UcRecording{
             Contacts: []shared.UcContact{},
-            ConversationIdentifier: unifiedgosdk.Pointer("f0a1da69-f7cb-4208-a2ce-423718fb0f03"),
+            ConversationIdentifier: unifiedgosdk.Pointer("ce79efe1-cc1c-4c2c-acec-02afbbdf5310"),
             CreatedAt: types.MustNewTimeFromString("2022-09-17T19:41:46.956Z"),
-            EndAt: types.MustNewTimeFromString("2024-05-04T23:55:47.113Z"),
-            ExpiresAt: types.MustNewTimeFromString("2026-04-26T18:28:50.983Z"),
-            ID: unifiedgosdk.Pointer("f0a1da69-f7cb-4208-a2ce-423718fb0f03"),
+            EndAt: types.MustNewTimeFromString("2024-05-05T09:23:54.557Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-04-27T15:25:56.416Z"),
+            ID: unifiedgosdk.Pointer("ce79efe1-cc1c-4c2c-acec-02afbbdf5310"),
             Media: []shared.UcRecordingMedia{
                 shared.UcRecordingMedia{
-                    EndAt: types.MustNewTimeFromString("2024-04-01T19:35:52.943Z"),
+                    EndAt: types.MustNewTimeFromString("2024-04-02T04:32:20.046Z"),
                     Language: unifiedgosdk.Pointer("en"),
                     RecordingDownloadURL: unifiedgosdk.Pointer("https://parched-wasabi.com/"),
-                    StartAt: types.MustNewTimeFromString("2026-05-15T10:32:45.247Z"),
+                    StartAt: types.MustNewTimeFromString("2026-05-16T07:47:39.929Z"),
                     TranscriptDownloadURL: unifiedgosdk.Pointer("https://colossal-cuckoo.name"),
                     Transcripts: []shared.UcRecordingTranscript{
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2026-02-24T12:18:11.290Z"),
-                            StartAt: types.MustNewTimeFromString("2024-06-02T06:04:20.365Z"),
+                            EndAt: types.MustNewTimeFromString("2026-02-25T08:16:48.339Z"),
+                            StartAt: types.MustNewTimeFromString("2024-06-02T15:59:26.107Z"),
                             Text: "Turpis maiores ducimus tero speculum.",
                         },
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2024-10-12T13:12:34.085Z"),
-                            StartAt: types.MustNewTimeFromString("2026-08-02T21:07:30.377Z"),
+                            EndAt: types.MustNewTimeFromString("2024-10-13T01:13:56.875Z"),
+                            StartAt: types.MustNewTimeFromString("2026-08-03T19:38:14.859Z"),
                             Text: "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     },
                 },
             },
             Metadata: []shared.UcMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-04-27T18:04:18.259Z"),
+            StartAt: types.MustNewTimeFromString("2023-04-27T21:36:08.953Z"),
             Type: shared.UcRecordingTypeOutbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-16T11:08:19.904Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-17T01:37:35.043Z"),
             UserPhone: unifiedgosdk.Pointer("1-915-327-0429 x509"),
             WebURL: unifiedgosdk.Pointer("https://spherical-comparison.org"),
         },
@@ -106,7 +106,7 @@ func main() {
 
 ## GetCalendarRecording
 
-Retrieve a recording
+Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -161,7 +161,7 @@ func main() {
 
 ## GetUcRecording
 
-Retrieve a recording
+Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -216,7 +216,7 @@ func main() {
 
 ## ListCalendarRecordings
 
-List all recordings
+Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -270,7 +270,7 @@ func main() {
 
 ## ListUcRecordings
 
-List all recordings
+Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -324,7 +324,7 @@ func main() {
 
 ## PatchUcRecording
 
-Update a recording
+Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
 
 ### Example Usage
 
@@ -351,36 +351,36 @@ func main() {
     res, err := s.Recording.PatchUcRecording(ctx, operations.PatchUcRecordingRequest{
         UcRecording: shared.UcRecording{
             Contacts: []shared.UcContact{},
-            ConversationIdentifier: unifiedgosdk.Pointer("5693602d-54d0-4d1d-ab90-ad48b8752a62"),
+            ConversationIdentifier: unifiedgosdk.Pointer("12f12c15-a763-464e-b713-8b7b1c4b7c11"),
             CreatedAt: types.MustNewTimeFromString("2022-09-17T19:41:46.956Z"),
-            EndAt: types.MustNewTimeFromString("2024-05-04T23:55:47.126Z"),
-            ExpiresAt: types.MustNewTimeFromString("2026-04-26T18:28:51.012Z"),
-            ID: unifiedgosdk.Pointer("5693602d-54d0-4d1d-ab90-ad48b8752a62"),
+            EndAt: types.MustNewTimeFromString("2024-05-05T09:23:54.571Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-04-27T15:25:56.447Z"),
+            ID: unifiedgosdk.Pointer("12f12c15-a763-464e-b713-8b7b1c4b7c11"),
             Media: []shared.UcRecordingMedia{
                 shared.UcRecordingMedia{
-                    EndAt: types.MustNewTimeFromString("2024-04-01T19:35:52.955Z"),
+                    EndAt: types.MustNewTimeFromString("2024-04-02T04:32:20.059Z"),
                     Language: unifiedgosdk.Pointer("en"),
                     RecordingDownloadURL: unifiedgosdk.Pointer("https://parched-wasabi.com/"),
-                    StartAt: types.MustNewTimeFromString("2026-05-15T10:32:45.277Z"),
+                    StartAt: types.MustNewTimeFromString("2026-05-16T07:47:39.960Z"),
                     TranscriptDownloadURL: unifiedgosdk.Pointer("https://colossal-cuckoo.name"),
                     Transcripts: []shared.UcRecordingTranscript{
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2026-02-24T12:18:11.318Z"),
-                            StartAt: types.MustNewTimeFromString("2024-06-02T06:04:20.379Z"),
+                            EndAt: types.MustNewTimeFromString("2026-02-25T08:16:48.368Z"),
+                            StartAt: types.MustNewTimeFromString("2024-06-02T15:59:26.122Z"),
                             Text: "Turpis maiores ducimus tero speculum.",
                         },
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2024-10-12T13:12:34.102Z"),
-                            StartAt: types.MustNewTimeFromString("2026-08-02T21:07:30.408Z"),
+                            EndAt: types.MustNewTimeFromString("2024-10-13T01:13:56.892Z"),
+                            StartAt: types.MustNewTimeFromString("2026-08-03T19:38:14.893Z"),
                             Text: "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     },
                 },
             },
             Metadata: []shared.UcMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-04-27T18:04:18.264Z"),
+            StartAt: types.MustNewTimeFromString("2023-04-27T21:36:08.958Z"),
             Type: shared.UcRecordingTypeOutbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-16T11:08:19.924Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-17T01:37:35.064Z"),
             UserPhone: unifiedgosdk.Pointer("1-915-327-0429 x509"),
             WebURL: unifiedgosdk.Pointer("https://spherical-comparison.org"),
         },
@@ -416,7 +416,7 @@ func main() {
 
 ## RemoveUcRecording
 
-Remove a recording
+Deletes the UcRecording identified by `id`.
 
 ### Example Usage
 
@@ -471,7 +471,7 @@ func main() {
 
 ## UpdateUcRecording
 
-Update a recording
+Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
 
 ### Example Usage
 
@@ -498,36 +498,36 @@ func main() {
     res, err := s.Recording.UpdateUcRecording(ctx, operations.UpdateUcRecordingRequest{
         UcRecording: shared.UcRecording{
             Contacts: []shared.UcContact{},
-            ConversationIdentifier: unifiedgosdk.Pointer("5693602d-54d0-4d1d-ab90-ad48b8752a62"),
+            ConversationIdentifier: unifiedgosdk.Pointer("12f12c15-a763-464e-b713-8b7b1c4b7c11"),
             CreatedAt: types.MustNewTimeFromString("2022-09-17T19:41:46.956Z"),
-            EndAt: types.MustNewTimeFromString("2024-05-04T23:55:47.126Z"),
-            ExpiresAt: types.MustNewTimeFromString("2026-04-26T18:28:51.012Z"),
-            ID: unifiedgosdk.Pointer("5693602d-54d0-4d1d-ab90-ad48b8752a62"),
+            EndAt: types.MustNewTimeFromString("2024-05-05T09:23:54.571Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-04-27T15:25:56.447Z"),
+            ID: unifiedgosdk.Pointer("12f12c15-a763-464e-b713-8b7b1c4b7c11"),
             Media: []shared.UcRecordingMedia{
                 shared.UcRecordingMedia{
-                    EndAt: types.MustNewTimeFromString("2024-04-01T19:35:52.955Z"),
+                    EndAt: types.MustNewTimeFromString("2024-04-02T04:32:20.059Z"),
                     Language: unifiedgosdk.Pointer("en"),
                     RecordingDownloadURL: unifiedgosdk.Pointer("https://parched-wasabi.com/"),
-                    StartAt: types.MustNewTimeFromString("2026-05-15T10:32:45.277Z"),
+                    StartAt: types.MustNewTimeFromString("2026-05-16T07:47:39.960Z"),
                     TranscriptDownloadURL: unifiedgosdk.Pointer("https://colossal-cuckoo.name"),
                     Transcripts: []shared.UcRecordingTranscript{
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2026-02-24T12:18:11.318Z"),
-                            StartAt: types.MustNewTimeFromString("2024-06-02T06:04:20.379Z"),
+                            EndAt: types.MustNewTimeFromString("2026-02-25T08:16:48.368Z"),
+                            StartAt: types.MustNewTimeFromString("2024-06-02T15:59:26.122Z"),
                             Text: "Turpis maiores ducimus tero speculum.",
                         },
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2024-10-12T13:12:34.102Z"),
-                            StartAt: types.MustNewTimeFromString("2026-08-02T21:07:30.408Z"),
+                            EndAt: types.MustNewTimeFromString("2024-10-13T01:13:56.892Z"),
+                            StartAt: types.MustNewTimeFromString("2026-08-03T19:38:14.893Z"),
                             Text: "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     },
                 },
             },
             Metadata: []shared.UcMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-04-27T18:04:18.264Z"),
+            StartAt: types.MustNewTimeFromString("2023-04-27T21:36:08.958Z"),
             Type: shared.UcRecordingTypeOutbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-16T11:08:19.924Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-17T01:37:35.064Z"),
             UserPhone: unifiedgosdk.Pointer("1-915-327-0429 x509"),
             WebURL: unifiedgosdk.Pointer("https://spherical-comparison.org"),
         },

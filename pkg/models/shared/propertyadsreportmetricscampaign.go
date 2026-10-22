@@ -194,18 +194,20 @@ type PropertyAdsReportMetricsCampaign struct {
 	// read-only; controlled by the provider (whether/why the campaign can serve), unlike the user-managed status
 	EffectiveStatus *PropertyAdsReportMetricsCampaignEffectiveStatus `json:"effective_status,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	EndAt              *time.Time                                    `json:"end_at,omitempty"`
-	FrequencyCap       *PropertyAdsReportMetricsCampaignFrequencyCap `json:"frequency_cap,omitempty"`
-	Goal               *PropertyAdsReportMetricsCampaignGoal         `json:"goal,omitempty"`
-	HasEuPoliticalAds  *bool                                         `json:"has_eu_political_ads,omitempty"`
-	ID                 *string                                       `json:"id,omitempty"`
-	Kpi                *PropertyAdsReportMetricsCampaignKpi          `json:"kpi,omitempty"`
-	Labels             []string                                      `json:"labels,omitempty"`
-	Metadata           []AdsMetadata                                 `json:"metadata,omitempty"`
-	Name               *string                                       `json:"name,omitempty"`
-	OrganizationID     *string                                       `json:"organization_id,omitempty"`
-	PlannedSpendAmount *float64                                      `json:"planned_spend_amount,omitempty"`
-	Raw                map[string]any                                `json:"raw,omitempty"`
+	EndAt             *time.Time                                    `json:"end_at,omitempty"`
+	FrequencyCap      *PropertyAdsReportMetricsCampaignFrequencyCap `json:"frequency_cap,omitempty"`
+	Goal              *PropertyAdsReportMetricsCampaignGoal         `json:"goal,omitempty"`
+	HasEuPoliticalAds *bool                                         `json:"has_eu_political_ads,omitempty"`
+	ID                *string                                       `json:"id,omitempty"`
+	Kpi               *PropertyAdsReportMetricsCampaignKpi          `json:"kpi,omitempty"`
+	Labels            []string                                      `json:"labels,omitempty"`
+	Metadata          []AdsMetadata                                 `json:"metadata,omitempty"`
+	// The campaign's name
+	Name *string `json:"name,omitempty"`
+	// The ID of the ad account the campaign belongs to (an AdsOrganization ID)
+	OrganizationID     *string        `json:"organization_id,omitempty"`
+	PlannedSpendAmount *float64       `json:"planned_spend_amount,omitempty"`
+	Raw                map[string]any `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartAt          *time.Time                                 `json:"start_at,omitempty"`
 	Status           *PropertyAdsReportMetricsCampaignStatus    `json:"status,omitempty"`

@@ -31,6 +31,7 @@ func newPurchaseorder(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hoo
 }
 
 // CreateAccountingPurchaseorder - Create a purchaseorder
+// Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
 func (s *Purchaseorder) CreateAccountingPurchaseorder(ctx context.Context, request operations.CreateAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.CreateAccountingPurchaseorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Purchaseorder) CreateAccountingPurchaseorder(ctx context.Context, reque
 }
 
 // GetAccountingPurchaseorder - Retrieve a purchaseorder
+// Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Purchaseorder) GetAccountingPurchaseorder(ctx context.Context, request operations.GetAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.GetAccountingPurchaseorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Purchaseorder) GetAccountingPurchaseorder(ctx context.Context, request 
 }
 
 // ListAccountingPurchaseorders - List all purchaseorders
+// Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Purchaseorder) ListAccountingPurchaseorders(ctx context.Context, request operations.ListAccountingPurchaseordersRequest, opts ...operations.Option) (*operations.ListAccountingPurchaseordersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Purchaseorder) ListAccountingPurchaseorders(ctx context.Context, reques
 }
 
 // PatchAccountingPurchaseorder - Update a purchaseorder
+// Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 func (s *Purchaseorder) PatchAccountingPurchaseorder(ctx context.Context, request operations.PatchAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.PatchAccountingPurchaseorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Purchaseorder) PatchAccountingPurchaseorder(ctx context.Context, reques
 }
 
 // RemoveAccountingPurchaseorder - Remove a purchaseorder
+// Deletes the AccountingPurchaseorder identified by `id`.
 func (s *Purchaseorder) RemoveAccountingPurchaseorder(ctx context.Context, request operations.RemoveAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.RemoveAccountingPurchaseorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Purchaseorder) RemoveAccountingPurchaseorder(ctx context.Context, reque
 }
 
 // UpdateAccountingPurchaseorder - Update a purchaseorder
+// Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 func (s *Purchaseorder) UpdateAccountingPurchaseorder(ctx context.Context, request operations.UpdateAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.UpdateAccountingPurchaseorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

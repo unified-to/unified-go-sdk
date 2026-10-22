@@ -31,6 +31,7 @@ func newPayroll(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // GetHrisPayroll - Retrieve a payroll
+// Retrieves a single HrisPayroll by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Payroll) GetHrisPayroll(ctx context.Context, request operations.GetHrisPayrollRequest, opts ...operations.Option) (*operations.GetHrisPayrollResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -238,6 +239,7 @@ func (s *Payroll) GetHrisPayroll(ctx context.Context, request operations.GetHris
 }
 
 // ListHrisPayrolls - List all payrolls
+// Returns a list of HrisPayrolls. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Payroll) ListHrisPayrolls(ctx context.Context, request operations.ListHrisPayrollsRequest, opts ...operations.Option) (*operations.ListHrisPayrollsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

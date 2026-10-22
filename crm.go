@@ -31,6 +31,7 @@ func newCrm(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks.
 }
 
 // CreateCrmCompany - Create a company
+// Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to the provider's API. Returns the created CrmCompany.
 func (s *Crm) CreateCrmCompany(ctx context.Context, request operations.CreateCrmCompanyRequest, opts ...operations.Option) (*operations.CreateCrmCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Crm) CreateCrmCompany(ctx context.Context, request operations.CreateCrm
 }
 
 // CreateCrmContact - Create a contact
+// Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to the provider's API. Returns the created CrmContact.
 func (s *Crm) CreateCrmContact(ctx context.Context, request operations.CreateCrmContactRequest, opts ...operations.Option) (*operations.CreateCrmContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Crm) CreateCrmContact(ctx context.Context, request operations.CreateCrm
 }
 
 // CreateCrmDeal - Create a deal
+// Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the provider's API. Returns the created CrmDeal.
 func (s *Crm) CreateCrmDeal(ctx context.Context, request operations.CreateCrmDealRequest, opts ...operations.Option) (*operations.CreateCrmDealResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Crm) CreateCrmDeal(ctx context.Context, request operations.CreateCrmDea
 }
 
 // CreateCrmEvent - Create an event
+// Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the provider's API. Returns the created CrmEvent.
 func (s *Crm) CreateCrmEvent(ctx context.Context, request operations.CreateCrmEventRequest, opts ...operations.Option) (*operations.CreateCrmEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -887,6 +891,7 @@ func (s *Crm) CreateCrmEvent(ctx context.Context, request operations.CreateCrmEv
 }
 
 // CreateCrmLead - Create a lead
+// Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the provider's API. Returns the created CrmLead.
 func (s *Crm) CreateCrmLead(ctx context.Context, request operations.CreateCrmLeadRequest, opts ...operations.Option) (*operations.CreateCrmLeadResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1101,6 +1106,7 @@ func (s *Crm) CreateCrmLead(ctx context.Context, request operations.CreateCrmLea
 }
 
 // CreateCrmPipeline - Create a pipeline
+// Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped to the provider's API. Returns the created CrmPipeline.
 func (s *Crm) CreateCrmPipeline(ctx context.Context, request operations.CreateCrmPipelineRequest, opts ...operations.Option) (*operations.CreateCrmPipelineResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1315,6 +1321,7 @@ func (s *Crm) CreateCrmPipeline(ctx context.Context, request operations.CreateCr
 }
 
 // GetCrmCompany - Retrieve a company
+// Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Crm) GetCrmCompany(ctx context.Context, request operations.GetCrmCompanyRequest, opts ...operations.Option) (*operations.GetCrmCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1522,6 +1529,7 @@ func (s *Crm) GetCrmCompany(ctx context.Context, request operations.GetCrmCompan
 }
 
 // GetCrmContact - Retrieve a contact
+// Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Crm) GetCrmContact(ctx context.Context, request operations.GetCrmContactRequest, opts ...operations.Option) (*operations.GetCrmContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1729,6 +1737,7 @@ func (s *Crm) GetCrmContact(ctx context.Context, request operations.GetCrmContac
 }
 
 // GetCrmDeal - Retrieve a deal
+// Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Crm) GetCrmDeal(ctx context.Context, request operations.GetCrmDealRequest, opts ...operations.Option) (*operations.GetCrmDealResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1936,6 +1945,7 @@ func (s *Crm) GetCrmDeal(ctx context.Context, request operations.GetCrmDealReque
 }
 
 // GetCrmEvent - Retrieve an event
+// Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Crm) GetCrmEvent(ctx context.Context, request operations.GetCrmEventRequest, opts ...operations.Option) (*operations.GetCrmEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2143,6 +2153,7 @@ func (s *Crm) GetCrmEvent(ctx context.Context, request operations.GetCrmEventReq
 }
 
 // GetCrmLead - Retrieve a lead
+// Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Crm) GetCrmLead(ctx context.Context, request operations.GetCrmLeadRequest, opts ...operations.Option) (*operations.GetCrmLeadResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2350,6 +2361,7 @@ func (s *Crm) GetCrmLead(ctx context.Context, request operations.GetCrmLeadReque
 }
 
 // GetCrmPipeline - Retrieve a pipeline
+// Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Crm) GetCrmPipeline(ctx context.Context, request operations.GetCrmPipelineRequest, opts ...operations.Option) (*operations.GetCrmPipelineResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2557,6 +2569,7 @@ func (s *Crm) GetCrmPipeline(ctx context.Context, request operations.GetCrmPipel
 }
 
 // ListCrmCompanies - List all companies
+// Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Crm) ListCrmCompanies(ctx context.Context, request operations.ListCrmCompaniesRequest, opts ...operations.Option) (*operations.ListCrmCompaniesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2764,6 +2777,7 @@ func (s *Crm) ListCrmCompanies(ctx context.Context, request operations.ListCrmCo
 }
 
 // ListCrmContacts - List all contacts
+// Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Crm) ListCrmContacts(ctx context.Context, request operations.ListCrmContactsRequest, opts ...operations.Option) (*operations.ListCrmContactsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2971,6 +2985,7 @@ func (s *Crm) ListCrmContacts(ctx context.Context, request operations.ListCrmCon
 }
 
 // ListCrmDeals - List all deals
+// Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Crm) ListCrmDeals(ctx context.Context, request operations.ListCrmDealsRequest, opts ...operations.Option) (*operations.ListCrmDealsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3178,6 +3193,7 @@ func (s *Crm) ListCrmDeals(ctx context.Context, request operations.ListCrmDealsR
 }
 
 // ListCrmEvents - List all events
+// Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Crm) ListCrmEvents(ctx context.Context, request operations.ListCrmEventsRequest, opts ...operations.Option) (*operations.ListCrmEventsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3385,6 +3401,7 @@ func (s *Crm) ListCrmEvents(ctx context.Context, request operations.ListCrmEvent
 }
 
 // ListCrmLeads - List all leads
+// Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Crm) ListCrmLeads(ctx context.Context, request operations.ListCrmLeadsRequest, opts ...operations.Option) (*operations.ListCrmLeadsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3592,6 +3609,7 @@ func (s *Crm) ListCrmLeads(ctx context.Context, request operations.ListCrmLeadsR
 }
 
 // ListCrmPipelines - List all pipelines
+// Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Crm) ListCrmPipelines(ctx context.Context, request operations.ListCrmPipelinesRequest, opts ...operations.Option) (*operations.ListCrmPipelinesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3799,6 +3817,7 @@ func (s *Crm) ListCrmPipelines(ctx context.Context, request operations.ListCrmPi
 }
 
 // ListCrmTaxonomies - List all taxonomies
+// Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Crm) ListCrmTaxonomies(ctx context.Context, request operations.ListCrmTaxonomiesRequest, opts ...operations.Option) (*operations.ListCrmTaxonomiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4006,6 +4025,7 @@ func (s *Crm) ListCrmTaxonomies(ctx context.Context, request operations.ListCrmT
 }
 
 // PatchCrmCompany - Update a company
+// Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 func (s *Crm) PatchCrmCompany(ctx context.Context, request operations.PatchCrmCompanyRequest, opts ...operations.Option) (*operations.PatchCrmCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4220,6 +4240,7 @@ func (s *Crm) PatchCrmCompany(ctx context.Context, request operations.PatchCrmCo
 }
 
 // PatchCrmContact - Update a contact
+// Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 func (s *Crm) PatchCrmContact(ctx context.Context, request operations.PatchCrmContactRequest, opts ...operations.Option) (*operations.PatchCrmContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4434,6 +4455,7 @@ func (s *Crm) PatchCrmContact(ctx context.Context, request operations.PatchCrmCo
 }
 
 // PatchCrmDeal - Update a deal
+// Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 func (s *Crm) PatchCrmDeal(ctx context.Context, request operations.PatchCrmDealRequest, opts ...operations.Option) (*operations.PatchCrmDealResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4648,6 +4670,7 @@ func (s *Crm) PatchCrmDeal(ctx context.Context, request operations.PatchCrmDealR
 }
 
 // PatchCrmEvent - Update an event
+// Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 func (s *Crm) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEventRequest, opts ...operations.Option) (*operations.PatchCrmEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4862,6 +4885,7 @@ func (s *Crm) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEven
 }
 
 // PatchCrmLead - Update a lead
+// Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 func (s *Crm) PatchCrmLead(ctx context.Context, request operations.PatchCrmLeadRequest, opts ...operations.Option) (*operations.PatchCrmLeadResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5076,6 +5100,7 @@ func (s *Crm) PatchCrmLead(ctx context.Context, request operations.PatchCrmLeadR
 }
 
 // PatchCrmPipeline - Update a pipeline
+// Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 func (s *Crm) PatchCrmPipeline(ctx context.Context, request operations.PatchCrmPipelineRequest, opts ...operations.Option) (*operations.PatchCrmPipelineResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5290,6 +5315,7 @@ func (s *Crm) PatchCrmPipeline(ctx context.Context, request operations.PatchCrmP
 }
 
 // RemoveCrmCompany - Remove a company
+// Deletes the CrmCompany identified by `id`.
 func (s *Crm) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrmCompanyRequest, opts ...operations.Option) (*operations.RemoveCrmCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5472,6 +5498,7 @@ func (s *Crm) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrm
 }
 
 // RemoveCrmContact - Remove a contact
+// Deletes the CrmContact identified by `id`.
 func (s *Crm) RemoveCrmContact(ctx context.Context, request operations.RemoveCrmContactRequest, opts ...operations.Option) (*operations.RemoveCrmContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5654,6 +5681,7 @@ func (s *Crm) RemoveCrmContact(ctx context.Context, request operations.RemoveCrm
 }
 
 // RemoveCrmDeal - Remove a deal
+// Deletes the CrmDeal identified by `id`.
 func (s *Crm) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDealRequest, opts ...operations.Option) (*operations.RemoveCrmDealResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5836,6 +5864,7 @@ func (s *Crm) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDea
 }
 
 // RemoveCrmEvent - Remove an event
+// Deletes the CrmEvent identified by `id`.
 func (s *Crm) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEventRequest, opts ...operations.Option) (*operations.RemoveCrmEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6018,6 +6047,7 @@ func (s *Crm) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEv
 }
 
 // RemoveCrmLead - Remove a lead
+// Deletes the CrmLead identified by `id`.
 func (s *Crm) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLeadRequest, opts ...operations.Option) (*operations.RemoveCrmLeadResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6200,6 +6230,7 @@ func (s *Crm) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLea
 }
 
 // RemoveCrmPipeline - Remove a pipeline
+// Deletes the CrmPipeline identified by `id`.
 func (s *Crm) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCrmPipelineRequest, opts ...operations.Option) (*operations.RemoveCrmPipelineResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6382,6 +6413,7 @@ func (s *Crm) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCr
 }
 
 // UpdateCrmCompany - Update a company
+// Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 func (s *Crm) UpdateCrmCompany(ctx context.Context, request operations.UpdateCrmCompanyRequest, opts ...operations.Option) (*operations.UpdateCrmCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6596,6 +6628,7 @@ func (s *Crm) UpdateCrmCompany(ctx context.Context, request operations.UpdateCrm
 }
 
 // UpdateCrmContact - Update a contact
+// Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 func (s *Crm) UpdateCrmContact(ctx context.Context, request operations.UpdateCrmContactRequest, opts ...operations.Option) (*operations.UpdateCrmContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6810,6 +6843,7 @@ func (s *Crm) UpdateCrmContact(ctx context.Context, request operations.UpdateCrm
 }
 
 // UpdateCrmDeal - Update a deal
+// Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 func (s *Crm) UpdateCrmDeal(ctx context.Context, request operations.UpdateCrmDealRequest, opts ...operations.Option) (*operations.UpdateCrmDealResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7024,6 +7058,7 @@ func (s *Crm) UpdateCrmDeal(ctx context.Context, request operations.UpdateCrmDea
 }
 
 // UpdateCrmEvent - Update an event
+// Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 func (s *Crm) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrmEventRequest, opts ...operations.Option) (*operations.UpdateCrmEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7238,6 +7273,7 @@ func (s *Crm) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrmEv
 }
 
 // UpdateCrmLead - Update a lead
+// Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 func (s *Crm) UpdateCrmLead(ctx context.Context, request operations.UpdateCrmLeadRequest, opts ...operations.Option) (*operations.UpdateCrmLeadResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7452,6 +7488,7 @@ func (s *Crm) UpdateCrmLead(ctx context.Context, request operations.UpdateCrmLea
 }
 
 // UpdateCrmPipeline - Update a pipeline
+// Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 func (s *Crm) UpdateCrmPipeline(ctx context.Context, request operations.UpdateCrmPipelineRequest, opts ...operations.Option) (*operations.UpdateCrmPipelineResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -31,6 +31,7 @@ func newShipping(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateShippingLabel - Create a label
+// Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are mapped to the provider's API. Returns the created ShippingLabel.
 func (s *Shipping) CreateShippingLabel(ctx context.Context, request operations.CreateShippingLabelRequest, opts ...operations.Option) (*operations.CreateShippingLabelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Shipping) CreateShippingLabel(ctx context.Context, request operations.C
 }
 
 // CreateShippingRate - Create a rate
+// Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped to the provider's API. Returns the created ShippingRate.
 func (s *Shipping) CreateShippingRate(ctx context.Context, request operations.CreateShippingRateRequest, opts ...operations.Option) (*operations.CreateShippingRateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Shipping) CreateShippingRate(ctx context.Context, request operations.Cr
 }
 
 // CreateShippingShipment - Create a shipment
+// Creates a ShippingShipment. Provide the unified ShippingShipment fields in the request body; they are mapped to the provider's API. Returns the created ShippingShipment.
 func (s *Shipping) CreateShippingShipment(ctx context.Context, request operations.CreateShippingShipmentRequest, opts ...operations.Option) (*operations.CreateShippingShipmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Shipping) CreateShippingShipment(ctx context.Context, request operation
 }
 
 // GetShippingCarrier - Retrieve a carrier
+// Retrieves a single ShippingCarrier by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Shipping) GetShippingCarrier(ctx context.Context, request operations.GetShippingCarrierRequest, opts ...operations.Option) (*operations.GetShippingCarrierResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -880,6 +884,7 @@ func (s *Shipping) GetShippingCarrier(ctx context.Context, request operations.Ge
 }
 
 // GetShippingLabel - Retrieve a label
+// Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Shipping) GetShippingLabel(ctx context.Context, request operations.GetShippingLabelRequest, opts ...operations.Option) (*operations.GetShippingLabelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1087,6 +1092,7 @@ func (s *Shipping) GetShippingLabel(ctx context.Context, request operations.GetS
 }
 
 // GetShippingShipment - Retrieve a shipment
+// Retrieves a single ShippingShipment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Shipping) GetShippingShipment(ctx context.Context, request operations.GetShippingShipmentRequest, opts ...operations.Option) (*operations.GetShippingShipmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1294,6 +1300,7 @@ func (s *Shipping) GetShippingShipment(ctx context.Context, request operations.G
 }
 
 // GetShippingTracking - Retrieve a tracking
+// Retrieves a single ShippingTracking by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Shipping) GetShippingTracking(ctx context.Context, request operations.GetShippingTrackingRequest, opts ...operations.Option) (*operations.GetShippingTrackingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Shipping) GetShippingTracking(ctx context.Context, request operations.G
 }
 
 // ListShippingCarriers - List all carriers
+// Returns a list of ShippingCarriers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Shipping) ListShippingCarriers(ctx context.Context, request operations.ListShippingCarriersRequest, opts ...operations.Option) (*operations.ListShippingCarriersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1708,6 +1716,7 @@ func (s *Shipping) ListShippingCarriers(ctx context.Context, request operations.
 }
 
 // ListShippingLabels - List all labels
+// Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Shipping) ListShippingLabels(ctx context.Context, request operations.ListShippingLabelsRequest, opts ...operations.Option) (*operations.ListShippingLabelsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1915,6 +1924,7 @@ func (s *Shipping) ListShippingLabels(ctx context.Context, request operations.Li
 }
 
 // ListShippingShipments - List all shipments
+// Returns a list of ShippingShipments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Shipping) ListShippingShipments(ctx context.Context, request operations.ListShippingShipmentsRequest, opts ...operations.Option) (*operations.ListShippingShipmentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2122,6 +2132,7 @@ func (s *Shipping) ListShippingShipments(ctx context.Context, request operations
 }
 
 // ListShippingTrackings - List all trackings
+// Returns a list of ShippingTrackings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Shipping) ListShippingTrackings(ctx context.Context, request operations.ListShippingTrackingsRequest, opts ...operations.Option) (*operations.ListShippingTrackingsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2329,6 +2340,7 @@ func (s *Shipping) ListShippingTrackings(ctx context.Context, request operations
 }
 
 // PatchShippingLabel - Update a label
+// Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
 func (s *Shipping) PatchShippingLabel(ctx context.Context, request operations.PatchShippingLabelRequest, opts ...operations.Option) (*operations.PatchShippingLabelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2543,6 +2555,7 @@ func (s *Shipping) PatchShippingLabel(ctx context.Context, request operations.Pa
 }
 
 // PatchShippingShipment - Update a shipment
+// Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
 func (s *Shipping) PatchShippingShipment(ctx context.Context, request operations.PatchShippingShipmentRequest, opts ...operations.Option) (*operations.PatchShippingShipmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2757,6 +2770,7 @@ func (s *Shipping) PatchShippingShipment(ctx context.Context, request operations
 }
 
 // RemoveShippingLabel - Remove a label
+// Deletes the ShippingLabel identified by `id`.
 func (s *Shipping) RemoveShippingLabel(ctx context.Context, request operations.RemoveShippingLabelRequest, opts ...operations.Option) (*operations.RemoveShippingLabelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2939,6 +2953,7 @@ func (s *Shipping) RemoveShippingLabel(ctx context.Context, request operations.R
 }
 
 // RemoveShippingShipment - Remove a shipment
+// Deletes the ShippingShipment identified by `id`.
 func (s *Shipping) RemoveShippingShipment(ctx context.Context, request operations.RemoveShippingShipmentRequest, opts ...operations.Option) (*operations.RemoveShippingShipmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3121,6 +3136,7 @@ func (s *Shipping) RemoveShippingShipment(ctx context.Context, request operation
 }
 
 // UpdateShippingLabel - Update a label
+// Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
 func (s *Shipping) UpdateShippingLabel(ctx context.Context, request operations.UpdateShippingLabelRequest, opts ...operations.Option) (*operations.UpdateShippingLabelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3335,6 +3351,7 @@ func (s *Shipping) UpdateShippingLabel(ctx context.Context, request operations.U
 }
 
 // UpdateShippingShipment - Update a shipment
+// Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
 func (s *Shipping) UpdateShippingShipment(ctx context.Context, request operations.UpdateShippingShipmentRequest, opts ...operations.Option) (*operations.UpdateShippingShipmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

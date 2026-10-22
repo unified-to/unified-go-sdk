@@ -13,7 +13,7 @@
 
 ## CreateAnalyticsVisitor
 
-Create a visitor
+Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsVisitor.
 
 ### Example Usage
 
@@ -42,13 +42,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
             Email: unifiedgosdk.Pointer("desiree.o.hara@icloud.com"),
             FirstSeenAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
-            ID: unifiedgosdk.Pointer("bfaa912a-9cdb-411c-ba4a-690f1112f1c6"),
-            LastSeenAt: types.MustNewTimeFromString("2025-01-11T07:31:53.978Z"),
+            ID: unifiedgosdk.Pointer("dae2e726-1c98-44da-9cfc-e589e76b98a5"),
+            LastSeenAt: types.MustNewTimeFromString("2025-01-12T00:49:43.933Z"),
             Metadata: map[string]shared.PropertyAnalyticsVisitorMetadata{
                 "segment": shared.PropertyAnalyticsVisitorMetadata{},
             },
             TotalEvents: unifiedgosdk.Pointer[float64](2916.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-06-29T17:14:52.295Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-30T12:14:18.220Z"),
         },
         ConnectionID: "<id>",
     })
@@ -81,7 +81,7 @@ func main() {
 
 ## GetAnalyticsVisitor
 
-Retrieve a visitor
+Retrieves a single AnalyticsVisitor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -136,7 +136,7 @@ func main() {
 
 ## ListAnalyticsVisitors
 
-List all visitors
+Returns a list of AnalyticsVisitors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -190,7 +190,7 @@ func main() {
 
 ## PatchAnalyticsVisitor
 
-Update a visitor
+Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
 
 ### Example Usage
 
@@ -219,13 +219,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
             Email: unifiedgosdk.Pointer("desiree.o.hara@icloud.com"),
             FirstSeenAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
-            ID: unifiedgosdk.Pointer("804ed373-23e4-4381-ae7d-306027990398"),
-            LastSeenAt: types.MustNewTimeFromString("2025-01-11T07:31:53.988Z"),
+            ID: unifiedgosdk.Pointer("2c6290d4-84ea-40c6-aebe-f618f5fa8742"),
+            LastSeenAt: types.MustNewTimeFromString("2025-01-12T00:49:43.951Z"),
             Metadata: map[string]shared.PropertyAnalyticsVisitorMetadata{
                 "segment": shared.PropertyAnalyticsVisitorMetadata{},
             },
             TotalEvents: unifiedgosdk.Pointer[float64](2916.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-06-29T17:14:52.305Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-30T12:14:18.240Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -259,7 +259,7 @@ func main() {
 
 ## RemoveAnalyticsVisitor
 
-Remove a visitor
+Deletes the AnalyticsVisitor identified by `id`.
 
 ### Example Usage
 
@@ -314,7 +314,7 @@ func main() {
 
 ## UpdateAnalyticsVisitor
 
-Update a visitor
+Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
 
 ### Example Usage
 
@@ -343,13 +343,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
             Email: unifiedgosdk.Pointer("desiree.o.hara@icloud.com"),
             FirstSeenAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
-            ID: unifiedgosdk.Pointer("804ed373-23e4-4381-ae7d-306027990398"),
-            LastSeenAt: types.MustNewTimeFromString("2025-01-11T07:31:53.988Z"),
+            ID: unifiedgosdk.Pointer("2c6290d4-84ea-40c6-aebe-f618f5fa8742"),
+            LastSeenAt: types.MustNewTimeFromString("2025-01-12T00:49:43.951Z"),
             Metadata: map[string]shared.PropertyAnalyticsVisitorMetadata{
                 "segment": shared.PropertyAnalyticsVisitorMetadata{},
             },
             TotalEvents: unifiedgosdk.Pointer[float64](2916.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-06-29T17:14:52.305Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-30T12:14:18.240Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

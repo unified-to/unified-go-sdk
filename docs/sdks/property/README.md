@@ -13,7 +13,7 @@
 
 ## CreateAnalyticsProperty
 
-Create a property
+Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsProperty.
 
 ### Example Usage
 
@@ -41,10 +41,10 @@ func main() {
         AnalyticsProperty: shared.AnalyticsProperty{
             CreatedAt: types.MustNewTimeFromString("2021-09-05T19:04:58.430Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("8e5d696a-a1b8-4bc8-a358-72945257ff51"),
+            ID: unifiedgosdk.Pointer("71b0065a-cedf-4ebd-b738-ea24062a4b62"),
             Name: unifiedgosdk.Pointer("Daniel, Goldner and Dickinson"),
             Timezone: unifiedgosdk.Pointer("UTC"),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-14T20:26:18.306Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-14T20:33:12.491Z"),
         },
         ConnectionID: "<id>",
     })
@@ -77,7 +77,7 @@ func main() {
 
 ## GetAnalyticsProperty
 
-Retrieve a property
+Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -132,7 +132,7 @@ func main() {
 
 ## ListAnalyticsProperties
 
-List all properties
+Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -186,7 +186,7 @@ func main() {
 
 ## PatchAnalyticsProperty
 
-Update a property
+Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
 
 ### Example Usage
 
@@ -214,10 +214,10 @@ func main() {
         AnalyticsProperty: shared.AnalyticsProperty{
             CreatedAt: types.MustNewTimeFromString("2021-09-05T19:04:58.430Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("88eebe3b-1dfe-4b0d-afcf-dc721adea84d"),
+            ID: unifiedgosdk.Pointer("268894e4-9c95-4bbb-a4d8-a5f48fb56dc7"),
             Name: unifiedgosdk.Pointer("Daniel, Goldner and Dickinson"),
             Timezone: unifiedgosdk.Pointer("UTC"),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-14T20:26:18.306Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-14T20:33:12.491Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -251,7 +251,7 @@ func main() {
 
 ## RemoveAnalyticsProperty
 
-Remove a property
+Deletes the AnalyticsProperty identified by `id`.
 
 ### Example Usage
 
@@ -306,7 +306,7 @@ func main() {
 
 ## UpdateAnalyticsProperty
 
-Update a property
+Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
 
 ### Example Usage
 
@@ -334,10 +334,10 @@ func main() {
         AnalyticsProperty: shared.AnalyticsProperty{
             CreatedAt: types.MustNewTimeFromString("2021-09-05T19:04:58.430Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("88eebe3b-1dfe-4b0d-afcf-dc721adea84d"),
+            ID: unifiedgosdk.Pointer("268894e4-9c95-4bbb-a4d8-a5f48fb56dc7"),
             Name: unifiedgosdk.Pointer("Daniel, Goldner and Dickinson"),
             Timezone: unifiedgosdk.Pointer("UTC"),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-14T20:26:18.306Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-14T20:33:12.491Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

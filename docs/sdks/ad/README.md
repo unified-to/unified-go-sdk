@@ -13,7 +13,7 @@
 
 ## CreateAdsAd
 
-Create an ad
+Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the provider's API. Returns the created AdsAd.
 
 ### Example Usage
 
@@ -46,11 +46,11 @@ func main() {
             CreativeAssetURL: unifiedgosdk.Pointer("https://picsum.photos/seed/LwOzrpr9/948/2793"),
             Description: unifiedgosdk.Pointer("Accedo vespillo carpo dolor decet stillicidium comptus tenuis."),
             FinalURL: unifiedgosdk.Pointer("https://improbable-sanity.com"),
-            ID: unifiedgosdk.Pointer("1607f143-283d-4a82-ace1-3ebc68008f8f"),
+            ID: unifiedgosdk.Pointer("79efa2ba-b89a-4321-9695-db7067961ed4"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Hermiston Group"),
             Status: shared.AdsAdStatusArchived.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-06-18T13:39:37.415Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-06-18T23:21:17.005Z"),
         },
         ConnectionID: "<id>",
     })
@@ -83,7 +83,7 @@ func main() {
 
 ## GetAdsAd
 
-Retrieve an ad
+Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -138,7 +138,7 @@ func main() {
 
 ## ListAdsAds
 
-List all ads
+Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -192,7 +192,7 @@ func main() {
 
 ## PatchAdsAd
 
-Update an ad
+Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
 ### Example Usage
 
@@ -225,11 +225,11 @@ func main() {
             CreativeAssetURL: unifiedgosdk.Pointer("https://picsum.photos/seed/LwOzrpr9/948/2793"),
             Description: unifiedgosdk.Pointer("Accedo vespillo carpo dolor decet stillicidium comptus tenuis."),
             FinalURL: unifiedgosdk.Pointer("https://improbable-sanity.com"),
-            ID: unifiedgosdk.Pointer("95185ea9-82a3-415a-b9ce-ae773a1ace06"),
+            ID: unifiedgosdk.Pointer("e492fe18-8c3c-4017-9124-e101e5326ca6"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Hermiston Group"),
             Status: shared.AdsAdStatusArchived.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-06-18T13:39:37.425Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-06-18T23:21:17.023Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -263,7 +263,7 @@ func main() {
 
 ## RemoveAdsAd
 
-Remove an ad
+Deletes the AdsAd identified by `id`.
 
 ### Example Usage
 
@@ -318,7 +318,7 @@ func main() {
 
 ## UpdateAdsAd
 
-Update an ad
+Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
 ### Example Usage
 
@@ -351,11 +351,11 @@ func main() {
             CreativeAssetURL: unifiedgosdk.Pointer("https://picsum.photos/seed/LwOzrpr9/948/2793"),
             Description: unifiedgosdk.Pointer("Accedo vespillo carpo dolor decet stillicidium comptus tenuis."),
             FinalURL: unifiedgosdk.Pointer("https://improbable-sanity.com"),
-            ID: unifiedgosdk.Pointer("95185ea9-82a3-415a-b9ce-ae773a1ace06"),
+            ID: unifiedgosdk.Pointer("e492fe18-8c3c-4017-9124-e101e5326ca6"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Hermiston Group"),
             Status: shared.AdsAdStatusArchived.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-06-18T13:39:37.425Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-06-18T23:21:17.023Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

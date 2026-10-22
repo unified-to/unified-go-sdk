@@ -13,7 +13,7 @@
 
 ## CreateHealthcareAppointment
 
-Create an appointment
+Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
 
 ### Example Usage
 
@@ -42,7 +42,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-11T08:16:20.874Z"),
             Description: unifiedgosdk.Pointer("clarus aptus cetera"),
             EndAt: types.MustNewTimeFromString("2023-12-12T13:04:41.451Z"),
-            ID: unifiedgosdk.Pointer("e57d4ec5-b3c7-47c7-bf0d-adb561ff2349"),
+            ID: unifiedgosdk.Pointer("26c0c976-c996-4dbb-8b58-5166dbe67220"),
             Metadata: []shared.HealthcareMetadata{},
             PractitionerIds: []string{},
             Reasons: []shared.HealthcareCode{
@@ -62,7 +62,7 @@ func main() {
             SlotIds: []string{},
             StartAt: types.MustNewTimeFromString("2023-12-12T12:34:41.451Z"),
             Status: shared.HealthcareAppointmentStatusBooked.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-19T10:41:19.860Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-20T04:16:13.523Z"),
         },
         ConnectionID: "<id>",
     })
@@ -95,7 +95,7 @@ func main() {
 
 ## GetHealthcareAppointment
 
-Retrieve an appointment
+Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -150,7 +150,7 @@ func main() {
 
 ## ListHealthcareAppointments
 
-List all appointments
+Returns a list of HealthcareAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -204,7 +204,7 @@ func main() {
 
 ## PatchHealthcareAppointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -233,7 +233,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-11T08:16:20.874Z"),
             Description: unifiedgosdk.Pointer("clarus aptus cetera"),
             EndAt: types.MustNewTimeFromString("2023-12-12T13:04:41.451Z"),
-            ID: unifiedgosdk.Pointer("cc805b15-1b9f-4db2-9608-a1472e62c59d"),
+            ID: unifiedgosdk.Pointer("76ec3204-d039-4780-a1a6-9d82e5c58b81"),
             Metadata: []shared.HealthcareMetadata{},
             PractitionerIds: []string{},
             Reasons: []shared.HealthcareCode{
@@ -253,7 +253,7 @@ func main() {
             SlotIds: []string{},
             StartAt: types.MustNewTimeFromString("2023-12-12T12:34:41.451Z"),
             Status: shared.HealthcareAppointmentStatusBooked.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-19T10:41:19.878Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-20T04:16:13.539Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -287,7 +287,7 @@ func main() {
 
 ## RemoveHealthcareAppointment
 
-Remove an appointment
+Deletes the HealthcareAppointment identified by `id`.
 
 ### Example Usage
 
@@ -342,7 +342,7 @@ func main() {
 
 ## UpdateHealthcareAppointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -371,7 +371,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-11T08:16:20.874Z"),
             Description: unifiedgosdk.Pointer("clarus aptus cetera"),
             EndAt: types.MustNewTimeFromString("2023-12-12T13:04:41.451Z"),
-            ID: unifiedgosdk.Pointer("cc805b15-1b9f-4db2-9608-a1472e62c59d"),
+            ID: unifiedgosdk.Pointer("76ec3204-d039-4780-a1a6-9d82e5c58b81"),
             Metadata: []shared.HealthcareMetadata{},
             PractitionerIds: []string{},
             Reasons: []shared.HealthcareCode{
@@ -391,7 +391,7 @@ func main() {
             SlotIds: []string{},
             StartAt: types.MustNewTimeFromString("2023-12-12T12:34:41.451Z"),
             Status: shared.HealthcareAppointmentStatusBooked.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-19T10:41:19.878Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-20T04:16:13.539Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

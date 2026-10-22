@@ -31,6 +31,7 @@ func newTemplate(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateComputeTemplate - Create a template
+// Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are mapped to the provider's API. Returns the created ComputeTemplate.
 func (s *Template) CreateComputeTemplate(ctx context.Context, request operations.CreateComputeTemplateRequest, opts ...operations.Option) (*operations.CreateComputeTemplateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Template) CreateComputeTemplate(ctx context.Context, request operations
 }
 
 // GetComputeTemplate - Retrieve a template
+// Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Template) GetComputeTemplate(ctx context.Context, request operations.GetComputeTemplateRequest, opts ...operations.Option) (*operations.GetComputeTemplateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Template) GetComputeTemplate(ctx context.Context, request operations.Ge
 }
 
 // GetSigningTemplate - Retrieve a template
+// Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Template) GetSigningTemplate(ctx context.Context, request operations.GetSigningTemplateRequest, opts ...operations.Option) (*operations.GetSigningTemplateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Template) GetSigningTemplate(ctx context.Context, request operations.Ge
 }
 
 // ListComputeTemplates - List all templates
+// Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Template) ListComputeTemplates(ctx context.Context, request operations.ListComputeTemplatesRequest, opts ...operations.Option) (*operations.ListComputeTemplatesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -866,6 +870,7 @@ func (s *Template) ListComputeTemplates(ctx context.Context, request operations.
 }
 
 // ListSigningTemplates - List all templates
+// Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Template) ListSigningTemplates(ctx context.Context, request operations.ListSigningTemplatesRequest, opts ...operations.Option) (*operations.ListSigningTemplatesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1073,6 +1078,7 @@ func (s *Template) ListSigningTemplates(ctx context.Context, request operations.
 }
 
 // PatchComputeTemplate - Update a template
+// Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 func (s *Template) PatchComputeTemplate(ctx context.Context, request operations.PatchComputeTemplateRequest, opts ...operations.Option) (*operations.PatchComputeTemplateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1287,6 +1293,7 @@ func (s *Template) PatchComputeTemplate(ctx context.Context, request operations.
 }
 
 // RemoveComputeTemplate - Remove a template
+// Deletes the ComputeTemplate identified by `id`.
 func (s *Template) RemoveComputeTemplate(ctx context.Context, request operations.RemoveComputeTemplateRequest, opts ...operations.Option) (*operations.RemoveComputeTemplateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1469,6 +1476,7 @@ func (s *Template) RemoveComputeTemplate(ctx context.Context, request operations
 }
 
 // UpdateComputeTemplate - Update a template
+// Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 func (s *Template) UpdateComputeTemplate(ctx context.Context, request operations.UpdateComputeTemplateRequest, opts ...operations.Option) (*operations.UpdateComputeTemplateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -13,7 +13,7 @@
 
 ## CreateMartechList
 
-Create a list
+Creates a MarketingList. Provide the unified MarketingList fields in the request body; they are mapped to the provider's API. Returns the created MarketingList.
 
 ### Example Usage
 
@@ -49,7 +49,7 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2019-09-18T02:01:36.950Z"),
             Description: unifiedgosdk.Pointer("Vilis."),
-            ID: unifiedgosdk.Pointer("fa25e1e6-f0a8-45b9-b31f-6dfd003964d6"),
+            ID: unifiedgosdk.Pointer("2485bd30-b777-49c0-b8f0-bddbe8d2a0fd"),
             IsActive: unifiedgosdk.Pointer(true),
             Language: unifiedgosdk.Pointer("ru"),
             Metadata: []shared.MarketingMetadata{},
@@ -59,7 +59,7 @@ func main() {
             SenderName: unifiedgosdk.Pointer("Blake Kuhn"),
             SenderPhone: unifiedgosdk.Pointer("359.305.7962 x28115"),
             Subject: unifiedgosdk.Pointer("Theca caecus copia crebro valeo ulciscor."),
-            UpdatedAt: types.MustNewTimeFromString("2022-09-13T10:08:43.347Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-09-13T20:09:43.170Z"),
         },
         ConnectionID: "<id>",
     })
@@ -92,7 +92,7 @@ func main() {
 
 ## GetMartechList
 
-Retrieve a list
+Retrieves a single MarketingList by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -147,7 +147,7 @@ func main() {
 
 ## ListMartechLists
 
-List all lists
+Returns a list of MarketingLists. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -201,7 +201,7 @@ func main() {
 
 ## PatchMartechList
 
-Update a list
+Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
 
 ### Example Usage
 
@@ -237,7 +237,7 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2019-09-18T02:01:36.950Z"),
             Description: unifiedgosdk.Pointer("Vilis."),
-            ID: unifiedgosdk.Pointer("fbf9dae2-4ca6-4dd6-8113-05be28e2eadc"),
+            ID: unifiedgosdk.Pointer("0032fa3c-da58-495e-9422-ab015754772d"),
             IsActive: unifiedgosdk.Pointer(true),
             Language: unifiedgosdk.Pointer("ru"),
             Metadata: []shared.MarketingMetadata{},
@@ -247,7 +247,7 @@ func main() {
             SenderName: unifiedgosdk.Pointer("Blake Kuhn"),
             SenderPhone: unifiedgosdk.Pointer("359.305.7962 x28115"),
             Subject: unifiedgosdk.Pointer("Theca caecus copia crebro valeo ulciscor."),
-            UpdatedAt: types.MustNewTimeFromString("2022-09-13T10:08:43.358Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-09-13T20:09:43.183Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -281,7 +281,7 @@ func main() {
 
 ## RemoveMartechList
 
-Remove a list
+Deletes the MarketingList identified by `id`.
 
 ### Example Usage
 
@@ -336,7 +336,7 @@ func main() {
 
 ## UpdateMartechList
 
-Update a list
+Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
 
 ### Example Usage
 
@@ -372,7 +372,7 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2019-09-18T02:01:36.950Z"),
             Description: unifiedgosdk.Pointer("Vilis."),
-            ID: unifiedgosdk.Pointer("fbf9dae2-4ca6-4dd6-8113-05be28e2eadc"),
+            ID: unifiedgosdk.Pointer("0032fa3c-da58-495e-9422-ab015754772d"),
             IsActive: unifiedgosdk.Pointer(true),
             Language: unifiedgosdk.Pointer("ru"),
             Metadata: []shared.MarketingMetadata{},
@@ -382,7 +382,7 @@ func main() {
             SenderName: unifiedgosdk.Pointer("Blake Kuhn"),
             SenderPhone: unifiedgosdk.Pointer("359.305.7962 x28115"),
             Subject: unifiedgosdk.Pointer("Theca caecus copia crebro valeo ulciscor."),
-            UpdatedAt: types.MustNewTimeFromString("2022-09-13T10:08:43.358Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-09-13T20:09:43.183Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

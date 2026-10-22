@@ -13,7 +13,7 @@
 
 ## CreateStorageFile
 
-Create a file
+Creates a StorageFile. Provide the unified StorageFile fields in the request body; they are mapped to the provider's API. Returns the created StorageFile.
 
 ### Example Usage
 
@@ -43,7 +43,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Deprimo crastinus cupiditate debilito cimentarius virgo acidus."),
             DownloadURL: unifiedgosdk.Pointer("https://clueless-laughter.biz"),
             Hash: unifiedgosdk.Pointer("d9d88dda7bc0acaa8472fdef2307f94a1fc355ce"),
-            ID: unifiedgosdk.Pointer("5a3b2522-ba9a-4fc0-b63a-50257b278c9b"),
+            ID: unifiedgosdk.Pointer("0d1cd6f6-0356-40db-aa64-5bd641156fd9"),
             Metadata: []shared.StorageMetadata{},
             MimeType: unifiedgosdk.Pointer("application/pdf"),
             Name: unifiedgosdk.Pointer("softly.pdf"),
@@ -52,7 +52,7 @@ func main() {
                 "suasoria",
             },
             Type: shared.StorageFileTypeFolder.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-05T13:00:18.919Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-05T19:31:07.733Z"),
             Version: unifiedgosdk.Pointer("1"),
             WebURL: unifiedgosdk.Pointer("https://faraway-inspection.org"),
         },
@@ -87,7 +87,7 @@ func main() {
 
 ## GetStorageFile
 
-Retrieve a file
+Retrieves a single StorageFile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -142,7 +142,7 @@ func main() {
 
 ## ListStorageFiles
 
-List all files
+Returns a list of StorageFiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -196,7 +196,7 @@ func main() {
 
 ## PatchStorageFile
 
-Update a file
+Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the request body.
 
 ### Example Usage
 
@@ -226,7 +226,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Deprimo crastinus cupiditate debilito cimentarius virgo acidus."),
             DownloadURL: unifiedgosdk.Pointer("https://clueless-laughter.biz"),
             Hash: unifiedgosdk.Pointer("d9d88dda7bc0acaa8472fdef2307f94a1fc355ce"),
-            ID: unifiedgosdk.Pointer("78dc5fa1-2bf0-4000-a4ed-49fb5198ac5e"),
+            ID: unifiedgosdk.Pointer("73931f2f-2719-461f-bde3-d18f871c1ec2"),
             Metadata: []shared.StorageMetadata{},
             MimeType: unifiedgosdk.Pointer("application/pdf"),
             Name: unifiedgosdk.Pointer("softly.pdf"),
@@ -235,7 +235,7 @@ func main() {
                 "suasoria",
             },
             Type: shared.StorageFileTypeFolder.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-05T13:00:18.925Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-05T19:31:07.740Z"),
             Version: unifiedgosdk.Pointer("1"),
             WebURL: unifiedgosdk.Pointer("https://faraway-inspection.org"),
         },
@@ -271,7 +271,7 @@ func main() {
 
 ## RemoveStorageFile
 
-Remove a file
+Deletes the StorageFile identified by `id`.
 
 ### Example Usage
 
@@ -326,7 +326,7 @@ func main() {
 
 ## UpdateStorageFile
 
-Update a file
+Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the request body.
 
 ### Example Usage
 
@@ -356,7 +356,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Deprimo crastinus cupiditate debilito cimentarius virgo acidus."),
             DownloadURL: unifiedgosdk.Pointer("https://clueless-laughter.biz"),
             Hash: unifiedgosdk.Pointer("d9d88dda7bc0acaa8472fdef2307f94a1fc355ce"),
-            ID: unifiedgosdk.Pointer("78dc5fa1-2bf0-4000-a4ed-49fb5198ac5e"),
+            ID: unifiedgosdk.Pointer("73931f2f-2719-461f-bde3-d18f871c1ec2"),
             Metadata: []shared.StorageMetadata{},
             MimeType: unifiedgosdk.Pointer("application/pdf"),
             Name: unifiedgosdk.Pointer("softly.pdf"),
@@ -365,7 +365,7 @@ func main() {
                 "suasoria",
             },
             Type: shared.StorageFileTypeFolder.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-05T13:00:18.925Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-05T19:31:07.740Z"),
             Version: unifiedgosdk.Pointer("1"),
             WebURL: unifiedgosdk.Pointer("https://faraway-inspection.org"),
         },

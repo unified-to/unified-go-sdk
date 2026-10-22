@@ -31,6 +31,7 @@ func newClubs(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 }
 
 // GetClubsActivity - Retrieve an activity
+// Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Clubs) GetClubsActivity(ctx context.Context, request operations.GetClubsActivityRequest, opts ...operations.Option) (*operations.GetClubsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -238,6 +239,7 @@ func (s *Clubs) GetClubsActivity(ctx context.Context, request operations.GetClub
 }
 
 // GetClubsEvent - Retrieve an event
+// Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Clubs) GetClubsEvent(ctx context.Context, request operations.GetClubsEventRequest, opts ...operations.Option) (*operations.GetClubsEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -445,6 +447,7 @@ func (s *Clubs) GetClubsEvent(ctx context.Context, request operations.GetClubsEv
 }
 
 // GetClubsGroup - Retrieve a group
+// Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Clubs) GetClubsGroup(ctx context.Context, request operations.GetClubsGroupRequest, opts ...operations.Option) (*operations.GetClubsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -652,6 +655,7 @@ func (s *Clubs) GetClubsGroup(ctx context.Context, request operations.GetClubsGr
 }
 
 // GetClubsLocation - Retrieve a location
+// Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Clubs) GetClubsLocation(ctx context.Context, request operations.GetClubsLocationRequest, opts ...operations.Option) (*operations.GetClubsLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -859,6 +863,7 @@ func (s *Clubs) GetClubsLocation(ctx context.Context, request operations.GetClub
 }
 
 // GetClubsMember - Retrieve a member
+// Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Clubs) GetClubsMember(ctx context.Context, request operations.GetClubsMemberRequest, opts ...operations.Option) (*operations.GetClubsMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1066,6 +1071,7 @@ func (s *Clubs) GetClubsMember(ctx context.Context, request operations.GetClubsM
 }
 
 // ListClubsActivities - List all activities
+// Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Clubs) ListClubsActivities(ctx context.Context, request operations.ListClubsActivitiesRequest, opts ...operations.Option) (*operations.ListClubsActivitiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1273,6 +1279,7 @@ func (s *Clubs) ListClubsActivities(ctx context.Context, request operations.List
 }
 
 // ListClubsEvents - List all events
+// Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Clubs) ListClubsEvents(ctx context.Context, request operations.ListClubsEventsRequest, opts ...operations.Option) (*operations.ListClubsEventsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1480,6 +1487,7 @@ func (s *Clubs) ListClubsEvents(ctx context.Context, request operations.ListClub
 }
 
 // ListClubsGroups - List all groups
+// Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Clubs) ListClubsGroups(ctx context.Context, request operations.ListClubsGroupsRequest, opts ...operations.Option) (*operations.ListClubsGroupsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1687,6 +1695,7 @@ func (s *Clubs) ListClubsGroups(ctx context.Context, request operations.ListClub
 }
 
 // ListClubsLocations - List all locations
+// Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Clubs) ListClubsLocations(ctx context.Context, request operations.ListClubsLocationsRequest, opts ...operations.Option) (*operations.ListClubsLocationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1894,6 +1903,7 @@ func (s *Clubs) ListClubsLocations(ctx context.Context, request operations.ListC
 }
 
 // ListClubsMembers - List all members
+// Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Clubs) ListClubsMembers(ctx context.Context, request operations.ListClubsMembersRequest, opts ...operations.Option) (*operations.ListClubsMembersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

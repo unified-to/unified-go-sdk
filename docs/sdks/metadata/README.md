@@ -13,7 +13,7 @@
 
 ## CreateMetadataMetadata
 
-Create a metadata
+Creates a MetadataMetadata. Provide the unified MetadataMetadata fields in the request body; they are mapped to the provider's API. Returns the created MetadataMetadata.
 
 ### Example Usage
 
@@ -41,7 +41,7 @@ func main() {
         MetadataMetadata: shared.MetadataMetadata{
             CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
             Format: shared.MetadataMetadataFormatPrice.ToPointer(),
-            ID: unifiedgosdk.Pointer("dbbc040f-bb48-4438-8256-765ae1cb0848"),
+            ID: unifiedgosdk.Pointer("4eaedcd1-462a-4103-9427-61bfc67e9a06"),
             IsRequired: unifiedgosdk.Pointer(false),
             Name: "autem",
             ObjectType: "social_review",
@@ -51,7 +51,7 @@ func main() {
             Options: []string{},
             OriginalFormat: unifiedgosdk.Pointer("advoco"),
             Slug: unifiedgosdk.Pointer("arbustum"),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-21T23:11:37.812Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-22T16:12:57.104Z"),
         },
         ConnectionID: "<id>",
     })
@@ -84,7 +84,7 @@ func main() {
 
 ## GetMetadataMetadata
 
-Retrieve a metadata
+Retrieves a single MetadataMetadata by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -139,7 +139,7 @@ func main() {
 
 ## ListMetadataMetadatas
 
-List all metadatas
+Returns a list of MetadataMetadatas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -193,7 +193,7 @@ func main() {
 
 ## PatchMetadataMetadata
 
-Update a metadata
+Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to change in the request body.
 
 ### Example Usage
 
@@ -221,7 +221,7 @@ func main() {
         MetadataMetadata: shared.MetadataMetadata{
             CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
             Format: shared.MetadataMetadataFormatPrice.ToPointer(),
-            ID: unifiedgosdk.Pointer("0912c17d-86b6-421b-a784-7e3b97268ea4"),
+            ID: unifiedgosdk.Pointer("2d55f06c-b5a3-4bcc-8c9f-8019ba671c05"),
             IsRequired: unifiedgosdk.Pointer(false),
             Name: "autem",
             ObjectType: "social_review",
@@ -231,7 +231,7 @@ func main() {
             Options: []string{},
             OriginalFormat: unifiedgosdk.Pointer("advoco"),
             Slug: unifiedgosdk.Pointer("arbustum"),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-21T23:11:37.818Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-22T16:12:57.114Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -265,7 +265,7 @@ func main() {
 
 ## RemoveMetadataMetadata
 
-Remove a metadata
+Deletes the MetadataMetadata identified by `id`.
 
 ### Example Usage
 
@@ -320,7 +320,7 @@ func main() {
 
 ## UpdateMetadataMetadata
 
-Update a metadata
+Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to change in the request body.
 
 ### Example Usage
 
@@ -348,7 +348,7 @@ func main() {
         MetadataMetadata: shared.MetadataMetadata{
             CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
             Format: shared.MetadataMetadataFormatPrice.ToPointer(),
-            ID: unifiedgosdk.Pointer("0912c17d-86b6-421b-a784-7e3b97268ea4"),
+            ID: unifiedgosdk.Pointer("2d55f06c-b5a3-4bcc-8c9f-8019ba671c05"),
             IsRequired: unifiedgosdk.Pointer(false),
             Name: "autem",
             ObjectType: "social_review",
@@ -358,7 +358,7 @@ func main() {
             Options: []string{},
             OriginalFormat: unifiedgosdk.Pointer("advoco"),
             Slug: unifiedgosdk.Pointer("arbustum"),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-21T23:11:37.818Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-22T16:12:57.114Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

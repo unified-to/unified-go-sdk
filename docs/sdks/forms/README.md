@@ -15,7 +15,7 @@
 
 ## CreateFormsForm
 
-Create a form
+Creates a FormsForm. Provide the unified FormsForm fields in the request body; they are mapped to the provider's API. Returns the created FormsForm.
 
 ### Example Usage
 
@@ -47,24 +47,24 @@ func main() {
             Fields: []shared.FormField{
                 shared.FormField{
                     CreatedAt: types.MustNewTimeFromString("2023-10-05T21:34:29.094Z"),
-                    ID: unifiedgosdk.Pointer("259e3054-2f56-4598-a481-594e42144463"),
+                    ID: unifiedgosdk.Pointer("d7d1f512-00af-41ae-8848-a81b9fdd7ef7"),
                     IsActive: unifiedgosdk.Pointer(true),
                     IsRequired: unifiedgosdk.Pointer(true),
                     MaxLength: unifiedgosdk.Pointer[float64](146.0),
                     Name: "cornu creta confugo",
                     Order: unifiedgosdk.Pointer[float64](0.0),
                     Type: shared.FormFieldTypeTextarea,
-                    UpdatedAt: types.MustNewTimeFromString("2025-04-28T16:10:47.286Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2025-04-29T04:23:28.408Z"),
                 },
                 shared.FormField{
                     CreatedAt: types.MustNewTimeFromString("2023-10-05T21:34:29.094Z"),
-                    ID: unifiedgosdk.Pointer("2ea6abf4-abd3-4231-bc19-e9ba60bb97da"),
+                    ID: unifiedgosdk.Pointer("b9e35f9d-0745-43bf-976d-54b8d47bd449"),
                     IsActive: unifiedgosdk.Pointer(true),
                     IsRequired: unifiedgosdk.Pointer(false),
                     Name: "tracto nostrum desidero",
                     Order: unifiedgosdk.Pointer[float64](1.0),
                     Type: shared.FormFieldTypeTextarea,
-                    UpdatedAt: types.MustNewTimeFromString("2024-09-02T04:02:05.119Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2024-09-02T11:08:36.500Z"),
                 },
                 shared.FormField{
                     Choices: []string{
@@ -76,36 +76,36 @@ func main() {
                     },
                     CreatedAt: types.MustNewTimeFromString("2023-10-05T21:34:29.094Z"),
                     DefaultValue: unifiedgosdk.Pointer("somniculosus"),
-                    ID: unifiedgosdk.Pointer("b8432254-8ecc-4dbe-bd02-e2c55c774453"),
+                    ID: unifiedgosdk.Pointer("2115df7c-e0eb-4d99-bc29-1d93831f1680"),
                     IsActive: unifiedgosdk.Pointer(true),
                     IsRequired: unifiedgosdk.Pointer(false),
                     Name: "officia supra consequatur",
                     Order: unifiedgosdk.Pointer[float64](2.0),
                     Type: shared.FormFieldTypeMultipleSelect,
-                    UpdatedAt: types.MustNewTimeFromString("2024-02-26T08:30:25.764Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2024-02-26T11:34:34.712Z"),
                 },
                 shared.FormField{
                     CreatedAt: types.MustNewTimeFromString("2023-10-05T21:34:29.094Z"),
                     Description: unifiedgosdk.Pointer("Antepono cursim aurum voluptatum placeat audax tripudio amo."),
-                    ID: unifiedgosdk.Pointer("a4966f8b-d191-4b0c-8a62-d895c0df3b70"),
+                    ID: unifiedgosdk.Pointer("a35e7b54-0286-4976-bb95-adfa8f35479c"),
                     IsActive: unifiedgosdk.Pointer(true),
                     IsRequired: unifiedgosdk.Pointer(false),
                     Name: "curtus fugiat audentia",
                     Order: unifiedgosdk.Pointer[float64](3.0),
                     Type: shared.FormFieldTypeTextarea,
-                    UpdatedAt: types.MustNewTimeFromString("2024-11-27T10:04:32.566Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2024-11-27T19:01:47.055Z"),
                 },
             },
             HasMultipleSubmissions: unifiedgosdk.Pointer(false),
             HasProgressBar: unifiedgosdk.Pointer(false),
             HasShuffleQuestions: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("f34aaf0b-3045-4a27-880e-a8a8c129035c"),
+            ID: unifiedgosdk.Pointer("52e84c28-f204-46e5-9464-a3715c87ccc5"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.FormsMetadata{},
             Name: unifiedgosdk.Pointer("tandem tracto vivo Form"),
             PublishedURL: unifiedgosdk.Pointer("https://massive-blowgun.info"),
             ResponseCount: unifiedgosdk.Pointer[float64](423.0),
-            UpdatedAt: types.MustNewTimeFromString("2024-08-24T19:17:44.074Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-08-25T02:13:31.249Z"),
         },
         ConnectionID: "<id>",
     })
@@ -138,7 +138,7 @@ func main() {
 
 ## GetFormsForm
 
-Retrieve a form
+Retrieves a single FormsForm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -193,7 +193,7 @@ func main() {
 
 ## GetFormsSubmission
 
-Retrieve a submission
+Retrieves a single FormsSubmission by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -248,7 +248,7 @@ func main() {
 
 ## ListFormsForms
 
-List all forms
+Returns a list of FormsForms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -302,7 +302,7 @@ func main() {
 
 ## ListFormsSubmissions
 
-List all submissions
+Returns a list of FormsSubmissions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -356,7 +356,7 @@ func main() {
 
 ## PatchFormsForm
 
-Update a form
+Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
 
 ### Example Usage
 
@@ -388,24 +388,24 @@ func main() {
             Fields: []shared.FormField{
                 shared.FormField{
                     CreatedAt: types.MustNewTimeFromString("2023-10-05T21:34:29.094Z"),
-                    ID: unifiedgosdk.Pointer("49f3b591-a412-4d9d-86c2-5946fb9b51fe"),
+                    ID: unifiedgosdk.Pointer("088e5958-3a96-4c0d-902c-75f6c5a156db"),
                     IsActive: unifiedgosdk.Pointer(true),
                     IsRequired: unifiedgosdk.Pointer(true),
                     MaxLength: unifiedgosdk.Pointer[float64](146.0),
                     Name: "cornu creta confugo",
                     Order: unifiedgosdk.Pointer[float64](0.0),
                     Type: shared.FormFieldTypeTextarea,
-                    UpdatedAt: types.MustNewTimeFromString("2025-04-28T16:10:47.299Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2025-04-29T04:23:28.423Z"),
                 },
                 shared.FormField{
                     CreatedAt: types.MustNewTimeFromString("2023-10-05T21:34:29.094Z"),
-                    ID: unifiedgosdk.Pointer("5cc38b5d-9a1f-4602-8d8b-ef8bb2126477"),
+                    ID: unifiedgosdk.Pointer("bb7e7ca5-ca1d-456e-b914-599b6cc213d1"),
                     IsActive: unifiedgosdk.Pointer(true),
                     IsRequired: unifiedgosdk.Pointer(false),
                     Name: "tracto nostrum desidero",
                     Order: unifiedgosdk.Pointer[float64](1.0),
                     Type: shared.FormFieldTypeTextarea,
-                    UpdatedAt: types.MustNewTimeFromString("2024-09-02T04:02:05.127Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2024-09-02T11:08:36.508Z"),
                 },
                 shared.FormField{
                     Choices: []string{
@@ -417,36 +417,36 @@ func main() {
                     },
                     CreatedAt: types.MustNewTimeFromString("2023-10-05T21:34:29.094Z"),
                     DefaultValue: unifiedgosdk.Pointer("somniculosus"),
-                    ID: unifiedgosdk.Pointer("02ff61fe-3dac-4fcf-bc2f-79906828e4b5"),
+                    ID: unifiedgosdk.Pointer("2acb1e27-8d73-4728-978c-d812a931dcef"),
                     IsActive: unifiedgosdk.Pointer(true),
                     IsRequired: unifiedgosdk.Pointer(false),
                     Name: "officia supra consequatur",
                     Order: unifiedgosdk.Pointer[float64](2.0),
                     Type: shared.FormFieldTypeMultipleSelect,
-                    UpdatedAt: types.MustNewTimeFromString("2024-02-26T08:30:25.768Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2024-02-26T11:34:34.716Z"),
                 },
                 shared.FormField{
                     CreatedAt: types.MustNewTimeFromString("2023-10-05T21:34:29.094Z"),
                     Description: unifiedgosdk.Pointer("Antepono cursim aurum voluptatum placeat audax tripudio amo."),
-                    ID: unifiedgosdk.Pointer("0765bee4-5f1c-4e3c-8393-6cc3a4ea84ec"),
+                    ID: unifiedgosdk.Pointer("6d2d6426-b9b2-4538-a528-751d00512c2b"),
                     IsActive: unifiedgosdk.Pointer(true),
                     IsRequired: unifiedgosdk.Pointer(false),
                     Name: "curtus fugiat audentia",
                     Order: unifiedgosdk.Pointer[float64](3.0),
                     Type: shared.FormFieldTypeTextarea,
-                    UpdatedAt: types.MustNewTimeFromString("2024-11-27T10:04:32.575Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2024-11-27T19:01:47.066Z"),
                 },
             },
             HasMultipleSubmissions: unifiedgosdk.Pointer(false),
             HasProgressBar: unifiedgosdk.Pointer(false),
             HasShuffleQuestions: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("ced3b9b1-be79-4af6-ab0c-c62a0c199374"),
+            ID: unifiedgosdk.Pointer("508b1418-fc70-4deb-b5b8-6067c7b9e915"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.FormsMetadata{},
             Name: unifiedgosdk.Pointer("tandem tracto vivo Form"),
             PublishedURL: unifiedgosdk.Pointer("https://massive-blowgun.info"),
             ResponseCount: unifiedgosdk.Pointer[float64](423.0),
-            UpdatedAt: types.MustNewTimeFromString("2024-08-24T19:17:44.082Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-08-25T02:13:31.257Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -480,7 +480,7 @@ func main() {
 
 ## RemoveFormsForm
 
-Remove a form
+Deletes the FormsForm identified by `id`.
 
 ### Example Usage
 
@@ -535,7 +535,7 @@ func main() {
 
 ## UpdateFormsForm
 
-Update a form
+Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
 
 ### Example Usage
 
@@ -567,24 +567,24 @@ func main() {
             Fields: []shared.FormField{
                 shared.FormField{
                     CreatedAt: types.MustNewTimeFromString("2023-10-05T21:34:29.094Z"),
-                    ID: unifiedgosdk.Pointer("49f3b591-a412-4d9d-86c2-5946fb9b51fe"),
+                    ID: unifiedgosdk.Pointer("088e5958-3a96-4c0d-902c-75f6c5a156db"),
                     IsActive: unifiedgosdk.Pointer(true),
                     IsRequired: unifiedgosdk.Pointer(true),
                     MaxLength: unifiedgosdk.Pointer[float64](146.0),
                     Name: "cornu creta confugo",
                     Order: unifiedgosdk.Pointer[float64](0.0),
                     Type: shared.FormFieldTypeTextarea,
-                    UpdatedAt: types.MustNewTimeFromString("2025-04-28T16:10:47.299Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2025-04-29T04:23:28.423Z"),
                 },
                 shared.FormField{
                     CreatedAt: types.MustNewTimeFromString("2023-10-05T21:34:29.094Z"),
-                    ID: unifiedgosdk.Pointer("5cc38b5d-9a1f-4602-8d8b-ef8bb2126477"),
+                    ID: unifiedgosdk.Pointer("bb7e7ca5-ca1d-456e-b914-599b6cc213d1"),
                     IsActive: unifiedgosdk.Pointer(true),
                     IsRequired: unifiedgosdk.Pointer(false),
                     Name: "tracto nostrum desidero",
                     Order: unifiedgosdk.Pointer[float64](1.0),
                     Type: shared.FormFieldTypeTextarea,
-                    UpdatedAt: types.MustNewTimeFromString("2024-09-02T04:02:05.127Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2024-09-02T11:08:36.508Z"),
                 },
                 shared.FormField{
                     Choices: []string{
@@ -596,36 +596,36 @@ func main() {
                     },
                     CreatedAt: types.MustNewTimeFromString("2023-10-05T21:34:29.094Z"),
                     DefaultValue: unifiedgosdk.Pointer("somniculosus"),
-                    ID: unifiedgosdk.Pointer("02ff61fe-3dac-4fcf-bc2f-79906828e4b5"),
+                    ID: unifiedgosdk.Pointer("2acb1e27-8d73-4728-978c-d812a931dcef"),
                     IsActive: unifiedgosdk.Pointer(true),
                     IsRequired: unifiedgosdk.Pointer(false),
                     Name: "officia supra consequatur",
                     Order: unifiedgosdk.Pointer[float64](2.0),
                     Type: shared.FormFieldTypeMultipleSelect,
-                    UpdatedAt: types.MustNewTimeFromString("2024-02-26T08:30:25.768Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2024-02-26T11:34:34.716Z"),
                 },
                 shared.FormField{
                     CreatedAt: types.MustNewTimeFromString("2023-10-05T21:34:29.094Z"),
                     Description: unifiedgosdk.Pointer("Antepono cursim aurum voluptatum placeat audax tripudio amo."),
-                    ID: unifiedgosdk.Pointer("0765bee4-5f1c-4e3c-8393-6cc3a4ea84ec"),
+                    ID: unifiedgosdk.Pointer("6d2d6426-b9b2-4538-a528-751d00512c2b"),
                     IsActive: unifiedgosdk.Pointer(true),
                     IsRequired: unifiedgosdk.Pointer(false),
                     Name: "curtus fugiat audentia",
                     Order: unifiedgosdk.Pointer[float64](3.0),
                     Type: shared.FormFieldTypeTextarea,
-                    UpdatedAt: types.MustNewTimeFromString("2024-11-27T10:04:32.575Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2024-11-27T19:01:47.066Z"),
                 },
             },
             HasMultipleSubmissions: unifiedgosdk.Pointer(false),
             HasProgressBar: unifiedgosdk.Pointer(false),
             HasShuffleQuestions: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("ced3b9b1-be79-4af6-ab0c-c62a0c199374"),
+            ID: unifiedgosdk.Pointer("508b1418-fc70-4deb-b5b8-6067c7b9e915"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.FormsMetadata{},
             Name: unifiedgosdk.Pointer("tandem tracto vivo Form"),
             PublishedURL: unifiedgosdk.Pointer("https://massive-blowgun.info"),
             ResponseCount: unifiedgosdk.Pointer[float64](423.0),
-            UpdatedAt: types.MustNewTimeFromString("2024-08-24T19:17:44.082Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-08-25T02:13:31.257Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

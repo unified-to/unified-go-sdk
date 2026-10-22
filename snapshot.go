@@ -31,6 +31,7 @@ func newSnapshot(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateComputeSnapshot - Create a snapshot
+// Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are mapped to the provider's API. Returns the created ComputeSnapshot.
 func (s *Snapshot) CreateComputeSnapshot(ctx context.Context, request operations.CreateComputeSnapshotRequest, opts ...operations.Option) (*operations.CreateComputeSnapshotResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Snapshot) CreateComputeSnapshot(ctx context.Context, request operations
 }
 
 // GetComputeSnapshot - Retrieve a snapshot
+// Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Snapshot) GetComputeSnapshot(ctx context.Context, request operations.GetComputeSnapshotRequest, opts ...operations.Option) (*operations.GetComputeSnapshotResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Snapshot) GetComputeSnapshot(ctx context.Context, request operations.Ge
 }
 
 // ListComputeSnapshots - List all snapshots
+// Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Snapshot) ListComputeSnapshots(ctx context.Context, request operations.ListComputeSnapshotsRequest, opts ...operations.Option) (*operations.ListComputeSnapshotsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Snapshot) ListComputeSnapshots(ctx context.Context, request operations.
 }
 
 // RemoveComputeSnapshot - Remove a snapshot
+// Deletes the ComputeSnapshot identified by `id`.
 func (s *Snapshot) RemoveComputeSnapshot(ctx context.Context, request operations.RemoveComputeSnapshotRequest, opts ...operations.Option) (*operations.RemoveComputeSnapshotResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

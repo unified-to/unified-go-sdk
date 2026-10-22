@@ -84,7 +84,8 @@ type AtsJob struct {
 	Metadata               []AtsMetadata `json:"metadata,omitempty"`
 	MinimumDegree          *string       `json:"minimum_degree,omitempty"`
 	MinimumExperienceYears *float64      `json:"minimum_experience_years,omitempty"`
-	Name                   *string       `json:"name,omitempty"`
+	// The job's title
+	Name *string `json:"name,omitempty"`
 	// Number of openings for the job
 	NumberOfOpenings *float64        `json:"number_of_openings,omitempty"`
 	Openings         []AtsJobOpening `json:"openings,omitempty"`

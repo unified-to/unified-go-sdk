@@ -31,6 +31,7 @@ func newStorage(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateStorageFile - Create a file
+// Creates a StorageFile. Provide the unified StorageFile fields in the request body; they are mapped to the provider's API. Returns the created StorageFile.
 func (s *Storage) CreateStorageFile(ctx context.Context, request operations.CreateStorageFileRequest, opts ...operations.Option) (*operations.CreateStorageFileResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Storage) CreateStorageFile(ctx context.Context, request operations.Crea
 }
 
 // GetStorageFile - Retrieve a file
+// Retrieves a single StorageFile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Storage) GetStorageFile(ctx context.Context, request operations.GetStorageFileRequest, opts ...operations.Option) (*operations.GetStorageFileResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Storage) GetStorageFile(ctx context.Context, request operations.GetStor
 }
 
 // ListStorageFiles - List all files
+// Returns a list of StorageFiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Storage) ListStorageFiles(ctx context.Context, request operations.ListStorageFilesRequest, opts ...operations.Option) (*operations.ListStorageFilesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Storage) ListStorageFiles(ctx context.Context, request operations.ListS
 }
 
 // PatchStorageFile - Update a file
+// Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the request body.
 func (s *Storage) PatchStorageFile(ctx context.Context, request operations.PatchStorageFileRequest, opts ...operations.Option) (*operations.PatchStorageFileResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Storage) PatchStorageFile(ctx context.Context, request operations.Patch
 }
 
 // RemoveStorageFile - Remove a file
+// Deletes the StorageFile identified by `id`.
 func (s *Storage) RemoveStorageFile(ctx context.Context, request operations.RemoveStorageFileRequest, opts ...operations.Option) (*operations.RemoveStorageFileResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Storage) RemoveStorageFile(ctx context.Context, request operations.Remo
 }
 
 // UpdateStorageFile - Update a file
+// Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the request body.
 func (s *Storage) UpdateStorageFile(ctx context.Context, request operations.UpdateStorageFileRequest, opts ...operations.Option) (*operations.UpdateStorageFileResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

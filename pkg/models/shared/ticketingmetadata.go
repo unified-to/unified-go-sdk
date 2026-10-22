@@ -275,6 +275,7 @@ func (u TicketingMetadataExtraData) MarshalJSON() ([]byte, error) {
 	return nil, errors.New("could not marshal union type TicketingMetadataExtraData: all fields are null")
 }
 
+// TicketingMetadataFormat - The data type of the custom field, which determines how `value` is formatted.
 type TicketingMetadataFormat string
 
 const (
@@ -449,6 +450,7 @@ const (
 	TicketingMetadataValueTypeArrayOfTicketingMetadataSchemas5 TicketingMetadataValueType = "arrayOfTicketingMetadataSchemas5"
 )
 
+// TicketingMetadataValue - The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false; MULTIPLE_SELECT as an array of option values; otherwise a string.
 type TicketingMetadataValue struct {
 	MapOfAny                         map[string]any              `queryParam:"inline" union:"member"`
 	Str                              *string                     `queryParam:"inline" union:"member"`
@@ -577,11 +579,15 @@ func (u TicketingMetadataValue) MarshalJSON() ([]byte, error) {
 
 type TicketingMetadata struct {
 	ExtraData *TicketingMetadataExtraData `json:"extra_data,omitempty"`
-	Format    *TicketingMetadataFormat    `json:"format,omitempty"`
-	ID        *string                     `json:"id,omitempty"`
-	Namespace *string                     `json:"namespace,omitempty"`
-	Slug      *string                     `json:"slug,omitempty"`
-	Value     *TicketingMetadataValue     `json:"value,omitempty"`
+	// The data type of the custom field, which determines how `value` is formatted.
+	Format *TicketingMetadataFormat `json:"format,omitempty"`
+	// The ID of the custom field definition (from the metadata/metadata endpoint).
+	ID        *string `json:"id,omitempty"`
+	Namespace *string `json:"namespace,omitempty"`
+	// The integration's API name (key) of an existing custom field. List valid slugs for this object with the metadata/metadata endpoint; unknown slugs are rejected by the integration.
+	Slug *string `json:"slug,omitempty"`
+	// The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false; MULTIPLE_SELECT as an array of option values; otherwise a string.
+	Value *TicketingMetadataValue `json:"value,omitempty"`
 }
 
 func (t *TicketingMetadata) GetExtraData() *TicketingMetadataExtraData {

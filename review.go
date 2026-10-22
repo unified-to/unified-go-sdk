@@ -31,6 +31,7 @@ func newReview(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 }
 
 // CreateCommerceReview - Create a review
+// Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are mapped to the provider's API. Returns the created CommerceReview.
 func (s *Review) CreateCommerceReview(ctx context.Context, request operations.CreateCommerceReviewRequest, opts ...operations.Option) (*operations.CreateCommerceReviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Review) CreateCommerceReview(ctx context.Context, request operations.Cr
 }
 
 // GetCommerceReview - Retrieve a review
+// Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Review) GetCommerceReview(ctx context.Context, request operations.GetCommerceReviewRequest, opts ...operations.Option) (*operations.GetCommerceReviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Review) GetCommerceReview(ctx context.Context, request operations.GetCo
 }
 
 // GetPerformanceReview - Retrieve a review
+// Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Review) GetPerformanceReview(ctx context.Context, request operations.GetPerformanceReviewRequest, opts ...operations.Option) (*operations.GetPerformanceReviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Review) GetPerformanceReview(ctx context.Context, request operations.Ge
 }
 
 // GetSocialReview - Retrieve a review
+// Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Review) GetSocialReview(ctx context.Context, request operations.GetSocialReviewRequest, opts ...operations.Option) (*operations.GetSocialReviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -866,6 +870,7 @@ func (s *Review) GetSocialReview(ctx context.Context, request operations.GetSoci
 }
 
 // ListCommerceReviews - List all reviews
+// Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Review) ListCommerceReviews(ctx context.Context, request operations.ListCommerceReviewsRequest, opts ...operations.Option) (*operations.ListCommerceReviewsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1073,6 +1078,7 @@ func (s *Review) ListCommerceReviews(ctx context.Context, request operations.Lis
 }
 
 // ListPerformanceReviews - List all reviews
+// Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Review) ListPerformanceReviews(ctx context.Context, request operations.ListPerformanceReviewsRequest, opts ...operations.Option) (*operations.ListPerformanceReviewsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1280,6 +1286,7 @@ func (s *Review) ListPerformanceReviews(ctx context.Context, request operations.
 }
 
 // ListSocialReviews - List all reviews
+// Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Review) ListSocialReviews(ctx context.Context, request operations.ListSocialReviewsRequest, opts ...operations.Option) (*operations.ListSocialReviewsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1487,6 +1494,7 @@ func (s *Review) ListSocialReviews(ctx context.Context, request operations.ListS
 }
 
 // PatchCommerceReview - Update a review
+// Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 func (s *Review) PatchCommerceReview(ctx context.Context, request operations.PatchCommerceReviewRequest, opts ...operations.Option) (*operations.PatchCommerceReviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1701,6 +1709,7 @@ func (s *Review) PatchCommerceReview(ctx context.Context, request operations.Pat
 }
 
 // PatchSocialReview - Update a review
+// Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
 func (s *Review) PatchSocialReview(ctx context.Context, request operations.PatchSocialReviewRequest, opts ...operations.Option) (*operations.PatchSocialReviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1915,6 +1924,7 @@ func (s *Review) PatchSocialReview(ctx context.Context, request operations.Patch
 }
 
 // RemoveCommerceReview - Remove a review
+// Deletes the CommerceReview identified by `id`.
 func (s *Review) RemoveCommerceReview(ctx context.Context, request operations.RemoveCommerceReviewRequest, opts ...operations.Option) (*operations.RemoveCommerceReviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2097,6 +2107,7 @@ func (s *Review) RemoveCommerceReview(ctx context.Context, request operations.Re
 }
 
 // UpdateCommerceReview - Update a review
+// Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 func (s *Review) UpdateCommerceReview(ctx context.Context, request operations.UpdateCommerceReviewRequest, opts ...operations.Option) (*operations.UpdateCommerceReviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2311,6 +2322,7 @@ func (s *Review) UpdateCommerceReview(ctx context.Context, request operations.Up
 }
 
 // UpdateSocialReview - Update a review
+// Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
 func (s *Review) UpdateSocialReview(ctx context.Context, request operations.UpdateSocialReviewRequest, opts ...operations.Option) (*operations.UpdateSocialReviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

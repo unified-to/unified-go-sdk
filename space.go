@@ -31,6 +31,7 @@ func newSpace(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 }
 
 // CreateKmsSpace - Create a space
+// Creates a KmsSpace. Provide the unified KmsSpace fields in the request body; they are mapped to the provider's API. Returns the created KmsSpace.
 func (s *Space) CreateKmsSpace(ctx context.Context, request operations.CreateKmsSpaceRequest, opts ...operations.Option) (*operations.CreateKmsSpaceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Space) CreateKmsSpace(ctx context.Context, request operations.CreateKms
 }
 
 // GetKmsSpace - Retrieve a space
+// Retrieves a single KmsSpace by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Space) GetKmsSpace(ctx context.Context, request operations.GetKmsSpaceRequest, opts ...operations.Option) (*operations.GetKmsSpaceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Space) GetKmsSpace(ctx context.Context, request operations.GetKmsSpaceR
 }
 
 // ListKmsSpaces - List all spaces
+// Returns a list of KmsSpaces. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Space) ListKmsSpaces(ctx context.Context, request operations.ListKmsSpacesRequest, opts ...operations.Option) (*operations.ListKmsSpacesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Space) ListKmsSpaces(ctx context.Context, request operations.ListKmsSpa
 }
 
 // PatchKmsSpace - Update a space
+// Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 func (s *Space) PatchKmsSpace(ctx context.Context, request operations.PatchKmsSpaceRequest, opts ...operations.Option) (*operations.PatchKmsSpaceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Space) PatchKmsSpace(ctx context.Context, request operations.PatchKmsSp
 }
 
 // RemoveKmsSpace - Remove a space
+// Deletes the KmsSpace identified by `id`.
 func (s *Space) RemoveKmsSpace(ctx context.Context, request operations.RemoveKmsSpaceRequest, opts ...operations.Option) (*operations.RemoveKmsSpaceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Space) RemoveKmsSpace(ctx context.Context, request operations.RemoveKms
 }
 
 // UpdateKmsSpace - Update a space
+// Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 func (s *Space) UpdateKmsSpace(ctx context.Context, request operations.UpdateKmsSpaceRequest, opts ...operations.Option) (*operations.UpdateKmsSpaceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

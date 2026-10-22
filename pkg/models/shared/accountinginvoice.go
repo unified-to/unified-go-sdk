@@ -167,12 +167,13 @@ type AccountingInvoice struct {
 	// External identifier (ie. reference) for this invoice
 	InvoiceNumber *string `json:"invoice_number,omitempty"`
 	// True when the document amounts already include tax
-	IsInclusiveOfTax *bool                `json:"is_inclusive_of_tax,omitempty"`
-	Lineitems        []AccountingLineitem `json:"lineitems,omitempty"`
-	Metadata         []AccountingMetadata `json:"metadata,omitempty"`
-	Notes            *string              `json:"notes,omitempty"`
-	OrganizationID   *string              `json:"organization_id,omitempty"`
-	PaidAmount       *float64             `json:"paid_amount,omitempty"`
+	IsInclusiveOfTax *bool `json:"is_inclusive_of_tax,omitempty"`
+	// The invoice's line items: what is billed, with the quantity, price and amount of each
+	Lineitems      []AccountingLineitem `json:"lineitems,omitempty"`
+	Metadata       []AccountingMetadata `json:"metadata,omitempty"`
+	Notes          *string              `json:"notes,omitempty"`
+	OrganizationID *string              `json:"organization_id,omitempty"`
+	PaidAmount     *float64             `json:"paid_amount,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	PaidAt *time.Time `json:"paid_at,omitempty"`
 	// When set to charging_automatically, an automated attempt will occur to pay this invoice using the default payment source attached to the contactcustomer. When set to send_invoice, an will email will be sent with this invoice to the contact/customer with payment instructions.

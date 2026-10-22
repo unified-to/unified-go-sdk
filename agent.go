@@ -31,6 +31,7 @@ func newAgent(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 }
 
 // CreateGenaiAgent - Create an agent
+// Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to the provider's API. Returns the created GenaiAgent.
 func (s *Agent) CreateGenaiAgent(ctx context.Context, request operations.CreateGenaiAgentRequest, opts ...operations.Option) (*operations.CreateGenaiAgentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Agent) CreateGenaiAgent(ctx context.Context, request operations.CreateG
 }
 
 // GetGenaiAgent - Retrieve an agent
+// Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Agent) GetGenaiAgent(ctx context.Context, request operations.GetGenaiAgentRequest, opts ...operations.Option) (*operations.GetGenaiAgentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Agent) GetGenaiAgent(ctx context.Context, request operations.GetGenaiAg
 }
 
 // ListGenaiAgents - List all agents
+// Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Agent) ListGenaiAgents(ctx context.Context, request operations.ListGenaiAgentsRequest, opts ...operations.Option) (*operations.ListGenaiAgentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Agent) ListGenaiAgents(ctx context.Context, request operations.ListGena
 }
 
 // PatchGenaiAgent - Update an agent
+// Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 func (s *Agent) PatchGenaiAgent(ctx context.Context, request operations.PatchGenaiAgentRequest, opts ...operations.Option) (*operations.PatchGenaiAgentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Agent) PatchGenaiAgent(ctx context.Context, request operations.PatchGen
 }
 
 // RemoveGenaiAgent - Remove an agent
+// Deletes the GenaiAgent identified by `id`.
 func (s *Agent) RemoveGenaiAgent(ctx context.Context, request operations.RemoveGenaiAgentRequest, opts ...operations.Option) (*operations.RemoveGenaiAgentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Agent) RemoveGenaiAgent(ctx context.Context, request operations.RemoveG
 }
 
 // UpdateGenaiAgent - Update an agent
+// Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 func (s *Agent) UpdateGenaiAgent(ctx context.Context, request operations.UpdateGenaiAgentRequest, opts ...operations.Option) (*operations.UpdateGenaiAgentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

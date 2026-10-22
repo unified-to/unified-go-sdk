@@ -31,6 +31,7 @@ func newSegment(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateCdpSegment - Create a segment
+// Creates a CdpSegment. Provide the unified CdpSegment fields in the request body; they are mapped to the provider's API. Returns the created CdpSegment.
 func (s *Segment) CreateCdpSegment(ctx context.Context, request operations.CreateCdpSegmentRequest, opts ...operations.Option) (*operations.CreateCdpSegmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Segment) CreateCdpSegment(ctx context.Context, request operations.Creat
 }
 
 // GetCdpSegment - Retrieve a segment
+// Retrieves a single CdpSegment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Segment) GetCdpSegment(ctx context.Context, request operations.GetCdpSegmentRequest, opts ...operations.Option) (*operations.GetCdpSegmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Segment) GetCdpSegment(ctx context.Context, request operations.GetCdpSe
 }
 
 // ListCdpSegments - List all segments
+// Returns a list of CdpSegments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Segment) ListCdpSegments(ctx context.Context, request operations.ListCdpSegmentsRequest, opts ...operations.Option) (*operations.ListCdpSegmentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Segment) ListCdpSegments(ctx context.Context, request operations.ListCd
 }
 
 // PatchCdpSegment - Update a segment
+// Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the request body.
 func (s *Segment) PatchCdpSegment(ctx context.Context, request operations.PatchCdpSegmentRequest, opts ...operations.Option) (*operations.PatchCdpSegmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Segment) PatchCdpSegment(ctx context.Context, request operations.PatchC
 }
 
 // RemoveCdpSegment - Remove a segment
+// Deletes the CdpSegment identified by `id`.
 func (s *Segment) RemoveCdpSegment(ctx context.Context, request operations.RemoveCdpSegmentRequest, opts ...operations.Option) (*operations.RemoveCdpSegmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Segment) RemoveCdpSegment(ctx context.Context, request operations.Remov
 }
 
 // UpdateCdpSegment - Update a segment
+// Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the request body.
 func (s *Segment) UpdateCdpSegment(ctx context.Context, request operations.UpdateCdpSegmentRequest, opts ...operations.Option) (*operations.UpdateCdpSegmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

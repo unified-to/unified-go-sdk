@@ -31,6 +31,7 @@ func newAppointment(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 }
 
 // CreateHealthcareAppointment - Create an appointment
+// Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
 func (s *Appointment) CreateHealthcareAppointment(ctx context.Context, request operations.CreateHealthcareAppointmentRequest, opts ...operations.Option) (*operations.CreateHealthcareAppointmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Appointment) CreateHealthcareAppointment(ctx context.Context, request o
 }
 
 // GetHealthcareAppointment - Retrieve an appointment
+// Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Appointment) GetHealthcareAppointment(ctx context.Context, request operations.GetHealthcareAppointmentRequest, opts ...operations.Option) (*operations.GetHealthcareAppointmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Appointment) GetHealthcareAppointment(ctx context.Context, request oper
 }
 
 // ListHealthcareAppointments - List all appointments
+// Returns a list of HealthcareAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Appointment) ListHealthcareAppointments(ctx context.Context, request operations.ListHealthcareAppointmentsRequest, opts ...operations.Option) (*operations.ListHealthcareAppointmentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Appointment) ListHealthcareAppointments(ctx context.Context, request op
 }
 
 // PatchHealthcareAppointment - Update an appointment
+// Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 func (s *Appointment) PatchHealthcareAppointment(ctx context.Context, request operations.PatchHealthcareAppointmentRequest, opts ...operations.Option) (*operations.PatchHealthcareAppointmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Appointment) PatchHealthcareAppointment(ctx context.Context, request op
 }
 
 // RemoveHealthcareAppointment - Remove an appointment
+// Deletes the HealthcareAppointment identified by `id`.
 func (s *Appointment) RemoveHealthcareAppointment(ctx context.Context, request operations.RemoveHealthcareAppointmentRequest, opts ...operations.Option) (*operations.RemoveHealthcareAppointmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Appointment) RemoveHealthcareAppointment(ctx context.Context, request o
 }
 
 // UpdateHealthcareAppointment - Update an appointment
+// Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 func (s *Appointment) UpdateHealthcareAppointment(ctx context.Context, request operations.UpdateHealthcareAppointmentRequest, opts ...operations.Option) (*operations.UpdateHealthcareAppointmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

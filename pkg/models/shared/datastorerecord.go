@@ -11,12 +11,13 @@ type DatastoreRecord struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// source Database ID
-	DatabaseID *string                        `json:"database_id,omitempty"`
-	Fields     map[string]DatastoreFieldValue `json:"fields"`
-	ID         *string                        `json:"id,omitempty"`
-	Metadata   []DatastoreMetadata            `json:"metadata,omitempty"`
-	Raw        map[string]any                 `json:"raw,omitempty"`
-	RowNumber  *float64                       `json:"row_number,omitempty"`
+	DatabaseID *string `json:"database_id,omitempty"`
+	// The record's values, keyed by the table's field (column) names; each value is a typed value object (e.g. { "string": "Acme" } or { "number": 3 })
+	Fields    map[string]DatastoreFieldValue `json:"fields"`
+	ID        *string                        `json:"id,omitempty"`
+	Metadata  []DatastoreMetadata            `json:"metadata,omitempty"`
+	Raw       map[string]any                 `json:"raw,omitempty"`
+	RowNumber *float64                       `json:"row_number,omitempty"`
 	// source Database Table ID
 	TableID *string `json:"table_id,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)

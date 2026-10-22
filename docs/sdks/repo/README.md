@@ -37,7 +37,7 @@
 
 ## CreateRepoBranch
 
-Create a branch
+Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to the provider's API. Returns the created RepoBranch.
 
 ### Example Usage
 
@@ -64,11 +64,11 @@ func main() {
     res, err := s.Repo.CreateRepoBranch(ctx, operations.CreateRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
             CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
-            ID: unifiedgosdk.Pointer("d3de22aa-944f-4ed3-96e8-7b83f147ffae"),
+            ID: unifiedgosdk.Pointer("2e0abdc1-3bc6-4576-86b2-498ceec9b4b3"),
             Metadata: []shared.RepoMetadata{},
             Name: "transmitter-calculate",
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2020-01-07T08:02:55.995Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-01-07T10:44:37.774Z"),
         },
         ConnectionID: "<id>",
     })
@@ -101,7 +101,7 @@ func main() {
 
 ## CreateRepoCommit
 
-Create a commit
+Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to the provider's API. Returns the created RepoCommit.
 
 ### Example Usage
 
@@ -128,14 +128,14 @@ func main() {
     res, err := s.Repo.CreateRepoCommit(ctx, operations.CreateRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
             CreatedAt: types.MustNewTimeFromString("2020-07-12T16:20:42.520Z"),
-            ID: unifiedgosdk.Pointer("8faaf651-733b-4d26-92d1-0103bdcae980"),
+            ID: unifiedgosdk.Pointer("592bcae2-bd76-458c-98cd-2ab53079eb09"),
             LinesAdded: unifiedgosdk.Pointer[float64](313.0),
             LinesChanged: unifiedgosdk.Pointer[float64](659.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](482.0),
             Message: unifiedgosdk.Pointer("quantify bluetooth bandwidth"),
             Metadata: []shared.RepoMetadata{},
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2023-05-31T06:51:27.908Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-31T17:46:40.721Z"),
         },
         ConnectionID: "<id>",
     })
@@ -168,7 +168,7 @@ func main() {
 
 ## CreateRepoOrganization
 
-Create an organization
+Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
 
 ### Example Usage
 
@@ -197,10 +197,10 @@ func main() {
             AvatarURL: unifiedgosdk.Pointer("https://picsum.photos/seed/fGl6Lb/3157/3173"),
             CreatedAt: types.MustNewTimeFromString("2022-07-07T00:18:40.748Z"),
             Description: unifiedgosdk.Pointer("Trepide defendo supra testimonium ager."),
-            ID: unifiedgosdk.Pointer("d11dbf84-08b3-42b3-9028-bf71a50ce463"),
+            ID: unifiedgosdk.Pointer("933e206a-d0b9-4551-b0a1-48ec334aa3f3"),
             Metadata: []shared.RepoMetadata{},
             Name: unifiedgosdk.Pointer("Denesik - Lemke"),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-21T15:08:19.151Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-21T21:22:03.917Z"),
             WebURL: unifiedgosdk.Pointer("https://turbulent-overheard.biz"),
         },
         ConnectionID: "<id>",
@@ -234,7 +234,7 @@ func main() {
 
 ## CreateRepoPullrequest
 
-Create a pullrequest
+Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are mapped to the provider's API. Returns the created RepoPullrequest.
 
 ### Example Usage
 
@@ -260,9 +260,9 @@ func main() {
 
     res, err := s.Repo.CreateRepoPullrequest(ctx, operations.CreateRepoPullrequestRequest{
         RepoPullrequest: shared.RepoPullrequest{
-            ClosedAt: types.MustNewTimeFromString("2025-05-01T13:52:56.618Z"),
+            ClosedAt: types.MustNewTimeFromString("2025-05-02T04:03:35.410Z"),
             CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
-            ID: unifiedgosdk.Pointer("f056c8e3-203d-4efa-b38e-98ababfea7f3"),
+            ID: unifiedgosdk.Pointer("5d31e7a9-e7a6-4efe-a22d-7c351e02021d"),
             Labels: []string{
                 "creptio",
                 "tutamen",
@@ -271,7 +271,7 @@ func main() {
             Notes: unifiedgosdk.Pointer("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo."),
             Status: shared.RepoPullrequestStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("reboot mobile application"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-17T07:06:04.358Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-18T01:55:58.476Z"),
         },
         ConnectionID: "<id>",
     })
@@ -304,7 +304,7 @@ func main() {
 
 ## CreateRepoRepository
 
-Create a repository
+Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are mapped to the provider's API. Returns the created RepoRepository.
 
 ### Example Usage
 
@@ -332,11 +332,11 @@ func main() {
         RepoRepository: shared.RepoRepository{
             CreatedAt: types.MustNewTimeFromString("2023-06-12T09:42:00.080Z"),
             Description: unifiedgosdk.Pointer("Sed somnus crastinus armarium."),
-            ID: unifiedgosdk.Pointer("1becda54-75c5-4934-8961-9ca4ffa219f1"),
+            ID: unifiedgosdk.Pointer("86f236b6-8cd3-488a-b7b2-ce93a56c7517"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.RepoMetadata{},
             Name: "bah-bogus",
-            UpdatedAt: types.MustNewTimeFromString("2024-03-01T02:05:05.865Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-01T07:10:32.663Z"),
             WebURL: unifiedgosdk.Pointer("https://neat-birdbath.org"),
         },
         ConnectionID: "<id>",
@@ -370,7 +370,7 @@ func main() {
 
 ## GetRepoBranch
 
-Retrieve a branch
+Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -425,7 +425,7 @@ func main() {
 
 ## GetRepoCommit
 
-Retrieve a commit
+Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -480,7 +480,7 @@ func main() {
 
 ## GetRepoOrganization
 
-Retrieve an organization
+Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -535,7 +535,7 @@ func main() {
 
 ## GetRepoPullrequest
 
-Retrieve a pullrequest
+Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -590,7 +590,7 @@ func main() {
 
 ## GetRepoRepository
 
-Retrieve a repository
+Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -645,7 +645,7 @@ func main() {
 
 ## ListRepoBranches
 
-List all branches
+Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -699,7 +699,7 @@ func main() {
 
 ## ListRepoCommits
 
-List all commits
+Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -753,7 +753,7 @@ func main() {
 
 ## ListRepoOrganizations
 
-List all organizations
+Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -807,7 +807,7 @@ func main() {
 
 ## ListRepoPullrequests
 
-List all pullrequests
+Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -861,7 +861,7 @@ func main() {
 
 ## ListRepoRepositories
 
-List all repositories
+Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -915,7 +915,7 @@ func main() {
 
 ## PatchRepoBranch
 
-Update a branch
+Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 
 ### Example Usage
 
@@ -942,11 +942,11 @@ func main() {
     res, err := s.Repo.PatchRepoBranch(ctx, operations.PatchRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
             CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
-            ID: unifiedgosdk.Pointer("2d9cf7e3-a566-41e8-87b2-6bd47606fe69"),
+            ID: unifiedgosdk.Pointer("61096c53-c8e7-4fe5-b5b6-a2ff57e6c228"),
             Metadata: []shared.RepoMetadata{},
             Name: "transmitter-calculate",
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2020-01-07T08:02:55.996Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-01-07T10:44:37.776Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -980,7 +980,7 @@ func main() {
 
 ## PatchRepoCommit
 
-Update a commit
+Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
 ### Example Usage
 
@@ -1007,14 +1007,14 @@ func main() {
     res, err := s.Repo.PatchRepoCommit(ctx, operations.PatchRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
             CreatedAt: types.MustNewTimeFromString("2020-07-12T16:20:42.520Z"),
-            ID: unifiedgosdk.Pointer("eced1575-116e-4bb5-92fe-18bea53520fd"),
+            ID: unifiedgosdk.Pointer("f72dc39a-23be-4866-b859-2830fde4bcf8"),
             LinesAdded: unifiedgosdk.Pointer[float64](313.0),
             LinesChanged: unifiedgosdk.Pointer[float64](659.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](482.0),
             Message: unifiedgosdk.Pointer("quantify bluetooth bandwidth"),
             Metadata: []shared.RepoMetadata{},
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2023-05-31T06:51:27.914Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-31T17:46:40.728Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1048,7 +1048,7 @@ func main() {
 
 ## PatchRepoOrganization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1077,10 +1077,10 @@ func main() {
             AvatarURL: unifiedgosdk.Pointer("https://picsum.photos/seed/fGl6Lb/3157/3173"),
             CreatedAt: types.MustNewTimeFromString("2022-07-07T00:18:40.748Z"),
             Description: unifiedgosdk.Pointer("Trepide defendo supra testimonium ager."),
-            ID: unifiedgosdk.Pointer("5e3f6bde-51ce-47b1-bc1a-309e3993a0df"),
+            ID: unifiedgosdk.Pointer("85be66a9-5510-4ada-ac47-f32a603fd07c"),
             Metadata: []shared.RepoMetadata{},
             Name: unifiedgosdk.Pointer("Denesik - Lemke"),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-21T15:08:19.154Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-21T21:22:03.920Z"),
             WebURL: unifiedgosdk.Pointer("https://turbulent-overheard.biz"),
         },
         ConnectionID: "<id>",
@@ -1115,7 +1115,7 @@ func main() {
 
 ## PatchRepoPullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -1141,9 +1141,9 @@ func main() {
 
     res, err := s.Repo.PatchRepoPullrequest(ctx, operations.PatchRepoPullrequestRequest{
         RepoPullrequest: shared.RepoPullrequest{
-            ClosedAt: types.MustNewTimeFromString("2025-05-01T13:52:56.628Z"),
+            ClosedAt: types.MustNewTimeFromString("2025-05-02T04:03:35.421Z"),
             CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
-            ID: unifiedgosdk.Pointer("680f10ed-25c1-4071-ab27-a124bc8edbbd"),
+            ID: unifiedgosdk.Pointer("23ed0922-82e8-4b77-9733-8682bc9d3310"),
             Labels: []string{
                 "creptio",
                 "tutamen",
@@ -1152,7 +1152,7 @@ func main() {
             Notes: unifiedgosdk.Pointer("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo."),
             Status: shared.RepoPullrequestStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("reboot mobile application"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-17T07:06:04.372Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-18T01:55:58.490Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1186,7 +1186,7 @@ func main() {
 
 ## PatchRepoRepository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -1214,11 +1214,11 @@ func main() {
         RepoRepository: shared.RepoRepository{
             CreatedAt: types.MustNewTimeFromString("2023-06-12T09:42:00.080Z"),
             Description: unifiedgosdk.Pointer("Sed somnus crastinus armarium."),
-            ID: unifiedgosdk.Pointer("03073f42-04d8-46d4-8264-186828af3e72"),
+            ID: unifiedgosdk.Pointer("2702d848-a85c-4e23-af94-267ef6cff2da"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.RepoMetadata{},
             Name: "bah-bogus",
-            UpdatedAt: types.MustNewTimeFromString("2024-03-01T02:05:05.868Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-01T07:10:32.666Z"),
             WebURL: unifiedgosdk.Pointer("https://neat-birdbath.org"),
         },
         ConnectionID: "<id>",
@@ -1253,7 +1253,7 @@ func main() {
 
 ## RemoveRepoBranch
 
-Remove a branch
+Deletes the RepoBranch identified by `id`.
 
 ### Example Usage
 
@@ -1308,7 +1308,7 @@ func main() {
 
 ## RemoveRepoCommit
 
-Remove a commit
+Deletes the RepoCommit identified by `id`.
 
 ### Example Usage
 
@@ -1363,7 +1363,7 @@ func main() {
 
 ## RemoveRepoOrganization
 
-Remove an organization
+Deletes the RepoOrganization identified by `id`.
 
 ### Example Usage
 
@@ -1418,7 +1418,7 @@ func main() {
 
 ## RemoveRepoPullrequest
 
-Remove a pullrequest
+Deletes the RepoPullrequest identified by `id`.
 
 ### Example Usage
 
@@ -1473,7 +1473,7 @@ func main() {
 
 ## RemoveRepoRepository
 
-Remove a repository
+Deletes the RepoRepository identified by `id`.
 
 ### Example Usage
 
@@ -1528,7 +1528,7 @@ func main() {
 
 ## UpdateRepoBranch
 
-Update a branch
+Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 
 ### Example Usage
 
@@ -1555,11 +1555,11 @@ func main() {
     res, err := s.Repo.UpdateRepoBranch(ctx, operations.UpdateRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
             CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
-            ID: unifiedgosdk.Pointer("2d9cf7e3-a566-41e8-87b2-6bd47606fe69"),
+            ID: unifiedgosdk.Pointer("61096c53-c8e7-4fe5-b5b6-a2ff57e6c228"),
             Metadata: []shared.RepoMetadata{},
             Name: "transmitter-calculate",
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2020-01-07T08:02:55.996Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-01-07T10:44:37.776Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1593,7 +1593,7 @@ func main() {
 
 ## UpdateRepoCommit
 
-Update a commit
+Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
 ### Example Usage
 
@@ -1620,14 +1620,14 @@ func main() {
     res, err := s.Repo.UpdateRepoCommit(ctx, operations.UpdateRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
             CreatedAt: types.MustNewTimeFromString("2020-07-12T16:20:42.520Z"),
-            ID: unifiedgosdk.Pointer("eced1575-116e-4bb5-92fe-18bea53520fd"),
+            ID: unifiedgosdk.Pointer("f72dc39a-23be-4866-b859-2830fde4bcf8"),
             LinesAdded: unifiedgosdk.Pointer[float64](313.0),
             LinesChanged: unifiedgosdk.Pointer[float64](659.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](482.0),
             Message: unifiedgosdk.Pointer("quantify bluetooth bandwidth"),
             Metadata: []shared.RepoMetadata{},
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2023-05-31T06:51:27.914Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-31T17:46:40.728Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1661,7 +1661,7 @@ func main() {
 
 ## UpdateRepoOrganization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1690,10 +1690,10 @@ func main() {
             AvatarURL: unifiedgosdk.Pointer("https://picsum.photos/seed/fGl6Lb/3157/3173"),
             CreatedAt: types.MustNewTimeFromString("2022-07-07T00:18:40.748Z"),
             Description: unifiedgosdk.Pointer("Trepide defendo supra testimonium ager."),
-            ID: unifiedgosdk.Pointer("5e3f6bde-51ce-47b1-bc1a-309e3993a0df"),
+            ID: unifiedgosdk.Pointer("85be66a9-5510-4ada-ac47-f32a603fd07c"),
             Metadata: []shared.RepoMetadata{},
             Name: unifiedgosdk.Pointer("Denesik - Lemke"),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-21T15:08:19.154Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-21T21:22:03.920Z"),
             WebURL: unifiedgosdk.Pointer("https://turbulent-overheard.biz"),
         },
         ConnectionID: "<id>",
@@ -1728,7 +1728,7 @@ func main() {
 
 ## UpdateRepoPullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -1754,9 +1754,9 @@ func main() {
 
     res, err := s.Repo.UpdateRepoPullrequest(ctx, operations.UpdateRepoPullrequestRequest{
         RepoPullrequest: shared.RepoPullrequest{
-            ClosedAt: types.MustNewTimeFromString("2025-05-01T13:52:56.628Z"),
+            ClosedAt: types.MustNewTimeFromString("2025-05-02T04:03:35.421Z"),
             CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
-            ID: unifiedgosdk.Pointer("680f10ed-25c1-4071-ab27-a124bc8edbbd"),
+            ID: unifiedgosdk.Pointer("23ed0922-82e8-4b77-9733-8682bc9d3310"),
             Labels: []string{
                 "creptio",
                 "tutamen",
@@ -1765,7 +1765,7 @@ func main() {
             Notes: unifiedgosdk.Pointer("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo."),
             Status: shared.RepoPullrequestStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("reboot mobile application"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-17T07:06:04.372Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-18T01:55:58.490Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1799,7 +1799,7 @@ func main() {
 
 ## UpdateRepoRepository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -1827,11 +1827,11 @@ func main() {
         RepoRepository: shared.RepoRepository{
             CreatedAt: types.MustNewTimeFromString("2023-06-12T09:42:00.080Z"),
             Description: unifiedgosdk.Pointer("Sed somnus crastinus armarium."),
-            ID: unifiedgosdk.Pointer("03073f42-04d8-46d4-8264-186828af3e72"),
+            ID: unifiedgosdk.Pointer("2702d848-a85c-4e23-af94-267ef6cff2da"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.RepoMetadata{},
             Name: "bah-bogus",
-            UpdatedAt: types.MustNewTimeFromString("2024-03-01T02:05:05.868Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-01T07:10:32.666Z"),
             WebURL: unifiedgosdk.Pointer("https://neat-birdbath.org"),
         },
         ConnectionID: "<id>",

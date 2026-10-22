@@ -31,6 +31,7 @@ func newSalesorder(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks 
 }
 
 // CreateAccountingSalesorder - Create a salesorder
+// Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingSalesorder.
 func (s *Salesorder) CreateAccountingSalesorder(ctx context.Context, request operations.CreateAccountingSalesorderRequest, opts ...operations.Option) (*operations.CreateAccountingSalesorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Salesorder) CreateAccountingSalesorder(ctx context.Context, request ope
 }
 
 // GetAccountingSalesorder - Retrieve a salesorder
+// Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Salesorder) GetAccountingSalesorder(ctx context.Context, request operations.GetAccountingSalesorderRequest, opts ...operations.Option) (*operations.GetAccountingSalesorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Salesorder) GetAccountingSalesorder(ctx context.Context, request operat
 }
 
 // ListAccountingSalesorders - List all salesorders
+// Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Salesorder) ListAccountingSalesorders(ctx context.Context, request operations.ListAccountingSalesordersRequest, opts ...operations.Option) (*operations.ListAccountingSalesordersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Salesorder) ListAccountingSalesorders(ctx context.Context, request oper
 }
 
 // PatchAccountingSalesorder - Update a salesorder
+// Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 func (s *Salesorder) PatchAccountingSalesorder(ctx context.Context, request operations.PatchAccountingSalesorderRequest, opts ...operations.Option) (*operations.PatchAccountingSalesorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Salesorder) PatchAccountingSalesorder(ctx context.Context, request oper
 }
 
 // RemoveAccountingSalesorder - Remove a salesorder
+// Deletes the AccountingSalesorder identified by `id`.
 func (s *Salesorder) RemoveAccountingSalesorder(ctx context.Context, request operations.RemoveAccountingSalesorderRequest, opts ...operations.Option) (*operations.RemoveAccountingSalesorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Salesorder) RemoveAccountingSalesorder(ctx context.Context, request ope
 }
 
 // UpdateAccountingSalesorder - Update a salesorder
+// Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 func (s *Salesorder) UpdateAccountingSalesorder(ctx context.Context, request operations.UpdateAccountingSalesorderRequest, opts ...operations.Option) (*operations.UpdateAccountingSalesorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

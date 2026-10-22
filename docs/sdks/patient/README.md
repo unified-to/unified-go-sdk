@@ -12,7 +12,7 @@
 
 ## CreateHealthcarePatient
 
-Create a patient
+Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they are mapped to the provider's API. Returns the created HealthcarePatient.
 
 ### Example Usage
 
@@ -45,7 +45,7 @@ func main() {
                 PostalCode: unifiedgosdk.Pointer("54031"),
                 Region: unifiedgosdk.Pointer("Nebraska"),
             },
-            Birthdate: unifiedgosdk.Pointer("2025-02-12"),
+            Birthdate: unifiedgosdk.Pointer("2025-02-13"),
             CreatedAt: types.MustNewTimeFromString("2021-06-05T21:08:04.917Z"),
             Emails: []shared.HealthcareEmail{
                 shared.HealthcareEmail{
@@ -55,7 +55,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Alejandrin"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("71bef0d8-2160-4fef-8b45-37b8a6bb244f"),
+            ID: unifiedgosdk.Pointer("bff90549-5920-4a01-933d-a669aa5b05f7"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -75,7 +75,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-22T20:18:33.735Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-23T18:37:32.861Z"),
         },
         ConnectionID: "<id>",
     })
@@ -108,7 +108,7 @@ func main() {
 
 ## GetHealthcarePatient
 
-Retrieve a patient
+Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -163,7 +163,7 @@ func main() {
 
 ## ListHealthcarePatients
 
-List all patients
+Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -217,7 +217,7 @@ func main() {
 
 ## PatchHealthcarePatient
 
-Update a patient
+Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
 ### Example Usage
 
@@ -250,7 +250,7 @@ func main() {
                 PostalCode: unifiedgosdk.Pointer("54031"),
                 Region: unifiedgosdk.Pointer("Nebraska"),
             },
-            Birthdate: unifiedgosdk.Pointer("2025-02-12"),
+            Birthdate: unifiedgosdk.Pointer("2025-02-13"),
             CreatedAt: types.MustNewTimeFromString("2021-06-05T21:08:04.917Z"),
             Emails: []shared.HealthcareEmail{
                 shared.HealthcareEmail{
@@ -260,7 +260,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Alejandrin"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("570149a1-cb28-49d2-861b-e9417dc279e4"),
+            ID: unifiedgosdk.Pointer("e0aa04a2-ee2c-4f84-963b-2cb8213f03bb"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -280,7 +280,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-22T20:18:33.752Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-23T18:37:32.888Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -314,7 +314,7 @@ func main() {
 
 ## UpdateHealthcarePatient
 
-Update a patient
+Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
 ### Example Usage
 
@@ -347,7 +347,7 @@ func main() {
                 PostalCode: unifiedgosdk.Pointer("54031"),
                 Region: unifiedgosdk.Pointer("Nebraska"),
             },
-            Birthdate: unifiedgosdk.Pointer("2025-02-12"),
+            Birthdate: unifiedgosdk.Pointer("2025-02-13"),
             CreatedAt: types.MustNewTimeFromString("2021-06-05T21:08:04.917Z"),
             Emails: []shared.HealthcareEmail{
                 shared.HealthcareEmail{
@@ -357,7 +357,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Alejandrin"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("570149a1-cb28-49d2-861b-e9417dc279e4"),
+            ID: unifiedgosdk.Pointer("e0aa04a2-ee2c-4f84-963b-2cb8213f03bb"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -377,7 +377,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-22T20:18:33.752Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-23T18:37:32.888Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

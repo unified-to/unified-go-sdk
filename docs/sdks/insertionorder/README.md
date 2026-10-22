@@ -13,7 +13,7 @@
 
 ## CreateAdsInsertionorder
 
-Create an insertionorder
+Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they are mapped to the provider's API. Returns the created AdsInsertionorder.
 
 ### Example Usage
 
@@ -40,11 +40,11 @@ func main() {
     res, err := s.Insertionorder.CreateAdsInsertionorder(ctx, operations.CreateAdsInsertionorderRequest{
         AdsInsertionorder: shared.AdsInsertionorder{
             CreatedAt: types.MustNewTimeFromString("2021-04-10T06:57:36.611Z"),
-            ID: unifiedgosdk.Pointer("29e470ca-1a4f-4c5c-91fc-6a28fa9d22d7"),
+            ID: unifiedgosdk.Pointer("d9d82f2b-7a23-44c2-85d8-f8c463819d02"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Kunde, Smith and Reinger"),
             Status: shared.AdsInsertionorderStatusUnspecified.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-28T19:47:29.630Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-28T20:00:34.954Z"),
         },
         ConnectionID: "<id>",
     })
@@ -77,7 +77,7 @@ func main() {
 
 ## GetAdsInsertionorder
 
-Retrieve an insertionorder
+Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -132,7 +132,7 @@ func main() {
 
 ## ListAdsInsertionorders
 
-List all insertionorders
+Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -186,7 +186,7 @@ func main() {
 
 ## PatchAdsInsertionorder
 
-Update an insertionorder
+Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
 ### Example Usage
 
@@ -213,11 +213,11 @@ func main() {
     res, err := s.Insertionorder.PatchAdsInsertionorder(ctx, operations.PatchAdsInsertionorderRequest{
         AdsInsertionorder: shared.AdsInsertionorder{
             CreatedAt: types.MustNewTimeFromString("2021-04-10T06:57:36.611Z"),
-            ID: unifiedgosdk.Pointer("e53f2bec-eced-427d-9568-4b613573b749"),
+            ID: unifiedgosdk.Pointer("d8e61816-9b36-4ba0-a417-2c6160c1d42a"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Kunde, Smith and Reinger"),
             Status: shared.AdsInsertionorderStatusUnspecified.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-28T19:47:29.630Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-28T20:00:34.954Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -251,7 +251,7 @@ func main() {
 
 ## RemoveAdsInsertionorder
 
-Remove an insertionorder
+Deletes the AdsInsertionorder identified by `id`.
 
 ### Example Usage
 
@@ -306,7 +306,7 @@ func main() {
 
 ## UpdateAdsInsertionorder
 
-Update an insertionorder
+Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
 ### Example Usage
 
@@ -333,11 +333,11 @@ func main() {
     res, err := s.Insertionorder.UpdateAdsInsertionorder(ctx, operations.UpdateAdsInsertionorderRequest{
         AdsInsertionorder: shared.AdsInsertionorder{
             CreatedAt: types.MustNewTimeFromString("2021-04-10T06:57:36.611Z"),
-            ID: unifiedgosdk.Pointer("e53f2bec-eced-427d-9568-4b613573b749"),
+            ID: unifiedgosdk.Pointer("d8e61816-9b36-4ba0-a417-2c6160c1d42a"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Kunde, Smith and Reinger"),
             Status: shared.AdsInsertionorderStatusUnspecified.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-28T19:47:29.630Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-28T20:00:34.954Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

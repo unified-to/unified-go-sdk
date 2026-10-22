@@ -14,10 +14,11 @@ type DatastoreDatabase struct {
 	ID          *string             `json:"id,omitempty"`
 	IsActive    *bool               `json:"is_active,omitempty"`
 	Metadata    []DatastoreMetadata `json:"metadata,omitempty"`
-	Name        *string             `json:"name,omitempty"`
-	Password    *string             `json:"password,omitempty"`
-	Raw         map[string]any      `json:"raw,omitempty"`
-	Region      *string             `json:"region,omitempty"`
+	// The database's name
+	Name     *string        `json:"name,omitempty"`
+	Password *string        `json:"password,omitempty"`
+	Raw      map[string]any `json:"raw,omitempty"`
+	Region   *string        `json:"region,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	WebURL    *string    `json:"web_url,omitempty"`

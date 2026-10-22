@@ -1,0 +1,11 @@
+# DatastoreFilterGroup
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `And`                                                                                     | [][shared.DatastoreFilterGroup](../../../pkg/models/shared/datastorefiltergroup.md)       | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `Filters`                                                                                 | [][shared.DatastoreFilter](../../../pkg/models/shared/datastorefilter.md)                 | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `Or`                                                                                      | [][shared.DatastoreFilterGroup](../../../pkg/models/shared/datastorefiltergroup.md)       | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `Type`                                                                                    | [shared.DatastoreFilterGroupType](../../../pkg/models/shared/datastorefiltergrouptype.md) | :heavy_check_mark:                                                                        | N/A                                                                                       |

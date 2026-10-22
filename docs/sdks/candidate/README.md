@@ -13,7 +13,7 @@
 
 ## CreateAtsCandidate
 
-Create a candidate
+Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped to the provider's API. Returns the created AtsCandidate.
 
 ### Example Usage
 
@@ -90,7 +90,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Ardith"),
-            ID: unifiedgosdk.Pointer("664f6e73-f63a-457c-8af7-87c2ab8ec9c2"),
+            ID: unifiedgosdk.Pointer("d6158514-0b98-44b7-b485-fe144b84b2a8"),
             ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/27464445"),
             JobIds: []string{},
             LastName: unifiedgosdk.Pointer("Beatty"),
@@ -105,7 +105,7 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("7971fe19-2a15-4b5f-9240-5511e39c68cd"),
+                    ID: unifiedgosdk.Pointer("2c40bd7e-b0aa-4953-8489-fb78f25489d3"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_field"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
@@ -134,7 +134,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Customer Division Producer"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-28T17:47:32.446Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-28T22:00:51.392Z"),
             WebURL: unifiedgosdk.Pointer("https://fragrant-husband.net/"),
         },
         ConnectionID: "<id>",
@@ -168,7 +168,7 @@ func main() {
 
 ## GetAtsCandidate
 
-Retrieve a candidate
+Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -223,7 +223,7 @@ func main() {
 
 ## ListAtsCandidates
 
-List all candidates
+Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -277,7 +277,7 @@ func main() {
 
 ## PatchAtsCandidate
 
-Update a candidate
+Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 
 ### Example Usage
 
@@ -354,7 +354,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Ardith"),
-            ID: unifiedgosdk.Pointer("e2d5ef47-da9e-4500-8493-4ce44bec7b6e"),
+            ID: unifiedgosdk.Pointer("33c70965-b05d-40b8-a4f6-7140edb9bf1b"),
             ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/27464445"),
             JobIds: []string{},
             LastName: unifiedgosdk.Pointer("Beatty"),
@@ -369,7 +369,7 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("cca4fa50-af15-422e-8c16-8ed5906d98de"),
+                    ID: unifiedgosdk.Pointer("d21457b0-099d-4edc-b53c-7a891e833870"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_field"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
@@ -398,7 +398,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Customer Division Producer"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-28T17:47:32.451Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-28T22:00:51.397Z"),
             WebURL: unifiedgosdk.Pointer("https://fragrant-husband.net/"),
         },
         ConnectionID: "<id>",
@@ -433,7 +433,7 @@ func main() {
 
 ## RemoveAtsCandidate
 
-Remove a candidate
+Deletes the AtsCandidate identified by `id`.
 
 ### Example Usage
 
@@ -488,7 +488,7 @@ func main() {
 
 ## UpdateAtsCandidate
 
-Update a candidate
+Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 
 ### Example Usage
 
@@ -565,7 +565,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Ardith"),
-            ID: unifiedgosdk.Pointer("e2d5ef47-da9e-4500-8493-4ce44bec7b6e"),
+            ID: unifiedgosdk.Pointer("33c70965-b05d-40b8-a4f6-7140edb9bf1b"),
             ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/27464445"),
             JobIds: []string{},
             LastName: unifiedgosdk.Pointer("Beatty"),
@@ -580,7 +580,7 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("cca4fa50-af15-422e-8c16-8ed5906d98de"),
+                    ID: unifiedgosdk.Pointer("d21457b0-099d-4edc-b53c-7a891e833870"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_field"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
@@ -609,7 +609,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Customer Division Producer"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-28T17:47:32.451Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-28T22:00:51.397Z"),
             WebURL: unifiedgosdk.Pointer("https://fragrant-husband.net/"),
         },
         ConnectionID: "<id>",

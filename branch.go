@@ -31,6 +31,7 @@ func newBranch(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 }
 
 // CreateRepoBranch - Create a branch
+// Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to the provider's API. Returns the created RepoBranch.
 func (s *Branch) CreateRepoBranch(ctx context.Context, request operations.CreateRepoBranchRequest, opts ...operations.Option) (*operations.CreateRepoBranchResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Branch) CreateRepoBranch(ctx context.Context, request operations.Create
 }
 
 // GetRepoBranch - Retrieve a branch
+// Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Branch) GetRepoBranch(ctx context.Context, request operations.GetRepoBranchRequest, opts ...operations.Option) (*operations.GetRepoBranchResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Branch) GetRepoBranch(ctx context.Context, request operations.GetRepoBr
 }
 
 // ListRepoBranches - List all branches
+// Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Branch) ListRepoBranches(ctx context.Context, request operations.ListRepoBranchesRequest, opts ...operations.Option) (*operations.ListRepoBranchesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Branch) ListRepoBranches(ctx context.Context, request operations.ListRe
 }
 
 // PatchRepoBranch - Update a branch
+// Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 func (s *Branch) PatchRepoBranch(ctx context.Context, request operations.PatchRepoBranchRequest, opts ...operations.Option) (*operations.PatchRepoBranchResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Branch) PatchRepoBranch(ctx context.Context, request operations.PatchRe
 }
 
 // RemoveRepoBranch - Remove a branch
+// Deletes the RepoBranch identified by `id`.
 func (s *Branch) RemoveRepoBranch(ctx context.Context, request operations.RemoveRepoBranchRequest, opts ...operations.Option) (*operations.RemoveRepoBranchResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Branch) RemoveRepoBranch(ctx context.Context, request operations.Remove
 }
 
 // UpdateRepoBranch - Update a branch
+// Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 func (s *Branch) UpdateRepoBranch(ctx context.Context, request operations.UpdateRepoBranchRequest, opts ...operations.Option) (*operations.UpdateRepoBranchResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

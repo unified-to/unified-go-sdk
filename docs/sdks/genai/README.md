@@ -38,7 +38,7 @@
 
 ## CreateGenaiAgent
 
-Create an agent
+Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to the provider's API. Returns the created GenaiAgent.
 
 ### Example Usage
 
@@ -66,11 +66,11 @@ func main() {
         GenaiAgent: shared.GenaiAgent{
             CreatedAt: types.MustNewTimeFromString("2020-12-18T02:23:33.723Z"),
             Description: unifiedgosdk.Pointer("Assentator tero sequi."),
-            ID: unifiedgosdk.Pointer("bddafc1a-890a-4ac9-81f7-8a777f0d9001"),
+            ID: unifiedgosdk.Pointer("e6383f2d-b4d2-489e-9384-0cca840ad6f3"),
             Instructions: unifiedgosdk.Pointer("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum."),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("daughter with"),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-15T10:47:48.979Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-16T06:26:17.706Z"),
         },
         ConnectionID: "<id>",
     })
@@ -103,7 +103,7 @@ func main() {
 
 ## CreateGenaiEmbedding
 
-Create an embedding
+Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are mapped to the provider's API. Returns the created GenaiEmbedding.
 
 ### Example Usage
 
@@ -136,7 +136,7 @@ func main() {
             Dimension: unifiedgosdk.Pointer[float64](423.0),
             Embeddings: unifiedgosdk.Pointer("Est."),
             EncondingFormat: shared.EncondingFormatFloat.ToPointer(),
-            ID: unifiedgosdk.Pointer("69ad3ee9-3be3-46ae-a50b-94cabdd48b98"),
+            ID: unifiedgosdk.Pointer("6f64474a-e4ea-475a-a3a2-7ed4a98a77ca"),
             MaxTokens: unifiedgosdk.Pointer[float64](223.0),
             TokensUsed: unifiedgosdk.Pointer[float64](836.0),
             Type: unifiedgosdk.Pointer("classification"),
@@ -172,7 +172,7 @@ func main() {
 
 ## CreateGenaiMemory
 
-Create a memory
+Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped to the provider's API. Returns the created GenaiMemory.
 
 ### Example Usage
 
@@ -200,7 +200,7 @@ func main() {
         GenaiMemory: shared.GenaiMemory{
             Content: unifiedgosdk.Pointer("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus."),
             CreatedAt: types.MustNewTimeFromString("2021-10-22T04:14:41.668Z"),
-            ID: unifiedgosdk.Pointer("88bb3c43-4389-4a83-839c-696b4051536e"),
+            ID: unifiedgosdk.Pointer("8b8d63fc-2487-4efa-b199-2f4f3735511d"),
             Metadata: []shared.GenaiMetadata{
                 shared.GenaiMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateGenaiMetadataExtraDataMapOfAny(
@@ -219,7 +219,7 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("sponte.md"),
             Type: shared.GenaiMemoryTypeMemory.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-25T21:28:57.374Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-26T04:39:23.581Z"),
             UserIdentifier: unifiedgosdk.Pointer("9d170613-4338-447d-bdb6-8ea96a2d7513"),
         },
         ConnectionID: "<id>",
@@ -253,7 +253,7 @@ func main() {
 
 ## CreateGenaiOrganization
 
-Create an organization
+Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they are mapped to the provider's API. Returns the created GenaiOrganization.
 
 ### Example Usage
 
@@ -281,10 +281,10 @@ func main() {
         GenaiOrganization: shared.GenaiOrganization{
             CreatedAt: types.MustNewTimeFromString("2020-10-27T16:03:47.122Z"),
             Description: unifiedgosdk.Pointer("Voluptates abeo subseco."),
-            ID: unifiedgosdk.Pointer("f9efe1a2-99d3-49e7-b858-8a1f79714fb9"),
+            ID: unifiedgosdk.Pointer("979ae74f-14ff-48a7-ad20-609831f3425d"),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("officially about"),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-26T10:38:34.878Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-26T19:34:30.479Z"),
         },
         ConnectionID: "<id>",
     })
@@ -317,7 +317,7 @@ func main() {
 
 ## CreateGenaiPrompt
 
-Create a prompt
+Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped to the provider's API. Returns the created GenaiPrompt.
 
 ### Example Usage
 
@@ -446,7 +446,7 @@ func main() {
 
 ## CreateGenaiTask
 
-Create a task
+Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to the provider's API. Returns the created GenaiTask.
 
 ### Example Usage
 
@@ -472,10 +472,10 @@ func main() {
 
     res, err := s.Genai.CreateGenaiTask(ctx, operations.CreateGenaiTaskRequest{
         GenaiTask: shared.GenaiTask{
-            CompletedAt: types.MustNewTimeFromString("2025-10-01T06:40:21.561Z"),
+            CompletedAt: types.MustNewTimeFromString("2025-10-02T02:15:37.668Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-25T20:19:33.247Z"),
             FilesChanged: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("ac164b9c-0c3f-45ee-8b6a-bf1116489adc"),
+            ID: unifiedgosdk.Pointer("442fcbae-d067-4f9c-9db3-a70e9c393a98"),
             Instructions: unifiedgosdk.Pointer("Benigne canonicus officiis solvo adsidue deleo angustus."),
             LinesAdded: unifiedgosdk.Pointer[float64](244.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](118.0),
@@ -490,12 +490,12 @@ func main() {
             PullrequestURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383"),
             RepoURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance"),
             SourceBranchIdentifier: unifiedgosdk.Pointer("main"),
-            StartedAt: types.MustNewTimeFromString("2024-05-21T10:29:55.285Z"),
+            StartedAt: types.MustNewTimeFromString("2024-05-22T00:40:23.675Z"),
             Status: shared.GenaiTaskStatusBlocked.ToPointer(),
             Summary: unifiedgosdk.Pointer("Cur aeternus cogito vesper."),
             TargetBranchIdentifier: unifiedgosdk.Pointer("agent/joshingly-ignorance"),
             TokensUsed: unifiedgosdk.Pointer[float64](2165.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-26T07:15:11.602Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-26T16:31:59.677Z"),
             WebURL: unifiedgosdk.Pointer("https://inexperienced-adrenalin.biz/"),
         },
         ConnectionID: "<id>",
@@ -529,7 +529,7 @@ func main() {
 
 ## GetGenaiAgent
 
-Retrieve an agent
+Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -584,7 +584,7 @@ func main() {
 
 ## GetGenaiMemory
 
-Retrieve a memory
+Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -639,7 +639,7 @@ func main() {
 
 ## GetGenaiModel
 
-Retrieve a model
+Retrieves a single GenaiModel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -694,7 +694,7 @@ func main() {
 
 ## GetGenaiOrganization
 
-Retrieve an organization
+Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -749,7 +749,7 @@ func main() {
 
 ## GetGenaiSkill
 
-Retrieve a skill
+Retrieves a single GenaiSkill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -804,7 +804,7 @@ func main() {
 
 ## GetGenaiTask
 
-Retrieve a task
+Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -859,7 +859,7 @@ func main() {
 
 ## ListGenaiAgents
 
-List all agents
+Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -913,7 +913,7 @@ func main() {
 
 ## ListGenaiMemories
 
-List all memories
+Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -967,7 +967,7 @@ func main() {
 
 ## ListGenaiModels
 
-List all models
+Returns a list of GenaiModels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1021,7 +1021,7 @@ func main() {
 
 ## ListGenaiOrganizations
 
-List all organizations
+Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1075,7 +1075,7 @@ func main() {
 
 ## ListGenaiSkills
 
-List all skills
+Returns a list of GenaiSkills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1129,7 +1129,7 @@ func main() {
 
 ## ListGenaiTasks
 
-List all tasks
+Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1183,7 +1183,7 @@ func main() {
 
 ## PatchGenaiAgent
 
-Update an agent
+Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 
 ### Example Usage
 
@@ -1211,11 +1211,11 @@ func main() {
         GenaiAgent: shared.GenaiAgent{
             CreatedAt: types.MustNewTimeFromString("2020-12-18T02:23:33.723Z"),
             Description: unifiedgosdk.Pointer("Assentator tero sequi."),
-            ID: unifiedgosdk.Pointer("84fc5f34-c274-43ed-9767-bf6338847936"),
+            ID: unifiedgosdk.Pointer("691117f4-f6f3-456b-90b6-e5ab838c6c45"),
             Instructions: unifiedgosdk.Pointer("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum."),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("daughter with"),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-15T10:47:48.983Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-16T06:26:17.713Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1249,7 +1249,7 @@ func main() {
 
 ## PatchGenaiMemory
 
-Update a memory
+Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
 
 ### Example Usage
 
@@ -1277,7 +1277,7 @@ func main() {
         GenaiMemory: shared.GenaiMemory{
             Content: unifiedgosdk.Pointer("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus."),
             CreatedAt: types.MustNewTimeFromString("2021-10-22T04:14:41.668Z"),
-            ID: unifiedgosdk.Pointer("9365b4e5-aab5-4ff3-ba49-ac556dab74c1"),
+            ID: unifiedgosdk.Pointer("eedef7f5-cf14-4aff-a523-5470405a3db1"),
             Metadata: []shared.GenaiMetadata{
                 shared.GenaiMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateGenaiMetadataExtraDataMapOfAny(
@@ -1296,7 +1296,7 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("sponte.md"),
             Type: shared.GenaiMemoryTypeMemory.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-25T21:28:57.376Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-26T04:39:23.586Z"),
             UserIdentifier: unifiedgosdk.Pointer("9d170613-4338-447d-bdb6-8ea96a2d7513"),
         },
         ConnectionID: "<id>",
@@ -1331,7 +1331,7 @@ func main() {
 
 ## PatchGenaiOrganization
 
-Update an organization
+Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1359,10 +1359,10 @@ func main() {
         GenaiOrganization: shared.GenaiOrganization{
             CreatedAt: types.MustNewTimeFromString("2020-10-27T16:03:47.122Z"),
             Description: unifiedgosdk.Pointer("Voluptates abeo subseco."),
-            ID: unifiedgosdk.Pointer("8efc655b-1348-44e4-92a1-1ab5ab8473bc"),
+            ID: unifiedgosdk.Pointer("f8be95c0-9ebe-4e98-8012-81311a8cd9b5"),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("officially about"),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-26T10:38:34.880Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-26T19:34:30.483Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1396,7 +1396,7 @@ func main() {
 
 ## PatchGenaiTask
 
-Update a task
+Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 
 ### Example Usage
 
@@ -1422,10 +1422,10 @@ func main() {
 
     res, err := s.Genai.PatchGenaiTask(ctx, operations.PatchGenaiTaskRequest{
         GenaiTask: shared.GenaiTask{
-            CompletedAt: types.MustNewTimeFromString("2025-10-01T06:40:21.574Z"),
+            CompletedAt: types.MustNewTimeFromString("2025-10-02T02:15:37.686Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-25T20:19:33.247Z"),
             FilesChanged: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("ca1027a1-41c3-436f-99a9-a9acef634c3f"),
+            ID: unifiedgosdk.Pointer("4013dc78-f8cd-401f-8553-cc0548fc6a44"),
             Instructions: unifiedgosdk.Pointer("Benigne canonicus officiis solvo adsidue deleo angustus."),
             LinesAdded: unifiedgosdk.Pointer[float64](244.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](118.0),
@@ -1440,12 +1440,12 @@ func main() {
             PullrequestURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383"),
             RepoURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance"),
             SourceBranchIdentifier: unifiedgosdk.Pointer("main"),
-            StartedAt: types.MustNewTimeFromString("2024-05-21T10:29:55.294Z"),
+            StartedAt: types.MustNewTimeFromString("2024-05-22T00:40:23.688Z"),
             Status: shared.GenaiTaskStatusBlocked.ToPointer(),
             Summary: unifiedgosdk.Pointer("Cur aeternus cogito vesper."),
             TargetBranchIdentifier: unifiedgosdk.Pointer("agent/joshingly-ignorance"),
             TokensUsed: unifiedgosdk.Pointer[float64](2165.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-26T07:15:11.609Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-26T16:31:59.686Z"),
             WebURL: unifiedgosdk.Pointer("https://inexperienced-adrenalin.biz/"),
         },
         ConnectionID: "<id>",
@@ -1480,7 +1480,7 @@ func main() {
 
 ## RemoveGenaiAgent
 
-Remove an agent
+Deletes the GenaiAgent identified by `id`.
 
 ### Example Usage
 
@@ -1535,7 +1535,7 @@ func main() {
 
 ## RemoveGenaiMemory
 
-Remove a memory
+Deletes the GenaiMemory identified by `id`.
 
 ### Example Usage
 
@@ -1590,7 +1590,7 @@ func main() {
 
 ## RemoveGenaiOrganization
 
-Remove an organization
+Deletes the GenaiOrganization identified by `id`.
 
 ### Example Usage
 
@@ -1645,7 +1645,7 @@ func main() {
 
 ## RemoveGenaiSkill
 
-Remove a skill
+Deletes the GenaiSkill identified by `id`.
 
 ### Example Usage
 
@@ -1700,7 +1700,7 @@ func main() {
 
 ## RemoveGenaiTask
 
-Remove a task
+Deletes the GenaiTask identified by `id`.
 
 ### Example Usage
 
@@ -1755,7 +1755,7 @@ func main() {
 
 ## UpdateGenaiAgent
 
-Update an agent
+Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 
 ### Example Usage
 
@@ -1783,11 +1783,11 @@ func main() {
         GenaiAgent: shared.GenaiAgent{
             CreatedAt: types.MustNewTimeFromString("2020-12-18T02:23:33.723Z"),
             Description: unifiedgosdk.Pointer("Assentator tero sequi."),
-            ID: unifiedgosdk.Pointer("84fc5f34-c274-43ed-9767-bf6338847936"),
+            ID: unifiedgosdk.Pointer("691117f4-f6f3-456b-90b6-e5ab838c6c45"),
             Instructions: unifiedgosdk.Pointer("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum."),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("daughter with"),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-15T10:47:48.983Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-16T06:26:17.713Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1821,7 +1821,7 @@ func main() {
 
 ## UpdateGenaiMemory
 
-Update a memory
+Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
 
 ### Example Usage
 
@@ -1849,7 +1849,7 @@ func main() {
         GenaiMemory: shared.GenaiMemory{
             Content: unifiedgosdk.Pointer("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus."),
             CreatedAt: types.MustNewTimeFromString("2021-10-22T04:14:41.668Z"),
-            ID: unifiedgosdk.Pointer("9365b4e5-aab5-4ff3-ba49-ac556dab74c1"),
+            ID: unifiedgosdk.Pointer("eedef7f5-cf14-4aff-a523-5470405a3db1"),
             Metadata: []shared.GenaiMetadata{
                 shared.GenaiMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateGenaiMetadataExtraDataMapOfAny(
@@ -1868,7 +1868,7 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("sponte.md"),
             Type: shared.GenaiMemoryTypeMemory.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-25T21:28:57.376Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-26T04:39:23.586Z"),
             UserIdentifier: unifiedgosdk.Pointer("9d170613-4338-447d-bdb6-8ea96a2d7513"),
         },
         ConnectionID: "<id>",
@@ -1903,7 +1903,7 @@ func main() {
 
 ## UpdateGenaiOrganization
 
-Update an organization
+Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1931,10 +1931,10 @@ func main() {
         GenaiOrganization: shared.GenaiOrganization{
             CreatedAt: types.MustNewTimeFromString("2020-10-27T16:03:47.122Z"),
             Description: unifiedgosdk.Pointer("Voluptates abeo subseco."),
-            ID: unifiedgosdk.Pointer("8efc655b-1348-44e4-92a1-1ab5ab8473bc"),
+            ID: unifiedgosdk.Pointer("f8be95c0-9ebe-4e98-8012-81311a8cd9b5"),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("officially about"),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-26T10:38:34.880Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-26T19:34:30.483Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1968,7 +1968,7 @@ func main() {
 
 ## UpdateGenaiTask
 
-Update a task
+Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 
 ### Example Usage
 
@@ -1994,10 +1994,10 @@ func main() {
 
     res, err := s.Genai.UpdateGenaiTask(ctx, operations.UpdateGenaiTaskRequest{
         GenaiTask: shared.GenaiTask{
-            CompletedAt: types.MustNewTimeFromString("2025-10-01T06:40:21.574Z"),
+            CompletedAt: types.MustNewTimeFromString("2025-10-02T02:15:37.686Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-25T20:19:33.247Z"),
             FilesChanged: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("ca1027a1-41c3-436f-99a9-a9acef634c3f"),
+            ID: unifiedgosdk.Pointer("4013dc78-f8cd-401f-8553-cc0548fc6a44"),
             Instructions: unifiedgosdk.Pointer("Benigne canonicus officiis solvo adsidue deleo angustus."),
             LinesAdded: unifiedgosdk.Pointer[float64](244.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](118.0),
@@ -2012,12 +2012,12 @@ func main() {
             PullrequestURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383"),
             RepoURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance"),
             SourceBranchIdentifier: unifiedgosdk.Pointer("main"),
-            StartedAt: types.MustNewTimeFromString("2024-05-21T10:29:55.294Z"),
+            StartedAt: types.MustNewTimeFromString("2024-05-22T00:40:23.688Z"),
             Status: shared.GenaiTaskStatusBlocked.ToPointer(),
             Summary: unifiedgosdk.Pointer("Cur aeternus cogito vesper."),
             TargetBranchIdentifier: unifiedgosdk.Pointer("agent/joshingly-ignorance"),
             TokensUsed: unifiedgosdk.Pointer[float64](2165.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-26T07:15:11.609Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-26T16:31:59.686Z"),
             WebURL: unifiedgosdk.Pointer("https://inexperienced-adrenalin.biz/"),
         },
         ConnectionID: "<id>",

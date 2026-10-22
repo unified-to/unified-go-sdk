@@ -13,7 +13,7 @@
 
 ## CreateAccountingBankfeedaccount
 
-Create a bankfeedaccount
+Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
 
 ### Example Usage
 
@@ -47,12 +47,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
             Currency: unifiedgosdk.Pointer("AUD"),
             FeedStartAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
-            ID: unifiedgosdk.Pointer("35586384-5900-42ac-a8d5-c8921d6c4e69"),
+            ID: unifiedgosdk.Pointer("329766c9-e779-4893-a2d5-4ea17f4c2e0f"),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Corwin, Donnelly and Connelly Checking"),
             RoutingNumber: unifiedgosdk.Pointer("694667752"),
             Status: shared.AccountingBankfeedaccountStatusActive.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-23T19:56:22.321Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-24T04:47:33.222Z"),
         },
         ConnectionID: "<id>",
     })
@@ -85,7 +85,7 @@ func main() {
 
 ## GetAccountingBankfeedaccount
 
-Retrieve a bankfeedaccount
+Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -140,7 +140,7 @@ func main() {
 
 ## ListAccountingBankfeedaccounts
 
-List all bankfeedaccounts
+Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -194,7 +194,7 @@ func main() {
 
 ## PatchAccountingBankfeedaccount
 
-Update a bankfeedaccount
+Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -228,12 +228,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
             Currency: unifiedgosdk.Pointer("AUD"),
             FeedStartAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
-            ID: unifiedgosdk.Pointer("1905f24b-d20f-459e-9b76-57cdbb658dea"),
+            ID: unifiedgosdk.Pointer("8ec2518c-6f9b-4290-93cb-17782db67db4"),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Corwin, Donnelly and Connelly Checking"),
             RoutingNumber: unifiedgosdk.Pointer("694667752"),
             Status: shared.AccountingBankfeedaccountStatusActive.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-23T19:56:22.329Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-24T04:47:33.229Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -267,7 +267,7 @@ func main() {
 
 ## RemoveAccountingBankfeedaccount
 
-Remove a bankfeedaccount
+Deletes the AccountingBankfeedaccount identified by `id`.
 
 ### Example Usage
 
@@ -322,7 +322,7 @@ func main() {
 
 ## UpdateAccountingBankfeedaccount
 
-Update a bankfeedaccount
+Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -356,12 +356,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
             Currency: unifiedgosdk.Pointer("AUD"),
             FeedStartAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
-            ID: unifiedgosdk.Pointer("1905f24b-d20f-459e-9b76-57cdbb658dea"),
+            ID: unifiedgosdk.Pointer("8ec2518c-6f9b-4290-93cb-17782db67db4"),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Corwin, Donnelly and Connelly Checking"),
             RoutingNumber: unifiedgosdk.Pointer("694667752"),
             Status: shared.AccountingBankfeedaccountStatusActive.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-23T19:56:22.329Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-24T04:47:33.229Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

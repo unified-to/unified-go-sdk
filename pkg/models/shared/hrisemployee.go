@@ -171,14 +171,16 @@ type HrisEmployee struct {
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	Currency  *string    `json:"currency,omitempty"`
 	// YYYYMM/DD
-	DateOfBirth *time.Time  `json:"date_of_birth,omitempty"`
-	Emails      []HrisEmail `json:"emails,omitempty"`
+	DateOfBirth *time.Time `json:"date_of_birth,omitempty"`
+	// The employee's email addresses
+	Emails []HrisEmail `json:"emails,omitempty"`
 	// the company's ID for this employee
 	EmployeeNumber   *string                             `json:"employee_number,omitempty"`
 	EmployeeRoles    []PropertyHrisEmployeeEmployeeRoles `json:"employee_roles,omitempty"`
 	EmploymentStatus *EmploymentStatus                   `json:"employment_status,omitempty"`
 	EmploymentType   *HrisEmployeeEmploymentType         `json:"employment_type,omitempty"`
-	FirstName        *string                             `json:"first_name,omitempty"`
+	// The employee's first (given) name
+	FirstName *string `json:"first_name,omitempty"`
 	// US Fair Labor Standards Act classification
 	FlsaStatus *FlsaStatus         `json:"flsa_status,omitempty"`
 	Gender     *HrisEmployeeGender `json:"gender,omitempty"`
@@ -192,14 +194,16 @@ type HrisEmployee struct {
 	// This link expires after 1 hour.
 	ImageURL *string `json:"image_url,omitempty"`
 	// the hris_job (position) this employee holds; their primary job when they hold more than one
-	JobID          *string        `json:"job_id,omitempty"`
-	LanguageLocale *string        `json:"language_locale,omitempty"`
-	LastName       *string        `json:"last_name,omitempty"`
-	Locations      []HrisLocation `json:"locations,omitempty"`
-	ManagerID      *string        `json:"manager_id,omitempty"`
-	MaritalStatus  *MaritalStatus `json:"marital_status,omitempty"`
-	Metadata       []HrisMetadata `json:"metadata,omitempty"`
-	Name           *string        `json:"name,omitempty"`
+	JobID          *string `json:"job_id,omitempty"`
+	LanguageLocale *string `json:"language_locale,omitempty"`
+	// The employee's last (family) name
+	LastName      *string        `json:"last_name,omitempty"`
+	Locations     []HrisLocation `json:"locations,omitempty"`
+	ManagerID     *string        `json:"manager_id,omitempty"`
+	MaritalStatus *MaritalStatus `json:"marital_status,omitempty"`
+	Metadata      []HrisMetadata `json:"metadata,omitempty"`
+	// The employee's full name
+	Name *string `json:"name,omitempty"`
 	// how often the employee is paid (eg. BIWEEKLY)
 	PayFrequency *PayFrequency  `json:"pay_frequency,omitempty"`
 	Pronouns     *string        `json:"pronouns,omitempty"`

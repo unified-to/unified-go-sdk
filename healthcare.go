@@ -31,6 +31,7 @@ func newHealthcare(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks 
 }
 
 // CreateHealthcareAppointment - Create an appointment
+// Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
 func (s *Healthcare) CreateHealthcareAppointment(ctx context.Context, request operations.CreateHealthcareAppointmentRequest, opts ...operations.Option) (*operations.CreateHealthcareAppointmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Healthcare) CreateHealthcareAppointment(ctx context.Context, request op
 }
 
 // CreateHealthcareObservation - Create an observation
+// Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request body; they are mapped to the provider's API. Returns the created HealthcareObservation.
 func (s *Healthcare) CreateHealthcareObservation(ctx context.Context, request operations.CreateHealthcareObservationRequest, opts ...operations.Option) (*operations.CreateHealthcareObservationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Healthcare) CreateHealthcareObservation(ctx context.Context, request op
 }
 
 // CreateHealthcarePatient - Create a patient
+// Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they are mapped to the provider's API. Returns the created HealthcarePatient.
 func (s *Healthcare) CreateHealthcarePatient(ctx context.Context, request operations.CreateHealthcarePatientRequest, opts ...operations.Option) (*operations.CreateHealthcarePatientResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Healthcare) CreateHealthcarePatient(ctx context.Context, request operat
 }
 
 // GetHealthcareAllergy - Retrieve an allergy
+// Retrieves a single HealthcareAllergy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Healthcare) GetHealthcareAllergy(ctx context.Context, request operations.GetHealthcareAllergyRequest, opts ...operations.Option) (*operations.GetHealthcareAllergyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -880,6 +884,7 @@ func (s *Healthcare) GetHealthcareAllergy(ctx context.Context, request operation
 }
 
 // GetHealthcareAppointment - Retrieve an appointment
+// Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Healthcare) GetHealthcareAppointment(ctx context.Context, request operations.GetHealthcareAppointmentRequest, opts ...operations.Option) (*operations.GetHealthcareAppointmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1087,6 +1092,7 @@ func (s *Healthcare) GetHealthcareAppointment(ctx context.Context, request opera
 }
 
 // GetHealthcareCondition - Retrieve a condition
+// Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Healthcare) GetHealthcareCondition(ctx context.Context, request operations.GetHealthcareConditionRequest, opts ...operations.Option) (*operations.GetHealthcareConditionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1294,6 +1300,7 @@ func (s *Healthcare) GetHealthcareCondition(ctx context.Context, request operati
 }
 
 // GetHealthcareEncounter - Retrieve an encounter
+// Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Healthcare) GetHealthcareEncounter(ctx context.Context, request operations.GetHealthcareEncounterRequest, opts ...operations.Option) (*operations.GetHealthcareEncounterResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Healthcare) GetHealthcareEncounter(ctx context.Context, request operati
 }
 
 // GetHealthcareImmunization - Retrieve an immunization
+// Retrieves a single HealthcareImmunization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Healthcare) GetHealthcareImmunization(ctx context.Context, request operations.GetHealthcareImmunizationRequest, opts ...operations.Option) (*operations.GetHealthcareImmunizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1708,6 +1716,7 @@ func (s *Healthcare) GetHealthcareImmunization(ctx context.Context, request oper
 }
 
 // GetHealthcareLocation - Retrieve a location
+// Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Healthcare) GetHealthcareLocation(ctx context.Context, request operations.GetHealthcareLocationRequest, opts ...operations.Option) (*operations.GetHealthcareLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1915,6 +1924,7 @@ func (s *Healthcare) GetHealthcareLocation(ctx context.Context, request operatio
 }
 
 // GetHealthcareMedication - Retrieve a medication
+// Retrieves a single HealthcareMedication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Healthcare) GetHealthcareMedication(ctx context.Context, request operations.GetHealthcareMedicationRequest, opts ...operations.Option) (*operations.GetHealthcareMedicationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2122,6 +2132,7 @@ func (s *Healthcare) GetHealthcareMedication(ctx context.Context, request operat
 }
 
 // GetHealthcareObservation - Retrieve an observation
+// Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Healthcare) GetHealthcareObservation(ctx context.Context, request operations.GetHealthcareObservationRequest, opts ...operations.Option) (*operations.GetHealthcareObservationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2329,6 +2340,7 @@ func (s *Healthcare) GetHealthcareObservation(ctx context.Context, request opera
 }
 
 // GetHealthcarePatient - Retrieve a patient
+// Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Healthcare) GetHealthcarePatient(ctx context.Context, request operations.GetHealthcarePatientRequest, opts ...operations.Option) (*operations.GetHealthcarePatientResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2536,6 +2548,7 @@ func (s *Healthcare) GetHealthcarePatient(ctx context.Context, request operation
 }
 
 // GetHealthcarePractitioner - Retrieve a practitioner
+// Retrieves a single HealthcarePractitioner by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Healthcare) GetHealthcarePractitioner(ctx context.Context, request operations.GetHealthcarePractitionerRequest, opts ...operations.Option) (*operations.GetHealthcarePractitionerResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2743,6 +2756,7 @@ func (s *Healthcare) GetHealthcarePractitioner(ctx context.Context, request oper
 }
 
 // GetHealthcareSlot - Retrieve a slot
+// Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Healthcare) GetHealthcareSlot(ctx context.Context, request operations.GetHealthcareSlotRequest, opts ...operations.Option) (*operations.GetHealthcareSlotResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2950,6 +2964,7 @@ func (s *Healthcare) GetHealthcareSlot(ctx context.Context, request operations.G
 }
 
 // ListHealthcareAllergies - List all allergies
+// Returns a list of HealthcareAllergies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Healthcare) ListHealthcareAllergies(ctx context.Context, request operations.ListHealthcareAllergiesRequest, opts ...operations.Option) (*operations.ListHealthcareAllergiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3157,6 +3172,7 @@ func (s *Healthcare) ListHealthcareAllergies(ctx context.Context, request operat
 }
 
 // ListHealthcareAppointments - List all appointments
+// Returns a list of HealthcareAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Healthcare) ListHealthcareAppointments(ctx context.Context, request operations.ListHealthcareAppointmentsRequest, opts ...operations.Option) (*operations.ListHealthcareAppointmentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3364,6 +3380,7 @@ func (s *Healthcare) ListHealthcareAppointments(ctx context.Context, request ope
 }
 
 // ListHealthcareConditions - List all conditions
+// Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Healthcare) ListHealthcareConditions(ctx context.Context, request operations.ListHealthcareConditionsRequest, opts ...operations.Option) (*operations.ListHealthcareConditionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3571,6 +3588,7 @@ func (s *Healthcare) ListHealthcareConditions(ctx context.Context, request opera
 }
 
 // ListHealthcareEncounters - List all encounters
+// Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Healthcare) ListHealthcareEncounters(ctx context.Context, request operations.ListHealthcareEncountersRequest, opts ...operations.Option) (*operations.ListHealthcareEncountersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3778,6 +3796,7 @@ func (s *Healthcare) ListHealthcareEncounters(ctx context.Context, request opera
 }
 
 // ListHealthcareImmunizations - List all immunizations
+// Returns a list of HealthcareImmunizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Healthcare) ListHealthcareImmunizations(ctx context.Context, request operations.ListHealthcareImmunizationsRequest, opts ...operations.Option) (*operations.ListHealthcareImmunizationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3985,6 +4004,7 @@ func (s *Healthcare) ListHealthcareImmunizations(ctx context.Context, request op
 }
 
 // ListHealthcareLocations - List all locations
+// Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Healthcare) ListHealthcareLocations(ctx context.Context, request operations.ListHealthcareLocationsRequest, opts ...operations.Option) (*operations.ListHealthcareLocationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4192,6 +4212,7 @@ func (s *Healthcare) ListHealthcareLocations(ctx context.Context, request operat
 }
 
 // ListHealthcareMedications - List all medications
+// Returns a list of HealthcareMedications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Healthcare) ListHealthcareMedications(ctx context.Context, request operations.ListHealthcareMedicationsRequest, opts ...operations.Option) (*operations.ListHealthcareMedicationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4399,6 +4420,7 @@ func (s *Healthcare) ListHealthcareMedications(ctx context.Context, request oper
 }
 
 // ListHealthcareObservations - List all observations
+// Returns a list of HealthcareObservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Healthcare) ListHealthcareObservations(ctx context.Context, request operations.ListHealthcareObservationsRequest, opts ...operations.Option) (*operations.ListHealthcareObservationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4606,6 +4628,7 @@ func (s *Healthcare) ListHealthcareObservations(ctx context.Context, request ope
 }
 
 // ListHealthcarePatients - List all patients
+// Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Healthcare) ListHealthcarePatients(ctx context.Context, request operations.ListHealthcarePatientsRequest, opts ...operations.Option) (*operations.ListHealthcarePatientsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4813,6 +4836,7 @@ func (s *Healthcare) ListHealthcarePatients(ctx context.Context, request operati
 }
 
 // ListHealthcarePractitioners - List all practitioners
+// Returns a list of HealthcarePractitioners. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Healthcare) ListHealthcarePractitioners(ctx context.Context, request operations.ListHealthcarePractitionersRequest, opts ...operations.Option) (*operations.ListHealthcarePractitionersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5020,6 +5044,7 @@ func (s *Healthcare) ListHealthcarePractitioners(ctx context.Context, request op
 }
 
 // ListHealthcareSlots - List all slots
+// Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Healthcare) ListHealthcareSlots(ctx context.Context, request operations.ListHealthcareSlotsRequest, opts ...operations.Option) (*operations.ListHealthcareSlotsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5227,6 +5252,7 @@ func (s *Healthcare) ListHealthcareSlots(ctx context.Context, request operations
 }
 
 // PatchHealthcareAppointment - Update an appointment
+// Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 func (s *Healthcare) PatchHealthcareAppointment(ctx context.Context, request operations.PatchHealthcareAppointmentRequest, opts ...operations.Option) (*operations.PatchHealthcareAppointmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5441,6 +5467,7 @@ func (s *Healthcare) PatchHealthcareAppointment(ctx context.Context, request ope
 }
 
 // PatchHealthcarePatient - Update a patient
+// Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 func (s *Healthcare) PatchHealthcarePatient(ctx context.Context, request operations.PatchHealthcarePatientRequest, opts ...operations.Option) (*operations.PatchHealthcarePatientResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5655,6 +5682,7 @@ func (s *Healthcare) PatchHealthcarePatient(ctx context.Context, request operati
 }
 
 // RemoveHealthcareAppointment - Remove an appointment
+// Deletes the HealthcareAppointment identified by `id`.
 func (s *Healthcare) RemoveHealthcareAppointment(ctx context.Context, request operations.RemoveHealthcareAppointmentRequest, opts ...operations.Option) (*operations.RemoveHealthcareAppointmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5837,6 +5865,7 @@ func (s *Healthcare) RemoveHealthcareAppointment(ctx context.Context, request op
 }
 
 // UpdateHealthcareAppointment - Update an appointment
+// Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 func (s *Healthcare) UpdateHealthcareAppointment(ctx context.Context, request operations.UpdateHealthcareAppointmentRequest, opts ...operations.Option) (*operations.UpdateHealthcareAppointmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6051,6 +6080,7 @@ func (s *Healthcare) UpdateHealthcareAppointment(ctx context.Context, request op
 }
 
 // UpdateHealthcarePatient - Update a patient
+// Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 func (s *Healthcare) UpdateHealthcarePatient(ctx context.Context, request operations.UpdateHealthcarePatientRequest, opts ...operations.Option) (*operations.UpdateHealthcarePatientResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

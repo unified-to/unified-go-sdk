@@ -31,6 +31,7 @@ func newMember(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 }
 
 // CreateMartechMember - Create a member
+// Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are mapped to the provider's API. Returns the created MarketingMember.
 func (s *Member) CreateMartechMember(ctx context.Context, request operations.CreateMartechMemberRequest, opts ...operations.Option) (*operations.CreateMartechMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Member) CreateMartechMember(ctx context.Context, request operations.Cre
 }
 
 // GetClubsMember - Retrieve a member
+// Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Member) GetClubsMember(ctx context.Context, request operations.GetClubsMemberRequest, opts ...operations.Option) (*operations.GetClubsMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Member) GetClubsMember(ctx context.Context, request operations.GetClubs
 }
 
 // GetMartechMember - Retrieve a member
+// Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Member) GetMartechMember(ctx context.Context, request operations.GetMartechMemberRequest, opts ...operations.Option) (*operations.GetMartechMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Member) GetMartechMember(ctx context.Context, request operations.GetMar
 }
 
 // ListClubsMembers - List all members
+// Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Member) ListClubsMembers(ctx context.Context, request operations.ListClubsMembersRequest, opts ...operations.Option) (*operations.ListClubsMembersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -866,6 +870,7 @@ func (s *Member) ListClubsMembers(ctx context.Context, request operations.ListCl
 }
 
 // ListMartechMembers - List all members
+// Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Member) ListMartechMembers(ctx context.Context, request operations.ListMartechMembersRequest, opts ...operations.Option) (*operations.ListMartechMembersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1073,6 +1078,7 @@ func (s *Member) ListMartechMembers(ctx context.Context, request operations.List
 }
 
 // PatchMartechMember - Update a member
+// Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
 func (s *Member) PatchMartechMember(ctx context.Context, request operations.PatchMartechMemberRequest, opts ...operations.Option) (*operations.PatchMartechMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1287,6 +1293,7 @@ func (s *Member) PatchMartechMember(ctx context.Context, request operations.Patc
 }
 
 // RemoveMartechMember - Remove a member
+// Deletes the MarketingMember identified by `id`.
 func (s *Member) RemoveMartechMember(ctx context.Context, request operations.RemoveMartechMemberRequest, opts ...operations.Option) (*operations.RemoveMartechMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1469,6 +1476,7 @@ func (s *Member) RemoveMartechMember(ctx context.Context, request operations.Rem
 }
 
 // UpdateMartechMember - Update a member
+// Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
 func (s *Member) UpdateMartechMember(ctx context.Context, request operations.UpdateMartechMemberRequest, opts ...operations.Option) (*operations.UpdateMartechMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

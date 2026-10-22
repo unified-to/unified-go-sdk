@@ -13,7 +13,7 @@
 
 ## CreateHrisAttendance
 
-Create an attendance
+Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are mapped to the provider's API. Returns the created HrisAttendance.
 
 ### Example Usage
 
@@ -47,32 +47,32 @@ func main() {
                 Region: unifiedgosdk.Pointer("Tennessee"),
                 RegionCode: unifiedgosdk.Pointer("CA"),
             },
-            ApprovedAt: types.MustNewTimeFromString("2021-09-19T14:06:30.623Z"),
+            ApprovedAt: types.MustNewTimeFromString("2021-09-19T14:36:24.348Z"),
             Breaks: []shared.HrisAttendanceBreak{
                 shared.HrisAttendanceBreak{
                     DurationMinutes: unifiedgosdk.Pointer[float64](51.0),
-                    EndAt: types.MustNewTimeFromString("2024-02-14T13:16:00.525Z"),
-                    ID: unifiedgosdk.Pointer("90e38399-cdd9-4d0f-9dea-ce081a3fdf76"),
+                    EndAt: types.MustNewTimeFromString("2024-02-15T00:45:56.493Z"),
+                    ID: unifiedgosdk.Pointer("2febbb18-e9d7-4d0b-b18b-58013d50e9ae"),
                     IsPaid: unifiedgosdk.Pointer(false),
                     Name: unifiedgosdk.Pointer("Lunch"),
-                    StartAt: types.MustNewTimeFromString("2023-10-29T23:03:00.394Z"),
+                    StartAt: types.MustNewTimeFromString("2023-10-30T09:12:03.208Z"),
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2021-08-10T19:43:18.452Z"),
             Currency: unifiedgosdk.Pointer("EUR"),
             DeclaredTipsAmount: unifiedgosdk.Pointer[float64](54.0),
             EmployeeUserID: "<id>",
-            EndAt: types.MustTimeFromString("2024-04-23T07:48:11.832Z"),
+            EndAt: types.MustTimeFromString("2024-04-23T20:09:49.905Z"),
             HourlyRate: unifiedgosdk.Pointer[float64](16.0),
             Hours: unifiedgosdk.Pointer[float64](10.0),
-            ID: unifiedgosdk.Pointer("d6a7c321-3372-4891-9b5d-f2d24e9a30c5"),
+            ID: unifiedgosdk.Pointer("5e087bcc-2314-41cf-bef5-c866d0a6f59a"),
             JobName: unifiedgosdk.Pointer("Human Accountability Administrator"),
             Metadata: []shared.HrisMetadata{},
             NonCashTipsAmount: unifiedgosdk.Pointer[float64](167.0),
-            StartAt: types.MustTimeFromString("2021-11-11T00:56:01.833Z"),
+            StartAt: types.MustTimeFromString("2021-11-11T02:05:21.460Z"),
             Status: shared.HrisAttendanceStatusOpen.ToPointer(),
             Timezone: unifiedgosdk.Pointer("America/Atikokan"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-19T21:04:34.807Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-19T23:06:24.665Z"),
         },
         ConnectionID: "<id>",
     })
@@ -105,7 +105,7 @@ func main() {
 
 ## GetHrisAttendance
 
-Retrieve an attendance
+Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -160,7 +160,7 @@ func main() {
 
 ## ListHrisAttendances
 
-List all attendances
+Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -214,7 +214,7 @@ func main() {
 
 ## PatchHrisAttendance
 
-Update an attendance
+Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
 ### Example Usage
 
@@ -248,32 +248,32 @@ func main() {
                 Region: unifiedgosdk.Pointer("Tennessee"),
                 RegionCode: unifiedgosdk.Pointer("CA"),
             },
-            ApprovedAt: types.MustNewTimeFromString("2021-09-19T14:06:30.624Z"),
+            ApprovedAt: types.MustNewTimeFromString("2021-09-19T14:36:24.348Z"),
             Breaks: []shared.HrisAttendanceBreak{
                 shared.HrisAttendanceBreak{
                     DurationMinutes: unifiedgosdk.Pointer[float64](51.0),
-                    EndAt: types.MustNewTimeFromString("2024-02-14T13:16:00.540Z"),
-                    ID: unifiedgosdk.Pointer("939123d3-e26b-44f5-855a-b592fc011641"),
+                    EndAt: types.MustNewTimeFromString("2024-02-15T00:45:56.503Z"),
+                    ID: unifiedgosdk.Pointer("6aaf0655-e6e5-451b-8099-50e6f3a2a33d"),
                     IsPaid: unifiedgosdk.Pointer(false),
                     Name: unifiedgosdk.Pointer("Lunch"),
-                    StartAt: types.MustNewTimeFromString("2023-10-29T23:03:00.407Z"),
+                    StartAt: types.MustNewTimeFromString("2023-10-30T09:12:03.217Z"),
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2021-08-10T19:43:18.452Z"),
             Currency: unifiedgosdk.Pointer("EUR"),
             DeclaredTipsAmount: unifiedgosdk.Pointer[float64](54.0),
             EmployeeUserID: "<id>",
-            EndAt: types.MustTimeFromString("2024-04-23T07:48:11.848Z"),
+            EndAt: types.MustTimeFromString("2024-04-23T20:09:49.916Z"),
             HourlyRate: unifiedgosdk.Pointer[float64](16.0),
             Hours: unifiedgosdk.Pointer[float64](10.0),
-            ID: unifiedgosdk.Pointer("de583745-c602-4069-9149-69ec0f9587aa"),
+            ID: unifiedgosdk.Pointer("31e79ecd-e0a3-43a4-b3a8-492aff61cb64"),
             JobName: unifiedgosdk.Pointer("Human Accountability Administrator"),
             Metadata: []shared.HrisMetadata{},
             NonCashTipsAmount: unifiedgosdk.Pointer[float64](167.0),
-            StartAt: types.MustTimeFromString("2021-11-11T00:56:01.835Z"),
+            StartAt: types.MustTimeFromString("2021-11-11T02:05:21.461Z"),
             Status: shared.HrisAttendanceStatusOpen.ToPointer(),
             Timezone: unifiedgosdk.Pointer("America/Atikokan"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-19T21:04:34.810Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-19T23:06:24.667Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -307,7 +307,7 @@ func main() {
 
 ## RemoveHrisAttendance
 
-Remove an attendance
+Deletes the HrisAttendance identified by `id`.
 
 ### Example Usage
 
@@ -362,7 +362,7 @@ func main() {
 
 ## UpdateHrisAttendance
 
-Update an attendance
+Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
 ### Example Usage
 
@@ -396,32 +396,32 @@ func main() {
                 Region: unifiedgosdk.Pointer("Tennessee"),
                 RegionCode: unifiedgosdk.Pointer("CA"),
             },
-            ApprovedAt: types.MustNewTimeFromString("2021-09-19T14:06:30.624Z"),
+            ApprovedAt: types.MustNewTimeFromString("2021-09-19T14:36:24.348Z"),
             Breaks: []shared.HrisAttendanceBreak{
                 shared.HrisAttendanceBreak{
                     DurationMinutes: unifiedgosdk.Pointer[float64](51.0),
-                    EndAt: types.MustNewTimeFromString("2024-02-14T13:16:00.540Z"),
-                    ID: unifiedgosdk.Pointer("939123d3-e26b-44f5-855a-b592fc011641"),
+                    EndAt: types.MustNewTimeFromString("2024-02-15T00:45:56.503Z"),
+                    ID: unifiedgosdk.Pointer("6aaf0655-e6e5-451b-8099-50e6f3a2a33d"),
                     IsPaid: unifiedgosdk.Pointer(false),
                     Name: unifiedgosdk.Pointer("Lunch"),
-                    StartAt: types.MustNewTimeFromString("2023-10-29T23:03:00.407Z"),
+                    StartAt: types.MustNewTimeFromString("2023-10-30T09:12:03.217Z"),
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2021-08-10T19:43:18.452Z"),
             Currency: unifiedgosdk.Pointer("EUR"),
             DeclaredTipsAmount: unifiedgosdk.Pointer[float64](54.0),
             EmployeeUserID: "<id>",
-            EndAt: types.MustTimeFromString("2024-04-23T07:48:11.848Z"),
+            EndAt: types.MustTimeFromString("2024-04-23T20:09:49.916Z"),
             HourlyRate: unifiedgosdk.Pointer[float64](16.0),
             Hours: unifiedgosdk.Pointer[float64](10.0),
-            ID: unifiedgosdk.Pointer("de583745-c602-4069-9149-69ec0f9587aa"),
+            ID: unifiedgosdk.Pointer("31e79ecd-e0a3-43a4-b3a8-492aff61cb64"),
             JobName: unifiedgosdk.Pointer("Human Accountability Administrator"),
             Metadata: []shared.HrisMetadata{},
             NonCashTipsAmount: unifiedgosdk.Pointer[float64](167.0),
-            StartAt: types.MustTimeFromString("2021-11-11T00:56:01.835Z"),
+            StartAt: types.MustTimeFromString("2021-11-11T02:05:21.461Z"),
             Status: shared.HrisAttendanceStatusOpen.ToPointer(),
             Timezone: unifiedgosdk.Pointer("America/Atikokan"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-19T21:04:34.810Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-19T23:06:24.667Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -49,7 +49,7 @@
 
 ## CreateLmsActivity
 
-Create an activity
+Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped to the provider's API. Returns the created LmsActivity.
 
 ### Example Usage
 
@@ -76,15 +76,15 @@ func main() {
     res, err := s.Lms.CreateLmsActivity(ctx, operations.CreateLmsActivityRequest{
         LmsActivity: shared.LmsActivity{
             AssignedGrade: unifiedgosdk.Pointer("summopere"),
-            CompletedAt: types.MustNewTimeFromString("2023-12-05T23:40:40.743Z"),
+            CompletedAt: types.MustNewTimeFromString("2023-12-06T12:04:39.234Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-17T01:25:21.745Z"),
             DurationMinutes: unifiedgosdk.Pointer[float64](55.0),
-            ID: unifiedgosdk.Pointer("0b1206e4-ebf4-461d-ad66-a9ed815927b6"),
+            ID: unifiedgosdk.Pointer("0a87f169-efad-4aba-b463-b08da0add2bd"),
             IsCompleted: unifiedgosdk.Pointer(true),
             Metadata: []shared.LmsMetadata{},
             ProgressPercentage: unifiedgosdk.Pointer[float64](100.0),
-            StartedAt: types.MustNewTimeFromString("2021-04-25T04:23:32.793Z"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-30T23:41:21.299Z"),
+            StartedAt: types.MustNewTimeFromString("2021-04-25T06:27:05.348Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-31T04:47:21.858Z"),
         },
         ConnectionID: "<id>",
     })
@@ -117,7 +117,7 @@ func main() {
 
 ## CreateLmsClass
 
-Create a class
+Creates a LmsClass. Provide the unified LmsClass fields in the request body; they are mapped to the provider's API. Returns the created LmsClass.
 
 ### Example Usage
 
@@ -145,7 +145,7 @@ func main() {
         LmsClass: shared.LmsClass{
             CreatedAt: types.MustNewTimeFromString("2020-02-20T14:48:51.845Z"),
             Description: unifiedgosdk.Pointer("Anser sperno decerno."),
-            ID: unifiedgosdk.Pointer("02c0fab5-b196-44ff-ac6f-aad22cd1d454"),
+            ID: unifiedgosdk.Pointer("d5601fe2-ef5f-477b-8c81-5a56dfdd5b83"),
             Instructors: []shared.LmsReference{},
             Languages: []string{
                 "in",
@@ -167,7 +167,7 @@ func main() {
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("virtus"),
             Students: []shared.LmsReference{},
-            UpdatedAt: types.MustNewTimeFromString("2025-08-03T21:30:44.537Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-04T16:57:24.398Z"),
         },
         ConnectionID: "<id>",
     })
@@ -200,7 +200,7 @@ func main() {
 
 ## CreateLmsCollection
 
-Create a collection
+Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are mapped to the provider's API. Returns the created LmsCollection.
 
 ### Example Usage
 
@@ -228,7 +228,7 @@ func main() {
         LmsCollection: shared.LmsCollection{
             CreatedAt: types.MustNewTimeFromString("2019-08-19T14:40:29.227Z"),
             Description: unifiedgosdk.Pointer("Ab."),
-            ID: unifiedgosdk.Pointer("ad8c76c0-de0d-461e-99ec-2610973fca28"),
+            ID: unifiedgosdk.Pointer("0eef2f70-ca9e-44d8-9319-214f259637da"),
             IsActive: unifiedgosdk.Pointer(true),
             Media: []shared.LmsMedia{
                 shared.LmsMedia{
@@ -245,7 +245,7 @@ func main() {
             },
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ara"),
-            UpdatedAt: types.MustNewTimeFromString("2026-07-30T07:04:58.077Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-07-31T06:06:12.452Z"),
         },
         ConnectionID: "<id>",
     })
@@ -278,7 +278,7 @@ func main() {
 
 ## CreateLmsContent
 
-Create a content
+Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to the provider's API. Returns the created LmsContent.
 
 ### Example Usage
 
@@ -311,7 +311,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Usque laboriosam ventosus adflicto."),
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("30e4f460-4b55-4fc2-956e-f6f5ff936ab5"),
+            ID: unifiedgosdk.Pointer("c1a50c5f-3b8d-4e1a-89d7-24e8071225bc"),
             Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             Languages: []string{
@@ -371,7 +371,7 @@ func main() {
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ut"),
             ProviderName: unifiedgosdk.Pointer("Bins LLC"),
-            PublishedAt: types.MustNewTimeFromString("2022-09-03T06:18:34.592Z"),
+            PublishedAt: types.MustNewTimeFromString("2022-09-03T13:41:50.364Z"),
             ShortDescription: unifiedgosdk.Pointer("Caritas."),
             Skills: []string{
                 "trucido",
@@ -386,7 +386,7 @@ func main() {
             Tags: []string{
                 "dens",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-10-04T04:34:53.718Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-04T12:18:18.550Z"),
         },
         ConnectionID: "<id>",
     })
@@ -419,7 +419,7 @@ func main() {
 
 ## CreateLmsCourse
 
-Create a course
+Creates a LmsCourse. Provide the unified LmsCourse fields in the request body; they are mapped to the provider's API. Returns the created LmsCourse.
 
 ### Example Usage
 
@@ -453,7 +453,7 @@ func main() {
             Currency: unifiedgosdk.Pointer("FJD"),
             Description: unifiedgosdk.Pointer("Vinco alias aut capitulus."),
             DurationMinutes: unifiedgosdk.Pointer[float64](148.0),
-            ID: unifiedgosdk.Pointer("d646526e-939a-4320-9798-869d3a2a42da"),
+            ID: unifiedgosdk.Pointer("cdaaee30-a874-4db8-8776-f21dd9b770e4"),
             Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             IsPrivate: unifiedgosdk.Pointer(false),
@@ -480,14 +480,14 @@ func main() {
             Name: unifiedgosdk.Pointer("comptus"),
             PriceAmount: unifiedgosdk.Pointer[float64](84.0),
             ProviderName: unifiedgosdk.Pointer("Homenick - Wunsch"),
-            PublishedAt: types.MustNewTimeFromString("2022-11-05T18:11:06.158Z"),
+            PublishedAt: types.MustNewTimeFromString("2022-11-05T18:40:25.835Z"),
             Skills: []string{
                 "adiuvo",
                 "tam",
             },
             Students: []shared.LmsReference{},
             TimeEstimateMinutes: unifiedgosdk.Pointer[float64](100.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-09T18:20:08.719Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-09T20:22:16.292Z"),
         },
         ConnectionID: "<id>",
     })
@@ -520,7 +520,7 @@ func main() {
 
 ## CreateLmsInstructor
 
-Create an instructor
+Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request body; they are mapped to the provider's API. Returns the created LmsInstructor.
 
 ### Example Usage
 
@@ -551,7 +551,7 @@ func main() {
                 shared.LmsEmail{},
             },
             FirstName: unifiedgosdk.Pointer("Deangelo"),
-            ID: unifiedgosdk.Pointer("ed7352b2-b4e5-46cd-8c4b-b8efc95d1370"),
+            ID: unifiedgosdk.Pointer("57402488-af3f-404b-8ada-780956f69f5b"),
             ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/95131132"),
             LastName: unifiedgosdk.Pointer("Ritchie"),
             Metadata: []shared.LmsMetadata{},
@@ -567,7 +567,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Regional Security Agent"),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-24T10:19:49.914Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-25T04:13:25.928Z"),
         },
         ConnectionID: "<id>",
     })
@@ -600,7 +600,7 @@ func main() {
 
 ## CreateLmsStudent
 
-Create a student
+Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to the provider's API. Returns the created LmsStudent.
 
 ### Example Usage
 
@@ -639,7 +639,7 @@ func main() {
                 shared.LmsEmail{},
             },
             FirstName: unifiedgosdk.Pointer("Marcella"),
-            ID: unifiedgosdk.Pointer("04f331a8-dc9c-4c07-8736-fa1537e3c7cb"),
+            ID: unifiedgosdk.Pointer("3969f57c-214d-4f0b-aa7c-8d5395c21384"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg"),
             LastName: unifiedgosdk.Pointer("Murazik"),
             Metadata: []shared.LmsMetadata{},
@@ -658,7 +658,7 @@ func main() {
                     Type: shared.LmsTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-06-30T23:26:48.052Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-01T07:39:18.663Z"),
         },
         ConnectionID: "<id>",
     })
@@ -691,7 +691,7 @@ func main() {
 
 ## GetLmsActivity
 
-Retrieve an activity
+Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -746,7 +746,7 @@ func main() {
 
 ## GetLmsClass
 
-Retrieve a class
+Retrieves a single LmsClass by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -801,7 +801,7 @@ func main() {
 
 ## GetLmsCollection
 
-Retrieve a collection
+Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -856,7 +856,7 @@ func main() {
 
 ## GetLmsContent
 
-Retrieve a content
+Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -911,7 +911,7 @@ func main() {
 
 ## GetLmsCourse
 
-Retrieve a course
+Retrieves a single LmsCourse by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -966,7 +966,7 @@ func main() {
 
 ## GetLmsInstructor
 
-Retrieve an instructor
+Retrieves a single LmsInstructor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1021,7 +1021,7 @@ func main() {
 
 ## GetLmsStudent
 
-Retrieve a student
+Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1076,7 +1076,7 @@ func main() {
 
 ## ListLmsActivities
 
-List all activities
+Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1130,7 +1130,7 @@ func main() {
 
 ## ListLmsClasses
 
-List all classes
+Returns a list of LmsClasses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1184,7 +1184,7 @@ func main() {
 
 ## ListLmsCollections
 
-List all collections
+Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1238,7 +1238,7 @@ func main() {
 
 ## ListLmsContents
 
-List all contents
+Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1292,7 +1292,7 @@ func main() {
 
 ## ListLmsCourses
 
-List all courses
+Returns a list of LmsCourses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1346,7 +1346,7 @@ func main() {
 
 ## ListLmsInstructors
 
-List all instructors
+Returns a list of LmsInstructors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1400,7 +1400,7 @@ func main() {
 
 ## ListLmsStudents
 
-List all students
+Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1454,7 +1454,7 @@ func main() {
 
 ## PatchLmsActivity
 
-Update an activity
+Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -1481,15 +1481,15 @@ func main() {
     res, err := s.Lms.PatchLmsActivity(ctx, operations.PatchLmsActivityRequest{
         LmsActivity: shared.LmsActivity{
             AssignedGrade: unifiedgosdk.Pointer("summopere"),
-            CompletedAt: types.MustNewTimeFromString("2023-12-05T23:40:40.748Z"),
+            CompletedAt: types.MustNewTimeFromString("2023-12-06T12:04:39.243Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-17T01:25:21.745Z"),
             DurationMinutes: unifiedgosdk.Pointer[float64](55.0),
-            ID: unifiedgosdk.Pointer("72d4119b-e5e6-45cd-9941-cd292c426d45"),
+            ID: unifiedgosdk.Pointer("5e21e9ae-106a-48db-8731-1534e0864f1f"),
             IsCompleted: unifiedgosdk.Pointer(true),
             Metadata: []shared.LmsMetadata{},
             ProgressPercentage: unifiedgosdk.Pointer[float64](100.0),
-            StartedAt: types.MustNewTimeFromString("2021-04-25T04:23:32.794Z"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-30T23:41:21.301Z"),
+            StartedAt: types.MustNewTimeFromString("2021-04-25T06:27:05.350Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-31T04:47:21.861Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1523,7 +1523,7 @@ func main() {
 
 ## PatchLmsClass
 
-Update a class
+Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 
 ### Example Usage
 
@@ -1551,7 +1551,7 @@ func main() {
         LmsClass: shared.LmsClass{
             CreatedAt: types.MustNewTimeFromString("2020-02-20T14:48:51.845Z"),
             Description: unifiedgosdk.Pointer("Anser sperno decerno."),
-            ID: unifiedgosdk.Pointer("d27e8714-52ef-484e-904f-dea9aacb2d55"),
+            ID: unifiedgosdk.Pointer("1a61a532-a2d5-4710-a0c1-85adfa63eb39"),
             Instructors: []shared.LmsReference{},
             Languages: []string{
                 "in",
@@ -1573,7 +1573,7 @@ func main() {
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("virtus"),
             Students: []shared.LmsReference{},
-            UpdatedAt: types.MustNewTimeFromString("2025-08-03T21:30:44.550Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-04T16:57:24.422Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1607,7 +1607,7 @@ func main() {
 
 ## PatchLmsCollection
 
-Update a collection
+Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -1635,7 +1635,7 @@ func main() {
         LmsCollection: shared.LmsCollection{
             CreatedAt: types.MustNewTimeFromString("2019-08-19T14:40:29.227Z"),
             Description: unifiedgosdk.Pointer("Ab."),
-            ID: unifiedgosdk.Pointer("776423a0-c2ca-4984-93a0-d53a46ddee1b"),
+            ID: unifiedgosdk.Pointer("935b9a6d-4c66-441d-a9cb-34b4e9e56c7f"),
             IsActive: unifiedgosdk.Pointer(true),
             Media: []shared.LmsMedia{
                 shared.LmsMedia{
@@ -1652,7 +1652,7 @@ func main() {
             },
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ara"),
-            UpdatedAt: types.MustNewTimeFromString("2026-07-30T07:04:58.094Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-07-31T06:06:12.473Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1686,7 +1686,7 @@ func main() {
 
 ## PatchLmsContent
 
-Update a content
+Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
 ### Example Usage
 
@@ -1719,7 +1719,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Usque laboriosam ventosus adflicto."),
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("de227394-fbd0-4a0b-8f28-9e960cc07406"),
+            ID: unifiedgosdk.Pointer("47939b71-9963-4c72-adb3-0c27c660cd9d"),
             Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             Languages: []string{
@@ -1779,7 +1779,7 @@ func main() {
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ut"),
             ProviderName: unifiedgosdk.Pointer("Bins LLC"),
-            PublishedAt: types.MustNewTimeFromString("2022-09-03T06:18:34.603Z"),
+            PublishedAt: types.MustNewTimeFromString("2022-09-03T13:41:50.375Z"),
             ShortDescription: unifiedgosdk.Pointer("Caritas."),
             Skills: []string{
                 "trucido",
@@ -1794,7 +1794,7 @@ func main() {
             Tags: []string{
                 "dens",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-10-04T04:34:53.729Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-04T12:18:18.562Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1828,7 +1828,7 @@ func main() {
 
 ## PatchLmsCourse
 
-Update a course
+Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 
 ### Example Usage
 
@@ -1862,7 +1862,7 @@ func main() {
             Currency: unifiedgosdk.Pointer("FJD"),
             Description: unifiedgosdk.Pointer("Vinco alias aut capitulus."),
             DurationMinutes: unifiedgosdk.Pointer[float64](148.0),
-            ID: unifiedgosdk.Pointer("efcb5073-ec55-445b-b744-96bc88b5942f"),
+            ID: unifiedgosdk.Pointer("bc14f3a8-fe41-4546-8e4e-4e48882fa65d"),
             Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             IsPrivate: unifiedgosdk.Pointer(false),
@@ -1889,14 +1889,14 @@ func main() {
             Name: unifiedgosdk.Pointer("comptus"),
             PriceAmount: unifiedgosdk.Pointer[float64](84.0),
             ProviderName: unifiedgosdk.Pointer("Homenick - Wunsch"),
-            PublishedAt: types.MustNewTimeFromString("2022-11-05T18:11:06.159Z"),
+            PublishedAt: types.MustNewTimeFromString("2022-11-05T18:40:25.836Z"),
             Skills: []string{
                 "adiuvo",
                 "tam",
             },
             Students: []shared.LmsReference{},
             TimeEstimateMinutes: unifiedgosdk.Pointer[float64](100.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-09T18:20:08.721Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-09T20:22:16.294Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1930,7 +1930,7 @@ func main() {
 
 ## PatchLmsInstructor
 
-Update an instructor
+Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 
 ### Example Usage
 
@@ -1961,7 +1961,7 @@ func main() {
                 shared.LmsEmail{},
             },
             FirstName: unifiedgosdk.Pointer("Deangelo"),
-            ID: unifiedgosdk.Pointer("1327c6b3-eddf-40fb-b758-98ccff3a7545"),
+            ID: unifiedgosdk.Pointer("7ef6015d-4d96-4456-8b89-51b9e4139eb2"),
             ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/95131132"),
             LastName: unifiedgosdk.Pointer("Ritchie"),
             Metadata: []shared.LmsMetadata{},
@@ -1977,7 +1977,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Regional Security Agent"),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-24T10:19:49.926Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-25T04:13:25.942Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2011,7 +2011,7 @@ func main() {
 
 ## PatchLmsStudent
 
-Update a student
+Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
 ### Example Usage
 
@@ -2050,7 +2050,7 @@ func main() {
                 shared.LmsEmail{},
             },
             FirstName: unifiedgosdk.Pointer("Marcella"),
-            ID: unifiedgosdk.Pointer("24f1db3e-48d4-45d8-a0f7-78d5a7bcd6fa"),
+            ID: unifiedgosdk.Pointer("f37eded4-a6e6-482e-81be-849ac16fa098"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg"),
             LastName: unifiedgosdk.Pointer("Murazik"),
             Metadata: []shared.LmsMetadata{},
@@ -2069,7 +2069,7 @@ func main() {
                     Type: shared.LmsTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-06-30T23:26:48.060Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-01T07:39:18.672Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2103,7 +2103,7 @@ func main() {
 
 ## RemoveLmsActivity
 
-Remove an activity
+Deletes the LmsActivity identified by `id`.
 
 ### Example Usage
 
@@ -2158,7 +2158,7 @@ func main() {
 
 ## RemoveLmsClass
 
-Remove a class
+Deletes the LmsClass identified by `id`.
 
 ### Example Usage
 
@@ -2213,7 +2213,7 @@ func main() {
 
 ## RemoveLmsCollection
 
-Remove a collection
+Deletes the LmsCollection identified by `id`.
 
 ### Example Usage
 
@@ -2268,7 +2268,7 @@ func main() {
 
 ## RemoveLmsContent
 
-Remove a content
+Deletes the LmsContent identified by `id`.
 
 ### Example Usage
 
@@ -2323,7 +2323,7 @@ func main() {
 
 ## RemoveLmsCourse
 
-Remove a course
+Deletes the LmsCourse identified by `id`.
 
 ### Example Usage
 
@@ -2378,7 +2378,7 @@ func main() {
 
 ## RemoveLmsInstructor
 
-Remove an instructor
+Deletes the LmsInstructor identified by `id`.
 
 ### Example Usage
 
@@ -2433,7 +2433,7 @@ func main() {
 
 ## RemoveLmsStudent
 
-Remove a student
+Deletes the LmsStudent identified by `id`.
 
 ### Example Usage
 
@@ -2488,7 +2488,7 @@ func main() {
 
 ## UpdateLmsActivity
 
-Update an activity
+Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -2515,15 +2515,15 @@ func main() {
     res, err := s.Lms.UpdateLmsActivity(ctx, operations.UpdateLmsActivityRequest{
         LmsActivity: shared.LmsActivity{
             AssignedGrade: unifiedgosdk.Pointer("summopere"),
-            CompletedAt: types.MustNewTimeFromString("2023-12-05T23:40:40.748Z"),
+            CompletedAt: types.MustNewTimeFromString("2023-12-06T12:04:39.243Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-17T01:25:21.745Z"),
             DurationMinutes: unifiedgosdk.Pointer[float64](55.0),
-            ID: unifiedgosdk.Pointer("72d4119b-e5e6-45cd-9941-cd292c426d45"),
+            ID: unifiedgosdk.Pointer("5e21e9ae-106a-48db-8731-1534e0864f1f"),
             IsCompleted: unifiedgosdk.Pointer(true),
             Metadata: []shared.LmsMetadata{},
             ProgressPercentage: unifiedgosdk.Pointer[float64](100.0),
-            StartedAt: types.MustNewTimeFromString("2021-04-25T04:23:32.794Z"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-30T23:41:21.301Z"),
+            StartedAt: types.MustNewTimeFromString("2021-04-25T06:27:05.350Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-31T04:47:21.861Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2557,7 +2557,7 @@ func main() {
 
 ## UpdateLmsClass
 
-Update a class
+Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 
 ### Example Usage
 
@@ -2585,7 +2585,7 @@ func main() {
         LmsClass: shared.LmsClass{
             CreatedAt: types.MustNewTimeFromString("2020-02-20T14:48:51.845Z"),
             Description: unifiedgosdk.Pointer("Anser sperno decerno."),
-            ID: unifiedgosdk.Pointer("d27e8714-52ef-484e-904f-dea9aacb2d55"),
+            ID: unifiedgosdk.Pointer("1a61a532-a2d5-4710-a0c1-85adfa63eb39"),
             Instructors: []shared.LmsReference{},
             Languages: []string{
                 "in",
@@ -2607,7 +2607,7 @@ func main() {
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("virtus"),
             Students: []shared.LmsReference{},
-            UpdatedAt: types.MustNewTimeFromString("2025-08-03T21:30:44.550Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-04T16:57:24.422Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2641,7 +2641,7 @@ func main() {
 
 ## UpdateLmsCollection
 
-Update a collection
+Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -2669,7 +2669,7 @@ func main() {
         LmsCollection: shared.LmsCollection{
             CreatedAt: types.MustNewTimeFromString("2019-08-19T14:40:29.227Z"),
             Description: unifiedgosdk.Pointer("Ab."),
-            ID: unifiedgosdk.Pointer("776423a0-c2ca-4984-93a0-d53a46ddee1b"),
+            ID: unifiedgosdk.Pointer("935b9a6d-4c66-441d-a9cb-34b4e9e56c7f"),
             IsActive: unifiedgosdk.Pointer(true),
             Media: []shared.LmsMedia{
                 shared.LmsMedia{
@@ -2686,7 +2686,7 @@ func main() {
             },
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ara"),
-            UpdatedAt: types.MustNewTimeFromString("2026-07-30T07:04:58.094Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-07-31T06:06:12.473Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2720,7 +2720,7 @@ func main() {
 
 ## UpdateLmsContent
 
-Update a content
+Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
 ### Example Usage
 
@@ -2753,7 +2753,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Usque laboriosam ventosus adflicto."),
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("de227394-fbd0-4a0b-8f28-9e960cc07406"),
+            ID: unifiedgosdk.Pointer("47939b71-9963-4c72-adb3-0c27c660cd9d"),
             Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             Languages: []string{
@@ -2813,7 +2813,7 @@ func main() {
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ut"),
             ProviderName: unifiedgosdk.Pointer("Bins LLC"),
-            PublishedAt: types.MustNewTimeFromString("2022-09-03T06:18:34.603Z"),
+            PublishedAt: types.MustNewTimeFromString("2022-09-03T13:41:50.375Z"),
             ShortDescription: unifiedgosdk.Pointer("Caritas."),
             Skills: []string{
                 "trucido",
@@ -2828,7 +2828,7 @@ func main() {
             Tags: []string{
                 "dens",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-10-04T04:34:53.729Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-04T12:18:18.562Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2862,7 +2862,7 @@ func main() {
 
 ## UpdateLmsCourse
 
-Update a course
+Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 
 ### Example Usage
 
@@ -2896,7 +2896,7 @@ func main() {
             Currency: unifiedgosdk.Pointer("FJD"),
             Description: unifiedgosdk.Pointer("Vinco alias aut capitulus."),
             DurationMinutes: unifiedgosdk.Pointer[float64](148.0),
-            ID: unifiedgosdk.Pointer("efcb5073-ec55-445b-b744-96bc88b5942f"),
+            ID: unifiedgosdk.Pointer("bc14f3a8-fe41-4546-8e4e-4e48882fa65d"),
             Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             IsPrivate: unifiedgosdk.Pointer(false),
@@ -2923,14 +2923,14 @@ func main() {
             Name: unifiedgosdk.Pointer("comptus"),
             PriceAmount: unifiedgosdk.Pointer[float64](84.0),
             ProviderName: unifiedgosdk.Pointer("Homenick - Wunsch"),
-            PublishedAt: types.MustNewTimeFromString("2022-11-05T18:11:06.159Z"),
+            PublishedAt: types.MustNewTimeFromString("2022-11-05T18:40:25.836Z"),
             Skills: []string{
                 "adiuvo",
                 "tam",
             },
             Students: []shared.LmsReference{},
             TimeEstimateMinutes: unifiedgosdk.Pointer[float64](100.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-09T18:20:08.721Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-09T20:22:16.294Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2964,7 +2964,7 @@ func main() {
 
 ## UpdateLmsInstructor
 
-Update an instructor
+Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 
 ### Example Usage
 
@@ -2995,7 +2995,7 @@ func main() {
                 shared.LmsEmail{},
             },
             FirstName: unifiedgosdk.Pointer("Deangelo"),
-            ID: unifiedgosdk.Pointer("1327c6b3-eddf-40fb-b758-98ccff3a7545"),
+            ID: unifiedgosdk.Pointer("7ef6015d-4d96-4456-8b89-51b9e4139eb2"),
             ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/95131132"),
             LastName: unifiedgosdk.Pointer("Ritchie"),
             Metadata: []shared.LmsMetadata{},
@@ -3011,7 +3011,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Regional Security Agent"),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-24T10:19:49.926Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-25T04:13:25.942Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3045,7 +3045,7 @@ func main() {
 
 ## UpdateLmsStudent
 
-Update a student
+Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
 ### Example Usage
 
@@ -3084,7 +3084,7 @@ func main() {
                 shared.LmsEmail{},
             },
             FirstName: unifiedgosdk.Pointer("Marcella"),
-            ID: unifiedgosdk.Pointer("24f1db3e-48d4-45d8-a0f7-78d5a7bcd6fa"),
+            ID: unifiedgosdk.Pointer("f37eded4-a6e6-482e-81be-849ac16fa098"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg"),
             LastName: unifiedgosdk.Pointer("Murazik"),
             Metadata: []shared.LmsMetadata{},
@@ -3103,7 +3103,7 @@ func main() {
                     Type: shared.LmsTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-06-30T23:26:48.060Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-01T07:39:18.672Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

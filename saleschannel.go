@@ -31,6 +31,7 @@ func newSaleschannel(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hook
 }
 
 // CreateCommerceSaleschannel - Create a saleschannel
+// Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body; they are mapped to the provider's API. Returns the created CommerceSaleschannel.
 func (s *Saleschannel) CreateCommerceSaleschannel(ctx context.Context, request operations.CreateCommerceSaleschannelRequest, opts ...operations.Option) (*operations.CreateCommerceSaleschannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Saleschannel) CreateCommerceSaleschannel(ctx context.Context, request o
 }
 
 // GetCommerceSaleschannel - Retrieve a saleschannel
+// Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Saleschannel) GetCommerceSaleschannel(ctx context.Context, request operations.GetCommerceSaleschannelRequest, opts ...operations.Option) (*operations.GetCommerceSaleschannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Saleschannel) GetCommerceSaleschannel(ctx context.Context, request oper
 }
 
 // ListCommerceSaleschannels - List all saleschannels
+// Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Saleschannel) ListCommerceSaleschannels(ctx context.Context, request operations.ListCommerceSaleschannelsRequest, opts ...operations.Option) (*operations.ListCommerceSaleschannelsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Saleschannel) ListCommerceSaleschannels(ctx context.Context, request op
 }
 
 // PatchCommerceSaleschannel - Update a saleschannel
+// Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 func (s *Saleschannel) PatchCommerceSaleschannel(ctx context.Context, request operations.PatchCommerceSaleschannelRequest, opts ...operations.Option) (*operations.PatchCommerceSaleschannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Saleschannel) PatchCommerceSaleschannel(ctx context.Context, request op
 }
 
 // RemoveCommerceSaleschannel - Remove a saleschannel
+// Deletes the CommerceSaleschannel identified by `id`.
 func (s *Saleschannel) RemoveCommerceSaleschannel(ctx context.Context, request operations.RemoveCommerceSaleschannelRequest, opts ...operations.Option) (*operations.RemoveCommerceSaleschannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Saleschannel) RemoveCommerceSaleschannel(ctx context.Context, request o
 }
 
 // UpdateCommerceSaleschannel - Update a saleschannel
+// Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 func (s *Saleschannel) UpdateCommerceSaleschannel(ctx context.Context, request operations.UpdateCommerceSaleschannelRequest, opts ...operations.Option) (*operations.UpdateCommerceSaleschannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

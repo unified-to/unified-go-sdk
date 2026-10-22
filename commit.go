@@ -31,6 +31,7 @@ func newCommit(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 }
 
 // CreateRepoCommit - Create a commit
+// Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to the provider's API. Returns the created RepoCommit.
 func (s *Commit) CreateRepoCommit(ctx context.Context, request operations.CreateRepoCommitRequest, opts ...operations.Option) (*operations.CreateRepoCommitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Commit) CreateRepoCommit(ctx context.Context, request operations.Create
 }
 
 // GetRepoCommit - Retrieve a commit
+// Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Commit) GetRepoCommit(ctx context.Context, request operations.GetRepoCommitRequest, opts ...operations.Option) (*operations.GetRepoCommitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Commit) GetRepoCommit(ctx context.Context, request operations.GetRepoCo
 }
 
 // ListRepoCommits - List all commits
+// Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Commit) ListRepoCommits(ctx context.Context, request operations.ListRepoCommitsRequest, opts ...operations.Option) (*operations.ListRepoCommitsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Commit) ListRepoCommits(ctx context.Context, request operations.ListRep
 }
 
 // PatchRepoCommit - Update a commit
+// Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 func (s *Commit) PatchRepoCommit(ctx context.Context, request operations.PatchRepoCommitRequest, opts ...operations.Option) (*operations.PatchRepoCommitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Commit) PatchRepoCommit(ctx context.Context, request operations.PatchRe
 }
 
 // RemoveRepoCommit - Remove a commit
+// Deletes the RepoCommit identified by `id`.
 func (s *Commit) RemoveRepoCommit(ctx context.Context, request operations.RemoveRepoCommitRequest, opts ...operations.Option) (*operations.RemoveRepoCommitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Commit) RemoveRepoCommit(ctx context.Context, request operations.Remove
 }
 
 // UpdateRepoCommit - Update a commit
+// Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 func (s *Commit) UpdateRepoCommit(ctx context.Context, request operations.UpdateRepoCommitRequest, opts ...operations.Option) (*operations.UpdateRepoCommitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

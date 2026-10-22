@@ -31,6 +31,7 @@ func newCdp(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks.
 }
 
 // CreateCdpActivation - Create an activation
+// Creates a CdpActivation. Provide the unified CdpActivation fields in the request body; they are mapped to the provider's API. Returns the created CdpActivation.
 func (s *Cdp) CreateCdpActivation(ctx context.Context, request operations.CreateCdpActivationRequest, opts ...operations.Option) (*operations.CreateCdpActivationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Cdp) CreateCdpActivation(ctx context.Context, request operations.Create
 }
 
 // CreateCdpDestination - Create a destination
+// Creates a CdpDestination. Provide the unified CdpDestination fields in the request body; they are mapped to the provider's API. Returns the created CdpDestination.
 func (s *Cdp) CreateCdpDestination(ctx context.Context, request operations.CreateCdpDestinationRequest, opts ...operations.Option) (*operations.CreateCdpDestinationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Cdp) CreateCdpDestination(ctx context.Context, request operations.Creat
 }
 
 // CreateCdpEvent - Create an event
+// Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the provider's API. Returns the created CdpEvent.
 func (s *Cdp) CreateCdpEvent(ctx context.Context, request operations.CreateCdpEventRequest, opts ...operations.Option) (*operations.CreateCdpEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Cdp) CreateCdpEvent(ctx context.Context, request operations.CreateCdpEv
 }
 
 // CreateCdpProfile - Create a profile
+// Creates a CdpProfile. Provide the unified CdpProfile fields in the request body; they are mapped to the provider's API. Returns the created CdpProfile.
 func (s *Cdp) CreateCdpProfile(ctx context.Context, request operations.CreateCdpProfileRequest, opts ...operations.Option) (*operations.CreateCdpProfileResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -887,6 +891,7 @@ func (s *Cdp) CreateCdpProfile(ctx context.Context, request operations.CreateCdp
 }
 
 // CreateCdpSegment - Create a segment
+// Creates a CdpSegment. Provide the unified CdpSegment fields in the request body; they are mapped to the provider's API. Returns the created CdpSegment.
 func (s *Cdp) CreateCdpSegment(ctx context.Context, request operations.CreateCdpSegmentRequest, opts ...operations.Option) (*operations.CreateCdpSegmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1101,6 +1106,7 @@ func (s *Cdp) CreateCdpSegment(ctx context.Context, request operations.CreateCdp
 }
 
 // CreateCdpSource - Create a source
+// Creates a CdpSource. Provide the unified CdpSource fields in the request body; they are mapped to the provider's API. Returns the created CdpSource.
 func (s *Cdp) CreateCdpSource(ctx context.Context, request operations.CreateCdpSourceRequest, opts ...operations.Option) (*operations.CreateCdpSourceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1315,6 +1321,7 @@ func (s *Cdp) CreateCdpSource(ctx context.Context, request operations.CreateCdpS
 }
 
 // GetCdpActivation - Retrieve an activation
+// Retrieves a single CdpActivation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Cdp) GetCdpActivation(ctx context.Context, request operations.GetCdpActivationRequest, opts ...operations.Option) (*operations.GetCdpActivationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1522,6 +1529,7 @@ func (s *Cdp) GetCdpActivation(ctx context.Context, request operations.GetCdpAct
 }
 
 // GetCdpDestination - Retrieve a destination
+// Retrieves a single CdpDestination by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Cdp) GetCdpDestination(ctx context.Context, request operations.GetCdpDestinationRequest, opts ...operations.Option) (*operations.GetCdpDestinationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1729,6 +1737,7 @@ func (s *Cdp) GetCdpDestination(ctx context.Context, request operations.GetCdpDe
 }
 
 // GetCdpEvent - Retrieve an event
+// Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Cdp) GetCdpEvent(ctx context.Context, request operations.GetCdpEventRequest, opts ...operations.Option) (*operations.GetCdpEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1936,6 +1945,7 @@ func (s *Cdp) GetCdpEvent(ctx context.Context, request operations.GetCdpEventReq
 }
 
 // GetCdpProfile - Retrieve a profile
+// Retrieves a single CdpProfile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Cdp) GetCdpProfile(ctx context.Context, request operations.GetCdpProfileRequest, opts ...operations.Option) (*operations.GetCdpProfileResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2143,6 +2153,7 @@ func (s *Cdp) GetCdpProfile(ctx context.Context, request operations.GetCdpProfil
 }
 
 // GetCdpSegment - Retrieve a segment
+// Retrieves a single CdpSegment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Cdp) GetCdpSegment(ctx context.Context, request operations.GetCdpSegmentRequest, opts ...operations.Option) (*operations.GetCdpSegmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2350,6 +2361,7 @@ func (s *Cdp) GetCdpSegment(ctx context.Context, request operations.GetCdpSegmen
 }
 
 // GetCdpSource - Retrieve a source
+// Retrieves a single CdpSource by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Cdp) GetCdpSource(ctx context.Context, request operations.GetCdpSourceRequest, opts ...operations.Option) (*operations.GetCdpSourceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2557,6 +2569,7 @@ func (s *Cdp) GetCdpSource(ctx context.Context, request operations.GetCdpSourceR
 }
 
 // ListCdpActivations - List all activations
+// Returns a list of CdpActivations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Cdp) ListCdpActivations(ctx context.Context, request operations.ListCdpActivationsRequest, opts ...operations.Option) (*operations.ListCdpActivationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2764,6 +2777,7 @@ func (s *Cdp) ListCdpActivations(ctx context.Context, request operations.ListCdp
 }
 
 // ListCdpDestinations - List all destinations
+// Returns a list of CdpDestinations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Cdp) ListCdpDestinations(ctx context.Context, request operations.ListCdpDestinationsRequest, opts ...operations.Option) (*operations.ListCdpDestinationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2971,6 +2985,7 @@ func (s *Cdp) ListCdpDestinations(ctx context.Context, request operations.ListCd
 }
 
 // ListCdpEvents - List all events
+// Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Cdp) ListCdpEvents(ctx context.Context, request operations.ListCdpEventsRequest, opts ...operations.Option) (*operations.ListCdpEventsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3178,6 +3193,7 @@ func (s *Cdp) ListCdpEvents(ctx context.Context, request operations.ListCdpEvent
 }
 
 // ListCdpProfiles - List all profiles
+// Returns a list of CdpProfiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Cdp) ListCdpProfiles(ctx context.Context, request operations.ListCdpProfilesRequest, opts ...operations.Option) (*operations.ListCdpProfilesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3385,6 +3401,7 @@ func (s *Cdp) ListCdpProfiles(ctx context.Context, request operations.ListCdpPro
 }
 
 // ListCdpSegments - List all segments
+// Returns a list of CdpSegments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Cdp) ListCdpSegments(ctx context.Context, request operations.ListCdpSegmentsRequest, opts ...operations.Option) (*operations.ListCdpSegmentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3592,6 +3609,7 @@ func (s *Cdp) ListCdpSegments(ctx context.Context, request operations.ListCdpSeg
 }
 
 // ListCdpSources - List all sources
+// Returns a list of CdpSources. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Cdp) ListCdpSources(ctx context.Context, request operations.ListCdpSourcesRequest, opts ...operations.Option) (*operations.ListCdpSourcesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3799,6 +3817,7 @@ func (s *Cdp) ListCdpSources(ctx context.Context, request operations.ListCdpSour
 }
 
 // PatchCdpActivation - Update an activation
+// Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in the request body.
 func (s *Cdp) PatchCdpActivation(ctx context.Context, request operations.PatchCdpActivationRequest, opts ...operations.Option) (*operations.PatchCdpActivationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4013,6 +4032,7 @@ func (s *Cdp) PatchCdpActivation(ctx context.Context, request operations.PatchCd
 }
 
 // PatchCdpDestination - Update a destination
+// Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change in the request body.
 func (s *Cdp) PatchCdpDestination(ctx context.Context, request operations.PatchCdpDestinationRequest, opts ...operations.Option) (*operations.PatchCdpDestinationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4227,6 +4247,7 @@ func (s *Cdp) PatchCdpDestination(ctx context.Context, request operations.PatchC
 }
 
 // PatchCdpEvent - Update an event
+// Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 func (s *Cdp) PatchCdpEvent(ctx context.Context, request operations.PatchCdpEventRequest, opts ...operations.Option) (*operations.PatchCdpEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4441,6 +4462,7 @@ func (s *Cdp) PatchCdpEvent(ctx context.Context, request operations.PatchCdpEven
 }
 
 // PatchCdpProfile - Update a profile
+// Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the request body.
 func (s *Cdp) PatchCdpProfile(ctx context.Context, request operations.PatchCdpProfileRequest, opts ...operations.Option) (*operations.PatchCdpProfileResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4655,6 +4677,7 @@ func (s *Cdp) PatchCdpProfile(ctx context.Context, request operations.PatchCdpPr
 }
 
 // PatchCdpSegment - Update a segment
+// Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the request body.
 func (s *Cdp) PatchCdpSegment(ctx context.Context, request operations.PatchCdpSegmentRequest, opts ...operations.Option) (*operations.PatchCdpSegmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4869,6 +4892,7 @@ func (s *Cdp) PatchCdpSegment(ctx context.Context, request operations.PatchCdpSe
 }
 
 // PatchCdpSource - Update a source
+// Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the request body.
 func (s *Cdp) PatchCdpSource(ctx context.Context, request operations.PatchCdpSourceRequest, opts ...operations.Option) (*operations.PatchCdpSourceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5083,6 +5107,7 @@ func (s *Cdp) PatchCdpSource(ctx context.Context, request operations.PatchCdpSou
 }
 
 // RemoveCdpActivation - Remove an activation
+// Deletes the CdpActivation identified by `id`.
 func (s *Cdp) RemoveCdpActivation(ctx context.Context, request operations.RemoveCdpActivationRequest, opts ...operations.Option) (*operations.RemoveCdpActivationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5265,6 +5290,7 @@ func (s *Cdp) RemoveCdpActivation(ctx context.Context, request operations.Remove
 }
 
 // RemoveCdpDestination - Remove a destination
+// Deletes the CdpDestination identified by `id`.
 func (s *Cdp) RemoveCdpDestination(ctx context.Context, request operations.RemoveCdpDestinationRequest, opts ...operations.Option) (*operations.RemoveCdpDestinationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5447,6 +5473,7 @@ func (s *Cdp) RemoveCdpDestination(ctx context.Context, request operations.Remov
 }
 
 // RemoveCdpEvent - Remove an event
+// Deletes the CdpEvent identified by `id`.
 func (s *Cdp) RemoveCdpEvent(ctx context.Context, request operations.RemoveCdpEventRequest, opts ...operations.Option) (*operations.RemoveCdpEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5629,6 +5656,7 @@ func (s *Cdp) RemoveCdpEvent(ctx context.Context, request operations.RemoveCdpEv
 }
 
 // RemoveCdpProfile - Remove a profile
+// Deletes the CdpProfile identified by `id`.
 func (s *Cdp) RemoveCdpProfile(ctx context.Context, request operations.RemoveCdpProfileRequest, opts ...operations.Option) (*operations.RemoveCdpProfileResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5811,6 +5839,7 @@ func (s *Cdp) RemoveCdpProfile(ctx context.Context, request operations.RemoveCdp
 }
 
 // RemoveCdpSegment - Remove a segment
+// Deletes the CdpSegment identified by `id`.
 func (s *Cdp) RemoveCdpSegment(ctx context.Context, request operations.RemoveCdpSegmentRequest, opts ...operations.Option) (*operations.RemoveCdpSegmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5993,6 +6022,7 @@ func (s *Cdp) RemoveCdpSegment(ctx context.Context, request operations.RemoveCdp
 }
 
 // RemoveCdpSource - Remove a source
+// Deletes the CdpSource identified by `id`.
 func (s *Cdp) RemoveCdpSource(ctx context.Context, request operations.RemoveCdpSourceRequest, opts ...operations.Option) (*operations.RemoveCdpSourceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6175,6 +6205,7 @@ func (s *Cdp) RemoveCdpSource(ctx context.Context, request operations.RemoveCdpS
 }
 
 // UpdateCdpActivation - Update an activation
+// Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in the request body.
 func (s *Cdp) UpdateCdpActivation(ctx context.Context, request operations.UpdateCdpActivationRequest, opts ...operations.Option) (*operations.UpdateCdpActivationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6389,6 +6420,7 @@ func (s *Cdp) UpdateCdpActivation(ctx context.Context, request operations.Update
 }
 
 // UpdateCdpDestination - Update a destination
+// Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change in the request body.
 func (s *Cdp) UpdateCdpDestination(ctx context.Context, request operations.UpdateCdpDestinationRequest, opts ...operations.Option) (*operations.UpdateCdpDestinationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6603,6 +6635,7 @@ func (s *Cdp) UpdateCdpDestination(ctx context.Context, request operations.Updat
 }
 
 // UpdateCdpEvent - Update an event
+// Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 func (s *Cdp) UpdateCdpEvent(ctx context.Context, request operations.UpdateCdpEventRequest, opts ...operations.Option) (*operations.UpdateCdpEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6817,6 +6850,7 @@ func (s *Cdp) UpdateCdpEvent(ctx context.Context, request operations.UpdateCdpEv
 }
 
 // UpdateCdpProfile - Update a profile
+// Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the request body.
 func (s *Cdp) UpdateCdpProfile(ctx context.Context, request operations.UpdateCdpProfileRequest, opts ...operations.Option) (*operations.UpdateCdpProfileResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7031,6 +7065,7 @@ func (s *Cdp) UpdateCdpProfile(ctx context.Context, request operations.UpdateCdp
 }
 
 // UpdateCdpSegment - Update a segment
+// Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the request body.
 func (s *Cdp) UpdateCdpSegment(ctx context.Context, request operations.UpdateCdpSegmentRequest, opts ...operations.Option) (*operations.UpdateCdpSegmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7245,6 +7280,7 @@ func (s *Cdp) UpdateCdpSegment(ctx context.Context, request operations.UpdateCdp
 }
 
 // UpdateCdpSource - Update a source
+// Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the request body.
 func (s *Cdp) UpdateCdpSource(ctx context.Context, request operations.UpdateCdpSourceRequest, opts ...operations.Option) (*operations.UpdateCdpSourceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

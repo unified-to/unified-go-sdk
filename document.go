@@ -31,6 +31,7 @@ func newDocument(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateAtsDocument - Create a document
+// Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped to the provider's API. Returns the created AtsDocument.
 func (s *Document) CreateAtsDocument(ctx context.Context, request operations.CreateAtsDocumentRequest, opts ...operations.Option) (*operations.CreateAtsDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Document) CreateAtsDocument(ctx context.Context, request operations.Cre
 }
 
 // CreateHrisDocument - Create a document
+// Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped to the provider's API. Returns the created HrisDocument.
 func (s *Document) CreateHrisDocument(ctx context.Context, request operations.CreateHrisDocumentRequest, opts ...operations.Option) (*operations.CreateHrisDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Document) CreateHrisDocument(ctx context.Context, request operations.Cr
 }
 
 // CreateSigningDocument - Create a document
+// Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are mapped to the provider's API. Returns the created SigningDocument.
 func (s *Document) CreateSigningDocument(ctx context.Context, request operations.CreateSigningDocumentRequest, opts ...operations.Option) (*operations.CreateSigningDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Document) CreateSigningDocument(ctx context.Context, request operations
 }
 
 // GetAtsDocument - Retrieve a document
+// Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Document) GetAtsDocument(ctx context.Context, request operations.GetAtsDocumentRequest, opts ...operations.Option) (*operations.GetAtsDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -880,6 +884,7 @@ func (s *Document) GetAtsDocument(ctx context.Context, request operations.GetAts
 }
 
 // GetHrisDocument - Retrieve a document
+// Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Document) GetHrisDocument(ctx context.Context, request operations.GetHrisDocumentRequest, opts ...operations.Option) (*operations.GetHrisDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1087,6 +1092,7 @@ func (s *Document) GetHrisDocument(ctx context.Context, request operations.GetHr
 }
 
 // GetSigningDocument - Retrieve a document
+// Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Document) GetSigningDocument(ctx context.Context, request operations.GetSigningDocumentRequest, opts ...operations.Option) (*operations.GetSigningDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1294,6 +1300,7 @@ func (s *Document) GetSigningDocument(ctx context.Context, request operations.Ge
 }
 
 // ListAtsDocuments - List all documents
+// Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Document) ListAtsDocuments(ctx context.Context, request operations.ListAtsDocumentsRequest, opts ...operations.Option) (*operations.ListAtsDocumentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Document) ListAtsDocuments(ctx context.Context, request operations.List
 }
 
 // ListHrisDocuments - List all documents
+// Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Document) ListHrisDocuments(ctx context.Context, request operations.ListHrisDocumentsRequest, opts ...operations.Option) (*operations.ListHrisDocumentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1708,6 +1716,7 @@ func (s *Document) ListHrisDocuments(ctx context.Context, request operations.Lis
 }
 
 // ListSigningDocuments - List all documents
+// Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Document) ListSigningDocuments(ctx context.Context, request operations.ListSigningDocumentsRequest, opts ...operations.Option) (*operations.ListSigningDocumentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1915,6 +1924,7 @@ func (s *Document) ListSigningDocuments(ctx context.Context, request operations.
 }
 
 // PatchAtsDocument - Update a document
+// Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 func (s *Document) PatchAtsDocument(ctx context.Context, request operations.PatchAtsDocumentRequest, opts ...operations.Option) (*operations.PatchAtsDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2129,6 +2139,7 @@ func (s *Document) PatchAtsDocument(ctx context.Context, request operations.Patc
 }
 
 // PatchHrisDocument - Update a document
+// Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 func (s *Document) PatchHrisDocument(ctx context.Context, request operations.PatchHrisDocumentRequest, opts ...operations.Option) (*operations.PatchHrisDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2343,6 +2354,7 @@ func (s *Document) PatchHrisDocument(ctx context.Context, request operations.Pat
 }
 
 // PatchSigningDocument - Update a document
+// Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 func (s *Document) PatchSigningDocument(ctx context.Context, request operations.PatchSigningDocumentRequest, opts ...operations.Option) (*operations.PatchSigningDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2557,6 +2569,7 @@ func (s *Document) PatchSigningDocument(ctx context.Context, request operations.
 }
 
 // RemoveAtsDocument - Remove a document
+// Deletes the AtsDocument identified by `id`.
 func (s *Document) RemoveAtsDocument(ctx context.Context, request operations.RemoveAtsDocumentRequest, opts ...operations.Option) (*operations.RemoveAtsDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2739,6 +2752,7 @@ func (s *Document) RemoveAtsDocument(ctx context.Context, request operations.Rem
 }
 
 // RemoveHrisDocument - Remove a document
+// Deletes the HrisDocument identified by `id`.
 func (s *Document) RemoveHrisDocument(ctx context.Context, request operations.RemoveHrisDocumentRequest, opts ...operations.Option) (*operations.RemoveHrisDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2921,6 +2935,7 @@ func (s *Document) RemoveHrisDocument(ctx context.Context, request operations.Re
 }
 
 // RemoveSigningDocument - Remove a document
+// Deletes the SigningDocument identified by `id`.
 func (s *Document) RemoveSigningDocument(ctx context.Context, request operations.RemoveSigningDocumentRequest, opts ...operations.Option) (*operations.RemoveSigningDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3103,6 +3118,7 @@ func (s *Document) RemoveSigningDocument(ctx context.Context, request operations
 }
 
 // UpdateAtsDocument - Update a document
+// Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 func (s *Document) UpdateAtsDocument(ctx context.Context, request operations.UpdateAtsDocumentRequest, opts ...operations.Option) (*operations.UpdateAtsDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3317,6 +3333,7 @@ func (s *Document) UpdateAtsDocument(ctx context.Context, request operations.Upd
 }
 
 // UpdateHrisDocument - Update a document
+// Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 func (s *Document) UpdateHrisDocument(ctx context.Context, request operations.UpdateHrisDocumentRequest, opts ...operations.Option) (*operations.UpdateHrisDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3531,6 +3548,7 @@ func (s *Document) UpdateHrisDocument(ctx context.Context, request operations.Up
 }
 
 // UpdateSigningDocument - Update a document
+// Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 func (s *Document) UpdateSigningDocument(ctx context.Context, request operations.UpdateSigningDocumentRequest, opts ...operations.Option) (*operations.UpdateSigningDocumentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

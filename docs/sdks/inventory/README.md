@@ -13,7 +13,7 @@
 
 ## CreateCommerceInventory
 
-Create an inventory
+Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they are mapped to the provider's API. Returns the created CommerceInventory.
 
 ### Example Usage
 
@@ -40,9 +40,9 @@ func main() {
     res, err := s.Inventory.CreateCommerceInventory(ctx, operations.CreateCommerceInventoryRequest{
         CommerceInventory: shared.CommerceInventory{
             Available: unifiedgosdk.Pointer[float64](337.0),
-            ID: unifiedgosdk.Pointer("b3ba51df-a271-4054-9b23-658b4ddf92d9"),
+            ID: unifiedgosdk.Pointer("a6aa3268-f037-410f-9c86-d1e39d32c421"),
             Metadata: []shared.CommerceMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2025-11-20T09:48:39.178Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-21T04:57:50.421Z"),
         },
         ConnectionID: "<id>",
     })
@@ -75,7 +75,7 @@ func main() {
 
 ## GetCommerceInventory
 
-Retrieve an inventory
+Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -130,7 +130,7 @@ func main() {
 
 ## ListCommerceInventories
 
-List all inventories
+Returns a list of CommerceInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -184,7 +184,7 @@ func main() {
 
 ## PatchCommerceInventory
 
-Update an inventory
+Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 
 ### Example Usage
 
@@ -211,9 +211,9 @@ func main() {
     res, err := s.Inventory.PatchCommerceInventory(ctx, operations.PatchCommerceInventoryRequest{
         CommerceInventory: shared.CommerceInventory{
             Available: unifiedgosdk.Pointer[float64](337.0),
-            ID: unifiedgosdk.Pointer("505d8fdb-6d3e-4cc6-8aca-7a9b4ef5be26"),
+            ID: unifiedgosdk.Pointer("33d89345-882b-4ab1-b502-ad37be2a7167"),
             Metadata: []shared.CommerceMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2025-11-20T09:48:39.185Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-21T04:57:50.432Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -247,7 +247,7 @@ func main() {
 
 ## RemoveCommerceInventory
 
-Remove an inventory
+Deletes the CommerceInventory identified by `id`.
 
 ### Example Usage
 
@@ -302,7 +302,7 @@ func main() {
 
 ## UpdateCommerceInventory
 
-Update an inventory
+Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 
 ### Example Usage
 
@@ -329,9 +329,9 @@ func main() {
     res, err := s.Inventory.UpdateCommerceInventory(ctx, operations.UpdateCommerceInventoryRequest{
         CommerceInventory: shared.CommerceInventory{
             Available: unifiedgosdk.Pointer[float64](337.0),
-            ID: unifiedgosdk.Pointer("505d8fdb-6d3e-4cc6-8aca-7a9b4ef5be26"),
+            ID: unifiedgosdk.Pointer("33d89345-882b-4ab1-b502-ad37be2a7167"),
             Metadata: []shared.CommerceMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2025-11-20T09:48:39.185Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-21T04:57:50.432Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

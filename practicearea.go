@@ -31,6 +31,7 @@ func newPracticearea(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hook
 }
 
 // CreateLegalPracticearea - Create a practicearea
+// Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
 func (s *Practicearea) CreateLegalPracticearea(ctx context.Context, request operations.CreateLegalPracticeareaRequest, opts ...operations.Option) (*operations.CreateLegalPracticeareaResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Practicearea) CreateLegalPracticearea(ctx context.Context, request oper
 }
 
 // GetLegalPracticearea - Retrieve a practicearea
+// Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Practicearea) GetLegalPracticearea(ctx context.Context, request operations.GetLegalPracticeareaRequest, opts ...operations.Option) (*operations.GetLegalPracticeareaResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Practicearea) GetLegalPracticearea(ctx context.Context, request operati
 }
 
 // ListLegalPracticeareas - List all practiceareas
+// Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Practicearea) ListLegalPracticeareas(ctx context.Context, request operations.ListLegalPracticeareasRequest, opts ...operations.Option) (*operations.ListLegalPracticeareasResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Practicearea) ListLegalPracticeareas(ctx context.Context, request opera
 }
 
 // PatchLegalPracticearea - Update a practicearea
+// Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 func (s *Practicearea) PatchLegalPracticearea(ctx context.Context, request operations.PatchLegalPracticeareaRequest, opts ...operations.Option) (*operations.PatchLegalPracticeareaResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Practicearea) PatchLegalPracticearea(ctx context.Context, request opera
 }
 
 // RemoveLegalPracticearea - Remove a practicearea
+// Deletes the LegalPracticearea identified by `id`.
 func (s *Practicearea) RemoveLegalPracticearea(ctx context.Context, request operations.RemoveLegalPracticeareaRequest, opts ...operations.Option) (*operations.RemoveLegalPracticeareaResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Practicearea) RemoveLegalPracticearea(ctx context.Context, request oper
 }
 
 // UpdateLegalPracticearea - Update a practicearea
+// Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 func (s *Practicearea) UpdateLegalPracticearea(ctx context.Context, request operations.UpdateLegalPracticeareaRequest, opts ...operations.Option) (*operations.UpdateLegalPracticeareaResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

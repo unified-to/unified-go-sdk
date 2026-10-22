@@ -31,6 +31,7 @@ func newCreative(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateAdsCreative - Create a creative
+// Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped to the provider's API. Returns the created AdsCreative.
 func (s *Creative) CreateAdsCreative(ctx context.Context, request operations.CreateAdsCreativeRequest, opts ...operations.Option) (*operations.CreateAdsCreativeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Creative) CreateAdsCreative(ctx context.Context, request operations.Cre
 }
 
 // GetAdsCreative - Retrieve a creative
+// Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Creative) GetAdsCreative(ctx context.Context, request operations.GetAdsCreativeRequest, opts ...operations.Option) (*operations.GetAdsCreativeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Creative) GetAdsCreative(ctx context.Context, request operations.GetAds
 }
 
 // ListAdsCreatives - List all creatives
+// Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Creative) ListAdsCreatives(ctx context.Context, request operations.ListAdsCreativesRequest, opts ...operations.Option) (*operations.ListAdsCreativesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Creative) ListAdsCreatives(ctx context.Context, request operations.List
 }
 
 // PatchAdsCreative - Update a creative
+// Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 func (s *Creative) PatchAdsCreative(ctx context.Context, request operations.PatchAdsCreativeRequest, opts ...operations.Option) (*operations.PatchAdsCreativeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Creative) PatchAdsCreative(ctx context.Context, request operations.Patc
 }
 
 // RemoveAdsCreative - Remove a creative
+// Deletes the AdsCreative identified by `id`.
 func (s *Creative) RemoveAdsCreative(ctx context.Context, request operations.RemoveAdsCreativeRequest, opts ...operations.Option) (*operations.RemoveAdsCreativeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Creative) RemoveAdsCreative(ctx context.Context, request operations.Rem
 }
 
 // UpdateAdsCreative - Update a creative
+// Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 func (s *Creative) UpdateAdsCreative(ctx context.Context, request operations.UpdateAdsCreativeRequest, opts ...operations.Option) (*operations.UpdateAdsCreativeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -31,6 +31,7 @@ func newDatastore(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 }
 
 // CreateDatastoreDatabase - Create a database
+// Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they are mapped to the provider's API. Returns the created DatastoreDatabase.
 func (s *Datastore) CreateDatastoreDatabase(ctx context.Context, request operations.CreateDatastoreDatabaseRequest, opts ...operations.Option) (*operations.CreateDatastoreDatabaseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Datastore) CreateDatastoreDatabase(ctx context.Context, request operati
 }
 
 // CreateDatastoreQuery - Create a query
+// Creates a DatastoreQuery. Provide the unified DatastoreQuery fields in the request body; they are mapped to the provider's API. Returns the created DatastoreQuery.
 func (s *Datastore) CreateDatastoreQuery(ctx context.Context, request operations.CreateDatastoreQueryRequest, opts ...operations.Option) (*operations.CreateDatastoreQueryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Datastore) CreateDatastoreQuery(ctx context.Context, request operations
 }
 
 // CreateDatastoreRecord - Create a record
+// Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are mapped to the provider's API. Returns the created DatastoreRecord.
 func (s *Datastore) CreateDatastoreRecord(ctx context.Context, request operations.CreateDatastoreRecordRequest, opts ...operations.Option) (*operations.CreateDatastoreRecordResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Datastore) CreateDatastoreRecord(ctx context.Context, request operation
 }
 
 // CreateDatastoreTable - Create a table
+// Creates a DatastoreTable. Provide the unified DatastoreTable fields in the request body; they are mapped to the provider's API. Returns the created DatastoreTable.
 func (s *Datastore) CreateDatastoreTable(ctx context.Context, request operations.CreateDatastoreTableRequest, opts ...operations.Option) (*operations.CreateDatastoreTableResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -887,6 +891,7 @@ func (s *Datastore) CreateDatastoreTable(ctx context.Context, request operations
 }
 
 // GetDatastoreDatabase - Retrieve a database
+// Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Datastore) GetDatastoreDatabase(ctx context.Context, request operations.GetDatastoreDatabaseRequest, opts ...operations.Option) (*operations.GetDatastoreDatabaseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1094,6 +1099,7 @@ func (s *Datastore) GetDatastoreDatabase(ctx context.Context, request operations
 }
 
 // GetDatastoreRecord - Retrieve a record
+// Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Datastore) GetDatastoreRecord(ctx context.Context, request operations.GetDatastoreRecordRequest, opts ...operations.Option) (*operations.GetDatastoreRecordResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1301,6 +1307,7 @@ func (s *Datastore) GetDatastoreRecord(ctx context.Context, request operations.G
 }
 
 // GetDatastoreTable - Retrieve a table
+// Retrieves a single DatastoreTable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Datastore) GetDatastoreTable(ctx context.Context, request operations.GetDatastoreTableRequest, opts ...operations.Option) (*operations.GetDatastoreTableResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1508,6 +1515,7 @@ func (s *Datastore) GetDatastoreTable(ctx context.Context, request operations.Ge
 }
 
 // ListDatastoreDatabases - List all databases
+// Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Datastore) ListDatastoreDatabases(ctx context.Context, request operations.ListDatastoreDatabasesRequest, opts ...operations.Option) (*operations.ListDatastoreDatabasesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1715,6 +1723,7 @@ func (s *Datastore) ListDatastoreDatabases(ctx context.Context, request operatio
 }
 
 // ListDatastoreRecords - List all records
+// Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Datastore) ListDatastoreRecords(ctx context.Context, request operations.ListDatastoreRecordsRequest, opts ...operations.Option) (*operations.ListDatastoreRecordsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1922,6 +1931,7 @@ func (s *Datastore) ListDatastoreRecords(ctx context.Context, request operations
 }
 
 // ListDatastoreTables - List all tables
+// Returns a list of DatastoreTables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Datastore) ListDatastoreTables(ctx context.Context, request operations.ListDatastoreTablesRequest, opts ...operations.Option) (*operations.ListDatastoreTablesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2129,6 +2139,7 @@ func (s *Datastore) ListDatastoreTables(ctx context.Context, request operations.
 }
 
 // PatchDatastoreDatabase - Update a database
+// Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
 func (s *Datastore) PatchDatastoreDatabase(ctx context.Context, request operations.PatchDatastoreDatabaseRequest, opts ...operations.Option) (*operations.PatchDatastoreDatabaseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2343,6 +2354,7 @@ func (s *Datastore) PatchDatastoreDatabase(ctx context.Context, request operatio
 }
 
 // PatchDatastoreRecord - Update a record
+// Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
 func (s *Datastore) PatchDatastoreRecord(ctx context.Context, request operations.PatchDatastoreRecordRequest, opts ...operations.Option) (*operations.PatchDatastoreRecordResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2557,6 +2569,7 @@ func (s *Datastore) PatchDatastoreRecord(ctx context.Context, request operations
 }
 
 // PatchDatastoreTable - Update a table
+// Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change in the request body.
 func (s *Datastore) PatchDatastoreTable(ctx context.Context, request operations.PatchDatastoreTableRequest, opts ...operations.Option) (*operations.PatchDatastoreTableResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2771,6 +2784,7 @@ func (s *Datastore) PatchDatastoreTable(ctx context.Context, request operations.
 }
 
 // RemoveDatastoreDatabase - Remove a database
+// Deletes the DatastoreDatabase identified by `id`.
 func (s *Datastore) RemoveDatastoreDatabase(ctx context.Context, request operations.RemoveDatastoreDatabaseRequest, opts ...operations.Option) (*operations.RemoveDatastoreDatabaseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2953,6 +2967,7 @@ func (s *Datastore) RemoveDatastoreDatabase(ctx context.Context, request operati
 }
 
 // RemoveDatastoreRecord - Remove a record
+// Deletes the DatastoreRecord identified by `id`.
 func (s *Datastore) RemoveDatastoreRecord(ctx context.Context, request operations.RemoveDatastoreRecordRequest, opts ...operations.Option) (*operations.RemoveDatastoreRecordResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3135,6 +3150,7 @@ func (s *Datastore) RemoveDatastoreRecord(ctx context.Context, request operation
 }
 
 // RemoveDatastoreTable - Remove a table
+// Deletes the DatastoreTable identified by `id`.
 func (s *Datastore) RemoveDatastoreTable(ctx context.Context, request operations.RemoveDatastoreTableRequest, opts ...operations.Option) (*operations.RemoveDatastoreTableResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3317,6 +3333,7 @@ func (s *Datastore) RemoveDatastoreTable(ctx context.Context, request operations
 }
 
 // UpdateDatastoreDatabase - Update a database
+// Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
 func (s *Datastore) UpdateDatastoreDatabase(ctx context.Context, request operations.UpdateDatastoreDatabaseRequest, opts ...operations.Option) (*operations.UpdateDatastoreDatabaseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3531,6 +3548,7 @@ func (s *Datastore) UpdateDatastoreDatabase(ctx context.Context, request operati
 }
 
 // UpdateDatastoreRecord - Update a record
+// Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
 func (s *Datastore) UpdateDatastoreRecord(ctx context.Context, request operations.UpdateDatastoreRecordRequest, opts ...operations.Option) (*operations.UpdateDatastoreRecordResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3745,6 +3763,7 @@ func (s *Datastore) UpdateDatastoreRecord(ctx context.Context, request operation
 }
 
 // UpdateDatastoreTable - Update a table
+// Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change in the request body.
 func (s *Datastore) UpdateDatastoreTable(ctx context.Context, request operations.UpdateDatastoreTableRequest, opts ...operations.Option) (*operations.UpdateDatastoreTableResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

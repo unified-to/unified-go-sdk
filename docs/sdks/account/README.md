@@ -13,7 +13,7 @@
 
 ## CreateAccountingAccount
 
-Create an account
+Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingAccount.
 
 ### Example Usage
 
@@ -44,7 +44,7 @@ func main() {
             Currency: unifiedgosdk.Pointer("CAD"),
             CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
             Description: unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-            ID: unifiedgosdk.Pointer("e1ef892f-3b71-470e-9366-7d11f6594355"),
+            ID: unifiedgosdk.Pointer("cf355b43-f7e4-4200-abd9-da8905ac9789"),
             IsPayable: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Auto Loan Account"),
@@ -57,7 +57,7 @@ func main() {
                 },
             },
             Type: shared.TypeAccountsReceivable.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-06T21:40:54.101Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-07T03:43:27.331Z"),
         },
         ConnectionID: "<id>",
     })
@@ -90,7 +90,7 @@ func main() {
 
 ## GetAccountingAccount
 
-Retrieve an account
+Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -145,7 +145,7 @@ func main() {
 
 ## ListAccountingAccounts
 
-List all accounts
+Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -199,7 +199,7 @@ func main() {
 
 ## PatchAccountingAccount
 
-Update an account
+Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
 ### Example Usage
 
@@ -230,7 +230,7 @@ func main() {
             Currency: unifiedgosdk.Pointer("CAD"),
             CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
             Description: unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-            ID: unifiedgosdk.Pointer("b89164f4-16d4-421e-842f-56eca530ec45"),
+            ID: unifiedgosdk.Pointer("b074017e-1dd1-4e9c-9a9a-ba6ae9afe0cc"),
             IsPayable: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Auto Loan Account"),
@@ -243,7 +243,7 @@ func main() {
                 },
             },
             Type: shared.TypeAccountsReceivable.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-06T21:40:54.106Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-07T03:43:27.336Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -277,7 +277,7 @@ func main() {
 
 ## RemoveAccountingAccount
 
-Remove an account
+Deletes the AccountingAccount identified by `id`.
 
 ### Example Usage
 
@@ -332,7 +332,7 @@ func main() {
 
 ## UpdateAccountingAccount
 
-Update an account
+Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
 ### Example Usage
 
@@ -363,7 +363,7 @@ func main() {
             Currency: unifiedgosdk.Pointer("CAD"),
             CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
             Description: unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-            ID: unifiedgosdk.Pointer("b89164f4-16d4-421e-842f-56eca530ec45"),
+            ID: unifiedgosdk.Pointer("b074017e-1dd1-4e9c-9a9a-ba6ae9afe0cc"),
             IsPayable: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Auto Loan Account"),
@@ -376,7 +376,7 @@ func main() {
                 },
             },
             Type: shared.TypeAccountsReceivable.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-06T21:40:54.106Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-07T03:43:27.336Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

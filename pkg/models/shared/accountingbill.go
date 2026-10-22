@@ -140,14 +140,15 @@ type AccountingBill struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	DueAt *time.Time `json:"due_at,omitempty"`
 	// Exchange rate to the base/home currency at the document date
-	ExchangeRate   *float64                 `json:"exchange_rate,omitempty"`
-	ExtendedNotes  []AccountingExtendedNote `json:"extended_notes,omitempty"`
-	ID             *string                  `json:"id,omitempty"`
-	Lineitems      []AccountingLineitem     `json:"lineitems,omitempty"`
-	Metadata       []AccountingMetadata     `json:"metadata,omitempty"`
-	Notes          *string                  `json:"notes,omitempty"`
-	OrganizationID *string                  `json:"organization_id,omitempty"`
-	PaidAmount     *float64                 `json:"paid_amount,omitempty"`
+	ExchangeRate  *float64                 `json:"exchange_rate,omitempty"`
+	ExtendedNotes []AccountingExtendedNote `json:"extended_notes,omitempty"`
+	ID            *string                  `json:"id,omitempty"`
+	// The bill's line items: what is billed, with the quantity, price and amount of each
+	Lineitems      []AccountingLineitem `json:"lineitems,omitempty"`
+	Metadata       []AccountingMetadata `json:"metadata,omitempty"`
+	Notes          *string              `json:"notes,omitempty"`
+	OrganizationID *string              `json:"organization_id,omitempty"`
+	PaidAmount     *float64             `json:"paid_amount,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	PaidAt *time.Time `json:"paid_at,omitempty"`
 	// When set to charging_automatically, an automated attempt will occur to pay this invoice using the default payment source attached to the contactcustomer. When set to send_invoice, an will email will be sent with this invoice to the contact/customer with payment instructions.

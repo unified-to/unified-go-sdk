@@ -31,6 +31,7 @@ func newLegal(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 }
 
 // CreateLegalExpense - Create an expense
+// Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
 func (s *Legal) CreateLegalExpense(ctx context.Context, request operations.CreateLegalExpenseRequest, opts ...operations.Option) (*operations.CreateLegalExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Legal) CreateLegalExpense(ctx context.Context, request operations.Creat
 }
 
 // CreateLegalMatter - Create a matter
+// Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped to the provider's API. Returns the created LegalMatter.
 func (s *Legal) CreateLegalMatter(ctx context.Context, request operations.CreateLegalMatterRequest, opts ...operations.Option) (*operations.CreateLegalMatterResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Legal) CreateLegalMatter(ctx context.Context, request operations.Create
 }
 
 // CreateLegalPracticearea - Create a practicearea
+// Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
 func (s *Legal) CreateLegalPracticearea(ctx context.Context, request operations.CreateLegalPracticeareaRequest, opts ...operations.Option) (*operations.CreateLegalPracticeareaResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Legal) CreateLegalPracticearea(ctx context.Context, request operations.
 }
 
 // CreateLegalTimeentry - Create a timeentry
+// Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are mapped to the provider's API. Returns the created LegalTimeentry.
 func (s *Legal) CreateLegalTimeentry(ctx context.Context, request operations.CreateLegalTimeentryRequest, opts ...operations.Option) (*operations.CreateLegalTimeentryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -887,6 +891,7 @@ func (s *Legal) CreateLegalTimeentry(ctx context.Context, request operations.Cre
 }
 
 // GetLegalExpense - Retrieve an expense
+// Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Legal) GetLegalExpense(ctx context.Context, request operations.GetLegalExpenseRequest, opts ...operations.Option) (*operations.GetLegalExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1094,6 +1099,7 @@ func (s *Legal) GetLegalExpense(ctx context.Context, request operations.GetLegal
 }
 
 // GetLegalMatter - Retrieve a matter
+// Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Legal) GetLegalMatter(ctx context.Context, request operations.GetLegalMatterRequest, opts ...operations.Option) (*operations.GetLegalMatterResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1301,6 +1307,7 @@ func (s *Legal) GetLegalMatter(ctx context.Context, request operations.GetLegalM
 }
 
 // GetLegalPracticearea - Retrieve a practicearea
+// Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Legal) GetLegalPracticearea(ctx context.Context, request operations.GetLegalPracticeareaRequest, opts ...operations.Option) (*operations.GetLegalPracticeareaResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1508,6 +1515,7 @@ func (s *Legal) GetLegalPracticearea(ctx context.Context, request operations.Get
 }
 
 // GetLegalTimeentry - Retrieve a timeentry
+// Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Legal) GetLegalTimeentry(ctx context.Context, request operations.GetLegalTimeentryRequest, opts ...operations.Option) (*operations.GetLegalTimeentryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1715,6 +1723,7 @@ func (s *Legal) GetLegalTimeentry(ctx context.Context, request operations.GetLeg
 }
 
 // ListLegalExpenses - List all expenses
+// Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Legal) ListLegalExpenses(ctx context.Context, request operations.ListLegalExpensesRequest, opts ...operations.Option) (*operations.ListLegalExpensesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1922,6 +1931,7 @@ func (s *Legal) ListLegalExpenses(ctx context.Context, request operations.ListLe
 }
 
 // ListLegalMatters - List all matters
+// Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Legal) ListLegalMatters(ctx context.Context, request operations.ListLegalMattersRequest, opts ...operations.Option) (*operations.ListLegalMattersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2129,6 +2139,7 @@ func (s *Legal) ListLegalMatters(ctx context.Context, request operations.ListLeg
 }
 
 // ListLegalPracticeareas - List all practiceareas
+// Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Legal) ListLegalPracticeareas(ctx context.Context, request operations.ListLegalPracticeareasRequest, opts ...operations.Option) (*operations.ListLegalPracticeareasResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2336,6 +2347,7 @@ func (s *Legal) ListLegalPracticeareas(ctx context.Context, request operations.L
 }
 
 // ListLegalTimeentries - List all timeentries
+// Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Legal) ListLegalTimeentries(ctx context.Context, request operations.ListLegalTimeentriesRequest, opts ...operations.Option) (*operations.ListLegalTimeentriesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2543,6 +2555,7 @@ func (s *Legal) ListLegalTimeentries(ctx context.Context, request operations.Lis
 }
 
 // PatchLegalExpense - Update an expense
+// Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 func (s *Legal) PatchLegalExpense(ctx context.Context, request operations.PatchLegalExpenseRequest, opts ...operations.Option) (*operations.PatchLegalExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2757,6 +2770,7 @@ func (s *Legal) PatchLegalExpense(ctx context.Context, request operations.PatchL
 }
 
 // PatchLegalMatter - Update a matter
+// Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 func (s *Legal) PatchLegalMatter(ctx context.Context, request operations.PatchLegalMatterRequest, opts ...operations.Option) (*operations.PatchLegalMatterResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2971,6 +2985,7 @@ func (s *Legal) PatchLegalMatter(ctx context.Context, request operations.PatchLe
 }
 
 // PatchLegalPracticearea - Update a practicearea
+// Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 func (s *Legal) PatchLegalPracticearea(ctx context.Context, request operations.PatchLegalPracticeareaRequest, opts ...operations.Option) (*operations.PatchLegalPracticeareaResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3185,6 +3200,7 @@ func (s *Legal) PatchLegalPracticearea(ctx context.Context, request operations.P
 }
 
 // PatchLegalTimeentry - Update a timeentry
+// Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 func (s *Legal) PatchLegalTimeentry(ctx context.Context, request operations.PatchLegalTimeentryRequest, opts ...operations.Option) (*operations.PatchLegalTimeentryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3399,6 +3415,7 @@ func (s *Legal) PatchLegalTimeentry(ctx context.Context, request operations.Patc
 }
 
 // RemoveLegalExpense - Remove an expense
+// Deletes the LegalExpense identified by `id`.
 func (s *Legal) RemoveLegalExpense(ctx context.Context, request operations.RemoveLegalExpenseRequest, opts ...operations.Option) (*operations.RemoveLegalExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3581,6 +3598,7 @@ func (s *Legal) RemoveLegalExpense(ctx context.Context, request operations.Remov
 }
 
 // RemoveLegalMatter - Remove a matter
+// Deletes the LegalMatter identified by `id`.
 func (s *Legal) RemoveLegalMatter(ctx context.Context, request operations.RemoveLegalMatterRequest, opts ...operations.Option) (*operations.RemoveLegalMatterResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3763,6 +3781,7 @@ func (s *Legal) RemoveLegalMatter(ctx context.Context, request operations.Remove
 }
 
 // RemoveLegalPracticearea - Remove a practicearea
+// Deletes the LegalPracticearea identified by `id`.
 func (s *Legal) RemoveLegalPracticearea(ctx context.Context, request operations.RemoveLegalPracticeareaRequest, opts ...operations.Option) (*operations.RemoveLegalPracticeareaResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3945,6 +3964,7 @@ func (s *Legal) RemoveLegalPracticearea(ctx context.Context, request operations.
 }
 
 // RemoveLegalTimeentry - Remove a timeentry
+// Deletes the LegalTimeentry identified by `id`.
 func (s *Legal) RemoveLegalTimeentry(ctx context.Context, request operations.RemoveLegalTimeentryRequest, opts ...operations.Option) (*operations.RemoveLegalTimeentryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4127,6 +4147,7 @@ func (s *Legal) RemoveLegalTimeentry(ctx context.Context, request operations.Rem
 }
 
 // UpdateLegalExpense - Update an expense
+// Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 func (s *Legal) UpdateLegalExpense(ctx context.Context, request operations.UpdateLegalExpenseRequest, opts ...operations.Option) (*operations.UpdateLegalExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4341,6 +4362,7 @@ func (s *Legal) UpdateLegalExpense(ctx context.Context, request operations.Updat
 }
 
 // UpdateLegalMatter - Update a matter
+// Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 func (s *Legal) UpdateLegalMatter(ctx context.Context, request operations.UpdateLegalMatterRequest, opts ...operations.Option) (*operations.UpdateLegalMatterResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4555,6 +4577,7 @@ func (s *Legal) UpdateLegalMatter(ctx context.Context, request operations.Update
 }
 
 // UpdateLegalPracticearea - Update a practicearea
+// Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 func (s *Legal) UpdateLegalPracticearea(ctx context.Context, request operations.UpdateLegalPracticeareaRequest, opts ...operations.Option) (*operations.UpdateLegalPracticeareaResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4769,6 +4792,7 @@ func (s *Legal) UpdateLegalPracticearea(ctx context.Context, request operations.
 }
 
 // UpdateLegalTimeentry - Update a timeentry
+// Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 func (s *Legal) UpdateLegalTimeentry(ctx context.Context, request operations.UpdateLegalTimeentryRequest, opts ...operations.Option) (*operations.UpdateLegalTimeentryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

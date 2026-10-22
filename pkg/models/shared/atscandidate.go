@@ -40,9 +40,10 @@ type AtsCandidate struct {
 	// Name of company where candidate currently works
 	CompanyName *string `json:"company_name,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt          *time.Time               `json:"created_at,omitempty"`
-	DateOfBirth        *time.Time               `json:"date_of_birth,omitempty"`
-	Education          []AtsCandidateEducation  `json:"education,omitempty"`
+	CreatedAt   *time.Time              `json:"created_at,omitempty"`
+	DateOfBirth *time.Time              `json:"date_of_birth,omitempty"`
+	Education   []AtsCandidateEducation `json:"education,omitempty"`
+	// The candidate's email addresses
 	Emails             []AtsEmail               `json:"emails,omitempty"`
 	Experiences        []AtsCandidateExperience `json:"experiences,omitempty"`
 	ExternalIdentifier *string                  `json:"external_identifier,omitempty"`
@@ -52,13 +53,14 @@ type AtsCandidate struct {
 	JobIds             []string                 `json:"job_ids,omitempty"`
 	LastName           *string                  `json:"last_name,omitempty"`
 	// URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
-	LinkUrls []string       `json:"link_urls,omitempty"`
-	Metadata []AtsMetadata  `json:"metadata,omitempty"`
-	Name     *string        `json:"name,omitempty"`
-	Origin   *Origin        `json:"origin,omitempty"`
-	Raw      map[string]any `json:"raw,omitempty"`
-	Skills   []string       `json:"skills,omitempty"`
-	Sources  []string       `json:"sources,omitempty"`
+	LinkUrls []string      `json:"link_urls,omitempty"`
+	Metadata []AtsMetadata `json:"metadata,omitempty"`
+	// The candidate's full name
+	Name    *string        `json:"name,omitempty"`
+	Origin  *Origin        `json:"origin,omitempty"`
+	Raw     map[string]any `json:"raw,omitempty"`
+	Skills  []string       `json:"skills,omitempty"`
+	Sources []string       `json:"sources,omitempty"`
 	// Personal / professional bio
 	Summary    *string        `json:"summary,omitempty"`
 	Tags       []string       `json:"tags,omitempty"`

@@ -31,6 +31,7 @@ func newCommerce(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateCommerceCollection - Create a collection
+// Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body; they are mapped to the provider's API. Returns the created CommerceCollection.
 func (s *Commerce) CreateCommerceCollection(ctx context.Context, request operations.CreateCommerceCollectionRequest, opts ...operations.Option) (*operations.CreateCommerceCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Commerce) CreateCommerceCollection(ctx context.Context, request operati
 }
 
 // CreateCommerceInventory - Create an inventory
+// Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they are mapped to the provider's API. Returns the created CommerceInventory.
 func (s *Commerce) CreateCommerceInventory(ctx context.Context, request operations.CreateCommerceInventoryRequest, opts ...operations.Option) (*operations.CreateCommerceInventoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Commerce) CreateCommerceInventory(ctx context.Context, request operatio
 }
 
 // CreateCommerceItem - Create an item
+// Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped to the provider's API. Returns the created CommerceItem.
 func (s *Commerce) CreateCommerceItem(ctx context.Context, request operations.CreateCommerceItemRequest, opts ...operations.Option) (*operations.CreateCommerceItemResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Commerce) CreateCommerceItem(ctx context.Context, request operations.Cr
 }
 
 // CreateCommerceItemvariant - Create an itemvariant
+// Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body; they are mapped to the provider's API. Returns the created CommerceItemvariant.
 func (s *Commerce) CreateCommerceItemvariant(ctx context.Context, request operations.CreateCommerceItemvariantRequest, opts ...operations.Option) (*operations.CreateCommerceItemvariantResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -887,6 +891,7 @@ func (s *Commerce) CreateCommerceItemvariant(ctx context.Context, request operat
 }
 
 // CreateCommerceLocation - Create a location
+// Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they are mapped to the provider's API. Returns the created CommerceLocation.
 func (s *Commerce) CreateCommerceLocation(ctx context.Context, request operations.CreateCommerceLocationRequest, opts ...operations.Option) (*operations.CreateCommerceLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1101,6 +1106,7 @@ func (s *Commerce) CreateCommerceLocation(ctx context.Context, request operation
 }
 
 // CreateCommerceReservation - Create a reservation
+// Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body; they are mapped to the provider's API. Returns the created CommerceReservation.
 func (s *Commerce) CreateCommerceReservation(ctx context.Context, request operations.CreateCommerceReservationRequest, opts ...operations.Option) (*operations.CreateCommerceReservationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1315,6 +1321,7 @@ func (s *Commerce) CreateCommerceReservation(ctx context.Context, request operat
 }
 
 // CreateCommerceReview - Create a review
+// Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are mapped to the provider's API. Returns the created CommerceReview.
 func (s *Commerce) CreateCommerceReview(ctx context.Context, request operations.CreateCommerceReviewRequest, opts ...operations.Option) (*operations.CreateCommerceReviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1529,6 +1536,7 @@ func (s *Commerce) CreateCommerceReview(ctx context.Context, request operations.
 }
 
 // CreateCommerceSaleschannel - Create a saleschannel
+// Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body; they are mapped to the provider's API. Returns the created CommerceSaleschannel.
 func (s *Commerce) CreateCommerceSaleschannel(ctx context.Context, request operations.CreateCommerceSaleschannelRequest, opts ...operations.Option) (*operations.CreateCommerceSaleschannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1743,6 +1751,7 @@ func (s *Commerce) CreateCommerceSaleschannel(ctx context.Context, request opera
 }
 
 // GetCommerceCollection - Retrieve a collection
+// Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Commerce) GetCommerceCollection(ctx context.Context, request operations.GetCommerceCollectionRequest, opts ...operations.Option) (*operations.GetCommerceCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1950,6 +1959,7 @@ func (s *Commerce) GetCommerceCollection(ctx context.Context, request operations
 }
 
 // GetCommerceInventory - Retrieve an inventory
+// Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Commerce) GetCommerceInventory(ctx context.Context, request operations.GetCommerceInventoryRequest, opts ...operations.Option) (*operations.GetCommerceInventoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2157,6 +2167,7 @@ func (s *Commerce) GetCommerceInventory(ctx context.Context, request operations.
 }
 
 // GetCommerceItem - Retrieve an item
+// Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Commerce) GetCommerceItem(ctx context.Context, request operations.GetCommerceItemRequest, opts ...operations.Option) (*operations.GetCommerceItemResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2364,6 +2375,7 @@ func (s *Commerce) GetCommerceItem(ctx context.Context, request operations.GetCo
 }
 
 // GetCommerceItemvariant - Retrieve an itemvariant
+// Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Commerce) GetCommerceItemvariant(ctx context.Context, request operations.GetCommerceItemvariantRequest, opts ...operations.Option) (*operations.GetCommerceItemvariantResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2571,6 +2583,7 @@ func (s *Commerce) GetCommerceItemvariant(ctx context.Context, request operation
 }
 
 // GetCommerceLocation - Retrieve a location
+// Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Commerce) GetCommerceLocation(ctx context.Context, request operations.GetCommerceLocationRequest, opts ...operations.Option) (*operations.GetCommerceLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2778,6 +2791,7 @@ func (s *Commerce) GetCommerceLocation(ctx context.Context, request operations.G
 }
 
 // GetCommerceReservation - Retrieve a reservation
+// Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Commerce) GetCommerceReservation(ctx context.Context, request operations.GetCommerceReservationRequest, opts ...operations.Option) (*operations.GetCommerceReservationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2985,6 +2999,7 @@ func (s *Commerce) GetCommerceReservation(ctx context.Context, request operation
 }
 
 // GetCommerceReview - Retrieve a review
+// Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Commerce) GetCommerceReview(ctx context.Context, request operations.GetCommerceReviewRequest, opts ...operations.Option) (*operations.GetCommerceReviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3192,6 +3207,7 @@ func (s *Commerce) GetCommerceReview(ctx context.Context, request operations.Get
 }
 
 // GetCommerceSaleschannel - Retrieve a saleschannel
+// Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Commerce) GetCommerceSaleschannel(ctx context.Context, request operations.GetCommerceSaleschannelRequest, opts ...operations.Option) (*operations.GetCommerceSaleschannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3399,6 +3415,7 @@ func (s *Commerce) GetCommerceSaleschannel(ctx context.Context, request operatio
 }
 
 // ListCommerceAvailabilities - List all availabilities
+// Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Commerce) ListCommerceAvailabilities(ctx context.Context, request operations.ListCommerceAvailabilitiesRequest, opts ...operations.Option) (*operations.ListCommerceAvailabilitiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3606,6 +3623,7 @@ func (s *Commerce) ListCommerceAvailabilities(ctx context.Context, request opera
 }
 
 // ListCommerceCollections - List all collections
+// Returns a list of CommerceCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Commerce) ListCommerceCollections(ctx context.Context, request operations.ListCommerceCollectionsRequest, opts ...operations.Option) (*operations.ListCommerceCollectionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3813,6 +3831,7 @@ func (s *Commerce) ListCommerceCollections(ctx context.Context, request operatio
 }
 
 // ListCommerceInventories - List all inventories
+// Returns a list of CommerceInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Commerce) ListCommerceInventories(ctx context.Context, request operations.ListCommerceInventoriesRequest, opts ...operations.Option) (*operations.ListCommerceInventoriesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4020,6 +4039,7 @@ func (s *Commerce) ListCommerceInventories(ctx context.Context, request operatio
 }
 
 // ListCommerceItems - List all items
+// Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Commerce) ListCommerceItems(ctx context.Context, request operations.ListCommerceItemsRequest, opts ...operations.Option) (*operations.ListCommerceItemsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4227,6 +4247,7 @@ func (s *Commerce) ListCommerceItems(ctx context.Context, request operations.Lis
 }
 
 // ListCommerceItemvariants - List all itemvariants
+// Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Commerce) ListCommerceItemvariants(ctx context.Context, request operations.ListCommerceItemvariantsRequest, opts ...operations.Option) (*operations.ListCommerceItemvariantsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4434,6 +4455,7 @@ func (s *Commerce) ListCommerceItemvariants(ctx context.Context, request operati
 }
 
 // ListCommerceLocations - List all locations
+// Returns a list of CommerceLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Commerce) ListCommerceLocations(ctx context.Context, request operations.ListCommerceLocationsRequest, opts ...operations.Option) (*operations.ListCommerceLocationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4641,6 +4663,7 @@ func (s *Commerce) ListCommerceLocations(ctx context.Context, request operations
 }
 
 // ListCommerceReservations - List all reservations
+// Returns a list of CommerceReservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Commerce) ListCommerceReservations(ctx context.Context, request operations.ListCommerceReservationsRequest, opts ...operations.Option) (*operations.ListCommerceReservationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4848,6 +4871,7 @@ func (s *Commerce) ListCommerceReservations(ctx context.Context, request operati
 }
 
 // ListCommerceReviews - List all reviews
+// Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Commerce) ListCommerceReviews(ctx context.Context, request operations.ListCommerceReviewsRequest, opts ...operations.Option) (*operations.ListCommerceReviewsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5055,6 +5079,7 @@ func (s *Commerce) ListCommerceReviews(ctx context.Context, request operations.L
 }
 
 // ListCommerceSaleschannels - List all saleschannels
+// Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Commerce) ListCommerceSaleschannels(ctx context.Context, request operations.ListCommerceSaleschannelsRequest, opts ...operations.Option) (*operations.ListCommerceSaleschannelsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5262,6 +5287,7 @@ func (s *Commerce) ListCommerceSaleschannels(ctx context.Context, request operat
 }
 
 // PatchCommerceCollection - Update a collection
+// Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 func (s *Commerce) PatchCommerceCollection(ctx context.Context, request operations.PatchCommerceCollectionRequest, opts ...operations.Option) (*operations.PatchCommerceCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5476,6 +5502,7 @@ func (s *Commerce) PatchCommerceCollection(ctx context.Context, request operatio
 }
 
 // PatchCommerceInventory - Update an inventory
+// Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 func (s *Commerce) PatchCommerceInventory(ctx context.Context, request operations.PatchCommerceInventoryRequest, opts ...operations.Option) (*operations.PatchCommerceInventoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5690,6 +5717,7 @@ func (s *Commerce) PatchCommerceInventory(ctx context.Context, request operation
 }
 
 // PatchCommerceItem - Update an item
+// Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
 func (s *Commerce) PatchCommerceItem(ctx context.Context, request operations.PatchCommerceItemRequest, opts ...operations.Option) (*operations.PatchCommerceItemResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5904,6 +5932,7 @@ func (s *Commerce) PatchCommerceItem(ctx context.Context, request operations.Pat
 }
 
 // PatchCommerceItemvariant - Update an itemvariant
+// Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 func (s *Commerce) PatchCommerceItemvariant(ctx context.Context, request operations.PatchCommerceItemvariantRequest, opts ...operations.Option) (*operations.PatchCommerceItemvariantResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6118,6 +6147,7 @@ func (s *Commerce) PatchCommerceItemvariant(ctx context.Context, request operati
 }
 
 // PatchCommerceLocation - Update a location
+// Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 func (s *Commerce) PatchCommerceLocation(ctx context.Context, request operations.PatchCommerceLocationRequest, opts ...operations.Option) (*operations.PatchCommerceLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6332,6 +6362,7 @@ func (s *Commerce) PatchCommerceLocation(ctx context.Context, request operations
 }
 
 // PatchCommerceReservation - Update a reservation
+// Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 func (s *Commerce) PatchCommerceReservation(ctx context.Context, request operations.PatchCommerceReservationRequest, opts ...operations.Option) (*operations.PatchCommerceReservationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6546,6 +6577,7 @@ func (s *Commerce) PatchCommerceReservation(ctx context.Context, request operati
 }
 
 // PatchCommerceReview - Update a review
+// Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 func (s *Commerce) PatchCommerceReview(ctx context.Context, request operations.PatchCommerceReviewRequest, opts ...operations.Option) (*operations.PatchCommerceReviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6760,6 +6792,7 @@ func (s *Commerce) PatchCommerceReview(ctx context.Context, request operations.P
 }
 
 // PatchCommerceSaleschannel - Update a saleschannel
+// Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 func (s *Commerce) PatchCommerceSaleschannel(ctx context.Context, request operations.PatchCommerceSaleschannelRequest, opts ...operations.Option) (*operations.PatchCommerceSaleschannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -6974,6 +7007,7 @@ func (s *Commerce) PatchCommerceSaleschannel(ctx context.Context, request operat
 }
 
 // RemoveCommerceCollection - Remove a collection
+// Deletes the CommerceCollection identified by `id`.
 func (s *Commerce) RemoveCommerceCollection(ctx context.Context, request operations.RemoveCommerceCollectionRequest, opts ...operations.Option) (*operations.RemoveCommerceCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7156,6 +7190,7 @@ func (s *Commerce) RemoveCommerceCollection(ctx context.Context, request operati
 }
 
 // RemoveCommerceInventory - Remove an inventory
+// Deletes the CommerceInventory identified by `id`.
 func (s *Commerce) RemoveCommerceInventory(ctx context.Context, request operations.RemoveCommerceInventoryRequest, opts ...operations.Option) (*operations.RemoveCommerceInventoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7338,6 +7373,7 @@ func (s *Commerce) RemoveCommerceInventory(ctx context.Context, request operatio
 }
 
 // RemoveCommerceItem - Remove an item
+// Deletes the CommerceItem identified by `id`.
 func (s *Commerce) RemoveCommerceItem(ctx context.Context, request operations.RemoveCommerceItemRequest, opts ...operations.Option) (*operations.RemoveCommerceItemResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7520,6 +7556,7 @@ func (s *Commerce) RemoveCommerceItem(ctx context.Context, request operations.Re
 }
 
 // RemoveCommerceItemvariant - Remove an itemvariant
+// Deletes the CommerceItemvariant identified by `id`.
 func (s *Commerce) RemoveCommerceItemvariant(ctx context.Context, request operations.RemoveCommerceItemvariantRequest, opts ...operations.Option) (*operations.RemoveCommerceItemvariantResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7702,6 +7739,7 @@ func (s *Commerce) RemoveCommerceItemvariant(ctx context.Context, request operat
 }
 
 // RemoveCommerceLocation - Remove a location
+// Deletes the CommerceLocation identified by `id`.
 func (s *Commerce) RemoveCommerceLocation(ctx context.Context, request operations.RemoveCommerceLocationRequest, opts ...operations.Option) (*operations.RemoveCommerceLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -7884,6 +7922,7 @@ func (s *Commerce) RemoveCommerceLocation(ctx context.Context, request operation
 }
 
 // RemoveCommerceReservation - Remove a reservation
+// Deletes the CommerceReservation identified by `id`.
 func (s *Commerce) RemoveCommerceReservation(ctx context.Context, request operations.RemoveCommerceReservationRequest, opts ...operations.Option) (*operations.RemoveCommerceReservationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8066,6 +8105,7 @@ func (s *Commerce) RemoveCommerceReservation(ctx context.Context, request operat
 }
 
 // RemoveCommerceReview - Remove a review
+// Deletes the CommerceReview identified by `id`.
 func (s *Commerce) RemoveCommerceReview(ctx context.Context, request operations.RemoveCommerceReviewRequest, opts ...operations.Option) (*operations.RemoveCommerceReviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8248,6 +8288,7 @@ func (s *Commerce) RemoveCommerceReview(ctx context.Context, request operations.
 }
 
 // RemoveCommerceSaleschannel - Remove a saleschannel
+// Deletes the CommerceSaleschannel identified by `id`.
 func (s *Commerce) RemoveCommerceSaleschannel(ctx context.Context, request operations.RemoveCommerceSaleschannelRequest, opts ...operations.Option) (*operations.RemoveCommerceSaleschannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8430,6 +8471,7 @@ func (s *Commerce) RemoveCommerceSaleschannel(ctx context.Context, request opera
 }
 
 // UpdateCommerceCollection - Update a collection
+// Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 func (s *Commerce) UpdateCommerceCollection(ctx context.Context, request operations.UpdateCommerceCollectionRequest, opts ...operations.Option) (*operations.UpdateCommerceCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8644,6 +8686,7 @@ func (s *Commerce) UpdateCommerceCollection(ctx context.Context, request operati
 }
 
 // UpdateCommerceInventory - Update an inventory
+// Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 func (s *Commerce) UpdateCommerceInventory(ctx context.Context, request operations.UpdateCommerceInventoryRequest, opts ...operations.Option) (*operations.UpdateCommerceInventoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -8858,6 +8901,7 @@ func (s *Commerce) UpdateCommerceInventory(ctx context.Context, request operatio
 }
 
 // UpdateCommerceItem - Update an item
+// Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
 func (s *Commerce) UpdateCommerceItem(ctx context.Context, request operations.UpdateCommerceItemRequest, opts ...operations.Option) (*operations.UpdateCommerceItemResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9072,6 +9116,7 @@ func (s *Commerce) UpdateCommerceItem(ctx context.Context, request operations.Up
 }
 
 // UpdateCommerceItemvariant - Update an itemvariant
+// Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 func (s *Commerce) UpdateCommerceItemvariant(ctx context.Context, request operations.UpdateCommerceItemvariantRequest, opts ...operations.Option) (*operations.UpdateCommerceItemvariantResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9286,6 +9331,7 @@ func (s *Commerce) UpdateCommerceItemvariant(ctx context.Context, request operat
 }
 
 // UpdateCommerceLocation - Update a location
+// Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 func (s *Commerce) UpdateCommerceLocation(ctx context.Context, request operations.UpdateCommerceLocationRequest, opts ...operations.Option) (*operations.UpdateCommerceLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9500,6 +9546,7 @@ func (s *Commerce) UpdateCommerceLocation(ctx context.Context, request operation
 }
 
 // UpdateCommerceReservation - Update a reservation
+// Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 func (s *Commerce) UpdateCommerceReservation(ctx context.Context, request operations.UpdateCommerceReservationRequest, opts ...operations.Option) (*operations.UpdateCommerceReservationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9714,6 +9761,7 @@ func (s *Commerce) UpdateCommerceReservation(ctx context.Context, request operat
 }
 
 // UpdateCommerceReview - Update a review
+// Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 func (s *Commerce) UpdateCommerceReview(ctx context.Context, request operations.UpdateCommerceReviewRequest, opts ...operations.Option) (*operations.UpdateCommerceReviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -9928,6 +9976,7 @@ func (s *Commerce) UpdateCommerceReview(ctx context.Context, request operations.
 }
 
 // UpdateCommerceSaleschannel - Update a saleschannel
+// Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 func (s *Commerce) UpdateCommerceSaleschannel(ctx context.Context, request operations.UpdateCommerceSaleschannelRequest, opts ...operations.Option) (*operations.UpdateCommerceSaleschannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

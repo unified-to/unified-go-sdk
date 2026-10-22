@@ -13,7 +13,7 @@
 
 ## CreateLegalMatter
 
-Create a matter
+Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped to the provider's API. Returns the created LegalMatter.
 
 ### Example Usage
 
@@ -46,11 +46,11 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-05-28T04:10:42.375Z"),
             Currency: unifiedgosdk.Pointer("BOB"),
             Description: unifiedgosdk.Pointer("Speciosus cresco aut cotidie temeritas arma."),
-            ID: unifiedgosdk.Pointer("758a09bf-ac35-4ca0-9297-ac6c2c6e768e"),
+            ID: unifiedgosdk.Pointer("0a3fcc05-e27a-4b82-949f-badc14cd9a55"),
             Metadata: []shared.LegalMetadata{},
             Name: unifiedgosdk.Pointer("Walter v. Franecki - Spinka"),
             Number: unifiedgosdk.Pointer("2023-3062"),
-            OpenedAt: types.MustNewTimeFromString("2023-07-05T06:18:43.614Z"),
+            OpenedAt: types.MustNewTimeFromString("2023-07-05T07:02:28.411Z"),
             Parties: []shared.LegalParty{
                 shared.LegalParty{
                     Description: unifiedgosdk.Pointer("Urban Walter"),
@@ -59,8 +59,8 @@ func main() {
             },
             Stage: unifiedgosdk.Pointer("currus"),
             Status: shared.LegalMatterStatusOpen.ToPointer(),
-            StatuteOfLimitationsAt: types.MustNewTimeFromString("2027-06-28T21:12:06.224Z"),
-            UpdatedAt: types.MustNewTimeFromString("2023-07-17T10:05:24.278Z"),
+            StatuteOfLimitationsAt: types.MustNewTimeFromString("2027-06-29T20:58:22.479Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-07-17T11:03:06.872Z"),
         },
         ConnectionID: "<id>",
     })
@@ -93,7 +93,7 @@ func main() {
 
 ## GetLegalMatter
 
-Retrieve a matter
+Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -148,7 +148,7 @@ func main() {
 
 ## ListLegalMatters
 
-List all matters
+Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -202,7 +202,7 @@ func main() {
 
 ## PatchLegalMatter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -235,11 +235,11 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-05-28T04:10:42.375Z"),
             Currency: unifiedgosdk.Pointer("BOB"),
             Description: unifiedgosdk.Pointer("Speciosus cresco aut cotidie temeritas arma."),
-            ID: unifiedgosdk.Pointer("a08b5258-b003-44e5-ad6e-92b4727c2be4"),
+            ID: unifiedgosdk.Pointer("0b6277a1-c527-4b4f-be63-395f7b3ff9b0"),
             Metadata: []shared.LegalMetadata{},
             Name: unifiedgosdk.Pointer("Walter v. Franecki - Spinka"),
             Number: unifiedgosdk.Pointer("2023-3062"),
-            OpenedAt: types.MustNewTimeFromString("2023-07-05T06:18:43.615Z"),
+            OpenedAt: types.MustNewTimeFromString("2023-07-05T07:02:28.412Z"),
             Parties: []shared.LegalParty{
                 shared.LegalParty{
                     Description: unifiedgosdk.Pointer("Urban Walter"),
@@ -248,8 +248,8 @@ func main() {
             },
             Stage: unifiedgosdk.Pointer("currus"),
             Status: shared.LegalMatterStatusOpen.ToPointer(),
-            StatuteOfLimitationsAt: types.MustNewTimeFromString("2027-06-28T21:12:06.253Z"),
-            UpdatedAt: types.MustNewTimeFromString("2023-07-17T10:05:24.279Z"),
+            StatuteOfLimitationsAt: types.MustNewTimeFromString("2027-06-29T20:58:22.506Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-07-17T11:03:06.873Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -283,7 +283,7 @@ func main() {
 
 ## RemoveLegalMatter
 
-Remove a matter
+Deletes the LegalMatter identified by `id`.
 
 ### Example Usage
 
@@ -338,7 +338,7 @@ func main() {
 
 ## UpdateLegalMatter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -371,11 +371,11 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-05-28T04:10:42.375Z"),
             Currency: unifiedgosdk.Pointer("BOB"),
             Description: unifiedgosdk.Pointer("Speciosus cresco aut cotidie temeritas arma."),
-            ID: unifiedgosdk.Pointer("a08b5258-b003-44e5-ad6e-92b4727c2be4"),
+            ID: unifiedgosdk.Pointer("0b6277a1-c527-4b4f-be63-395f7b3ff9b0"),
             Metadata: []shared.LegalMetadata{},
             Name: unifiedgosdk.Pointer("Walter v. Franecki - Spinka"),
             Number: unifiedgosdk.Pointer("2023-3062"),
-            OpenedAt: types.MustNewTimeFromString("2023-07-05T06:18:43.615Z"),
+            OpenedAt: types.MustNewTimeFromString("2023-07-05T07:02:28.412Z"),
             Parties: []shared.LegalParty{
                 shared.LegalParty{
                     Description: unifiedgosdk.Pointer("Urban Walter"),
@@ -384,8 +384,8 @@ func main() {
             },
             Stage: unifiedgosdk.Pointer("currus"),
             Status: shared.LegalMatterStatusOpen.ToPointer(),
-            StatuteOfLimitationsAt: types.MustNewTimeFromString("2027-06-28T21:12:06.253Z"),
-            UpdatedAt: types.MustNewTimeFromString("2023-07-17T10:05:24.279Z"),
+            StatuteOfLimitationsAt: types.MustNewTimeFromString("2027-06-29T20:58:22.506Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-07-17T11:03:06.873Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

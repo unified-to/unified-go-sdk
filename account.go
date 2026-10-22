@@ -31,6 +31,7 @@ func newAccount(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateAccountingAccount - Create an account
+// Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingAccount.
 func (s *Account) CreateAccountingAccount(ctx context.Context, request operations.CreateAccountingAccountRequest, opts ...operations.Option) (*operations.CreateAccountingAccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Account) CreateAccountingAccount(ctx context.Context, request operation
 }
 
 // GetAccountingAccount - Retrieve an account
+// Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Account) GetAccountingAccount(ctx context.Context, request operations.GetAccountingAccountRequest, opts ...operations.Option) (*operations.GetAccountingAccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Account) GetAccountingAccount(ctx context.Context, request operations.G
 }
 
 // ListAccountingAccounts - List all accounts
+// Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Account) ListAccountingAccounts(ctx context.Context, request operations.ListAccountingAccountsRequest, opts ...operations.Option) (*operations.ListAccountingAccountsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Account) ListAccountingAccounts(ctx context.Context, request operations
 }
 
 // PatchAccountingAccount - Update an account
+// Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 func (s *Account) PatchAccountingAccount(ctx context.Context, request operations.PatchAccountingAccountRequest, opts ...operations.Option) (*operations.PatchAccountingAccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Account) PatchAccountingAccount(ctx context.Context, request operations
 }
 
 // RemoveAccountingAccount - Remove an account
+// Deletes the AccountingAccount identified by `id`.
 func (s *Account) RemoveAccountingAccount(ctx context.Context, request operations.RemoveAccountingAccountRequest, opts ...operations.Option) (*operations.RemoveAccountingAccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Account) RemoveAccountingAccount(ctx context.Context, request operation
 }
 
 // UpdateAccountingAccount - Update an account
+// Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 func (s *Account) UpdateAccountingAccount(ctx context.Context, request operations.UpdateAccountingAccountRequest, opts ...operations.Option) (*operations.UpdateAccountingAccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

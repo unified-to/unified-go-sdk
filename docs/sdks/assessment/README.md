@@ -17,7 +17,7 @@
 
 ## CreateAssessmentOrder
 
-Create an order
+Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
 
 ### Example Usage
 
@@ -45,7 +45,7 @@ func main() {
         AssessmentOrder: shared.AssessmentOrder{
             ConnectionID: "<id>",
             CreatedAt: types.MustNewTimeFromString("2021-09-18T10:33:57.803Z"),
-            ID: unifiedgosdk.Pointer("46cb793e-1410-48a9-86d0-1a4baf1eeaa6"),
+            ID: unifiedgosdk.Pointer("8f2ded2a-b22c-42ae-a1c7-7dffc14e2cc3"),
             Metadata: []shared.AssessmentMetadata{},
             Parameters: []shared.AssessmentParameterInput{},
             ProfileAddresses: []shared.AssessmentAddress{},
@@ -72,7 +72,7 @@ func main() {
             ResponseURL: unifiedgosdk.Pointer("https://rowdy-fisherman.biz/"),
             Status: shared.AssessmentOrderStatusRejected.ToPointer(),
             TargetURL: unifiedgosdk.Pointer("https://cautious-turret.info"),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-25T20:34:45.957Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-26T02:54:10.939Z"),
             WorkspaceID: "<id>",
         },
         ConnectionID: "<id>",
@@ -139,7 +139,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla."),
             HasRedirectURL: unifiedgosdk.Pointer(true),
             HasTargetURL: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("2d44f122-f4ea-4ce0-9cb8-b0ba6a0ec042"),
+            ID: unifiedgosdk.Pointer("eb4d661b-ca91-4c5c-a007-2e86a0271834"),
             InfoURL: unifiedgosdk.Pointer("https://ugly-instance.biz/"),
             IntegrationTypes: []string{
                 "viridis",
@@ -154,7 +154,7 @@ func main() {
                 "clamo",
             },
             Type: shared.AssessmentPackageTypeVideoInterview,
-            UpdatedAt: types.MustNewTimeFromString("2023-09-25T09:14:33.770Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-09-25T14:23:50.448Z"),
         },
         ConnectionID: "<id>",
     })
@@ -187,7 +187,7 @@ func main() {
 
 ## GetAssessmentOrder
 
-Retrieve an order
+Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -351,7 +351,7 @@ func main() {
 
 ## PatchAssessmentOrder
 
-Update an order
+Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
 ### Example Usage
 
@@ -379,7 +379,7 @@ func main() {
         AssessmentOrder: shared.AssessmentOrder{
             ConnectionID: "<id>",
             CreatedAt: types.MustNewTimeFromString("2021-09-18T10:33:57.803Z"),
-            ID: unifiedgosdk.Pointer("5bfd87cf-d33d-4ceb-a9fc-922f4bbd52ec"),
+            ID: unifiedgosdk.Pointer("a89a5324-7724-4a6a-a3f2-52534dfbbf5a"),
             Metadata: []shared.AssessmentMetadata{},
             Parameters: []shared.AssessmentParameterInput{},
             ProfileAddresses: []shared.AssessmentAddress{},
@@ -406,7 +406,7 @@ func main() {
             ResponseURL: unifiedgosdk.Pointer("https://rowdy-fisherman.biz/"),
             Status: shared.AssessmentOrderStatusRejected.ToPointer(),
             TargetURL: unifiedgosdk.Pointer("https://cautious-turret.info"),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-25T20:34:45.967Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-26T02:54:10.953Z"),
             WorkspaceID: "<id>",
         },
         ConnectionID: "<id>",
@@ -474,7 +474,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla."),
             HasRedirectURL: unifiedgosdk.Pointer(true),
             HasTargetURL: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("cf09d7d7-035a-4cc5-b696-f2c8c469f143"),
+            ID: unifiedgosdk.Pointer("0c12b87f-9455-4a8a-926b-cea0e8c84d25"),
             InfoURL: unifiedgosdk.Pointer("https://ugly-instance.biz/"),
             IntegrationTypes: []string{
                 "viridis",
@@ -489,7 +489,7 @@ func main() {
                 "clamo",
             },
             Type: shared.AssessmentPackageTypeVideoInterview,
-            UpdatedAt: types.MustNewTimeFromString("2023-09-25T09:14:33.775Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-09-25T14:23:50.454Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -578,7 +578,7 @@ func main() {
 
 ## UpdateAssessmentOrder
 
-Update an order
+Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
 ### Example Usage
 
@@ -606,7 +606,7 @@ func main() {
         AssessmentOrder: shared.AssessmentOrder{
             ConnectionID: "<id>",
             CreatedAt: types.MustNewTimeFromString("2021-09-18T10:33:57.803Z"),
-            ID: unifiedgosdk.Pointer("5bfd87cf-d33d-4ceb-a9fc-922f4bbd52ec"),
+            ID: unifiedgosdk.Pointer("a89a5324-7724-4a6a-a3f2-52534dfbbf5a"),
             Metadata: []shared.AssessmentMetadata{},
             Parameters: []shared.AssessmentParameterInput{},
             ProfileAddresses: []shared.AssessmentAddress{},
@@ -633,7 +633,7 @@ func main() {
             ResponseURL: unifiedgosdk.Pointer("https://rowdy-fisherman.biz/"),
             Status: shared.AssessmentOrderStatusRejected.ToPointer(),
             TargetURL: unifiedgosdk.Pointer("https://cautious-turret.info"),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-25T20:34:45.967Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-26T02:54:10.953Z"),
             WorkspaceID: "<id>",
         },
         ConnectionID: "<id>",
@@ -701,7 +701,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla."),
             HasRedirectURL: unifiedgosdk.Pointer(true),
             HasTargetURL: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("cf09d7d7-035a-4cc5-b696-f2c8c469f143"),
+            ID: unifiedgosdk.Pointer("0c12b87f-9455-4a8a-926b-cea0e8c84d25"),
             InfoURL: unifiedgosdk.Pointer("https://ugly-instance.biz/"),
             IntegrationTypes: []string{
                 "viridis",
@@ -716,7 +716,7 @@ func main() {
                 "clamo",
             },
             Type: shared.AssessmentPackageTypeVideoInterview,
-            UpdatedAt: types.MustNewTimeFromString("2023-09-25T09:14:33.775Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-09-25T14:23:50.454Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

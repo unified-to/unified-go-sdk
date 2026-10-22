@@ -272,7 +272,8 @@ type AdsGroup struct {
 	BudgetMaxAmount      *float64              `json:"budget_max_amount,omitempty"`
 	BudgetPeriod         *AdsGroupBudgetPeriod `json:"budget_period,omitempty"`
 	BudgetUnit           *AdsGroupBudgetUnit   `json:"budget_unit,omitempty"`
-	CampaignID           *string               `json:"campaign_id,omitempty"`
+	// The ID of the campaign the ad group belongs to (an AdsCampaign ID)
+	CampaignID *string `json:"campaign_id,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt   *time.Time `json:"created_at,omitempty"`
 	CreativeIds []string   `json:"creative_ids,omitempty"`
@@ -289,7 +290,8 @@ type AdsGroup struct {
 	// Language + region, ISO 639-1 with region (e.g. en-US); LinkedIn locale
 	LanguageLocale *string       `json:"language_locale,omitempty"`
 	Metadata       []AdsMetadata `json:"metadata,omitempty"`
-	Name           *string       `json:"name,omitempty"`
+	// The ad group's name
+	Name *string `json:"name,omitempty"`
 	// Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
 	OptimizationGoal *OptimizationGoal       `json:"optimization_goal,omitempty"`
 	OrganizationID   *string                 `json:"organization_id,omitempty"`

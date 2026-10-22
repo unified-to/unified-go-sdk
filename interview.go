@@ -31,6 +31,7 @@ func newInterview(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 }
 
 // CreateAtsInterview - Create an interview
+// Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped to the provider's API. Returns the created AtsInterview.
 func (s *Interview) CreateAtsInterview(ctx context.Context, request operations.CreateAtsInterviewRequest, opts ...operations.Option) (*operations.CreateAtsInterviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Interview) CreateAtsInterview(ctx context.Context, request operations.C
 }
 
 // GetAtsInterview - Retrieve an interview
+// Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Interview) GetAtsInterview(ctx context.Context, request operations.GetAtsInterviewRequest, opts ...operations.Option) (*operations.GetAtsInterviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Interview) GetAtsInterview(ctx context.Context, request operations.GetA
 }
 
 // ListAtsInterviews - List all interviews
+// Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Interview) ListAtsInterviews(ctx context.Context, request operations.ListAtsInterviewsRequest, opts ...operations.Option) (*operations.ListAtsInterviewsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Interview) ListAtsInterviews(ctx context.Context, request operations.Li
 }
 
 // PatchAtsInterview - Update an interview
+// Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 func (s *Interview) PatchAtsInterview(ctx context.Context, request operations.PatchAtsInterviewRequest, opts ...operations.Option) (*operations.PatchAtsInterviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Interview) PatchAtsInterview(ctx context.Context, request operations.Pa
 }
 
 // RemoveAtsInterview - Remove an interview
+// Deletes the AtsInterview identified by `id`.
 func (s *Interview) RemoveAtsInterview(ctx context.Context, request operations.RemoveAtsInterviewRequest, opts ...operations.Option) (*operations.RemoveAtsInterviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Interview) RemoveAtsInterview(ctx context.Context, request operations.R
 }
 
 // UpdateAtsInterview - Update an interview
+// Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 func (s *Interview) UpdateAtsInterview(ctx context.Context, request operations.UpdateAtsInterviewRequest, opts ...operations.Option) (*operations.UpdateAtsInterviewResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

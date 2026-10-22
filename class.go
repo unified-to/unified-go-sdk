@@ -31,6 +31,7 @@ func newClass(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 }
 
 // CreateLmsClass - Create a class
+// Creates a LmsClass. Provide the unified LmsClass fields in the request body; they are mapped to the provider's API. Returns the created LmsClass.
 func (s *Class) CreateLmsClass(ctx context.Context, request operations.CreateLmsClassRequest, opts ...operations.Option) (*operations.CreateLmsClassResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Class) CreateLmsClass(ctx context.Context, request operations.CreateLms
 }
 
 // GetLmsClass - Retrieve a class
+// Retrieves a single LmsClass by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Class) GetLmsClass(ctx context.Context, request operations.GetLmsClassRequest, opts ...operations.Option) (*operations.GetLmsClassResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Class) GetLmsClass(ctx context.Context, request operations.GetLmsClassR
 }
 
 // ListLmsClasses - List all classes
+// Returns a list of LmsClasses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Class) ListLmsClasses(ctx context.Context, request operations.ListLmsClassesRequest, opts ...operations.Option) (*operations.ListLmsClassesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Class) ListLmsClasses(ctx context.Context, request operations.ListLmsCl
 }
 
 // PatchLmsClass - Update a class
+// Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 func (s *Class) PatchLmsClass(ctx context.Context, request operations.PatchLmsClassRequest, opts ...operations.Option) (*operations.PatchLmsClassResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Class) PatchLmsClass(ctx context.Context, request operations.PatchLmsCl
 }
 
 // RemoveLmsClass - Remove a class
+// Deletes the LmsClass identified by `id`.
 func (s *Class) RemoveLmsClass(ctx context.Context, request operations.RemoveLmsClassRequest, opts ...operations.Option) (*operations.RemoveLmsClassResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Class) RemoveLmsClass(ctx context.Context, request operations.RemoveLms
 }
 
 // UpdateLmsClass - Update a class
+// Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 func (s *Class) UpdateLmsClass(ctx context.Context, request operations.UpdateLmsClassRequest, opts ...operations.Option) (*operations.UpdateLmsClassResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -33,7 +33,7 @@
 
 ## CreateGenaiTask
 
-Create a task
+Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to the provider's API. Returns the created GenaiTask.
 
 ### Example Usage
 
@@ -59,10 +59,10 @@ func main() {
 
     res, err := s.Task.CreateGenaiTask(ctx, operations.CreateGenaiTaskRequest{
         GenaiTask: shared.GenaiTask{
-            CompletedAt: types.MustNewTimeFromString("2025-10-01T06:40:21.561Z"),
+            CompletedAt: types.MustNewTimeFromString("2025-10-02T02:15:37.668Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-25T20:19:33.247Z"),
             FilesChanged: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("ac164b9c-0c3f-45ee-8b6a-bf1116489adc"),
+            ID: unifiedgosdk.Pointer("442fcbae-d067-4f9c-9db3-a70e9c393a98"),
             Instructions: unifiedgosdk.Pointer("Benigne canonicus officiis solvo adsidue deleo angustus."),
             LinesAdded: unifiedgosdk.Pointer[float64](244.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](118.0),
@@ -77,12 +77,12 @@ func main() {
             PullrequestURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383"),
             RepoURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance"),
             SourceBranchIdentifier: unifiedgosdk.Pointer("main"),
-            StartedAt: types.MustNewTimeFromString("2024-05-21T10:29:55.285Z"),
+            StartedAt: types.MustNewTimeFromString("2024-05-22T00:40:23.675Z"),
             Status: shared.GenaiTaskStatusBlocked.ToPointer(),
             Summary: unifiedgosdk.Pointer("Cur aeternus cogito vesper."),
             TargetBranchIdentifier: unifiedgosdk.Pointer("agent/joshingly-ignorance"),
             TokensUsed: unifiedgosdk.Pointer[float64](2165.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-26T07:15:11.602Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-26T16:31:59.677Z"),
             WebURL: unifiedgosdk.Pointer("https://inexperienced-adrenalin.biz/"),
         },
         ConnectionID: "<id>",
@@ -116,7 +116,7 @@ func main() {
 
 ## CreateTaskComment
 
-Create a comment
+Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped to the provider's API. Returns the created TaskComment.
 
 ### Example Usage
 
@@ -144,10 +144,10 @@ func main() {
         TaskComment: shared.TaskComment{
             CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("2260f628-1f2b-4c01-8b8d-8f3b6ed16fd4"),
+            ID: unifiedgosdk.Pointer("0443a83e-d435-44b8-887a-9cbb133ec389"),
             Metadata: []shared.TaskMetadata{},
             Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
-            UpdatedAt: types.MustNewTimeFromString("2021-10-03T07:59:35.582Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-10-03T14:40:44.794Z"),
         },
         ConnectionID: "<id>",
     })
@@ -180,7 +180,7 @@ func main() {
 
 ## CreateTaskProject
 
-Create a project
+Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped to the provider's API. Returns the created TaskProject.
 
 ### Example Usage
 
@@ -210,7 +210,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Valetudo aggredior accommodo curiositas vox."),
             HasChildren: unifiedgosdk.Pointer(false),
             HasTasks: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("aeb39b9d-e5b0-4a0c-bcb3-cda26afa1b4c"),
+            ID: unifiedgosdk.Pointer("586e2b04-721f-4fb4-b1c9-ff0295b8f983"),
             Metadata: []shared.TaskMetadata{
                 shared.TaskMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
@@ -219,7 +219,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("d98f2b9a-ab7e-405e-8df0-fa5004566c47"),
+                    ID: unifiedgosdk.Pointer("ac6d7296-95fc-4c6c-b2b1-b41a06651184"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("decens"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -233,7 +233,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("c06402ac-1b9b-481d-9e29-7d11c4f81614"),
+                    ID: unifiedgosdk.Pointer("9bfa2064-4758-497f-942c-b3cc0ea19dfd"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("benevolentia"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -242,7 +242,7 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("Garden"),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-11T14:30:33.168Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-11T16:39:32.559Z"),
         },
         ConnectionID: "<id>",
     })
@@ -275,7 +275,7 @@ func main() {
 
 ## CreateTaskTask
 
-Create a task
+Creates a TaskTask. Provide the unified TaskTask fields in the request body; they are mapped to the provider's API. Returns the created TaskTask.
 
 ### Example Usage
 
@@ -303,15 +303,15 @@ func main() {
         TaskTask: shared.TaskTask{
             AttachmentIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2019-01-31T08:34:55.626Z"),
-            DueAt: types.MustNewTimeFromString("2025-09-11T18:07:48.680Z"),
+            DueAt: types.MustNewTimeFromString("2025-09-12T14:15:13.461Z"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("4c95f14c-0a2e-482b-8850-3bd9a1746b5a"),
+            ID: unifiedgosdk.Pointer("6f667320-6d4d-44b6-b6db-61853b30438f"),
             Metadata: []shared.TaskMetadata{},
             Name: unifiedgosdk.Pointer("I'll compress the optical IB interface, that should capacitor the JBOD system!"),
             Notes: unifiedgosdk.Pointer("Argentum ventosus rem talis neque thymbra. Absconditus peccatus crustulum tollo cometes volva vacuus eos cedo. Somnus utpote coadunatio denuncio adopto autus sono atrocitas. Concido rerum cura aveho torqueo tempore tubineus vomer tempore suscipit. Clibanus valetudo vulnero pauper caput absorbeo correptius vir deduco."),
             Priority: unifiedgosdk.Pointer("MEDIUM"),
             Progress: unifiedgosdk.Pointer[float64](33.0),
-            StartAt: types.MustNewTimeFromString("2025-08-14T08:16:19.718Z"),
+            StartAt: types.MustNewTimeFromString("2025-08-15T04:23:44.499Z"),
             Status: shared.TaskTaskStatusOpened.ToPointer(),
             StoryPoints: unifiedgosdk.Pointer[float64](0.0),
             Tags: []string{
@@ -321,7 +321,7 @@ func main() {
             TimeSpent: unifiedgosdk.Pointer[float64](5359.0),
             TimeSpentUnit: unifiedgosdk.Pointer("SECONDS"),
             Type: unifiedgosdk.Pointer("magni"),
-            UpdatedAt: types.MustNewTimeFromString("2022-04-07T02:11:58.650Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-04-07T11:59:37.144Z"),
             URL: unifiedgosdk.Pointer("https://elementary-utilization.net/"),
         },
         ConnectionID: "<id>",
@@ -355,7 +355,7 @@ func main() {
 
 ## GetGenaiTask
 
-Retrieve a task
+Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -410,7 +410,7 @@ func main() {
 
 ## GetTaskChange
 
-Retrieve a change
+Retrieves a single TaskChange by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -465,7 +465,7 @@ func main() {
 
 ## GetTaskComment
 
-Retrieve a comment
+Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -520,7 +520,7 @@ func main() {
 
 ## GetTaskProject
 
-Retrieve a project
+Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -575,7 +575,7 @@ func main() {
 
 ## GetTaskTask
 
-Retrieve a task
+Retrieves a single TaskTask by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -630,7 +630,7 @@ func main() {
 
 ## ListGenaiTasks
 
-List all tasks
+Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -684,7 +684,7 @@ func main() {
 
 ## ListTaskChanges
 
-List all changes
+Returns a list of TaskChanges. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -738,7 +738,7 @@ func main() {
 
 ## ListTaskComments
 
-List all comments
+Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -792,7 +792,7 @@ func main() {
 
 ## ListTaskProjects
 
-List all projects
+Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -846,7 +846,7 @@ func main() {
 
 ## ListTaskTasks
 
-List all tasks
+Returns a list of TaskTasks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -900,7 +900,7 @@ func main() {
 
 ## PatchGenaiTask
 
-Update a task
+Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 
 ### Example Usage
 
@@ -926,10 +926,10 @@ func main() {
 
     res, err := s.Task.PatchGenaiTask(ctx, operations.PatchGenaiTaskRequest{
         GenaiTask: shared.GenaiTask{
-            CompletedAt: types.MustNewTimeFromString("2025-10-01T06:40:21.574Z"),
+            CompletedAt: types.MustNewTimeFromString("2025-10-02T02:15:37.686Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-25T20:19:33.247Z"),
             FilesChanged: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("ca1027a1-41c3-436f-99a9-a9acef634c3f"),
+            ID: unifiedgosdk.Pointer("4013dc78-f8cd-401f-8553-cc0548fc6a44"),
             Instructions: unifiedgosdk.Pointer("Benigne canonicus officiis solvo adsidue deleo angustus."),
             LinesAdded: unifiedgosdk.Pointer[float64](244.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](118.0),
@@ -944,12 +944,12 @@ func main() {
             PullrequestURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383"),
             RepoURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance"),
             SourceBranchIdentifier: unifiedgosdk.Pointer("main"),
-            StartedAt: types.MustNewTimeFromString("2024-05-21T10:29:55.294Z"),
+            StartedAt: types.MustNewTimeFromString("2024-05-22T00:40:23.688Z"),
             Status: shared.GenaiTaskStatusBlocked.ToPointer(),
             Summary: unifiedgosdk.Pointer("Cur aeternus cogito vesper."),
             TargetBranchIdentifier: unifiedgosdk.Pointer("agent/joshingly-ignorance"),
             TokensUsed: unifiedgosdk.Pointer[float64](2165.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-26T07:15:11.609Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-26T16:31:59.686Z"),
             WebURL: unifiedgosdk.Pointer("https://inexperienced-adrenalin.biz/"),
         },
         ConnectionID: "<id>",
@@ -984,7 +984,7 @@ func main() {
 
 ## PatchTaskComment
 
-Update a comment
+Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 
 ### Example Usage
 
@@ -1012,10 +1012,10 @@ func main() {
         TaskComment: shared.TaskComment{
             CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("395e2851-8f13-4a9b-b5af-b0ad7d2c8495"),
+            ID: unifiedgosdk.Pointer("7327dfbd-4c0c-4c6c-b2f8-f9a1b36b2677"),
             Metadata: []shared.TaskMetadata{},
             Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
-            UpdatedAt: types.MustNewTimeFromString("2021-10-03T07:59:35.584Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-10-03T14:40:44.798Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1049,7 +1049,7 @@ func main() {
 
 ## PatchTaskProject
 
-Update a project
+Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
 
 ### Example Usage
 
@@ -1079,7 +1079,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Valetudo aggredior accommodo curiositas vox."),
             HasChildren: unifiedgosdk.Pointer(false),
             HasTasks: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("b4f834dc-8dc6-45c7-a5d5-5b99e2863128"),
+            ID: unifiedgosdk.Pointer("4b217ca0-ecb9-4c4b-ae3d-75b658e307e7"),
             Metadata: []shared.TaskMetadata{
                 shared.TaskMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
@@ -1088,7 +1088,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("dd0adf29-9721-4b90-9a60-ba85528e7dd8"),
+                    ID: unifiedgosdk.Pointer("b7b73d5c-f1ff-48b2-8a4c-101025b18919"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("decens"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -1102,7 +1102,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("3076015c-7c01-4e61-b07b-1a523274e786"),
+                    ID: unifiedgosdk.Pointer("279643ea-8251-402f-bc4c-eeb7f28d150a"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("benevolentia"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -1111,7 +1111,7 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("Garden"),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-11T14:30:33.169Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-11T16:39:32.560Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1145,7 +1145,7 @@ func main() {
 
 ## PatchTaskTask
 
-Update a task
+Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the request body.
 
 ### Example Usage
 
@@ -1173,15 +1173,15 @@ func main() {
         TaskTask: shared.TaskTask{
             AttachmentIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2019-01-31T08:34:55.626Z"),
-            DueAt: types.MustNewTimeFromString("2025-09-11T18:07:48.693Z"),
+            DueAt: types.MustNewTimeFromString("2025-09-12T14:15:13.482Z"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("ca85bbb0-7ad9-4d4b-bd4f-4ca0f42310dc"),
+            ID: unifiedgosdk.Pointer("3ea49707-d19b-40c7-82b3-7a5159a1cfea"),
             Metadata: []shared.TaskMetadata{},
             Name: unifiedgosdk.Pointer("I'll compress the optical IB interface, that should capacitor the JBOD system!"),
             Notes: unifiedgosdk.Pointer("Argentum ventosus rem talis neque thymbra. Absconditus peccatus crustulum tollo cometes volva vacuus eos cedo. Somnus utpote coadunatio denuncio adopto autus sono atrocitas. Concido rerum cura aveho torqueo tempore tubineus vomer tempore suscipit. Clibanus valetudo vulnero pauper caput absorbeo correptius vir deduco."),
             Priority: unifiedgosdk.Pointer("MEDIUM"),
             Progress: unifiedgosdk.Pointer[float64](33.0),
-            StartAt: types.MustNewTimeFromString("2025-08-14T08:16:19.731Z"),
+            StartAt: types.MustNewTimeFromString("2025-08-15T04:23:44.520Z"),
             Status: shared.TaskTaskStatusOpened.ToPointer(),
             StoryPoints: unifiedgosdk.Pointer[float64](0.0),
             Tags: []string{
@@ -1191,7 +1191,7 @@ func main() {
             TimeSpent: unifiedgosdk.Pointer[float64](5359.0),
             TimeSpentUnit: unifiedgosdk.Pointer("SECONDS"),
             Type: unifiedgosdk.Pointer("magni"),
-            UpdatedAt: types.MustNewTimeFromString("2022-04-07T02:11:58.657Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-04-07T11:59:37.154Z"),
             URL: unifiedgosdk.Pointer("https://elementary-utilization.net/"),
         },
         ConnectionID: "<id>",
@@ -1226,7 +1226,7 @@ func main() {
 
 ## RemoveGenaiTask
 
-Remove a task
+Deletes the GenaiTask identified by `id`.
 
 ### Example Usage
 
@@ -1281,7 +1281,7 @@ func main() {
 
 ## RemoveTaskComment
 
-Remove a comment
+Deletes the TaskComment identified by `id`.
 
 ### Example Usage
 
@@ -1336,7 +1336,7 @@ func main() {
 
 ## RemoveTaskProject
 
-Remove a project
+Deletes the TaskProject identified by `id`.
 
 ### Example Usage
 
@@ -1391,7 +1391,7 @@ func main() {
 
 ## RemoveTaskTask
 
-Remove a task
+Deletes the TaskTask identified by `id`.
 
 ### Example Usage
 
@@ -1446,7 +1446,7 @@ func main() {
 
 ## UpdateGenaiTask
 
-Update a task
+Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 
 ### Example Usage
 
@@ -1472,10 +1472,10 @@ func main() {
 
     res, err := s.Task.UpdateGenaiTask(ctx, operations.UpdateGenaiTaskRequest{
         GenaiTask: shared.GenaiTask{
-            CompletedAt: types.MustNewTimeFromString("2025-10-01T06:40:21.574Z"),
+            CompletedAt: types.MustNewTimeFromString("2025-10-02T02:15:37.686Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-25T20:19:33.247Z"),
             FilesChanged: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("ca1027a1-41c3-436f-99a9-a9acef634c3f"),
+            ID: unifiedgosdk.Pointer("4013dc78-f8cd-401f-8553-cc0548fc6a44"),
             Instructions: unifiedgosdk.Pointer("Benigne canonicus officiis solvo adsidue deleo angustus."),
             LinesAdded: unifiedgosdk.Pointer[float64](244.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](118.0),
@@ -1490,12 +1490,12 @@ func main() {
             PullrequestURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383"),
             RepoURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance"),
             SourceBranchIdentifier: unifiedgosdk.Pointer("main"),
-            StartedAt: types.MustNewTimeFromString("2024-05-21T10:29:55.294Z"),
+            StartedAt: types.MustNewTimeFromString("2024-05-22T00:40:23.688Z"),
             Status: shared.GenaiTaskStatusBlocked.ToPointer(),
             Summary: unifiedgosdk.Pointer("Cur aeternus cogito vesper."),
             TargetBranchIdentifier: unifiedgosdk.Pointer("agent/joshingly-ignorance"),
             TokensUsed: unifiedgosdk.Pointer[float64](2165.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-26T07:15:11.609Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-26T16:31:59.686Z"),
             WebURL: unifiedgosdk.Pointer("https://inexperienced-adrenalin.biz/"),
         },
         ConnectionID: "<id>",
@@ -1530,7 +1530,7 @@ func main() {
 
 ## UpdateTaskComment
 
-Update a comment
+Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 
 ### Example Usage
 
@@ -1558,10 +1558,10 @@ func main() {
         TaskComment: shared.TaskComment{
             CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("395e2851-8f13-4a9b-b5af-b0ad7d2c8495"),
+            ID: unifiedgosdk.Pointer("7327dfbd-4c0c-4c6c-b2f8-f9a1b36b2677"),
             Metadata: []shared.TaskMetadata{},
             Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
-            UpdatedAt: types.MustNewTimeFromString("2021-10-03T07:59:35.584Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-10-03T14:40:44.798Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1595,7 +1595,7 @@ func main() {
 
 ## UpdateTaskProject
 
-Update a project
+Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
 
 ### Example Usage
 
@@ -1625,7 +1625,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Valetudo aggredior accommodo curiositas vox."),
             HasChildren: unifiedgosdk.Pointer(false),
             HasTasks: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("b4f834dc-8dc6-45c7-a5d5-5b99e2863128"),
+            ID: unifiedgosdk.Pointer("4b217ca0-ecb9-4c4b-ae3d-75b658e307e7"),
             Metadata: []shared.TaskMetadata{
                 shared.TaskMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
@@ -1634,7 +1634,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("dd0adf29-9721-4b90-9a60-ba85528e7dd8"),
+                    ID: unifiedgosdk.Pointer("b7b73d5c-f1ff-48b2-8a4c-101025b18919"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("decens"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -1648,7 +1648,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("3076015c-7c01-4e61-b07b-1a523274e786"),
+                    ID: unifiedgosdk.Pointer("279643ea-8251-402f-bc4c-eeb7f28d150a"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("benevolentia"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -1657,7 +1657,7 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("Garden"),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-11T14:30:33.169Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-11T16:39:32.560Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1691,7 +1691,7 @@ func main() {
 
 ## UpdateTaskTask
 
-Update a task
+Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the request body.
 
 ### Example Usage
 
@@ -1719,15 +1719,15 @@ func main() {
         TaskTask: shared.TaskTask{
             AttachmentIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2019-01-31T08:34:55.626Z"),
-            DueAt: types.MustNewTimeFromString("2025-09-11T18:07:48.693Z"),
+            DueAt: types.MustNewTimeFromString("2025-09-12T14:15:13.482Z"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("ca85bbb0-7ad9-4d4b-bd4f-4ca0f42310dc"),
+            ID: unifiedgosdk.Pointer("3ea49707-d19b-40c7-82b3-7a5159a1cfea"),
             Metadata: []shared.TaskMetadata{},
             Name: unifiedgosdk.Pointer("I'll compress the optical IB interface, that should capacitor the JBOD system!"),
             Notes: unifiedgosdk.Pointer("Argentum ventosus rem talis neque thymbra. Absconditus peccatus crustulum tollo cometes volva vacuus eos cedo. Somnus utpote coadunatio denuncio adopto autus sono atrocitas. Concido rerum cura aveho torqueo tempore tubineus vomer tempore suscipit. Clibanus valetudo vulnero pauper caput absorbeo correptius vir deduco."),
             Priority: unifiedgosdk.Pointer("MEDIUM"),
             Progress: unifiedgosdk.Pointer[float64](33.0),
-            StartAt: types.MustNewTimeFromString("2025-08-14T08:16:19.731Z"),
+            StartAt: types.MustNewTimeFromString("2025-08-15T04:23:44.520Z"),
             Status: shared.TaskTaskStatusOpened.ToPointer(),
             StoryPoints: unifiedgosdk.Pointer[float64](0.0),
             Tags: []string{
@@ -1737,7 +1737,7 @@ func main() {
             TimeSpent: unifiedgosdk.Pointer[float64](5359.0),
             TimeSpentUnit: unifiedgosdk.Pointer("SECONDS"),
             Type: unifiedgosdk.Pointer("magni"),
-            UpdatedAt: types.MustNewTimeFromString("2022-04-07T02:11:58.657Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-04-07T11:59:37.154Z"),
             URL: unifiedgosdk.Pointer("https://elementary-utilization.net/"),
         },
         ConnectionID: "<id>",

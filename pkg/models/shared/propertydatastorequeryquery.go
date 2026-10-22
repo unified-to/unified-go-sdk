@@ -24,6 +24,7 @@ func (e *SortOrder) IsExact() bool {
 	return false
 }
 
+// PropertyDatastoreQueryQuery - What to run: a raw `sql` statement, or a structured query (select, filter, sort, limit/offset, aggregate)
 type PropertyDatastoreQueryQuery struct {
 	Aggregate   *PropertyDatastoreQueryQueryAggregate `json:"aggregate,omitempty"`
 	Expand      map[string]DatastoreQueryExpand       `json:"expand,omitempty"`

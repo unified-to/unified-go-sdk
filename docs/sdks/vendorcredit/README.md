@@ -13,7 +13,7 @@
 
 ## CreateAccountingVendorcredit
 
-Create a vendorcredit
+Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
 
 ### Example Usage
 
@@ -43,14 +43,14 @@ func main() {
             BalanceAmount: unifiedgosdk.Pointer[float64](0.0),
             CreatedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("fe3ac716-b436-4a30-adb2-714237b7c28f"),
+            ID: unifiedgosdk.Pointer("e0ad29dd-9fb5-4e4f-8296-935abcee8fd1"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Volup conatus cruciamentum decor avaritia."),
             PostedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
             Status: shared.AccountingVendorcreditStatusAuthorized.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-03T01:42:12.409Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-03T04:51:13.945Z"),
         },
         ConnectionID: "<id>",
     })
@@ -83,7 +83,7 @@ func main() {
 
 ## GetAccountingVendorcredit
 
-Retrieve a vendorcredit
+Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -138,7 +138,7 @@ func main() {
 
 ## ListAccountingVendorcredits
 
-List all vendorcredits
+Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -192,7 +192,7 @@ func main() {
 
 ## PatchAccountingVendorcredit
 
-Update a vendorcredit
+Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 
 ### Example Usage
 
@@ -222,14 +222,14 @@ func main() {
             BalanceAmount: unifiedgosdk.Pointer[float64](0.0),
             CreatedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("421efb11-574f-4a58-b1b3-c13d3675e8d3"),
+            ID: unifiedgosdk.Pointer("4e28d8ea-334a-44d8-a5ac-bdb5cce5570b"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Volup conatus cruciamentum decor avaritia."),
             PostedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
             Status: shared.AccountingVendorcreditStatusAuthorized.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-03T01:42:12.414Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-03T04:51:13.949Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -263,7 +263,7 @@ func main() {
 
 ## RemoveAccountingVendorcredit
 
-Remove a vendorcredit
+Deletes the AccountingVendorcredit identified by `id`.
 
 ### Example Usage
 
@@ -318,7 +318,7 @@ func main() {
 
 ## UpdateAccountingVendorcredit
 
-Update a vendorcredit
+Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 
 ### Example Usage
 
@@ -348,14 +348,14 @@ func main() {
             BalanceAmount: unifiedgosdk.Pointer[float64](0.0),
             CreatedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("421efb11-574f-4a58-b1b3-c13d3675e8d3"),
+            ID: unifiedgosdk.Pointer("4e28d8ea-334a-44d8-a5ac-bdb5cce5570b"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Volup conatus cruciamentum decor avaritia."),
             PostedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
             Status: shared.AccountingVendorcreditStatusAuthorized.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-03T01:42:12.414Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-03T04:51:13.949Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

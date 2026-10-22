@@ -31,6 +31,7 @@ func newSession(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // GetAnalyticsSession - Retrieve a session
+// Retrieves a single AnalyticsSession by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Session) GetAnalyticsSession(ctx context.Context, request operations.GetAnalyticsSessionRequest, opts ...operations.Option) (*operations.GetAnalyticsSessionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -238,6 +239,7 @@ func (s *Session) GetAnalyticsSession(ctx context.Context, request operations.Ge
 }
 
 // ListAnalyticsSessions - List all sessions
+// Returns a list of AnalyticsSessions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Session) ListAnalyticsSessions(ctx context.Context, request operations.ListAnalyticsSessionsRequest, opts ...operations.Option) (*operations.ListAnalyticsSessionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

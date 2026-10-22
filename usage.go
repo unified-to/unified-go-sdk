@@ -31,6 +31,7 @@ func newUsage(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 }
 
 // ListComputeUsages - List all usages
+// Returns a list of ComputeUsages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Usage) ListComputeUsages(ctx context.Context, request operations.ListComputeUsagesRequest, opts ...operations.Option) (*operations.ListComputeUsagesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

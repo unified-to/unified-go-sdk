@@ -31,6 +31,7 @@ func newVendorcredit(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hook
 }
 
 // CreateAccountingVendorcredit - Create a vendorcredit
+// Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
 func (s *Vendorcredit) CreateAccountingVendorcredit(ctx context.Context, request operations.CreateAccountingVendorcreditRequest, opts ...operations.Option) (*operations.CreateAccountingVendorcreditResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Vendorcredit) CreateAccountingVendorcredit(ctx context.Context, request
 }
 
 // GetAccountingVendorcredit - Retrieve a vendorcredit
+// Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Vendorcredit) GetAccountingVendorcredit(ctx context.Context, request operations.GetAccountingVendorcreditRequest, opts ...operations.Option) (*operations.GetAccountingVendorcreditResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Vendorcredit) GetAccountingVendorcredit(ctx context.Context, request op
 }
 
 // ListAccountingVendorcredits - List all vendorcredits
+// Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Vendorcredit) ListAccountingVendorcredits(ctx context.Context, request operations.ListAccountingVendorcreditsRequest, opts ...operations.Option) (*operations.ListAccountingVendorcreditsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Vendorcredit) ListAccountingVendorcredits(ctx context.Context, request 
 }
 
 // PatchAccountingVendorcredit - Update a vendorcredit
+// Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 func (s *Vendorcredit) PatchAccountingVendorcredit(ctx context.Context, request operations.PatchAccountingVendorcreditRequest, opts ...operations.Option) (*operations.PatchAccountingVendorcreditResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Vendorcredit) PatchAccountingVendorcredit(ctx context.Context, request 
 }
 
 // RemoveAccountingVendorcredit - Remove a vendorcredit
+// Deletes the AccountingVendorcredit identified by `id`.
 func (s *Vendorcredit) RemoveAccountingVendorcredit(ctx context.Context, request operations.RemoveAccountingVendorcreditRequest, opts ...operations.Option) (*operations.RemoveAccountingVendorcreditResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Vendorcredit) RemoveAccountingVendorcredit(ctx context.Context, request
 }
 
 // UpdateAccountingVendorcredit - Update a vendorcredit
+// Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 func (s *Vendorcredit) UpdateAccountingVendorcredit(ctx context.Context, request operations.UpdateAccountingVendorcreditRequest, opts ...operations.Option) (*operations.UpdateAccountingVendorcreditResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -17,7 +17,8 @@ type TaskComment struct {
 	Raw         map[string]any `json:"raw,omitempty"`
 	// (reference to TaskTask)
 	TaskID *string `json:"task_id,omitempty"`
-	Text   *string `json:"text,omitempty"`
+	// The comment's text
+	Text *string `json:"text,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	// (reference to HrisEmployee)

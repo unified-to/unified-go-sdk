@@ -31,6 +31,7 @@ func newProperty(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateAnalyticsProperty - Create a property
+// Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsProperty.
 func (s *Property) CreateAnalyticsProperty(ctx context.Context, request operations.CreateAnalyticsPropertyRequest, opts ...operations.Option) (*operations.CreateAnalyticsPropertyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Property) CreateAnalyticsProperty(ctx context.Context, request operatio
 }
 
 // GetAnalyticsProperty - Retrieve a property
+// Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Property) GetAnalyticsProperty(ctx context.Context, request operations.GetAnalyticsPropertyRequest, opts ...operations.Option) (*operations.GetAnalyticsPropertyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Property) GetAnalyticsProperty(ctx context.Context, request operations.
 }
 
 // ListAnalyticsProperties - List all properties
+// Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Property) ListAnalyticsProperties(ctx context.Context, request operations.ListAnalyticsPropertiesRequest, opts ...operations.Option) (*operations.ListAnalyticsPropertiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Property) ListAnalyticsProperties(ctx context.Context, request operatio
 }
 
 // PatchAnalyticsProperty - Update a property
+// Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
 func (s *Property) PatchAnalyticsProperty(ctx context.Context, request operations.PatchAnalyticsPropertyRequest, opts ...operations.Option) (*operations.PatchAnalyticsPropertyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Property) PatchAnalyticsProperty(ctx context.Context, request operation
 }
 
 // RemoveAnalyticsProperty - Remove a property
+// Deletes the AnalyticsProperty identified by `id`.
 func (s *Property) RemoveAnalyticsProperty(ctx context.Context, request operations.RemoveAnalyticsPropertyRequest, opts ...operations.Option) (*operations.RemoveAnalyticsPropertyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Property) RemoveAnalyticsProperty(ctx context.Context, request operatio
 }
 
 // UpdateAnalyticsProperty - Update a property
+// Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
 func (s *Property) UpdateAnalyticsProperty(ctx context.Context, request operations.UpdateAnalyticsPropertyRequest, opts ...operations.Option) (*operations.UpdateAnalyticsPropertyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

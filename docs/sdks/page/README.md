@@ -13,7 +13,7 @@
 
 ## CreateKmsPage
 
-Create a page
+Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the provider's API. Returns the created KmsPage.
 
 ### Example Usage
 
@@ -42,12 +42,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-05-20T18:06:50.749Z"),
             DownloadURL: unifiedgosdk.Pointer("https://agitated-validity.info"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("6ddf7535-f377-4882-8d68-f853b3459224"),
+            ID: unifiedgosdk.Pointer("09d346b6-e6f1-48d9-88f3-ad33c3498f06"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.KmsPageMetadata{},
             Title: unifiedgosdk.Pointer("even minister extract"),
             Type: shared.KmsPageTypeHTML,
-            UpdatedAt: types.MustNewTimeFromString("2025-10-09T04:22:36.892Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-10T00:50:34.700Z"),
             WebURL: unifiedgosdk.Pointer("https://another-petticoat.info"),
         },
         ConnectionID: "<id>",
@@ -81,7 +81,7 @@ func main() {
 
 ## GetKmsPage
 
-Retrieve a page
+Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -136,7 +136,7 @@ func main() {
 
 ## ListKmsPages
 
-List all pages
+Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -190,7 +190,7 @@ func main() {
 
 ## PatchKmsPage
 
-Update a page
+Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 
 ### Example Usage
 
@@ -219,12 +219,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-05-20T18:06:50.749Z"),
             DownloadURL: unifiedgosdk.Pointer("https://agitated-validity.info"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("8c9ed97f-b8be-41ce-bb37-2ba55ccd95c7"),
+            ID: unifiedgosdk.Pointer("92edceee-2b74-46db-a8ae-060c225ade64"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.KmsPageMetadata{},
             Title: unifiedgosdk.Pointer("even minister extract"),
             Type: shared.KmsPageTypeHTML,
-            UpdatedAt: types.MustNewTimeFromString("2025-10-09T04:22:36.905Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-10T00:50:34.716Z"),
             WebURL: unifiedgosdk.Pointer("https://another-petticoat.info"),
         },
         ConnectionID: "<id>",
@@ -259,7 +259,7 @@ func main() {
 
 ## RemoveKmsPage
 
-Remove a page
+Deletes the KmsPage identified by `id`.
 
 ### Example Usage
 
@@ -314,7 +314,7 @@ func main() {
 
 ## UpdateKmsPage
 
-Update a page
+Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 
 ### Example Usage
 
@@ -343,12 +343,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-05-20T18:06:50.749Z"),
             DownloadURL: unifiedgosdk.Pointer("https://agitated-validity.info"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("8c9ed97f-b8be-41ce-bb37-2ba55ccd95c7"),
+            ID: unifiedgosdk.Pointer("92edceee-2b74-46db-a8ae-060c225ade64"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.KmsPageMetadata{},
             Title: unifiedgosdk.Pointer("even minister extract"),
             Type: shared.KmsPageTypeHTML,
-            UpdatedAt: types.MustNewTimeFromString("2025-10-09T04:22:36.905Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-10T00:50:34.716Z"),
             WebURL: unifiedgosdk.Pointer("https://another-petticoat.info"),
         },
         ConnectionID: "<id>",

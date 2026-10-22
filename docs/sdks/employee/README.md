@@ -13,7 +13,7 @@
 
 ## CreateHrisEmployee
 
-Create an employee
+Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped to the provider's API. Returns the created HrisEmployee.
 
 ### Example Usage
 
@@ -75,7 +75,7 @@ func main() {
             Gender: shared.HrisEmployeeGenderMale.ToPointer(),
             HasMfa: unifiedgosdk.Pointer(true),
             HiredAt: types.MustNewTimeFromString("2019-09-16T15:08:53.262Z"),
-            ID: unifiedgosdk.Pointer("5ece6f77-35df-48e1-9496-7d1879563189"),
+            ID: unifiedgosdk.Pointer("f0059d37-f7f5-475f-ba3a-ae687313ebe6"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg"),
             LanguageLocale: unifiedgosdk.Pointer("in"),
             LastName: unifiedgosdk.Pointer("Prohaska"),
@@ -89,7 +89,7 @@ func main() {
                         },
                     )),
                     Format: shared.HrisMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("db8a06c6-9b85-4baa-8142-748cdc88efd4"),
+                    ID: unifiedgosdk.Pointer("a100a8c6-503b-48c0-b130-a362a3c5bdad"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateHrisMetadataValueStr(
@@ -139,7 +139,7 @@ func main() {
             TimeoffDaysUsed: unifiedgosdk.Pointer[float64](9.0),
             Timezone: unifiedgosdk.Pointer("Europe/Ljubljana"),
             Title: unifiedgosdk.Pointer("District Branding Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2020-07-19T04:12:43.588Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-07-19T07:01:26.701Z"),
         },
         ConnectionID: "<id>",
     })
@@ -172,7 +172,7 @@ func main() {
 
 ## GetHrisEmployee
 
-Retrieve an employee
+Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -227,7 +227,7 @@ func main() {
 
 ## ListHrisEmployees
 
-List all employees
+Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -281,7 +281,7 @@ func main() {
 
 ## PatchHrisEmployee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -343,7 +343,7 @@ func main() {
             Gender: shared.HrisEmployeeGenderMale.ToPointer(),
             HasMfa: unifiedgosdk.Pointer(true),
             HiredAt: types.MustNewTimeFromString("2019-09-16T15:08:53.262Z"),
-            ID: unifiedgosdk.Pointer("9609249d-8821-468a-b0ee-7d78f4b1ae6a"),
+            ID: unifiedgosdk.Pointer("af401a62-954a-4750-b0f9-c63eb87066ea"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg"),
             LanguageLocale: unifiedgosdk.Pointer("in"),
             LastName: unifiedgosdk.Pointer("Prohaska"),
@@ -357,7 +357,7 @@ func main() {
                         },
                     )),
                     Format: shared.HrisMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("20b100c1-0a48-47af-920c-3385a2834306"),
+                    ID: unifiedgosdk.Pointer("cea3e721-d03d-409d-b8f2-ca5f08895117"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateHrisMetadataValueStr(
@@ -407,7 +407,7 @@ func main() {
             TimeoffDaysUsed: unifiedgosdk.Pointer[float64](9.0),
             Timezone: unifiedgosdk.Pointer("Europe/Ljubljana"),
             Title: unifiedgosdk.Pointer("District Branding Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2020-07-19T04:12:43.602Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-07-19T07:01:26.712Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -441,7 +441,7 @@ func main() {
 
 ## RemoveHrisEmployee
 
-Remove an employee
+Deletes the HrisEmployee identified by `id`.
 
 ### Example Usage
 
@@ -496,7 +496,7 @@ func main() {
 
 ## UpdateHrisEmployee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -558,7 +558,7 @@ func main() {
             Gender: shared.HrisEmployeeGenderMale.ToPointer(),
             HasMfa: unifiedgosdk.Pointer(true),
             HiredAt: types.MustNewTimeFromString("2019-09-16T15:08:53.262Z"),
-            ID: unifiedgosdk.Pointer("9609249d-8821-468a-b0ee-7d78f4b1ae6a"),
+            ID: unifiedgosdk.Pointer("af401a62-954a-4750-b0f9-c63eb87066ea"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg"),
             LanguageLocale: unifiedgosdk.Pointer("in"),
             LastName: unifiedgosdk.Pointer("Prohaska"),
@@ -572,7 +572,7 @@ func main() {
                         },
                     )),
                     Format: shared.HrisMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("20b100c1-0a48-47af-920c-3385a2834306"),
+                    ID: unifiedgosdk.Pointer("cea3e721-d03d-409d-b8f2-ca5f08895117"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateHrisMetadataValueStr(
@@ -622,7 +622,7 @@ func main() {
             TimeoffDaysUsed: unifiedgosdk.Pointer[float64](9.0),
             Timezone: unifiedgosdk.Pointer("Europe/Ljubljana"),
             Title: unifiedgosdk.Pointer("District Branding Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2020-07-19T04:12:43.602Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-07-19T07:01:26.712Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -13,7 +13,7 @@
 
 ## CreateComputeVolume
 
-Create a volume
+Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are mapped to the provider's API. Returns the created ComputeVolume.
 
 ### Example Usage
 
@@ -40,14 +40,14 @@ func main() {
     res, err := s.Volume.CreateComputeVolume(ctx, operations.CreateComputeVolumeRequest{
         ComputeVolume: shared.ComputeVolume{
             CreatedAt: types.MustNewTimeFromString("2022-11-15T15:12:48.055Z"),
-            ID: unifiedgosdk.Pointer("b5c3e485-e508-4dc0-96a7-2c707f0ca0a9"),
+            ID: unifiedgosdk.Pointer("55825a37-409f-476f-89bc-18142a68869a"),
             InstanceIds: []string{},
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("vol-solum"),
             SizeMb: unifiedgosdk.Pointer[float64](1024000.0),
             Status: shared.ComputeVolumeStatusOther.ToPointer(),
             Type: shared.ComputeVolumeTypeHighPerformance.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-02-09T21:51:12.903Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-02-10T05:19:38.193Z"),
             UsedMb: unifiedgosdk.Pointer[float64](524986.0),
         },
         ConnectionID: "<id>",
@@ -81,7 +81,7 @@ func main() {
 
 ## GetComputeVolume
 
-Retrieve a volume
+Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -136,7 +136,7 @@ func main() {
 
 ## ListComputeVolumes
 
-List all volumes
+Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -190,7 +190,7 @@ func main() {
 
 ## PatchComputeVolume
 
-Update a volume
+Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
 ### Example Usage
 
@@ -217,14 +217,14 @@ func main() {
     res, err := s.Volume.PatchComputeVolume(ctx, operations.PatchComputeVolumeRequest{
         ComputeVolume: shared.ComputeVolume{
             CreatedAt: types.MustNewTimeFromString("2022-11-15T15:12:48.055Z"),
-            ID: unifiedgosdk.Pointer("eaf8fe41-8674-4052-864b-ae1e1cf307f4"),
+            ID: unifiedgosdk.Pointer("33536cfd-0184-4e65-ab51-dcf407b45b59"),
             InstanceIds: []string{},
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("vol-solum"),
             SizeMb: unifiedgosdk.Pointer[float64](1024000.0),
             Status: shared.ComputeVolumeStatusOther.ToPointer(),
             Type: shared.ComputeVolumeTypeHighPerformance.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-02-09T21:51:12.908Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-02-10T05:19:38.198Z"),
             UsedMb: unifiedgosdk.Pointer[float64](524986.0),
         },
         ConnectionID: "<id>",
@@ -259,7 +259,7 @@ func main() {
 
 ## RemoveComputeVolume
 
-Remove a volume
+Deletes the ComputeVolume identified by `id`.
 
 ### Example Usage
 
@@ -314,7 +314,7 @@ func main() {
 
 ## UpdateComputeVolume
 
-Update a volume
+Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
 ### Example Usage
 
@@ -341,14 +341,14 @@ func main() {
     res, err := s.Volume.UpdateComputeVolume(ctx, operations.UpdateComputeVolumeRequest{
         ComputeVolume: shared.ComputeVolume{
             CreatedAt: types.MustNewTimeFromString("2022-11-15T15:12:48.055Z"),
-            ID: unifiedgosdk.Pointer("eaf8fe41-8674-4052-864b-ae1e1cf307f4"),
+            ID: unifiedgosdk.Pointer("33536cfd-0184-4e65-ab51-dcf407b45b59"),
             InstanceIds: []string{},
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("vol-solum"),
             SizeMb: unifiedgosdk.Pointer[float64](1024000.0),
             Status: shared.ComputeVolumeStatusOther.ToPointer(),
             Type: shared.ComputeVolumeTypeHighPerformance.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-02-09T21:51:12.908Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-02-10T05:19:38.198Z"),
             UsedMb: unifiedgosdk.Pointer[float64](524986.0),
         },
         ConnectionID: "<id>",

@@ -75,7 +75,8 @@ type HrisGroup struct {
 	IsActive    *bool          `json:"is_active,omitempty"`
 	ManagerIds  []string       `json:"manager_ids,omitempty"`
 	Metadata    []HrisMetadata `json:"metadata,omitempty"`
-	Name        *string        `json:"name,omitempty"`
+	// The name of the group (e.g. a team or department)
+	Name *string `json:"name,omitempty"`
 	// next pay date when type is PAY_GROUP (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	NextPaidAt *time.Time `json:"next_paid_at,omitempty"`
 	ParentID   *string    `json:"parent_id,omitempty"`

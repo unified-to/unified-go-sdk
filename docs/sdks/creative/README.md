@@ -13,7 +13,7 @@
 
 ## CreateAdsCreative
 
-Create a creative
+Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped to the provider's API. Returns the created AdsCreative.
 
 ### Example Usage
 
@@ -40,7 +40,7 @@ func main() {
     res, err := s.Creative.CreateAdsCreative(ctx, operations.CreateAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{
             CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
-            ID: unifiedgosdk.Pointer("33196397-83ce-4cf2-8917-2ebd3417a486"),
+            ID: unifiedgosdk.Pointer("ac28e829-d356-4981-a84e-754e20ddac77"),
             Labels: []string{
                 "coma",
                 "accedo",
@@ -49,7 +49,7 @@ func main() {
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Brekke, Bradtke and Robel"),
             Status: shared.AdsCreativeStatusPaused.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-06-27T18:17:32.459Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-27T23:07:56.004Z"),
         },
         ConnectionID: "<id>",
     })
@@ -82,7 +82,7 @@ func main() {
 
 ## GetAdsCreative
 
-Retrieve a creative
+Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -137,7 +137,7 @@ func main() {
 
 ## ListAdsCreatives
 
-List all creatives
+Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -191,7 +191,7 @@ func main() {
 
 ## PatchAdsCreative
 
-Update a creative
+Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 
 ### Example Usage
 
@@ -218,7 +218,7 @@ func main() {
     res, err := s.Creative.PatchAdsCreative(ctx, operations.PatchAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{
             CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
-            ID: unifiedgosdk.Pointer("4407d11b-7581-4e75-aed6-04f91230f880"),
+            ID: unifiedgosdk.Pointer("1c96b97d-6841-4fe2-8d1b-0daa7ddf2854"),
             Labels: []string{
                 "coma",
                 "accedo",
@@ -227,7 +227,7 @@ func main() {
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Brekke, Bradtke and Robel"),
             Status: shared.AdsCreativeStatusPaused.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-06-27T18:17:32.465Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-27T23:07:56.013Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -261,7 +261,7 @@ func main() {
 
 ## RemoveAdsCreative
 
-Remove a creative
+Deletes the AdsCreative identified by `id`.
 
 ### Example Usage
 
@@ -316,7 +316,7 @@ func main() {
 
 ## UpdateAdsCreative
 
-Update a creative
+Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 
 ### Example Usage
 
@@ -343,7 +343,7 @@ func main() {
     res, err := s.Creative.UpdateAdsCreative(ctx, operations.UpdateAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{
             CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
-            ID: unifiedgosdk.Pointer("4407d11b-7581-4e75-aed6-04f91230f880"),
+            ID: unifiedgosdk.Pointer("1c96b97d-6841-4fe2-8d1b-0daa7ddf2854"),
             Labels: []string{
                 "coma",
                 "accedo",
@@ -352,7 +352,7 @@ func main() {
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Brekke, Bradtke and Robel"),
             Status: shared.AdsCreativeStatusPaused.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-06-27T18:17:32.465Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-27T23:07:56.013Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -13,7 +13,7 @@
 
 ## CreateGenaiMemory
 
-Create a memory
+Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped to the provider's API. Returns the created GenaiMemory.
 
 ### Example Usage
 
@@ -41,7 +41,7 @@ func main() {
         GenaiMemory: shared.GenaiMemory{
             Content: unifiedgosdk.Pointer("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus."),
             CreatedAt: types.MustNewTimeFromString("2021-10-22T04:14:41.668Z"),
-            ID: unifiedgosdk.Pointer("88bb3c43-4389-4a83-839c-696b4051536e"),
+            ID: unifiedgosdk.Pointer("8b8d63fc-2487-4efa-b199-2f4f3735511d"),
             Metadata: []shared.GenaiMetadata{
                 shared.GenaiMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateGenaiMetadataExtraDataMapOfAny(
@@ -60,7 +60,7 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("sponte.md"),
             Type: shared.GenaiMemoryTypeMemory.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-25T21:28:57.374Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-26T04:39:23.581Z"),
             UserIdentifier: unifiedgosdk.Pointer("9d170613-4338-447d-bdb6-8ea96a2d7513"),
         },
         ConnectionID: "<id>",
@@ -94,7 +94,7 @@ func main() {
 
 ## GetGenaiMemory
 
-Retrieve a memory
+Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -149,7 +149,7 @@ func main() {
 
 ## ListGenaiMemories
 
-List all memories
+Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -203,7 +203,7 @@ func main() {
 
 ## PatchGenaiMemory
 
-Update a memory
+Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
 
 ### Example Usage
 
@@ -231,7 +231,7 @@ func main() {
         GenaiMemory: shared.GenaiMemory{
             Content: unifiedgosdk.Pointer("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus."),
             CreatedAt: types.MustNewTimeFromString("2021-10-22T04:14:41.668Z"),
-            ID: unifiedgosdk.Pointer("9365b4e5-aab5-4ff3-ba49-ac556dab74c1"),
+            ID: unifiedgosdk.Pointer("eedef7f5-cf14-4aff-a523-5470405a3db1"),
             Metadata: []shared.GenaiMetadata{
                 shared.GenaiMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateGenaiMetadataExtraDataMapOfAny(
@@ -250,7 +250,7 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("sponte.md"),
             Type: shared.GenaiMemoryTypeMemory.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-25T21:28:57.376Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-26T04:39:23.586Z"),
             UserIdentifier: unifiedgosdk.Pointer("9d170613-4338-447d-bdb6-8ea96a2d7513"),
         },
         ConnectionID: "<id>",
@@ -285,7 +285,7 @@ func main() {
 
 ## RemoveGenaiMemory
 
-Remove a memory
+Deletes the GenaiMemory identified by `id`.
 
 ### Example Usage
 
@@ -340,7 +340,7 @@ func main() {
 
 ## UpdateGenaiMemory
 
-Update a memory
+Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
 
 ### Example Usage
 
@@ -368,7 +368,7 @@ func main() {
         GenaiMemory: shared.GenaiMemory{
             Content: unifiedgosdk.Pointer("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus."),
             CreatedAt: types.MustNewTimeFromString("2021-10-22T04:14:41.668Z"),
-            ID: unifiedgosdk.Pointer("9365b4e5-aab5-4ff3-ba49-ac556dab74c1"),
+            ID: unifiedgosdk.Pointer("eedef7f5-cf14-4aff-a523-5470405a3db1"),
             Metadata: []shared.GenaiMetadata{
                 shared.GenaiMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateGenaiMetadataExtraDataMapOfAny(
@@ -387,7 +387,7 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("sponte.md"),
             Type: shared.GenaiMemoryTypeMemory.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-25T21:28:57.376Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-26T04:39:23.586Z"),
             UserIdentifier: unifiedgosdk.Pointer("9d170613-4338-447d-bdb6-8ea96a2d7513"),
         },
         ConnectionID: "<id>",

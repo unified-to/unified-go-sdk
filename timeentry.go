@@ -31,6 +31,7 @@ func newTimeentry(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 }
 
 // CreateLegalTimeentry - Create a timeentry
+// Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are mapped to the provider's API. Returns the created LegalTimeentry.
 func (s *Timeentry) CreateLegalTimeentry(ctx context.Context, request operations.CreateLegalTimeentryRequest, opts ...operations.Option) (*operations.CreateLegalTimeentryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Timeentry) CreateLegalTimeentry(ctx context.Context, request operations
 }
 
 // GetLegalTimeentry - Retrieve a timeentry
+// Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Timeentry) GetLegalTimeentry(ctx context.Context, request operations.GetLegalTimeentryRequest, opts ...operations.Option) (*operations.GetLegalTimeentryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Timeentry) GetLegalTimeentry(ctx context.Context, request operations.Ge
 }
 
 // ListLegalTimeentries - List all timeentries
+// Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Timeentry) ListLegalTimeentries(ctx context.Context, request operations.ListLegalTimeentriesRequest, opts ...operations.Option) (*operations.ListLegalTimeentriesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Timeentry) ListLegalTimeentries(ctx context.Context, request operations
 }
 
 // PatchLegalTimeentry - Update a timeentry
+// Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 func (s *Timeentry) PatchLegalTimeentry(ctx context.Context, request operations.PatchLegalTimeentryRequest, opts ...operations.Option) (*operations.PatchLegalTimeentryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Timeentry) PatchLegalTimeentry(ctx context.Context, request operations.
 }
 
 // RemoveLegalTimeentry - Remove a timeentry
+// Deletes the LegalTimeentry identified by `id`.
 func (s *Timeentry) RemoveLegalTimeentry(ctx context.Context, request operations.RemoveLegalTimeentryRequest, opts ...operations.Option) (*operations.RemoveLegalTimeentryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Timeentry) RemoveLegalTimeentry(ctx context.Context, request operations
 }
 
 // UpdateLegalTimeentry - Update a timeentry
+// Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 func (s *Timeentry) UpdateLegalTimeentry(ctx context.Context, request operations.UpdateLegalTimeentryRequest, opts ...operations.Option) (*operations.UpdateLegalTimeentryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

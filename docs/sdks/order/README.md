@@ -4,20 +4,22 @@
 
 ### Available Operations
 
-* [CreateAccountingOrder](#createaccountingorder) - Create an order
+* [~~CreateAccountingOrder~~](#createaccountingorder) - Create an order :warning: **Deprecated**
 * [CreateAssessmentOrder](#createassessmentorder) - Create an order
-* [GetAccountingOrder](#getaccountingorder) - Retrieve an order
+* [~~GetAccountingOrder~~](#getaccountingorder) - Retrieve an order :warning: **Deprecated**
 * [GetAssessmentOrder](#getassessmentorder) - Retrieve an order
-* [ListAccountingOrders](#listaccountingorders) - List all orders
-* [PatchAccountingOrder](#patchaccountingorder) - Update an order
+* [~~ListAccountingOrders~~](#listaccountingorders) - List all orders :warning: **Deprecated**
+* [~~PatchAccountingOrder~~](#patchaccountingorder) - Update an order :warning: **Deprecated**
 * [PatchAssessmentOrder](#patchassessmentorder) - Update an order
-* [RemoveAccountingOrder](#removeaccountingorder) - Remove an order
-* [UpdateAccountingOrder](#updateaccountingorder) - Update an order
+* [~~RemoveAccountingOrder~~](#removeaccountingorder) - Remove an order :warning: **Deprecated**
+* [~~UpdateAccountingOrder~~](#updateaccountingorder) - Update an order :warning: **Deprecated**
 * [UpdateAssessmentOrder](#updateassessmentorder) - Update an order
 
-## CreateAccountingOrder
+## ~~CreateAccountingOrder~~
 
-Create an order
+Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are mapped to the provider's API. Returns the created AccountingOrder.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -53,7 +55,7 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
-            ID: unifiedgosdk.Pointer("f86dd8f6-a014-47f6-9134-f31f328acb2f"),
+            ID: unifiedgosdk.Pointer("28d3b89f-0446-43dd-9b12-88dae6df1211"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             PostedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
@@ -68,7 +70,7 @@ func main() {
             Status: shared.AccountingOrderStatusAuthorized.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingOrderTypeSales.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-02-08T07:18:52.782Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-08T12:12:41.888Z"),
         },
         ConnectionID: "<id>",
     })
@@ -101,7 +103,7 @@ func main() {
 
 ## CreateAssessmentOrder
 
-Create an order
+Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
 
 ### Example Usage
 
@@ -129,7 +131,7 @@ func main() {
         AssessmentOrder: shared.AssessmentOrder{
             ConnectionID: "<id>",
             CreatedAt: types.MustNewTimeFromString("2021-09-18T10:33:57.803Z"),
-            ID: unifiedgosdk.Pointer("46cb793e-1410-48a9-86d0-1a4baf1eeaa6"),
+            ID: unifiedgosdk.Pointer("8f2ded2a-b22c-42ae-a1c7-7dffc14e2cc3"),
             Metadata: []shared.AssessmentMetadata{},
             Parameters: []shared.AssessmentParameterInput{},
             ProfileAddresses: []shared.AssessmentAddress{},
@@ -156,7 +158,7 @@ func main() {
             ResponseURL: unifiedgosdk.Pointer("https://rowdy-fisherman.biz/"),
             Status: shared.AssessmentOrderStatusRejected.ToPointer(),
             TargetURL: unifiedgosdk.Pointer("https://cautious-turret.info"),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-25T20:34:45.957Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-26T02:54:10.939Z"),
             WorkspaceID: "<id>",
         },
         ConnectionID: "<id>",
@@ -188,9 +190,11 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetAccountingOrder
+## ~~GetAccountingOrder~~
 
-Retrieve an order
+Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -245,7 +249,7 @@ func main() {
 
 ## GetAssessmentOrder
 
-Retrieve an order
+Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -298,9 +302,11 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAccountingOrders
+## ~~ListAccountingOrders~~
 
-List all orders
+Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -352,9 +358,11 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchAccountingOrder
+## ~~PatchAccountingOrder~~
 
-Update an order
+Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -390,7 +398,7 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
-            ID: unifiedgosdk.Pointer("4c2c437b-fa37-41d5-a10b-c8e726820b58"),
+            ID: unifiedgosdk.Pointer("a2722865-e3c2-4eb8-9c96-bde5f90cfaf2"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             PostedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
@@ -405,7 +413,7 @@ func main() {
             Status: shared.AccountingOrderStatusAuthorized.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingOrderTypeSales.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-02-08T07:18:52.791Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-08T12:12:41.895Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -439,7 +447,7 @@ func main() {
 
 ## PatchAssessmentOrder
 
-Update an order
+Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
 ### Example Usage
 
@@ -467,7 +475,7 @@ func main() {
         AssessmentOrder: shared.AssessmentOrder{
             ConnectionID: "<id>",
             CreatedAt: types.MustNewTimeFromString("2021-09-18T10:33:57.803Z"),
-            ID: unifiedgosdk.Pointer("5bfd87cf-d33d-4ceb-a9fc-922f4bbd52ec"),
+            ID: unifiedgosdk.Pointer("a89a5324-7724-4a6a-a3f2-52534dfbbf5a"),
             Metadata: []shared.AssessmentMetadata{},
             Parameters: []shared.AssessmentParameterInput{},
             ProfileAddresses: []shared.AssessmentAddress{},
@@ -494,7 +502,7 @@ func main() {
             ResponseURL: unifiedgosdk.Pointer("https://rowdy-fisherman.biz/"),
             Status: shared.AssessmentOrderStatusRejected.ToPointer(),
             TargetURL: unifiedgosdk.Pointer("https://cautious-turret.info"),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-25T20:34:45.967Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-26T02:54:10.953Z"),
             WorkspaceID: "<id>",
         },
         ConnectionID: "<id>",
@@ -527,9 +535,11 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveAccountingOrder
+## ~~RemoveAccountingOrder~~
 
-Remove an order
+Deletes the AccountingOrder identified by `id`.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -582,9 +592,11 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateAccountingOrder
+## ~~UpdateAccountingOrder~~
 
-Update an order
+Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -620,7 +632,7 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
-            ID: unifiedgosdk.Pointer("4c2c437b-fa37-41d5-a10b-c8e726820b58"),
+            ID: unifiedgosdk.Pointer("a2722865-e3c2-4eb8-9c96-bde5f90cfaf2"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             PostedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
@@ -635,7 +647,7 @@ func main() {
             Status: shared.AccountingOrderStatusAuthorized.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingOrderTypeSales.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-02-08T07:18:52.791Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-08T12:12:41.895Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -669,7 +681,7 @@ func main() {
 
 ## UpdateAssessmentOrder
 
-Update an order
+Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
 ### Example Usage
 
@@ -697,7 +709,7 @@ func main() {
         AssessmentOrder: shared.AssessmentOrder{
             ConnectionID: "<id>",
             CreatedAt: types.MustNewTimeFromString("2021-09-18T10:33:57.803Z"),
-            ID: unifiedgosdk.Pointer("5bfd87cf-d33d-4ceb-a9fc-922f4bbd52ec"),
+            ID: unifiedgosdk.Pointer("a89a5324-7724-4a6a-a3f2-52534dfbbf5a"),
             Metadata: []shared.AssessmentMetadata{},
             Parameters: []shared.AssessmentParameterInput{},
             ProfileAddresses: []shared.AssessmentAddress{},
@@ -724,7 +736,7 @@ func main() {
             ResponseURL: unifiedgosdk.Pointer("https://rowdy-fisherman.biz/"),
             Status: shared.AssessmentOrderStatusRejected.ToPointer(),
             TargetURL: unifiedgosdk.Pointer("https://cautious-turret.info"),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-25T20:34:45.967Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-26T02:54:10.953Z"),
             WorkspaceID: "<id>",
         },
         ConnectionID: "<id>",

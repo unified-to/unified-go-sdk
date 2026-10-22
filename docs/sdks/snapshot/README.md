@@ -11,7 +11,7 @@
 
 ## CreateComputeSnapshot
 
-Create a snapshot
+Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are mapped to the provider's API. Returns the created ComputeSnapshot.
 
 ### Example Usage
 
@@ -38,13 +38,13 @@ func main() {
     res, err := s.Snapshot.CreateComputeSnapshot(ctx, operations.CreateComputeSnapshotRequest{
         ComputeSnapshot: shared.ComputeSnapshot{
             CreatedAt: types.MustNewTimeFromString("2021-09-24T14:40:06.110Z"),
-            ID: unifiedgosdk.Pointer("abdaf705-cd8b-45f5-acb1-4ea71458961b"),
+            ID: unifiedgosdk.Pointer("7a18b86c-23c2-464c-a653-5b452e03d454"),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("snap-alius"),
             SizeMb: unifiedgosdk.Pointer[float64](169984.0),
             Status: shared.ComputeSnapshotStatusDeleting.ToPointer(),
             Type: shared.ComputeSnapshotTypeDisk.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-30T21:24:26.180Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-31T18:33:33.680Z"),
         },
         ConnectionID: "<id>",
     })
@@ -77,7 +77,7 @@ func main() {
 
 ## GetComputeSnapshot
 
-Retrieve a snapshot
+Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -132,7 +132,7 @@ func main() {
 
 ## ListComputeSnapshots
 
-List all snapshots
+Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -186,7 +186,7 @@ func main() {
 
 ## RemoveComputeSnapshot
 
-Remove a snapshot
+Deletes the ComputeSnapshot identified by `id`.
 
 ### Example Usage
 

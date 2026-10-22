@@ -25,7 +25,7 @@
 
 ## CreateKmsComment
 
-Create a comment
+Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to the provider's API. Returns the created KmsComment.
 
 ### Example Usage
 
@@ -54,10 +54,10 @@ func main() {
             Content: unifiedgosdk.Pointer("Decimus tolero viriliter usque."),
             ContentType: shared.ContentTypeHTML.ToPointer(),
             CreatedAt: types.MustNewTimeFromString("2022-08-26T14:40:49.732Z"),
-            ID: unifiedgosdk.Pointer("7d48c048-f83a-497e-932d-ae75226e4a84"),
+            ID: unifiedgosdk.Pointer("f70dadbf-c49e-4d15-b95b-76c9be0a9360"),
             Metadata: []shared.KmsPageMetadata{},
             Type: shared.KmsCommentTypePage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-26T06:47:39.913Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-26T13:57:11.798Z"),
         },
         ConnectionID: "<id>",
     })
@@ -90,7 +90,7 @@ func main() {
 
 ## CreateKmsPage
 
-Create a page
+Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the provider's API. Returns the created KmsPage.
 
 ### Example Usage
 
@@ -119,12 +119,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-05-20T18:06:50.749Z"),
             DownloadURL: unifiedgosdk.Pointer("https://agitated-validity.info"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("6ddf7535-f377-4882-8d68-f853b3459224"),
+            ID: unifiedgosdk.Pointer("09d346b6-e6f1-48d9-88f3-ad33c3498f06"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.KmsPageMetadata{},
             Title: unifiedgosdk.Pointer("even minister extract"),
             Type: shared.KmsPageTypeHTML,
-            UpdatedAt: types.MustNewTimeFromString("2025-10-09T04:22:36.892Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-10T00:50:34.700Z"),
             WebURL: unifiedgosdk.Pointer("https://another-petticoat.info"),
         },
         ConnectionID: "<id>",
@@ -158,7 +158,7 @@ func main() {
 
 ## CreateKmsSpace
 
-Create a space
+Creates a KmsSpace. Provide the unified KmsSpace fields in the request body; they are mapped to the provider's API. Returns the created KmsSpace.
 
 ### Example Usage
 
@@ -186,11 +186,11 @@ func main() {
         KmsSpace: shared.KmsSpace{
             CreatedAt: types.MustNewTimeFromString("2022-10-31T00:56:54.246Z"),
             Description: unifiedgosdk.Pointer("Acer."),
-            ID: unifiedgosdk.Pointer("b21eed38-3f30-4a30-868f-0c292f061c9e"),
+            ID: unifiedgosdk.Pointer("446ff652-9d3f-47e2-8138-b6d4e60961ff"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.KmsPageMetadata{},
             Name: unifiedgosdk.Pointer("into nor afore"),
-            UpdatedAt: types.MustNewTimeFromString("2025-12-29T22:52:33.056Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-30T17:48:47.665Z"),
         },
         ConnectionID: "<id>",
     })
@@ -223,7 +223,7 @@ func main() {
 
 ## GetKmsComment
 
-Retrieve a comment
+Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -278,7 +278,7 @@ func main() {
 
 ## GetKmsPage
 
-Retrieve a page
+Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -333,7 +333,7 @@ func main() {
 
 ## GetKmsSpace
 
-Retrieve a space
+Retrieves a single KmsSpace by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -388,7 +388,7 @@ func main() {
 
 ## ListKmsComments
 
-List all comments
+Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -442,7 +442,7 @@ func main() {
 
 ## ListKmsPages
 
-List all pages
+Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -496,7 +496,7 @@ func main() {
 
 ## ListKmsSpaces
 
-List all spaces
+Returns a list of KmsSpaces. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -550,7 +550,7 @@ func main() {
 
 ## PatchKmsComment
 
-Update a comment
+Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
 ### Example Usage
 
@@ -579,10 +579,10 @@ func main() {
             Content: unifiedgosdk.Pointer("Decimus tolero viriliter usque."),
             ContentType: shared.ContentTypeHTML.ToPointer(),
             CreatedAt: types.MustNewTimeFromString("2022-08-26T14:40:49.732Z"),
-            ID: unifiedgosdk.Pointer("481c0558-3e28-4883-a956-58b21d1bee75"),
+            ID: unifiedgosdk.Pointer("a08fa0b1-2d59-4bd9-afd2-b70b50910414"),
             Metadata: []shared.KmsPageMetadata{},
             Type: shared.KmsCommentTypePage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-26T06:47:39.916Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-26T13:57:11.803Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -616,7 +616,7 @@ func main() {
 
 ## PatchKmsPage
 
-Update a page
+Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 
 ### Example Usage
 
@@ -645,12 +645,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-05-20T18:06:50.749Z"),
             DownloadURL: unifiedgosdk.Pointer("https://agitated-validity.info"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("8c9ed97f-b8be-41ce-bb37-2ba55ccd95c7"),
+            ID: unifiedgosdk.Pointer("92edceee-2b74-46db-a8ae-060c225ade64"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.KmsPageMetadata{},
             Title: unifiedgosdk.Pointer("even minister extract"),
             Type: shared.KmsPageTypeHTML,
-            UpdatedAt: types.MustNewTimeFromString("2025-10-09T04:22:36.905Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-10T00:50:34.716Z"),
             WebURL: unifiedgosdk.Pointer("https://another-petticoat.info"),
         },
         ConnectionID: "<id>",
@@ -685,7 +685,7 @@ func main() {
 
 ## PatchKmsSpace
 
-Update a space
+Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 
 ### Example Usage
 
@@ -713,11 +713,11 @@ func main() {
         KmsSpace: shared.KmsSpace{
             CreatedAt: types.MustNewTimeFromString("2022-10-31T00:56:54.246Z"),
             Description: unifiedgosdk.Pointer("Acer."),
-            ID: unifiedgosdk.Pointer("c6ed6ca0-1967-40b3-bd60-612e0db9ec51"),
+            ID: unifiedgosdk.Pointer("64d1bceb-c2c9-4d49-a9a6-82cc4c5ee096"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.KmsPageMetadata{},
             Name: unifiedgosdk.Pointer("into nor afore"),
-            UpdatedAt: types.MustNewTimeFromString("2025-12-29T22:52:33.064Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-30T17:48:47.677Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -751,7 +751,7 @@ func main() {
 
 ## RemoveKmsComment
 
-Remove a comment
+Deletes the KmsComment identified by `id`.
 
 ### Example Usage
 
@@ -806,7 +806,7 @@ func main() {
 
 ## RemoveKmsPage
 
-Remove a page
+Deletes the KmsPage identified by `id`.
 
 ### Example Usage
 
@@ -861,7 +861,7 @@ func main() {
 
 ## RemoveKmsSpace
 
-Remove a space
+Deletes the KmsSpace identified by `id`.
 
 ### Example Usage
 
@@ -916,7 +916,7 @@ func main() {
 
 ## UpdateKmsComment
 
-Update a comment
+Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
 ### Example Usage
 
@@ -945,10 +945,10 @@ func main() {
             Content: unifiedgosdk.Pointer("Decimus tolero viriliter usque."),
             ContentType: shared.ContentTypeHTML.ToPointer(),
             CreatedAt: types.MustNewTimeFromString("2022-08-26T14:40:49.732Z"),
-            ID: unifiedgosdk.Pointer("481c0558-3e28-4883-a956-58b21d1bee75"),
+            ID: unifiedgosdk.Pointer("a08fa0b1-2d59-4bd9-afd2-b70b50910414"),
             Metadata: []shared.KmsPageMetadata{},
             Type: shared.KmsCommentTypePage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-26T06:47:39.916Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-26T13:57:11.803Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -982,7 +982,7 @@ func main() {
 
 ## UpdateKmsPage
 
-Update a page
+Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 
 ### Example Usage
 
@@ -1011,12 +1011,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-05-20T18:06:50.749Z"),
             DownloadURL: unifiedgosdk.Pointer("https://agitated-validity.info"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("8c9ed97f-b8be-41ce-bb37-2ba55ccd95c7"),
+            ID: unifiedgosdk.Pointer("92edceee-2b74-46db-a8ae-060c225ade64"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.KmsPageMetadata{},
             Title: unifiedgosdk.Pointer("even minister extract"),
             Type: shared.KmsPageTypeHTML,
-            UpdatedAt: types.MustNewTimeFromString("2025-10-09T04:22:36.905Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-10T00:50:34.716Z"),
             WebURL: unifiedgosdk.Pointer("https://another-petticoat.info"),
         },
         ConnectionID: "<id>",
@@ -1051,7 +1051,7 @@ func main() {
 
 ## UpdateKmsSpace
 
-Update a space
+Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 
 ### Example Usage
 
@@ -1079,11 +1079,11 @@ func main() {
         KmsSpace: shared.KmsSpace{
             CreatedAt: types.MustNewTimeFromString("2022-10-31T00:56:54.246Z"),
             Description: unifiedgosdk.Pointer("Acer."),
-            ID: unifiedgosdk.Pointer("c6ed6ca0-1967-40b3-bd60-612e0db9ec51"),
+            ID: unifiedgosdk.Pointer("64d1bceb-c2c9-4d49-a9a6-82cc4c5ee096"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.KmsPageMetadata{},
             Name: unifiedgosdk.Pointer("into nor afore"),
-            UpdatedAt: types.MustNewTimeFromString("2025-12-29T22:52:33.064Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-30T17:48:47.677Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

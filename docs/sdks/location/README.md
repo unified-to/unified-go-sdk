@@ -23,7 +23,7 @@
 
 ## CreateCommerceLocation
 
-Create a location
+Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they are mapped to the provider's API. Returns the created CommerceLocation.
 
 ### Example Usage
 
@@ -61,7 +61,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-12-29T04:15:21.195Z"),
             Currency: unifiedgosdk.Pointer("XCD"),
             Description: unifiedgosdk.Pointer("Adsidue audentia."),
-            ID: unifiedgosdk.Pointer("cfb9fd29-22d5-44ed-9d15-7b8865a2d9d9"),
+            ID: unifiedgosdk.Pointer("8709883e-a42c-47cb-8667-a2cb41249df1"),
             ImageURL: unifiedgosdk.Pointer("https://picsum.photos/seed/hjFt1/1036/2220"),
             IsActive: unifiedgosdk.Pointer(false),
             LanguageLocale: unifiedgosdk.Pointer("vulgaris"),
@@ -72,10 +72,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Addo."),
                     Height: unifiedgosdk.Pointer[float64](283.0),
-                    ID: unifiedgosdk.Pointer("1bc20b62-1ed8-468f-a07a-1270eb5f886d"),
+                    ID: unifiedgosdk.Pointer("569f1f0e-ac7d-449b-b76d-93adcb8e00c4"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("2db7ffe1-096a-4d3b-ae95-79468699a9df"),
+                            ID: unifiedgosdk.Pointer("7dcf0591-7cc3-4ea0-a31a-d0fa45b96fc0"),
                             Slug: unifiedgosdk.Pointer("abutor"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "damno",
@@ -103,7 +103,7 @@ func main() {
                     Type: shared.CommerceTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2024-04-20T17:56:50.699Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-21T02:07:15.519Z"),
             WebURL: unifiedgosdk.Pointer("https://chilly-edge.info"),
         },
         ConnectionID: "<id>",
@@ -137,7 +137,7 @@ func main() {
 
 ## CreateHrisLocation
 
-Create a location
+Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
 
 ### Example Usage
 
@@ -175,7 +175,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-07-18T10:32:01.414Z"),
             Currency: unifiedgosdk.Pointer("MNT"),
             Description: unifiedgosdk.Pointer("Commemoro acervus."),
-            ID: unifiedgosdk.Pointer("9d705c51-711f-45a7-a73a-717ad8e2b7b3"),
+            ID: unifiedgosdk.Pointer("1ecb6270-3dbb-4d0c-b876-5c1c8bb0ddef"),
             IsActive: unifiedgosdk.Pointer(false),
             IsHq: unifiedgosdk.Pointer(true),
             LanguageLocale: unifiedgosdk.Pointer("it"),
@@ -196,7 +196,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("Asia/Jerusalem"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-21T02:27:35.009Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-21T11:09:24.068Z"),
         },
         ConnectionID: "<id>",
     })
@@ -229,7 +229,7 @@ func main() {
 
 ## GetClubsLocation
 
-Retrieve a location
+Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -284,7 +284,7 @@ func main() {
 
 ## GetCommerceLocation
 
-Retrieve a location
+Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -339,7 +339,7 @@ func main() {
 
 ## GetHealthcareLocation
 
-Retrieve a location
+Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -394,7 +394,7 @@ func main() {
 
 ## GetHrisLocation
 
-Retrieve a location
+Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -449,7 +449,7 @@ func main() {
 
 ## ListClubsLocations
 
-List all locations
+Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -503,7 +503,7 @@ func main() {
 
 ## ListCommerceLocations
 
-List all locations
+Returns a list of CommerceLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -557,7 +557,7 @@ func main() {
 
 ## ListHealthcareLocations
 
-List all locations
+Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -611,7 +611,7 @@ func main() {
 
 ## ListHrisLocations
 
-List all locations
+Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -665,7 +665,7 @@ func main() {
 
 ## PatchCommerceLocation
 
-Update a location
+Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -703,7 +703,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-12-29T04:15:21.195Z"),
             Currency: unifiedgosdk.Pointer("XCD"),
             Description: unifiedgosdk.Pointer("Adsidue audentia."),
-            ID: unifiedgosdk.Pointer("40a4434d-2376-4620-9003-349464d19ca7"),
+            ID: unifiedgosdk.Pointer("02f6ba18-90d1-4d24-b9c5-628f9067495d"),
             ImageURL: unifiedgosdk.Pointer("https://picsum.photos/seed/hjFt1/1036/2220"),
             IsActive: unifiedgosdk.Pointer(false),
             LanguageLocale: unifiedgosdk.Pointer("vulgaris"),
@@ -714,10 +714,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Addo."),
                     Height: unifiedgosdk.Pointer[float64](283.0),
-                    ID: unifiedgosdk.Pointer("3e6802f0-02a0-4d54-b944-d6a4b261d631"),
+                    ID: unifiedgosdk.Pointer("aed7dbb7-9440-4f3d-b59c-2622d5a172de"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("0b3ca168-ec82-4454-aaac-eff637558b65"),
+                            ID: unifiedgosdk.Pointer("f7434651-445a-4b09-b33a-46f7af515a96"),
                             Slug: unifiedgosdk.Pointer("abutor"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "damno",
@@ -745,7 +745,7 @@ func main() {
                     Type: shared.CommerceTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2024-04-20T17:56:50.709Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-21T02:07:15.534Z"),
             WebURL: unifiedgosdk.Pointer("https://chilly-edge.info"),
         },
         ConnectionID: "<id>",
@@ -780,7 +780,7 @@ func main() {
 
 ## PatchHrisLocation
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -818,7 +818,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-07-18T10:32:01.414Z"),
             Currency: unifiedgosdk.Pointer("MNT"),
             Description: unifiedgosdk.Pointer("Commemoro acervus."),
-            ID: unifiedgosdk.Pointer("c28a0039-b5ac-4680-a8cc-2afb4f82d97b"),
+            ID: unifiedgosdk.Pointer("f595f8c1-17ee-4c09-9c8a-d9d6fe90e62f"),
             IsActive: unifiedgosdk.Pointer(false),
             IsHq: unifiedgosdk.Pointer(true),
             LanguageLocale: unifiedgosdk.Pointer("it"),
@@ -839,7 +839,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("Asia/Jerusalem"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-21T02:27:35.015Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-21T11:09:24.079Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -873,7 +873,7 @@ func main() {
 
 ## RemoveCommerceLocation
 
-Remove a location
+Deletes the CommerceLocation identified by `id`.
 
 ### Example Usage
 
@@ -928,7 +928,7 @@ func main() {
 
 ## RemoveHrisLocation
 
-Remove a location
+Deletes the HrisLocation identified by `id`.
 
 ### Example Usage
 
@@ -983,7 +983,7 @@ func main() {
 
 ## UpdateCommerceLocation
 
-Update a location
+Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -1021,7 +1021,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-12-29T04:15:21.195Z"),
             Currency: unifiedgosdk.Pointer("XCD"),
             Description: unifiedgosdk.Pointer("Adsidue audentia."),
-            ID: unifiedgosdk.Pointer("40a4434d-2376-4620-9003-349464d19ca7"),
+            ID: unifiedgosdk.Pointer("02f6ba18-90d1-4d24-b9c5-628f9067495d"),
             ImageURL: unifiedgosdk.Pointer("https://picsum.photos/seed/hjFt1/1036/2220"),
             IsActive: unifiedgosdk.Pointer(false),
             LanguageLocale: unifiedgosdk.Pointer("vulgaris"),
@@ -1032,10 +1032,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Addo."),
                     Height: unifiedgosdk.Pointer[float64](283.0),
-                    ID: unifiedgosdk.Pointer("3e6802f0-02a0-4d54-b944-d6a4b261d631"),
+                    ID: unifiedgosdk.Pointer("aed7dbb7-9440-4f3d-b59c-2622d5a172de"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("0b3ca168-ec82-4454-aaac-eff637558b65"),
+                            ID: unifiedgosdk.Pointer("f7434651-445a-4b09-b33a-46f7af515a96"),
                             Slug: unifiedgosdk.Pointer("abutor"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "damno",
@@ -1063,7 +1063,7 @@ func main() {
                     Type: shared.CommerceTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2024-04-20T17:56:50.709Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-21T02:07:15.534Z"),
             WebURL: unifiedgosdk.Pointer("https://chilly-edge.info"),
         },
         ConnectionID: "<id>",
@@ -1098,7 +1098,7 @@ func main() {
 
 ## UpdateHrisLocation
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -1136,7 +1136,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-07-18T10:32:01.414Z"),
             Currency: unifiedgosdk.Pointer("MNT"),
             Description: unifiedgosdk.Pointer("Commemoro acervus."),
-            ID: unifiedgosdk.Pointer("c28a0039-b5ac-4680-a8cc-2afb4f82d97b"),
+            ID: unifiedgosdk.Pointer("f595f8c1-17ee-4c09-9c8a-d9d6fe90e62f"),
             IsActive: unifiedgosdk.Pointer(false),
             IsHq: unifiedgosdk.Pointer(true),
             LanguageLocale: unifiedgosdk.Pointer("it"),
@@ -1157,7 +1157,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("Asia/Jerusalem"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-21T02:27:35.015Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-21T11:09:24.079Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

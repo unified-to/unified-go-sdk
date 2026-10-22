@@ -19,7 +19,7 @@
 
 ## CreateAccountingCategory
 
-Create a category
+Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body; they are mapped to the provider's API. Returns the created AccountingCategory.
 
 ### Example Usage
 
@@ -47,11 +47,11 @@ func main() {
         AccountingCategory: shared.AccountingCategory{
             CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
             Description: unifiedgosdk.Pointer("Textus ab thymum labore basium."),
-            ID: unifiedgosdk.Pointer("8733e54b-0f49-4e96-9275-b45e190a6975"),
+            ID: unifiedgosdk.Pointer("1c264a31-fc6d-404c-a395-87fd00ef7a9b"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Beauty"),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-11T12:11:02.648Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-12T04:11:51.669Z"),
         },
         ConnectionID: "<id>",
     })
@@ -84,7 +84,7 @@ func main() {
 
 ## CreateTicketingCategory
 
-Create a category
+Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they are mapped to the provider's API. Returns the created TicketingCategory.
 
 ### Example Usage
 
@@ -112,11 +112,11 @@ func main() {
         TicketingCategory: shared.TicketingCategory{
             CreatedAt: types.MustNewTimeFromString("2019-10-19T22:02:51.067Z"),
             Description: unifiedgosdk.Pointer("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero."),
-            ID: unifiedgosdk.Pointer("132cb90b-ff2e-43b0-8ddc-585b0f8060f6"),
+            ID: unifiedgosdk.Pointer("9eb72447-a830-4f73-9402-f6c85f737ea2"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("amicitia"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-14T00:34:02.739Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-14T21:44:12.267Z"),
         },
         ConnectionID: "<id>",
     })
@@ -149,7 +149,7 @@ func main() {
 
 ## GetAccountingCategory
 
-Retrieve a category
+Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -204,7 +204,7 @@ func main() {
 
 ## GetTicketingCategory
 
-Retrieve a category
+Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -259,7 +259,7 @@ func main() {
 
 ## ListAccountingCategories
 
-List all categories
+Returns a list of AccountingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -313,7 +313,7 @@ func main() {
 
 ## ListTicketingCategories
 
-List all categories
+Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -367,7 +367,7 @@ func main() {
 
 ## PatchAccountingCategory
 
-Update a category
+Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -395,11 +395,11 @@ func main() {
         AccountingCategory: shared.AccountingCategory{
             CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
             Description: unifiedgosdk.Pointer("Textus ab thymum labore basium."),
-            ID: unifiedgosdk.Pointer("19d65ff6-bd39-4539-9f5e-2d62aeaa23a0"),
+            ID: unifiedgosdk.Pointer("20661dee-4099-4eee-9e2e-d361dd190255"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Beauty"),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-11T12:11:02.655Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-12T04:11:51.679Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -433,7 +433,7 @@ func main() {
 
 ## PatchTicketingCategory
 
-Update a category
+Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -461,11 +461,11 @@ func main() {
         TicketingCategory: shared.TicketingCategory{
             CreatedAt: types.MustNewTimeFromString("2019-10-19T22:02:51.067Z"),
             Description: unifiedgosdk.Pointer("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero."),
-            ID: unifiedgosdk.Pointer("fd46751c-c2d1-4514-8eee-2ff2e3627795"),
+            ID: unifiedgosdk.Pointer("84db6781-2529-49bf-bc4a-6222a4eb1054"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("amicitia"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-14T00:34:02.751Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-14T21:44:12.279Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -499,7 +499,7 @@ func main() {
 
 ## RemoveAccountingCategory
 
-Remove a category
+Deletes the AccountingCategory identified by `id`.
 
 ### Example Usage
 
@@ -554,7 +554,7 @@ func main() {
 
 ## RemoveTicketingCategory
 
-Remove a category
+Deletes the TicketingCategory identified by `id`.
 
 ### Example Usage
 
@@ -609,7 +609,7 @@ func main() {
 
 ## UpdateAccountingCategory
 
-Update a category
+Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -637,11 +637,11 @@ func main() {
         AccountingCategory: shared.AccountingCategory{
             CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
             Description: unifiedgosdk.Pointer("Textus ab thymum labore basium."),
-            ID: unifiedgosdk.Pointer("19d65ff6-bd39-4539-9f5e-2d62aeaa23a0"),
+            ID: unifiedgosdk.Pointer("20661dee-4099-4eee-9e2e-d361dd190255"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Beauty"),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-11T12:11:02.655Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-12T04:11:51.679Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -675,7 +675,7 @@ func main() {
 
 ## UpdateTicketingCategory
 
-Update a category
+Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -703,11 +703,11 @@ func main() {
         TicketingCategory: shared.TicketingCategory{
             CreatedAt: types.MustNewTimeFromString("2019-10-19T22:02:51.067Z"),
             Description: unifiedgosdk.Pointer("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero."),
-            ID: unifiedgosdk.Pointer("fd46751c-c2d1-4514-8eee-2ff2e3627795"),
+            ID: unifiedgosdk.Pointer("84db6781-2529-49bf-bc4a-6222a4eb1054"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("amicitia"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-14T00:34:02.751Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-14T21:44:12.279Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

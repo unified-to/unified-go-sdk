@@ -31,6 +31,7 @@ func newList(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 }
 
 // CreateMartechList - Create a list
+// Creates a MarketingList. Provide the unified MarketingList fields in the request body; they are mapped to the provider's API. Returns the created MarketingList.
 func (s *List) CreateMartechList(ctx context.Context, request operations.CreateMartechListRequest, opts ...operations.Option) (*operations.CreateMartechListResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *List) CreateMartechList(ctx context.Context, request operations.CreateM
 }
 
 // GetMartechList - Retrieve a list
+// Retrieves a single MarketingList by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *List) GetMartechList(ctx context.Context, request operations.GetMartechListRequest, opts ...operations.Option) (*operations.GetMartechListResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *List) GetMartechList(ctx context.Context, request operations.GetMartech
 }
 
 // ListMartechLists - List all lists
+// Returns a list of MarketingLists. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *List) ListMartechLists(ctx context.Context, request operations.ListMartechListsRequest, opts ...operations.Option) (*operations.ListMartechListsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *List) ListMartechLists(ctx context.Context, request operations.ListMart
 }
 
 // PatchMartechList - Update a list
+// Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
 func (s *List) PatchMartechList(ctx context.Context, request operations.PatchMartechListRequest, opts ...operations.Option) (*operations.PatchMartechListResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *List) PatchMartechList(ctx context.Context, request operations.PatchMar
 }
 
 // RemoveMartechList - Remove a list
+// Deletes the MarketingList identified by `id`.
 func (s *List) RemoveMartechList(ctx context.Context, request operations.RemoveMartechListRequest, opts ...operations.Option) (*operations.RemoveMartechListResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *List) RemoveMartechList(ctx context.Context, request operations.RemoveM
 }
 
 // UpdateMartechList - Update a list
+// Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
 func (s *List) UpdateMartechList(ctx context.Context, request operations.UpdateMartechListRequest, opts ...operations.Option) (*operations.UpdateMartechListResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

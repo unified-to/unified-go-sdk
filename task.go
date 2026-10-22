@@ -31,6 +31,7 @@ func newTask(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 }
 
 // CreateGenaiTask - Create a task
+// Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to the provider's API. Returns the created GenaiTask.
 func (s *Task) CreateGenaiTask(ctx context.Context, request operations.CreateGenaiTaskRequest, opts ...operations.Option) (*operations.CreateGenaiTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Task) CreateGenaiTask(ctx context.Context, request operations.CreateGen
 }
 
 // CreateTaskComment - Create a comment
+// Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped to the provider's API. Returns the created TaskComment.
 func (s *Task) CreateTaskComment(ctx context.Context, request operations.CreateTaskCommentRequest, opts ...operations.Option) (*operations.CreateTaskCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Task) CreateTaskComment(ctx context.Context, request operations.CreateT
 }
 
 // CreateTaskProject - Create a project
+// Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped to the provider's API. Returns the created TaskProject.
 func (s *Task) CreateTaskProject(ctx context.Context, request operations.CreateTaskProjectRequest, opts ...operations.Option) (*operations.CreateTaskProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -673,6 +676,7 @@ func (s *Task) CreateTaskProject(ctx context.Context, request operations.CreateT
 }
 
 // CreateTaskTask - Create a task
+// Creates a TaskTask. Provide the unified TaskTask fields in the request body; they are mapped to the provider's API. Returns the created TaskTask.
 func (s *Task) CreateTaskTask(ctx context.Context, request operations.CreateTaskTaskRequest, opts ...operations.Option) (*operations.CreateTaskTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -887,6 +891,7 @@ func (s *Task) CreateTaskTask(ctx context.Context, request operations.CreateTask
 }
 
 // GetGenaiTask - Retrieve a task
+// Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Task) GetGenaiTask(ctx context.Context, request operations.GetGenaiTaskRequest, opts ...operations.Option) (*operations.GetGenaiTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1094,6 +1099,7 @@ func (s *Task) GetGenaiTask(ctx context.Context, request operations.GetGenaiTask
 }
 
 // GetTaskChange - Retrieve a change
+// Retrieves a single TaskChange by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Task) GetTaskChange(ctx context.Context, request operations.GetTaskChangeRequest, opts ...operations.Option) (*operations.GetTaskChangeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1301,6 +1307,7 @@ func (s *Task) GetTaskChange(ctx context.Context, request operations.GetTaskChan
 }
 
 // GetTaskComment - Retrieve a comment
+// Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Task) GetTaskComment(ctx context.Context, request operations.GetTaskCommentRequest, opts ...operations.Option) (*operations.GetTaskCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1508,6 +1515,7 @@ func (s *Task) GetTaskComment(ctx context.Context, request operations.GetTaskCom
 }
 
 // GetTaskProject - Retrieve a project
+// Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Task) GetTaskProject(ctx context.Context, request operations.GetTaskProjectRequest, opts ...operations.Option) (*operations.GetTaskProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1715,6 +1723,7 @@ func (s *Task) GetTaskProject(ctx context.Context, request operations.GetTaskPro
 }
 
 // GetTaskTask - Retrieve a task
+// Retrieves a single TaskTask by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Task) GetTaskTask(ctx context.Context, request operations.GetTaskTaskRequest, opts ...operations.Option) (*operations.GetTaskTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1922,6 +1931,7 @@ func (s *Task) GetTaskTask(ctx context.Context, request operations.GetTaskTaskRe
 }
 
 // ListGenaiTasks - List all tasks
+// Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Task) ListGenaiTasks(ctx context.Context, request operations.ListGenaiTasksRequest, opts ...operations.Option) (*operations.ListGenaiTasksResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2129,6 +2139,7 @@ func (s *Task) ListGenaiTasks(ctx context.Context, request operations.ListGenaiT
 }
 
 // ListTaskChanges - List all changes
+// Returns a list of TaskChanges. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Task) ListTaskChanges(ctx context.Context, request operations.ListTaskChangesRequest, opts ...operations.Option) (*operations.ListTaskChangesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2336,6 +2347,7 @@ func (s *Task) ListTaskChanges(ctx context.Context, request operations.ListTaskC
 }
 
 // ListTaskComments - List all comments
+// Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Task) ListTaskComments(ctx context.Context, request operations.ListTaskCommentsRequest, opts ...operations.Option) (*operations.ListTaskCommentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2543,6 +2555,7 @@ func (s *Task) ListTaskComments(ctx context.Context, request operations.ListTask
 }
 
 // ListTaskProjects - List all projects
+// Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Task) ListTaskProjects(ctx context.Context, request operations.ListTaskProjectsRequest, opts ...operations.Option) (*operations.ListTaskProjectsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2750,6 +2763,7 @@ func (s *Task) ListTaskProjects(ctx context.Context, request operations.ListTask
 }
 
 // ListTaskTasks - List all tasks
+// Returns a list of TaskTasks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Task) ListTaskTasks(ctx context.Context, request operations.ListTaskTasksRequest, opts ...operations.Option) (*operations.ListTaskTasksResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2957,6 +2971,7 @@ func (s *Task) ListTaskTasks(ctx context.Context, request operations.ListTaskTas
 }
 
 // PatchGenaiTask - Update a task
+// Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 func (s *Task) PatchGenaiTask(ctx context.Context, request operations.PatchGenaiTaskRequest, opts ...operations.Option) (*operations.PatchGenaiTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3171,6 +3186,7 @@ func (s *Task) PatchGenaiTask(ctx context.Context, request operations.PatchGenai
 }
 
 // PatchTaskComment - Update a comment
+// Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 func (s *Task) PatchTaskComment(ctx context.Context, request operations.PatchTaskCommentRequest, opts ...operations.Option) (*operations.PatchTaskCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3385,6 +3401,7 @@ func (s *Task) PatchTaskComment(ctx context.Context, request operations.PatchTas
 }
 
 // PatchTaskProject - Update a project
+// Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
 func (s *Task) PatchTaskProject(ctx context.Context, request operations.PatchTaskProjectRequest, opts ...operations.Option) (*operations.PatchTaskProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3599,6 +3616,7 @@ func (s *Task) PatchTaskProject(ctx context.Context, request operations.PatchTas
 }
 
 // PatchTaskTask - Update a task
+// Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the request body.
 func (s *Task) PatchTaskTask(ctx context.Context, request operations.PatchTaskTaskRequest, opts ...operations.Option) (*operations.PatchTaskTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3813,6 +3831,7 @@ func (s *Task) PatchTaskTask(ctx context.Context, request operations.PatchTaskTa
 }
 
 // RemoveGenaiTask - Remove a task
+// Deletes the GenaiTask identified by `id`.
 func (s *Task) RemoveGenaiTask(ctx context.Context, request operations.RemoveGenaiTaskRequest, opts ...operations.Option) (*operations.RemoveGenaiTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -3995,6 +4014,7 @@ func (s *Task) RemoveGenaiTask(ctx context.Context, request operations.RemoveGen
 }
 
 // RemoveTaskComment - Remove a comment
+// Deletes the TaskComment identified by `id`.
 func (s *Task) RemoveTaskComment(ctx context.Context, request operations.RemoveTaskCommentRequest, opts ...operations.Option) (*operations.RemoveTaskCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4177,6 +4197,7 @@ func (s *Task) RemoveTaskComment(ctx context.Context, request operations.RemoveT
 }
 
 // RemoveTaskProject - Remove a project
+// Deletes the TaskProject identified by `id`.
 func (s *Task) RemoveTaskProject(ctx context.Context, request operations.RemoveTaskProjectRequest, opts ...operations.Option) (*operations.RemoveTaskProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4359,6 +4380,7 @@ func (s *Task) RemoveTaskProject(ctx context.Context, request operations.RemoveT
 }
 
 // RemoveTaskTask - Remove a task
+// Deletes the TaskTask identified by `id`.
 func (s *Task) RemoveTaskTask(ctx context.Context, request operations.RemoveTaskTaskRequest, opts ...operations.Option) (*operations.RemoveTaskTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4541,6 +4563,7 @@ func (s *Task) RemoveTaskTask(ctx context.Context, request operations.RemoveTask
 }
 
 // UpdateGenaiTask - Update a task
+// Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 func (s *Task) UpdateGenaiTask(ctx context.Context, request operations.UpdateGenaiTaskRequest, opts ...operations.Option) (*operations.UpdateGenaiTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4755,6 +4778,7 @@ func (s *Task) UpdateGenaiTask(ctx context.Context, request operations.UpdateGen
 }
 
 // UpdateTaskComment - Update a comment
+// Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 func (s *Task) UpdateTaskComment(ctx context.Context, request operations.UpdateTaskCommentRequest, opts ...operations.Option) (*operations.UpdateTaskCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4969,6 +4993,7 @@ func (s *Task) UpdateTaskComment(ctx context.Context, request operations.UpdateT
 }
 
 // UpdateTaskProject - Update a project
+// Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
 func (s *Task) UpdateTaskProject(ctx context.Context, request operations.UpdateTaskProjectRequest, opts ...operations.Option) (*operations.UpdateTaskProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -5183,6 +5208,7 @@ func (s *Task) UpdateTaskProject(ctx context.Context, request operations.UpdateT
 }
 
 // UpdateTaskTask - Update a task
+// Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the request body.
 func (s *Task) UpdateTaskTask(ctx context.Context, request operations.UpdateTaskTaskRequest, opts ...operations.Option) (*operations.UpdateTaskTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

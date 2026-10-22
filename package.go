@@ -444,6 +444,7 @@ func (s *Package) GetAssessmentPackage(ctx context.Context, request operations.G
 }
 
 // GetVerificationPackage - Retrieve a package
+// Retrieves a single VerificationPackage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Package) GetVerificationPackage(ctx context.Context, request operations.GetVerificationPackageRequest, opts ...operations.Option) (*operations.GetVerificationPackageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -858,6 +859,7 @@ func (s *Package) ListAssessmentPackages(ctx context.Context, request operations
 }
 
 // ListVerificationPackages - List all packages
+// Returns a list of VerificationPackages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Package) ListVerificationPackages(ctx context.Context, request operations.ListVerificationPackagesRequest, opts ...operations.Option) (*operations.ListVerificationPackagesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

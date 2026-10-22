@@ -13,7 +13,7 @@
 
 ## CreateComputeInstance
 
-Create an instance
+Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are mapped to the provider's API. Returns the created ComputeInstance.
 
 ### Example Usage
 
@@ -57,7 +57,7 @@ func main() {
             },
             GpuCount: unifiedgosdk.Pointer[float64](0.0),
             HasInternetAccess: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("4077e3bd-a54f-466b-b69d-d9c1e5cad805"),
+            ID: unifiedgosdk.Pointer("468756b5-e6c9-4689-8e98-6b4bd5f7940d"),
             Image: unifiedgosdk.Pointer("ubuntu:24.04"),
             Market: shared.MarketSpot.ToPointer(),
             MemoryMb: unifiedgosdk.Pointer[float64](2048.0),
@@ -72,11 +72,11 @@ func main() {
                 Port: unifiedgosdk.Pointer[float64](22.0),
                 Username: unifiedgosdk.Pointer("root"),
             },
-            StartedAt: types.MustNewTimeFromString("2025-03-23T23:18:11.036Z"),
+            StartedAt: types.MustNewTimeFromString("2025-03-24T13:47:14.312Z"),
             Status: shared.ComputeInstanceStatusError.ToPointer(),
             StatusReason: unifiedgosdk.Pointer("Sponte quasi adversus alioqui reiciendis arca carmen canis."),
             Type: shared.ComputeInstanceTypeBaremetal.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-06-16T04:50:44.691Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-16T20:41:16.883Z"),
         },
         ConnectionID: "<id>",
     })
@@ -109,7 +109,7 @@ func main() {
 
 ## GetComputeInstance
 
-Retrieve an instance
+Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -164,7 +164,7 @@ func main() {
 
 ## ListComputeInstances
 
-List all instances
+Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -218,7 +218,7 @@ func main() {
 
 ## PatchComputeInstance
 
-Update an instance
+Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
 ### Example Usage
 
@@ -262,7 +262,7 @@ func main() {
             },
             GpuCount: unifiedgosdk.Pointer[float64](0.0),
             HasInternetAccess: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("68a4cfd4-c11d-4807-8d5e-f972fde6e258"),
+            ID: unifiedgosdk.Pointer("e8839c42-59e6-46ea-b661-3ffe8d9568e5"),
             Image: unifiedgosdk.Pointer("ubuntu:24.04"),
             Market: shared.MarketSpot.ToPointer(),
             MemoryMb: unifiedgosdk.Pointer[float64](2048.0),
@@ -277,11 +277,11 @@ func main() {
                 Port: unifiedgosdk.Pointer[float64](22.0),
                 Username: unifiedgosdk.Pointer("root"),
             },
-            StartedAt: types.MustNewTimeFromString("2025-03-23T23:18:11.066Z"),
+            StartedAt: types.MustNewTimeFromString("2025-03-24T13:47:14.341Z"),
             Status: shared.ComputeInstanceStatusError.ToPointer(),
             StatusReason: unifiedgosdk.Pointer("Sponte quasi adversus alioqui reiciendis arca carmen canis."),
             Type: shared.ComputeInstanceTypeBaremetal.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-06-16T04:50:44.724Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-16T20:41:16.915Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -315,7 +315,7 @@ func main() {
 
 ## RemoveComputeInstance
 
-Remove an instance
+Deletes the ComputeInstance identified by `id`.
 
 ### Example Usage
 
@@ -370,7 +370,7 @@ func main() {
 
 ## UpdateComputeInstance
 
-Update an instance
+Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
 ### Example Usage
 
@@ -414,7 +414,7 @@ func main() {
             },
             GpuCount: unifiedgosdk.Pointer[float64](0.0),
             HasInternetAccess: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("68a4cfd4-c11d-4807-8d5e-f972fde6e258"),
+            ID: unifiedgosdk.Pointer("e8839c42-59e6-46ea-b661-3ffe8d9568e5"),
             Image: unifiedgosdk.Pointer("ubuntu:24.04"),
             Market: shared.MarketSpot.ToPointer(),
             MemoryMb: unifiedgosdk.Pointer[float64](2048.0),
@@ -429,11 +429,11 @@ func main() {
                 Port: unifiedgosdk.Pointer[float64](22.0),
                 Username: unifiedgosdk.Pointer("root"),
             },
-            StartedAt: types.MustNewTimeFromString("2025-03-23T23:18:11.066Z"),
+            StartedAt: types.MustNewTimeFromString("2025-03-24T13:47:14.341Z"),
             Status: shared.ComputeInstanceStatusError.ToPointer(),
             StatusReason: unifiedgosdk.Pointer("Sponte quasi adversus alioqui reiciendis arca carmen canis."),
             Type: shared.ComputeInstanceTypeBaremetal.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-06-16T04:50:44.724Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-16T20:41:16.915Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -31,6 +31,7 @@ func newApplicationstatus(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration,
 }
 
 // GetAtsApplicationstatus - Retrieve an applicationstatus
+// Retrieves a single AtsStatus by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Applicationstatus) GetAtsApplicationstatus(ctx context.Context, request operations.GetAtsApplicationstatusRequest, opts ...operations.Option) (*operations.GetAtsApplicationstatusResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -238,6 +239,7 @@ func (s *Applicationstatus) GetAtsApplicationstatus(ctx context.Context, request
 }
 
 // ListAtsApplicationstatuses - List all applicationstatuses
+// Returns a list of AtsStatuses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Applicationstatus) ListAtsApplicationstatuses(ctx context.Context, request operations.ListAtsApplicationstatusesRequest, opts ...operations.Option) (*operations.ListAtsApplicationstatusesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

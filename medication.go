@@ -31,6 +31,7 @@ func newMedication(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks 
 }
 
 // GetHealthcareMedication - Retrieve a medication
+// Retrieves a single HealthcareMedication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Medication) GetHealthcareMedication(ctx context.Context, request operations.GetHealthcareMedicationRequest, opts ...operations.Option) (*operations.GetHealthcareMedicationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -238,6 +239,7 @@ func (s *Medication) GetHealthcareMedication(ctx context.Context, request operat
 }
 
 // ListHealthcareMedications - List all medications
+// Returns a list of HealthcareMedications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Medication) ListHealthcareMedications(ctx context.Context, request operations.ListHealthcareMedicationsRequest, opts ...operations.Option) (*operations.ListHealthcareMedicationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

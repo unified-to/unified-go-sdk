@@ -11,9 +11,11 @@ type GenaiPrompt struct {
 	McpAuthorizationToken *string  `json:"mcp_authorization_token,omitempty"`
 	McpDeferredTools      []string `json:"mcp_deferred_tools,omitempty"`
 	// Supply a remote MCP URL to send to the LLM API for it to call its tools.  Note: Some LLM APIs do not yet support remote MCP URLs.
-	McpURL   *string        `json:"mcp_url,omitempty"`
+	McpURL *string `json:"mcp_url,omitempty"`
+	// The conversation to send to the model, in order; each message has a role and its content
 	Messages []GenaiContent `json:"messages,omitempty"`
-	ModelID  *string        `json:"model_id,omitempty"`
+	// The ID of the model to use (a GenaiModel ID)
+	ModelID *string `json:"model_id,omitempty"`
 	// Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev).
 	Questions []GenaiQuestion `json:"questions,omitempty"`
 	Raw       map[string]any  `json:"raw,omitempty"`

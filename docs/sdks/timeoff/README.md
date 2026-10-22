@@ -13,7 +13,7 @@
 
 ## CreateHrisTimeoff
 
-Create a timeoff
+Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeoff.
 
 ### Example Usage
 
@@ -39,21 +39,21 @@ func main() {
 
     res, err := s.Timeoff.CreateHrisTimeoff(ctx, operations.CreateHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
-            ApprovedAt: types.MustNewTimeFromString("2022-02-23T09:08:38.740Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-02-23T10:56:51.892Z"),
             Comments: unifiedgosdk.Pointer("Blandior ventus curiositas amplitudo."),
             CreatedAt: types.MustNewTimeFromString("2021-10-06T18:00:20.615Z"),
             Duration: unifiedgosdk.Pointer[float64](4.0),
             DurationType: shared.DurationTypeDay.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2024-12-28T17:18:17.498Z"),
-            ID: unifiedgosdk.Pointer("f0b66e32-63b5-4634-8ced-df6263f431d8"),
+            EndAt: types.MustNewTimeFromString("2024-12-29T08:32:02.355Z"),
+            ID: unifiedgosdk.Pointer("9cb84118-4f94-475f-9ce1-f629fe9fdc82"),
             IsPaid: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             OriginalType: unifiedgosdk.Pointer("acerbitas ut"),
             Reason: unifiedgosdk.Pointer("verto"),
-            StartAt: types.MustNewTimeFromString("2023-09-04T19:24:22.037Z"),
+            StartAt: types.MustNewTimeFromString("2023-09-05T04:25:23.358Z"),
             Status: shared.HrisTimeoffStatusDenied.ToPointer(),
             Type: shared.HrisTimeoffTypeInLieu.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-07-12T19:42:00.487Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-12T23:18:17.913Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",
@@ -87,7 +87,7 @@ func main() {
 
 ## GetHrisTimeoff
 
-Retrieve a timeoff
+Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -142,7 +142,7 @@ func main() {
 
 ## ListHrisTimeoffs
 
-List all timeoffs
+Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -196,7 +196,7 @@ func main() {
 
 ## PatchHrisTimeoff
 
-Update a timeoff
+Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
 ### Example Usage
 
@@ -222,21 +222,21 @@ func main() {
 
     res, err := s.Timeoff.PatchHrisTimeoff(ctx, operations.PatchHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
-            ApprovedAt: types.MustNewTimeFromString("2022-02-23T09:08:38.741Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-02-23T10:56:51.893Z"),
             Comments: unifiedgosdk.Pointer("Blandior ventus curiositas amplitudo."),
             CreatedAt: types.MustNewTimeFromString("2021-10-06T18:00:20.615Z"),
             Duration: unifiedgosdk.Pointer[float64](4.0),
             DurationType: shared.DurationTypeDay.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2024-12-28T17:18:17.511Z"),
-            ID: unifiedgosdk.Pointer("d8855007-ff38-4e99-8643-55c97eb6ff18"),
+            EndAt: types.MustNewTimeFromString("2024-12-29T08:32:02.364Z"),
+            ID: unifiedgosdk.Pointer("9453aff1-d935-4270-a1e8-4e535ec124e9"),
             IsPaid: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             OriginalType: unifiedgosdk.Pointer("acerbitas ut"),
             Reason: unifiedgosdk.Pointer("verto"),
-            StartAt: types.MustNewTimeFromString("2023-09-04T19:24:22.045Z"),
+            StartAt: types.MustNewTimeFromString("2023-09-05T04:25:23.363Z"),
             Status: shared.HrisTimeoffStatusDenied.ToPointer(),
             Type: shared.HrisTimeoffTypeInLieu.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-07-12T19:42:00.490Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-12T23:18:17.915Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",
@@ -271,7 +271,7 @@ func main() {
 
 ## RemoveHrisTimeoff
 
-Remove a timeoff
+Deletes the HrisTimeoff identified by `id`.
 
 ### Example Usage
 
@@ -326,7 +326,7 @@ func main() {
 
 ## UpdateHrisTimeoff
 
-Update a timeoff
+Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
 ### Example Usage
 
@@ -352,21 +352,21 @@ func main() {
 
     res, err := s.Timeoff.UpdateHrisTimeoff(ctx, operations.UpdateHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
-            ApprovedAt: types.MustNewTimeFromString("2022-02-23T09:08:38.741Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-02-23T10:56:51.893Z"),
             Comments: unifiedgosdk.Pointer("Blandior ventus curiositas amplitudo."),
             CreatedAt: types.MustNewTimeFromString("2021-10-06T18:00:20.615Z"),
             Duration: unifiedgosdk.Pointer[float64](4.0),
             DurationType: shared.DurationTypeDay.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2024-12-28T17:18:17.511Z"),
-            ID: unifiedgosdk.Pointer("d8855007-ff38-4e99-8643-55c97eb6ff18"),
+            EndAt: types.MustNewTimeFromString("2024-12-29T08:32:02.364Z"),
+            ID: unifiedgosdk.Pointer("9453aff1-d935-4270-a1e8-4e535ec124e9"),
             IsPaid: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             OriginalType: unifiedgosdk.Pointer("acerbitas ut"),
             Reason: unifiedgosdk.Pointer("verto"),
-            StartAt: types.MustNewTimeFromString("2023-09-04T19:24:22.045Z"),
+            StartAt: types.MustNewTimeFromString("2023-09-05T04:25:23.363Z"),
             Status: shared.HrisTimeoffStatusDenied.ToPointer(),
             Type: shared.HrisTimeoffTypeInLieu.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-07-12T19:42:00.490Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-12T23:18:17.915Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",

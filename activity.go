@@ -31,6 +31,7 @@ func newActivity(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // CreateAtsActivity - Create an activity
+// Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
 func (s *Activity) CreateAtsActivity(ctx context.Context, request operations.CreateAtsActivityRequest, opts ...operations.Option) (*operations.CreateAtsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Activity) CreateAtsActivity(ctx context.Context, request operations.Cre
 }
 
 // CreateLmsActivity - Create an activity
+// Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped to the provider's API. Returns the created LmsActivity.
 func (s *Activity) CreateLmsActivity(ctx context.Context, request operations.CreateLmsActivityRequest, opts ...operations.Option) (*operations.CreateLmsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Activity) CreateLmsActivity(ctx context.Context, request operations.Cre
 }
 
 // GetAtsActivity - Retrieve an activity
+// Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Activity) GetAtsActivity(ctx context.Context, request operations.GetAtsActivityRequest, opts ...operations.Option) (*operations.GetAtsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -666,6 +669,7 @@ func (s *Activity) GetAtsActivity(ctx context.Context, request operations.GetAts
 }
 
 // GetClubsActivity - Retrieve an activity
+// Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Activity) GetClubsActivity(ctx context.Context, request operations.GetClubsActivityRequest, opts ...operations.Option) (*operations.GetClubsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Activity) GetClubsActivity(ctx context.Context, request operations.GetC
 }
 
 // GetLmsActivity - Retrieve an activity
+// Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Activity) GetLmsActivity(ctx context.Context, request operations.GetLmsActivityRequest, opts ...operations.Option) (*operations.GetLmsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1080,6 +1085,7 @@ func (s *Activity) GetLmsActivity(ctx context.Context, request operations.GetLms
 }
 
 // ListAtsActivities - List all activities
+// Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Activity) ListAtsActivities(ctx context.Context, request operations.ListAtsActivitiesRequest, opts ...operations.Option) (*operations.ListAtsActivitiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1287,6 +1293,7 @@ func (s *Activity) ListAtsActivities(ctx context.Context, request operations.Lis
 }
 
 // ListClubsActivities - List all activities
+// Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Activity) ListClubsActivities(ctx context.Context, request operations.ListClubsActivitiesRequest, opts ...operations.Option) (*operations.ListClubsActivitiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1494,6 +1501,7 @@ func (s *Activity) ListClubsActivities(ctx context.Context, request operations.L
 }
 
 // ListLmsActivities - List all activities
+// Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Activity) ListLmsActivities(ctx context.Context, request operations.ListLmsActivitiesRequest, opts ...operations.Option) (*operations.ListLmsActivitiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1701,6 +1709,7 @@ func (s *Activity) ListLmsActivities(ctx context.Context, request operations.Lis
 }
 
 // PatchAtsActivity - Update an activity
+// Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 func (s *Activity) PatchAtsActivity(ctx context.Context, request operations.PatchAtsActivityRequest, opts ...operations.Option) (*operations.PatchAtsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1915,6 +1924,7 @@ func (s *Activity) PatchAtsActivity(ctx context.Context, request operations.Patc
 }
 
 // PatchLmsActivity - Update an activity
+// Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 func (s *Activity) PatchLmsActivity(ctx context.Context, request operations.PatchLmsActivityRequest, opts ...operations.Option) (*operations.PatchLmsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2129,6 +2139,7 @@ func (s *Activity) PatchLmsActivity(ctx context.Context, request operations.Patc
 }
 
 // RemoveAtsActivity - Remove an activity
+// Deletes the AtsActivity identified by `id`.
 func (s *Activity) RemoveAtsActivity(ctx context.Context, request operations.RemoveAtsActivityRequest, opts ...operations.Option) (*operations.RemoveAtsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2311,6 +2322,7 @@ func (s *Activity) RemoveAtsActivity(ctx context.Context, request operations.Rem
 }
 
 // RemoveLmsActivity - Remove an activity
+// Deletes the LmsActivity identified by `id`.
 func (s *Activity) RemoveLmsActivity(ctx context.Context, request operations.RemoveLmsActivityRequest, opts ...operations.Option) (*operations.RemoveLmsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2493,6 +2505,7 @@ func (s *Activity) RemoveLmsActivity(ctx context.Context, request operations.Rem
 }
 
 // UpdateAtsActivity - Update an activity
+// Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 func (s *Activity) UpdateAtsActivity(ctx context.Context, request operations.UpdateAtsActivityRequest, opts ...operations.Option) (*operations.UpdateAtsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2707,6 +2720,7 @@ func (s *Activity) UpdateAtsActivity(ctx context.Context, request operations.Upd
 }
 
 // UpdateLmsActivity - Update an activity
+// Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 func (s *Activity) UpdateLmsActivity(ctx context.Context, request operations.UpdateLmsActivityRequest, opts ...operations.Option) (*operations.UpdateLmsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

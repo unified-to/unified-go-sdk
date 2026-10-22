@@ -3,12 +3,13 @@
 package shared
 
 type DatastoreQuery struct {
-	DatabaseID *string                         `json:"database_id,omitempty"`
-	Metadata   []DatastoreMetadata             `json:"metadata,omitempty"`
-	Query      *PropertyDatastoreQueryQuery    `json:"query,omitempty"`
-	Raw        map[string]any                  `json:"raw,omitempty"`
-	Response   *PropertyDatastoreQueryResponse `json:"response,omitempty"`
-	TableID    *string                         `json:"table_id,omitempty"`
+	DatabaseID *string             `json:"database_id,omitempty"`
+	Metadata   []DatastoreMetadata `json:"metadata,omitempty"`
+	// What to run: a raw `sql` statement, or a structured query (select, filter, sort, limit/offset, aggregate)
+	Query    *PropertyDatastoreQueryQuery    `json:"query,omitempty"`
+	Raw      map[string]any                  `json:"raw,omitempty"`
+	Response *PropertyDatastoreQueryResponse `json:"response,omitempty"`
+	TableID  *string                         `json:"table_id,omitempty"`
 }
 
 func (d *DatastoreQuery) GetDatabaseID() *string {

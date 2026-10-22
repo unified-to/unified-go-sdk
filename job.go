@@ -31,6 +31,7 @@ func newJob(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks.
 }
 
 // CreateAtsJob - Create a job
+// Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the provider's API. Returns the created AtsJob.
 func (s *Job) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobRequest, opts ...operations.Option) (*operations.CreateAtsJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Job) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobR
 }
 
 // CreateHrisJob - Create a job
+// Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the provider's API. Returns the created HrisJob.
 func (s *Job) CreateHrisJob(ctx context.Context, request operations.CreateHrisJobRequest, opts ...operations.Option) (*operations.CreateHrisJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -459,6 +461,7 @@ func (s *Job) CreateHrisJob(ctx context.Context, request operations.CreateHrisJo
 }
 
 // GetAtsJob - Retrieve a job
+// Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Job) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest, opts ...operations.Option) (*operations.GetAtsJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -666,6 +669,7 @@ func (s *Job) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest
 }
 
 // GetHrisJob - Retrieve a job
+// Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Job) GetHrisJob(ctx context.Context, request operations.GetHrisJobRequest, opts ...operations.Option) (*operations.GetHrisJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Job) GetHrisJob(ctx context.Context, request operations.GetHrisJobReque
 }
 
 // ListAtsJobs - List all jobs
+// Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Job) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsRequest, opts ...operations.Option) (*operations.ListAtsJobsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1080,6 +1085,7 @@ func (s *Job) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsReq
 }
 
 // ListHrisJobs - List all jobs
+// Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Job) ListHrisJobs(ctx context.Context, request operations.ListHrisJobsRequest, opts ...operations.Option) (*operations.ListHrisJobsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1287,6 +1293,7 @@ func (s *Job) ListHrisJobs(ctx context.Context, request operations.ListHrisJobsR
 }
 
 // PatchAtsJob - Update a job
+// Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 func (s *Job) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobRequest, opts ...operations.Option) (*operations.PatchAtsJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1501,6 +1508,7 @@ func (s *Job) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobReq
 }
 
 // PatchHrisJob - Update a job
+// Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 func (s *Job) PatchHrisJob(ctx context.Context, request operations.PatchHrisJobRequest, opts ...operations.Option) (*operations.PatchHrisJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1715,6 +1723,7 @@ func (s *Job) PatchHrisJob(ctx context.Context, request operations.PatchHrisJobR
 }
 
 // RemoveAtsJob - Remove a job
+// Deletes the AtsJob identified by `id`.
 func (s *Job) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobRequest, opts ...operations.Option) (*operations.RemoveAtsJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1897,6 +1906,7 @@ func (s *Job) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobR
 }
 
 // RemoveHrisJob - Remove a job
+// Deletes the HrisJob identified by `id`.
 func (s *Job) RemoveHrisJob(ctx context.Context, request operations.RemoveHrisJobRequest, opts ...operations.Option) (*operations.RemoveHrisJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2079,6 +2089,7 @@ func (s *Job) RemoveHrisJob(ctx context.Context, request operations.RemoveHrisJo
 }
 
 // UpdateAtsJob - Update a job
+// Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 func (s *Job) UpdateAtsJob(ctx context.Context, request operations.UpdateAtsJobRequest, opts ...operations.Option) (*operations.UpdateAtsJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2293,6 +2304,7 @@ func (s *Job) UpdateAtsJob(ctx context.Context, request operations.UpdateAtsJobR
 }
 
 // UpdateHrisJob - Update a job
+// Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 func (s *Job) UpdateHrisJob(ctx context.Context, request operations.UpdateHrisJobRequest, opts ...operations.Option) (*operations.UpdateHrisJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

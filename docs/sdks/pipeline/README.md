@@ -13,7 +13,7 @@
 
 ## CreateCrmPipeline
 
-Create a pipeline
+Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped to the provider's API. Returns the created CrmPipeline.
 
 ### Example Usage
 
@@ -42,7 +42,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-12-28T13:45:38.446Z"),
             DealProbability: unifiedgosdk.Pointer[float64](99.0),
             DisplayOrder: unifiedgosdk.Pointer[float64](8.0),
-            ID: unifiedgosdk.Pointer("020faeaa-7aef-48eb-8503-9e5b08726b8e"),
+            ID: unifiedgosdk.Pointer("314b38fc-3392-4486-9232-bf4854c6611c"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.CrmMetadata{},
             Name: unifiedgosdk.Pointer("Small Steel Bacon"),
@@ -52,13 +52,13 @@ func main() {
                     CreatedAt: types.MustNewTimeFromString("2022-12-28T13:45:38.446Z"),
                     DealProbability: unifiedgosdk.Pointer[float64](84.0),
                     DisplayOrder: unifiedgosdk.Pointer[float64](72.0),
-                    ID: unifiedgosdk.Pointer("431f199f-0e23-4baa-a7b9-9c583698c712"),
+                    ID: unifiedgosdk.Pointer("38d5c0fb-d5a7-4980-8b1b-6cc7ad149ac7"),
                     IsClosed: unifiedgosdk.Pointer(true),
                     Name: unifiedgosdk.Pointer("Veniam."),
-                    UpdatedAt: types.MustNewTimeFromString("2025-10-10T12:28:32.951Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2025-10-11T05:50:12.601Z"),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2025-11-01T05:54:52.602Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-01T23:38:47.531Z"),
         },
         ConnectionID: "<id>",
     })
@@ -91,7 +91,7 @@ func main() {
 
 ## GetCrmPipeline
 
-Retrieve a pipeline
+Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -146,7 +146,7 @@ func main() {
 
 ## ListCrmPipelines
 
-List all pipelines
+Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -200,7 +200,7 @@ func main() {
 
 ## PatchCrmPipeline
 
-Update a pipeline
+Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
 ### Example Usage
 
@@ -229,7 +229,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-12-28T13:45:38.446Z"),
             DealProbability: unifiedgosdk.Pointer[float64](99.0),
             DisplayOrder: unifiedgosdk.Pointer[float64](8.0),
-            ID: unifiedgosdk.Pointer("e646ed6a-5891-4590-920f-56531ac2c297"),
+            ID: unifiedgosdk.Pointer("1241cfda-16af-44f0-9452-228e4c096473"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.CrmMetadata{},
             Name: unifiedgosdk.Pointer("Small Steel Bacon"),
@@ -239,13 +239,13 @@ func main() {
                     CreatedAt: types.MustNewTimeFromString("2022-12-28T13:45:38.446Z"),
                     DealProbability: unifiedgosdk.Pointer[float64](84.0),
                     DisplayOrder: unifiedgosdk.Pointer[float64](72.0),
-                    ID: unifiedgosdk.Pointer("adb7be55-98ab-4e90-9d73-31fb8021e556"),
+                    ID: unifiedgosdk.Pointer("142fac8b-ac6e-4b8d-927c-ec9f5b6b87da"),
                     IsClosed: unifiedgosdk.Pointer(true),
                     Name: unifiedgosdk.Pointer("Veniam."),
-                    UpdatedAt: types.MustNewTimeFromString("2025-10-10T12:28:32.963Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2025-10-11T05:50:12.613Z"),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2025-11-01T05:54:52.614Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-01T23:38:47.543Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -279,7 +279,7 @@ func main() {
 
 ## RemoveCrmPipeline
 
-Remove a pipeline
+Deletes the CrmPipeline identified by `id`.
 
 ### Example Usage
 
@@ -334,7 +334,7 @@ func main() {
 
 ## UpdateCrmPipeline
 
-Update a pipeline
+Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
 ### Example Usage
 
@@ -363,7 +363,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-12-28T13:45:38.446Z"),
             DealProbability: unifiedgosdk.Pointer[float64](99.0),
             DisplayOrder: unifiedgosdk.Pointer[float64](8.0),
-            ID: unifiedgosdk.Pointer("e646ed6a-5891-4590-920f-56531ac2c297"),
+            ID: unifiedgosdk.Pointer("1241cfda-16af-44f0-9452-228e4c096473"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.CrmMetadata{},
             Name: unifiedgosdk.Pointer("Small Steel Bacon"),
@@ -373,13 +373,13 @@ func main() {
                     CreatedAt: types.MustNewTimeFromString("2022-12-28T13:45:38.446Z"),
                     DealProbability: unifiedgosdk.Pointer[float64](84.0),
                     DisplayOrder: unifiedgosdk.Pointer[float64](72.0),
-                    ID: unifiedgosdk.Pointer("adb7be55-98ab-4e90-9d73-31fb8021e556"),
+                    ID: unifiedgosdk.Pointer("142fac8b-ac6e-4b8d-927c-ec9f5b6b87da"),
                     IsClosed: unifiedgosdk.Pointer(true),
                     Name: unifiedgosdk.Pointer("Veniam."),
-                    UpdatedAt: types.MustNewTimeFromString("2025-10-10T12:28:32.963Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2025-10-11T05:50:12.613Z"),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2025-11-01T05:54:52.614Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-01T23:38:47.543Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -31,6 +31,7 @@ func newTransaction(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 }
 
 // CreateAccountingTransaction - Create a transaction
+// Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingTransaction.
 func (s *Transaction) CreateAccountingTransaction(ctx context.Context, request operations.CreateAccountingTransactionRequest, opts ...operations.Option) (*operations.CreateAccountingTransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Transaction) CreateAccountingTransaction(ctx context.Context, request o
 }
 
 // GetAccountingTransaction - Retrieve a transaction
+// Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Transaction) GetAccountingTransaction(ctx context.Context, request operations.GetAccountingTransactionRequest, opts ...operations.Option) (*operations.GetAccountingTransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Transaction) GetAccountingTransaction(ctx context.Context, request oper
 }
 
 // ListAccountingTransactions - List all transactions
+// Returns a list of AccountingTransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Transaction) ListAccountingTransactions(ctx context.Context, request operations.ListAccountingTransactionsRequest, opts ...operations.Option) (*operations.ListAccountingTransactionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Transaction) ListAccountingTransactions(ctx context.Context, request op
 }
 
 // PatchAccountingTransaction - Update a transaction
+// Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 func (s *Transaction) PatchAccountingTransaction(ctx context.Context, request operations.PatchAccountingTransactionRequest, opts ...operations.Option) (*operations.PatchAccountingTransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Transaction) PatchAccountingTransaction(ctx context.Context, request op
 }
 
 // RemoveAccountingTransaction - Remove a transaction
+// Deletes the AccountingTransaction identified by `id`.
 func (s *Transaction) RemoveAccountingTransaction(ctx context.Context, request operations.RemoveAccountingTransactionRequest, opts ...operations.Option) (*operations.RemoveAccountingTransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Transaction) RemoveAccountingTransaction(ctx context.Context, request o
 }
 
 // UpdateAccountingTransaction - Update a transaction
+// Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 func (s *Transaction) UpdateAccountingTransaction(ctx context.Context, request operations.UpdateAccountingTransactionRequest, opts ...operations.Option) (*operations.UpdateAccountingTransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

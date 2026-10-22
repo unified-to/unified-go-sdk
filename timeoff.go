@@ -31,6 +31,7 @@ func newTimeoff(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateHrisTimeoff - Create a timeoff
+// Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeoff.
 func (s *Timeoff) CreateHrisTimeoff(ctx context.Context, request operations.CreateHrisTimeoffRequest, opts ...operations.Option) (*operations.CreateHrisTimeoffResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Timeoff) CreateHrisTimeoff(ctx context.Context, request operations.Crea
 }
 
 // GetHrisTimeoff - Retrieve a timeoff
+// Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Timeoff) GetHrisTimeoff(ctx context.Context, request operations.GetHrisTimeoffRequest, opts ...operations.Option) (*operations.GetHrisTimeoffResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Timeoff) GetHrisTimeoff(ctx context.Context, request operations.GetHris
 }
 
 // ListHrisTimeoffs - List all timeoffs
+// Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Timeoff) ListHrisTimeoffs(ctx context.Context, request operations.ListHrisTimeoffsRequest, opts ...operations.Option) (*operations.ListHrisTimeoffsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Timeoff) ListHrisTimeoffs(ctx context.Context, request operations.ListH
 }
 
 // PatchHrisTimeoff - Update a timeoff
+// Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 func (s *Timeoff) PatchHrisTimeoff(ctx context.Context, request operations.PatchHrisTimeoffRequest, opts ...operations.Option) (*operations.PatchHrisTimeoffResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Timeoff) PatchHrisTimeoff(ctx context.Context, request operations.Patch
 }
 
 // RemoveHrisTimeoff - Remove a timeoff
+// Deletes the HrisTimeoff identified by `id`.
 func (s *Timeoff) RemoveHrisTimeoff(ctx context.Context, request operations.RemoveHrisTimeoffRequest, opts ...operations.Option) (*operations.RemoveHrisTimeoffResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Timeoff) RemoveHrisTimeoff(ctx context.Context, request operations.Remo
 }
 
 // UpdateHrisTimeoff - Update a timeoff
+// Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 func (s *Timeoff) UpdateHrisTimeoff(ctx context.Context, request operations.UpdateHrisTimeoffRequest, opts ...operations.Option) (*operations.UpdateHrisTimeoffResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

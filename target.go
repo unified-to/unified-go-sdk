@@ -31,6 +31,7 @@ func newTarget(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 }
 
 // GetAdsTarget - Retrieve a target
+// Retrieves a single AdsTarget by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Target) GetAdsTarget(ctx context.Context, request operations.GetAdsTargetRequest, opts ...operations.Option) (*operations.GetAdsTargetResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -238,6 +239,7 @@ func (s *Target) GetAdsTarget(ctx context.Context, request operations.GetAdsTarg
 }
 
 // ListAdsTargets - List all targets
+// Returns a list of AdsTargets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Target) ListAdsTargets(ctx context.Context, request operations.ListAdsTargetsRequest, opts ...operations.Option) (*operations.ListAdsTargetsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

@@ -31,6 +31,7 @@ func newInventory(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 }
 
 // CreateCommerceInventory - Create an inventory
+// Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they are mapped to the provider's API. Returns the created CommerceInventory.
 func (s *Inventory) CreateCommerceInventory(ctx context.Context, request operations.CreateCommerceInventoryRequest, opts ...operations.Option) (*operations.CreateCommerceInventoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Inventory) CreateCommerceInventory(ctx context.Context, request operati
 }
 
 // GetCommerceInventory - Retrieve an inventory
+// Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Inventory) GetCommerceInventory(ctx context.Context, request operations.GetCommerceInventoryRequest, opts ...operations.Option) (*operations.GetCommerceInventoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Inventory) GetCommerceInventory(ctx context.Context, request operations
 }
 
 // ListCommerceInventories - List all inventories
+// Returns a list of CommerceInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Inventory) ListCommerceInventories(ctx context.Context, request operations.ListCommerceInventoriesRequest, opts ...operations.Option) (*operations.ListCommerceInventoriesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Inventory) ListCommerceInventories(ctx context.Context, request operati
 }
 
 // PatchCommerceInventory - Update an inventory
+// Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 func (s *Inventory) PatchCommerceInventory(ctx context.Context, request operations.PatchCommerceInventoryRequest, opts ...operations.Option) (*operations.PatchCommerceInventoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Inventory) PatchCommerceInventory(ctx context.Context, request operatio
 }
 
 // RemoveCommerceInventory - Remove an inventory
+// Deletes the CommerceInventory identified by `id`.
 func (s *Inventory) RemoveCommerceInventory(ctx context.Context, request operations.RemoveCommerceInventoryRequest, opts ...operations.Option) (*operations.RemoveCommerceInventoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Inventory) RemoveCommerceInventory(ctx context.Context, request operati
 }
 
 // UpdateCommerceInventory - Update an inventory
+// Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 func (s *Inventory) UpdateCommerceInventory(ctx context.Context, request operations.UpdateCommerceInventoryRequest, opts ...operations.Option) (*operations.UpdateCommerceInventoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

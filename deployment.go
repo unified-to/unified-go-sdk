@@ -31,6 +31,7 @@ func newDeployment(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks 
 }
 
 // CreateComputeDeployment - Create a deployment
+// Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they are mapped to the provider's API. Returns the created ComputeDeployment.
 func (s *Deployment) CreateComputeDeployment(ctx context.Context, request operations.CreateComputeDeploymentRequest, opts ...operations.Option) (*operations.CreateComputeDeploymentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -245,6 +246,7 @@ func (s *Deployment) CreateComputeDeployment(ctx context.Context, request operat
 }
 
 // GetComputeDeployment - Retrieve a deployment
+// Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 func (s *Deployment) GetComputeDeployment(ctx context.Context, request operations.GetComputeDeploymentRequest, opts ...operations.Option) (*operations.GetComputeDeploymentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -452,6 +454,7 @@ func (s *Deployment) GetComputeDeployment(ctx context.Context, request operation
 }
 
 // ListComputeDeployments - List all deployments
+// Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 func (s *Deployment) ListComputeDeployments(ctx context.Context, request operations.ListComputeDeploymentsRequest, opts ...operations.Option) (*operations.ListComputeDeploymentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -659,6 +662,7 @@ func (s *Deployment) ListComputeDeployments(ctx context.Context, request operati
 }
 
 // PatchComputeDeployment - Update a deployment
+// Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 func (s *Deployment) PatchComputeDeployment(ctx context.Context, request operations.PatchComputeDeploymentRequest, opts ...operations.Option) (*operations.PatchComputeDeploymentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -873,6 +877,7 @@ func (s *Deployment) PatchComputeDeployment(ctx context.Context, request operati
 }
 
 // RemoveComputeDeployment - Remove a deployment
+// Deletes the ComputeDeployment identified by `id`.
 func (s *Deployment) RemoveComputeDeployment(ctx context.Context, request operations.RemoveComputeDeploymentRequest, opts ...operations.Option) (*operations.RemoveComputeDeploymentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1055,6 +1060,7 @@ func (s *Deployment) RemoveComputeDeployment(ctx context.Context, request operat
 }
 
 // UpdateComputeDeployment - Update a deployment
+// Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 func (s *Deployment) UpdateComputeDeployment(ctx context.Context, request operations.UpdateComputeDeploymentRequest, opts ...operations.Option) (*operations.UpdateComputeDeploymentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

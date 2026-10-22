@@ -86,11 +86,12 @@ type PropertyAdsReportMetricsAd struct {
 	DisplayURL       *string    `json:"display_url,omitempty"`
 	FinalURL         *string    `json:"final_url,omitempty"`
 	// (reference to AdsGroup)
-	GroupID        *string                           `json:"group_id,omitempty"`
-	Headline       *string                           `json:"headline,omitempty"`
-	ID             *string                           `json:"id,omitempty"`
-	LogoCreativeID *string                           `json:"logo_creative_id,omitempty"`
-	Metadata       []AdsMetadata                     `json:"metadata,omitempty"`
+	GroupID        *string       `json:"group_id,omitempty"`
+	Headline       *string       `json:"headline,omitempty"`
+	ID             *string       `json:"id,omitempty"`
+	LogoCreativeID *string       `json:"logo_creative_id,omitempty"`
+	Metadata       []AdsMetadata `json:"metadata,omitempty"`
+	// The ad's name
 	Name           *string                           `json:"name,omitempty"`
 	OrganizationID *string                           `json:"organization_id,omitempty"`
 	Path1          *string                           `json:"path1,omitempty"`

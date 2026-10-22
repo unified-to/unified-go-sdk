@@ -13,7 +13,7 @@
 
 ## CreateCommerceSaleschannel
 
-Create a saleschannel
+Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body; they are mapped to the provider's API. Returns the created CommerceSaleschannel.
 
 ### Example Usage
 
@@ -42,11 +42,11 @@ func main() {
             Collections: []shared.CommerceReference{},
             CreatedAt: types.MustNewTimeFromString("2021-12-12T06:19:55.421Z"),
             Description: unifiedgosdk.Pointer("Utroque denuncio solutio."),
-            ID: unifiedgosdk.Pointer("cc3de979-f65e-4409-9afc-44337c992d3c"),
+            ID: unifiedgosdk.Pointer("f5000683-c155-418d-ba03-716ec32f7165"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.CommerceMetadata{},
             Slug: unifiedgosdk.Pointer("amiculum-congregatio-suspendo"),
-            UpdatedAt: types.MustNewTimeFromString("2025-01-28T00:01:54.549Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-28T15:20:47.188Z"),
         },
         ConnectionID: "<id>",
     })
@@ -79,7 +79,7 @@ func main() {
 
 ## GetCommerceSaleschannel
 
-Retrieve a saleschannel
+Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -134,7 +134,7 @@ func main() {
 
 ## ListCommerceSaleschannels
 
-List all saleschannels
+Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -188,7 +188,7 @@ func main() {
 
 ## PatchCommerceSaleschannel
 
-Update a saleschannel
+Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
 ### Example Usage
 
@@ -217,11 +217,11 @@ func main() {
             Collections: []shared.CommerceReference{},
             CreatedAt: types.MustNewTimeFromString("2021-12-12T06:19:55.421Z"),
             Description: unifiedgosdk.Pointer("Utroque denuncio solutio."),
-            ID: unifiedgosdk.Pointer("dcf669f2-72fe-4f86-bf18-a0776d1f5b30"),
+            ID: unifiedgosdk.Pointer("91b0c154-d7b0-4359-9c83-044aed157d8b"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.CommerceMetadata{},
             Slug: unifiedgosdk.Pointer("amiculum-congregatio-suspendo"),
-            UpdatedAt: types.MustNewTimeFromString("2025-01-28T00:01:54.554Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-28T15:20:47.199Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -255,7 +255,7 @@ func main() {
 
 ## RemoveCommerceSaleschannel
 
-Remove a saleschannel
+Deletes the CommerceSaleschannel identified by `id`.
 
 ### Example Usage
 
@@ -310,7 +310,7 @@ func main() {
 
 ## UpdateCommerceSaleschannel
 
-Update a saleschannel
+Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
 ### Example Usage
 
@@ -339,11 +339,11 @@ func main() {
             Collections: []shared.CommerceReference{},
             CreatedAt: types.MustNewTimeFromString("2021-12-12T06:19:55.421Z"),
             Description: unifiedgosdk.Pointer("Utroque denuncio solutio."),
-            ID: unifiedgosdk.Pointer("dcf669f2-72fe-4f86-bf18-a0776d1f5b30"),
+            ID: unifiedgosdk.Pointer("91b0c154-d7b0-4359-9c83-044aed157d8b"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.CommerceMetadata{},
             Slug: unifiedgosdk.Pointer("amiculum-congregatio-suspendo"),
-            UpdatedAt: types.MustNewTimeFromString("2025-01-28T00:01:54.554Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-28T15:20:47.199Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
