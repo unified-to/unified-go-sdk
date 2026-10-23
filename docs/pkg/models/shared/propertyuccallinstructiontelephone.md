@@ -1,0 +1,11 @@
+# PropertyUcCallInstructionTelephone
+
+DIAL: number to dial and bridge
+
+
+## Fields
+
+| Field                                                                                                                  | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `Telephone`                                                                                                            | `string`                                                                                                               | :heavy_check_mark:                                                                                                     | N/A                                                                                                                    |
+| `Type`                                                                                                                 | [*shared.PropertyUcCallInstructionTelephoneType](../../../pkg/models/shared/propertyuccallinstructiontelephonetype.md) | :heavy_minus_sign:                                                                                                     | N/A                                                                                                                    |

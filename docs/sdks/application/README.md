@@ -40,10 +40,10 @@ func main() {
     res, err := s.Application.CreateAtsApplication(ctx, operations.CreateAtsApplicationRequest{
         AtsApplication: shared.AtsApplication{
             Answers: []shared.AtsApplicationAnswer{},
-            AppliedAt: types.MustNewTimeFromString("2025-09-30T10:07:05.968Z"),
+            AppliedAt: types.MustNewTimeFromString("2025-10-01T02:28:36.165Z"),
             CreatedAt: types.MustNewTimeFromString("2023-10-17T07:19:48.787Z"),
-            HiredAt: types.MustNewTimeFromString("2026-05-13T14:47:45.163Z"),
-            ID: unifiedgosdk.Pointer("9c2e6ea4-6b90-4c68-93a2-344b71e7dd8d"),
+            HiredAt: types.MustNewTimeFromString("2026-05-14T12:18:46.249Z"),
+            ID: unifiedgosdk.Pointer("691ccde3-dfc9-4a25-a853-b1faf6b93627"),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
@@ -52,7 +52,7 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("38390c94-ee6e-49d6-9af9-49bf6b77284a"),
+                    ID: unifiedgosdk.Pointer("505e78c4-7b40-4697-8bf1-2d93a48da121"),
                     Namespace: unifiedgosdk.Pointer("application"),
                     Slug: unifiedgosdk.Pointer("stella"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
@@ -63,12 +63,12 @@ func main() {
             Offers: []shared.AtsOffer{},
             OriginalStatus: unifiedgosdk.Pointer("vomica"),
             OriginalSubstatus: unifiedgosdk.Pointer("allatus"),
-            RejectedAt: types.MustNewTimeFromString("2026-10-12T12:41:06.322Z"),
+            RejectedAt: types.MustNewTimeFromString("2026-10-13T13:40:54.965Z"),
             RejectedReason: unifiedgosdk.Pointer("Cometes amplitudo videlicet talio."),
             Source: unifiedgosdk.Pointer("credo"),
             Status: shared.AtsApplicationStatusReviewing.ToPointer(),
             Summary: unifiedgosdk.Pointer("Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam."),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-19T09:04:15.175Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-20T10:13:28.660Z"),
         },
         ConnectionID: "<id>",
     })
@@ -237,10 +237,10 @@ func main() {
     res, err := s.Application.PatchAtsApplication(ctx, operations.PatchAtsApplicationRequest{
         AtsApplication: shared.AtsApplication{
             Answers: []shared.AtsApplicationAnswer{},
-            AppliedAt: types.MustNewTimeFromString("2025-09-30T10:07:05.985Z"),
+            AppliedAt: types.MustNewTimeFromString("2025-10-01T02:28:36.189Z"),
             CreatedAt: types.MustNewTimeFromString("2023-10-17T07:19:48.787Z"),
-            HiredAt: types.MustNewTimeFromString("2026-05-13T14:47:45.185Z"),
-            ID: unifiedgosdk.Pointer("4be98c80-0842-49db-af54-a6568bd8bde2"),
+            HiredAt: types.MustNewTimeFromString("2026-05-14T12:18:46.280Z"),
+            ID: unifiedgosdk.Pointer("47d4a2d8-c1f9-43e2-a061-5cbfd7fc9fbc"),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
@@ -249,7 +249,7 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("69265a38-6757-4b66-b686-94690afae256"),
+                    ID: unifiedgosdk.Pointer("248657dc-f893-416a-93b6-cb3689bdb330"),
                     Namespace: unifiedgosdk.Pointer("application"),
                     Slug: unifiedgosdk.Pointer("stella"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
@@ -260,12 +260,12 @@ func main() {
             Offers: []shared.AtsOffer{},
             OriginalStatus: unifiedgosdk.Pointer("vomica"),
             OriginalSubstatus: unifiedgosdk.Pointer("allatus"),
-            RejectedAt: types.MustNewTimeFromString("2026-10-12T12:41:06.348Z"),
+            RejectedAt: types.MustNewTimeFromString("2026-10-13T13:40:55.001Z"),
             RejectedReason: unifiedgosdk.Pointer("Cometes amplitudo videlicet talio."),
             Source: unifiedgosdk.Pointer("credo"),
             Status: shared.AtsApplicationStatusReviewing.ToPointer(),
             Summary: unifiedgosdk.Pointer("Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam."),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-19T09:04:15.201Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-20T10:13:28.697Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -381,10 +381,10 @@ func main() {
     res, err := s.Application.UpdateAtsApplication(ctx, operations.UpdateAtsApplicationRequest{
         AtsApplication: shared.AtsApplication{
             Answers: []shared.AtsApplicationAnswer{},
-            AppliedAt: types.MustNewTimeFromString("2025-09-30T10:07:05.985Z"),
+            AppliedAt: types.MustNewTimeFromString("2025-10-01T02:28:36.189Z"),
             CreatedAt: types.MustNewTimeFromString("2023-10-17T07:19:48.787Z"),
-            HiredAt: types.MustNewTimeFromString("2026-05-13T14:47:45.185Z"),
-            ID: unifiedgosdk.Pointer("4be98c80-0842-49db-af54-a6568bd8bde2"),
+            HiredAt: types.MustNewTimeFromString("2026-05-14T12:18:46.280Z"),
+            ID: unifiedgosdk.Pointer("47d4a2d8-c1f9-43e2-a061-5cbfd7fc9fbc"),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
@@ -393,7 +393,7 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("69265a38-6757-4b66-b686-94690afae256"),
+                    ID: unifiedgosdk.Pointer("248657dc-f893-416a-93b6-cb3689bdb330"),
                     Namespace: unifiedgosdk.Pointer("application"),
                     Slug: unifiedgosdk.Pointer("stella"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
@@ -404,12 +404,12 @@ func main() {
             Offers: []shared.AtsOffer{},
             OriginalStatus: unifiedgosdk.Pointer("vomica"),
             OriginalSubstatus: unifiedgosdk.Pointer("allatus"),
-            RejectedAt: types.MustNewTimeFromString("2026-10-12T12:41:06.348Z"),
+            RejectedAt: types.MustNewTimeFromString("2026-10-13T13:40:55.001Z"),
             RejectedReason: unifiedgosdk.Pointer("Cometes amplitudo videlicet talio."),
             Source: unifiedgosdk.Pointer("credo"),
             Status: shared.AtsApplicationStatusReviewing.ToPointer(),
             Summary: unifiedgosdk.Pointer("Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam."),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-19T09:04:15.201Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-20T10:13:28.697Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

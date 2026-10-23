@@ -53,7 +53,7 @@ func main() {
             Content: unifiedgosdk.Pointer("Taedium thymum adipiscor amicitia cui."),
             CreatedAt: types.MustNewTimeFromString("2019-12-12T18:10:22.988Z"),
             HelpfulVotes: unifiedgosdk.Pointer[float64](66.0),
-            ID: unifiedgosdk.Pointer("5511e647-c88b-49ec-a719-ff9102b72c8a"),
+            ID: unifiedgosdk.Pointer("6c18a8da-a01d-43d3-a8dc-7d13c94d042c"),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsPublic: unifiedgosdk.Pointer(true),
             IsVerified: unifiedgosdk.Pointer(false),
@@ -61,10 +61,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Desipio carpo sol laudantium colo."),
                     Height: unifiedgosdk.Pointer[float64](749.0),
-                    ID: unifiedgosdk.Pointer("655ee5a2-586f-49e6-b928-af0c396e311b"),
+                    ID: unifiedgosdk.Pointer("3f42d8aa-a733-42a6-89d4-62365a42ae1b"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("f431de97-875f-45bb-b368-5a2124680506"),
+                            ID: unifiedgosdk.Pointer("fb376baa-54cf-4396-896c-deda403e361a"),
                             Slug: unifiedgosdk.Pointer("textor"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "quos",
@@ -79,10 +79,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Adopto teneo numquam."),
                     Height: unifiedgosdk.Pointer[float64](957.0),
-                    ID: unifiedgosdk.Pointer("8ab75126-17bf-45c6-b025-20689efa94a0"),
+                    ID: unifiedgosdk.Pointer("f7e0cbd5-6cd9-4ee6-a9e6-4f0923af2c6b"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("37f21345-4a56-42ee-bdba-e3331ac2b3a7"),
+                            ID: unifiedgosdk.Pointer("c941f42b-de0c-4660-9110-db96bb6d5ea0"),
                             Slug: unifiedgosdk.Pointer("bos"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "casso",
@@ -100,7 +100,7 @@ func main() {
             Status: shared.CommerceReviewStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("Coepi adamo amicitia auxilium toties."),
             UnhelpfulVotes: unifiedgosdk.Pointer[float64](88.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-22T04:26:27.338Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-23T01:22:08.430Z"),
             URL: unifiedgosdk.Pointer("https://diligent-bandwidth.biz"),
             VerifiedPurchase: unifiedgosdk.Pointer(true),
         },
@@ -496,7 +496,7 @@ func main() {
             Content: unifiedgosdk.Pointer("Taedium thymum adipiscor amicitia cui."),
             CreatedAt: types.MustNewTimeFromString("2019-12-12T18:10:22.988Z"),
             HelpfulVotes: unifiedgosdk.Pointer[float64](66.0),
-            ID: unifiedgosdk.Pointer("68f33a18-c78b-4069-a9b5-44e7f13e5a51"),
+            ID: unifiedgosdk.Pointer("add6eeb2-2931-4600-bc69-b0afebfd5a4d"),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsPublic: unifiedgosdk.Pointer(true),
             IsVerified: unifiedgosdk.Pointer(false),
@@ -504,10 +504,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Desipio carpo sol laudantium colo."),
                     Height: unifiedgosdk.Pointer[float64](749.0),
-                    ID: unifiedgosdk.Pointer("34369488-7bac-478b-9dcd-1a33de100275"),
+                    ID: unifiedgosdk.Pointer("24c5dc79-956b-41dd-8214-c21cf0b7b510"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("54ecfb50-7895-4f9d-87d5-db6f71068c76"),
+                            ID: unifiedgosdk.Pointer("a7b2f2c7-2061-4af6-ab2d-0648bf4f984c"),
                             Slug: unifiedgosdk.Pointer("textor"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "quos",
@@ -522,10 +522,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Adopto teneo numquam."),
                     Height: unifiedgosdk.Pointer[float64](957.0),
-                    ID: unifiedgosdk.Pointer("1e8a1d76-307a-42fa-aa87-d954fe49d115"),
+                    ID: unifiedgosdk.Pointer("ba767d46-d8cc-4d17-b6bd-6257ba6599a5"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("0cbc7a59-778a-4ad9-9e52-3788fb32cc25"),
+                            ID: unifiedgosdk.Pointer("af30c47b-a008-4a1f-85c1-80e042a2ccfe"),
                             Slug: unifiedgosdk.Pointer("bos"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "casso",
@@ -543,7 +543,7 @@ func main() {
             Status: shared.CommerceReviewStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("Coepi adamo amicitia auxilium toties."),
             UnhelpfulVotes: unifiedgosdk.Pointer[float64](88.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-22T04:26:27.383Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-23T01:22:08.470Z"),
             URL: unifiedgosdk.Pointer("https://diligent-bandwidth.biz"),
             VerifiedPurchase: unifiedgosdk.Pointer(true),
         },
@@ -725,7 +725,7 @@ func main() {
             Content: unifiedgosdk.Pointer("Taedium thymum adipiscor amicitia cui."),
             CreatedAt: types.MustNewTimeFromString("2019-12-12T18:10:22.988Z"),
             HelpfulVotes: unifiedgosdk.Pointer[float64](66.0),
-            ID: unifiedgosdk.Pointer("68f33a18-c78b-4069-a9b5-44e7f13e5a51"),
+            ID: unifiedgosdk.Pointer("add6eeb2-2931-4600-bc69-b0afebfd5a4d"),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsPublic: unifiedgosdk.Pointer(true),
             IsVerified: unifiedgosdk.Pointer(false),
@@ -733,10 +733,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Desipio carpo sol laudantium colo."),
                     Height: unifiedgosdk.Pointer[float64](749.0),
-                    ID: unifiedgosdk.Pointer("34369488-7bac-478b-9dcd-1a33de100275"),
+                    ID: unifiedgosdk.Pointer("24c5dc79-956b-41dd-8214-c21cf0b7b510"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("54ecfb50-7895-4f9d-87d5-db6f71068c76"),
+                            ID: unifiedgosdk.Pointer("a7b2f2c7-2061-4af6-ab2d-0648bf4f984c"),
                             Slug: unifiedgosdk.Pointer("textor"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "quos",
@@ -751,10 +751,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Adopto teneo numquam."),
                     Height: unifiedgosdk.Pointer[float64](957.0),
-                    ID: unifiedgosdk.Pointer("1e8a1d76-307a-42fa-aa87-d954fe49d115"),
+                    ID: unifiedgosdk.Pointer("ba767d46-d8cc-4d17-b6bd-6257ba6599a5"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("0cbc7a59-778a-4ad9-9e52-3788fb32cc25"),
+                            ID: unifiedgosdk.Pointer("af30c47b-a008-4a1f-85c1-80e042a2ccfe"),
                             Slug: unifiedgosdk.Pointer("bos"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "casso",
@@ -772,7 +772,7 @@ func main() {
             Status: shared.CommerceReviewStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("Coepi adamo amicitia auxilium toties."),
             UnhelpfulVotes: unifiedgosdk.Pointer[float64](88.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-22T04:26:27.383Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-23T01:22:08.470Z"),
             URL: unifiedgosdk.Pointer("https://diligent-bandwidth.biz"),
             VerifiedPurchase: unifiedgosdk.Pointer(true),
         },

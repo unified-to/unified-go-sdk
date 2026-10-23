@@ -28,6 +28,13 @@ const (
 	GetUcCallQueryParamFieldsMetadata               GetUcCallQueryParamFields = "metadata"
 	GetUcCallQueryParamFieldsRaw                    GetUcCallQueryParamFields = "raw"
 	GetUcCallQueryParamFieldsConversationIdentifier GetUcCallQueryParamFields = "conversation_identifier"
+	GetUcCallQueryParamFieldsStatus                 GetUcCallQueryParamFields = "status"
+	GetUcCallQueryParamFieldsAnswerAt               GetUcCallQueryParamFields = "answer_at"
+	GetUcCallQueryParamFieldsDurationSeconds        GetUcCallQueryParamFields = "duration_seconds"
+	GetUcCallQueryParamFieldsCostAmount             GetUcCallQueryParamFields = "cost_amount"
+	GetUcCallQueryParamFieldsCurrency               GetUcCallQueryParamFields = "currency"
+	GetUcCallQueryParamFieldsParentID               GetUcCallQueryParamFields = "parent_id"
+	GetUcCallQueryParamFieldsInstructions           GetUcCallQueryParamFields = "instructions"
 )
 
 func (e GetUcCallQueryParamFields) ToPointer() *GetUcCallQueryParamFields {
@@ -70,6 +77,20 @@ func (e *GetUcCallQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "raw":
 		fallthrough
 	case "conversation_identifier":
+		fallthrough
+	case "status":
+		fallthrough
+	case "answer_at":
+		fallthrough
+	case "duration_seconds":
+		fallthrough
+	case "cost_amount":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "instructions":
 		*e = GetUcCallQueryParamFields(v)
 		return nil
 	default:

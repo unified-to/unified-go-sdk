@@ -40,11 +40,11 @@ func main() {
     res, err := s.Branch.CreateRepoBranch(ctx, operations.CreateRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
             CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
-            ID: unifiedgosdk.Pointer("2e0abdc1-3bc6-4576-86b2-498ceec9b4b3"),
+            ID: unifiedgosdk.Pointer("4b96ed82-b0be-41af-ad5c-7f8942bf3589"),
             Metadata: []shared.RepoMetadata{},
             Name: "transmitter-calculate",
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2020-01-07T10:44:37.774Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-01-07T13:36:08.198Z"),
         },
         ConnectionID: "<id>",
     })
@@ -213,11 +213,11 @@ func main() {
     res, err := s.Branch.PatchRepoBranch(ctx, operations.PatchRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
             CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
-            ID: unifiedgosdk.Pointer("61096c53-c8e7-4fe5-b5b6-a2ff57e6c228"),
+            ID: unifiedgosdk.Pointer("ef10d23a-c2b6-4d39-88f8-332ab7773cff"),
             Metadata: []shared.RepoMetadata{},
             Name: "transmitter-calculate",
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2020-01-07T10:44:37.776Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-01-07T13:36:08.199Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -333,11 +333,11 @@ func main() {
     res, err := s.Branch.UpdateRepoBranch(ctx, operations.UpdateRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
             CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
-            ID: unifiedgosdk.Pointer("61096c53-c8e7-4fe5-b5b6-a2ff57e6c228"),
+            ID: unifiedgosdk.Pointer("ef10d23a-c2b6-4d39-88f8-332ab7773cff"),
             Metadata: []shared.RepoMetadata{},
             Name: "transmitter-calculate",
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2020-01-07T10:44:37.776Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-01-07T13:36:08.199Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -43,7 +43,7 @@ func main() {
         AtsScorecard: shared.AtsScorecard{
             Comment: unifiedgosdk.Pointer("Maiores enim."),
             CreatedAt: types.MustNewTimeFromString("2022-02-20T17:09:45.498Z"),
-            ID: unifiedgosdk.Pointer("edf3676f-3ef2-4767-bc7c-83962a8433f3"),
+            ID: unifiedgosdk.Pointer("fe72d518-fbc4-4e86-9e30-dda5909bafc7"),
             Metadata: []shared.AtsMetadata{},
             Questions: []shared.AtsScorecardQuestion{
                 shared.AtsScorecardQuestion{
@@ -57,7 +57,7 @@ func main() {
                 },
             },
             Recommendation: shared.RecommendationStrongYes.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-05T20:13:30.676Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-06T03:10:49.350Z"),
         },
         ConnectionID: "<id>",
     })
@@ -336,7 +336,7 @@ func main() {
         AtsScorecard: shared.AtsScorecard{
             Comment: unifiedgosdk.Pointer("Maiores enim."),
             CreatedAt: types.MustNewTimeFromString("2022-02-20T17:09:45.498Z"),
-            ID: unifiedgosdk.Pointer("03c41823-53e4-40f4-ad4a-ea8f6aacc6f7"),
+            ID: unifiedgosdk.Pointer("53745455-f428-4e4c-bf8e-04188ab8b1d5"),
             Metadata: []shared.AtsMetadata{},
             Questions: []shared.AtsScorecardQuestion{
                 shared.AtsScorecardQuestion{
@@ -350,7 +350,7 @@ func main() {
                 },
             },
             Recommendation: shared.RecommendationStrongYes.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-05T20:13:30.679Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-06T03:10:49.355Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -467,7 +467,7 @@ func main() {
         AtsScorecard: shared.AtsScorecard{
             Comment: unifiedgosdk.Pointer("Maiores enim."),
             CreatedAt: types.MustNewTimeFromString("2022-02-20T17:09:45.498Z"),
-            ID: unifiedgosdk.Pointer("03c41823-53e4-40f4-ad4a-ea8f6aacc6f7"),
+            ID: unifiedgosdk.Pointer("53745455-f428-4e4c-bf8e-04188ab8b1d5"),
             Metadata: []shared.AtsMetadata{},
             Questions: []shared.AtsScorecardQuestion{
                 shared.AtsScorecardQuestion{
@@ -481,7 +481,7 @@ func main() {
                 },
             },
             Recommendation: shared.RecommendationStrongYes.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-05T20:13:30.679Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-06T03:10:49.355Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

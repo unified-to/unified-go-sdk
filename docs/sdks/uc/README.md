@@ -4,6 +4,7 @@
 
 ### Available Operations
 
+* [CreateUcCall](#createuccall) - Create a call
 * [CreateUcComment](#createuccomment) - Create a comment
 * [CreateUcContact](#createuccontact) - Create a contact
 * [CreateUcRecording](#createucrecording) - Create a recording
@@ -19,15 +20,110 @@
 * [ListUcRecordings](#listucrecordings) - List all recordings
 * [ListUcScorecards](#listucscorecards) - List all scorecards
 * [ListUcScorecardtemplates](#listucscorecardtemplates) - List all scorecardtemplates
+* [PatchUcCall](#patchuccall) - Update a call
 * [PatchUcComment](#patchuccomment) - Update a comment
 * [PatchUcContact](#patchuccontact) - Update a contact
 * [PatchUcRecording](#patchucrecording) - Update a recording
 * [RemoveUcComment](#removeuccomment) - Remove a comment
 * [RemoveUcContact](#removeuccontact) - Remove a contact
 * [RemoveUcRecording](#removeucrecording) - Remove a recording
+* [UpdateUcCall](#updateuccall) - Update a call
 * [UpdateUcComment](#updateuccomment) - Update a comment
 * [UpdateUcContact](#updateuccontact) - Update a contact
 * [UpdateUcRecording](#updateucrecording) - Update a recording
+
+## CreateUcCall
+
+Creates a UcCall. Provide the unified UcCall fields in the request body; they are mapped to the provider's API. Returns the created UcCall.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createUcCall" method="post" path="/uc/{connection_id}/call" example="uc_call" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Uc.CreateUcCall(ctx, operations.CreateUcCallRequest{
+        UcCall: shared.UcCall{
+            AnswerAt: types.MustNewTimeFromString("2025-05-14T20:10:48.269Z"),
+            Contacts: []shared.UcContact{},
+            ConversationIdentifier: unifiedgosdk.Pointer("d418041a-b3f9-4d48-a30f-ac493a6fed25"),
+            CostAmount: unifiedgosdk.Pointer[float64](1.564),
+            CreatedAt: types.MustNewTimeFromString("2023-04-22T19:05:34.882Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            DurationSeconds: unifiedgosdk.Pointer[float64](2556.0),
+            EndAt: types.MustNewTimeFromString("2024-05-30T17:02:55.107Z"),
+            ID: unifiedgosdk.Pointer("d418041a-b3f9-4d48-a30f-ac493a6fed25"),
+            IsPrivate: unifiedgosdk.Pointer(false),
+            Metadata: []shared.UcMetadata{
+                shared.UcMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateUcMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.UcMetadataFormatPrice.ToPointer(),
+                    ID: unifiedgosdk.Pointer("b297918d-418e-4b8a-9700-daca98e8cd7b"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("custom_field"),
+                    Value: unifiedgosdk.Pointer(shared.CreateUcMetadataValueStr(
+                        "tui",
+                    )),
+                },
+            },
+            StartAt: types.MustNewTimeFromString("2023-12-17T19:10:37.883Z"),
+            Status: shared.UcCallStatusInProgress.ToPointer(),
+            Telephone: &shared.PropertyUcCallTelephone{
+                Telephone: "(493) 534-0768",
+                Type: shared.PropertyUcCallTelephoneTypeMobile.ToPointer(),
+            },
+            Type: shared.UcCallTypeInbound.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-03T12:30:39.317Z"),
+            UserPhone: unifiedgosdk.Pointer("819-894-3317 x163"),
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.UcCall != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.CreateUcCallRequest](../../pkg/models/operations/createuccallrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
+
+### Response
+
+**[*operations.CreateUcCallResponse](../../pkg/models/operations/createuccallresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## CreateUcComment
 
@@ -58,9 +154,9 @@ func main() {
         UcComment: shared.UcComment{
             Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
             CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
-            ID: unifiedgosdk.Pointer("b9065532-34c2-4db6-87db-7596b91ab742"),
+            ID: unifiedgosdk.Pointer("4517ea6d-26eb-4f3c-9f30-53253eada485"),
             Metadata: []shared.UcMetadata{},
-            UpdatedAt: unifiedgosdk.Pointer("2024-02-10T00:14:01.047Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-10T06:18:50.517Z"),
         },
         ConnectionID: "<id>",
     })
@@ -128,7 +224,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Luther"),
-            ID: unifiedgosdk.Pointer("07d54d1d-38a4-4c25-aa39-d52da829527a"),
+            ID: unifiedgosdk.Pointer("fc91fb48-741d-429c-b715-cd77ba5148d9"),
             LastName: unifiedgosdk.Pointer("Rogahn"),
             Metadata: []shared.UcMetadata{},
             Name: unifiedgosdk.Pointer("Luther Rogahn"),
@@ -147,7 +243,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Chief Optimization Executive"),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-08T23:06:51.843Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-09T13:58:02.853Z"),
         },
         ConnectionID: "<id>",
     })
@@ -207,36 +303,36 @@ func main() {
     res, err := s.Uc.CreateUcRecording(ctx, operations.CreateUcRecordingRequest{
         UcRecording: shared.UcRecording{
             Contacts: []shared.UcContact{},
-            ConversationIdentifier: unifiedgosdk.Pointer("ce79efe1-cc1c-4c2c-acec-02afbbdf5310"),
+            ConversationIdentifier: unifiedgosdk.Pointer("3b201010-6c24-4033-b9a3-6ec4a1958951"),
             CreatedAt: types.MustNewTimeFromString("2022-09-17T19:41:46.956Z"),
-            EndAt: types.MustNewTimeFromString("2024-05-05T09:23:54.557Z"),
-            ExpiresAt: types.MustNewTimeFromString("2026-04-27T15:25:56.416Z"),
-            ID: unifiedgosdk.Pointer("ce79efe1-cc1c-4c2c-acec-02afbbdf5310"),
+            EndAt: types.MustNewTimeFromString("2024-05-05T19:26:30.401Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-04-28T13:39:18.608Z"),
+            ID: unifiedgosdk.Pointer("3b201010-6c24-4033-b9a3-6ec4a1958951"),
             Media: []shared.UcRecordingMedia{
                 shared.UcRecordingMedia{
-                    EndAt: types.MustNewTimeFromString("2024-04-02T04:32:20.046Z"),
+                    EndAt: types.MustNewTimeFromString("2024-04-02T14:01:20.238Z"),
                     Language: unifiedgosdk.Pointer("en"),
                     RecordingDownloadURL: unifiedgosdk.Pointer("https://parched-wasabi.com/"),
-                    StartAt: types.MustNewTimeFromString("2026-05-16T07:47:39.929Z"),
+                    StartAt: types.MustNewTimeFromString("2026-05-17T06:19:56.250Z"),
                     TranscriptDownloadURL: unifiedgosdk.Pointer("https://colossal-cuckoo.name"),
                     Transcripts: []shared.UcRecordingTranscript{
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2026-02-25T08:16:48.339Z"),
-                            StartAt: types.MustNewTimeFromString("2024-06-02T15:59:26.107Z"),
+                            EndAt: types.MustNewTimeFromString("2026-02-26T05:28:09.258Z"),
+                            StartAt: types.MustNewTimeFromString("2024-06-03T02:30:38.447Z"),
                             Text: "Turpis maiores ducimus tero speculum.",
                         },
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2024-10-13T01:13:56.875Z"),
-                            StartAt: types.MustNewTimeFromString("2026-08-03T19:38:14.859Z"),
+                            EndAt: types.MustNewTimeFromString("2024-10-13T13:59:06.030Z"),
+                            StartAt: types.MustNewTimeFromString("2026-08-04T19:30:57.059Z"),
                             Text: "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     },
                 },
             },
             Metadata: []shared.UcMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-04-27T21:36:08.953Z"),
+            StartAt: types.MustNewTimeFromString("2023-04-28T01:20:50.923Z"),
             Type: shared.UcRecordingTypeOutbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-17T01:37:35.043Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-17T16:59:34.916Z"),
             UserPhone: unifiedgosdk.Pointer("1-915-327-0429 x509"),
             WebURL: unifiedgosdk.Pointer("https://spherical-comparison.org"),
         },
@@ -923,6 +1019,100 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## PatchUcCall
+
+Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchUcCall" method="patch" path="/uc/{connection_id}/call/{id}" example="uc_call" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Uc.PatchUcCall(ctx, operations.PatchUcCallRequest{
+        UcCall: shared.UcCall{
+            AnswerAt: types.MustNewTimeFromString("2025-05-14T20:10:48.290Z"),
+            Contacts: []shared.UcContact{},
+            ConversationIdentifier: unifiedgosdk.Pointer("0631c1ae-258d-42f6-b130-dde2a1c93454"),
+            CostAmount: unifiedgosdk.Pointer[float64](1.564),
+            CreatedAt: types.MustNewTimeFromString("2023-04-22T19:05:34.882Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            DurationSeconds: unifiedgosdk.Pointer[float64](2556.0),
+            EndAt: types.MustNewTimeFromString("2024-05-30T17:02:55.118Z"),
+            ID: unifiedgosdk.Pointer("0631c1ae-258d-42f6-b130-dde2a1c93454"),
+            IsPrivate: unifiedgosdk.Pointer(false),
+            Metadata: []shared.UcMetadata{
+                shared.UcMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateUcMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.UcMetadataFormatPrice.ToPointer(),
+                    ID: unifiedgosdk.Pointer("38ddc9fb-5922-46fc-8572-886aa2d1fdbd"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("custom_field"),
+                    Value: unifiedgosdk.Pointer(shared.CreateUcMetadataValueStr(
+                        "tui",
+                    )),
+                },
+            },
+            StartAt: types.MustNewTimeFromString("2023-12-17T19:10:37.890Z"),
+            Status: shared.UcCallStatusInProgress.ToPointer(),
+            Telephone: &shared.PropertyUcCallTelephone{
+                Telephone: "(493) 534-0768",
+                Type: shared.PropertyUcCallTelephoneTypeMobile.ToPointer(),
+            },
+            Type: shared.UcCallTypeInbound.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-03T12:30:39.320Z"),
+            UserPhone: unifiedgosdk.Pointer("819-894-3317 x163"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.UcCall != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
+| `request`                                                                          | [operations.PatchUcCallRequest](../../pkg/models/operations/patchuccallrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `opts`                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                       | :heavy_minus_sign:                                                                 | The options for this request.                                                      |
+
+### Response
+
+**[*operations.PatchUcCallResponse](../../pkg/models/operations/patchuccallresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## PatchUcComment
 
 Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
@@ -952,9 +1142,9 @@ func main() {
         UcComment: shared.UcComment{
             Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
             CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
-            ID: unifiedgosdk.Pointer("f9542e44-6a26-42ef-b104-7bb1a17b8698"),
+            ID: unifiedgosdk.Pointer("1adc5c72-91da-4928-b257-5d8050ab94b7"),
             Metadata: []shared.UcMetadata{},
-            UpdatedAt: unifiedgosdk.Pointer("2024-02-10T00:14:01.049Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-10T06:18:50.519Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1023,7 +1213,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Luther"),
-            ID: unifiedgosdk.Pointer("62d40703-2d73-48d4-98f9-bd4bfc5324d5"),
+            ID: unifiedgosdk.Pointer("84574b7f-6c76-4e60-9a91-d28acd082455"),
             LastName: unifiedgosdk.Pointer("Rogahn"),
             Metadata: []shared.UcMetadata{},
             Name: unifiedgosdk.Pointer("Luther Rogahn"),
@@ -1042,7 +1232,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Chief Optimization Executive"),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-08T23:06:51.851Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-09T13:58:02.860Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1103,36 +1293,36 @@ func main() {
     res, err := s.Uc.PatchUcRecording(ctx, operations.PatchUcRecordingRequest{
         UcRecording: shared.UcRecording{
             Contacts: []shared.UcContact{},
-            ConversationIdentifier: unifiedgosdk.Pointer("12f12c15-a763-464e-b713-8b7b1c4b7c11"),
+            ConversationIdentifier: unifiedgosdk.Pointer("a285ab39-16b0-4c53-8678-142bd66f67c1"),
             CreatedAt: types.MustNewTimeFromString("2022-09-17T19:41:46.956Z"),
-            EndAt: types.MustNewTimeFromString("2024-05-05T09:23:54.571Z"),
-            ExpiresAt: types.MustNewTimeFromString("2026-04-27T15:25:56.447Z"),
-            ID: unifiedgosdk.Pointer("12f12c15-a763-464e-b713-8b7b1c4b7c11"),
+            EndAt: types.MustNewTimeFromString("2024-05-05T19:26:30.415Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-04-28T13:39:18.640Z"),
+            ID: unifiedgosdk.Pointer("a285ab39-16b0-4c53-8678-142bd66f67c1"),
             Media: []shared.UcRecordingMedia{
                 shared.UcRecordingMedia{
-                    EndAt: types.MustNewTimeFromString("2024-04-02T04:32:20.059Z"),
+                    EndAt: types.MustNewTimeFromString("2024-04-02T14:01:20.252Z"),
                     Language: unifiedgosdk.Pointer("en"),
                     RecordingDownloadURL: unifiedgosdk.Pointer("https://parched-wasabi.com/"),
-                    StartAt: types.MustNewTimeFromString("2026-05-16T07:47:39.960Z"),
+                    StartAt: types.MustNewTimeFromString("2026-05-17T06:19:56.282Z"),
                     TranscriptDownloadURL: unifiedgosdk.Pointer("https://colossal-cuckoo.name"),
                     Transcripts: []shared.UcRecordingTranscript{
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2026-02-25T08:16:48.368Z"),
-                            StartAt: types.MustNewTimeFromString("2024-06-02T15:59:26.122Z"),
+                            EndAt: types.MustNewTimeFromString("2026-02-26T05:28:09.289Z"),
+                            StartAt: types.MustNewTimeFromString("2024-06-03T02:30:38.462Z"),
                             Text: "Turpis maiores ducimus tero speculum.",
                         },
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2024-10-13T01:13:56.892Z"),
-                            StartAt: types.MustNewTimeFromString("2026-08-03T19:38:14.893Z"),
+                            EndAt: types.MustNewTimeFromString("2024-10-13T13:59:06.049Z"),
+                            StartAt: types.MustNewTimeFromString("2026-08-04T19:30:57.094Z"),
                             Text: "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     },
                 },
             },
             Metadata: []shared.UcMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-04-27T21:36:08.958Z"),
+            StartAt: types.MustNewTimeFromString("2023-04-28T01:20:50.928Z"),
             Type: shared.UcRecordingTypeOutbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-17T01:37:35.064Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-17T16:59:34.938Z"),
             UserPhone: unifiedgosdk.Pointer("1-915-327-0429 x509"),
             WebURL: unifiedgosdk.Pointer("https://spherical-comparison.org"),
         },
@@ -1331,6 +1521,100 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## UpdateUcCall
+
+Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateUcCall" method="put" path="/uc/{connection_id}/call/{id}" example="uc_call" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Uc.UpdateUcCall(ctx, operations.UpdateUcCallRequest{
+        UcCall: shared.UcCall{
+            AnswerAt: types.MustNewTimeFromString("2025-05-14T20:10:48.290Z"),
+            Contacts: []shared.UcContact{},
+            ConversationIdentifier: unifiedgosdk.Pointer("0631c1ae-258d-42f6-b130-dde2a1c93454"),
+            CostAmount: unifiedgosdk.Pointer[float64](1.564),
+            CreatedAt: types.MustNewTimeFromString("2023-04-22T19:05:34.882Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            DurationSeconds: unifiedgosdk.Pointer[float64](2556.0),
+            EndAt: types.MustNewTimeFromString("2024-05-30T17:02:55.118Z"),
+            ID: unifiedgosdk.Pointer("0631c1ae-258d-42f6-b130-dde2a1c93454"),
+            IsPrivate: unifiedgosdk.Pointer(false),
+            Metadata: []shared.UcMetadata{
+                shared.UcMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateUcMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.UcMetadataFormatPrice.ToPointer(),
+                    ID: unifiedgosdk.Pointer("38ddc9fb-5922-46fc-8572-886aa2d1fdbd"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("custom_field"),
+                    Value: unifiedgosdk.Pointer(shared.CreateUcMetadataValueStr(
+                        "tui",
+                    )),
+                },
+            },
+            StartAt: types.MustNewTimeFromString("2023-12-17T19:10:37.890Z"),
+            Status: shared.UcCallStatusInProgress.ToPointer(),
+            Telephone: &shared.PropertyUcCallTelephone{
+                Telephone: "(493) 534-0768",
+                Type: shared.PropertyUcCallTelephoneTypeMobile.ToPointer(),
+            },
+            Type: shared.UcCallTypeInbound.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-03T12:30:39.320Z"),
+            UserPhone: unifiedgosdk.Pointer("819-894-3317 x163"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.UcCall != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.UpdateUcCallRequest](../../pkg/models/operations/updateuccallrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
+
+### Response
+
+**[*operations.UpdateUcCallResponse](../../pkg/models/operations/updateuccallresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## UpdateUcComment
 
 Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
@@ -1360,9 +1644,9 @@ func main() {
         UcComment: shared.UcComment{
             Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
             CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
-            ID: unifiedgosdk.Pointer("f9542e44-6a26-42ef-b104-7bb1a17b8698"),
+            ID: unifiedgosdk.Pointer("1adc5c72-91da-4928-b257-5d8050ab94b7"),
             Metadata: []shared.UcMetadata{},
-            UpdatedAt: unifiedgosdk.Pointer("2024-02-10T00:14:01.049Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-10T06:18:50.519Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1431,7 +1715,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Luther"),
-            ID: unifiedgosdk.Pointer("62d40703-2d73-48d4-98f9-bd4bfc5324d5"),
+            ID: unifiedgosdk.Pointer("84574b7f-6c76-4e60-9a91-d28acd082455"),
             LastName: unifiedgosdk.Pointer("Rogahn"),
             Metadata: []shared.UcMetadata{},
             Name: unifiedgosdk.Pointer("Luther Rogahn"),
@@ -1450,7 +1734,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Chief Optimization Executive"),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-08T23:06:51.851Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-09T13:58:02.860Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1511,36 +1795,36 @@ func main() {
     res, err := s.Uc.UpdateUcRecording(ctx, operations.UpdateUcRecordingRequest{
         UcRecording: shared.UcRecording{
             Contacts: []shared.UcContact{},
-            ConversationIdentifier: unifiedgosdk.Pointer("12f12c15-a763-464e-b713-8b7b1c4b7c11"),
+            ConversationIdentifier: unifiedgosdk.Pointer("a285ab39-16b0-4c53-8678-142bd66f67c1"),
             CreatedAt: types.MustNewTimeFromString("2022-09-17T19:41:46.956Z"),
-            EndAt: types.MustNewTimeFromString("2024-05-05T09:23:54.571Z"),
-            ExpiresAt: types.MustNewTimeFromString("2026-04-27T15:25:56.447Z"),
-            ID: unifiedgosdk.Pointer("12f12c15-a763-464e-b713-8b7b1c4b7c11"),
+            EndAt: types.MustNewTimeFromString("2024-05-05T19:26:30.415Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-04-28T13:39:18.640Z"),
+            ID: unifiedgosdk.Pointer("a285ab39-16b0-4c53-8678-142bd66f67c1"),
             Media: []shared.UcRecordingMedia{
                 shared.UcRecordingMedia{
-                    EndAt: types.MustNewTimeFromString("2024-04-02T04:32:20.059Z"),
+                    EndAt: types.MustNewTimeFromString("2024-04-02T14:01:20.252Z"),
                     Language: unifiedgosdk.Pointer("en"),
                     RecordingDownloadURL: unifiedgosdk.Pointer("https://parched-wasabi.com/"),
-                    StartAt: types.MustNewTimeFromString("2026-05-16T07:47:39.960Z"),
+                    StartAt: types.MustNewTimeFromString("2026-05-17T06:19:56.282Z"),
                     TranscriptDownloadURL: unifiedgosdk.Pointer("https://colossal-cuckoo.name"),
                     Transcripts: []shared.UcRecordingTranscript{
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2026-02-25T08:16:48.368Z"),
-                            StartAt: types.MustNewTimeFromString("2024-06-02T15:59:26.122Z"),
+                            EndAt: types.MustNewTimeFromString("2026-02-26T05:28:09.289Z"),
+                            StartAt: types.MustNewTimeFromString("2024-06-03T02:30:38.462Z"),
                             Text: "Turpis maiores ducimus tero speculum.",
                         },
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2024-10-13T01:13:56.892Z"),
-                            StartAt: types.MustNewTimeFromString("2026-08-03T19:38:14.893Z"),
+                            EndAt: types.MustNewTimeFromString("2024-10-13T13:59:06.049Z"),
+                            StartAt: types.MustNewTimeFromString("2026-08-04T19:30:57.094Z"),
                             Text: "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     },
                 },
             },
             Metadata: []shared.UcMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-04-27T21:36:08.958Z"),
+            StartAt: types.MustNewTimeFromString("2023-04-28T01:20:50.928Z"),
             Type: shared.UcRecordingTypeOutbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-17T01:37:35.064Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-17T16:59:34.938Z"),
             UserPhone: unifiedgosdk.Pointer("1-915-327-0429 x509"),
             WebURL: unifiedgosdk.Pointer("https://spherical-comparison.org"),
         },

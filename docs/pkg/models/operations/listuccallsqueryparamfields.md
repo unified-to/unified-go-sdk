@@ -31,3 +31,10 @@ value := operations.ListUcCallsQueryParamFieldsID
 | `ListUcCallsQueryParamFieldsMetadata`               | metadata                                            |
 | `ListUcCallsQueryParamFieldsRaw`                    | raw                                                 |
 | `ListUcCallsQueryParamFieldsConversationIdentifier` | conversation_identifier                             |
+| `ListUcCallsQueryParamFieldsStatus`                 | status                                              |
+| `ListUcCallsQueryParamFieldsAnswerAt`               | answer_at                                           |
+| `ListUcCallsQueryParamFieldsDurationSeconds`        | duration_seconds                                    |
+| `ListUcCallsQueryParamFieldsCostAmount`             | cost_amount                                         |
+| `ListUcCallsQueryParamFieldsCurrency`               | currency                                            |
+| `ListUcCallsQueryParamFieldsParentID`               | parent_id                                           |
+| `ListUcCallsQueryParamFieldsInstructions`           | instructions                                        |

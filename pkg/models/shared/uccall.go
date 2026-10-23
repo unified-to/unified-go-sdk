@@ -7,6 +7,36 @@ import (
 	"time"
 )
 
+// UcCallStatus - The current or final status of the call
+type UcCallStatus string
+
+const (
+	UcCallStatusQueued     UcCallStatus = "QUEUED"
+	UcCallStatusRinging    UcCallStatus = "RINGING"
+	UcCallStatusInProgress UcCallStatus = "IN_PROGRESS"
+	UcCallStatusCompleted  UcCallStatus = "COMPLETED"
+	UcCallStatusBusy       UcCallStatus = "BUSY"
+	UcCallStatusNoAnswer   UcCallStatus = "NO_ANSWER"
+	UcCallStatusFailed     UcCallStatus = "FAILED"
+	UcCallStatusCanceled   UcCallStatus = "CANCELED"
+	UcCallStatusOther      UcCallStatus = "OTHER"
+)
+
+func (e UcCallStatus) ToPointer() *UcCallStatus {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *UcCallStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "QUEUED", "RINGING", "IN_PROGRESS", "COMPLETED", "BUSY", "NO_ANSWER", "FAILED", "CANCELED", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type UcCallType string
 
 const (
@@ -30,23 +60,37 @@ func (e *UcCallType) IsExact() bool {
 }
 
 type UcCall struct {
+	// When the call was answered (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	AnswerAt *time.Time `json:"answer_at,omitempty"`
 	// The contact ID for call (reference to UcContact)
 	ContactID *string     `json:"contact_id,omitempty"`
 	Contacts  []UcContact `json:"contacts,omitempty"`
 	// opaque identifier shared across legs of one interaction
 	ConversationIdentifier *string `json:"conversation_identifier,omitempty"`
+	// What the integration charged for the call
+	CostAmount *float64 `json:"cost_amount,omitempty"`
 	// The date that this call object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// ISO 4217 currency of cost_amount
+	Currency *string `json:"currency,omitempty"`
+	// Call length in seconds
+	DurationSeconds *float64 `json:"duration_seconds,omitempty"`
 	// The end time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndAt *time.Time `json:"end_at,omitempty"`
 	// Unique identifier for this call object
-	ID        *string      `json:"id,omitempty"`
-	IsPrivate *bool        `json:"is_private,omitempty"`
-	Metadata  []UcMetadata `json:"metadata,omitempty"`
+	ID *string `json:"id,omitempty"`
+	// Write-only: what the call does once answered (create/update only; never returned)
+	Instructions []UcCallInstruction `json:"instructions,omitempty"`
+	IsPrivate    *bool               `json:"is_private,omitempty"`
+	Metadata     []UcMetadata        `json:"metadata,omitempty"`
+	// The parent call (leg) that this call belongs to
+	ParentID *string `json:"parent_id,omitempty"`
 	// The raw data returned by the integration for this call
 	Raw map[string]any `json:"raw,omitempty"`
 	// The start time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartAt *time.Time `json:"start_at,omitempty"`
+	// The current or final status of the call
+	Status *UcCallStatus `json:"status,omitempty"`
 	// The telephone number called
 	Telephone *PropertyUcCallTelephone `json:"telephone,omitempty"`
 	Type      *UcCallType              `json:"type,omitempty"`
@@ -67,6 +111,13 @@ func (u *UcCall) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (u *UcCall) GetAnswerAt() *time.Time {
+	if u == nil {
+		return nil
+	}
+	return u.AnswerAt
 }
 
 func (u *UcCall) GetContactID() *string {
@@ -90,11 +141,32 @@ func (u *UcCall) GetConversationIdentifier() *string {
 	return u.ConversationIdentifier
 }
 
+func (u *UcCall) GetCostAmount() *float64 {
+	if u == nil {
+		return nil
+	}
+	return u.CostAmount
+}
+
 func (u *UcCall) GetCreatedAt() *time.Time {
 	if u == nil {
 		return nil
 	}
 	return u.CreatedAt
+}
+
+func (u *UcCall) GetCurrency() *string {
+	if u == nil {
+		return nil
+	}
+	return u.Currency
+}
+
+func (u *UcCall) GetDurationSeconds() *float64 {
+	if u == nil {
+		return nil
+	}
+	return u.DurationSeconds
 }
 
 func (u *UcCall) GetEndAt() *time.Time {
@@ -111,6 +183,13 @@ func (u *UcCall) GetID() *string {
 	return u.ID
 }
 
+func (u *UcCall) GetInstructions() []UcCallInstruction {
+	if u == nil {
+		return nil
+	}
+	return u.Instructions
+}
+
 func (u *UcCall) GetIsPrivate() *bool {
 	if u == nil {
 		return nil
@@ -125,6 +204,13 @@ func (u *UcCall) GetMetadata() []UcMetadata {
 	return u.Metadata
 }
 
+func (u *UcCall) GetParentID() *string {
+	if u == nil {
+		return nil
+	}
+	return u.ParentID
+}
+
 func (u *UcCall) GetRaw() map[string]any {
 	if u == nil {
 		return nil
@@ -137,6 +223,13 @@ func (u *UcCall) GetStartAt() *time.Time {
 		return nil
 	}
 	return u.StartAt
+}
+
+func (u *UcCall) GetStatus() *UcCallStatus {
+	if u == nil {
+		return nil
+	}
+	return u.Status
 }
 
 func (u *UcCall) GetTelephone() *PropertyUcCallTelephone {
