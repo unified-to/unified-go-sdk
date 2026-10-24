@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.950.2
+// Generated from OpenAPI doc version 1.0 and generator version 2.950.13
 
 import (
 	"context"
@@ -344,11 +344,11 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.39.1",
+		SDKVersion: "0.39.2",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.39.1 2.950.2 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.39.1",
-			GenVersion:        "2.950.2",
+			UserAgent:         "speakeasy-sdk/go 0.39.2 2.950.13 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.39.2",
+			GenVersion:        "2.950.13",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
 		},

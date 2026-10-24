@@ -66,7 +66,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-11T08:16:20.874Z"),
             Description: unifiedgosdk.Pointer("clarus aptus cetera"),
             EndAt: types.MustNewTimeFromString("2023-12-12T13:04:41.451Z"),
-            ID: unifiedgosdk.Pointer("d085955c-472b-4845-8b7f-04d33f72b132"),
+            ID: unifiedgosdk.Pointer("fe29c238-5077-4b90-8ef8-f54100acc53b"),
             Metadata: []shared.HealthcareMetadata{},
             PractitionerIds: []string{},
             Reasons: []shared.HealthcareCode{
@@ -86,7 +86,7 @@ func main() {
             SlotIds: []string{},
             StartAt: types.MustNewTimeFromString("2023-12-12T12:34:41.451Z"),
             Status: shared.HealthcareAppointmentStatusBooked.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-20T22:55:07.068Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-21T13:29:59.052Z"),
         },
         ConnectionID: "<id>",
     })
@@ -177,15 +177,15 @@ func main() {
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2022-12-06T21:34:04.293Z"),
-            ID: unifiedgosdk.Pointer("f3c7fe5f-abad-4692-ba01-766ff43d794e"),
+            ID: unifiedgosdk.Pointer("aa5c1a08-7d55-48e0-bccf-8264513644ca"),
             Interpretation: shared.InterpretationCriticalHigh.ToPointer(),
-            IssuedAt: types.MustNewTimeFromString("2025-05-12T17:12:08.304Z"),
+            IssuedAt: types.MustNewTimeFromString("2025-05-13T05:33:42.906Z"),
             Metadata: []shared.HealthcareMetadata{},
             Name: unifiedgosdk.Pointer("Blood pressure panel"),
-            ObservedAt: types.MustNewTimeFromString("2025-01-21T06:51:39.970Z"),
+            ObservedAt: types.MustNewTimeFromString("2025-01-21T17:40:10.013Z"),
             Status: shared.HealthcareObservationStatusCorrected.ToPointer(),
             Type: shared.HealthcareObservationTypeVitalSigns.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-26T00:05:49.468Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-26T16:52:25.494Z"),
         },
         ConnectionID: "<id>",
     })
@@ -261,7 +261,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Alejandrin"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("8781bf0a-6ce1-49ba-8cb7-7dbbe674ce81"),
+            ID: unifiedgosdk.Pointer("e4f5b6da-385d-42d8-90b3-021585805f3a"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -281,7 +281,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-24T18:17:45.978Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-25T12:48:14.492Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1542,7 +1542,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-11T08:16:20.874Z"),
             Description: unifiedgosdk.Pointer("clarus aptus cetera"),
             EndAt: types.MustNewTimeFromString("2023-12-12T13:04:41.451Z"),
-            ID: unifiedgosdk.Pointer("63ae924e-6d92-4bda-b2c9-2707869ae2c8"),
+            ID: unifiedgosdk.Pointer("592c187e-deaf-403b-a625-0ec9d08453c7"),
             Metadata: []shared.HealthcareMetadata{},
             PractitionerIds: []string{},
             Reasons: []shared.HealthcareCode{
@@ -1562,7 +1562,7 @@ func main() {
             SlotIds: []string{},
             StartAt: types.MustNewTimeFromString("2023-12-12T12:34:41.451Z"),
             Status: shared.HealthcareAppointmentStatusBooked.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-20T22:55:07.089Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-21T13:29:59.063Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1639,7 +1639,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Alejandrin"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("0d2a6f22-3113-4f70-b49f-1e1b55a73b0c"),
+            ID: unifiedgosdk.Pointer("66747861-8ca6-46b9-bdc6-f95cb6af7318"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -1659,7 +1659,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-24T18:17:46.012Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-25T12:48:14.512Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1777,7 +1777,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-11T08:16:20.874Z"),
             Description: unifiedgosdk.Pointer("clarus aptus cetera"),
             EndAt: types.MustNewTimeFromString("2023-12-12T13:04:41.451Z"),
-            ID: unifiedgosdk.Pointer("63ae924e-6d92-4bda-b2c9-2707869ae2c8"),
+            ID: unifiedgosdk.Pointer("592c187e-deaf-403b-a625-0ec9d08453c7"),
             Metadata: []shared.HealthcareMetadata{},
             PractitionerIds: []string{},
             Reasons: []shared.HealthcareCode{
@@ -1797,7 +1797,7 @@ func main() {
             SlotIds: []string{},
             StartAt: types.MustNewTimeFromString("2023-12-12T12:34:41.451Z"),
             Status: shared.HealthcareAppointmentStatusBooked.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-20T22:55:07.089Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-21T13:29:59.063Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1874,7 +1874,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Alejandrin"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("0d2a6f22-3113-4f70-b49f-1e1b55a73b0c"),
+            ID: unifiedgosdk.Pointer("66747861-8ca6-46b9-bdc6-f95cb6af7318"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -1894,7 +1894,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-24T18:17:46.012Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-25T12:48:14.512Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

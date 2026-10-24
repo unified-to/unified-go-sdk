@@ -47,7 +47,7 @@ func main() {
         CommerceCollection: shared.CommerceCollection{
             CreatedAt: types.MustNewTimeFromString("2023-07-14T00:42:54.742Z"),
             Description: unifiedgosdk.Pointer("The Integrated leading edge website Cheese offers reliable performance and productive design"),
-            ID: unifiedgosdk.Pointer("51c5bf05-2925-473a-8a59-06e5d8bf745f"),
+            ID: unifiedgosdk.Pointer("402576ab-3a9c-4888-9ab4-5285e1854656"),
             IsActive: unifiedgosdk.Pointer(true),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsVisible: unifiedgosdk.Pointer(false),
@@ -56,10 +56,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Defungo adopto thorax."),
                     Height: unifiedgosdk.Pointer[float64](759.0),
-                    ID: unifiedgosdk.Pointer("6c2fe6a4-97e1-471f-a17d-4fbdd1c09e77"),
+                    ID: unifiedgosdk.Pointer("a105e34b-cfc4-451c-8170-f8a8965429c5"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("74cb209b-ce34-4d80-88f9-1d36e2e8aeb7"),
+                            ID: unifiedgosdk.Pointer("cd251a19-8972-4e43-8d64-7ebd7e089394"),
                             Slug: unifiedgosdk.Pointer("censura"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "toties",
@@ -74,7 +74,7 @@ func main() {
             },
             Metadata: []shared.CommerceMetadata{
                 shared.CommerceMetadata{
-                    ID: unifiedgosdk.Pointer("4d4c8efd-199a-4e31-bca7-1d7d56c1d11f"),
+                    ID: unifiedgosdk.Pointer("9fb460b6-a840-4a27-ae7d-e8b0385744b9"),
                     Slug: unifiedgosdk.Pointer("aetas"),
                     Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                         "consuasor",
@@ -90,7 +90,7 @@ func main() {
                 "contego",
             },
             Type: shared.CommerceCollectionTypeCollection.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-16T02:18:44.643Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-16T12:22:36.430Z"),
         },
         ConnectionID: "<id>",
     })
@@ -151,7 +151,7 @@ func main() {
         LmsCollection: shared.LmsCollection{
             CreatedAt: types.MustNewTimeFromString("2019-08-19T14:40:29.227Z"),
             Description: unifiedgosdk.Pointer("Ab."),
-            ID: unifiedgosdk.Pointer("2cbccc66-5844-487b-8529-aaad57eb3791"),
+            ID: unifiedgosdk.Pointer("e3c499a2-a7fa-41e1-b4b9-ede0110804b9"),
             IsActive: unifiedgosdk.Pointer(true),
             Media: []shared.LmsMedia{
                 shared.LmsMedia{
@@ -168,7 +168,7 @@ func main() {
             },
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ara"),
-            UpdatedAt: types.MustNewTimeFromString("2026-08-01T06:31:15.163Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-08-02T01:36:46.913Z"),
         },
         ConnectionID: "<id>",
     })
@@ -447,7 +447,7 @@ func main() {
         CommerceCollection: shared.CommerceCollection{
             CreatedAt: types.MustNewTimeFromString("2023-07-14T00:42:54.742Z"),
             Description: unifiedgosdk.Pointer("The Integrated leading edge website Cheese offers reliable performance and productive design"),
-            ID: unifiedgosdk.Pointer("20744451-83df-4c6e-9d15-59951f6551a1"),
+            ID: unifiedgosdk.Pointer("ac5e0300-e90f-408b-9c1f-de1e753d6b62"),
             IsActive: unifiedgosdk.Pointer(true),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsVisible: unifiedgosdk.Pointer(false),
@@ -456,10 +456,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Defungo adopto thorax."),
                     Height: unifiedgosdk.Pointer[float64](759.0),
-                    ID: unifiedgosdk.Pointer("05ce8b1e-cd99-40e5-8d96-b997071f3609"),
+                    ID: unifiedgosdk.Pointer("ccc07a8c-f167-40c3-84e5-613d38eae543"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("898b683f-3337-49e9-bdd1-cc7f6e1aeab6"),
+                            ID: unifiedgosdk.Pointer("aff076b0-a52a-4fc5-a64d-a2ffbd0666bc"),
                             Slug: unifiedgosdk.Pointer("censura"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "toties",
@@ -474,7 +474,7 @@ func main() {
             },
             Metadata: []shared.CommerceMetadata{
                 shared.CommerceMetadata{
-                    ID: unifiedgosdk.Pointer("ed890ac7-1d05-45ed-9b7c-d0b084749f85"),
+                    ID: unifiedgosdk.Pointer("7b68f473-ae39-4e27-ae36-009ac4ee7a55"),
                     Slug: unifiedgosdk.Pointer("aetas"),
                     Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                         "consuasor",
@@ -490,7 +490,7 @@ func main() {
                 "contego",
             },
             Type: shared.CommerceCollectionTypeCollection.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-16T02:18:44.661Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-16T12:22:36.443Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -552,7 +552,7 @@ func main() {
         LmsCollection: shared.LmsCollection{
             CreatedAt: types.MustNewTimeFromString("2019-08-19T14:40:29.227Z"),
             Description: unifiedgosdk.Pointer("Ab."),
-            ID: unifiedgosdk.Pointer("e363e89e-1acf-4881-903b-03d1bd1a8fa2"),
+            ID: unifiedgosdk.Pointer("5e5b9045-dd85-4ce6-9a5a-824bb202f7a8"),
             IsActive: unifiedgosdk.Pointer(true),
             Media: []shared.LmsMedia{
                 shared.LmsMedia{
@@ -569,7 +569,7 @@ func main() {
             },
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ara"),
-            UpdatedAt: types.MustNewTimeFromString("2026-08-01T06:31:15.184Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-08-02T01:36:46.928Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -741,7 +741,7 @@ func main() {
         CommerceCollection: shared.CommerceCollection{
             CreatedAt: types.MustNewTimeFromString("2023-07-14T00:42:54.742Z"),
             Description: unifiedgosdk.Pointer("The Integrated leading edge website Cheese offers reliable performance and productive design"),
-            ID: unifiedgosdk.Pointer("20744451-83df-4c6e-9d15-59951f6551a1"),
+            ID: unifiedgosdk.Pointer("ac5e0300-e90f-408b-9c1f-de1e753d6b62"),
             IsActive: unifiedgosdk.Pointer(true),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsVisible: unifiedgosdk.Pointer(false),
@@ -750,10 +750,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Defungo adopto thorax."),
                     Height: unifiedgosdk.Pointer[float64](759.0),
-                    ID: unifiedgosdk.Pointer("05ce8b1e-cd99-40e5-8d96-b997071f3609"),
+                    ID: unifiedgosdk.Pointer("ccc07a8c-f167-40c3-84e5-613d38eae543"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("898b683f-3337-49e9-bdd1-cc7f6e1aeab6"),
+                            ID: unifiedgosdk.Pointer("aff076b0-a52a-4fc5-a64d-a2ffbd0666bc"),
                             Slug: unifiedgosdk.Pointer("censura"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "toties",
@@ -768,7 +768,7 @@ func main() {
             },
             Metadata: []shared.CommerceMetadata{
                 shared.CommerceMetadata{
-                    ID: unifiedgosdk.Pointer("ed890ac7-1d05-45ed-9b7c-d0b084749f85"),
+                    ID: unifiedgosdk.Pointer("7b68f473-ae39-4e27-ae36-009ac4ee7a55"),
                     Slug: unifiedgosdk.Pointer("aetas"),
                     Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                         "consuasor",
@@ -784,7 +784,7 @@ func main() {
                 "contego",
             },
             Type: shared.CommerceCollectionTypeCollection.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-16T02:18:44.661Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-16T12:22:36.443Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -846,7 +846,7 @@ func main() {
         LmsCollection: shared.LmsCollection{
             CreatedAt: types.MustNewTimeFromString("2019-08-19T14:40:29.227Z"),
             Description: unifiedgosdk.Pointer("Ab."),
-            ID: unifiedgosdk.Pointer("e363e89e-1acf-4881-903b-03d1bd1a8fa2"),
+            ID: unifiedgosdk.Pointer("5e5b9045-dd85-4ce6-9a5a-824bb202f7a8"),
             IsActive: unifiedgosdk.Pointer(true),
             Media: []shared.LmsMedia{
                 shared.LmsMedia{
@@ -863,7 +863,7 @@ func main() {
             },
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ara"),
-            UpdatedAt: types.MustNewTimeFromString("2026-08-01T06:31:15.184Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-08-02T01:36:46.928Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

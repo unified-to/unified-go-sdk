@@ -30,7 +30,7 @@ func (e *UcCallInstructionType) IsExact() bool {
 type UcCallInstruction struct {
 	// PLAY: public MP3 or WAV URL
 	AudioURL *string `json:"audio_url,omitempty"`
-	// SAY: BCP 47 language code (e.g. en-US), passed through as-is (Bandwidth maps it to its nearest locale)
+	// SAY: BCP 47 language code (e.g. en-US), passed to the integration as-is
 	Language *string `json:"language,omitempty"`
 	// PAUSE: length of silence
 	Seconds *float64 `json:"seconds,omitempty"`
