@@ -233,3 +233,9 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeHealthcareMedication`          | healthcare_medication                            |
 | `WebhookObjectTypeHealthcareObservation`         | healthcare_observation                           |
 | `WebhookObjectTypeHealthcareImmunization`        | healthcare_immunization                          |
+| `WebhookObjectTypeHealthcareDocument`            | healthcare_document                              |
+| `WebhookObjectTypeHealthcareCoverage`            | healthcare_coverage                              |
+| `WebhookObjectTypeHealthcareProcedure`           | healthcare_procedure                             |
+| `WebhookObjectTypeHealthcareReport`              | healthcare_report                                |
+| `WebhookObjectTypeHealthcareCareplan`            | healthcare_careplan                              |
+| `WebhookObjectTypeHealthcareGoal`                | healthcare_goal                                  |

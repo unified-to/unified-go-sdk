@@ -109,19 +109,19 @@ func (e *HrisEmployeeGender) IsExact() bool {
 	return false
 }
 
-type MaritalStatus string
+type HrisEmployeeMaritalStatus string
 
 const (
-	MaritalStatusMarried MaritalStatus = "MARRIED"
-	MaritalStatusSingle  MaritalStatus = "SINGLE"
+	HrisEmployeeMaritalStatusMarried HrisEmployeeMaritalStatus = "MARRIED"
+	HrisEmployeeMaritalStatusSingle  HrisEmployeeMaritalStatus = "SINGLE"
 )
 
-func (e MaritalStatus) ToPointer() *MaritalStatus {
+func (e HrisEmployeeMaritalStatus) ToPointer() *HrisEmployeeMaritalStatus {
 	return &e
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *MaritalStatus) IsExact() bool {
+func (e *HrisEmployeeMaritalStatus) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "MARRIED", "SINGLE":
@@ -197,11 +197,11 @@ type HrisEmployee struct {
 	JobID          *string `json:"job_id,omitempty"`
 	LanguageLocale *string `json:"language_locale,omitempty"`
 	// The employee's last (family) name
-	LastName      *string        `json:"last_name,omitempty"`
-	Locations     []HrisLocation `json:"locations,omitempty"`
-	ManagerID     *string        `json:"manager_id,omitempty"`
-	MaritalStatus *MaritalStatus `json:"marital_status,omitempty"`
-	Metadata      []HrisMetadata `json:"metadata,omitempty"`
+	LastName      *string                    `json:"last_name,omitempty"`
+	Locations     []HrisLocation             `json:"locations,omitempty"`
+	ManagerID     *string                    `json:"manager_id,omitempty"`
+	MaritalStatus *HrisEmployeeMaritalStatus `json:"marital_status,omitempty"`
+	Metadata      []HrisMetadata             `json:"metadata,omitempty"`
 	// The employee's full name
 	Name *string `json:"name,omitempty"`
 	// how often the employee is paid (eg. BIWEEKLY)
@@ -416,7 +416,7 @@ func (h *HrisEmployee) GetManagerID() *string {
 	return h.ManagerID
 }
 
-func (h *HrisEmployee) GetMaritalStatus() *MaritalStatus {
+func (h *HrisEmployee) GetMaritalStatus() *HrisEmployeeMaritalStatus {
 	if h == nil {
 		return nil
 	}

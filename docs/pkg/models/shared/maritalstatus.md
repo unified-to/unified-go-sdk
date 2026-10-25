@@ -1,5 +1,7 @@
 # MaritalStatus
 
+Marital status of the patient
+
 ## Example Usage
 
 ```go
@@ -16,7 +18,14 @@ custom := shared.MaritalStatus("custom_value")
 
 ## Values
 
-| Name                   | Value                  |
-| ---------------------- | ---------------------- |
-| `MaritalStatusMarried` | MARRIED                |
-| `MaritalStatusSingle`  | SINGLE                 |
+| Name                           | Value                          |
+| ------------------------------ | ------------------------------ |
+| `MaritalStatusMarried`         | MARRIED                        |
+| `MaritalStatusSingle`          | SINGLE                         |
+| `MaritalStatusDomesticPartner` | DOMESTIC_PARTNER               |
+| `MaritalStatusSeparated`       | SEPARATED                      |
+| `MaritalStatusDivorced`        | DIVORCED                       |
+| `MaritalStatusWidowed`         | WIDOWED                        |
+| `MaritalStatusAnnulled`        | ANNULLED                       |
+| `MaritalStatusUnknown`         | UNKNOWN                        |
+| `MaritalStatusOther`           | OTHER                          |

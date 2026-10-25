@@ -176,13 +176,17 @@ type UnifiedTo struct {
 	Healthcare          *Healthcare
 	Allergy             *Allergy
 	Appointment         *Appointment
+	Careplan            *Careplan
 	Condition           *Condition
+	Coverage            *Coverage
 	Encounter           *Encounter
+	Goal                *Goal
 	Immunization        *Immunization
 	Medication          *Medication
 	Observation         *Observation
 	Patient             *Patient
 	Practitioner        *Practitioner
+	Procedure           *Procedure
 	Slot                *Slot
 	Hris                *Hris
 	Attendance          *Attendance
@@ -225,7 +229,6 @@ type UnifiedTo struct {
 	Performance         *Performance
 	Cycle               *Cycle
 	Feedback            *Feedback
-	Goal                *Goal
 	Repo                *Repo
 	Branch              *Branch
 	Commit              *Commit
@@ -344,10 +347,10 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.39.2",
+		SDKVersion: "0.39.3",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.39.2 2.950.13 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.39.2",
+			UserAgent:         "speakeasy-sdk/go 0.39.3 2.950.13 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.39.3",
 			GenVersion:        "2.950.13",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
@@ -489,13 +492,17 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Healthcare = newHealthcare(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Allergy = newAllergy(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Appointment = newAppointment(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Careplan = newCareplan(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Condition = newCondition(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Coverage = newCoverage(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Encounter = newEncounter(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Goal = newGoal(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Immunization = newImmunization(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Medication = newMedication(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Observation = newObservation(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Patient = newPatient(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Practitioner = newPractitioner(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Procedure = newProcedure(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Slot = newSlot(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Hris = newHris(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Attendance = newAttendance(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -538,7 +545,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Performance = newPerformance(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Cycle = newCycle(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Feedback = newFeedback(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Goal = newGoal(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Repo = newRepo(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Branch = newBranch(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Commit = newCommit(sdk, sdk.sdkConfiguration, sdk.hooks)

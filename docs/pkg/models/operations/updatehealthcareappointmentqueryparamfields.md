@@ -30,5 +30,7 @@ value := operations.UpdateHealthcareAppointmentQueryParamFieldsID
 | `UpdateHealthcareAppointmentQueryParamFieldsReasons`            | reasons                                                         |
 | `UpdateHealthcareAppointmentQueryParamFieldsCancellationReason` | cancellation_reason                                             |
 | `UpdateHealthcareAppointmentQueryParamFieldsNotes`              | notes                                                           |
+| `UpdateHealthcareAppointmentQueryParamFieldsIsVirtual`          | is_virtual                                                      |
+| `UpdateHealthcareAppointmentQueryParamFieldsMeetingURL`         | meeting_url                                                     |
 | `UpdateHealthcareAppointmentQueryParamFieldsMetadata`           | metadata                                                        |
 | `UpdateHealthcareAppointmentQueryParamFieldsRaw`                | raw                                                             |

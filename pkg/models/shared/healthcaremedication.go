@@ -46,6 +46,10 @@ type HealthcareMedication struct {
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// Free-text dosage instructions (e.g. "1 tablet by mouth twice daily")
 	Dosage *string `json:"dosage,omitempty"`
+	// Amount of medication per dose
+	DoseNumber *float64 `json:"dose_number,omitempty"`
+	// Unit of the dose amount (e.g. mg, tablet)
+	DoseUnit *string `json:"dose_unit,omitempty"`
 	// The encounter in which the medication was ordered
 	EncounterID *string `json:"encounter_id,omitempty"`
 	// When the patient should stop taking the medication (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -66,6 +70,8 @@ type HealthcareMedication struct {
 	Raw map[string]any `json:"raw,omitempty"`
 	// Number of refills authorized
 	RefillCount *float64 `json:"refill_count,omitempty"`
+	// How the medication is taken (e.g. oral, intravenous)
+	Route *string `json:"route,omitempty"`
 	// When the patient should start taking the medication (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartAt *time.Time `json:"start_at,omitempty"`
 	// Status of the medication order
@@ -111,6 +117,20 @@ func (h *HealthcareMedication) GetDosage() *string {
 		return nil
 	}
 	return h.Dosage
+}
+
+func (h *HealthcareMedication) GetDoseNumber() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.DoseNumber
+}
+
+func (h *HealthcareMedication) GetDoseUnit() *string {
+	if h == nil {
+		return nil
+	}
+	return h.DoseUnit
 }
 
 func (h *HealthcareMedication) GetEncounterID() *string {
@@ -181,6 +201,13 @@ func (h *HealthcareMedication) GetRefillCount() *float64 {
 		return nil
 	}
 	return h.RefillCount
+}
+
+func (h *HealthcareMedication) GetRoute() *string {
+	if h == nil {
+		return nil
+	}
+	return h.Route
 }
 
 func (h *HealthcareMedication) GetStartAt() *time.Time {

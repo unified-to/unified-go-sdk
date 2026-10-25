@@ -30,5 +30,8 @@ value := operations.ListHealthcareMedicationsQueryParamFieldsID
 | `ListHealthcareMedicationsQueryParamFieldsStartAt`        | start_at                                                  |
 | `ListHealthcareMedicationsQueryParamFieldsEndAt`          | end_at                                                    |
 | `ListHealthcareMedicationsQueryParamFieldsNotes`          | notes                                                     |
+| `ListHealthcareMedicationsQueryParamFieldsRoute`          | route                                                     |
+| `ListHealthcareMedicationsQueryParamFieldsDoseNumber`     | dose_number                                               |
+| `ListHealthcareMedicationsQueryParamFieldsDoseUnit`       | dose_unit                                                 |
 | `ListHealthcareMedicationsQueryParamFieldsMetadata`       | metadata                                                  |
 | `ListHealthcareMedicationsQueryParamFieldsRaw`            | raw                                                       |

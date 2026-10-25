@@ -415,3 +415,15 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsHealthcareObservationWrite`         | healthcare_observation_write                                      |
 | `PropertyConnectionPermissionsHealthcareImmunizationRead`         | healthcare_immunization_read                                      |
 | `PropertyConnectionPermissionsHealthcareImmunizationWrite`        | healthcare_immunization_write                                     |
+| `PropertyConnectionPermissionsHealthcareDocumentRead`             | healthcare_document_read                                          |
+| `PropertyConnectionPermissionsHealthcareDocumentWrite`            | healthcare_document_write                                         |
+| `PropertyConnectionPermissionsHealthcareCoverageRead`             | healthcare_coverage_read                                          |
+| `PropertyConnectionPermissionsHealthcareCoverageWrite`            | healthcare_coverage_write                                         |
+| `PropertyConnectionPermissionsHealthcareProcedureRead`            | healthcare_procedure_read                                         |
+| `PropertyConnectionPermissionsHealthcareProcedureWrite`           | healthcare_procedure_write                                        |
+| `PropertyConnectionPermissionsHealthcareReportRead`               | healthcare_report_read                                            |
+| `PropertyConnectionPermissionsHealthcareReportWrite`              | healthcare_report_write                                           |
+| `PropertyConnectionPermissionsHealthcareCareplanRead`             | healthcare_careplan_read                                          |
+| `PropertyConnectionPermissionsHealthcareCareplanWrite`            | healthcare_careplan_write                                         |
+| `PropertyConnectionPermissionsHealthcareGoalRead`                 | healthcare_goal_read                                              |
+| `PropertyConnectionPermissionsHealthcareGoalWrite`                | healthcare_goal_write                                             |

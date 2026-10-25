@@ -5,29 +5,42 @@
 ### Available Operations
 
 * [CreateHealthcareAppointment](#createhealthcareappointment) - Create an appointment
+* [CreateHealthcareDocument](#createhealthcaredocument) - Create a document
 * [CreateHealthcareObservation](#createhealthcareobservation) - Create an observation
 * [CreateHealthcarePatient](#createhealthcarepatient) - Create a patient
 * [GetHealthcareAllergy](#gethealthcareallergy) - Retrieve an allergy
 * [GetHealthcareAppointment](#gethealthcareappointment) - Retrieve an appointment
+* [GetHealthcareCareplan](#gethealthcarecareplan) - Retrieve a careplan
 * [GetHealthcareCondition](#gethealthcarecondition) - Retrieve a condition
+* [GetHealthcareCoverage](#gethealthcarecoverage) - Retrieve a coverage
+* [GetHealthcareDocument](#gethealthcaredocument) - Retrieve a document
 * [GetHealthcareEncounter](#gethealthcareencounter) - Retrieve an encounter
+* [GetHealthcareGoal](#gethealthcaregoal) - Retrieve a goal
 * [GetHealthcareImmunization](#gethealthcareimmunization) - Retrieve an immunization
 * [GetHealthcareLocation](#gethealthcarelocation) - Retrieve a location
 * [GetHealthcareMedication](#gethealthcaremedication) - Retrieve a medication
 * [GetHealthcareObservation](#gethealthcareobservation) - Retrieve an observation
 * [GetHealthcarePatient](#gethealthcarepatient) - Retrieve a patient
 * [GetHealthcarePractitioner](#gethealthcarepractitioner) - Retrieve a practitioner
+* [GetHealthcareProcedure](#gethealthcareprocedure) - Retrieve a procedure
+* [GetHealthcareReport](#gethealthcarereport) - Retrieve a report
 * [GetHealthcareSlot](#gethealthcareslot) - Retrieve a slot
 * [ListHealthcareAllergies](#listhealthcareallergies) - List all allergies
 * [ListHealthcareAppointments](#listhealthcareappointments) - List all appointments
+* [ListHealthcareCareplans](#listhealthcarecareplans) - List all careplans
 * [ListHealthcareConditions](#listhealthcareconditions) - List all conditions
+* [ListHealthcareCoverages](#listhealthcarecoverages) - List all coverages
+* [ListHealthcareDocuments](#listhealthcaredocuments) - List all documents
 * [ListHealthcareEncounters](#listhealthcareencounters) - List all encounters
+* [ListHealthcareGoals](#listhealthcaregoals) - List all goals
 * [ListHealthcareImmunizations](#listhealthcareimmunizations) - List all immunizations
 * [ListHealthcareLocations](#listhealthcarelocations) - List all locations
 * [ListHealthcareMedications](#listhealthcaremedications) - List all medications
 * [ListHealthcareObservations](#listhealthcareobservations) - List all observations
 * [ListHealthcarePatients](#listhealthcarepatients) - List all patients
 * [ListHealthcarePractitioners](#listhealthcarepractitioners) - List all practitioners
+* [ListHealthcareProcedures](#listhealthcareprocedures) - List all procedures
+* [ListHealthcareReports](#listhealthcarereports) - List all reports
 * [ListHealthcareSlots](#listhealthcareslots) - List all slots
 * [PatchHealthcareAppointment](#patchhealthcareappointment) - Update an appointment
 * [PatchHealthcarePatient](#patchhealthcarepatient) - Update a patient
@@ -66,27 +79,23 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-11T08:16:20.874Z"),
             Description: unifiedgosdk.Pointer("clarus aptus cetera"),
             EndAt: types.MustNewTimeFromString("2023-12-12T13:04:41.451Z"),
-            ID: unifiedgosdk.Pointer("fe29c238-5077-4b90-8ef8-f54100acc53b"),
+            ID: unifiedgosdk.Pointer("7693c382-e157-486c-b981-26bc70047846"),
+            IsVirtual: unifiedgosdk.Pointer(true),
+            MeetingURL: unifiedgosdk.Pointer("https://expensive-slipper.name/"),
             Metadata: []shared.HealthcareMetadata{},
+            Notes: unifiedgosdk.Pointer("Stabilis triduana colo casus anser ver alo beatus contabesco amiculum."),
             PractitionerIds: []string{},
-            Reasons: []shared.HealthcareCode{
-                shared.HealthcareCode{
-                    Code: unifiedgosdk.Pointer("12762740"),
-                    Display: unifiedgosdk.Pointer("cubicularis caput"),
-                    System: unifiedgosdk.Pointer("http://snomed.info/sct"),
-                },
-            },
             ServiceTypes: []shared.HealthcareCode{
                 shared.HealthcareCode{
-                    Code: unifiedgosdk.Pointer("61128108"),
-                    Display: unifiedgosdk.Pointer("Annual physical"),
+                    Code: unifiedgosdk.Pointer("12762740"),
+                    Display: unifiedgosdk.Pointer("New patient visit"),
                     System: unifiedgosdk.Pointer("http://snomed.info/sct"),
                 },
             },
             SlotIds: []string{},
             StartAt: types.MustNewTimeFromString("2023-12-12T12:34:41.451Z"),
             Status: shared.HealthcareAppointmentStatusBooked.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-21T13:29:59.052Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-26T00:08:45.146Z"),
         },
         ConnectionID: "<id>",
     })
@@ -110,6 +119,82 @@ func main() {
 ### Response
 
 **[*operations.CreateHealthcareAppointmentResponse](../../pkg/models/operations/createhealthcareappointmentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateHealthcareDocument
+
+Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body; they are mapped to the provider's API. Returns the created HealthcareDocument.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createHealthcareDocument" method="post" path="/healthcare/{connection_id}/document" example="healthcare_document" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Healthcare.CreateHealthcareDocument(ctx, operations.CreateHealthcareDocumentRequest{
+        HealthcareDocument: shared.HealthcareDocument{
+            AuthoredAt: types.MustNewTimeFromString("2023-07-16T04:00:25.853Z"),
+            Codes: []shared.HealthcareCode{
+                shared.HealthcareCode{
+                    Code: unifiedgosdk.Pointer("23671711"),
+                    Display: unifiedgosdk.Pointer("History and physical"),
+                    System: unifiedgosdk.Pointer("http://loinc.org"),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2023-07-16T04:00:25.853Z"),
+            DocumentURL: unifiedgosdk.Pointer("https://overcooked-yogurt.org"),
+            Filename: unifiedgosdk.Pointer("ugh_after.elc"),
+            ID: unifiedgosdk.Pointer("944b8395-80c9-4ec1-9096-4c1634e2f1af"),
+            Metadata: []shared.HealthcareMetadata{},
+            MimeType: unifiedgosdk.Pointer("application/pdf"),
+            Name: unifiedgosdk.Pointer("History and physical"),
+            Status: shared.HealthcareDocumentStatusSuperseded.ToPointer(),
+            Type: shared.HealthcareDocumentTypeConsultationNote.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-12-28T11:40:08.793Z"),
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HealthcareDocument != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.CreateHealthcareDocumentRequest](../../pkg/models/operations/createhealthcaredocumentrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+
+### Response
+
+**[*operations.CreateHealthcareDocumentResponse](../../pkg/models/operations/createhealthcaredocumentresponse.md), error**
 
 ### Errors
 
@@ -177,15 +262,15 @@ func main() {
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2022-12-06T21:34:04.293Z"),
-            ID: unifiedgosdk.Pointer("aa5c1a08-7d55-48e0-bccf-8264513644ca"),
+            ID: unifiedgosdk.Pointer("50733398-2523-4d96-a2e4-37c9f358953c"),
             Interpretation: shared.InterpretationCriticalHigh.ToPointer(),
-            IssuedAt: types.MustNewTimeFromString("2025-05-13T05:33:42.906Z"),
+            IssuedAt: types.MustNewTimeFromString("2025-05-13T20:36:08.190Z"),
             Metadata: []shared.HealthcareMetadata{},
             Name: unifiedgosdk.Pointer("Blood pressure panel"),
-            ObservedAt: types.MustNewTimeFromString("2025-01-21T17:40:10.013Z"),
+            ObservedAt: types.MustNewTimeFromString("2025-01-22T06:49:19.472Z"),
             Status: shared.HealthcareObservationStatusCorrected.ToPointer(),
             Type: shared.HealthcareObservationTypeVitalSigns.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-26T16:52:25.494Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-27T13:17:21.150Z"),
         },
         ConnectionID: "<id>",
     })
@@ -251,7 +336,20 @@ func main() {
                 PostalCode: unifiedgosdk.Pointer("54031"),
                 Region: unifiedgosdk.Pointer("Nebraska"),
             },
-            Birthdate: unifiedgosdk.Pointer("2025-02-14"),
+            Birthdate: unifiedgosdk.Pointer("2025-02-15"),
+            Contacts: []shared.HealthcarePatientContact{
+                shared.HealthcarePatientContact{
+                    Emails: []shared.HealthcareEmail{},
+                    Name: unifiedgosdk.Pointer("Antonia Lebsack"),
+                    Relationship: unifiedgosdk.Pointer("Spouse"),
+                    Telephones: []shared.HealthcareTelephone{
+                        shared.HealthcareTelephone{
+                            Telephone: "(695) 328-7029 x4412",
+                            Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
+                        },
+                    },
+                },
+            },
             CreatedAt: types.MustNewTimeFromString("2021-06-05T21:08:04.917Z"),
             Emails: []shared.HealthcareEmail{
                 shared.HealthcareEmail{
@@ -261,7 +359,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Alejandrin"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("e4f5b6da-385d-42d8-90b3-021585805f3a"),
+            ID: unifiedgosdk.Pointer("cfc5529c-d78c-4d43-be5c-ae45fea5616f"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -281,7 +379,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-25T12:48:14.492Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-26T11:19:34.305Z"),
         },
         ConnectionID: "<id>",
     })
@@ -422,6 +520,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## GetHealthcareCareplan
+
+Retrieves a single HealthcareCareplan by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getHealthcareCareplan" method="get" path="/healthcare/{connection_id}/careplan/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Healthcare.GetHealthcareCareplan(ctx, operations.GetHealthcareCareplanRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HealthcareCareplan != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.GetHealthcareCareplanRequest](../../pkg/models/operations/gethealthcarecareplanrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.GetHealthcareCareplanResponse](../../pkg/models/operations/gethealthcarecareplanresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## GetHealthcareCondition
 
 Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -477,6 +630,116 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## GetHealthcareCoverage
+
+Retrieves a single HealthcareCoverage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getHealthcareCoverage" method="get" path="/healthcare/{connection_id}/coverage/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Healthcare.GetHealthcareCoverage(ctx, operations.GetHealthcareCoverageRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HealthcareCoverage != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.GetHealthcareCoverageRequest](../../pkg/models/operations/gethealthcarecoveragerequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.GetHealthcareCoverageResponse](../../pkg/models/operations/gethealthcarecoverageresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetHealthcareDocument
+
+Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getHealthcareDocument" method="get" path="/healthcare/{connection_id}/document/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Healthcare.GetHealthcareDocument(ctx, operations.GetHealthcareDocumentRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HealthcareDocument != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.GetHealthcareDocumentRequest](../../pkg/models/operations/gethealthcaredocumentrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.GetHealthcareDocumentResponse](../../pkg/models/operations/gethealthcaredocumentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## GetHealthcareEncounter
 
 Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -525,6 +788,61 @@ func main() {
 ### Response
 
 **[*operations.GetHealthcareEncounterResponse](../../pkg/models/operations/gethealthcareencounterresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetHealthcareGoal
+
+Retrieves a single HealthcareGoal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getHealthcareGoal" method="get" path="/healthcare/{connection_id}/goal/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Healthcare.GetHealthcareGoal(ctx, operations.GetHealthcareGoalRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HealthcareGoal != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.GetHealthcareGoalRequest](../../pkg/models/operations/gethealthcaregoalrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.GetHealthcareGoalResponse](../../pkg/models/operations/gethealthcaregoalresponse.md), error**
 
 ### Errors
 
@@ -862,6 +1180,116 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## GetHealthcareProcedure
+
+Retrieves a single HealthcareProcedure by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getHealthcareProcedure" method="get" path="/healthcare/{connection_id}/procedure/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Healthcare.GetHealthcareProcedure(ctx, operations.GetHealthcareProcedureRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HealthcareProcedure != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.GetHealthcareProcedureRequest](../../pkg/models/operations/gethealthcareprocedurerequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+
+### Response
+
+**[*operations.GetHealthcareProcedureResponse](../../pkg/models/operations/gethealthcareprocedureresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetHealthcareReport
+
+Retrieves a single HealthcareReport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getHealthcareReport" method="get" path="/healthcare/{connection_id}/report/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Healthcare.GetHealthcareReport(ctx, operations.GetHealthcareReportRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HealthcareReport != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.GetHealthcareReportRequest](../../pkg/models/operations/gethealthcarereportrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.GetHealthcareReportResponse](../../pkg/models/operations/gethealthcarereportresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## GetHealthcareSlot
 
 Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -1025,6 +1453,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListHealthcareCareplans
+
+Returns a list of HealthcareCareplans. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listHealthcareCareplans" method="get" path="/healthcare/{connection_id}/careplan" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Healthcare.ListHealthcareCareplans(ctx, operations.ListHealthcareCareplansRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HealthcareCareplans != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.ListHealthcareCareplansRequest](../../pkg/models/operations/listhealthcarecareplansrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.ListHealthcareCareplansResponse](../../pkg/models/operations/listhealthcarecareplansresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListHealthcareConditions
 
 Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1079,6 +1561,114 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListHealthcareCoverages
+
+Returns a list of HealthcareCoverages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listHealthcareCoverages" method="get" path="/healthcare/{connection_id}/coverage" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Healthcare.ListHealthcareCoverages(ctx, operations.ListHealthcareCoveragesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HealthcareCoverages != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.ListHealthcareCoveragesRequest](../../pkg/models/operations/listhealthcarecoveragesrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.ListHealthcareCoveragesResponse](../../pkg/models/operations/listhealthcarecoveragesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListHealthcareDocuments
+
+Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listHealthcareDocuments" method="get" path="/healthcare/{connection_id}/document" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Healthcare.ListHealthcareDocuments(ctx, operations.ListHealthcareDocumentsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HealthcareDocuments != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.ListHealthcareDocumentsRequest](../../pkg/models/operations/listhealthcaredocumentsrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.ListHealthcareDocumentsResponse](../../pkg/models/operations/listhealthcaredocumentsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListHealthcareEncounters
 
 Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1126,6 +1716,60 @@ func main() {
 ### Response
 
 **[*operations.ListHealthcareEncountersResponse](../../pkg/models/operations/listhealthcareencountersresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListHealthcareGoals
+
+Returns a list of HealthcareGoals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listHealthcareGoals" method="get" path="/healthcare/{connection_id}/goal" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Healthcare.ListHealthcareGoals(ctx, operations.ListHealthcareGoalsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HealthcareGoals != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.ListHealthcareGoalsRequest](../../pkg/models/operations/listhealthcaregoalsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.ListHealthcareGoalsResponse](../../pkg/models/operations/listhealthcaregoalsresponse.md), error**
 
 ### Errors
 
@@ -1457,6 +2101,114 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListHealthcareProcedures
+
+Returns a list of HealthcareProcedures. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listHealthcareProcedures" method="get" path="/healthcare/{connection_id}/procedure" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Healthcare.ListHealthcareProcedures(ctx, operations.ListHealthcareProceduresRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HealthcareProcedures != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.ListHealthcareProceduresRequest](../../pkg/models/operations/listhealthcareproceduresrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+
+### Response
+
+**[*operations.ListHealthcareProceduresResponse](../../pkg/models/operations/listhealthcareproceduresresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListHealthcareReports
+
+Returns a list of HealthcareReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listHealthcareReports" method="get" path="/healthcare/{connection_id}/report" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Healthcare.ListHealthcareReports(ctx, operations.ListHealthcareReportsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HealthcareReports != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.ListHealthcareReportsRequest](../../pkg/models/operations/listhealthcarereportsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.ListHealthcareReportsResponse](../../pkg/models/operations/listhealthcarereportsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListHealthcareSlots
 
 Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1542,27 +2294,23 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-11T08:16:20.874Z"),
             Description: unifiedgosdk.Pointer("clarus aptus cetera"),
             EndAt: types.MustNewTimeFromString("2023-12-12T13:04:41.451Z"),
-            ID: unifiedgosdk.Pointer("592c187e-deaf-403b-a625-0ec9d08453c7"),
+            ID: unifiedgosdk.Pointer("c0833e06-7b06-4bf2-844f-2673c9d03834"),
+            IsVirtual: unifiedgosdk.Pointer(true),
+            MeetingURL: unifiedgosdk.Pointer("https://expensive-slipper.name/"),
             Metadata: []shared.HealthcareMetadata{},
+            Notes: unifiedgosdk.Pointer("Stabilis triduana colo casus anser ver alo beatus contabesco amiculum."),
             PractitionerIds: []string{},
-            Reasons: []shared.HealthcareCode{
-                shared.HealthcareCode{
-                    Code: unifiedgosdk.Pointer("12762740"),
-                    Display: unifiedgosdk.Pointer("cubicularis caput"),
-                    System: unifiedgosdk.Pointer("http://snomed.info/sct"),
-                },
-            },
             ServiceTypes: []shared.HealthcareCode{
                 shared.HealthcareCode{
-                    Code: unifiedgosdk.Pointer("61128108"),
-                    Display: unifiedgosdk.Pointer("Annual physical"),
+                    Code: unifiedgosdk.Pointer("12762740"),
+                    Display: unifiedgosdk.Pointer("New patient visit"),
                     System: unifiedgosdk.Pointer("http://snomed.info/sct"),
                 },
             },
             SlotIds: []string{},
             StartAt: types.MustNewTimeFromString("2023-12-12T12:34:41.451Z"),
             Status: shared.HealthcareAppointmentStatusBooked.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-21T13:29:59.063Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-26T00:08:45.164Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1629,7 +2377,20 @@ func main() {
                 PostalCode: unifiedgosdk.Pointer("54031"),
                 Region: unifiedgosdk.Pointer("Nebraska"),
             },
-            Birthdate: unifiedgosdk.Pointer("2025-02-14"),
+            Birthdate: unifiedgosdk.Pointer("2025-02-15"),
+            Contacts: []shared.HealthcarePatientContact{
+                shared.HealthcarePatientContact{
+                    Emails: []shared.HealthcareEmail{},
+                    Name: unifiedgosdk.Pointer("Antonia Lebsack"),
+                    Relationship: unifiedgosdk.Pointer("Spouse"),
+                    Telephones: []shared.HealthcareTelephone{
+                        shared.HealthcareTelephone{
+                            Telephone: "(695) 328-7029 x4412",
+                            Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
+                        },
+                    },
+                },
+            },
             CreatedAt: types.MustNewTimeFromString("2021-06-05T21:08:04.917Z"),
             Emails: []shared.HealthcareEmail{
                 shared.HealthcareEmail{
@@ -1639,7 +2400,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Alejandrin"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("66747861-8ca6-46b9-bdc6-f95cb6af7318"),
+            ID: unifiedgosdk.Pointer("f74311fc-2420-4077-8af3-fab68bc37b57"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -1659,7 +2420,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-25T12:48:14.512Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-26T11:19:34.352Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1777,27 +2538,23 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-11T08:16:20.874Z"),
             Description: unifiedgosdk.Pointer("clarus aptus cetera"),
             EndAt: types.MustNewTimeFromString("2023-12-12T13:04:41.451Z"),
-            ID: unifiedgosdk.Pointer("592c187e-deaf-403b-a625-0ec9d08453c7"),
+            ID: unifiedgosdk.Pointer("c0833e06-7b06-4bf2-844f-2673c9d03834"),
+            IsVirtual: unifiedgosdk.Pointer(true),
+            MeetingURL: unifiedgosdk.Pointer("https://expensive-slipper.name/"),
             Metadata: []shared.HealthcareMetadata{},
+            Notes: unifiedgosdk.Pointer("Stabilis triduana colo casus anser ver alo beatus contabesco amiculum."),
             PractitionerIds: []string{},
-            Reasons: []shared.HealthcareCode{
-                shared.HealthcareCode{
-                    Code: unifiedgosdk.Pointer("12762740"),
-                    Display: unifiedgosdk.Pointer("cubicularis caput"),
-                    System: unifiedgosdk.Pointer("http://snomed.info/sct"),
-                },
-            },
             ServiceTypes: []shared.HealthcareCode{
                 shared.HealthcareCode{
-                    Code: unifiedgosdk.Pointer("61128108"),
-                    Display: unifiedgosdk.Pointer("Annual physical"),
+                    Code: unifiedgosdk.Pointer("12762740"),
+                    Display: unifiedgosdk.Pointer("New patient visit"),
                     System: unifiedgosdk.Pointer("http://snomed.info/sct"),
                 },
             },
             SlotIds: []string{},
             StartAt: types.MustNewTimeFromString("2023-12-12T12:34:41.451Z"),
             Status: shared.HealthcareAppointmentStatusBooked.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-21T13:29:59.063Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-26T00:08:45.164Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1864,7 +2621,20 @@ func main() {
                 PostalCode: unifiedgosdk.Pointer("54031"),
                 Region: unifiedgosdk.Pointer("Nebraska"),
             },
-            Birthdate: unifiedgosdk.Pointer("2025-02-14"),
+            Birthdate: unifiedgosdk.Pointer("2025-02-15"),
+            Contacts: []shared.HealthcarePatientContact{
+                shared.HealthcarePatientContact{
+                    Emails: []shared.HealthcareEmail{},
+                    Name: unifiedgosdk.Pointer("Antonia Lebsack"),
+                    Relationship: unifiedgosdk.Pointer("Spouse"),
+                    Telephones: []shared.HealthcareTelephone{
+                        shared.HealthcareTelephone{
+                            Telephone: "(695) 328-7029 x4412",
+                            Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
+                        },
+                    },
+                },
+            },
             CreatedAt: types.MustNewTimeFromString("2021-06-05T21:08:04.917Z"),
             Emails: []shared.HealthcareEmail{
                 shared.HealthcareEmail{
@@ -1874,7 +2644,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Alejandrin"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("66747861-8ca6-46b9-bdc6-f95cb6af7318"),
+            ID: unifiedgosdk.Pointer("f74311fc-2420-4077-8af3-fab68bc37b57"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -1894,7 +2664,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-25T12:48:14.512Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-26T11:19:34.352Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

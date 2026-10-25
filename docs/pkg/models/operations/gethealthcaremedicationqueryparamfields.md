@@ -30,5 +30,8 @@ value := operations.GetHealthcareMedicationQueryParamFieldsID
 | `GetHealthcareMedicationQueryParamFieldsStartAt`        | start_at                                                |
 | `GetHealthcareMedicationQueryParamFieldsEndAt`          | end_at                                                  |
 | `GetHealthcareMedicationQueryParamFieldsNotes`          | notes                                                   |
+| `GetHealthcareMedicationQueryParamFieldsRoute`          | route                                                   |
+| `GetHealthcareMedicationQueryParamFieldsDoseNumber`     | dose_number                                             |
+| `GetHealthcareMedicationQueryParamFieldsDoseUnit`       | dose_unit                                               |
 | `GetHealthcareMedicationQueryParamFieldsMetadata`       | metadata                                                |
 | `GetHealthcareMedicationQueryParamFieldsRaw`            | raw                                                     |

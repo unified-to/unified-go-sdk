@@ -32,5 +32,9 @@ value := operations.UpdateHealthcarePatientQueryParamFieldsID
 | `UpdateHealthcarePatientQueryParamFieldsIdentifiers`     | identifiers                                              |
 | `UpdateHealthcarePatientQueryParamFieldsPractitionerIds` | practitioner_ids                                         |
 | `UpdateHealthcarePatientQueryParamFieldsIsActive`        | is_active                                                |
+| `UpdateHealthcarePatientQueryParamFieldsRaces`           | races                                                    |
+| `UpdateHealthcarePatientQueryParamFieldsEthnicities`     | ethnicities                                              |
+| `UpdateHealthcarePatientQueryParamFieldsMaritalStatus`   | marital_status                                           |
+| `UpdateHealthcarePatientQueryParamFieldsContacts`        | contacts                                                 |
 | `UpdateHealthcarePatientQueryParamFieldsMetadata`        | metadata                                                 |
 | `UpdateHealthcarePatientQueryParamFieldsRaw`             | raw                                                      |

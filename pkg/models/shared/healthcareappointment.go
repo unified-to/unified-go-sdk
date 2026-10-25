@@ -50,8 +50,12 @@ type HealthcareAppointment struct {
 	EndAt *time.Time `json:"end_at,omitempty"`
 	// Unique identifier for the appointment
 	ID *string `json:"id,omitempty"`
+	// Whether the appointment is a telehealth/virtual visit
+	IsVirtual *bool `json:"is_virtual,omitempty"`
 	// Where the appointment takes place
 	LocationID *string `json:"location_id,omitempty"`
+	// Join link for a telehealth/virtual visit
+	MeetingURL *string `json:"meeting_url,omitempty"`
 	// Custom field values
 	Metadata []HealthcareMetadata `json:"metadata,omitempty"`
 	// Free-text notes or comments
@@ -122,11 +126,25 @@ func (h *HealthcareAppointment) GetID() *string {
 	return h.ID
 }
 
+func (h *HealthcareAppointment) GetIsVirtual() *bool {
+	if h == nil {
+		return nil
+	}
+	return h.IsVirtual
+}
+
 func (h *HealthcareAppointment) GetLocationID() *string {
 	if h == nil {
 		return nil
 	}
 	return h.LocationID
+}
+
+func (h *HealthcareAppointment) GetMeetingURL() *string {
+	if h == nil {
+		return nil
+	}
+	return h.MeetingURL
 }
 
 func (h *HealthcareAppointment) GetMetadata() []HealthcareMetadata {

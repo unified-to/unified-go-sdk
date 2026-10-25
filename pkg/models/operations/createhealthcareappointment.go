@@ -27,6 +27,8 @@ const (
 	CreateHealthcareAppointmentQueryParamFieldsReasons            CreateHealthcareAppointmentQueryParamFields = "reasons"
 	CreateHealthcareAppointmentQueryParamFieldsCancellationReason CreateHealthcareAppointmentQueryParamFields = "cancellation_reason"
 	CreateHealthcareAppointmentQueryParamFieldsNotes              CreateHealthcareAppointmentQueryParamFields = "notes"
+	CreateHealthcareAppointmentQueryParamFieldsIsVirtual          CreateHealthcareAppointmentQueryParamFields = "is_virtual"
+	CreateHealthcareAppointmentQueryParamFieldsMeetingURL         CreateHealthcareAppointmentQueryParamFields = "meeting_url"
 	CreateHealthcareAppointmentQueryParamFieldsMetadata           CreateHealthcareAppointmentQueryParamFields = "metadata"
 	CreateHealthcareAppointmentQueryParamFieldsRaw                CreateHealthcareAppointmentQueryParamFields = "raw"
 )
@@ -69,6 +71,10 @@ func (e *CreateHealthcareAppointmentQueryParamFields) UnmarshalJSON(data []byte)
 	case "cancellation_reason":
 		fallthrough
 	case "notes":
+		fallthrough
+	case "is_virtual":
+		fallthrough
+	case "meeting_url":
 		fallthrough
 	case "metadata":
 		fallthrough

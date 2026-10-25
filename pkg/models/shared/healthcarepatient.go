@@ -32,17 +32,51 @@ func (e *HealthcarePatientGender) IsExact() bool {
 	return false
 }
 
+// MaritalStatus - Marital status of the patient
+type MaritalStatus string
+
+const (
+	MaritalStatusMarried         MaritalStatus = "MARRIED"
+	MaritalStatusSingle          MaritalStatus = "SINGLE"
+	MaritalStatusDomesticPartner MaritalStatus = "DOMESTIC_PARTNER"
+	MaritalStatusSeparated       MaritalStatus = "SEPARATED"
+	MaritalStatusDivorced        MaritalStatus = "DIVORCED"
+	MaritalStatusWidowed         MaritalStatus = "WIDOWED"
+	MaritalStatusAnnulled        MaritalStatus = "ANNULLED"
+	MaritalStatusUnknown         MaritalStatus = "UNKNOWN"
+	MaritalStatusOther           MaritalStatus = "OTHER"
+)
+
+func (e MaritalStatus) ToPointer() *MaritalStatus {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *MaritalStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "MARRIED", "SINGLE", "DOMESTIC_PARTNER", "SEPARATED", "DIVORCED", "WIDOWED", "ANNULLED", "UNKNOWN", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type HealthcarePatient struct {
 	// Home address of the patient
 	Address *PropertyHealthcarePatientAddress `json:"address,omitempty"`
 	// Date of birth (YYYY-MM-DD)
 	Birthdate *string `json:"birthdate,omitempty"`
+	// Emergency contacts, guardians and other contact persons for the patient
+	Contacts []HealthcarePatientContact `json:"contacts,omitempty"`
 	// When the patient record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// When the patient died (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	DeceasedAt *time.Time `json:"deceased_at,omitempty"`
 	// Email addresses of the patient
 	Emails []HealthcareEmail `json:"emails,omitempty"`
+	// Codings for the patient's ethnicity (e.g. CDC ethnicity codes)
+	Ethnicities []HealthcareCode `json:"ethnicities,omitempty"`
 	// Given name of the patient
 	FirstName *string `json:"first_name,omitempty"`
 	// Administrative gender of the patient
@@ -59,12 +93,16 @@ type HealthcarePatient struct {
 	Language *string `json:"language,omitempty"`
 	// Family name of the patient
 	LastName *string `json:"last_name,omitempty"`
+	// Marital status of the patient
+	MaritalStatus *MaritalStatus `json:"marital_status,omitempty"`
 	// Custom field values
 	Metadata []HealthcareMetadata `json:"metadata,omitempty"`
 	// Full name of the patient
 	Name *string `json:"name,omitempty"`
 	// The patient's primary care practitioners
 	PractitionerIds []string `json:"practitioner_ids,omitempty"`
+	// Codings for the patient's race (e.g. CDC race codes)
+	Races []HealthcareCode `json:"races,omitempty"`
 	// Raw data from integration
 	Raw map[string]any `json:"raw,omitempty"`
 	// Phone numbers of the patient
@@ -98,6 +136,13 @@ func (h *HealthcarePatient) GetBirthdate() *string {
 	return h.Birthdate
 }
 
+func (h *HealthcarePatient) GetContacts() []HealthcarePatientContact {
+	if h == nil {
+		return nil
+	}
+	return h.Contacts
+}
+
 func (h *HealthcarePatient) GetCreatedAt() *time.Time {
 	if h == nil {
 		return nil
@@ -117,6 +162,13 @@ func (h *HealthcarePatient) GetEmails() []HealthcareEmail {
 		return nil
 	}
 	return h.Emails
+}
+
+func (h *HealthcarePatient) GetEthnicities() []HealthcareCode {
+	if h == nil {
+		return nil
+	}
+	return h.Ethnicities
 }
 
 func (h *HealthcarePatient) GetFirstName() *string {
@@ -175,6 +227,13 @@ func (h *HealthcarePatient) GetLastName() *string {
 	return h.LastName
 }
 
+func (h *HealthcarePatient) GetMaritalStatus() *MaritalStatus {
+	if h == nil {
+		return nil
+	}
+	return h.MaritalStatus
+}
+
 func (h *HealthcarePatient) GetMetadata() []HealthcareMetadata {
 	if h == nil {
 		return nil
@@ -194,6 +253,13 @@ func (h *HealthcarePatient) GetPractitionerIds() []string {
 		return nil
 	}
 	return h.PractitionerIds
+}
+
+func (h *HealthcarePatient) GetRaces() []HealthcareCode {
+	if h == nil {
+		return nil
+	}
+	return h.Races
 }
 
 func (h *HealthcarePatient) GetRaw() map[string]any {

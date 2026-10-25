@@ -75,12 +75,12 @@ func main() {
             Gender: shared.HrisEmployeeGenderMale.ToPointer(),
             HasMfa: unifiedgosdk.Pointer(true),
             HiredAt: types.MustNewTimeFromString("2019-09-16T15:08:53.262Z"),
-            ID: unifiedgosdk.Pointer("941ddb12-ec0d-4c11-b686-ab222f4bc432"),
+            ID: unifiedgosdk.Pointer("fdb00bb0-d6b0-4aad-a53e-a238fba7df76"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg"),
             LanguageLocale: unifiedgosdk.Pointer("in"),
             LastName: unifiedgosdk.Pointer("Prohaska"),
             Locations: []shared.HrisLocation{},
-            MaritalStatus: shared.MaritalStatusMarried.ToPointer(),
+            MaritalStatus: shared.HrisEmployeeMaritalStatusMarried.ToPointer(),
             Metadata: []shared.HrisMetadata{
                 shared.HrisMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateHrisMetadataExtraDataMapOfAny(
@@ -89,7 +89,7 @@ func main() {
                         },
                     )),
                     Format: shared.HrisMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("45251d11-252e-42c4-b336-803d8d617888"),
+                    ID: unifiedgosdk.Pointer("afc9fb87-1cad-44eb-971a-917b9952f50c"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateHrisMetadataValueStr(
@@ -139,7 +139,7 @@ func main() {
             TimeoffDaysUsed: unifiedgosdk.Pointer[float64](9.0),
             Timezone: unifiedgosdk.Pointer("Europe/Ljubljana"),
             Title: unifiedgosdk.Pointer("District Branding Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2020-07-19T12:20:19.931Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-07-19T15:10:36.510Z"),
         },
         ConnectionID: "<id>",
     })
@@ -343,12 +343,12 @@ func main() {
             Gender: shared.HrisEmployeeGenderMale.ToPointer(),
             HasMfa: unifiedgosdk.Pointer(true),
             HiredAt: types.MustNewTimeFromString("2019-09-16T15:08:53.262Z"),
-            ID: unifiedgosdk.Pointer("facec7f5-de36-431d-99f5-3010055b3e08"),
+            ID: unifiedgosdk.Pointer("d3ed1051-3756-4b7c-9780-6354fdfc7533"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg"),
             LanguageLocale: unifiedgosdk.Pointer("in"),
             LastName: unifiedgosdk.Pointer("Prohaska"),
             Locations: []shared.HrisLocation{},
-            MaritalStatus: shared.MaritalStatusMarried.ToPointer(),
+            MaritalStatus: shared.HrisEmployeeMaritalStatusMarried.ToPointer(),
             Metadata: []shared.HrisMetadata{
                 shared.HrisMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateHrisMetadataExtraDataMapOfAny(
@@ -357,7 +357,7 @@ func main() {
                         },
                     )),
                     Format: shared.HrisMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("af35dd7e-1405-4526-b5a0-60efc2e47b9f"),
+                    ID: unifiedgosdk.Pointer("146c57f4-d2aa-47f8-bdf2-925b6d5ebdb4"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateHrisMetadataValueStr(
@@ -407,7 +407,7 @@ func main() {
             TimeoffDaysUsed: unifiedgosdk.Pointer[float64](9.0),
             Timezone: unifiedgosdk.Pointer("Europe/Ljubljana"),
             Title: unifiedgosdk.Pointer("District Branding Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2020-07-19T12:20:19.942Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-07-19T15:10:36.521Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -558,12 +558,12 @@ func main() {
             Gender: shared.HrisEmployeeGenderMale.ToPointer(),
             HasMfa: unifiedgosdk.Pointer(true),
             HiredAt: types.MustNewTimeFromString("2019-09-16T15:08:53.262Z"),
-            ID: unifiedgosdk.Pointer("facec7f5-de36-431d-99f5-3010055b3e08"),
+            ID: unifiedgosdk.Pointer("d3ed1051-3756-4b7c-9780-6354fdfc7533"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg"),
             LanguageLocale: unifiedgosdk.Pointer("in"),
             LastName: unifiedgosdk.Pointer("Prohaska"),
             Locations: []shared.HrisLocation{},
-            MaritalStatus: shared.MaritalStatusMarried.ToPointer(),
+            MaritalStatus: shared.HrisEmployeeMaritalStatusMarried.ToPointer(),
             Metadata: []shared.HrisMetadata{
                 shared.HrisMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateHrisMetadataExtraDataMapOfAny(
@@ -572,7 +572,7 @@ func main() {
                         },
                     )),
                     Format: shared.HrisMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("af35dd7e-1405-4526-b5a0-60efc2e47b9f"),
+                    ID: unifiedgosdk.Pointer("146c57f4-d2aa-47f8-bdf2-925b6d5ebdb4"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateHrisMetadataValueStr(
@@ -622,7 +622,7 @@ func main() {
             TimeoffDaysUsed: unifiedgosdk.Pointer[float64](9.0),
             Timezone: unifiedgosdk.Pointer("Europe/Ljubljana"),
             Title: unifiedgosdk.Pointer("District Branding Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2020-07-19T12:20:19.942Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-07-19T15:10:36.521Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

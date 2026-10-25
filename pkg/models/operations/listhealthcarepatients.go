@@ -29,6 +29,10 @@ const (
 	ListHealthcarePatientsQueryParamFieldsIdentifiers     ListHealthcarePatientsQueryParamFields = "identifiers"
 	ListHealthcarePatientsQueryParamFieldsPractitionerIds ListHealthcarePatientsQueryParamFields = "practitioner_ids"
 	ListHealthcarePatientsQueryParamFieldsIsActive        ListHealthcarePatientsQueryParamFields = "is_active"
+	ListHealthcarePatientsQueryParamFieldsRaces           ListHealthcarePatientsQueryParamFields = "races"
+	ListHealthcarePatientsQueryParamFieldsEthnicities     ListHealthcarePatientsQueryParamFields = "ethnicities"
+	ListHealthcarePatientsQueryParamFieldsMaritalStatus   ListHealthcarePatientsQueryParamFields = "marital_status"
+	ListHealthcarePatientsQueryParamFieldsContacts        ListHealthcarePatientsQueryParamFields = "contacts"
 	ListHealthcarePatientsQueryParamFieldsMetadata        ListHealthcarePatientsQueryParamFields = "metadata"
 	ListHealthcarePatientsQueryParamFieldsRaw             ListHealthcarePatientsQueryParamFields = "raw"
 )
@@ -75,6 +79,14 @@ func (e *ListHealthcarePatientsQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "practitioner_ids":
 		fallthrough
 	case "is_active":
+		fallthrough
+	case "races":
+		fallthrough
+	case "ethnicities":
+		fallthrough
+	case "marital_status":
+		fallthrough
+	case "contacts":
 		fallthrough
 	case "metadata":
 		fallthrough

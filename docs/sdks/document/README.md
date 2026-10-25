@@ -5,12 +5,15 @@
 ### Available Operations
 
 * [CreateAtsDocument](#createatsdocument) - Create a document
+* [CreateHealthcareDocument](#createhealthcaredocument) - Create a document
 * [CreateHrisDocument](#createhrisdocument) - Create a document
 * [CreateSigningDocument](#createsigningdocument) - Create a document
 * [GetAtsDocument](#getatsdocument) - Retrieve a document
+* [GetHealthcareDocument](#gethealthcaredocument) - Retrieve a document
 * [GetHrisDocument](#gethrisdocument) - Retrieve a document
 * [GetSigningDocument](#getsigningdocument) - Retrieve a document
 * [ListAtsDocuments](#listatsdocuments) - List all documents
+* [ListHealthcareDocuments](#listhealthcaredocuments) - List all documents
 * [ListHrisDocuments](#listhrisdocuments) - List all documents
 * [ListSigningDocuments](#listsigningdocuments) - List all documents
 * [PatchAtsDocument](#patchatsdocument) - Update a document
@@ -54,10 +57,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-08-20T08:00:27.437Z"),
             DocumentURL: unifiedgosdk.Pointer("https://vengeful-lashes.biz"),
             Filename: unifiedgosdk.Pointer("lonzo_schowalter_resume.pdf"),
-            ID: unifiedgosdk.Pointer("5adb218e-3c71-48ff-afd2-72bce77a2bc7"),
+            ID: unifiedgosdk.Pointer("816b23e4-6c03-460b-b859-ddc0b376bb56"),
             Metadata: []shared.AtsMetadata{},
             Type: shared.AtsDocumentTypeCoverLetter.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-12-07T22:14:41.341Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-12-08T04:16:02.409Z"),
         },
         ConnectionID: "<id>",
     })
@@ -81,6 +84,82 @@ func main() {
 ### Response
 
 **[*operations.CreateAtsDocumentResponse](../../pkg/models/operations/createatsdocumentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateHealthcareDocument
+
+Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body; they are mapped to the provider's API. Returns the created HealthcareDocument.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createHealthcareDocument" method="post" path="/healthcare/{connection_id}/document" example="healthcare_document" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Document.CreateHealthcareDocument(ctx, operations.CreateHealthcareDocumentRequest{
+        HealthcareDocument: shared.HealthcareDocument{
+            AuthoredAt: types.MustNewTimeFromString("2023-07-16T04:00:25.853Z"),
+            Codes: []shared.HealthcareCode{
+                shared.HealthcareCode{
+                    Code: unifiedgosdk.Pointer("23671711"),
+                    Display: unifiedgosdk.Pointer("History and physical"),
+                    System: unifiedgosdk.Pointer("http://loinc.org"),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2023-07-16T04:00:25.853Z"),
+            DocumentURL: unifiedgosdk.Pointer("https://overcooked-yogurt.org"),
+            Filename: unifiedgosdk.Pointer("ugh_after.elc"),
+            ID: unifiedgosdk.Pointer("944b8395-80c9-4ec1-9096-4c1634e2f1af"),
+            Metadata: []shared.HealthcareMetadata{},
+            MimeType: unifiedgosdk.Pointer("application/pdf"),
+            Name: unifiedgosdk.Pointer("History and physical"),
+            Status: shared.HealthcareDocumentStatusSuperseded.ToPointer(),
+            Type: shared.HealthcareDocumentTypeConsultationNote.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-12-28T11:40:08.793Z"),
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HealthcareDocument != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.CreateHealthcareDocumentRequest](../../pkg/models/operations/createhealthcaredocumentrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+
+### Response
+
+**[*operations.CreateHealthcareDocumentResponse](../../pkg/models/operations/createhealthcaredocumentresponse.md), error**
 
 ### Errors
 
@@ -119,10 +198,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-27T11:47:26.086Z"),
             DocumentURL: unifiedgosdk.Pointer("https://sore-decision.biz/"),
             Filename: unifiedgosdk.Pointer("ridge_forager.xsl"),
-            ID: unifiedgosdk.Pointer("15b08c8c-b8f0-4c82-b02f-3927c248ba9a"),
+            ID: unifiedgosdk.Pointer("68230db6-caf0-4632-9559-9104a372b885"),
             Metadata: []shared.HrisMetadata{},
             Type: shared.HrisDocumentTypePolicy.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-13T17:07:01.088Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-14T10:55:55.215Z"),
         },
         ConnectionID: "<id>",
     })
@@ -184,12 +263,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-05-02T09:35:23.679Z"),
             Description: unifiedgosdk.Pointer("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis."),
             ExpiresAt: types.MustNewTimeFromString("2021-06-04T01:21:34.949Z"),
-            ID: unifiedgosdk.Pointer("b431d23b-b29c-43a4-ac99-7529a4445f39"),
+            ID: unifiedgosdk.Pointer("db197632-9b96-4007-a6a2-40c922bc626b"),
             Metadata: []shared.SigningMetadata{},
             Name: unifiedgosdk.Pointer("Denesik Group NDA"),
-            SentAt: types.MustNewTimeFromString("2022-06-30T02:39:02.077Z"),
+            SentAt: types.MustNewTimeFromString("2022-06-30T07:43:54.922Z"),
             Status: shared.SigningDocumentStatusDraft.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-05T04:58:26.079Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-06T00:00:13.238Z"),
         },
         ConnectionID: "<id>",
     })
@@ -268,6 +347,61 @@ func main() {
 ### Response
 
 **[*operations.GetAtsDocumentResponse](../../pkg/models/operations/getatsdocumentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetHealthcareDocument
+
+Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getHealthcareDocument" method="get" path="/healthcare/{connection_id}/document/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Document.GetHealthcareDocument(ctx, operations.GetHealthcareDocumentRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HealthcareDocument != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.GetHealthcareDocumentRequest](../../pkg/models/operations/gethealthcaredocumentrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.GetHealthcareDocumentResponse](../../pkg/models/operations/gethealthcaredocumentresponse.md), error**
 
 ### Errors
 
@@ -439,6 +573,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListHealthcareDocuments
+
+Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listHealthcareDocuments" method="get" path="/healthcare/{connection_id}/document" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Document.ListHealthcareDocuments(ctx, operations.ListHealthcareDocumentsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HealthcareDocuments != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.ListHealthcareDocumentsRequest](../../pkg/models/operations/listhealthcaredocumentsrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.ListHealthcareDocumentsResponse](../../pkg/models/operations/listhealthcaredocumentsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListHrisDocuments
 
 Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -578,10 +766,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-08-20T08:00:27.437Z"),
             DocumentURL: unifiedgosdk.Pointer("https://vengeful-lashes.biz"),
             Filename: unifiedgosdk.Pointer("lonzo_schowalter_resume.pdf"),
-            ID: unifiedgosdk.Pointer("8535880a-0cec-44ad-9870-eb829a6973b4"),
+            ID: unifiedgosdk.Pointer("c6e8b725-bf04-43f0-8cad-b65138f053ad"),
             Metadata: []shared.AtsMetadata{},
             Type: shared.AtsDocumentTypeCoverLetter.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-12-07T22:14:41.348Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-12-08T04:16:02.412Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -644,10 +832,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-27T11:47:26.086Z"),
             DocumentURL: unifiedgosdk.Pointer("https://sore-decision.biz/"),
             Filename: unifiedgosdk.Pointer("ridge_forager.xsl"),
-            ID: unifiedgosdk.Pointer("d0024faa-d587-430c-9575-394792d83cde"),
+            ID: unifiedgosdk.Pointer("15d274de-f9b6-4eb7-b6ab-2ca625e152bb"),
             Metadata: []shared.HrisMetadata{},
             Type: shared.HrisDocumentTypePolicy.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-13T17:07:01.101Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-14T10:55:55.226Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -710,12 +898,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-05-02T09:35:23.679Z"),
             Description: unifiedgosdk.Pointer("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis."),
             ExpiresAt: types.MustNewTimeFromString("2021-06-04T01:21:34.949Z"),
-            ID: unifiedgosdk.Pointer("72de10a6-e9ae-45db-83cf-cd02afce55a1"),
+            ID: unifiedgosdk.Pointer("f81c4d18-1377-47c9-93c1-dfa582f7ad29"),
             Metadata: []shared.SigningMetadata{},
             Name: unifiedgosdk.Pointer("Denesik Group NDA"),
-            SentAt: types.MustNewTimeFromString("2022-06-30T02:39:02.080Z"),
+            SentAt: types.MustNewTimeFromString("2022-06-30T07:43:54.924Z"),
             Status: shared.SigningDocumentStatusDraft.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-05T04:58:26.092Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-06T00:00:13.246Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -943,10 +1131,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-08-20T08:00:27.437Z"),
             DocumentURL: unifiedgosdk.Pointer("https://vengeful-lashes.biz"),
             Filename: unifiedgosdk.Pointer("lonzo_schowalter_resume.pdf"),
-            ID: unifiedgosdk.Pointer("8535880a-0cec-44ad-9870-eb829a6973b4"),
+            ID: unifiedgosdk.Pointer("c6e8b725-bf04-43f0-8cad-b65138f053ad"),
             Metadata: []shared.AtsMetadata{},
             Type: shared.AtsDocumentTypeCoverLetter.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-12-07T22:14:41.348Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-12-08T04:16:02.412Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1009,10 +1197,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-27T11:47:26.086Z"),
             DocumentURL: unifiedgosdk.Pointer("https://sore-decision.biz/"),
             Filename: unifiedgosdk.Pointer("ridge_forager.xsl"),
-            ID: unifiedgosdk.Pointer("d0024faa-d587-430c-9575-394792d83cde"),
+            ID: unifiedgosdk.Pointer("15d274de-f9b6-4eb7-b6ab-2ca625e152bb"),
             Metadata: []shared.HrisMetadata{},
             Type: shared.HrisDocumentTypePolicy.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-13T17:07:01.101Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-14T10:55:55.226Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1075,12 +1263,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-05-02T09:35:23.679Z"),
             Description: unifiedgosdk.Pointer("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis."),
             ExpiresAt: types.MustNewTimeFromString("2021-06-04T01:21:34.949Z"),
-            ID: unifiedgosdk.Pointer("72de10a6-e9ae-45db-83cf-cd02afce55a1"),
+            ID: unifiedgosdk.Pointer("f81c4d18-1377-47c9-93c1-dfa582f7ad29"),
             Metadata: []shared.SigningMetadata{},
             Name: unifiedgosdk.Pointer("Denesik Group NDA"),
-            SentAt: types.MustNewTimeFromString("2022-06-30T02:39:02.080Z"),
+            SentAt: types.MustNewTimeFromString("2022-06-30T07:43:54.924Z"),
             Status: shared.SigningDocumentStatusDraft.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-05T04:58:26.092Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-06T00:00:13.246Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

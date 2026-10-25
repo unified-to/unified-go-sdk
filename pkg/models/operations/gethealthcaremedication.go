@@ -27,6 +27,9 @@ const (
 	GetHealthcareMedicationQueryParamFieldsStartAt        GetHealthcareMedicationQueryParamFields = "start_at"
 	GetHealthcareMedicationQueryParamFieldsEndAt          GetHealthcareMedicationQueryParamFields = "end_at"
 	GetHealthcareMedicationQueryParamFieldsNotes          GetHealthcareMedicationQueryParamFields = "notes"
+	GetHealthcareMedicationQueryParamFieldsRoute          GetHealthcareMedicationQueryParamFields = "route"
+	GetHealthcareMedicationQueryParamFieldsDoseNumber     GetHealthcareMedicationQueryParamFields = "dose_number"
+	GetHealthcareMedicationQueryParamFieldsDoseUnit       GetHealthcareMedicationQueryParamFields = "dose_unit"
 	GetHealthcareMedicationQueryParamFieldsMetadata       GetHealthcareMedicationQueryParamFields = "metadata"
 	GetHealthcareMedicationQueryParamFieldsRaw            GetHealthcareMedicationQueryParamFields = "raw"
 )
@@ -69,6 +72,12 @@ func (e *GetHealthcareMedicationQueryParamFields) UnmarshalJSON(data []byte) err
 	case "end_at":
 		fallthrough
 	case "notes":
+		fallthrough
+	case "route":
+		fallthrough
+	case "dose_number":
+		fallthrough
+	case "dose_unit":
 		fallthrough
 	case "metadata":
 		fallthrough

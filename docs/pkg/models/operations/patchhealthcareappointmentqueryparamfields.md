@@ -30,5 +30,7 @@ value := operations.PatchHealthcareAppointmentQueryParamFieldsID
 | `PatchHealthcareAppointmentQueryParamFieldsReasons`            | reasons                                                        |
 | `PatchHealthcareAppointmentQueryParamFieldsCancellationReason` | cancellation_reason                                            |
 | `PatchHealthcareAppointmentQueryParamFieldsNotes`              | notes                                                          |
+| `PatchHealthcareAppointmentQueryParamFieldsIsVirtual`          | is_virtual                                                     |
+| `PatchHealthcareAppointmentQueryParamFieldsMeetingURL`         | meeting_url                                                    |
 | `PatchHealthcareAppointmentQueryParamFieldsMetadata`           | metadata                                                       |
 | `PatchHealthcareAppointmentQueryParamFieldsRaw`                | raw                                                            |
