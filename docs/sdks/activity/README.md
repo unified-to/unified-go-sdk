@@ -49,7 +49,7 @@ func main() {
         AtsActivity: shared.AtsActivity{
             CreatedAt: types.MustNewTimeFromString("2022-08-07T03:16:43.865Z"),
             Description: unifiedgosdk.Pointer("Sapiente."),
-            ID: unifiedgosdk.Pointer("ed011b17-e9e0-4dc6-a60b-44064f4f203a"),
+            ID: unifiedgosdk.Pointer("2b468310-ab36-40d0-9d28-31f92a9ba76e"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -59,7 +59,7 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("45477833-6bc8-416b-b69d-f510c8dc883d"),
+                    ID: unifiedgosdk.Pointer("a4f6ef71-31b0-4458-b651-d952ff9cb695"),
                     Namespace: unifiedgosdk.Pointer("activity"),
                     Slug: unifiedgosdk.Pointer("cimentarius"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
@@ -70,7 +70,7 @@ func main() {
             SubType: unifiedgosdk.Pointer("TASK"),
             Title: unifiedgosdk.Pointer("Venio blandior aureus."),
             Type: shared.AtsActivityTypeTask.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-07T15:16:28.121Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-08T11:19:11.345Z"),
         },
         ConnectionID: "<id>",
     })
@@ -130,15 +130,15 @@ func main() {
     res, err := s.Activity.CreateLmsActivity(ctx, operations.CreateLmsActivityRequest{
         LmsActivity: shared.LmsActivity{
             AssignedGrade: unifiedgosdk.Pointer("summopere"),
-            CompletedAt: types.MustNewTimeFromString("2023-12-08T00:01:37.289Z"),
+            CompletedAt: types.MustNewTimeFromString("2023-12-08T12:02:46.198Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-17T01:25:21.745Z"),
             DurationMinutes: unifiedgosdk.Pointer[float64](55.0),
-            ID: unifiedgosdk.Pointer("f87fca0d-4e84-4ced-9531-00bdd67681b6"),
+            ID: unifiedgosdk.Pointer("ca395b21-998d-414b-83f7-1a90e03fa270"),
             IsCompleted: unifiedgosdk.Pointer(true),
             Metadata: []shared.LmsMetadata{},
             ProgressPercentage: unifiedgosdk.Pointer[float64](100.0),
-            StartedAt: types.MustNewTimeFromString("2021-04-25T12:25:16.184Z"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-31T19:34:33.671Z"),
+            StartedAt: types.MustNewTimeFromString("2021-04-25T14:25:01.310Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-01T00:31:10.898Z"),
         },
         ConnectionID: "<id>",
     })
@@ -526,7 +526,7 @@ func main() {
         AtsActivity: shared.AtsActivity{
             CreatedAt: types.MustNewTimeFromString("2022-08-07T03:16:43.865Z"),
             Description: unifiedgosdk.Pointer("Sapiente."),
-            ID: unifiedgosdk.Pointer("f25caee7-d001-40f9-978c-5689365bce69"),
+            ID: unifiedgosdk.Pointer("2ed63c79-47e7-40b8-b6d4-a900ba2dfd28"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -536,7 +536,7 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("98ba1f14-9483-47b7-96af-04d60dfadeb5"),
+                    ID: unifiedgosdk.Pointer("cca245af-5373-41c6-b728-a93b44a466c2"),
                     Namespace: unifiedgosdk.Pointer("activity"),
                     Slug: unifiedgosdk.Pointer("cimentarius"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
@@ -547,7 +547,7 @@ func main() {
             SubType: unifiedgosdk.Pointer("TASK"),
             Title: unifiedgosdk.Pointer("Venio blandior aureus."),
             Type: shared.AtsActivityTypeTask.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-07T15:16:28.137Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-08T11:19:11.371Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -608,15 +608,15 @@ func main() {
     res, err := s.Activity.PatchLmsActivity(ctx, operations.PatchLmsActivityRequest{
         LmsActivity: shared.LmsActivity{
             AssignedGrade: unifiedgosdk.Pointer("summopere"),
-            CompletedAt: types.MustNewTimeFromString("2023-12-08T00:01:37.295Z"),
+            CompletedAt: types.MustNewTimeFromString("2023-12-08T12:02:46.203Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-17T01:25:21.745Z"),
             DurationMinutes: unifiedgosdk.Pointer[float64](55.0),
-            ID: unifiedgosdk.Pointer("bfb528c8-69ae-436b-b2a4-fece71480a69"),
+            ID: unifiedgosdk.Pointer("54a0cf43-5099-453a-8ff8-4e46c3d791fd"),
             IsCompleted: unifiedgosdk.Pointer(true),
             Metadata: []shared.LmsMetadata{},
             ProgressPercentage: unifiedgosdk.Pointer[float64](100.0),
-            StartedAt: types.MustNewTimeFromString("2021-04-25T12:25:16.185Z"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-31T19:34:33.673Z"),
+            StartedAt: types.MustNewTimeFromString("2021-04-25T14:25:01.311Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-01T00:31:10.900Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -788,7 +788,7 @@ func main() {
         AtsActivity: shared.AtsActivity{
             CreatedAt: types.MustNewTimeFromString("2022-08-07T03:16:43.865Z"),
             Description: unifiedgosdk.Pointer("Sapiente."),
-            ID: unifiedgosdk.Pointer("f25caee7-d001-40f9-978c-5689365bce69"),
+            ID: unifiedgosdk.Pointer("2ed63c79-47e7-40b8-b6d4-a900ba2dfd28"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -798,7 +798,7 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("98ba1f14-9483-47b7-96af-04d60dfadeb5"),
+                    ID: unifiedgosdk.Pointer("cca245af-5373-41c6-b728-a93b44a466c2"),
                     Namespace: unifiedgosdk.Pointer("activity"),
                     Slug: unifiedgosdk.Pointer("cimentarius"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
@@ -809,7 +809,7 @@ func main() {
             SubType: unifiedgosdk.Pointer("TASK"),
             Title: unifiedgosdk.Pointer("Venio blandior aureus."),
             Type: shared.AtsActivityTypeTask.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-07T15:16:28.137Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-08T11:19:11.371Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -870,15 +870,15 @@ func main() {
     res, err := s.Activity.UpdateLmsActivity(ctx, operations.UpdateLmsActivityRequest{
         LmsActivity: shared.LmsActivity{
             AssignedGrade: unifiedgosdk.Pointer("summopere"),
-            CompletedAt: types.MustNewTimeFromString("2023-12-08T00:01:37.295Z"),
+            CompletedAt: types.MustNewTimeFromString("2023-12-08T12:02:46.203Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-17T01:25:21.745Z"),
             DurationMinutes: unifiedgosdk.Pointer[float64](55.0),
-            ID: unifiedgosdk.Pointer("bfb528c8-69ae-436b-b2a4-fece71480a69"),
+            ID: unifiedgosdk.Pointer("54a0cf43-5099-453a-8ff8-4e46c3d791fd"),
             IsCompleted: unifiedgosdk.Pointer(true),
             Metadata: []shared.LmsMetadata{},
             ProgressPercentage: unifiedgosdk.Pointer[float64](100.0),
-            StartedAt: types.MustNewTimeFromString("2021-04-25T12:25:16.185Z"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-31T19:34:33.673Z"),
+            StartedAt: types.MustNewTimeFromString("2021-04-25T14:25:01.311Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-01T00:31:10.900Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

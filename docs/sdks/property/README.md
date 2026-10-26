@@ -41,10 +41,10 @@ func main() {
         AnalyticsProperty: shared.AnalyticsProperty{
             CreatedAt: types.MustNewTimeFromString("2021-09-05T19:04:58.430Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("350b8e98-967f-4191-b402-3708f92f7497"),
+            ID: unifiedgosdk.Pointer("eec39539-298a-445f-a70b-5ae9470fe81b"),
             Name: unifiedgosdk.Pointer("Daniel, Goldner and Dickinson"),
             Timezone: unifiedgosdk.Pointer("UTC"),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-14T20:53:13.311Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-14T20:59:54.786Z"),
         },
         ConnectionID: "<id>",
     })
@@ -214,10 +214,10 @@ func main() {
         AnalyticsProperty: shared.AnalyticsProperty{
             CreatedAt: types.MustNewTimeFromString("2021-09-05T19:04:58.430Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("23dc2ed2-965b-44ba-984d-07609cf28cd9"),
+            ID: unifiedgosdk.Pointer("4d063817-78ef-4e8a-bb23-50b16f55c083"),
             Name: unifiedgosdk.Pointer("Daniel, Goldner and Dickinson"),
             Timezone: unifiedgosdk.Pointer("UTC"),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-14T20:53:13.311Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-14T20:59:54.787Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -334,10 +334,10 @@ func main() {
         AnalyticsProperty: shared.AnalyticsProperty{
             CreatedAt: types.MustNewTimeFromString("2021-09-05T19:04:58.430Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("23dc2ed2-965b-44ba-984d-07609cf28cd9"),
+            ID: unifiedgosdk.Pointer("4d063817-78ef-4e8a-bb23-50b16f55c083"),
             Name: unifiedgosdk.Pointer("Daniel, Goldner and Dickinson"),
             Timezone: unifiedgosdk.Pointer("UTC"),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-14T20:53:13.311Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-14T20:59:54.787Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

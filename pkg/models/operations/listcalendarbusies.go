@@ -65,8 +65,10 @@ type ListCalendarBusiesRequest struct {
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
-	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
-	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	Raw *string `queryParam:"style=form,explode=true,name=raw"`
+	// The room ID to get availability for.
+	RoomID *string `queryParam:"style=form,explode=true,name=room_id"`
+	Sort   *string `queryParam:"style=form,explode=true,name=sort"`
 	// The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -136,6 +138,13 @@ func (l *ListCalendarBusiesRequest) GetRaw() *string {
 		return nil
 	}
 	return l.Raw
+}
+
+func (l *ListCalendarBusiesRequest) GetRoomID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.RoomID
 }
 
 func (l *ListCalendarBusiesRequest) GetSort() *string {

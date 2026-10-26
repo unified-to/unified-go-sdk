@@ -38,6 +38,7 @@ const (
 	PatchCalendarEventQueryParamFieldsMatterID          PatchCalendarEventQueryParamFields = "matter_id"
 	PatchCalendarEventQueryParamFieldsMetadata          PatchCalendarEventQueryParamFields = "metadata"
 	PatchCalendarEventQueryParamFieldsRaw               PatchCalendarEventQueryParamFields = "raw"
+	PatchCalendarEventQueryParamFieldsRoomIds           PatchCalendarEventQueryParamFields = "room_ids"
 )
 
 func (e PatchCalendarEventQueryParamFields) ToPointer() *PatchCalendarEventQueryParamFields {
@@ -100,6 +101,8 @@ func (e *PatchCalendarEventQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "room_ids":
 		*e = PatchCalendarEventQueryParamFields(v)
 		return nil
 	default:

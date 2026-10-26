@@ -1842,6 +1842,29 @@ func (e *ListRoleID) IsExact() bool {
 	return false
 }
 
+type ListRoomID string
+
+const (
+	ListRoomIDSupportedRequired ListRoomID = "supported-required"
+	ListRoomIDSupported         ListRoomID = "supported"
+	ListRoomIDNotSupported      ListRoomID = "not-supported"
+)
+
+func (e ListRoomID) ToPointer() *ListRoomID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListRoomID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListRootID string
 
 const (
@@ -3420,29 +3443,6 @@ func (e VirtualWebhookCarrierID) ToPointer() *VirtualWebhookCarrierID {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookCarrierID) IsExact() bool {
-	if e != nil {
-		switch *e {
-		case "supported-required", "supported", "not-supported":
-			return true
-		}
-	}
-	return false
-}
-
-type VirtualWebhookChannelID string
-
-const (
-	VirtualWebhookChannelIDSupportedRequired VirtualWebhookChannelID = "supported-required"
-	VirtualWebhookChannelIDSupported         VirtualWebhookChannelID = "supported"
-	VirtualWebhookChannelIDNotSupported      VirtualWebhookChannelID = "not-supported"
-)
-
-func (e VirtualWebhookChannelID) ToPointer() *VirtualWebhookChannelID {
-	return &e
-}
-
-// IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *VirtualWebhookChannelID) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":

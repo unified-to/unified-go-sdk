@@ -38,6 +38,7 @@ const (
 	ListCalendarEventsQueryParamFieldsMatterID          ListCalendarEventsQueryParamFields = "matter_id"
 	ListCalendarEventsQueryParamFieldsMetadata          ListCalendarEventsQueryParamFields = "metadata"
 	ListCalendarEventsQueryParamFieldsRaw               ListCalendarEventsQueryParamFields = "raw"
+	ListCalendarEventsQueryParamFieldsRoomIds           ListCalendarEventsQueryParamFields = "room_ids"
 )
 
 func (e ListCalendarEventsQueryParamFields) ToPointer() *ListCalendarEventsQueryParamFields {
@@ -100,6 +101,8 @@ func (e *ListCalendarEventsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "room_ids":
 		*e = ListCalendarEventsQueryParamFields(v)
 		return nil
 	default:
@@ -126,8 +129,10 @@ type ListCalendarEventsRequest struct {
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
-	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
-	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	Raw *string `queryParam:"style=form,explode=true,name=raw"`
+	// The room ID to filter by. Returns the events that booked this room.
+	RoomID *string `queryParam:"style=form,explode=true,name=room_id"`
+	Sort   *string `queryParam:"style=form,explode=true,name=sort"`
 	// The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -209,6 +214,13 @@ func (l *ListCalendarEventsRequest) GetRaw() *string {
 		return nil
 	}
 	return l.Raw
+}
+
+func (l *ListCalendarEventsRequest) GetRoomID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.RoomID
 }
 
 func (l *ListCalendarEventsRequest) GetSort() *string {

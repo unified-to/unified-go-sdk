@@ -38,6 +38,7 @@ const (
 	CreateCalendarEventQueryParamFieldsMatterID          CreateCalendarEventQueryParamFields = "matter_id"
 	CreateCalendarEventQueryParamFieldsMetadata          CreateCalendarEventQueryParamFields = "metadata"
 	CreateCalendarEventQueryParamFieldsRaw               CreateCalendarEventQueryParamFields = "raw"
+	CreateCalendarEventQueryParamFieldsRoomIds           CreateCalendarEventQueryParamFields = "room_ids"
 )
 
 func (e CreateCalendarEventQueryParamFields) ToPointer() *CreateCalendarEventQueryParamFields {
@@ -100,6 +101,8 @@ func (e *CreateCalendarEventQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "room_ids":
 		*e = CreateCalendarEventQueryParamFields(v)
 		return nil
 	default:

@@ -2,6 +2,29 @@
 
 package shared
 
+type VirtualWebhookChannelID string
+
+const (
+	VirtualWebhookChannelIDSupportedRequired VirtualWebhookChannelID = "supported-required"
+	VirtualWebhookChannelIDSupported         VirtualWebhookChannelID = "supported"
+	VirtualWebhookChannelIDNotSupported      VirtualWebhookChannelID = "not-supported"
+)
+
+func (e VirtualWebhookChannelID) ToPointer() *VirtualWebhookChannelID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookChannelID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookCollectionID string
 
 const (
@@ -1441,6 +1464,7 @@ type IntegrationSupport struct {
 	ListRegionID            *ListRegionID            `json:"list_region_id,omitempty"`
 	ListRepoID              *ListRepoID              `json:"list_repo_id,omitempty"`
 	ListRoleID              *ListRoleID              `json:"list_role_id,omitempty"`
+	ListRoomID              *ListRoomID              `json:"list_room_id,omitempty"`
 	ListRootID              *ListRootID              `json:"list_root_id,omitempty"`
 	ListSaleschannelID      *ListSaleschannelID      `json:"list_saleschannel_id,omitempty"`
 	ListSegmentID           *ListSegmentID           `json:"list_segment_id,omitempty"`
@@ -2143,6 +2167,13 @@ func (i *IntegrationSupport) GetListRoleID() *ListRoleID {
 		return nil
 	}
 	return i.ListRoleID
+}
+
+func (i *IntegrationSupport) GetListRoomID() *ListRoomID {
+	if i == nil {
+		return nil
+	}
+	return i.ListRoomID
 }
 
 func (i *IntegrationSupport) GetListRootID() *ListRootID {

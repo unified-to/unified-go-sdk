@@ -49,8 +49,10 @@ type CalendarEvent struct {
 	Raw        map[string]any                  `json:"raw,omitempty"`
 	Recurrence []CalendarEventRecurrence       `json:"recurrence,omitempty"`
 	// (reference to CalendarEvent)
-	RecurringEventID  *string `json:"recurring_event_id,omitempty"`
-	SendNotifications *bool   `json:"send_notifications,omitempty"`
+	RecurringEventID *string `json:"recurring_event_id,omitempty"`
+	// pointers to Calendar Rooms booked for this event
+	RoomIds           []string `json:"room_ids,omitempty"`
+	SendNotifications *bool    `json:"send_notifications,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartAt  *string              `json:"start_at,omitempty"`
 	Status   *CalendarEventStatus `json:"status,omitempty"`
@@ -192,6 +194,13 @@ func (c *CalendarEvent) GetRecurringEventID() *string {
 		return nil
 	}
 	return c.RecurringEventID
+}
+
+func (c *CalendarEvent) GetRoomIds() []string {
+	if c == nil {
+		return nil
+	}
+	return c.RoomIds
 }
 
 func (c *CalendarEvent) GetSendNotifications() *bool {

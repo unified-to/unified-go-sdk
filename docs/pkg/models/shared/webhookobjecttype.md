@@ -158,6 +158,8 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeCalendarLink`                  | calendar_link                                    |
 | `WebhookObjectTypeCalendarRecording`             | calendar_recording                               |
 | `WebhookObjectTypeCalendarWebinar`               | calendar_webinar                                 |
+| `WebhookObjectTypeCalendarRoom`                  | calendar_room                                    |
+| `WebhookObjectTypeCalendarLocation`              | calendar_location                                |
 | `WebhookObjectTypeAdsOrganization`               | ads_organization                                 |
 | `WebhookObjectTypeAdsAd`                         | ads_ad                                           |
 | `WebhookObjectTypeAdsCampaign`                   | ads_campaign                                     |

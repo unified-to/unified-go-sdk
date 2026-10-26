@@ -117,7 +117,9 @@ type UnifiedTo struct {
 	Calendar            *Calendar
 	Busy                *Busy
 	Link                *Link
+	Location            *Location
 	Recording           *Recording
+	Room                *Room
 	Webinar             *Webinar
 	Cdp                 *Cdp
 	Activation          *Activation
@@ -126,7 +128,6 @@ type UnifiedTo struct {
 	Segment             *Segment
 	Source              *Source
 	Clubs               *Clubs
-	Location            *Location
 	Member              *Member
 	Commerce            *Commerce
 	Availability        *Availability
@@ -347,10 +348,10 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.39.3",
+		SDKVersion: "0.39.4",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.39.3 2.950.13 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.39.3",
+			UserAgent:         "speakeasy-sdk/go 0.39.4 2.950.13 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.39.4",
 			GenVersion:        "2.950.13",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
@@ -433,7 +434,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Calendar = newCalendar(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Busy = newBusy(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Link = newLink(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Location = newLocation(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Recording = newRecording(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Room = newRoom(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Webinar = newWebinar(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Cdp = newCdp(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Activation = newActivation(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -442,7 +445,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Segment = newSegment(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Source = newSource(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Clubs = newClubs(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Location = newLocation(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Member = newMember(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Commerce = newCommerce(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Availability = newAvailability(sdk, sdk.sdkConfiguration, sdk.hooks)
