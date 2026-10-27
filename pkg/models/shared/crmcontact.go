@@ -10,7 +10,7 @@ import (
 // CrmContact - A contact represents a person that optionally is associated with a deal and/or a company
 type CrmContact struct {
 	Address *PropertyCrmContactAddress `json:"address,omitempty"`
-	// The companyorganization name  of the contact
+	// The company/organization name  of the contact
 	Company *string `json:"company,omitempty"`
 	// An array of company IDs associated with this contact
 	CompanyIds []string `json:"company_ids,omitempty"`
@@ -20,11 +20,13 @@ type CrmContact struct {
 	DealIds    []string `json:"deal_ids,omitempty"`
 	Department *string  `json:"department,omitempty"`
 	// An array of email addresses for this contact
-	Emails    []CrmEmail `json:"emails,omitempty"`
-	FirstName *string    `json:"first_name,omitempty"`
+	Emails []CrmEmail `json:"emails,omitempty"`
+	// The contact's first (given) name
+	FirstName *string `json:"first_name,omitempty"`
 	// Unique identifier for this contact object
 	ID       *string `json:"id,omitempty"`
 	ImageURL *string `json:"image_url,omitempty"`
+	// The contact's last (family) name
 	LastName *string `json:"last_name,omitempty"`
 	// Additional URLs associated with the contact e.g., LinkedIn, website, etc
 	LinkUrls []string      `json:"link_urls,omitempty"`

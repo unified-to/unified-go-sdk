@@ -38,7 +38,7 @@ type EnrichPerson struct {
 	Bio *string `json:"bio,omitempty"`
 	// The birth date of the person
 	Birthdate *string `json:"birthdate,omitempty"`
-	// The companyorganization name  of the person
+	// The company/organization name  of the person
 	Company *string `json:"company,omitempty"`
 	// The company's domain
 	CompanyDomain *string `json:"company_domain,omitempty"`
