@@ -13,15 +13,15 @@ type GetCalendarLocationQueryParamFields string
 
 const (
 	GetCalendarLocationQueryParamFieldsID        GetCalendarLocationQueryParamFields = "id"
+	GetCalendarLocationQueryParamFieldsCreatedAt GetCalendarLocationQueryParamFields = "created_at"
+	GetCalendarLocationQueryParamFieldsUpdatedAt GetCalendarLocationQueryParamFields = "updated_at"
 	GetCalendarLocationQueryParamFieldsName      GetCalendarLocationQueryParamFields = "name"
 	GetCalendarLocationQueryParamFieldsParentID  GetCalendarLocationQueryParamFields = "parent_id"
 	GetCalendarLocationQueryParamFieldsType      GetCalendarLocationQueryParamFields = "type"
 	GetCalendarLocationQueryParamFieldsAddress   GetCalendarLocationQueryParamFields = "address"
-	GetCalendarLocationQueryParamFieldsRaw       GetCalendarLocationQueryParamFields = "raw"
-	GetCalendarLocationQueryParamFieldsCreatedAt GetCalendarLocationQueryParamFields = "created_at"
-	GetCalendarLocationQueryParamFieldsUpdatedAt GetCalendarLocationQueryParamFields = "updated_at"
 	GetCalendarLocationQueryParamFieldsTimezone  GetCalendarLocationQueryParamFields = "timezone"
 	GetCalendarLocationQueryParamFieldsMetadata  GetCalendarLocationQueryParamFields = "metadata"
+	GetCalendarLocationQueryParamFieldsRaw       GetCalendarLocationQueryParamFields = "raw"
 )
 
 func (e GetCalendarLocationQueryParamFields) ToPointer() *GetCalendarLocationQueryParamFields {
@@ -35,6 +35,10 @@ func (e *GetCalendarLocationQueryParamFields) UnmarshalJSON(data []byte) error {
 	switch v {
 	case "id":
 		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
 	case "name":
 		fallthrough
 	case "parent_id":
@@ -43,15 +47,11 @@ func (e *GetCalendarLocationQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "address":
 		fallthrough
-	case "raw":
-		fallthrough
-	case "created_at":
-		fallthrough
-	case "updated_at":
-		fallthrough
 	case "timezone":
 		fallthrough
 	case "metadata":
+		fallthrough
+	case "raw":
 		*e = GetCalendarLocationQueryParamFields(v)
 		return nil
 	default:

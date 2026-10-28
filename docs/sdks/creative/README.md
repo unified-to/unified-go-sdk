@@ -40,7 +40,7 @@ func main() {
     res, err := s.Creative.CreateAdsCreative(ctx, operations.CreateAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{
             CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
-            ID: unifiedgosdk.Pointer("d6c5b346-e6b6-4ad6-af3f-b7254d1475d3"),
+            ID: unifiedgosdk.Pointer("6c7ba176-1242-4f31-8ec6-6d931a78959d"),
             Labels: []string{
                 "coma",
                 "accedo",
@@ -49,7 +49,7 @@ func main() {
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Brekke, Bradtke and Robel"),
             Status: shared.AdsCreativeStatusPaused.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-06-28T23:01:27.672Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-29T04:40:00.330Z"),
         },
         ConnectionID: "<id>",
     })
@@ -218,7 +218,7 @@ func main() {
     res, err := s.Creative.PatchAdsCreative(ctx, operations.PatchAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{
             CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
-            ID: unifiedgosdk.Pointer("99b8b09a-a41b-4081-95aa-9f8a1fb9ad70"),
+            ID: unifiedgosdk.Pointer("a978e3b8-81c2-4925-9104-4453b2d59f20"),
             Labels: []string{
                 "coma",
                 "accedo",
@@ -227,7 +227,7 @@ func main() {
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Brekke, Bradtke and Robel"),
             Status: shared.AdsCreativeStatusPaused.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-06-28T23:01:27.678Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-29T04:40:00.336Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -343,7 +343,7 @@ func main() {
     res, err := s.Creative.UpdateAdsCreative(ctx, operations.UpdateAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{
             CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
-            ID: unifiedgosdk.Pointer("99b8b09a-a41b-4081-95aa-9f8a1fb9ad70"),
+            ID: unifiedgosdk.Pointer("a978e3b8-81c2-4925-9104-4453b2d59f20"),
             Labels: []string{
                 "coma",
                 "accedo",
@@ -352,7 +352,7 @@ func main() {
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Brekke, Bradtke and Robel"),
             Status: shared.AdsCreativeStatusPaused.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-06-28T23:01:27.678Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-29T04:40:00.336Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

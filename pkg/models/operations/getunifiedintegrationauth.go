@@ -28,7 +28,7 @@ type GetUnifiedIntegrationAuthRequest struct {
 	State *string `queryParam:"style=form,explode=true,name=state"`
 	// Optional tenant domain or subdomain for integrations that require it to build the authorize, token, or API URL. Depending on the integration, this may be a bare subdomain or a full domain/URL.
 	Subdomain *string `queryParam:"style=form,explode=true,name=subdomain"`
-	// The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided.
+	// The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided. When the workspace has trusted_domains configured, this host must be on that list.
 	SuccessRedirect *string `queryParam:"style=form,explode=true,name=success_redirect"`
 	// The ID of the workspace
 	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspace_id"`

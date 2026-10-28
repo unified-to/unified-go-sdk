@@ -40,5 +40,5 @@ value := operations.PatchCalendarEventQueryParamFieldsID
 | `PatchCalendarEventQueryParamFieldsSendNotifications` | send_notifications                                    |
 | `PatchCalendarEventQueryParamFieldsMatterID`          | matter_id                                             |
 | `PatchCalendarEventQueryParamFieldsMetadata`          | metadata                                              |
-| `PatchCalendarEventQueryParamFieldsRaw`               | raw                                                   |
 | `PatchCalendarEventQueryParamFieldsRoomIds`           | room_ids                                              |
+| `PatchCalendarEventQueryParamFieldsRaw`               | raw                                                   |

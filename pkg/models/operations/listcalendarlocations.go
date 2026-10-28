@@ -13,15 +13,15 @@ type ListCalendarLocationsQueryParamFields string
 
 const (
 	ListCalendarLocationsQueryParamFieldsID        ListCalendarLocationsQueryParamFields = "id"
+	ListCalendarLocationsQueryParamFieldsCreatedAt ListCalendarLocationsQueryParamFields = "created_at"
+	ListCalendarLocationsQueryParamFieldsUpdatedAt ListCalendarLocationsQueryParamFields = "updated_at"
 	ListCalendarLocationsQueryParamFieldsName      ListCalendarLocationsQueryParamFields = "name"
 	ListCalendarLocationsQueryParamFieldsParentID  ListCalendarLocationsQueryParamFields = "parent_id"
 	ListCalendarLocationsQueryParamFieldsType      ListCalendarLocationsQueryParamFields = "type"
 	ListCalendarLocationsQueryParamFieldsAddress   ListCalendarLocationsQueryParamFields = "address"
-	ListCalendarLocationsQueryParamFieldsRaw       ListCalendarLocationsQueryParamFields = "raw"
-	ListCalendarLocationsQueryParamFieldsCreatedAt ListCalendarLocationsQueryParamFields = "created_at"
-	ListCalendarLocationsQueryParamFieldsUpdatedAt ListCalendarLocationsQueryParamFields = "updated_at"
 	ListCalendarLocationsQueryParamFieldsTimezone  ListCalendarLocationsQueryParamFields = "timezone"
 	ListCalendarLocationsQueryParamFieldsMetadata  ListCalendarLocationsQueryParamFields = "metadata"
+	ListCalendarLocationsQueryParamFieldsRaw       ListCalendarLocationsQueryParamFields = "raw"
 )
 
 func (e ListCalendarLocationsQueryParamFields) ToPointer() *ListCalendarLocationsQueryParamFields {
@@ -35,6 +35,10 @@ func (e *ListCalendarLocationsQueryParamFields) UnmarshalJSON(data []byte) error
 	switch v {
 	case "id":
 		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
 	case "name":
 		fallthrough
 	case "parent_id":
@@ -43,15 +47,11 @@ func (e *ListCalendarLocationsQueryParamFields) UnmarshalJSON(data []byte) error
 		fallthrough
 	case "address":
 		fallthrough
-	case "raw":
-		fallthrough
-	case "created_at":
-		fallthrough
-	case "updated_at":
-		fallthrough
 	case "timezone":
 		fallthrough
 	case "metadata":
+		fallthrough
+	case "raw":
 		*e = ListCalendarLocationsQueryParamFields(v)
 		return nil
 	default:

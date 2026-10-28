@@ -13,15 +13,15 @@ type GetCalendarRoomQueryParamFields string
 
 const (
 	GetCalendarRoomQueryParamFieldsID          GetCalendarRoomQueryParamFields = "id"
-	GetCalendarRoomQueryParamFieldsName        GetCalendarRoomQueryParamFields = "name"
-	GetCalendarRoomQueryParamFieldsCapacity    GetCalendarRoomQueryParamFields = "capacity"
-	GetCalendarRoomQueryParamFieldsLocationID  GetCalendarRoomQueryParamFields = "location_id"
-	GetCalendarRoomQueryParamFieldsRaw         GetCalendarRoomQueryParamFields = "raw"
 	GetCalendarRoomQueryParamFieldsCreatedAt   GetCalendarRoomQueryParamFields = "created_at"
 	GetCalendarRoomQueryParamFieldsUpdatedAt   GetCalendarRoomQueryParamFields = "updated_at"
-	GetCalendarRoomQueryParamFieldsDescription GetCalendarRoomQueryParamFields = "description"
+	GetCalendarRoomQueryParamFieldsName        GetCalendarRoomQueryParamFields = "name"
 	GetCalendarRoomQueryParamFieldsType        GetCalendarRoomQueryParamFields = "type"
+	GetCalendarRoomQueryParamFieldsCapacity    GetCalendarRoomQueryParamFields = "capacity"
+	GetCalendarRoomQueryParamFieldsLocationID  GetCalendarRoomQueryParamFields = "location_id"
+	GetCalendarRoomQueryParamFieldsDescription GetCalendarRoomQueryParamFields = "description"
 	GetCalendarRoomQueryParamFieldsEmail       GetCalendarRoomQueryParamFields = "email"
+	GetCalendarRoomQueryParamFieldsRaw         GetCalendarRoomQueryParamFields = "raw"
 	GetCalendarRoomQueryParamFieldsCalendarID  GetCalendarRoomQueryParamFields = "calendar_id"
 	GetCalendarRoomQueryParamFieldsFloor       GetCalendarRoomQueryParamFields = "floor"
 	GetCalendarRoomQueryParamFieldsTimezone    GetCalendarRoomQueryParamFields = "timezone"
@@ -43,23 +43,23 @@ func (e *GetCalendarRoomQueryParamFields) UnmarshalJSON(data []byte) error {
 	switch v {
 	case "id":
 		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
 	case "name":
+		fallthrough
+	case "type":
 		fallthrough
 	case "capacity":
 		fallthrough
 	case "location_id":
 		fallthrough
-	case "raw":
-		fallthrough
-	case "created_at":
-		fallthrough
-	case "updated_at":
-		fallthrough
 	case "description":
 		fallthrough
-	case "type":
-		fallthrough
 	case "email":
+		fallthrough
+	case "raw":
 		fallthrough
 	case "calendar_id":
 		fallthrough

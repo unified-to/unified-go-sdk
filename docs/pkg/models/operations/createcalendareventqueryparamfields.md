@@ -40,5 +40,5 @@ value := operations.CreateCalendarEventQueryParamFieldsID
 | `CreateCalendarEventQueryParamFieldsSendNotifications` | send_notifications                                     |
 | `CreateCalendarEventQueryParamFieldsMatterID`          | matter_id                                              |
 | `CreateCalendarEventQueryParamFieldsMetadata`          | metadata                                               |
-| `CreateCalendarEventQueryParamFieldsRaw`               | raw                                                    |
 | `CreateCalendarEventQueryParamFieldsRoomIds`           | room_ids                                               |
+| `CreateCalendarEventQueryParamFieldsRaw`               | raw                                                    |

@@ -16,12 +16,12 @@ value := operations.GetCalendarLocationQueryParamFieldsID
 | Name                                           | Value                                          |
 | ---------------------------------------------- | ---------------------------------------------- |
 | `GetCalendarLocationQueryParamFieldsID`        | id                                             |
+| `GetCalendarLocationQueryParamFieldsCreatedAt` | created_at                                     |
+| `GetCalendarLocationQueryParamFieldsUpdatedAt` | updated_at                                     |
 | `GetCalendarLocationQueryParamFieldsName`      | name                                           |
 | `GetCalendarLocationQueryParamFieldsParentID`  | parent_id                                      |
 | `GetCalendarLocationQueryParamFieldsType`      | type                                           |
 | `GetCalendarLocationQueryParamFieldsAddress`   | address                                        |
-| `GetCalendarLocationQueryParamFieldsRaw`       | raw                                            |
-| `GetCalendarLocationQueryParamFieldsCreatedAt` | created_at                                     |
-| `GetCalendarLocationQueryParamFieldsUpdatedAt` | updated_at                                     |
 | `GetCalendarLocationQueryParamFieldsTimezone`  | timezone                                       |
 | `GetCalendarLocationQueryParamFieldsMetadata`  | metadata                                       |
+| `GetCalendarLocationQueryParamFieldsRaw`       | raw                                            |

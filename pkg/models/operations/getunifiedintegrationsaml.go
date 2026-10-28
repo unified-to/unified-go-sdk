@@ -15,7 +15,7 @@ type GetUnifiedIntegrationSamlRequest struct {
 	Redirect        *bool  `queryParam:"style=form,explode=true,name=redirect"`
 	// Extra state to send back to your success URL
 	State *string `queryParam:"style=form,explode=true,name=state"`
-	// The URL where you want the user to be redirect to after a successful authentication/sign-in.  A "jwt" parameter will be appended to the URL which will contain a name and email of the user who just signed-in.
+	// The URL where you want the user to be redirect to after a successful authentication/sign-in.  A "jwt" parameter will be appended to the URL which will contain a name and email of the user who just signed-in (and a redirect claim matching this URL). When the workspace has trusted_domains configured, this host must be on that list.
 	SuccessRedirect *string `queryParam:"style=form,explode=true,name=success_redirect"`
 	// The ID of the workspace
 	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspace_id"`

@@ -39,7 +39,7 @@ func main() {
 
     res, err := s.Timeshift.CreateHrisTimeshift(ctx, operations.CreateHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
-            ApprovedAt: types.MustNewTimeFromString("2022-07-20T12:40:22.350Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-07-21T00:13:26.444Z"),
             Compensation: []shared.HrisCompensation{
                 shared.HrisCompensation{
                     Amount: unifiedgosdk.Pointer[float64](76761.0),
@@ -51,13 +51,13 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
-            EndAt: types.MustNewTimeFromString("2026-10-02T21:17:54.773Z"),
+            EndAt: types.MustNewTimeFromString("2026-10-04T00:45:44.335Z"),
             Hours: unifiedgosdk.Pointer[float64](6.0),
-            ID: unifiedgosdk.Pointer("9dffcf97-2f6c-4ef0-a6f8-57085913d99b"),
+            ID: unifiedgosdk.Pointer("db35371a-9a47-4b89-a4fb-141c17f61b1d"),
             IsApproved: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-07-16T06:22:10.551Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-07-03T12:32:37.806Z"),
+            StartAt: types.MustNewTimeFromString("2023-07-16T21:39:34.040Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-03T20:08:08.978Z"),
         },
         ConnectionID: "<id>",
     })
@@ -225,7 +225,7 @@ func main() {
 
     res, err := s.Timeshift.PatchHrisTimeshift(ctx, operations.PatchHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
-            ApprovedAt: types.MustNewTimeFromString("2022-07-20T12:40:22.355Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-07-21T00:13:26.449Z"),
             Compensation: []shared.HrisCompensation{
                 shared.HrisCompensation{
                     Amount: unifiedgosdk.Pointer[float64](76761.0),
@@ -237,13 +237,13 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
-            EndAt: types.MustNewTimeFromString("2026-10-02T21:17:54.785Z"),
+            EndAt: types.MustNewTimeFromString("2026-10-04T00:45:44.347Z"),
             Hours: unifiedgosdk.Pointer[float64](6.0),
-            ID: unifiedgosdk.Pointer("b1df487a-b3a9-472a-97de-e5d4a980cdd9"),
+            ID: unifiedgosdk.Pointer("166c8d5c-3196-4ffc-aabe-6a87567f52c6"),
             IsApproved: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-07-16T06:22:10.558Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-07-03T12:32:37.810Z"),
+            StartAt: types.MustNewTimeFromString("2023-07-16T21:39:34.047Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-03T20:08:08.981Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -358,7 +358,7 @@ func main() {
 
     res, err := s.Timeshift.UpdateHrisTimeshift(ctx, operations.UpdateHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
-            ApprovedAt: types.MustNewTimeFromString("2022-07-20T12:40:22.355Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-07-21T00:13:26.449Z"),
             Compensation: []shared.HrisCompensation{
                 shared.HrisCompensation{
                     Amount: unifiedgosdk.Pointer[float64](76761.0),
@@ -370,13 +370,13 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
-            EndAt: types.MustNewTimeFromString("2026-10-02T21:17:54.785Z"),
+            EndAt: types.MustNewTimeFromString("2026-10-04T00:45:44.347Z"),
             Hours: unifiedgosdk.Pointer[float64](6.0),
-            ID: unifiedgosdk.Pointer("b1df487a-b3a9-472a-97de-e5d4a980cdd9"),
+            ID: unifiedgosdk.Pointer("166c8d5c-3196-4ffc-aabe-6a87567f52c6"),
             IsApproved: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-07-16T06:22:10.558Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-07-03T12:32:37.810Z"),
+            StartAt: types.MustNewTimeFromString("2023-07-16T21:39:34.047Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-03T20:08:08.981Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
