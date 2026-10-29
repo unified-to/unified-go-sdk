@@ -30,7 +30,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 go:
-  version: 0.39.6
+  version: 0.39.7
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: UnifiedToError
@@ -39,6 +39,7 @@ go:
   enableCustomCodeRegions: false
   enableSkipDeserialization: false
   fixFlags:
+    applyPathParamDefaults: false
     encodePathParams: false
   flattenGlobalSecurity: true
   forwardCompatibleEnumsByDefault: false
