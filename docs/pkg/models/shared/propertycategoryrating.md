@@ -1,0 +1,10 @@
+# PropertyCategoryrating
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `Category`                                                                                             | [*shared.PropertyCategoryratingCategory](../../../pkg/models/shared/propertycategoryratingcategory.md) | :heavy_minus_sign:                                                                                     | the rated category                                                                                     |
+| `Comment`                                                                                              | `*string`                                                                                              | :heavy_minus_sign:                                                                                     | the guest comment for this category                                                                    |
+| `Rating`                                                                                               | `*float64`                                                                                             | :heavy_minus_sign:                                                                                     | the category rating                                                                                    |

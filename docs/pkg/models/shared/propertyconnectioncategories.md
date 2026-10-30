@@ -56,3 +56,4 @@ custom := shared.PropertyConnectionCategories("custom_value")
 | `PropertyConnectionCategoriesLegal`        | legal                                      |
 | `PropertyConnectionCategoriesCompute`      | compute                                    |
 | `PropertyConnectionCategoriesHealthcare`   | healthcare                                 |
+| `PropertyConnectionCategoriesProperty`     | property                                   |

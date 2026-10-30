@@ -66,7 +66,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("af312cea-d845-44c6-b97e-8d53a4ade427"),
+			ID:                  unifiedgosdk.Pointer("d02d1e95-5465-484d-b305-f32354e41426"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -79,7 +79,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-08T22:41:22.669Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-09T03:29:39.222Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -495,6 +495,7 @@ func main() {
 ### [Availability](docs/sdks/availability/README.md)
 
 * [ListCommerceAvailabilities](docs/sdks/availability/README.md#listcommerceavailabilities) - List all availabilities
+* [ListPropertyAvailabilities](docs/sdks/availability/README.md#listpropertyavailabilities) - List all availabilities
 
 ### [Balancesheet](docs/sdks/balancesheet/README.md)
 
@@ -954,6 +955,12 @@ func main() {
 * [RemoveLmsContent](docs/sdks/content/README.md#removelmscontent) - Remove a content
 * [UpdateLmsContent](docs/sdks/content/README.md#updatelmscontent) - Update a content
 
+### [Conversation](docs/sdks/conversation/README.md)
+
+* [CreatePropertyConversation](docs/sdks/conversation/README.md#createpropertyconversation) - Create a conversation
+* [GetPropertyConversation](docs/sdks/conversation/README.md#getpropertyconversation) - Retrieve a conversation
+* [ListPropertyConversations](docs/sdks/conversation/README.md#listpropertyconversations) - List all conversations
+
 ### [Course](docs/sdks/course/README.md)
 
 * [CreateLmsCourse](docs/sdks/course/README.md#createlmscourse) - Create a course
@@ -1356,6 +1363,14 @@ func main() {
 * [UpdateHrisGroup](docs/sdks/group/README.md#updatehrisgroup) - Update a group
 * [UpdateScimGroups](docs/sdks/group/README.md#updatescimgroups) - Update group
 
+### [Guest](docs/sdks/guest/README.md)
+
+* [CreatePropertyGuest](docs/sdks/guest/README.md#createpropertyguest) - Create a guest
+* [GetPropertyGuest](docs/sdks/guest/README.md#getpropertyguest) - Retrieve a guest
+* [ListPropertyGuests](docs/sdks/guest/README.md#listpropertyguests) - List all guests
+* [PatchPropertyGuest](docs/sdks/guest/README.md#patchpropertyguest) - Update a guest
+* [UpdatePropertyGuest](docs/sdks/guest/README.md#updatepropertyguest) - Update a guest
+
 ### [Healthcare](docs/sdks/healthcare/README.md)
 
 * [CreateHealthcareAppointment](docs/sdks/healthcare/README.md#createhealthcareappointment) - Create an appointment
@@ -1713,6 +1728,15 @@ func main() {
 * [PatchMartechList](docs/sdks/list/README.md#patchmartechlist) - Update a list
 * [RemoveMartechList](docs/sdks/list/README.md#removemartechlist) - Remove a list
 * [UpdateMartechList](docs/sdks/list/README.md#updatemartechlist) - Update a list
+
+### [Listing](docs/sdks/listing/README.md)
+
+* [CreatePropertyListing](docs/sdks/listing/README.md#createpropertylisting) - Create a listing
+* [GetPropertyListing](docs/sdks/listing/README.md#getpropertylisting) - Retrieve a listing
+* [ListPropertyListings](docs/sdks/listing/README.md#listpropertylistings) - List all listings
+* [PatchPropertyListing](docs/sdks/listing/README.md#patchpropertylisting) - Update a listing
+* [RemovePropertyListing](docs/sdks/listing/README.md#removepropertylisting) - Remove a listing
+* [UpdatePropertyListing](docs/sdks/listing/README.md#updatepropertylisting) - Update a listing
 
 ### [Lms](docs/sdks/lms/README.md)
 
@@ -2128,11 +2152,38 @@ func main() {
 ### [Property](docs/sdks/property/README.md)
 
 * [CreateAnalyticsProperty](docs/sdks/property/README.md#createanalyticsproperty) - Create a property
+* [CreatePropertyConversation](docs/sdks/property/README.md#createpropertyconversation) - Create a conversation
+* [CreatePropertyGuest](docs/sdks/property/README.md#createpropertyguest) - Create a guest
+* [CreatePropertyListing](docs/sdks/property/README.md#createpropertylisting) - Create a listing
+* [CreatePropertyQuote](docs/sdks/property/README.md#createpropertyquote) - Create a quote
+* [CreatePropertyReservation](docs/sdks/property/README.md#createpropertyreservation) - Create a reservation
 * [GetAnalyticsProperty](docs/sdks/property/README.md#getanalyticsproperty) - Retrieve a property
+* [GetPropertyConversation](docs/sdks/property/README.md#getpropertyconversation) - Retrieve a conversation
+* [GetPropertyGuest](docs/sdks/property/README.md#getpropertyguest) - Retrieve a guest
+* [GetPropertyListing](docs/sdks/property/README.md#getpropertylisting) - Retrieve a listing
+* [GetPropertyReservation](docs/sdks/property/README.md#getpropertyreservation) - Retrieve a reservation
+* [GetPropertyReview](docs/sdks/property/README.md#getpropertyreview) - Retrieve a review
+* [GetPropertyUnittype](docs/sdks/property/README.md#getpropertyunittype) - Retrieve an unittype
 * [ListAnalyticsProperties](docs/sdks/property/README.md#listanalyticsproperties) - List all properties
+* [ListPropertyAvailabilities](docs/sdks/property/README.md#listpropertyavailabilities) - List all availabilities
+* [ListPropertyConversations](docs/sdks/property/README.md#listpropertyconversations) - List all conversations
+* [ListPropertyGuests](docs/sdks/property/README.md#listpropertyguests) - List all guests
+* [ListPropertyListings](docs/sdks/property/README.md#listpropertylistings) - List all listings
+* [ListPropertyReservations](docs/sdks/property/README.md#listpropertyreservations) - List all reservations
+* [ListPropertyReviews](docs/sdks/property/README.md#listpropertyreviews) - List all reviews
+* [ListPropertyUnittypes](docs/sdks/property/README.md#listpropertyunittypes) - List all unittypes
 * [PatchAnalyticsProperty](docs/sdks/property/README.md#patchanalyticsproperty) - Update a property
+* [PatchPropertyGuest](docs/sdks/property/README.md#patchpropertyguest) - Update a guest
+* [PatchPropertyListing](docs/sdks/property/README.md#patchpropertylisting) - Update a listing
+* [PatchPropertyReservation](docs/sdks/property/README.md#patchpropertyreservation) - Update a reservation
+* [PatchPropertyReview](docs/sdks/property/README.md#patchpropertyreview) - Update a review
 * [RemoveAnalyticsProperty](docs/sdks/property/README.md#removeanalyticsproperty) - Remove a property
+* [RemovePropertyListing](docs/sdks/property/README.md#removepropertylisting) - Remove a listing
 * [UpdateAnalyticsProperty](docs/sdks/property/README.md#updateanalyticsproperty) - Update a property
+* [UpdatePropertyGuest](docs/sdks/property/README.md#updatepropertyguest) - Update a guest
+* [UpdatePropertyListing](docs/sdks/property/README.md#updatepropertylisting) - Update a listing
+* [UpdatePropertyReservation](docs/sdks/property/README.md#updatepropertyreservation) - Update a reservation
+* [UpdatePropertyReview](docs/sdks/property/README.md#updatepropertyreview) - Update a review
 
 ### [Pullrequest](docs/sdks/pullrequest/README.md)
 
@@ -2164,6 +2215,7 @@ func main() {
 ### [Quote](docs/sdks/quote/README.md)
 
 * [CreateAccountingQuote](docs/sdks/quote/README.md#createaccountingquote) - Create a quote
+* [CreatePropertyQuote](docs/sdks/quote/README.md#createpropertyquote) - Create a quote
 * [GetAccountingQuote](docs/sdks/quote/README.md#getaccountingquote) - Retrieve a quote
 * [ListAccountingQuotes](docs/sdks/quote/README.md#listaccountingquotes) - List all quotes
 * [PatchAccountingQuote](docs/sdks/quote/README.md#patchaccountingquote) - Update a quote
@@ -2266,25 +2318,34 @@ func main() {
 ### [Reservation](docs/sdks/reservation/README.md)
 
 * [CreateCommerceReservation](docs/sdks/reservation/README.md#createcommercereservation) - Create a reservation
+* [CreatePropertyReservation](docs/sdks/reservation/README.md#createpropertyreservation) - Create a reservation
 * [GetCommerceReservation](docs/sdks/reservation/README.md#getcommercereservation) - Retrieve a reservation
+* [GetPropertyReservation](docs/sdks/reservation/README.md#getpropertyreservation) - Retrieve a reservation
 * [ListCommerceReservations](docs/sdks/reservation/README.md#listcommercereservations) - List all reservations
+* [ListPropertyReservations](docs/sdks/reservation/README.md#listpropertyreservations) - List all reservations
 * [PatchCommerceReservation](docs/sdks/reservation/README.md#patchcommercereservation) - Update a reservation
+* [PatchPropertyReservation](docs/sdks/reservation/README.md#patchpropertyreservation) - Update a reservation
 * [RemoveCommerceReservation](docs/sdks/reservation/README.md#removecommercereservation) - Remove a reservation
 * [UpdateCommerceReservation](docs/sdks/reservation/README.md#updatecommercereservation) - Update a reservation
+* [UpdatePropertyReservation](docs/sdks/reservation/README.md#updatepropertyreservation) - Update a reservation
 
 ### [Review](docs/sdks/review/README.md)
 
 * [CreateCommerceReview](docs/sdks/review/README.md#createcommercereview) - Create a review
 * [GetCommerceReview](docs/sdks/review/README.md#getcommercereview) - Retrieve a review
 * [GetPerformanceReview](docs/sdks/review/README.md#getperformancereview) - Retrieve a review
+* [GetPropertyReview](docs/sdks/review/README.md#getpropertyreview) - Retrieve a review
 * [GetSocialReview](docs/sdks/review/README.md#getsocialreview) - Retrieve a review
 * [ListCommerceReviews](docs/sdks/review/README.md#listcommercereviews) - List all reviews
 * [ListPerformanceReviews](docs/sdks/review/README.md#listperformancereviews) - List all reviews
+* [ListPropertyReviews](docs/sdks/review/README.md#listpropertyreviews) - List all reviews
 * [ListSocialReviews](docs/sdks/review/README.md#listsocialreviews) - List all reviews
 * [PatchCommerceReview](docs/sdks/review/README.md#patchcommercereview) - Update a review
+* [PatchPropertyReview](docs/sdks/review/README.md#patchpropertyreview) - Update a review
 * [PatchSocialReview](docs/sdks/review/README.md#patchsocialreview) - Update a review
 * [RemoveCommerceReview](docs/sdks/review/README.md#removecommercereview) - Remove a review
 * [UpdateCommerceReview](docs/sdks/review/README.md#updatecommercereview) - Update a review
+* [UpdatePropertyReview](docs/sdks/review/README.md#updatepropertyreview) - Update a review
 * [UpdateSocialReview](docs/sdks/review/README.md#updatesocialreview) - Update a review
 
 ### [Room](docs/sdks/room/README.md)
@@ -2741,6 +2802,11 @@ func main() {
 * [UpdateUnifiedWebhookResume](docs/sdks/unified/README.md#updateunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [UpdateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
 
+### [Unittype](docs/sdks/unittype/README.md)
+
+* [GetPropertyUnittype](docs/sdks/unittype/README.md#getpropertyunittype) - Retrieve an unittype
+* [ListPropertyUnittypes](docs/sdks/unittype/README.md#listpropertyunittypes) - List all unittypes
+
 ### [Usage](docs/sdks/usage/README.md)
 
 * [ListComputeUsages](docs/sdks/usage/README.md#listcomputeusages) - List all usages
@@ -2868,7 +2934,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("af312cea-d845-44c6-b97e-8d53a4ade427"),
+			ID:                  unifiedgosdk.Pointer("d02d1e95-5465-484d-b305-f32354e41426"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -2881,7 +2947,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-08T22:41:22.669Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-09T03:29:39.222Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -2942,7 +3008,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("af312cea-d845-44c6-b97e-8d53a4ade427"),
+			ID:                  unifiedgosdk.Pointer("d02d1e95-5465-484d-b305-f32354e41426"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -2955,7 +3021,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-08T22:41:22.669Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-09T03:29:39.222Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -2999,7 +3065,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("af312cea-d845-44c6-b97e-8d53a4ade427"),
+			ID:                  unifiedgosdk.Pointer("d02d1e95-5465-484d-b305-f32354e41426"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3012,7 +3078,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-08T22:41:22.669Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-09T03:29:39.222Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3099,7 +3165,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("af312cea-d845-44c6-b97e-8d53a4ade427"),
+			ID:                  unifiedgosdk.Pointer("d02d1e95-5465-484d-b305-f32354e41426"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3112,7 +3178,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-08T22:41:22.669Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-09T03:29:39.222Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3161,7 +3227,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("af312cea-d845-44c6-b97e-8d53a4ade427"),
+			ID:                  unifiedgosdk.Pointer("d02d1e95-5465-484d-b305-f32354e41426"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3174,7 +3240,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-08T22:41:22.669Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-09T03:29:39.222Z"),
 		},
 		ConnectionID: "<id>",
 	}, operations.WithRetries(
@@ -3237,7 +3303,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("af312cea-d845-44c6-b97e-8d53a4ade427"),
+			ID:                  unifiedgosdk.Pointer("d02d1e95-5465-484d-b305-f32354e41426"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3250,7 +3316,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-08T22:41:22.669Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-09T03:29:39.222Z"),
 		},
 		ConnectionID: "<id>",
 	})

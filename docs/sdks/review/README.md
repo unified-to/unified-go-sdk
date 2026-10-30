@@ -7,14 +7,18 @@
 * [CreateCommerceReview](#createcommercereview) - Create a review
 * [GetCommerceReview](#getcommercereview) - Retrieve a review
 * [GetPerformanceReview](#getperformancereview) - Retrieve a review
+* [GetPropertyReview](#getpropertyreview) - Retrieve a review
 * [GetSocialReview](#getsocialreview) - Retrieve a review
 * [ListCommerceReviews](#listcommercereviews) - List all reviews
 * [ListPerformanceReviews](#listperformancereviews) - List all reviews
+* [ListPropertyReviews](#listpropertyreviews) - List all reviews
 * [ListSocialReviews](#listsocialreviews) - List all reviews
 * [PatchCommerceReview](#patchcommercereview) - Update a review
+* [PatchPropertyReview](#patchpropertyreview) - Update a review
 * [PatchSocialReview](#patchsocialreview) - Update a review
 * [RemoveCommerceReview](#removecommercereview) - Remove a review
 * [UpdateCommerceReview](#updatecommercereview) - Update a review
+* [UpdatePropertyReview](#updatepropertyreview) - Update a review
 * [UpdateSocialReview](#updatesocialreview) - Update a review
 
 ## CreateCommerceReview
@@ -53,7 +57,7 @@ func main() {
             Content: unifiedgosdk.Pointer("Taedium thymum adipiscor amicitia cui."),
             CreatedAt: types.MustNewTimeFromString("2019-12-12T18:10:22.988Z"),
             HelpfulVotes: unifiedgosdk.Pointer[float64](66.0),
-            ID: unifiedgosdk.Pointer("ef4db775-d380-4ea3-954e-613a89b355d8"),
+            ID: unifiedgosdk.Pointer("f94f7da2-99b1-4716-9f34-bb1183dd77c7"),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsPublic: unifiedgosdk.Pointer(true),
             IsVerified: unifiedgosdk.Pointer(false),
@@ -61,10 +65,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Desipio carpo sol laudantium colo."),
                     Height: unifiedgosdk.Pointer[float64](749.0),
-                    ID: unifiedgosdk.Pointer("2a0d2ac4-d217-42a2-91d6-603e6caddaea"),
+                    ID: unifiedgosdk.Pointer("9ebb6c45-7fcf-4145-ba7f-030163ef08d7"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("521f18db-a047-4701-8024-7f4d4271a87e"),
+                            ID: unifiedgosdk.Pointer("3e470a8e-dae8-45f7-8c92-ebd1c9f62926"),
                             Slug: unifiedgosdk.Pointer("textor"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "quos",
@@ -79,10 +83,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Adopto teneo numquam."),
                     Height: unifiedgosdk.Pointer[float64](957.0),
-                    ID: unifiedgosdk.Pointer("a8d602ad-b8ea-460a-873a-d09b624fde8c"),
+                    ID: unifiedgosdk.Pointer("37499c23-7147-4591-ab92-dec9802c7055"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("24445fe6-7d53-4dfd-b680-3d08c9a1e7d4"),
+                            ID: unifiedgosdk.Pointer("10260a81-5ceb-4ed6-acad-e145a52e4c71"),
                             Slug: unifiedgosdk.Pointer("bos"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "casso",
@@ -100,7 +104,7 @@ func main() {
             Status: shared.CommerceReviewStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("Coepi adamo amicitia auxilium toties."),
             UnhelpfulVotes: unifiedgosdk.Pointer[float64](88.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-28T00:44:06.383Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-28T16:25:25.628Z"),
             URL: unifiedgosdk.Pointer("https://diligent-bandwidth.biz"),
             VerifiedPurchase: unifiedgosdk.Pointer(true),
         },
@@ -236,6 +240,61 @@ func main() {
 ### Response
 
 **[*operations.GetPerformanceReviewResponse](../../pkg/models/operations/getperformancereviewresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetPropertyReview
+
+Retrieves a single PropertyReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getPropertyReview" method="get" path="/property/{connection_id}/review/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Review.GetPropertyReview(ctx, operations.GetPropertyReviewRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.PropertyReview != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.GetPropertyReviewRequest](../../pkg/models/operations/getpropertyreviewrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.GetPropertyReviewResponse](../../pkg/models/operations/getpropertyreviewresponse.md), error**
 
 ### Errors
 
@@ -406,6 +465,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListPropertyReviews
+
+Returns a list of PropertyReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listPropertyReviews" method="get" path="/property/{connection_id}/review" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Review.ListPropertyReviews(ctx, operations.ListPropertyReviewsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.PropertyReviews != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.ListPropertyReviewsRequest](../../pkg/models/operations/listpropertyreviewsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.ListPropertyReviewsResponse](../../pkg/models/operations/listpropertyreviewsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListSocialReviews
 
 Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -496,7 +609,7 @@ func main() {
             Content: unifiedgosdk.Pointer("Taedium thymum adipiscor amicitia cui."),
             CreatedAt: types.MustNewTimeFromString("2019-12-12T18:10:22.988Z"),
             HelpfulVotes: unifiedgosdk.Pointer[float64](66.0),
-            ID: unifiedgosdk.Pointer("d87109bd-311d-42a4-a14e-be35c48e96a1"),
+            ID: unifiedgosdk.Pointer("370b1411-7f2a-4808-a238-0ab2cff258c3"),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsPublic: unifiedgosdk.Pointer(true),
             IsVerified: unifiedgosdk.Pointer(false),
@@ -504,10 +617,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Desipio carpo sol laudantium colo."),
                     Height: unifiedgosdk.Pointer[float64](749.0),
-                    ID: unifiedgosdk.Pointer("f6528874-eec8-4075-9bf2-eb3b1f151424"),
+                    ID: unifiedgosdk.Pointer("5c1c8a4d-8d1c-42bc-9a57-8f7a72bcc584"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("ad2bd2be-5601-485c-9dbd-c2e62d83707b"),
+                            ID: unifiedgosdk.Pointer("851d1bb4-9e1e-4c76-aa0d-fd358513f8c1"),
                             Slug: unifiedgosdk.Pointer("textor"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "quos",
@@ -522,10 +635,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Adopto teneo numquam."),
                     Height: unifiedgosdk.Pointer[float64](957.0),
-                    ID: unifiedgosdk.Pointer("ac9e59e5-5fff-45ad-bf73-6bbfa17b886f"),
+                    ID: unifiedgosdk.Pointer("095cee3f-1f75-4b5b-a45f-e940e092bc8a"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("52eab880-dfaa-4fd8-b932-b9b276e853b9"),
+                            ID: unifiedgosdk.Pointer("dd9e78d3-f6cb-4f20-bea9-234b09307324"),
                             Slug: unifiedgosdk.Pointer("bos"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "casso",
@@ -543,7 +656,7 @@ func main() {
             Status: shared.CommerceReviewStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("Coepi adamo amicitia auxilium toties."),
             UnhelpfulVotes: unifiedgosdk.Pointer[float64](88.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-28T00:44:06.406Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-28T16:25:25.667Z"),
             URL: unifiedgosdk.Pointer("https://diligent-bandwidth.biz"),
             VerifiedPurchase: unifiedgosdk.Pointer(true),
         },
@@ -570,6 +683,104 @@ func main() {
 ### Response
 
 **[*operations.PatchCommerceReviewResponse](../../pkg/models/operations/patchcommercereviewresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchPropertyReview
+
+Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchPropertyReview" method="patch" path="/property/{connection_id}/review/{id}" example="property_review" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Review.PatchPropertyReview(ctx, operations.PatchPropertyReviewRequest{
+        PropertyReview: shared.PropertyReview{
+            AuthorName: unifiedgosdk.Pointer("Benton Jast"),
+            CategoryRatings: []shared.PropertyCategoryrating{
+                shared.PropertyCategoryrating{
+                    Category: shared.PropertyCategoryratingCategoryCleanliness.ToPointer(),
+                    Comment: unifiedgosdk.Pointer("Umquam perferendis amitto voluptas sum blanditiis terreo."),
+                    Rating: unifiedgosdk.Pointer[float64](5.0),
+                },
+                shared.PropertyCategoryrating{
+                    Category: shared.PropertyCategoryratingCategoryAccuracy.ToPointer(),
+                    Comment: unifiedgosdk.Pointer("Capitulus dolorem verus."),
+                    Rating: unifiedgosdk.Pointer[float64](4.0),
+                },
+                shared.PropertyCategoryrating{
+                    Category: shared.PropertyCategoryratingCategoryCommunication.ToPointer(),
+                    Rating: unifiedgosdk.Pointer[float64](1.0),
+                },
+                shared.PropertyCategoryrating{
+                    Category: shared.PropertyCategoryratingCategoryCheckin.ToPointer(),
+                    Rating: unifiedgosdk.Pointer[float64](1.0),
+                },
+                shared.PropertyCategoryrating{
+                    Category: shared.PropertyCategoryratingCategoryLocation.ToPointer(),
+                    Rating: unifiedgosdk.Pointer[float64](2.0),
+                },
+                shared.PropertyCategoryrating{
+                    Category: shared.PropertyCategoryratingCategoryValue.ToPointer(),
+                    Comment: unifiedgosdk.Pointer("Quos constans aperte tero sollers."),
+                    Rating: unifiedgosdk.Pointer[float64](5.0),
+                },
+            },
+            Content: unifiedgosdk.Pointer("Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo."),
+            CreatedAt: types.MustNewTimeFromString("2022-10-17T11:17:07.682Z"),
+            ID: unifiedgosdk.Pointer("dc5b9885-3a99-48f5-b9bd-89c6cf785ee1"),
+            IsPublic: unifiedgosdk.Pointer(true),
+            Metadata: []shared.PropertyMetadata{},
+            PrivateFeedback: unifiedgosdk.Pointer("Tripudio neque communis."),
+            Rating: unifiedgosdk.Pointer[float64](3.0),
+            Source: unifiedgosdk.Pointer("Airbnb"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-18T05:30:12.820Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.PropertyReview != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.PatchPropertyReviewRequest](../../pkg/models/operations/patchpropertyreviewrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.PatchPropertyReviewResponse](../../pkg/models/operations/patchpropertyreviewresponse.md), error**
 
 ### Errors
 
@@ -725,7 +936,7 @@ func main() {
             Content: unifiedgosdk.Pointer("Taedium thymum adipiscor amicitia cui."),
             CreatedAt: types.MustNewTimeFromString("2019-12-12T18:10:22.988Z"),
             HelpfulVotes: unifiedgosdk.Pointer[float64](66.0),
-            ID: unifiedgosdk.Pointer("d87109bd-311d-42a4-a14e-be35c48e96a1"),
+            ID: unifiedgosdk.Pointer("370b1411-7f2a-4808-a238-0ab2cff258c3"),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsPublic: unifiedgosdk.Pointer(true),
             IsVerified: unifiedgosdk.Pointer(false),
@@ -733,10 +944,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Desipio carpo sol laudantium colo."),
                     Height: unifiedgosdk.Pointer[float64](749.0),
-                    ID: unifiedgosdk.Pointer("f6528874-eec8-4075-9bf2-eb3b1f151424"),
+                    ID: unifiedgosdk.Pointer("5c1c8a4d-8d1c-42bc-9a57-8f7a72bcc584"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("ad2bd2be-5601-485c-9dbd-c2e62d83707b"),
+                            ID: unifiedgosdk.Pointer("851d1bb4-9e1e-4c76-aa0d-fd358513f8c1"),
                             Slug: unifiedgosdk.Pointer("textor"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "quos",
@@ -751,10 +962,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Adopto teneo numquam."),
                     Height: unifiedgosdk.Pointer[float64](957.0),
-                    ID: unifiedgosdk.Pointer("ac9e59e5-5fff-45ad-bf73-6bbfa17b886f"),
+                    ID: unifiedgosdk.Pointer("095cee3f-1f75-4b5b-a45f-e940e092bc8a"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("52eab880-dfaa-4fd8-b932-b9b276e853b9"),
+                            ID: unifiedgosdk.Pointer("dd9e78d3-f6cb-4f20-bea9-234b09307324"),
                             Slug: unifiedgosdk.Pointer("bos"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "casso",
@@ -772,7 +983,7 @@ func main() {
             Status: shared.CommerceReviewStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("Coepi adamo amicitia auxilium toties."),
             UnhelpfulVotes: unifiedgosdk.Pointer[float64](88.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-28T00:44:06.406Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-28T16:25:25.667Z"),
             URL: unifiedgosdk.Pointer("https://diligent-bandwidth.biz"),
             VerifiedPurchase: unifiedgosdk.Pointer(true),
         },
@@ -799,6 +1010,104 @@ func main() {
 ### Response
 
 **[*operations.UpdateCommerceReviewResponse](../../pkg/models/operations/updatecommercereviewresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdatePropertyReview
+
+Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updatePropertyReview" method="put" path="/property/{connection_id}/review/{id}" example="property_review" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Review.UpdatePropertyReview(ctx, operations.UpdatePropertyReviewRequest{
+        PropertyReview: shared.PropertyReview{
+            AuthorName: unifiedgosdk.Pointer("Benton Jast"),
+            CategoryRatings: []shared.PropertyCategoryrating{
+                shared.PropertyCategoryrating{
+                    Category: shared.PropertyCategoryratingCategoryCleanliness.ToPointer(),
+                    Comment: unifiedgosdk.Pointer("Umquam perferendis amitto voluptas sum blanditiis terreo."),
+                    Rating: unifiedgosdk.Pointer[float64](5.0),
+                },
+                shared.PropertyCategoryrating{
+                    Category: shared.PropertyCategoryratingCategoryAccuracy.ToPointer(),
+                    Comment: unifiedgosdk.Pointer("Capitulus dolorem verus."),
+                    Rating: unifiedgosdk.Pointer[float64](4.0),
+                },
+                shared.PropertyCategoryrating{
+                    Category: shared.PropertyCategoryratingCategoryCommunication.ToPointer(),
+                    Rating: unifiedgosdk.Pointer[float64](1.0),
+                },
+                shared.PropertyCategoryrating{
+                    Category: shared.PropertyCategoryratingCategoryCheckin.ToPointer(),
+                    Rating: unifiedgosdk.Pointer[float64](1.0),
+                },
+                shared.PropertyCategoryrating{
+                    Category: shared.PropertyCategoryratingCategoryLocation.ToPointer(),
+                    Rating: unifiedgosdk.Pointer[float64](2.0),
+                },
+                shared.PropertyCategoryrating{
+                    Category: shared.PropertyCategoryratingCategoryValue.ToPointer(),
+                    Comment: unifiedgosdk.Pointer("Quos constans aperte tero sollers."),
+                    Rating: unifiedgosdk.Pointer[float64](5.0),
+                },
+            },
+            Content: unifiedgosdk.Pointer("Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo."),
+            CreatedAt: types.MustNewTimeFromString("2022-10-17T11:17:07.682Z"),
+            ID: unifiedgosdk.Pointer("dc5b9885-3a99-48f5-b9bd-89c6cf785ee1"),
+            IsPublic: unifiedgosdk.Pointer(true),
+            Metadata: []shared.PropertyMetadata{},
+            PrivateFeedback: unifiedgosdk.Pointer("Tripudio neque communis."),
+            Rating: unifiedgosdk.Pointer[float64](3.0),
+            Source: unifiedgosdk.Pointer("Airbnb"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-18T05:30:12.820Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.PropertyReview != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.UpdatePropertyReviewRequest](../../pkg/models/operations/updatepropertyreviewrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.UpdatePropertyReviewResponse](../../pkg/models/operations/updatepropertyreviewresponse.md), error**
 
 ### Errors
 

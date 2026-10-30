@@ -230,6 +230,10 @@ type UnifiedTo struct {
 	Performance         *Performance
 	Cycle               *Cycle
 	Feedback            *Feedback
+	Conversation        *Conversation
+	Guest               *Guest
+	Listing             *Listing
+	Unittype            *Unittype
 	Repo                *Repo
 	Branch              *Branch
 	Commit              *Commit
@@ -348,10 +352,10 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.39.7",
+		SDKVersion: "0.39.8",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.39.7 2.954.8 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.39.7",
+			UserAgent:         "speakeasy-sdk/go 0.39.8 2.954.8 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.39.8",
 			GenVersion:        "2.954.8",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
@@ -547,6 +551,10 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Performance = newPerformance(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Cycle = newCycle(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Feedback = newFeedback(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Conversation = newConversation(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Guest = newGuest(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Listing = newListing(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Unittype = newUnittype(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Repo = newRepo(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Branch = newBranch(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Commit = newCommit(sdk, sdk.sdkConfiguration, sdk.hooks)

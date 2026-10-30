@@ -53,3 +53,4 @@ value := operations.ListUnifiedIntegrationsQueryParamCategoriesPassthrough
 | `ListUnifiedIntegrationsQueryParamCategoriesLegal`        | legal                                                     |
 | `ListUnifiedIntegrationsQueryParamCategoriesCompute`      | compute                                                   |
 | `ListUnifiedIntegrationsQueryParamCategoriesHealthcare`   | healthcare                                                |
+| `ListUnifiedIntegrationsQueryParamCategoriesProperty`     | property                                                  |

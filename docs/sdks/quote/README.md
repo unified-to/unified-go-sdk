@@ -5,6 +5,7 @@
 ### Available Operations
 
 * [CreateAccountingQuote](#createaccountingquote) - Create a quote
+* [CreatePropertyQuote](#createpropertyquote) - Create a quote
 * [GetAccountingQuote](#getaccountingquote) - Retrieve a quote
 * [ListAccountingQuotes](#listaccountingquotes) - List all quotes
 * [PatchAccountingQuote](#patchaccountingquote) - Update a quote
@@ -60,6 +61,95 @@ func main() {
 ### Response
 
 **[*operations.CreateAccountingQuoteResponse](../../pkg/models/operations/createaccountingquoteresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreatePropertyQuote
+
+Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are mapped to the provider's API. Returns the created PropertyQuote.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createPropertyQuote" method="post" path="/property/{connection_id}/quote" example="property_quote" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Quote.CreatePropertyQuote(ctx, operations.CreatePropertyQuoteRequest{
+        PropertyQuote: shared.PropertyQuote{
+            Adults: unifiedgosdk.Pointer[float64](1.0),
+            Children: unifiedgosdk.Pointer[float64](1.0),
+            CreatedAt: types.MustNewTimeFromString("2020-12-18T19:14:11.415Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            DepositAmount: unifiedgosdk.Pointer[float64](594.54),
+            EndAt: types.MustNewTimeFromString("2026-11-13"),
+            Guests: unifiedgosdk.Pointer[float64](2.0),
+            ID: unifiedgosdk.Pointer("87a163c7-0ac2-47c2-9dfe-2e6f7d3e203a"),
+            LineItems: []shared.PropertyLineitem{
+                shared.PropertyLineitem{
+                    Amount: unifiedgosdk.Pointer[float64](1665.0),
+                    Description: unifiedgosdk.Pointer("9 nights"),
+                    IsMandatory: unifiedgosdk.Pointer(true),
+                    Name: unifiedgosdk.Pointer("Accommodation"),
+                    Type: shared.PropertyLineitemTypeBase.ToPointer(),
+                },
+                shared.PropertyLineitem{
+                    Amount: unifiedgosdk.Pointer[float64](117.0),
+                    IsMandatory: unifiedgosdk.Pointer(true),
+                    Name: unifiedgosdk.Pointer("Cleaning fee"),
+                    Type: shared.PropertyLineitemTypeFee.ToPointer(),
+                },
+                shared.PropertyLineitem{
+                    Amount: unifiedgosdk.Pointer[float64](199.8),
+                    IsMandatory: unifiedgosdk.Pointer(true),
+                    Name: unifiedgosdk.Pointer("Lodging tax"),
+                    Type: shared.PropertyLineitemTypeTax.ToPointer(),
+                },
+            },
+            StartAt: types.MustNewTimeFromString("2026-11-04"),
+            TotalAmount: unifiedgosdk.Pointer[float64](1981.8),
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.PropertyQuote != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.CreatePropertyQuoteRequest](../../pkg/models/operations/createpropertyquoterequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.CreatePropertyQuoteResponse](../../pkg/models/operations/createpropertyquoteresponse.md), error**
 
 ### Errors
 

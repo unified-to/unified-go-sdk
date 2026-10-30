@@ -41,17 +41,17 @@ func main() {
         MetadataMetadata: shared.MetadataMetadata{
             CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
             Format: shared.MetadataMetadataFormatPrice.ToPointer(),
-            ID: unifiedgosdk.Pointer("6931603c-2875-4752-b226-68634b993052"),
+            ID: unifiedgosdk.Pointer("8282216f-0013-4dec-910b-7ee552c7f3d0"),
             IsRequired: unifiedgosdk.Pointer(false),
             Name: "autem",
-            ObjectType: "legal_expense",
+            ObjectType: "compute_usage",
             Objects: map[string]string{
 
             },
             Options: []string{},
             OriginalFormat: unifiedgosdk.Pointer("advoco"),
             Slug: unifiedgosdk.Pointer("arbustum"),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-27T17:14:54.619Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-28T06:47:01.077Z"),
         },
         ConnectionID: "<id>",
     })
@@ -221,17 +221,17 @@ func main() {
         MetadataMetadata: shared.MetadataMetadata{
             CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
             Format: shared.MetadataMetadataFormatPrice.ToPointer(),
-            ID: unifiedgosdk.Pointer("6eaae205-0848-4746-8702-1cdedbda7bf1"),
+            ID: unifiedgosdk.Pointer("fd7dd523-ac9a-4356-b4c0-e4d65f15e55b"),
             IsRequired: unifiedgosdk.Pointer(false),
             Name: "autem",
-            ObjectType: "legal_expense",
+            ObjectType: "compute_usage",
             Objects: map[string]string{
 
             },
             Options: []string{},
             OriginalFormat: unifiedgosdk.Pointer("advoco"),
             Slug: unifiedgosdk.Pointer("arbustum"),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-27T17:14:54.624Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-28T06:47:01.085Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -348,17 +348,17 @@ func main() {
         MetadataMetadata: shared.MetadataMetadata{
             CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
             Format: shared.MetadataMetadataFormatPrice.ToPointer(),
-            ID: unifiedgosdk.Pointer("6eaae205-0848-4746-8702-1cdedbda7bf1"),
+            ID: unifiedgosdk.Pointer("fd7dd523-ac9a-4356-b4c0-e4d65f15e55b"),
             IsRequired: unifiedgosdk.Pointer(false),
             Name: "autem",
-            ObjectType: "legal_expense",
+            ObjectType: "compute_usage",
             Objects: map[string]string{
 
             },
             Options: []string{},
             OriginalFormat: unifiedgosdk.Pointer("advoco"),
             Slug: unifiedgosdk.Pointer("arbustum"),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-27T17:14:54.624Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-28T06:47:01.085Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -241,3 +241,11 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeHealthcareReport`              | healthcare_report                                |
 | `WebhookObjectTypeHealthcareCareplan`            | healthcare_careplan                              |
 | `WebhookObjectTypeHealthcareGoal`                | healthcare_goal                                  |
+| `WebhookObjectTypePropertyListing`               | property_listing                                 |
+| `WebhookObjectTypePropertyUnittype`              | property_unittype                                |
+| `WebhookObjectTypePropertyGuest`                 | property_guest                                   |
+| `WebhookObjectTypePropertyReservation`           | property_reservation                             |
+| `WebhookObjectTypePropertyAvailability`          | property_availability                            |
+| `WebhookObjectTypePropertyQuote`                 | property_quote                                   |
+| `WebhookObjectTypePropertyReview`                | property_review                                  |
+| `WebhookObjectTypePropertyConversation`          | property_conversation                            |

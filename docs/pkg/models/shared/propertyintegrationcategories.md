@@ -56,3 +56,4 @@ custom := shared.PropertyIntegrationCategories("custom_value")
 | `PropertyIntegrationCategoriesLegal`        | legal                                       |
 | `PropertyIntegrationCategoriesCompute`      | compute                                     |
 | `PropertyIntegrationCategoriesHealthcare`   | healthcare                                  |
+| `PropertyIntegrationCategoriesProperty`     | property                                    |

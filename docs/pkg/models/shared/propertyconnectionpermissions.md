@@ -429,3 +429,17 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsHealthcareCareplanWrite`            | healthcare_careplan_write                                         |
 | `PropertyConnectionPermissionsHealthcareGoalRead`                 | healthcare_goal_read                                              |
 | `PropertyConnectionPermissionsHealthcareGoalWrite`                | healthcare_goal_write                                             |
+| `PropertyConnectionPermissionsPropertyListingRead`                | property_listing_read                                             |
+| `PropertyConnectionPermissionsPropertyListingWrite`               | property_listing_write                                            |
+| `PropertyConnectionPermissionsPropertyUnittypeRead`               | property_unittype_read                                            |
+| `PropertyConnectionPermissionsPropertyGuestRead`                  | property_guest_read                                               |
+| `PropertyConnectionPermissionsPropertyGuestWrite`                 | property_guest_write                                              |
+| `PropertyConnectionPermissionsPropertyReservationRead`            | property_reservation_read                                         |
+| `PropertyConnectionPermissionsPropertyReservationWrite`           | property_reservation_write                                        |
+| `PropertyConnectionPermissionsPropertyAvailabilityRead`           | property_availability_read                                        |
+| `PropertyConnectionPermissionsPropertyQuoteRead`                  | property_quote_read                                               |
+| `PropertyConnectionPermissionsPropertyQuoteWrite`                 | property_quote_write                                              |
+| `PropertyConnectionPermissionsPropertyReviewRead`                 | property_review_read                                              |
+| `PropertyConnectionPermissionsPropertyReviewWrite`                | property_review_write                                             |
+| `PropertyConnectionPermissionsPropertyConversationRead`           | property_conversation_read                                        |
+| `PropertyConnectionPermissionsPropertyConversationWrite`          | property_conversation_write                                       |
