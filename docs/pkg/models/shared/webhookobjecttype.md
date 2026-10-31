@@ -62,6 +62,7 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeCommerceSaleschannel`          | commerce_saleschannel                            |
 | `WebhookObjectTypeCommerceItemvariant`           | commerce_itemvariant                             |
 | `WebhookObjectTypeCommerceReservation`           | commerce_reservation                             |
+| `WebhookObjectTypeCommerceReturn`                | commerce_return                                  |
 | `WebhookObjectTypeCommerceAvailability`          | commerce_availability                            |
 | `WebhookObjectTypeVerificationPackage`           | verification_package                             |
 | `WebhookObjectTypeVerificationRequest`           | verification_request                             |

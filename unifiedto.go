@@ -136,6 +136,7 @@ type UnifiedTo struct {
 	Item                *Item
 	Itemvariant         *Itemvariant
 	Reservation         *Reservation
+	Return              *Return
 	Review              *Review
 	Saleschannel        *Saleschannel
 	Compute             *Compute
@@ -352,10 +353,10 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.39.8",
+		SDKVersion: "0.39.9",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.39.8 2.954.8 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.39.8",
+			UserAgent:         "speakeasy-sdk/go 0.39.9 2.954.8 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.39.9",
 			GenVersion:        "2.954.8",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
@@ -457,6 +458,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Item = newItem(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Itemvariant = newItemvariant(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Reservation = newReservation(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Return = newReturn(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Review = newReview(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Saleschannel = newSaleschannel(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Compute = newCompute(sdk, sdk.sdkConfiguration, sdk.hooks)

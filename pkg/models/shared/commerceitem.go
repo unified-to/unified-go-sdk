@@ -49,9 +49,10 @@ type CommerceItem struct {
 	IsTaxable   *bool    `json:"is_taxable,omitempty"`
 	IsVisible   *bool    `json:"is_visible,omitempty"`
 	// (reference to CommerceLocation)
-	LocationID        *string             `json:"location_id,omitempty"`
-	Media             []CommerceItemMedia `json:"media,omitempty"`
-	Metadata          []CommerceMetadata  `json:"metadata,omitempty"`
+	LocationID *string             `json:"location_id,omitempty"`
+	Media      []CommerceItemMedia `json:"media,omitempty"`
+	Metadata   []CommerceMetadata  `json:"metadata,omitempty"`
+	// The item's (product's) name
 	Name              *string             `json:"name,omitempty"`
 	Prices            []CommerceItemPrice `json:"prices,omitempty"`
 	PublicDescription *string             `json:"public_description,omitempty"`

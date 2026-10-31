@@ -37,7 +37,7 @@ func main() {
     res, err := s.Feedback.CreatePerformanceFeedback(ctx, operations.CreatePerformanceFeedbackRequest{
         PerformanceFeedback: shared.PerformanceFeedback{
             CreatedAt: types.MustNewTimeFromString("2023-04-11T16:21:53.862Z"),
-            ID: unifiedgosdk.Pointer("c72db0b2-f12f-40d3-9fa0-693efdcb666e"),
+            ID: unifiedgosdk.Pointer("a2ca94a1-e07d-4c20-93c3-ecd89b08e5c5"),
             IsVisible: unifiedgosdk.Pointer(true),
             Message: unifiedgosdk.Pointer("Tabernus corpus voluptate aestus."),
             Metadata: []shared.PerformanceMetadata{},
@@ -46,7 +46,7 @@ func main() {
                 "hexagon",
             },
             Type: shared.PerformanceFeedbackTypePraise.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-10T02:28:50.829Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-10T22:10:17.074Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",

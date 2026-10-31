@@ -97,6 +97,8 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsCommerceItemvariantWrite`           | commerce_itemvariant_write                                        |
 | `PropertyConnectionPermissionsCommerceReservationRead`            | commerce_reservation_read                                         |
 | `PropertyConnectionPermissionsCommerceReservationWrite`           | commerce_reservation_write                                        |
+| `PropertyConnectionPermissionsCommerceReturnRead`                 | commerce_return_read                                              |
+| `PropertyConnectionPermissionsCommerceReturnWrite`                | commerce_return_write                                             |
 | `PropertyConnectionPermissionsCommerceAvailabilityRead`           | commerce_availability_read                                        |
 | `PropertyConnectionPermissionsCommerceAvailabilityWrite`          | commerce_availability_write                                       |
 | `PropertyConnectionPermissionsVerificationPackageRead`            | verification_package_read                                         |

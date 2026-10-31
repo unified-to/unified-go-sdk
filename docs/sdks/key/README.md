@@ -40,11 +40,11 @@ func main() {
     res, err := s.Key.CreateComputeKey(ctx, operations.CreateComputeKeyRequest{
         ComputeKey: shared.ComputeKey{
             CreatedAt: types.MustNewTimeFromString("2023-08-19T14:31:46.492Z"),
-            ID: unifiedgosdk.Pointer("2bc06eed-d4e9-4af8-acc7-a1fa1e23bec3"),
+            ID: unifiedgosdk.Pointer("c4bc0e45-5875-437e-be3c-39003cd00cb7"),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("nienow-secret"),
             Type: shared.ComputeKeyTypeSecret.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-10-10T03:04:16.051Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-10T13:25:29.729Z"),
         },
         ConnectionID: "<id>",
     })
@@ -213,11 +213,11 @@ func main() {
     res, err := s.Key.PatchComputeKey(ctx, operations.PatchComputeKeyRequest{
         ComputeKey: shared.ComputeKey{
             CreatedAt: types.MustNewTimeFromString("2023-08-19T14:31:46.492Z"),
-            ID: unifiedgosdk.Pointer("4d5b9ecd-1c58-4009-a804-175ce0e6774f"),
+            ID: unifiedgosdk.Pointer("ceb203a3-bfbe-4852-9752-7793cb466618"),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("nienow-secret"),
             Type: shared.ComputeKeyTypeSecret.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-10-10T03:04:16.056Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-10T13:25:29.736Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -333,11 +333,11 @@ func main() {
     res, err := s.Key.UpdateComputeKey(ctx, operations.UpdateComputeKeyRequest{
         ComputeKey: shared.ComputeKey{
             CreatedAt: types.MustNewTimeFromString("2023-08-19T14:31:46.492Z"),
-            ID: unifiedgosdk.Pointer("4d5b9ecd-1c58-4009-a804-175ce0e6774f"),
+            ID: unifiedgosdk.Pointer("ceb203a3-bfbe-4852-9752-7793cb466618"),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("nienow-secret"),
             Type: shared.ComputeKeyTypeSecret.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-10-10T03:04:16.056Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-10T13:25:29.736Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -33,15 +33,16 @@ func (e *CommerceCollectionType) IsExact() bool {
 // CommerceCollection - A collection of items/products/services
 type CommerceCollection struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt         *time.Time              `json:"created_at,omitempty"`
-	Description       *string                 `json:"description,omitempty"`
-	ID                *string                 `json:"id,omitempty"`
-	IsActive          *bool                   `json:"is_active,omitempty"`
-	IsFeatured        *bool                   `json:"is_featured,omitempty"`
-	IsVisible         *bool                   `json:"is_visible,omitempty"`
-	ItemMetadata      []CommerceMetadata      `json:"item_metadata,omitempty"`
-	Media             []CommerceItemMedia     `json:"media,omitempty"`
-	Metadata          []CommerceMetadata      `json:"metadata,omitempty"`
+	CreatedAt    *time.Time          `json:"created_at,omitempty"`
+	Description  *string             `json:"description,omitempty"`
+	ID           *string             `json:"id,omitempty"`
+	IsActive     *bool               `json:"is_active,omitempty"`
+	IsFeatured   *bool               `json:"is_featured,omitempty"`
+	IsVisible    *bool               `json:"is_visible,omitempty"`
+	ItemMetadata []CommerceMetadata  `json:"item_metadata,omitempty"`
+	Media        []CommerceItemMedia `json:"media,omitempty"`
+	Metadata     []CommerceMetadata  `json:"metadata,omitempty"`
+	// The collection's name
 	Name              string                  `json:"name"`
 	ParentID          *string                 `json:"parent_id,omitempty"`
 	PublicDescription *string                 `json:"public_description,omitempty"`
