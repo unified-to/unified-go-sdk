@@ -38,13 +38,13 @@ func main() {
     res, err := s.Snapshot.CreateComputeSnapshot(ctx, operations.CreateComputeSnapshotRequest{
         ComputeSnapshot: shared.ComputeSnapshot{
             CreatedAt: types.MustNewTimeFromString("2021-09-24T14:40:06.110Z"),
-            ID: unifiedgosdk.Pointer("3543a0bb-55b4-48fb-8145-80af9c7da363"),
+            ID: unifiedgosdk.Pointer("88d1ad48-94a1-4854-9821-05140a7e184f"),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("snap-alius"),
             SizeMb: unifiedgosdk.Pointer[float64](169984.0),
             Status: shared.ComputeSnapshotStatusDeleting.ToPointer(),
             Type: shared.ComputeSnapshotTypeDisk.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-08T19:31:55.398Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-09T16:11:45.523Z"),
         },
         ConnectionID: "<id>",
     })

@@ -41,7 +41,7 @@ func main() {
         MetadataMetadata: shared.MetadataMetadata{
             CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
             Format: shared.MetadataMetadataFormatPrice.ToPointer(),
-            ID: unifiedgosdk.Pointer("77fc2627-efaf-4dab-b7aa-56b5ea65ee0c"),
+            ID: unifiedgosdk.Pointer("e28c04c6-083d-4f89-b989-df27a96704f0"),
             IsRequired: unifiedgosdk.Pointer(false),
             Name: "autem",
             ObjectType: "compute_usage",
@@ -51,7 +51,7 @@ func main() {
             Options: []string{},
             OriginalFormat: unifiedgosdk.Pointer("advoco"),
             Slug: unifiedgosdk.Pointer("arbustum"),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-29T03:30:36.799Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-29T20:08:22.329Z"),
         },
         ConnectionID: "<id>",
     })
@@ -221,7 +221,7 @@ func main() {
         MetadataMetadata: shared.MetadataMetadata{
             CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
             Format: shared.MetadataMetadataFormatPrice.ToPointer(),
-            ID: unifiedgosdk.Pointer("bdf744b4-36d7-4ea8-acd7-a630bf2faaee"),
+            ID: unifiedgosdk.Pointer("d37a054f-39ef-4a2a-820a-8616824fed30"),
             IsRequired: unifiedgosdk.Pointer(false),
             Name: "autem",
             ObjectType: "compute_usage",
@@ -231,7 +231,7 @@ func main() {
             Options: []string{},
             OriginalFormat: unifiedgosdk.Pointer("advoco"),
             Slug: unifiedgosdk.Pointer("arbustum"),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-29T03:30:36.810Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-29T20:08:22.335Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -348,7 +348,7 @@ func main() {
         MetadataMetadata: shared.MetadataMetadata{
             CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
             Format: shared.MetadataMetadataFormatPrice.ToPointer(),
-            ID: unifiedgosdk.Pointer("bdf744b4-36d7-4ea8-acd7-a630bf2faaee"),
+            ID: unifiedgosdk.Pointer("d37a054f-39ef-4a2a-820a-8616824fed30"),
             IsRequired: unifiedgosdk.Pointer(false),
             Name: "autem",
             ObjectType: "compute_usage",
@@ -358,7 +358,7 @@ func main() {
             Options: []string{},
             OriginalFormat: unifiedgosdk.Pointer("advoco"),
             Slug: unifiedgosdk.Pointer("arbustum"),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-29T03:30:36.810Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-29T20:08:22.335Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
