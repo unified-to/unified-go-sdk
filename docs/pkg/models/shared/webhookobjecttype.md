@@ -250,3 +250,8 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypePropertyQuote`                 | property_quote                                   |
 | `WebhookObjectTypePropertyReview`                | property_review                                  |
 | `WebhookObjectTypePropertyConversation`          | property_conversation                            |
+| `WebhookObjectTypePlmPart`                       | plm_part                                         |
+| `WebhookObjectTypePlmBomline`                    | plm_bomline                                      |
+| `WebhookObjectTypePlmDocument`                   | plm_document                                     |
+| `WebhookObjectTypePlmChange`                     | plm_change                                       |
+| `WebhookObjectTypePlmCategory`                   | plm_category                                     |

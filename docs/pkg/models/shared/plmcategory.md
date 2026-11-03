@@ -1,0 +1,19 @@
+# PlmCategory
+
+A category that parts, documents or changes are filed under
+
+
+## Fields
+
+| Field                                                                    | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `CreatedAt`                                                              | [*time.Time](https://pkg.go.dev/time#Time)                               | :heavy_minus_sign:                                                       | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                                 |
+| `Description`                                                            | `*string`                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `ID`                                                                     | `*string`                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `IsActive`                                                               | `*bool`                                                                  | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `Metadata`                                                               | [][shared.PlmMetadata](../../../pkg/models/shared/plmmetadata.md)        | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `Name`                                                                   | `*string`                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `ParentID`                                                               | `*string`                                                                | :heavy_minus_sign:                                                       | The parent PlmCategory, for nested categories                            |
+| `Raw`                                                                    | map[string]`any`                                                         | :heavy_minus_sign:                                                       | Raw data from integration                                                |
+| `Type`                                                                   | [*shared.PlmCategoryType](../../../pkg/models/shared/plmcategorytype.md) | :heavy_minus_sign:                                                       | Which records the category classifies                                    |
+| `UpdatedAt`                                                              | [*time.Time](https://pkg.go.dev/time#Time)                               | :heavy_minus_sign:                                                       | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                                 |

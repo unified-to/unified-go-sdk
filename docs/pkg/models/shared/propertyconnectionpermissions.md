@@ -445,3 +445,13 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsPropertyReviewWrite`                | property_review_write                                             |
 | `PropertyConnectionPermissionsPropertyConversationRead`           | property_conversation_read                                        |
 | `PropertyConnectionPermissionsPropertyConversationWrite`          | property_conversation_write                                       |
+| `PropertyConnectionPermissionsPlmPartRead`                        | plm_part_read                                                     |
+| `PropertyConnectionPermissionsPlmPartWrite`                       | plm_part_write                                                    |
+| `PropertyConnectionPermissionsPlmBomlineRead`                     | plm_bomline_read                                                  |
+| `PropertyConnectionPermissionsPlmBomlineWrite`                    | plm_bomline_write                                                 |
+| `PropertyConnectionPermissionsPlmDocumentRead`                    | plm_document_read                                                 |
+| `PropertyConnectionPermissionsPlmDocumentWrite`                   | plm_document_write                                                |
+| `PropertyConnectionPermissionsPlmChangeRead`                      | plm_change_read                                                   |
+| `PropertyConnectionPermissionsPlmChangeWrite`                     | plm_change_write                                                  |
+| `PropertyConnectionPermissionsPlmCategoryRead`                    | plm_category_read                                                 |
+| `PropertyConnectionPermissionsPlmCategoryWrite`                   | plm_category_write                                                |

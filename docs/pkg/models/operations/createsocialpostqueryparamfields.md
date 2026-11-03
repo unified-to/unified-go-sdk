@@ -19,7 +19,7 @@ value := operations.CreateSocialPostQueryParamFieldsID
 | `CreateSocialPostQueryParamFieldsCreatedAt`    | created_at                                     |
 | `CreateSocialPostQueryParamFieldsUpdatedAt`    | updated_at                                     |
 | `CreateSocialPostQueryParamFieldsProfileID`    | profile_id                                     |
-| `CreateSocialPostQueryParamFieldsParentPostID` | parent_post_id                                 |
+| `CreateSocialPostQueryParamFieldsParentID`     | parent_id                                      |
 | `CreateSocialPostQueryParamFieldsTitle`        | title                                          |
 | `CreateSocialPostQueryParamFieldsBody`         | body                                           |
 | `CreateSocialPostQueryParamFieldsStatus`       | status                                         |

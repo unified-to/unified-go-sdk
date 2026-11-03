@@ -82,7 +82,7 @@ type SocialPost struct {
 	// Engagement metrics for the post
 	Metrics *PropertySocialPostMetrics `json:"metrics,omitempty"`
 	// The post this one replies to or references
-	ParentPostID *string `json:"parent_post_id,omitempty"`
+	ParentID *string `json:"parent_id,omitempty"`
 	// The social profile (page/handle/listing) that owns this post
 	ProfileID *string `json:"profile_id,omitempty"`
 	// Raw data from integration
@@ -168,11 +168,11 @@ func (s *SocialPost) GetMetrics() *PropertySocialPostMetrics {
 	return s.Metrics
 }
 
-func (s *SocialPost) GetParentPostID() *string {
+func (s *SocialPost) GetParentID() *string {
 	if s == nil {
 		return nil
 	}
-	return s.ParentPostID
+	return s.ParentID
 }
 
 func (s *SocialPost) GetProfileID() *string {

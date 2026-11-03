@@ -51,6 +51,7 @@ const (
 	CategoriesCompute      Categories = "compute"
 	CategoriesHealthcare   Categories = "healthcare"
 	CategoriesProperty     Categories = "property"
+	CategoriesPlm          Categories = "plm"
 )
 
 func (e Categories) ToPointer() *Categories {
@@ -139,6 +140,8 @@ func (e *Categories) UnmarshalJSON(data []byte) error {
 	case "healthcare":
 		fallthrough
 	case "property":
+		fallthrough
+	case "plm":
 		*e = Categories(v)
 		return nil
 	default:

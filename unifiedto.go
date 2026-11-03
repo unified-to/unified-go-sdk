@@ -231,6 +231,10 @@ type UnifiedTo struct {
 	Performance         *Performance
 	Cycle               *Cycle
 	Feedback            *Feedback
+	Plm                 *Plm
+	Bomline             *Bomline
+	Change              *Change
+	Part                *Part
 	Conversation        *Conversation
 	Guest               *Guest
 	Listing             *Listing
@@ -255,7 +259,6 @@ type UnifiedTo struct {
 	Post                *Post
 	Storage             *Storage
 	File                *File
-	Change              *Change
 	Ticketing           *Ticketing
 	Customer            *Customer
 	Note                *Note
@@ -353,10 +356,10 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.39.11",
+		SDKVersion: "0.39.12",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.39.11 2.954.8 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.39.11",
+			UserAgent:         "speakeasy-sdk/go 0.39.12 2.954.8 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.39.12",
 			GenVersion:        "2.954.8",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
@@ -553,6 +556,10 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Performance = newPerformance(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Cycle = newCycle(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Feedback = newFeedback(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Plm = newPlm(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Bomline = newBomline(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Change = newChange(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Part = newPart(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Conversation = newConversation(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Guest = newGuest(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Listing = newListing(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -577,7 +584,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Post = newPost(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Storage = newStorage(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.File = newFile(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Change = newChange(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Ticketing = newTicketing(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Customer = newCustomer(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Note = newNote(sdk, sdk.sdkConfiguration, sdk.hooks)

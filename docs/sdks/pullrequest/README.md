@@ -39,9 +39,9 @@ func main() {
 
     res, err := s.Pullrequest.CreateRepoPullrequest(ctx, operations.CreateRepoPullrequestRequest{
         RepoPullrequest: shared.RepoPullrequest{
-            ClosedAt: types.MustNewTimeFromString("2025-05-08T16:00:53.868Z"),
+            ClosedAt: types.MustNewTimeFromString("2025-05-09T07:32:54.820Z"),
             CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
-            ID: unifiedgosdk.Pointer("f2a4dd81-88ef-42e1-bbfa-95a5a4dd4e95"),
+            ID: unifiedgosdk.Pointer("ac62c7ce-18af-40f3-bc84-f76945021c9b"),
             Labels: []string{
                 "creptio",
                 "tutamen",
@@ -50,7 +50,7 @@ func main() {
             Notes: unifiedgosdk.Pointer("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo."),
             Status: shared.RepoPullrequestStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("reboot mobile application"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-26T17:05:09.370Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-27T13:43:08.392Z"),
         },
         ConnectionID: "<id>",
     })
@@ -218,9 +218,9 @@ func main() {
 
     res, err := s.Pullrequest.PatchRepoPullrequest(ctx, operations.PatchRepoPullrequestRequest{
         RepoPullrequest: shared.RepoPullrequest{
-            ClosedAt: types.MustNewTimeFromString("2025-05-08T16:00:53.874Z"),
+            ClosedAt: types.MustNewTimeFromString("2025-05-09T07:32:54.832Z"),
             CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
-            ID: unifiedgosdk.Pointer("061ed4e9-23bc-4759-8fb2-82b3d6d8bde5"),
+            ID: unifiedgosdk.Pointer("a6964420-94f4-4e6d-a563-94a203e140f1"),
             Labels: []string{
                 "creptio",
                 "tutamen",
@@ -229,7 +229,7 @@ func main() {
             Notes: unifiedgosdk.Pointer("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo."),
             Status: shared.RepoPullrequestStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("reboot mobile application"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-26T17:05:09.377Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-27T13:43:08.407Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -344,9 +344,9 @@ func main() {
 
     res, err := s.Pullrequest.UpdateRepoPullrequest(ctx, operations.UpdateRepoPullrequestRequest{
         RepoPullrequest: shared.RepoPullrequest{
-            ClosedAt: types.MustNewTimeFromString("2025-05-08T16:00:53.874Z"),
+            ClosedAt: types.MustNewTimeFromString("2025-05-09T07:32:54.832Z"),
             CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
-            ID: unifiedgosdk.Pointer("061ed4e9-23bc-4759-8fb2-82b3d6d8bde5"),
+            ID: unifiedgosdk.Pointer("a6964420-94f4-4e6d-a563-94a203e140f1"),
             Labels: []string{
                 "creptio",
                 "tutamen",
@@ -355,7 +355,7 @@ func main() {
             Notes: unifiedgosdk.Pointer("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo."),
             Status: shared.RepoPullrequestStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("reboot mobile application"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-26T17:05:09.377Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-27T13:43:08.407Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -54,3 +54,4 @@ value := operations.QueryParamCategoriesPassthrough
 | `QueryParamCategoriesCompute`      | compute                            |
 | `QueryParamCategoriesHealthcare`   | healthcare                         |
 | `QueryParamCategoriesProperty`     | property                           |
+| `QueryParamCategoriesPlm`          | plm                                |

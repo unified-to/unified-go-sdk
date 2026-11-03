@@ -54,3 +54,4 @@ value := operations.CategoriesPassthrough
 | `CategoriesCompute`      | compute                  |
 | `CategoriesHealthcare`   | healthcare               |
 | `CategoriesProperty`     | property                 |
+| `CategoriesPlm`          | plm                      |

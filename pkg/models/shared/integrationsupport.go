@@ -2,6 +2,29 @@
 
 package shared
 
+type VirtualWebhookCalendarID string
+
+const (
+	VirtualWebhookCalendarIDSupportedRequired VirtualWebhookCalendarID = "supported-required"
+	VirtualWebhookCalendarIDSupported         VirtualWebhookCalendarID = "supported"
+	VirtualWebhookCalendarIDNotSupported      VirtualWebhookCalendarID = "not-supported"
+)
+
+func (e VirtualWebhookCalendarID) ToPointer() *VirtualWebhookCalendarID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookCalendarID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookCallID string
 
 const (
@@ -899,6 +922,29 @@ func (e *VirtualWebhookParentID) IsExact() bool {
 	return false
 }
 
+type VirtualWebhookPartID string
+
+const (
+	VirtualWebhookPartIDSupportedRequired VirtualWebhookPartID = "supported-required"
+	VirtualWebhookPartIDSupported         VirtualWebhookPartID = "supported"
+	VirtualWebhookPartIDNotSupported      VirtualWebhookPartID = "not-supported"
+)
+
+func (e VirtualWebhookPartID) ToPointer() *VirtualWebhookPartID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookPartID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookPatientID string
 
 const (
@@ -1611,6 +1657,7 @@ type IntegrationSupport struct {
 	ListPackageID           *ListPackageID           `json:"list_package_id,omitempty"`
 	ListPageID              *ListPageID              `json:"list_page_id,omitempty"`
 	ListParentID            *ListParentID            `json:"list_parent_id,omitempty"`
+	ListPartID              *ListPartID              `json:"list_part_id,omitempty"`
 	ListPatientID           *ListPatientID           `json:"list_patient_id,omitempty"`
 	ListPaymentID           *ListPaymentID           `json:"list_payment_id,omitempty"`
 	ListPayslipID           *ListPayslipID           `json:"list_payslip_id,omitempty"`
@@ -1739,6 +1786,7 @@ type IntegrationSupport struct {
 	VirtualWebhookOrgID             *VirtualWebhookOrgID                     `json:"virtual_webhook_org_id,omitempty"`
 	VirtualWebhookPageID            *VirtualWebhookPageID                    `json:"virtual_webhook_page_id,omitempty"`
 	VirtualWebhookParentID          *VirtualWebhookParentID                  `json:"virtual_webhook_parent_id,omitempty"`
+	VirtualWebhookPartID            *VirtualWebhookPartID                    `json:"virtual_webhook_part_id,omitempty"`
 	VirtualWebhookPatientID         *VirtualWebhookPatientID                 `json:"virtual_webhook_patient_id,omitempty"`
 	VirtualWebhookPaymentID         *VirtualWebhookPaymentID                 `json:"virtual_webhook_payment_id,omitempty"`
 	VirtualWebhookPipelineID        *VirtualWebhookPipelineID                `json:"virtual_webhook_pipeline_id,omitempty"`
@@ -2237,6 +2285,13 @@ func (i *IntegrationSupport) GetListParentID() *ListParentID {
 		return nil
 	}
 	return i.ListParentID
+}
+
+func (i *IntegrationSupport) GetListPartID() *ListPartID {
+	if i == nil {
+		return nil
+	}
+	return i.ListPartID
 }
 
 func (i *IntegrationSupport) GetListPatientID() *ListPatientID {
@@ -3126,6 +3181,13 @@ func (i *IntegrationSupport) GetVirtualWebhookParentID() *VirtualWebhookParentID
 		return nil
 	}
 	return i.VirtualWebhookParentID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookPartID() *VirtualWebhookPartID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookPartID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookPatientID() *VirtualWebhookPatientID {

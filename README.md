@@ -66,7 +66,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("66281ff5-5a74-4c18-9e6d-1275fb4d66d2"),
+			ID:                  unifiedgosdk.Pointer("6e641593-eb75-4e82-81c8-6b587511f208"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -79,7 +79,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-09T22:11:40.715Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-10T04:48:54.609Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -547,6 +547,15 @@ func main() {
 * [RemoveAccountingBill](docs/sdks/bill/README.md#removeaccountingbill) - Remove a bill
 * [UpdateAccountingBill](docs/sdks/bill/README.md#updateaccountingbill) - Update a bill
 
+### [Bomline](docs/sdks/bomline/README.md)
+
+* [CreatePlmBomline](docs/sdks/bomline/README.md#createplmbomline) - Create a bomline
+* [GetPlmBomline](docs/sdks/bomline/README.md#getplmbomline) - Retrieve a bomline
+* [ListPlmBomlines](docs/sdks/bomline/README.md#listplmbomlines) - List all bomlines
+* [PatchPlmBomline](docs/sdks/bomline/README.md#patchplmbomline) - Update a bomline
+* [RemovePlmBomline](docs/sdks/bomline/README.md#removeplmbomline) - Remove a bomline
+* [UpdatePlmBomline](docs/sdks/bomline/README.md#updateplmbomline) - Update a bomline
+
 ### [Branch](docs/sdks/branch/README.md)
 
 * [CreateRepoBranch](docs/sdks/branch/README.md#createrepobranch) - Create a branch
@@ -646,8 +655,10 @@ func main() {
 * [CreateAccountingCategory](docs/sdks/category/README.md#createaccountingcategory) - Create a category
 * [CreateTicketingCategory](docs/sdks/category/README.md#createticketingcategory) - Create a category
 * [GetAccountingCategory](docs/sdks/category/README.md#getaccountingcategory) - Retrieve a category
+* [GetPlmCategory](docs/sdks/category/README.md#getplmcategory) - Retrieve a category
 * [GetTicketingCategory](docs/sdks/category/README.md#getticketingcategory) - Retrieve a category
 * [ListAccountingCategories](docs/sdks/category/README.md#listaccountingcategories) - List all categories
+* [ListPlmCategories](docs/sdks/category/README.md#listplmcategories) - List all categories
 * [ListTicketingCategories](docs/sdks/category/README.md#listticketingcategories) - List all categories
 * [PatchAccountingCategory](docs/sdks/category/README.md#patchaccountingcategory) - Update a category
 * [PatchTicketingCategory](docs/sdks/category/README.md#patchticketingcategory) - Update a category
@@ -697,8 +708,13 @@ func main() {
 
 ### [Change](docs/sdks/change/README.md)
 
+* [CreatePlmChange](docs/sdks/change/README.md#createplmchange) - Create a change
+* [GetPlmChange](docs/sdks/change/README.md#getplmchange) - Retrieve a change
 * [GetTaskChange](docs/sdks/change/README.md#gettaskchange) - Retrieve a change
+* [ListPlmChanges](docs/sdks/change/README.md#listplmchanges) - List all changes
 * [ListTaskChanges](docs/sdks/change/README.md#listtaskchanges) - List all changes
+* [PatchPlmChange](docs/sdks/change/README.md#patchplmchange) - Update a change
+* [UpdatePlmChange](docs/sdks/change/README.md#updateplmchange) - Update a change
 
 ### [Channel](docs/sdks/channel/README.md)
 
@@ -1130,23 +1146,28 @@ func main() {
 * [CreateAtsDocument](docs/sdks/document/README.md#createatsdocument) - Create a document
 * [CreateHealthcareDocument](docs/sdks/document/README.md#createhealthcaredocument) - Create a document
 * [CreateHrisDocument](docs/sdks/document/README.md#createhrisdocument) - Create a document
+* [CreatePlmDocument](docs/sdks/document/README.md#createplmdocument) - Create a document
 * [CreateSigningDocument](docs/sdks/document/README.md#createsigningdocument) - Create a document
 * [GetAtsDocument](docs/sdks/document/README.md#getatsdocument) - Retrieve a document
 * [GetHealthcareDocument](docs/sdks/document/README.md#gethealthcaredocument) - Retrieve a document
 * [GetHrisDocument](docs/sdks/document/README.md#gethrisdocument) - Retrieve a document
+* [GetPlmDocument](docs/sdks/document/README.md#getplmdocument) - Retrieve a document
 * [GetSigningDocument](docs/sdks/document/README.md#getsigningdocument) - Retrieve a document
 * [ListAtsDocuments](docs/sdks/document/README.md#listatsdocuments) - List all documents
 * [ListHealthcareDocuments](docs/sdks/document/README.md#listhealthcaredocuments) - List all documents
 * [ListHrisDocuments](docs/sdks/document/README.md#listhrisdocuments) - List all documents
+* [ListPlmDocuments](docs/sdks/document/README.md#listplmdocuments) - List all documents
 * [ListSigningDocuments](docs/sdks/document/README.md#listsigningdocuments) - List all documents
 * [PatchAtsDocument](docs/sdks/document/README.md#patchatsdocument) - Update a document
 * [PatchHrisDocument](docs/sdks/document/README.md#patchhrisdocument) - Update a document
+* [PatchPlmDocument](docs/sdks/document/README.md#patchplmdocument) - Update a document
 * [PatchSigningDocument](docs/sdks/document/README.md#patchsigningdocument) - Update a document
 * [RemoveAtsDocument](docs/sdks/document/README.md#removeatsdocument) - Remove a document
 * [RemoveHrisDocument](docs/sdks/document/README.md#removehrisdocument) - Remove a document
 * [RemoveSigningDocument](docs/sdks/document/README.md#removesigningdocument) - Remove a document
 * [UpdateAtsDocument](docs/sdks/document/README.md#updateatsdocument) - Update a document
 * [UpdateHrisDocument](docs/sdks/document/README.md#updatehrisdocument) - Update a document
+* [UpdatePlmDocument](docs/sdks/document/README.md#updateplmdocument) - Update a document
 * [UpdateSigningDocument](docs/sdks/document/README.md#updatesigningdocument) - Update a document
 
 ### [Domain](docs/sdks/domain/README.md)
@@ -1981,6 +2002,14 @@ func main() {
 * [RemoveKmsPage](docs/sdks/page/README.md#removekmspage) - Remove a page
 * [UpdateKmsPage](docs/sdks/page/README.md#updatekmspage) - Update a page
 
+### [Part](docs/sdks/part/README.md)
+
+* [CreatePlmPart](docs/sdks/part/README.md#createplmpart) - Create a part
+* [GetPlmPart](docs/sdks/part/README.md#getplmpart) - Retrieve a part
+* [ListPlmParts](docs/sdks/part/README.md#listplmparts) - List all parts
+* [PatchPlmPart](docs/sdks/part/README.md#patchplmpart) - Update a part
+* [UpdatePlmPart](docs/sdks/part/README.md#updateplmpart) - Update a part
+
 ### [Passthrough](docs/sdks/passthrough/README.md)
 
 * [CreatePassthroughJSON](docs/sdks/passthrough/README.md#createpassthroughjson) - Passthrough POST
@@ -2082,6 +2111,32 @@ func main() {
 * [PatchCrmPipeline](docs/sdks/pipeline/README.md#patchcrmpipeline) - Update a pipeline
 * [RemoveCrmPipeline](docs/sdks/pipeline/README.md#removecrmpipeline) - Remove a pipeline
 * [UpdateCrmPipeline](docs/sdks/pipeline/README.md#updatecrmpipeline) - Update a pipeline
+
+### [Plm](docs/sdks/plm/README.md)
+
+* [CreatePlmBomline](docs/sdks/plm/README.md#createplmbomline) - Create a bomline
+* [CreatePlmChange](docs/sdks/plm/README.md#createplmchange) - Create a change
+* [CreatePlmDocument](docs/sdks/plm/README.md#createplmdocument) - Create a document
+* [CreatePlmPart](docs/sdks/plm/README.md#createplmpart) - Create a part
+* [GetPlmBomline](docs/sdks/plm/README.md#getplmbomline) - Retrieve a bomline
+* [GetPlmCategory](docs/sdks/plm/README.md#getplmcategory) - Retrieve a category
+* [GetPlmChange](docs/sdks/plm/README.md#getplmchange) - Retrieve a change
+* [GetPlmDocument](docs/sdks/plm/README.md#getplmdocument) - Retrieve a document
+* [GetPlmPart](docs/sdks/plm/README.md#getplmpart) - Retrieve a part
+* [ListPlmBomlines](docs/sdks/plm/README.md#listplmbomlines) - List all bomlines
+* [ListPlmCategories](docs/sdks/plm/README.md#listplmcategories) - List all categories
+* [ListPlmChanges](docs/sdks/plm/README.md#listplmchanges) - List all changes
+* [ListPlmDocuments](docs/sdks/plm/README.md#listplmdocuments) - List all documents
+* [ListPlmParts](docs/sdks/plm/README.md#listplmparts) - List all parts
+* [PatchPlmBomline](docs/sdks/plm/README.md#patchplmbomline) - Update a bomline
+* [PatchPlmChange](docs/sdks/plm/README.md#patchplmchange) - Update a change
+* [PatchPlmDocument](docs/sdks/plm/README.md#patchplmdocument) - Update a document
+* [PatchPlmPart](docs/sdks/plm/README.md#patchplmpart) - Update a part
+* [RemovePlmBomline](docs/sdks/plm/README.md#removeplmbomline) - Remove a bomline
+* [UpdatePlmBomline](docs/sdks/plm/README.md#updateplmbomline) - Update a bomline
+* [UpdatePlmChange](docs/sdks/plm/README.md#updateplmchange) - Update a change
+* [UpdatePlmDocument](docs/sdks/plm/README.md#updateplmdocument) - Update a document
+* [UpdatePlmPart](docs/sdks/plm/README.md#updateplmpart) - Update a part
 
 ### [Post](docs/sdks/post/README.md)
 
@@ -2941,7 +2996,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("66281ff5-5a74-4c18-9e6d-1275fb4d66d2"),
+			ID:                  unifiedgosdk.Pointer("6e641593-eb75-4e82-81c8-6b587511f208"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -2954,7 +3009,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-09T22:11:40.715Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-10T04:48:54.609Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3015,7 +3070,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("66281ff5-5a74-4c18-9e6d-1275fb4d66d2"),
+			ID:                  unifiedgosdk.Pointer("6e641593-eb75-4e82-81c8-6b587511f208"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3028,7 +3083,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-09T22:11:40.715Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-10T04:48:54.609Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3072,7 +3127,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("66281ff5-5a74-4c18-9e6d-1275fb4d66d2"),
+			ID:                  unifiedgosdk.Pointer("6e641593-eb75-4e82-81c8-6b587511f208"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3085,7 +3140,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-09T22:11:40.715Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-10T04:48:54.609Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3172,7 +3227,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("66281ff5-5a74-4c18-9e6d-1275fb4d66d2"),
+			ID:                  unifiedgosdk.Pointer("6e641593-eb75-4e82-81c8-6b587511f208"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3185,7 +3240,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-09T22:11:40.715Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-10T04:48:54.609Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3234,7 +3289,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("66281ff5-5a74-4c18-9e6d-1275fb4d66d2"),
+			ID:                  unifiedgosdk.Pointer("6e641593-eb75-4e82-81c8-6b587511f208"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3247,7 +3302,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-09T22:11:40.715Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-10T04:48:54.609Z"),
 		},
 		ConnectionID: "<id>",
 	}, operations.WithRetries(
@@ -3310,7 +3365,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("66281ff5-5a74-4c18-9e6d-1275fb4d66d2"),
+			ID:                  unifiedgosdk.Pointer("6e641593-eb75-4e82-81c8-6b587511f208"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3323,7 +3378,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-09T22:11:40.715Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-10T04:48:54.609Z"),
 		},
 		ConnectionID: "<id>",
 	})

@@ -7,8 +7,10 @@
 * [CreateAccountingCategory](#createaccountingcategory) - Create a category
 * [CreateTicketingCategory](#createticketingcategory) - Create a category
 * [GetAccountingCategory](#getaccountingcategory) - Retrieve a category
+* [GetPlmCategory](#getplmcategory) - Retrieve a category
 * [GetTicketingCategory](#getticketingcategory) - Retrieve a category
 * [ListAccountingCategories](#listaccountingcategories) - List all categories
+* [ListPlmCategories](#listplmcategories) - List all categories
 * [ListTicketingCategories](#listticketingcategories) - List all categories
 * [PatchAccountingCategory](#patchaccountingcategory) - Update a category
 * [PatchTicketingCategory](#patchticketingcategory) - Update a category
@@ -47,11 +49,11 @@ func main() {
         AccountingCategory: shared.AccountingCategory{
             CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
             Description: unifiedgosdk.Pointer("Textus ab thymum labore basium."),
-            ID: unifiedgosdk.Pointer("465bebd5-cd66-40e6-a91a-6c07c1dc84db"),
+            ID: unifiedgosdk.Pointer("dde68e0d-8943-4930-aaa0-2d03042e69bb"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Beauty"),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-19T12:21:12.641Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-20T05:53:56.114Z"),
         },
         ConnectionID: "<id>",
     })
@@ -112,11 +114,11 @@ func main() {
         TicketingCategory: shared.TicketingCategory{
             CreatedAt: types.MustNewTimeFromString("2019-10-19T22:02:51.067Z"),
             Description: unifiedgosdk.Pointer("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero."),
-            ID: unifiedgosdk.Pointer("fed027b1-bb0f-459d-abaa-c2788df91415"),
+            ID: unifiedgosdk.Pointer("034df176-1634-4373-bf7f-674185811ebb"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("amicitia"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-24T14:36:24.217Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-25T13:48:02.495Z"),
         },
         ConnectionID: "<id>",
     })
@@ -195,6 +197,61 @@ func main() {
 ### Response
 
 **[*operations.GetAccountingCategoryResponse](../../pkg/models/operations/getaccountingcategoryresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetPlmCategory
+
+Retrieves a single PlmCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getPlmCategory" method="get" path="/plm/{connection_id}/category/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Category.GetPlmCategory(ctx, operations.GetPlmCategoryRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.PlmCategory != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetPlmCategoryRequest](../../pkg/models/operations/getplmcategoryrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+
+### Response
+
+**[*operations.GetPlmCategoryResponse](../../pkg/models/operations/getplmcategoryresponse.md), error**
 
 ### Errors
 
@@ -311,6 +368,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListPlmCategories
+
+Returns a list of PlmCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listPlmCategories" method="get" path="/plm/{connection_id}/category" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Category.ListPlmCategories(ctx, operations.ListPlmCategoriesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.PlmCategories != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.ListPlmCategoriesRequest](../../pkg/models/operations/listplmcategoriesrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.ListPlmCategoriesResponse](../../pkg/models/operations/listplmcategoriesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListTicketingCategories
 
 Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -395,11 +506,11 @@ func main() {
         AccountingCategory: shared.AccountingCategory{
             CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
             Description: unifiedgosdk.Pointer("Textus ab thymum labore basium."),
-            ID: unifiedgosdk.Pointer("f46b2d0d-9878-40a4-b2e7-c017ee158474"),
+            ID: unifiedgosdk.Pointer("11a9785b-b11f-4026-9b56-1deb559f1546"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Beauty"),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-19T12:21:12.648Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-20T05:53:56.125Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -461,11 +572,11 @@ func main() {
         TicketingCategory: shared.TicketingCategory{
             CreatedAt: types.MustNewTimeFromString("2019-10-19T22:02:51.067Z"),
             Description: unifiedgosdk.Pointer("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero."),
-            ID: unifiedgosdk.Pointer("88006c0d-2e3a-4a48-a08b-74b61cc9a77b"),
+            ID: unifiedgosdk.Pointer("7e98cb44-0ac5-4d72-a781-9c83fc34625b"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("amicitia"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-24T14:36:24.225Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-25T13:48:02.507Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -637,11 +748,11 @@ func main() {
         AccountingCategory: shared.AccountingCategory{
             CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
             Description: unifiedgosdk.Pointer("Textus ab thymum labore basium."),
-            ID: unifiedgosdk.Pointer("f46b2d0d-9878-40a4-b2e7-c017ee158474"),
+            ID: unifiedgosdk.Pointer("11a9785b-b11f-4026-9b56-1deb559f1546"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Beauty"),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-19T12:21:12.648Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-20T05:53:56.125Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -703,11 +814,11 @@ func main() {
         TicketingCategory: shared.TicketingCategory{
             CreatedAt: types.MustNewTimeFromString("2019-10-19T22:02:51.067Z"),
             Description: unifiedgosdk.Pointer("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero."),
-            ID: unifiedgosdk.Pointer("88006c0d-2e3a-4a48-a08b-74b61cc9a77b"),
+            ID: unifiedgosdk.Pointer("7e98cb44-0ac5-4d72-a781-9c83fc34625b"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("amicitia"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-24T14:36:24.225Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-25T13:48:02.507Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -19,7 +19,7 @@ value := operations.PatchSocialPostQueryParamFieldsID
 | `PatchSocialPostQueryParamFieldsCreatedAt`    | created_at                                    |
 | `PatchSocialPostQueryParamFieldsUpdatedAt`    | updated_at                                    |
 | `PatchSocialPostQueryParamFieldsProfileID`    | profile_id                                    |
-| `PatchSocialPostQueryParamFieldsParentPostID` | parent_post_id                                |
+| `PatchSocialPostQueryParamFieldsParentID`     | parent_id                                     |
 | `PatchSocialPostQueryParamFieldsTitle`        | title                                         |
 | `PatchSocialPostQueryParamFieldsBody`         | body                                          |
 | `PatchSocialPostQueryParamFieldsStatus`       | status                                        |

@@ -7,23 +7,28 @@
 * [CreateAtsDocument](#createatsdocument) - Create a document
 * [CreateHealthcareDocument](#createhealthcaredocument) - Create a document
 * [CreateHrisDocument](#createhrisdocument) - Create a document
+* [CreatePlmDocument](#createplmdocument) - Create a document
 * [CreateSigningDocument](#createsigningdocument) - Create a document
 * [GetAtsDocument](#getatsdocument) - Retrieve a document
 * [GetHealthcareDocument](#gethealthcaredocument) - Retrieve a document
 * [GetHrisDocument](#gethrisdocument) - Retrieve a document
+* [GetPlmDocument](#getplmdocument) - Retrieve a document
 * [GetSigningDocument](#getsigningdocument) - Retrieve a document
 * [ListAtsDocuments](#listatsdocuments) - List all documents
 * [ListHealthcareDocuments](#listhealthcaredocuments) - List all documents
 * [ListHrisDocuments](#listhrisdocuments) - List all documents
+* [ListPlmDocuments](#listplmdocuments) - List all documents
 * [ListSigningDocuments](#listsigningdocuments) - List all documents
 * [PatchAtsDocument](#patchatsdocument) - Update a document
 * [PatchHrisDocument](#patchhrisdocument) - Update a document
+* [PatchPlmDocument](#patchplmdocument) - Update a document
 * [PatchSigningDocument](#patchsigningdocument) - Update a document
 * [RemoveAtsDocument](#removeatsdocument) - Remove a document
 * [RemoveHrisDocument](#removehrisdocument) - Remove a document
 * [RemoveSigningDocument](#removesigningdocument) - Remove a document
 * [UpdateAtsDocument](#updateatsdocument) - Update a document
 * [UpdateHrisDocument](#updatehrisdocument) - Update a document
+* [UpdatePlmDocument](#updateplmdocument) - Update a document
 * [UpdateSigningDocument](#updatesigningdocument) - Update a document
 
 ## CreateAtsDocument
@@ -57,10 +62,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-08-20T08:00:27.437Z"),
             DocumentURL: unifiedgosdk.Pointer("https://vengeful-lashes.biz"),
             Filename: unifiedgosdk.Pointer("lonzo_schowalter_resume.pdf"),
-            ID: unifiedgosdk.Pointer("892de1f1-fcc6-400a-8a96-ea2a55f9574e"),
+            ID: unifiedgosdk.Pointer("e0ea3571-74a8-42ce-a7e2-8084b2a3528a"),
             Metadata: []shared.AtsMetadata{},
             Type: shared.AtsDocumentTypeCoverLetter.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-12-10T04:36:35.241Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-12-10T11:08:52.619Z"),
         },
         ConnectionID: "<id>",
     })
@@ -130,13 +135,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-07-16T04:00:25.853Z"),
             DocumentURL: unifiedgosdk.Pointer("https://overcooked-yogurt.org"),
             Filename: unifiedgosdk.Pointer("ugh_after.elc"),
-            ID: unifiedgosdk.Pointer("c3ed8e40-44cb-470c-a3ce-da6e42c40c6f"),
+            ID: unifiedgosdk.Pointer("4c9bb4bd-e75d-4ab1-aeba-f1bffb5a4dec"),
             Metadata: []shared.HealthcareMetadata{},
             MimeType: unifiedgosdk.Pointer("application/pdf"),
             Name: unifiedgosdk.Pointer("History and physical"),
             Status: shared.HealthcareDocumentStatusSuperseded.ToPointer(),
             Type: shared.HealthcareDocumentTypeConsultationNote.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-01-01T01:10:07.252Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-01T12:43:56.985Z"),
         },
         ConnectionID: "<id>",
     })
@@ -198,10 +203,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-27T11:47:26.086Z"),
             DocumentURL: unifiedgosdk.Pointer("https://sore-decision.biz/"),
             Filename: unifiedgosdk.Pointer("ridge_forager.xsl"),
-            ID: unifiedgosdk.Pointer("593dfa00-64c3-42aa-81fa-0c22ecbaf782"),
+            ID: unifiedgosdk.Pointer("417873c8-9f7d-4043-bc72-2ce320b56d10"),
             Metadata: []shared.HrisMetadata{},
             Type: shared.HrisDocumentTypePolicy.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-20T09:55:56.922Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-21T05:16:22.459Z"),
         },
         ConnectionID: "<id>",
     })
@@ -225,6 +230,78 @@ func main() {
 ### Response
 
 **[*operations.CreateHrisDocumentResponse](../../pkg/models/operations/createhrisdocumentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreatePlmDocument
+
+Creates a PlmDocument. Provide the unified PlmDocument fields in the request body; they are mapped to the provider's API. Returns the created PlmDocument.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createPlmDocument" method="post" path="/plm/{connection_id}/document" example="plm_document" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Document.CreatePlmDocument(ctx, operations.CreatePlmDocumentRequest{
+        PlmDocument: shared.PlmDocument{
+            CreatedAt: types.MustNewTimeFromString("2020-10-16T01:44:30.293Z"),
+            FileIds: []string{},
+            ID: unifiedgosdk.Pointer("9f80f10e-db0d-4285-b08b-88581630dbc5"),
+            LifecycleState: unifiedgosdk.Pointer("Under Review"),
+            MasterIdentifier: unifiedgosdk.Pointer("c71c4c2f-90b1-4a1b-b1b0-30db027c9f89"),
+            Metadata: []shared.PlmMetadata{},
+            Name: unifiedgosdk.Pointer("Procedure taxicab"),
+            Number: unifiedgosdk.Pointer("DOC-086886"),
+            OriginalType: unifiedgosdk.Pointer("Procedure"),
+            Revision: unifiedgosdk.Pointer("C"),
+            Status: shared.PlmDocumentStatusInReview.ToPointer(),
+            Type: shared.PlmDocumentTypeProcedure.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-08-28T10:42:16.717Z"),
+            URL: unifiedgosdk.Pointer("https://uncommon-guide.info/"),
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.PlmDocument != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.CreatePlmDocumentRequest](../../pkg/models/operations/createplmdocumentrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.CreatePlmDocumentResponse](../../pkg/models/operations/createplmdocumentresponse.md), error**
 
 ### Errors
 
@@ -263,12 +340,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-05-02T09:35:23.679Z"),
             Description: unifiedgosdk.Pointer("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis."),
             ExpiresAt: types.MustNewTimeFromString("2021-06-04T01:21:34.949Z"),
-            ID: unifiedgosdk.Pointer("996b65a6-258d-4a4b-850e-2c0459a0d5e9"),
+            ID: unifiedgosdk.Pointer("270aebc6-a7ef-4232-94c4-6e8acd668b43"),
             Metadata: []shared.SigningMetadata{},
             Name: unifiedgosdk.Pointer("Denesik Group NDA"),
-            SentAt: types.MustNewTimeFromString("2022-07-02T00:31:10.582Z"),
+            SentAt: types.MustNewTimeFromString("2022-07-02T06:02:10.126Z"),
             Status: shared.SigningDocumentStatusDraft.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-12T08:45:16.422Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-13T05:24:50.907Z"),
         },
         ConnectionID: "<id>",
     })
@@ -457,6 +534,61 @@ func main() {
 ### Response
 
 **[*operations.GetHrisDocumentResponse](../../pkg/models/operations/gethrisdocumentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetPlmDocument
+
+Retrieves a single PlmDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getPlmDocument" method="get" path="/plm/{connection_id}/document/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Document.GetPlmDocument(ctx, operations.GetPlmDocumentRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.PlmDocument != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetPlmDocumentRequest](../../pkg/models/operations/getplmdocumentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+
+### Response
+
+**[*operations.GetPlmDocumentResponse](../../pkg/models/operations/getplmdocumentresponse.md), error**
 
 ### Errors
 
@@ -681,6 +813,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListPlmDocuments
+
+Returns a list of PlmDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listPlmDocuments" method="get" path="/plm/{connection_id}/document" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Document.ListPlmDocuments(ctx, operations.ListPlmDocumentsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.PlmDocuments != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.ListPlmDocumentsRequest](../../pkg/models/operations/listplmdocumentsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.ListPlmDocumentsResponse](../../pkg/models/operations/listplmdocumentsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListSigningDocuments
 
 Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -766,10 +952,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-08-20T08:00:27.437Z"),
             DocumentURL: unifiedgosdk.Pointer("https://vengeful-lashes.biz"),
             Filename: unifiedgosdk.Pointer("lonzo_schowalter_resume.pdf"),
-            ID: unifiedgosdk.Pointer("84db4103-1b01-4ee3-b724-c743fa1dfdf7"),
+            ID: unifiedgosdk.Pointer("f9cd0584-a960-461f-81c7-865d7fbbc9e9"),
             Metadata: []shared.AtsMetadata{},
             Type: shared.AtsDocumentTypeCoverLetter.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-12-10T04:36:35.244Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-12-10T11:08:52.624Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -832,10 +1018,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-27T11:47:26.086Z"),
             DocumentURL: unifiedgosdk.Pointer("https://sore-decision.biz/"),
             Filename: unifiedgosdk.Pointer("ridge_forager.xsl"),
-            ID: unifiedgosdk.Pointer("5868d7e9-39c1-4536-b3fd-6d091b75763c"),
+            ID: unifiedgosdk.Pointer("41ffc383-9d66-42f5-9142-0c501cc08a24"),
             Metadata: []shared.HrisMetadata{},
             Type: shared.HrisDocumentTypePolicy.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-20T09:55:56.933Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-21T05:16:22.471Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -860,6 +1046,79 @@ func main() {
 ### Response
 
 **[*operations.PatchHrisDocumentResponse](../../pkg/models/operations/patchhrisdocumentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchPlmDocument
+
+Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchPlmDocument" method="patch" path="/plm/{connection_id}/document/{id}" example="plm_document" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Document.PatchPlmDocument(ctx, operations.PatchPlmDocumentRequest{
+        PlmDocument: shared.PlmDocument{
+            CreatedAt: types.MustNewTimeFromString("2020-10-16T01:44:30.293Z"),
+            FileIds: []string{},
+            ID: unifiedgosdk.Pointer("bd51bb3c-6f62-45ce-84e7-ad869eb64dcc"),
+            LifecycleState: unifiedgosdk.Pointer("Under Review"),
+            MasterIdentifier: unifiedgosdk.Pointer("ebb6b8d0-3df3-4126-9616-6eac5285fc99"),
+            Metadata: []shared.PlmMetadata{},
+            Name: unifiedgosdk.Pointer("Procedure taxicab"),
+            Number: unifiedgosdk.Pointer("DOC-086886"),
+            OriginalType: unifiedgosdk.Pointer("Procedure"),
+            Revision: unifiedgosdk.Pointer("C"),
+            Status: shared.PlmDocumentStatusInReview.ToPointer(),
+            Type: shared.PlmDocumentTypeProcedure.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-08-28T10:42:16.733Z"),
+            URL: unifiedgosdk.Pointer("https://uncommon-guide.info/"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.PlmDocument != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.PatchPlmDocumentRequest](../../pkg/models/operations/patchplmdocumentrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.PatchPlmDocumentResponse](../../pkg/models/operations/patchplmdocumentresponse.md), error**
 
 ### Errors
 
@@ -898,12 +1157,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-05-02T09:35:23.679Z"),
             Description: unifiedgosdk.Pointer("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis."),
             ExpiresAt: types.MustNewTimeFromString("2021-06-04T01:21:34.949Z"),
-            ID: unifiedgosdk.Pointer("13dd12fd-5978-4b17-80a4-857f409e1134"),
+            ID: unifiedgosdk.Pointer("bcb5cfb0-797f-4529-b17b-0b7f1267b38d"),
             Metadata: []shared.SigningMetadata{},
             Name: unifiedgosdk.Pointer("Denesik Group NDA"),
-            SentAt: types.MustNewTimeFromString("2022-07-02T00:31:10.585Z"),
+            SentAt: types.MustNewTimeFromString("2022-07-02T06:02:10.130Z"),
             Status: shared.SigningDocumentStatusDraft.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-12T08:45:16.430Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-13T05:24:50.919Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1131,10 +1390,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-08-20T08:00:27.437Z"),
             DocumentURL: unifiedgosdk.Pointer("https://vengeful-lashes.biz"),
             Filename: unifiedgosdk.Pointer("lonzo_schowalter_resume.pdf"),
-            ID: unifiedgosdk.Pointer("84db4103-1b01-4ee3-b724-c743fa1dfdf7"),
+            ID: unifiedgosdk.Pointer("f9cd0584-a960-461f-81c7-865d7fbbc9e9"),
             Metadata: []shared.AtsMetadata{},
             Type: shared.AtsDocumentTypeCoverLetter.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-12-10T04:36:35.244Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-12-10T11:08:52.624Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1197,10 +1456,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-27T11:47:26.086Z"),
             DocumentURL: unifiedgosdk.Pointer("https://sore-decision.biz/"),
             Filename: unifiedgosdk.Pointer("ridge_forager.xsl"),
-            ID: unifiedgosdk.Pointer("5868d7e9-39c1-4536-b3fd-6d091b75763c"),
+            ID: unifiedgosdk.Pointer("41ffc383-9d66-42f5-9142-0c501cc08a24"),
             Metadata: []shared.HrisMetadata{},
             Type: shared.HrisDocumentTypePolicy.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-20T09:55:56.933Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-21T05:16:22.471Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1225,6 +1484,79 @@ func main() {
 ### Response
 
 **[*operations.UpdateHrisDocumentResponse](../../pkg/models/operations/updatehrisdocumentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdatePlmDocument
+
+Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updatePlmDocument" method="put" path="/plm/{connection_id}/document/{id}" example="plm_document" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Document.UpdatePlmDocument(ctx, operations.UpdatePlmDocumentRequest{
+        PlmDocument: shared.PlmDocument{
+            CreatedAt: types.MustNewTimeFromString("2020-10-16T01:44:30.293Z"),
+            FileIds: []string{},
+            ID: unifiedgosdk.Pointer("bd51bb3c-6f62-45ce-84e7-ad869eb64dcc"),
+            LifecycleState: unifiedgosdk.Pointer("Under Review"),
+            MasterIdentifier: unifiedgosdk.Pointer("ebb6b8d0-3df3-4126-9616-6eac5285fc99"),
+            Metadata: []shared.PlmMetadata{},
+            Name: unifiedgosdk.Pointer("Procedure taxicab"),
+            Number: unifiedgosdk.Pointer("DOC-086886"),
+            OriginalType: unifiedgosdk.Pointer("Procedure"),
+            Revision: unifiedgosdk.Pointer("C"),
+            Status: shared.PlmDocumentStatusInReview.ToPointer(),
+            Type: shared.PlmDocumentTypeProcedure.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-08-28T10:42:16.733Z"),
+            URL: unifiedgosdk.Pointer("https://uncommon-guide.info/"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.PlmDocument != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.UpdatePlmDocumentRequest](../../pkg/models/operations/updateplmdocumentrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.UpdatePlmDocumentResponse](../../pkg/models/operations/updateplmdocumentresponse.md), error**
 
 ### Errors
 
@@ -1263,12 +1595,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-05-02T09:35:23.679Z"),
             Description: unifiedgosdk.Pointer("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis."),
             ExpiresAt: types.MustNewTimeFromString("2021-06-04T01:21:34.949Z"),
-            ID: unifiedgosdk.Pointer("13dd12fd-5978-4b17-80a4-857f409e1134"),
+            ID: unifiedgosdk.Pointer("bcb5cfb0-797f-4529-b17b-0b7f1267b38d"),
             Metadata: []shared.SigningMetadata{},
             Name: unifiedgosdk.Pointer("Denesik Group NDA"),
-            SentAt: types.MustNewTimeFromString("2022-07-02T00:31:10.585Z"),
+            SentAt: types.MustNewTimeFromString("2022-07-02T06:02:10.130Z"),
             Status: shared.SigningDocumentStatusDraft.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-12T08:45:16.430Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-13T05:24:50.919Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

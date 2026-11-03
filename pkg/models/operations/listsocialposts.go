@@ -16,7 +16,7 @@ const (
 	ListSocialPostsQueryParamFieldsCreatedAt    ListSocialPostsQueryParamFields = "created_at"
 	ListSocialPostsQueryParamFieldsUpdatedAt    ListSocialPostsQueryParamFields = "updated_at"
 	ListSocialPostsQueryParamFieldsProfileID    ListSocialPostsQueryParamFields = "profile_id"
-	ListSocialPostsQueryParamFieldsParentPostID ListSocialPostsQueryParamFields = "parent_post_id"
+	ListSocialPostsQueryParamFieldsParentID     ListSocialPostsQueryParamFields = "parent_id"
 	ListSocialPostsQueryParamFieldsTitle        ListSocialPostsQueryParamFields = "title"
 	ListSocialPostsQueryParamFieldsBody         ListSocialPostsQueryParamFields = "body"
 	ListSocialPostsQueryParamFieldsStatus       ListSocialPostsQueryParamFields = "status"
@@ -48,7 +48,7 @@ func (e *ListSocialPostsQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "profile_id":
 		fallthrough
-	case "parent_post_id":
+	case "parent_id":
 		fallthrough
 	case "title":
 		fallthrough
