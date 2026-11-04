@@ -156,11 +156,15 @@ type ListUnifiedIntegrationsRequest struct {
 	Categories []ListUnifiedIntegrationsQueryParamCategories `queryParam:"style=form,explode=true,name=categories"`
 	Env        *string                                       `queryParam:"style=form,explode=true,name=env"`
 	Limit      *float64                                      `queryParam:"style=form,explode=true,name=limit"`
-	Offset     *float64                                      `queryParam:"style=form,explode=true,name=offset"`
-	Summary    *bool                                         `queryParam:"style=form,explode=true,name=summary"`
+	// Only return support and OAuth2 scopes for these object types (e.g. crm_contact,crm_deal), to keep the response small
+	ObjectTypes []string `queryParam:"style=form,explode=true,name=object_types"`
+	Offset      *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Summary     *bool    `queryParam:"style=form,explode=true,name=summary"`
 	// Filter the results for only this integration type
-	Type       *string `queryParam:"style=form,explode=true,name=type"`
-	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
+	Type *string `queryParam:"style=form,explode=true,name=type"`
+	// Filter the results for only these integration types (e.g. hubspot,salesforce)
+	Types      []string `queryParam:"style=form,explode=true,name=types"`
+	UpdatedGte *string  `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (l *ListUnifiedIntegrationsRequest) GetActive() *bool {
@@ -191,6 +195,13 @@ func (l *ListUnifiedIntegrationsRequest) GetLimit() *float64 {
 	return l.Limit
 }
 
+func (l *ListUnifiedIntegrationsRequest) GetObjectTypes() []string {
+	if l == nil {
+		return nil
+	}
+	return l.ObjectTypes
+}
+
 func (l *ListUnifiedIntegrationsRequest) GetOffset() *float64 {
 	if l == nil {
 		return nil
@@ -210,6 +221,13 @@ func (l *ListUnifiedIntegrationsRequest) GetType() *string {
 		return nil
 	}
 	return l.Type
+}
+
+func (l *ListUnifiedIntegrationsRequest) GetTypes() []string {
+	if l == nil {
+		return nil
+	}
+	return l.Types
 }
 
 func (l *ListUnifiedIntegrationsRequest) GetUpdatedGte() *string {
