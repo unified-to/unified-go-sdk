@@ -66,7 +66,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("8b080ad2-506c-47a8-aed4-8e8795ad5408"),
+			ID:                  unifiedgosdk.Pointer("e7ec8bc1-e451-46d5-9a38-5e513857a222"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -79,7 +79,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-10T11:15:32.980Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-10T17:19:29.525Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -556,6 +556,15 @@ func main() {
 * [RemovePlmBomline](docs/sdks/bomline/README.md#removeplmbomline) - Remove a bomline
 * [UpdatePlmBomline](docs/sdks/bomline/README.md#updateplmbomline) - Update a bomline
 
+### [Bot](docs/sdks/bot/README.md)
+
+* [CreateCalendarBot](docs/sdks/bot/README.md#createcalendarbot) - Create a bot
+* [GetCalendarBot](docs/sdks/bot/README.md#getcalendarbot) - Retrieve a bot
+* [ListCalendarBots](docs/sdks/bot/README.md#listcalendarbots) - List all bots
+* [PatchCalendarBot](docs/sdks/bot/README.md#patchcalendarbot) - Update a bot
+* [RemoveCalendarBot](docs/sdks/bot/README.md#removecalendarbot) - Remove a bot
+* [UpdateCalendarBot](docs/sdks/bot/README.md#updatecalendarbot) - Update a bot
+
 ### [Branch](docs/sdks/branch/README.md)
 
 * [CreateRepoBranch](docs/sdks/branch/README.md#createrepobranch) - Create a branch
@@ -571,10 +580,12 @@ func main() {
 
 ### [Calendar](docs/sdks/calendar/README.md)
 
+* [CreateCalendarBot](docs/sdks/calendar/README.md#createcalendarbot) - Create a bot
 * [CreateCalendarCalendar](docs/sdks/calendar/README.md#createcalendarcalendar) - Create a calendar
 * [CreateCalendarEvent](docs/sdks/calendar/README.md#createcalendarevent) - Create an event
 * [CreateCalendarLink](docs/sdks/calendar/README.md#createcalendarlink) - Create a link
 * [CreateCalendarWebinar](docs/sdks/calendar/README.md#createcalendarwebinar) - Create a webinar
+* [GetCalendarBot](docs/sdks/calendar/README.md#getcalendarbot) - Retrieve a bot
 * [GetCalendarCalendar](docs/sdks/calendar/README.md#getcalendarcalendar) - Retrieve a calendar
 * [GetCalendarEvent](docs/sdks/calendar/README.md#getcalendarevent) - Retrieve an event
 * [GetCalendarLink](docs/sdks/calendar/README.md#getcalendarlink) - Retrieve a link
@@ -582,6 +593,7 @@ func main() {
 * [GetCalendarRecording](docs/sdks/calendar/README.md#getcalendarrecording) - Retrieve a recording
 * [GetCalendarRoom](docs/sdks/calendar/README.md#getcalendarroom) - Retrieve a room
 * [GetCalendarWebinar](docs/sdks/calendar/README.md#getcalendarwebinar) - Retrieve a webinar
+* [ListCalendarBots](docs/sdks/calendar/README.md#listcalendarbots) - List all bots
 * [ListCalendarBusies](docs/sdks/calendar/README.md#listcalendarbusies) - List all busies
 * [ListCalendarCalendars](docs/sdks/calendar/README.md#listcalendarcalendars) - List all calendars
 * [ListCalendarEvents](docs/sdks/calendar/README.md#listcalendarevents) - List all events
@@ -590,14 +602,17 @@ func main() {
 * [ListCalendarRecordings](docs/sdks/calendar/README.md#listcalendarrecordings) - List all recordings
 * [ListCalendarRooms](docs/sdks/calendar/README.md#listcalendarrooms) - List all rooms
 * [ListCalendarWebinars](docs/sdks/calendar/README.md#listcalendarwebinars) - List all webinars
+* [PatchCalendarBot](docs/sdks/calendar/README.md#patchcalendarbot) - Update a bot
 * [PatchCalendarCalendar](docs/sdks/calendar/README.md#patchcalendarcalendar) - Update a calendar
 * [PatchCalendarEvent](docs/sdks/calendar/README.md#patchcalendarevent) - Update an event
 * [PatchCalendarLink](docs/sdks/calendar/README.md#patchcalendarlink) - Update a link
 * [PatchCalendarWebinar](docs/sdks/calendar/README.md#patchcalendarwebinar) - Update a webinar
+* [RemoveCalendarBot](docs/sdks/calendar/README.md#removecalendarbot) - Remove a bot
 * [RemoveCalendarCalendar](docs/sdks/calendar/README.md#removecalendarcalendar) - Remove a calendar
 * [RemoveCalendarEvent](docs/sdks/calendar/README.md#removecalendarevent) - Remove an event
 * [RemoveCalendarLink](docs/sdks/calendar/README.md#removecalendarlink) - Remove a link
 * [RemoveCalendarWebinar](docs/sdks/calendar/README.md#removecalendarwebinar) - Remove a webinar
+* [UpdateCalendarBot](docs/sdks/calendar/README.md#updatecalendarbot) - Update a bot
 * [UpdateCalendarCalendar](docs/sdks/calendar/README.md#updatecalendarcalendar) - Update a calendar
 * [UpdateCalendarEvent](docs/sdks/calendar/README.md#updatecalendarevent) - Update an event
 * [UpdateCalendarLink](docs/sdks/calendar/README.md#updatecalendarlink) - Update a link
@@ -2996,7 +3011,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("8b080ad2-506c-47a8-aed4-8e8795ad5408"),
+			ID:                  unifiedgosdk.Pointer("e7ec8bc1-e451-46d5-9a38-5e513857a222"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3009,7 +3024,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-10T11:15:32.980Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-10T17:19:29.525Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3070,7 +3085,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("8b080ad2-506c-47a8-aed4-8e8795ad5408"),
+			ID:                  unifiedgosdk.Pointer("e7ec8bc1-e451-46d5-9a38-5e513857a222"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3083,7 +3098,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-10T11:15:32.980Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-10T17:19:29.525Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3127,7 +3142,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("8b080ad2-506c-47a8-aed4-8e8795ad5408"),
+			ID:                  unifiedgosdk.Pointer("e7ec8bc1-e451-46d5-9a38-5e513857a222"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3140,7 +3155,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-10T11:15:32.980Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-10T17:19:29.525Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3227,7 +3242,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("8b080ad2-506c-47a8-aed4-8e8795ad5408"),
+			ID:                  unifiedgosdk.Pointer("e7ec8bc1-e451-46d5-9a38-5e513857a222"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3240,7 +3255,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-10T11:15:32.980Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-10T17:19:29.525Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3289,7 +3304,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("8b080ad2-506c-47a8-aed4-8e8795ad5408"),
+			ID:                  unifiedgosdk.Pointer("e7ec8bc1-e451-46d5-9a38-5e513857a222"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3302,7 +3317,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-10T11:15:32.980Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-10T17:19:29.525Z"),
 		},
 		ConnectionID: "<id>",
 	}, operations.WithRetries(
@@ -3365,7 +3380,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("8b080ad2-506c-47a8-aed4-8e8795ad5408"),
+			ID:                  unifiedgosdk.Pointer("e7ec8bc1-e451-46d5-9a38-5e513857a222"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3378,7 +3393,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-10T11:15:32.980Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-10T17:19:29.525Z"),
 		},
 		ConnectionID: "<id>",
 	})

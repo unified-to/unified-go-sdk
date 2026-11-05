@@ -276,6 +276,9 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsCalendarRecordingWrite`             | calendar_recording_write                                          |
 | `PropertyConnectionPermissionsCalendarWebinarRead`                | calendar_webinar_read                                             |
 | `PropertyConnectionPermissionsCalendarWebinarWrite`               | calendar_webinar_write                                            |
+| `PropertyConnectionPermissionsCalendarBotRead`                    | calendar_bot_read                                                 |
+| `PropertyConnectionPermissionsCalendarBotWrite`                   | calendar_bot_write                                                |
+| `PropertyConnectionPermissionsCalendarBoteventRead`               | calendar_botevent_read                                            |
 | `PropertyConnectionPermissionsCalendarRoomRead`                   | calendar_room_read                                                |
 | `PropertyConnectionPermissionsCalendarLocationRead`               | calendar_location_read                                            |
 | `PropertyConnectionPermissionsEnrichPersonRead`                   | enrich_person_read                                                |

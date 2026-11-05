@@ -105,7 +105,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Valetudo aggredior accommodo curiositas vox."),
             HasChildren: unifiedgosdk.Pointer(false),
             HasTasks: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("6309ef60-83c9-4240-bcd8-4a529ba4d7ab"),
+            ID: unifiedgosdk.Pointer("bf6846b0-d491-43e4-b038-7a1e419913ab"),
             Metadata: []shared.TaskMetadata{
                 shared.TaskMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
@@ -114,7 +114,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("f8147f80-14a5-471e-910c-3a711084a7bf"),
+                    ID: unifiedgosdk.Pointer("07ff2887-9247-4f71-a1bb-7a87ee327e4d"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("decens"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -128,7 +128,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("b262e275-44ed-46b8-82bf-66c55ed895cc"),
+                    ID: unifiedgosdk.Pointer("8c64be73-7c63-49cf-9385-4f0f3a34287e"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("benevolentia"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -137,7 +137,7 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("Garden"),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-12T20:57:21.423Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-12T23:06:50.454Z"),
         },
         ConnectionID: "<id>",
     })
@@ -475,7 +475,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Valetudo aggredior accommodo curiositas vox."),
             HasChildren: unifiedgosdk.Pointer(false),
             HasTasks: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("d91f8357-2481-440e-ae88-5dc1aaff09ac"),
+            ID: unifiedgosdk.Pointer("f6a1cb42-d830-4f2f-a1ef-fafa3a925840"),
             Metadata: []shared.TaskMetadata{
                 shared.TaskMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
@@ -484,7 +484,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("cbc6ddd5-63bf-4121-98fa-21c740b094d3"),
+                    ID: unifiedgosdk.Pointer("61b922ed-c19d-480e-a616-266afa4b7115"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("decens"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -498,7 +498,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("883b5b7f-e4c9-46fa-ab6a-eca46fb46767"),
+                    ID: unifiedgosdk.Pointer("a6ca9375-88dd-4e00-8ad2-64ac6a62ab93"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("benevolentia"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -507,7 +507,7 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("Garden"),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-12T20:57:21.424Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-12T23:06:50.455Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -738,7 +738,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Valetudo aggredior accommodo curiositas vox."),
             HasChildren: unifiedgosdk.Pointer(false),
             HasTasks: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("d91f8357-2481-440e-ae88-5dc1aaff09ac"),
+            ID: unifiedgosdk.Pointer("f6a1cb42-d830-4f2f-a1ef-fafa3a925840"),
             Metadata: []shared.TaskMetadata{
                 shared.TaskMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
@@ -747,7 +747,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("cbc6ddd5-63bf-4121-98fa-21c740b094d3"),
+                    ID: unifiedgosdk.Pointer("61b922ed-c19d-480e-a616-266afa4b7115"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("decens"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -761,7 +761,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("883b5b7f-e4c9-46fa-ab6a-eca46fb46767"),
+                    ID: unifiedgosdk.Pointer("a6ca9375-88dd-4e00-8ad2-64ac6a62ab93"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("benevolentia"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -770,7 +770,7 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("Garden"),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-12T20:57:21.424Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-12T23:06:50.455Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

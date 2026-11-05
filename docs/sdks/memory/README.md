@@ -41,7 +41,7 @@ func main() {
         GenaiMemory: shared.GenaiMemory{
             Content: unifiedgosdk.Pointer("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus."),
             CreatedAt: types.MustNewTimeFromString("2021-10-22T04:14:41.668Z"),
-            ID: unifiedgosdk.Pointer("749a6bfd-b868-42a6-955a-4a907afe5f49"),
+            ID: unifiedgosdk.Pointer("bab65ec7-e747-4327-90af-5730ef104571"),
             Metadata: []shared.GenaiMetadata{
                 shared.GenaiMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateGenaiMetadataExtraDataMapOfAny(
@@ -60,7 +60,7 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("sponte.md"),
             Type: shared.GenaiMemoryTypeMemory.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-30T03:04:58.320Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-30T10:17:03.460Z"),
             UserIdentifier: unifiedgosdk.Pointer("9d170613-4338-447d-bdb6-8ea96a2d7513"),
         },
         ConnectionID: "<id>",
@@ -231,7 +231,7 @@ func main() {
         GenaiMemory: shared.GenaiMemory{
             Content: unifiedgosdk.Pointer("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus."),
             CreatedAt: types.MustNewTimeFromString("2021-10-22T04:14:41.668Z"),
-            ID: unifiedgosdk.Pointer("3edc3ccd-0ffd-48fe-a727-ab12280bf02b"),
+            ID: unifiedgosdk.Pointer("7d8ae7bd-65c8-4b4f-9190-e86a204b894f"),
             Metadata: []shared.GenaiMetadata{
                 shared.GenaiMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateGenaiMetadataExtraDataMapOfAny(
@@ -250,7 +250,7 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("sponte.md"),
             Type: shared.GenaiMemoryTypeMemory.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-30T03:04:58.324Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-30T10:17:03.463Z"),
             UserIdentifier: unifiedgosdk.Pointer("9d170613-4338-447d-bdb6-8ea96a2d7513"),
         },
         ConnectionID: "<id>",
@@ -368,7 +368,7 @@ func main() {
         GenaiMemory: shared.GenaiMemory{
             Content: unifiedgosdk.Pointer("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus."),
             CreatedAt: types.MustNewTimeFromString("2021-10-22T04:14:41.668Z"),
-            ID: unifiedgosdk.Pointer("3edc3ccd-0ffd-48fe-a727-ab12280bf02b"),
+            ID: unifiedgosdk.Pointer("7d8ae7bd-65c8-4b4f-9190-e86a204b894f"),
             Metadata: []shared.GenaiMetadata{
                 shared.GenaiMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateGenaiMetadataExtraDataMapOfAny(
@@ -387,7 +387,7 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("sponte.md"),
             Type: shared.GenaiMemoryTypeMemory.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-30T03:04:58.324Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-30T10:17:03.463Z"),
             UserIdentifier: unifiedgosdk.Pointer("9d170613-4338-447d-bdb6-8ea96a2d7513"),
         },
         ConnectionID: "<id>",

@@ -115,6 +115,7 @@ type UnifiedTo struct {
 	Job                 *Job
 	Scorecard           *Scorecard
 	Calendar            *Calendar
+	Bot                 *Bot
 	Busy                *Busy
 	Link                *Link
 	Location            *Location
@@ -356,10 +357,10 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.39.13",
+		SDKVersion: "0.39.14",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.39.13 2.956.1 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.39.13",
+			UserAgent:         "speakeasy-sdk/go 0.39.14 2.956.1 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.39.14",
 			GenVersion:        "2.956.1",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
@@ -440,6 +441,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Job = newJob(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Scorecard = newScorecard(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Calendar = newCalendar(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Bot = newBot(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Busy = newBusy(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Link = newLink(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Location = newLocation(sdk, sdk.sdkConfiguration, sdk.hooks)
