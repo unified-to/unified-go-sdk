@@ -3,9 +3,12 @@
 package shared
 
 type PropertyCalendarBotAutomaticLeave struct {
-	DetectBots            *bool    `json:"detect_bots,omitempty"`
+	// Whether to leave if only bots remain
+	DetectBots *bool `json:"detect_bots,omitempty"`
+	// Seconds to wait when no other participants before leaving (default: 2)
 	NoParticipantsTimeout *float64 `json:"no_participants_timeout,omitempty"`
-	WaitingRoomTimeout    *float64 `json:"waiting_room_timeout,omitempty"`
+	// Seconds to wait in waiting room before leaving (default: 1200)
+	WaitingRoomTimeout *float64 `json:"waiting_room_timeout,omitempty"`
 }
 
 func (p *PropertyCalendarBotAutomaticLeave) GetDetectBots() *bool {

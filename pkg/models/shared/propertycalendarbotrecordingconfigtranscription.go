@@ -51,11 +51,14 @@ func (e *Provider) IsExact() bool {
 }
 
 type PropertyCalendarBotRecordingConfigTranscription struct {
-	EnableSpeakerLabels  *bool                                                `json:"enable_speaker_labels,omitempty"`
-	EnableWordTimestamps *bool                                                `json:"enable_word_timestamps,omitempty"`
-	Language             *string                                              `json:"language,omitempty"`
-	Mode                 *PropertyCalendarBotRecordingConfigTranscriptionMode `json:"mode,omitempty"`
-	Provider             *Provider                                            `json:"provider,omitempty"`
+	// Whether to identify speakers in transcript
+	EnableSpeakerLabels *bool `json:"enable_speaker_labels,omitempty"`
+	// Whether to include word-level timestamps
+	EnableWordTimestamps *bool `json:"enable_word_timestamps,omitempty"`
+	// ISO language code (e.g., 'en-US')
+	Language *string                                              `json:"language,omitempty"`
+	Mode     *PropertyCalendarBotRecordingConfigTranscriptionMode `json:"mode,omitempty"`
+	Provider *Provider                                            `json:"provider,omitempty"`
 }
 
 func (p *PropertyCalendarBotRecordingConfigTranscription) GetEnableSpeakerLabels() *bool {

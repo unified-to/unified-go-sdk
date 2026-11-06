@@ -39,10 +39,12 @@ func (e *CalendarBotStatusChangeStatus) IsExact() bool {
 
 type CalendarBotStatusChange struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	ChangedAt *time.Time                     `json:"changed_at,omitempty"`
-	Message   *string                        `json:"message,omitempty"`
-	Status    *CalendarBotStatusChangeStatus `json:"status,omitempty"`
-	SubCode   *string                        `json:"sub_code,omitempty"`
+	ChangedAt *time.Time `json:"changed_at,omitempty"`
+	// Human-readable status message
+	Message *string                        `json:"message,omitempty"`
+	Status  *CalendarBotStatusChangeStatus `json:"status,omitempty"`
+	// Platform-specific status sub-code
+	SubCode *string `json:"sub_code,omitempty"`
 }
 
 func (c CalendarBotStatusChange) MarshalJSON() ([]byte, error) {

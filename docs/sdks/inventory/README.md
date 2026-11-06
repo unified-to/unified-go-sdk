@@ -40,9 +40,9 @@ func main() {
     res, err := s.Inventory.CreateCommerceInventory(ctx, operations.CreateCommerceInventoryRequest{
         CommerceInventory: shared.CommerceInventory{
             Available: unifiedgosdk.Pointer[float64](337.0),
-            ID: unifiedgosdk.Pointer("602f47ce-21e1-4a84-962c-577e5c70e88a"),
+            ID: unifiedgosdk.Pointer("d8d66a9c-e989-4068-9680-0f042a8dd014"),
             Metadata: []shared.CommerceMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2025-12-02T12:17:32.241Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-03T07:00:40.092Z"),
         },
         ConnectionID: "<id>",
     })
@@ -211,9 +211,9 @@ func main() {
     res, err := s.Inventory.PatchCommerceInventory(ctx, operations.PatchCommerceInventoryRequest{
         CommerceInventory: shared.CommerceInventory{
             Available: unifiedgosdk.Pointer[float64](337.0),
-            ID: unifiedgosdk.Pointer("ee15148f-ca29-4025-be9b-4a1645e4ff11"),
+            ID: unifiedgosdk.Pointer("01cf3f2b-5e02-4d90-9906-4507fe16efe6"),
             Metadata: []shared.CommerceMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2025-12-02T12:17:32.248Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-03T07:00:40.104Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -329,9 +329,9 @@ func main() {
     res, err := s.Inventory.UpdateCommerceInventory(ctx, operations.UpdateCommerceInventoryRequest{
         CommerceInventory: shared.CommerceInventory{
             Available: unifiedgosdk.Pointer[float64](337.0),
-            ID: unifiedgosdk.Pointer("ee15148f-ca29-4025-be9b-4a1645e4ff11"),
+            ID: unifiedgosdk.Pointer("01cf3f2b-5e02-4d90-9906-4507fe16efe6"),
             Metadata: []shared.CommerceMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2025-12-02T12:17:32.248Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-03T07:00:40.104Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

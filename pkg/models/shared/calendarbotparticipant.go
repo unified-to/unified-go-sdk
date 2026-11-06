@@ -150,6 +150,7 @@ const (
 	PlatformMetadataTypeArrayOfCalendarBotParticipant5 PlatformMetadataType = "arrayOfCalendarBotParticipant5"
 )
 
+// PlatformMetadata - Platform-specific metadata
 type PlatformMetadata struct {
 	MapOfAny                       map[string]any            `queryParam:"inline" union:"member"`
 	Str                            *string                   `queryParam:"inline" union:"member"`
@@ -277,22 +278,29 @@ func (u PlatformMetadata) MarshalJSON() ([]byte, error) {
 }
 
 type CalendarBotParticipant struct {
-	Email    *string `json:"email,omitempty"`
-	ID       *string `json:"id,omitempty"`
-	IsBot    *bool   `json:"is_bot,omitempty"`
-	IsCohost *bool   `json:"is_cohost,omitempty"`
-	IsHost   *bool   `json:"is_host,omitempty"`
-	IsSelf   *bool   `json:"is_self,omitempty"`
+	Email *string `json:"email,omitempty"`
+	ID    *string `json:"id,omitempty"`
+	// Whether this participant is a bot
+	IsBot    *bool `json:"is_bot,omitempty"`
+	IsCohost *bool `json:"is_cohost,omitempty"`
+	IsHost   *bool `json:"is_host,omitempty"`
+	// Whether this participant is the current bot
+	IsSelf *bool `json:"is_self,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	JoinedAt *time.Time `json:"joined_at,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	LeftAt           *time.Time        `json:"left_at,omitempty"`
-	Name             *string           `json:"name,omitempty"`
-	Platform         *string           `json:"platform,omitempty"`
+	LeftAt *time.Time `json:"left_at,omitempty"`
+	Name   *string    `json:"name,omitempty"`
+	// Platform-specific participant identifier
+	Platform *string `json:"platform,omitempty"`
+	// Platform-specific metadata
 	PlatformMetadata *PlatformMetadata `json:"platform_metadata,omitempty"`
-	ScreenshareOn    *bool             `json:"screenshare_on,omitempty"`
-	Speaking         *bool             `json:"speaking,omitempty"`
-	WebcamOn         *bool             `json:"webcam_on,omitempty"`
+	// Whether participant is sharing screen
+	ScreenshareOn *bool `json:"screenshare_on,omitempty"`
+	// Whether participant is currently speaking
+	Speaking *bool `json:"speaking,omitempty"`
+	// Whether participant's webcam is on
+	WebcamOn *bool `json:"webcam_on,omitempty"`
 }
 
 func (c CalendarBotParticipant) MarshalJSON() ([]byte, error) {

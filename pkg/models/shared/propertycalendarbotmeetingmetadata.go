@@ -9,12 +9,14 @@ import (
 
 type PropertyCalendarBotMeetingMetadata struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	EndedAt           *time.Time `json:"ended_at,omitempty"`
-	HostEmail         *string    `json:"host_email,omitempty"`
-	HostName          *string    `json:"host_name,omitempty"`
-	MeetingIdentifier *string    `json:"meeting_identifier,omitempty"`
-	ParticipantCount  *float64   `json:"participant_count,omitempty"`
-	Platform          *string    `json:"platform,omitempty"`
+	EndedAt   *time.Time `json:"ended_at,omitempty"`
+	HostEmail *string    `json:"host_email,omitempty"`
+	HostName  *string    `json:"host_name,omitempty"`
+	// Platform-specific meeting identifier (not a unified object ref)
+	MeetingIdentifier *string  `json:"meeting_identifier,omitempty"`
+	ParticipantCount  *float64 `json:"participant_count,omitempty"`
+	// 'zoom', 'webex', 'google_meet', etc.
+	Platform *string `json:"platform,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartedAt *time.Time `json:"started_at,omitempty"`
 	Title     *string    `json:"title,omitempty"`

@@ -41,23 +41,27 @@ type CalendarBot struct {
 	AutomaticLeave *PropertyCalendarBotAutomaticLeave `json:"automatic_leave,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	// When the bot left (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndedAt *time.Time `json:"ended_at,omitempty"`
-	// (reference to CalendarEvent)
+	// Reference to calendar_event if scheduled via calendar (reference to CalendarEvent)
 	EventID *string `json:"event_id,omitempty"`
 	ID      *string `json:"id,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	// When to join the meeting (for scheduled bots) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	JoinAt          *time.Time                          `json:"join_at,omitempty"`
 	MeetingMetadata *PropertyCalendarBotMeetingMetadata `json:"meeting_metadata,omitempty"`
-	MeetingURL      *string                             `json:"meeting_url,omitempty"`
+	// URL of the meeting to join
+	MeetingURL *string `json:"meeting_url,omitempty"`
+	// Display name for the bot in the meeting
 	Name            *string                             `json:"name,omitempty"`
 	Participants    []CalendarBotParticipant            `json:"participants,omitempty"`
 	Raw             map[string]any                      `json:"raw,omitempty"`
 	RecordingConfig *PropertyCalendarBotRecordingConfig `json:"recording_config,omitempty"`
-	RecordingID     *string                             `json:"recording_id,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	StartedAt     *time.Time                `json:"started_at,omitempty"`
-	Status        *CalendarBotStatus        `json:"status,omitempty"`
+	// Reference to calendar_recording when ready
+	RecordingID *string `json:"recording_id,omitempty"`
+	// When the bot actually joined (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartedAt *time.Time         `json:"started_at,omitempty"`
+	Status    *CalendarBotStatus `json:"status,omitempty"`
+	// History of status changes
 	StatusChanges []CalendarBotStatusChange `json:"status_changes,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
