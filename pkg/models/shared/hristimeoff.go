@@ -86,7 +86,9 @@ type HrisTimeoff struct {
 	ApprovedAt *time.Time `json:"approved_at,omitempty"`
 	// (reference to HrisEmployee)
 	ApproverUserID *string `json:"approver_user_id,omitempty"`
-	Comments       *string `json:"comments,omitempty"`
+	// supporting documents (eg. doctor's notes) attached to the leave request
+	Attachments []HrisAttachment `json:"attachments,omitempty"`
+	Comments    *string          `json:"comments,omitempty"`
 	// (reference to HrisCompany)
 	CompanyID *string `json:"company_id,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -135,6 +137,13 @@ func (h *HrisTimeoff) GetApproverUserID() *string {
 		return nil
 	}
 	return h.ApproverUserID
+}
+
+func (h *HrisTimeoff) GetAttachments() []HrisAttachment {
+	if h == nil {
+		return nil
+	}
+	return h.Attachments
 }
 
 func (h *HrisTimeoff) GetComments() *string {

@@ -101,9 +101,9 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-12-18T19:14:11.415Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DepositAmount: unifiedgosdk.Pointer[float64](594.54),
-            EndAt: types.MustNewTimeFromString("2026-11-20"),
+            EndAt: types.MustNewTimeFromString("2026-11-21"),
             Guests: unifiedgosdk.Pointer[float64](2.0),
-            ID: unifiedgosdk.Pointer("6156969b-5c4d-4cd5-92b4-420878194903"),
+            ID: unifiedgosdk.Pointer("b8c6ab82-e2d5-45dd-ae33-9ea2ca6248ec"),
             LineItems: []shared.PropertyLineitem{
                 shared.PropertyLineitem{
                     Amount: unifiedgosdk.Pointer[float64](1665.0),
@@ -125,7 +125,7 @@ func main() {
                     Type: shared.PropertyLineitemTypeTax.ToPointer(),
                 },
             },
-            StartAt: types.MustNewTimeFromString("2026-11-11"),
+            StartAt: types.MustNewTimeFromString("2026-11-12"),
             TotalAmount: unifiedgosdk.Pointer[float64](1981.8),
         },
         ConnectionID: "<id>",

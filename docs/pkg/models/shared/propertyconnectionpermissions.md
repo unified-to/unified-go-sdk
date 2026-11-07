@@ -193,6 +193,8 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsUcCallWrite`                        | uc_call_write                                                     |
 | `PropertyConnectionPermissionsUcContactRead`                      | uc_contact_read                                                   |
 | `PropertyConnectionPermissionsUcContactWrite`                     | uc_contact_write                                                  |
+| `PropertyConnectionPermissionsUcFaxRead`                          | uc_fax_read                                                       |
+| `PropertyConnectionPermissionsUcFaxWrite`                         | uc_fax_write                                                      |
 | `PropertyConnectionPermissionsUcCommentRead`                      | uc_comment_read                                                   |
 | `PropertyConnectionPermissionsUcCommentWrite`                     | uc_comment_write                                                  |
 | `PropertyConnectionPermissionsUcRecordingRead`                    | uc_recording_read                                                 |

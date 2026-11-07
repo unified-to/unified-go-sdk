@@ -32,5 +32,6 @@ value := operations.PatchHrisTimeoffQueryParamFieldsID
 | `PatchHrisTimeoffQueryParamFieldsType`           | type                                             |
 | `PatchHrisTimeoffQueryParamFieldsDuration`       | duration                                         |
 | `PatchHrisTimeoffQueryParamFieldsDurationType`   | duration_type                                    |
+| `PatchHrisTimeoffQueryParamFieldsAttachments`    | attachments                                      |
 | `PatchHrisTimeoffQueryParamFieldsMetadata`       | metadata                                         |
 | `PatchHrisTimeoffQueryParamFieldsRaw`            | raw                                              |

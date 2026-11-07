@@ -7,16 +7,19 @@
 * [CreateUcCall](#createuccall) - Create a call
 * [CreateUcComment](#createuccomment) - Create a comment
 * [CreateUcContact](#createuccontact) - Create a contact
+* [CreateUcFax](#createucfax) - Create a fax
 * [CreateUcRecording](#createucrecording) - Create a recording
 * [GetUcCall](#getuccall) - Retrieve a call
 * [GetUcComment](#getuccomment) - Retrieve a comment
 * [GetUcContact](#getuccontact) - Retrieve a contact
+* [GetUcFax](#getucfax) - Retrieve a fax
 * [GetUcRecording](#getucrecording) - Retrieve a recording
 * [GetUcScorecard](#getucscorecard) - Retrieve a scorecard
 * [GetUcScorecardtemplate](#getucscorecardtemplate) - Retrieve a scorecardtemplate
 * [ListUcCalls](#listuccalls) - List all calls
 * [ListUcComments](#listuccomments) - List all comments
 * [ListUcContacts](#listuccontacts) - List all contacts
+* [ListUcFaxes](#listucfaxes) - List all faxes
 * [ListUcRecordings](#listucrecordings) - List all recordings
 * [ListUcScorecards](#listucscorecards) - List all scorecards
 * [ListUcScorecardtemplates](#listucscorecardtemplates) - List all scorecardtemplates
@@ -26,6 +29,7 @@
 * [PatchUcRecording](#patchucrecording) - Update a recording
 * [RemoveUcComment](#removeuccomment) - Remove a comment
 * [RemoveUcContact](#removeuccontact) - Remove a contact
+* [RemoveUcFax](#removeucfax) - Remove a fax
 * [RemoveUcRecording](#removeucrecording) - Remove a recording
 * [UpdateUcCall](#updateuccall) - Update a call
 * [UpdateUcComment](#updateuccomment) - Update a comment
@@ -60,15 +64,15 @@ func main() {
 
     res, err := s.Uc.CreateUcCall(ctx, operations.CreateUcCallRequest{
         UcCall: shared.UcCall{
-            AnswerAt: types.MustNewTimeFromString("2025-05-23T01:14:42.341Z"),
+            AnswerAt: types.MustNewTimeFromString("2025-05-23T15:53:53.634Z"),
             Contacts: []shared.UcContact{},
-            ConversationIdentifier: unifiedgosdk.Pointer("7809927a-45e0-45ef-8eb0-cedcbf3cdffb"),
+            ConversationIdentifier: unifiedgosdk.Pointer("6a3e6ad3-30c1-4e11-a2ed-697c4ec3d6e8"),
             CostAmount: unifiedgosdk.Pointer[float64](1.564),
             CreatedAt: types.MustNewTimeFromString("2023-04-22T19:05:34.882Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DurationSeconds: unifiedgosdk.Pointer[float64](2556.0),
-            EndAt: types.MustNewTimeFromString("2024-06-04T02:44:57.946Z"),
-            ID: unifiedgosdk.Pointer("7809927a-45e0-45ef-8eb0-cedcbf3cdffb"),
+            EndAt: types.MustNewTimeFromString("2024-06-04T10:36:32.432Z"),
+            ID: unifiedgosdk.Pointer("6a3e6ad3-30c1-4e11-a2ed-697c4ec3d6e8"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.UcMetadata{
                 shared.UcMetadata{
@@ -78,7 +82,7 @@ func main() {
                         },
                     )),
                     Format: shared.UcMetadataFormatPrice.ToPointer(),
-                    ID: unifiedgosdk.Pointer("42ce4a7f-41c5-4a5e-9b90-2b6fe72f1443"),
+                    ID: unifiedgosdk.Pointer("ed3be5b9-2a2a-4aa0-96dd-559340e2beba"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_field"),
                     Value: unifiedgosdk.Pointer(shared.CreateUcMetadataValueStr(
@@ -86,14 +90,14 @@ func main() {
                     )),
                 },
             },
-            StartAt: types.MustNewTimeFromString("2023-12-20T09:43:19.945Z"),
+            StartAt: types.MustNewTimeFromString("2023-12-20T14:22:22.290Z"),
             Status: shared.UcCallStatusInProgress.ToPointer(),
             Telephone: &shared.PropertyUcCallTelephone{
                 Telephone: "(493) 534-0768",
                 Type: shared.PropertyUcCallTelephoneTypeMobile.ToPointer(),
             },
             Type: shared.UcCallTypeInbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-04T15:23:35.892Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-04T17:23:31.895Z"),
             UserPhone: unifiedgosdk.Pointer("819-894-3317 x163"),
         },
         ConnectionID: "<id>",
@@ -154,9 +158,9 @@ func main() {
         UcComment: shared.UcComment{
             Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
             CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
-            ID: unifiedgosdk.Pointer("ddeb6139-40b5-406b-9cd8-98214e3c467f"),
+            ID: unifiedgosdk.Pointer("d92064ec-7bd9-4d4a-b466-5c85753d8b6c"),
             Metadata: []shared.UcMetadata{},
-            UpdatedAt: unifiedgosdk.Pointer("2024-02-13T15:02:42.819Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-13T21:02:53.325Z"),
         },
         ConnectionID: "<id>",
     })
@@ -224,7 +228,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Luther"),
-            ID: unifiedgosdk.Pointer("a89299e8-da5c-4d3e-bb72-4b39bb714bbc"),
+            ID: unifiedgosdk.Pointer("1c667bb5-6fe0-4215-bf8d-4082d2f72d5d"),
             LastName: unifiedgosdk.Pointer("Rogahn"),
             Metadata: []shared.UcMetadata{},
             Name: unifiedgosdk.Pointer("Luther Rogahn"),
@@ -243,7 +247,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Chief Optimization Executive"),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-17T19:10:31.555Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-18T09:50:21.115Z"),
         },
         ConnectionID: "<id>",
     })
@@ -267,6 +271,76 @@ func main() {
 ### Response
 
 **[*operations.CreateUcContactResponse](../../pkg/models/operations/createuccontactresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateUcFax
+
+Creates a UcFax. Provide the unified UcFax fields in the request body; they are mapped to the provider's API. Returns the created UcFax.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createUcFax" method="post" path="/uc/{connection_id}/fax" example="uc_fax" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Uc.CreateUcFax(ctx, operations.CreateUcFaxRequest{
+        UcFax: shared.UcFax{
+            CostAmount: unifiedgosdk.Pointer[float64](1.2207),
+            CreatedAt: types.MustNewTimeFromString("2022-10-25T13:37:51.431Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            FromTelephone: unifiedgosdk.Pointer("+13605107540"),
+            ID: unifiedgosdk.Pointer("e40e933b-67be-4f91-86a3-0c459fe23895"),
+            MediaURL: unifiedgosdk.Pointer("https://doting-jump.biz"),
+            Metadata: []shared.UcMetadata{},
+            Pages: unifiedgosdk.Pointer[float64](20.0),
+            Status: shared.UcFaxStatusDelivered.ToPointer(),
+            ToTelephone: unifiedgosdk.Pointer("+19083998866"),
+            Type: shared.UcFaxTypeInbound.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-15T18:48:30.069Z"),
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.UcFax != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
+| `request`                                                                          | [operations.CreateUcFaxRequest](../../pkg/models/operations/createucfaxrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `opts`                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                       | :heavy_minus_sign:                                                                 | The options for this request.                                                      |
+
+### Response
+
+**[*operations.CreateUcFaxResponse](../../pkg/models/operations/createucfaxresponse.md), error**
 
 ### Errors
 
@@ -303,36 +377,36 @@ func main() {
     res, err := s.Uc.CreateUcRecording(ctx, operations.CreateUcRecordingRequest{
         UcRecording: shared.UcRecording{
             Contacts: []shared.UcContact{},
-            ConversationIdentifier: unifiedgosdk.Pointer("a56d31a4-33de-47ff-8222-0ad84871af40"),
+            ConversationIdentifier: unifiedgosdk.Pointer("5f526039-2069-4e38-b8dc-c63eca50f8a0"),
             CreatedAt: types.MustNewTimeFromString("2022-09-17T19:41:46.956Z"),
-            EndAt: types.MustNewTimeFromString("2024-05-11T08:47:21.116Z"),
-            ExpiresAt: types.MustNewTimeFromString("2026-05-10T20:42:48.884Z"),
-            ID: unifiedgosdk.Pointer("a56d31a4-33de-47ff-8222-0ad84871af40"),
+            EndAt: types.MustNewTimeFromString("2024-05-11T18:42:16.186Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-05-11T18:39:11.518Z"),
+            ID: unifiedgosdk.Pointer("5f526039-2069-4e38-b8dc-c63eca50f8a0"),
             Media: []shared.UcRecordingMedia{
                 shared.UcRecordingMedia{
-                    EndAt: types.MustNewTimeFromString("2024-04-07T19:56:08.606Z"),
+                    EndAt: types.MustNewTimeFromString("2024-04-08T05:17:53.711Z"),
                     Language: unifiedgosdk.Pointer("en"),
                     RecordingDownloadURL: unifiedgosdk.Pointer("https://parched-wasabi.com/"),
-                    StartAt: types.MustNewTimeFromString("2026-05-29T17:34:24.664Z"),
+                    StartAt: types.MustNewTimeFromString("2026-05-30T15:49:26.974Z"),
                     TranscriptDownloadURL: unifiedgosdk.Pointer("https://colossal-cuckoo.name"),
                     Transcripts: []shared.UcRecordingTranscript{
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2026-03-09T22:48:11.222Z"),
-                            StartAt: types.MustNewTimeFromString("2024-06-08T22:11:19.522Z"),
+                            EndAt: types.MustNewTimeFromString("2026-03-10T19:43:20.009Z"),
+                            StartAt: types.MustNewTimeFromString("2024-06-09T08:34:29.212Z"),
                             Text: "Turpis maiores ducimus tero speculum.",
                         },
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2024-10-20T15:18:14.047Z"),
-                            StartAt: types.MustNewTimeFromString("2026-08-18T00:33:19.944Z"),
+                            EndAt: types.MustNewTimeFromString("2024-10-21T03:53:38.131Z"),
+                            StartAt: types.MustNewTimeFromString("2026-08-19T00:07:46.632Z"),
                             Text: "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     },
                 },
             },
             Metadata: []shared.UcMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-04-30T03:04:14.600Z"),
+            StartAt: types.MustNewTimeFromString("2023-04-30T06:46:04.753Z"),
             Type: shared.UcRecordingTypeOutbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-26T05:01:11.512Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-26T20:11:26.381Z"),
             UserPhone: unifiedgosdk.Pointer("1-915-327-0429 x509"),
             WebURL: unifiedgosdk.Pointer("https://spherical-comparison.org"),
         },
@@ -523,6 +597,61 @@ func main() {
 ### Response
 
 **[*operations.GetUcContactResponse](../../pkg/models/operations/getuccontactresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetUcFax
+
+Retrieves a single UcFax by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getUcFax" method="get" path="/uc/{connection_id}/fax/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Uc.GetUcFax(ctx, operations.GetUcFaxRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.UcFax != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `ctx`                                                                        | [context.Context](https://pkg.go.dev/context#Context)                        | :heavy_check_mark:                                                           | The context to use for the request.                                          |
+| `request`                                                                    | [operations.GetUcFaxRequest](../../pkg/models/operations/getucfaxrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| `opts`                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                 | :heavy_minus_sign:                                                           | The options for this request.                                                |
+
+### Response
+
+**[*operations.GetUcFaxResponse](../../pkg/models/operations/getucfaxresponse.md), error**
 
 ### Errors
 
@@ -857,6 +986,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListUcFaxes
+
+Returns a list of UcFaxes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listUcFaxes" method="get" path="/uc/{connection_id}/fax" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Uc.ListUcFaxes(ctx, operations.ListUcFaxesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.UcFaxes != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
+| `request`                                                                          | [operations.ListUcFaxesRequest](../../pkg/models/operations/listucfaxesrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `opts`                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                       | :heavy_minus_sign:                                                                 | The options for this request.                                                      |
+
+### Response
+
+**[*operations.ListUcFaxesResponse](../../pkg/models/operations/listucfaxesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListUcRecordings
 
 Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1047,15 +1230,15 @@ func main() {
 
     res, err := s.Uc.PatchUcCall(ctx, operations.PatchUcCallRequest{
         UcCall: shared.UcCall{
-            AnswerAt: types.MustNewTimeFromString("2025-05-23T01:14:42.359Z"),
+            AnswerAt: types.MustNewTimeFromString("2025-05-23T15:53:53.652Z"),
             Contacts: []shared.UcContact{},
-            ConversationIdentifier: unifiedgosdk.Pointer("7a48c13f-77a3-49af-b77c-e20897dd1ee9"),
+            ConversationIdentifier: unifiedgosdk.Pointer("83ad87ff-d450-4c54-af89-f8da1f4ea7d4"),
             CostAmount: unifiedgosdk.Pointer[float64](1.564),
             CreatedAt: types.MustNewTimeFromString("2023-04-22T19:05:34.882Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DurationSeconds: unifiedgosdk.Pointer[float64](2556.0),
-            EndAt: types.MustNewTimeFromString("2024-06-04T02:44:57.956Z"),
-            ID: unifiedgosdk.Pointer("7a48c13f-77a3-49af-b77c-e20897dd1ee9"),
+            EndAt: types.MustNewTimeFromString("2024-06-04T10:36:32.442Z"),
+            ID: unifiedgosdk.Pointer("83ad87ff-d450-4c54-af89-f8da1f4ea7d4"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.UcMetadata{
                 shared.UcMetadata{
@@ -1065,7 +1248,7 @@ func main() {
                         },
                     )),
                     Format: shared.UcMetadataFormatPrice.ToPointer(),
-                    ID: unifiedgosdk.Pointer("6844647d-d245-48c6-b529-510d02522654"),
+                    ID: unifiedgosdk.Pointer("7727225d-cade-4555-a465-29daedfc42a4"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_field"),
                     Value: unifiedgosdk.Pointer(shared.CreateUcMetadataValueStr(
@@ -1073,14 +1256,14 @@ func main() {
                     )),
                 },
             },
-            StartAt: types.MustNewTimeFromString("2023-12-20T09:43:19.951Z"),
+            StartAt: types.MustNewTimeFromString("2023-12-20T14:22:22.296Z"),
             Status: shared.UcCallStatusInProgress.ToPointer(),
             Telephone: &shared.PropertyUcCallTelephone{
                 Telephone: "(493) 534-0768",
                 Type: shared.PropertyUcCallTelephoneTypeMobile.ToPointer(),
             },
             Type: shared.UcCallTypeInbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-04T15:23:35.895Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-04T17:23:31.897Z"),
             UserPhone: unifiedgosdk.Pointer("819-894-3317 x163"),
         },
         ConnectionID: "<id>",
@@ -1142,9 +1325,9 @@ func main() {
         UcComment: shared.UcComment{
             Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
             CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
-            ID: unifiedgosdk.Pointer("2c959529-6d74-4b4f-9129-4b14bb3a3e40"),
+            ID: unifiedgosdk.Pointer("1e61b9b3-3cff-4fc7-a0b2-42dca4b5c67f"),
             Metadata: []shared.UcMetadata{},
-            UpdatedAt: unifiedgosdk.Pointer("2024-02-13T15:02:42.821Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-13T21:02:53.327Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1213,7 +1396,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Luther"),
-            ID: unifiedgosdk.Pointer("4352ef59-c0e8-4745-9dfd-d83b194882c7"),
+            ID: unifiedgosdk.Pointer("908d6cee-556e-4259-9d8c-2b6a309d8b62"),
             LastName: unifiedgosdk.Pointer("Rogahn"),
             Metadata: []shared.UcMetadata{},
             Name: unifiedgosdk.Pointer("Luther Rogahn"),
@@ -1232,7 +1415,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Chief Optimization Executive"),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-17T19:10:31.561Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-18T09:50:21.120Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1293,36 +1476,36 @@ func main() {
     res, err := s.Uc.PatchUcRecording(ctx, operations.PatchUcRecordingRequest{
         UcRecording: shared.UcRecording{
             Contacts: []shared.UcContact{},
-            ConversationIdentifier: unifiedgosdk.Pointer("73439b4b-6600-4fef-97bc-3bb9442259e2"),
+            ConversationIdentifier: unifiedgosdk.Pointer("554d93c6-d932-4ce4-9827-8d3965097cad"),
             CreatedAt: types.MustNewTimeFromString("2022-09-17T19:41:46.956Z"),
-            EndAt: types.MustNewTimeFromString("2024-05-11T08:47:21.125Z"),
-            ExpiresAt: types.MustNewTimeFromString("2026-05-10T20:42:48.903Z"),
-            ID: unifiedgosdk.Pointer("73439b4b-6600-4fef-97bc-3bb9442259e2"),
+            EndAt: types.MustNewTimeFromString("2024-05-11T18:42:16.195Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-05-11T18:39:11.538Z"),
+            ID: unifiedgosdk.Pointer("554d93c6-d932-4ce4-9827-8d3965097cad"),
             Media: []shared.UcRecordingMedia{
                 shared.UcRecordingMedia{
-                    EndAt: types.MustNewTimeFromString("2024-04-07T19:56:08.614Z"),
+                    EndAt: types.MustNewTimeFromString("2024-04-08T05:17:53.720Z"),
                     Language: unifiedgosdk.Pointer("en"),
                     RecordingDownloadURL: unifiedgosdk.Pointer("https://parched-wasabi.com/"),
-                    StartAt: types.MustNewTimeFromString("2026-05-29T17:34:24.683Z"),
+                    StartAt: types.MustNewTimeFromString("2026-05-30T15:49:26.995Z"),
                     TranscriptDownloadURL: unifiedgosdk.Pointer("https://colossal-cuckoo.name"),
                     Transcripts: []shared.UcRecordingTranscript{
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2026-03-09T22:48:11.240Z"),
-                            StartAt: types.MustNewTimeFromString("2024-06-08T22:11:19.531Z"),
+                            EndAt: types.MustNewTimeFromString("2026-03-10T19:43:20.029Z"),
+                            StartAt: types.MustNewTimeFromString("2024-06-09T08:34:29.222Z"),
                             Text: "Turpis maiores ducimus tero speculum.",
                         },
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2024-10-20T15:18:14.058Z"),
-                            StartAt: types.MustNewTimeFromString("2026-08-18T00:33:19.965Z"),
+                            EndAt: types.MustNewTimeFromString("2024-10-21T03:53:38.144Z"),
+                            StartAt: types.MustNewTimeFromString("2026-08-19T00:07:46.655Z"),
                             Text: "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     },
                 },
             },
             Metadata: []shared.UcMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-04-30T03:04:14.603Z"),
+            StartAt: types.MustNewTimeFromString("2023-04-30T06:46:04.757Z"),
             Type: shared.UcRecordingTypeOutbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-26T05:01:11.525Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-26T20:11:26.395Z"),
             UserPhone: unifiedgosdk.Pointer("1-915-327-0429 x509"),
             WebURL: unifiedgosdk.Pointer("https://spherical-comparison.org"),
         },
@@ -1466,6 +1649,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## RemoveUcFax
+
+Deletes the UcFax identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeUcFax" method="delete" path="/uc/{connection_id}/fax/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Uc.RemoveUcFax(ctx, operations.RemoveUcFaxRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
+| `request`                                                                          | [operations.RemoveUcFaxRequest](../../pkg/models/operations/removeucfaxrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `opts`                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                       | :heavy_minus_sign:                                                                 | The options for this request.                                                      |
+
+### Response
+
+**[*operations.RemoveUcFaxResponse](../../pkg/models/operations/removeucfaxresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## RemoveUcRecording
 
 Deletes the UcRecording identified by `id`.
@@ -1549,15 +1787,15 @@ func main() {
 
     res, err := s.Uc.UpdateUcCall(ctx, operations.UpdateUcCallRequest{
         UcCall: shared.UcCall{
-            AnswerAt: types.MustNewTimeFromString("2025-05-23T01:14:42.359Z"),
+            AnswerAt: types.MustNewTimeFromString("2025-05-23T15:53:53.652Z"),
             Contacts: []shared.UcContact{},
-            ConversationIdentifier: unifiedgosdk.Pointer("7a48c13f-77a3-49af-b77c-e20897dd1ee9"),
+            ConversationIdentifier: unifiedgosdk.Pointer("83ad87ff-d450-4c54-af89-f8da1f4ea7d4"),
             CostAmount: unifiedgosdk.Pointer[float64](1.564),
             CreatedAt: types.MustNewTimeFromString("2023-04-22T19:05:34.882Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DurationSeconds: unifiedgosdk.Pointer[float64](2556.0),
-            EndAt: types.MustNewTimeFromString("2024-06-04T02:44:57.956Z"),
-            ID: unifiedgosdk.Pointer("7a48c13f-77a3-49af-b77c-e20897dd1ee9"),
+            EndAt: types.MustNewTimeFromString("2024-06-04T10:36:32.442Z"),
+            ID: unifiedgosdk.Pointer("83ad87ff-d450-4c54-af89-f8da1f4ea7d4"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.UcMetadata{
                 shared.UcMetadata{
@@ -1567,7 +1805,7 @@ func main() {
                         },
                     )),
                     Format: shared.UcMetadataFormatPrice.ToPointer(),
-                    ID: unifiedgosdk.Pointer("6844647d-d245-48c6-b529-510d02522654"),
+                    ID: unifiedgosdk.Pointer("7727225d-cade-4555-a465-29daedfc42a4"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_field"),
                     Value: unifiedgosdk.Pointer(shared.CreateUcMetadataValueStr(
@@ -1575,14 +1813,14 @@ func main() {
                     )),
                 },
             },
-            StartAt: types.MustNewTimeFromString("2023-12-20T09:43:19.951Z"),
+            StartAt: types.MustNewTimeFromString("2023-12-20T14:22:22.296Z"),
             Status: shared.UcCallStatusInProgress.ToPointer(),
             Telephone: &shared.PropertyUcCallTelephone{
                 Telephone: "(493) 534-0768",
                 Type: shared.PropertyUcCallTelephoneTypeMobile.ToPointer(),
             },
             Type: shared.UcCallTypeInbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-04T15:23:35.895Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-04T17:23:31.897Z"),
             UserPhone: unifiedgosdk.Pointer("819-894-3317 x163"),
         },
         ConnectionID: "<id>",
@@ -1644,9 +1882,9 @@ func main() {
         UcComment: shared.UcComment{
             Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
             CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
-            ID: unifiedgosdk.Pointer("2c959529-6d74-4b4f-9129-4b14bb3a3e40"),
+            ID: unifiedgosdk.Pointer("1e61b9b3-3cff-4fc7-a0b2-42dca4b5c67f"),
             Metadata: []shared.UcMetadata{},
-            UpdatedAt: unifiedgosdk.Pointer("2024-02-13T15:02:42.821Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-13T21:02:53.327Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1715,7 +1953,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Luther"),
-            ID: unifiedgosdk.Pointer("4352ef59-c0e8-4745-9dfd-d83b194882c7"),
+            ID: unifiedgosdk.Pointer("908d6cee-556e-4259-9d8c-2b6a309d8b62"),
             LastName: unifiedgosdk.Pointer("Rogahn"),
             Metadata: []shared.UcMetadata{},
             Name: unifiedgosdk.Pointer("Luther Rogahn"),
@@ -1734,7 +1972,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Chief Optimization Executive"),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-17T19:10:31.561Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-18T09:50:21.120Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1795,36 +2033,36 @@ func main() {
     res, err := s.Uc.UpdateUcRecording(ctx, operations.UpdateUcRecordingRequest{
         UcRecording: shared.UcRecording{
             Contacts: []shared.UcContact{},
-            ConversationIdentifier: unifiedgosdk.Pointer("73439b4b-6600-4fef-97bc-3bb9442259e2"),
+            ConversationIdentifier: unifiedgosdk.Pointer("554d93c6-d932-4ce4-9827-8d3965097cad"),
             CreatedAt: types.MustNewTimeFromString("2022-09-17T19:41:46.956Z"),
-            EndAt: types.MustNewTimeFromString("2024-05-11T08:47:21.125Z"),
-            ExpiresAt: types.MustNewTimeFromString("2026-05-10T20:42:48.903Z"),
-            ID: unifiedgosdk.Pointer("73439b4b-6600-4fef-97bc-3bb9442259e2"),
+            EndAt: types.MustNewTimeFromString("2024-05-11T18:42:16.195Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-05-11T18:39:11.538Z"),
+            ID: unifiedgosdk.Pointer("554d93c6-d932-4ce4-9827-8d3965097cad"),
             Media: []shared.UcRecordingMedia{
                 shared.UcRecordingMedia{
-                    EndAt: types.MustNewTimeFromString("2024-04-07T19:56:08.614Z"),
+                    EndAt: types.MustNewTimeFromString("2024-04-08T05:17:53.720Z"),
                     Language: unifiedgosdk.Pointer("en"),
                     RecordingDownloadURL: unifiedgosdk.Pointer("https://parched-wasabi.com/"),
-                    StartAt: types.MustNewTimeFromString("2026-05-29T17:34:24.683Z"),
+                    StartAt: types.MustNewTimeFromString("2026-05-30T15:49:26.995Z"),
                     TranscriptDownloadURL: unifiedgosdk.Pointer("https://colossal-cuckoo.name"),
                     Transcripts: []shared.UcRecordingTranscript{
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2026-03-09T22:48:11.240Z"),
-                            StartAt: types.MustNewTimeFromString("2024-06-08T22:11:19.531Z"),
+                            EndAt: types.MustNewTimeFromString("2026-03-10T19:43:20.029Z"),
+                            StartAt: types.MustNewTimeFromString("2024-06-09T08:34:29.222Z"),
                             Text: "Turpis maiores ducimus tero speculum.",
                         },
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2024-10-20T15:18:14.058Z"),
-                            StartAt: types.MustNewTimeFromString("2026-08-18T00:33:19.965Z"),
+                            EndAt: types.MustNewTimeFromString("2024-10-21T03:53:38.144Z"),
+                            StartAt: types.MustNewTimeFromString("2026-08-19T00:07:46.655Z"),
                             Text: "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     },
                 },
             },
             Metadata: []shared.UcMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-04-30T03:04:14.603Z"),
+            StartAt: types.MustNewTimeFromString("2023-04-30T06:46:04.757Z"),
             Type: shared.UcRecordingTypeOutbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-26T05:01:11.525Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-26T20:11:26.395Z"),
             UserPhone: unifiedgosdk.Pointer("1-915-327-0429 x509"),
             WebURL: unifiedgosdk.Pointer("https://spherical-comparison.org"),
         },

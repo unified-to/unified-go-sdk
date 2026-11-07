@@ -266,6 +266,7 @@ type UnifiedTo struct {
 	Ticket              *Ticket
 	Uc                  *Uc
 	Call                *Call
+	Fax                 *Fax
 	Scorecardtemplate   *Scorecardtemplate
 	Unified             *Unified
 	Apicall             *Apicall
@@ -357,10 +358,10 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.39.15",
+		SDKVersion: "0.39.16",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.39.15 2.956.1 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.39.15",
+			UserAgent:         "speakeasy-sdk/go 0.39.16 2.956.1 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.39.16",
 			GenVersion:        "2.956.1",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
@@ -592,6 +593,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Ticket = newTicket(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Uc = newUc(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Call = newCall(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Fax = newFax(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Scorecardtemplate = newScorecardtemplate(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Unified = newUnified(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Apicall = newApicall(sdk, sdk.sdkConfiguration, sdk.hooks)

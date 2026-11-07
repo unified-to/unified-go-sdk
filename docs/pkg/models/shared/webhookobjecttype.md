@@ -112,6 +112,7 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeTicketingCustomer`             | ticketing_customer                               |
 | `WebhookObjectTypeTicketingCategory`             | ticketing_category                               |
 | `WebhookObjectTypeUcContact`                     | uc_contact                                       |
+| `WebhookObjectTypeUcFax`                         | uc_fax                                           |
 | `WebhookObjectTypeUcCall`                        | uc_call                                          |
 | `WebhookObjectTypeUcComment`                     | uc_comment                                       |
 | `WebhookObjectTypeUcRecording`                   | uc_recording                                     |
