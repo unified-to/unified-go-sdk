@@ -66,7 +66,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("3569f9d9-8b4a-442a-abb5-f51e6560fb4f"),
+			ID:                  unifiedgosdk.Pointer("6059cb66-bde5-427b-970e-198c5801066a"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -79,7 +79,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T05:33:28.708Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T10:56:23.213Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -817,6 +817,7 @@ func main() {
 * [GetCommerceReturn](docs/sdks/commerce/README.md#getcommercereturn) - Retrieve a return
 * [GetCommerceReview](docs/sdks/commerce/README.md#getcommercereview) - Retrieve a review
 * [GetCommerceSaleschannel](docs/sdks/commerce/README.md#getcommercesaleschannel) - Retrieve a saleschannel
+* [GetCommerceTable](docs/sdks/commerce/README.md#getcommercetable) - Retrieve a table
 * [ListCommerceAvailabilities](docs/sdks/commerce/README.md#listcommerceavailabilities) - List all availabilities
 * [ListCommerceCollections](docs/sdks/commerce/README.md#listcommercecollections) - List all collections
 * [ListCommerceInventories](docs/sdks/commerce/README.md#listcommerceinventories) - List all inventories
@@ -827,6 +828,7 @@ func main() {
 * [ListCommerceReturns](docs/sdks/commerce/README.md#listcommercereturns) - List all returns
 * [ListCommerceReviews](docs/sdks/commerce/README.md#listcommercereviews) - List all reviews
 * [ListCommerceSaleschannels](docs/sdks/commerce/README.md#listcommercesaleschannels) - List all saleschannels
+* [ListCommerceTables](docs/sdks/commerce/README.md#listcommercetables) - List all tables
 * [PatchCommerceCollection](docs/sdks/commerce/README.md#patchcommercecollection) - Update a collection
 * [PatchCommerceInventory](docs/sdks/commerce/README.md#patchcommerceinventory) - Update an inventory
 * [PatchCommerceItem](docs/sdks/commerce/README.md#patchcommerceitem) - Update an item
@@ -2670,7 +2672,9 @@ func main() {
 ### [Table](docs/sdks/table/README.md)
 
 * [CreateDatastoreTable](docs/sdks/table/README.md#createdatastoretable) - Create a table
+* [GetCommerceTable](docs/sdks/table/README.md#getcommercetable) - Retrieve a table
 * [GetDatastoreTable](docs/sdks/table/README.md#getdatastoretable) - Retrieve a table
+* [ListCommerceTables](docs/sdks/table/README.md#listcommercetables) - List all tables
 * [ListDatastoreTables](docs/sdks/table/README.md#listdatastoretables) - List all tables
 * [PatchDatastoreTable](docs/sdks/table/README.md#patchdatastoretable) - Update a table
 * [RemoveDatastoreTable](docs/sdks/table/README.md#removedatastoretable) - Remove a table
@@ -3022,7 +3026,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("3569f9d9-8b4a-442a-abb5-f51e6560fb4f"),
+			ID:                  unifiedgosdk.Pointer("6059cb66-bde5-427b-970e-198c5801066a"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3035,7 +3039,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T05:33:28.708Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T10:56:23.213Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3096,7 +3100,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("3569f9d9-8b4a-442a-abb5-f51e6560fb4f"),
+			ID:                  unifiedgosdk.Pointer("6059cb66-bde5-427b-970e-198c5801066a"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3109,7 +3113,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T05:33:28.708Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T10:56:23.213Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3153,7 +3157,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("3569f9d9-8b4a-442a-abb5-f51e6560fb4f"),
+			ID:                  unifiedgosdk.Pointer("6059cb66-bde5-427b-970e-198c5801066a"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3166,7 +3170,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T05:33:28.708Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T10:56:23.213Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3253,7 +3257,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("3569f9d9-8b4a-442a-abb5-f51e6560fb4f"),
+			ID:                  unifiedgosdk.Pointer("6059cb66-bde5-427b-970e-198c5801066a"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3266,7 +3270,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T05:33:28.708Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T10:56:23.213Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3315,7 +3319,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("3569f9d9-8b4a-442a-abb5-f51e6560fb4f"),
+			ID:                  unifiedgosdk.Pointer("6059cb66-bde5-427b-970e-198c5801066a"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3328,7 +3332,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T05:33:28.708Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T10:56:23.213Z"),
 		},
 		ConnectionID: "<id>",
 	}, operations.WithRetries(
@@ -3391,7 +3395,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("3569f9d9-8b4a-442a-abb5-f51e6560fb4f"),
+			ID:                  unifiedgosdk.Pointer("6059cb66-bde5-427b-970e-198c5801066a"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3404,7 +3408,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T05:33:28.708Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T10:56:23.213Z"),
 		},
 		ConnectionID: "<id>",
 	})

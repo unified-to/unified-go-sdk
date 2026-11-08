@@ -47,4 +47,6 @@ value := operations.CreateAccountingSalesorderQueryParamFieldsID
 | `CreateAccountingSalesorderQueryParamFieldsClosedAt`            | closed_at                                                       |
 | `CreateAccountingSalesorderQueryParamFieldsSubscriptionID`      | subscription_id                                                 |
 | `CreateAccountingSalesorderQueryParamFieldsPayments`            | payments                                                        |
+| `CreateAccountingSalesorderQueryParamFieldsTableID`             | table_id                                                        |
+| `CreateAccountingSalesorderQueryParamFieldsPaidAmount`          | paid_amount                                                     |
 | `CreateAccountingSalesorderQueryParamFieldsRaw`                 | raw                                                             |

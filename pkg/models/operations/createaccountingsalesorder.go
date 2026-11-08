@@ -44,6 +44,8 @@ const (
 	CreateAccountingSalesorderQueryParamFieldsClosedAt            CreateAccountingSalesorderQueryParamFields = "closed_at"
 	CreateAccountingSalesorderQueryParamFieldsSubscriptionID      CreateAccountingSalesorderQueryParamFields = "subscription_id"
 	CreateAccountingSalesorderQueryParamFieldsPayments            CreateAccountingSalesorderQueryParamFields = "payments"
+	CreateAccountingSalesorderQueryParamFieldsTableID             CreateAccountingSalesorderQueryParamFields = "table_id"
+	CreateAccountingSalesorderQueryParamFieldsPaidAmount          CreateAccountingSalesorderQueryParamFields = "paid_amount"
 	CreateAccountingSalesorderQueryParamFieldsRaw                 CreateAccountingSalesorderQueryParamFields = "raw"
 )
 
@@ -119,6 +121,10 @@ func (e *CreateAccountingSalesorderQueryParamFields) UnmarshalJSON(data []byte) 
 	case "subscription_id":
 		fallthrough
 	case "payments":
+		fallthrough
+	case "table_id":
+		fallthrough
+	case "paid_amount":
 		fallthrough
 	case "raw":
 		*e = CreateAccountingSalesorderQueryParamFields(v)

@@ -95,6 +95,8 @@ type AccountingSalesorder struct {
 	// human-facing receipt/ticket/check number, distinct from id
 	OrderNumber    *string `json:"order_number,omitempty"`
 	OrganizationID *string `json:"organization_id,omitempty"`
+	// total of the payments applied so far
+	PaidAmount *float64 `json:"paid_amount,omitempty"`
 	// read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order
 	Payments []AccountingPaymentReference `json:"payments,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -109,9 +111,11 @@ type AccountingSalesorder struct {
 	SubscriptionID *string `json:"subscription_id,omitempty"`
 	// pre-tax, pre-tip amount
 	SubtotalAmount *float64 `json:"subtotal_amount,omitempty"`
-	TaxAmount      *float64 `json:"tax_amount,omitempty"`
-	TipAmount      *float64 `json:"tip_amount,omitempty"`
-	TotalAmount    *float64 `json:"total_amount,omitempty"`
+	// reference to a commerce_table (restaurant table) the order is seated at
+	TableID     *string  `json:"table_id,omitempty"`
+	TaxAmount   *float64 `json:"tax_amount,omitempty"`
+	TipAmount   *float64 `json:"tip_amount,omitempty"`
+	TotalAmount *float64 `json:"total_amount,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
@@ -260,6 +264,13 @@ func (a *AccountingSalesorder) GetOrganizationID() *string {
 	return a.OrganizationID
 }
 
+func (a *AccountingSalesorder) GetPaidAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.PaidAmount
+}
+
 func (a *AccountingSalesorder) GetPayments() []AccountingPaymentReference {
 	if a == nil {
 		return nil
@@ -328,6 +339,13 @@ func (a *AccountingSalesorder) GetSubtotalAmount() *float64 {
 		return nil
 	}
 	return a.SubtotalAmount
+}
+
+func (a *AccountingSalesorder) GetTableID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.TableID
 }
 
 func (a *AccountingSalesorder) GetTaxAmount() *float64 {

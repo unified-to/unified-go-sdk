@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [CreateDatastoreTable](#createdatastoretable) - Create a table
+* [GetCommerceTable](#getcommercetable) - Retrieve a table
 * [GetDatastoreTable](#getdatastoretable) - Retrieve a table
+* [ListCommerceTables](#listcommercetables) - List all tables
 * [ListDatastoreTables](#listdatastoretables) - List all tables
 * [PatchDatastoreTable](#patchdatastoretable) - Update a table
 * [RemoveDatastoreTable](#removedatastoretable) - Remove a table
@@ -44,7 +46,7 @@ func main() {
             Fields: []shared.DatastoreField{
                 shared.DatastoreField{
                     Description: unifiedgosdk.Pointer("Antea soluta itaque clamo despecto basium accendo."),
-                    ID: unifiedgosdk.Pointer("11095b71-696e-4ed6-a62e-47a1dd12e14c"),
+                    ID: unifiedgosdk.Pointer("c926db01-58dc-44a5-a96a-b6edf4d21e5a"),
                     IsIndexed: unifiedgosdk.Pointer(true),
                     IsUnique: unifiedgosdk.Pointer(true),
                     Name: "Ferry LLC",
@@ -54,7 +56,7 @@ func main() {
                 },
                 shared.DatastoreField{
                     Description: unifiedgosdk.Pointer("Nulla cattus aequus sumo neque alter cauda subseco."),
-                    ID: unifiedgosdk.Pointer("d0611f2b-b2c5-4265-a033-772e99197d09"),
+                    ID: unifiedgosdk.Pointer("e5aa07ce-0e47-489e-a0f9-5a267ec266f5"),
                     IsNullable: unifiedgosdk.Pointer(true),
                     IsUnique: unifiedgosdk.Pointer(true),
                     Name: "Hand - Nader",
@@ -64,7 +66,7 @@ func main() {
                 },
                 shared.DatastoreField{
                     Description: unifiedgosdk.Pointer("Utilis callide adhuc verumtamen doloremque ceno sui sint."),
-                    ID: unifiedgosdk.Pointer("0c74adf6-15c3-449a-916f-7c917019afe9"),
+                    ID: unifiedgosdk.Pointer("14ccb1c2-4c82-464d-8f61-6403ec3439a2"),
                     IsIndexed: unifiedgosdk.Pointer(true),
                     IsNullable: unifiedgosdk.Pointer(true),
                     IsUnique: unifiedgosdk.Pointer(true),
@@ -76,7 +78,7 @@ func main() {
                 },
                 shared.DatastoreField{
                     Description: unifiedgosdk.Pointer("Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia."),
-                    ID: unifiedgosdk.Pointer("00cb67c3-cfcb-4684-bc5e-c7530636807d"),
+                    ID: unifiedgosdk.Pointer("7dc5905c-9dfd-4012-87ff-478f55dc186d"),
                     Name: "Gislason, Gorczany and Hegmann",
                     OriginalType: "tego",
                     Precision: unifiedgosdk.Pointer[float64](94.0),
@@ -85,7 +87,7 @@ func main() {
                 },
                 shared.DatastoreField{
                     Description: unifiedgosdk.Pointer("Communis coma cura audio aduro acer canis expedita."),
-                    ID: unifiedgosdk.Pointer("3d4aa1b1-76de-4a3d-b15e-72465e4a6dcd"),
+                    ID: unifiedgosdk.Pointer("ac67a7ca-cb46-424f-8529-bdbd7b903f78"),
                     IsIndexed: unifiedgosdk.Pointer(true),
                     IsPrimaryKey: unifiedgosdk.Pointer(true),
                     IsRequired: unifiedgosdk.Pointer(true),
@@ -95,18 +97,18 @@ func main() {
                     Type: shared.DatastoreFieldTypeEmail,
                 },
             },
-            ID: unifiedgosdk.Pointer("41b77c15-1de7-4b9c-adc5-199292dbf8ba"),
+            ID: unifiedgosdk.Pointer("67d08310-8206-4c8a-8595-8a2f12ec372c"),
             Metadata: []shared.DatastoreMetadata{},
             Name: unifiedgosdk.Pointer("Rogahn, Lowe and Heller"),
             Relationships: []shared.DatastoreRelationship{
                 shared.DatastoreRelationship{
                     Field: "Macejkovic - Shields",
                     Name: "Hyatt, Ryan and Nienow",
-                    TableID: "41b77c15-1de7-4b9c-adc5-199292dbf8ba",
+                    TableID: "67d08310-8206-4c8a-8595-8a2f12ec372c",
                     Type: shared.DatastoreRelationshipTypeMany,
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-08-13T17:22:19.529Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-08-13T18:27:25.527Z"),
             WebURL: unifiedgosdk.Pointer("https://nervous-deck.com"),
         },
         ConnectionID: "<id>",
@@ -131,6 +133,61 @@ func main() {
 ### Response
 
 **[*operations.CreateDatastoreTableResponse](../../pkg/models/operations/createdatastoretableresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetCommerceTable
+
+Retrieves a single CommerceTable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getCommerceTable" method="get" path="/commerce/{connection_id}/table/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Table.GetCommerceTable(ctx, operations.GetCommerceTableRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.CommerceTable != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.GetCommerceTableRequest](../../pkg/models/operations/getcommercetablerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.GetCommerceTableResponse](../../pkg/models/operations/getcommercetableresponse.md), error**
 
 ### Errors
 
@@ -186,6 +243,60 @@ func main() {
 ### Response
 
 **[*operations.GetDatastoreTableResponse](../../pkg/models/operations/getdatastoretableresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListCommerceTables
+
+Returns a list of CommerceTables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listCommerceTables" method="get" path="/commerce/{connection_id}/table" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Table.ListCommerceTables(ctx, operations.ListCommerceTablesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.CommerceTables != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.ListCommerceTablesRequest](../../pkg/models/operations/listcommercetablesrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.ListCommerceTablesResponse](../../pkg/models/operations/listcommercetablesresponse.md), error**
 
 ### Errors
 
@@ -280,7 +391,7 @@ func main() {
             Fields: []shared.DatastoreField{
                 shared.DatastoreField{
                     Description: unifiedgosdk.Pointer("Antea soluta itaque clamo despecto basium accendo."),
-                    ID: unifiedgosdk.Pointer("fb896928-7a9d-40eb-844f-68e77dac0536"),
+                    ID: unifiedgosdk.Pointer("b7e9eda9-28d0-4142-baa0-031672b50c9b"),
                     IsIndexed: unifiedgosdk.Pointer(true),
                     IsUnique: unifiedgosdk.Pointer(true),
                     Name: "Ferry LLC",
@@ -290,7 +401,7 @@ func main() {
                 },
                 shared.DatastoreField{
                     Description: unifiedgosdk.Pointer("Nulla cattus aequus sumo neque alter cauda subseco."),
-                    ID: unifiedgosdk.Pointer("664fa735-0b88-4908-81f2-f0d4042603ea"),
+                    ID: unifiedgosdk.Pointer("2a4ad1ec-dbd0-476d-99bd-17a87bc5fc32"),
                     IsNullable: unifiedgosdk.Pointer(true),
                     IsUnique: unifiedgosdk.Pointer(true),
                     Name: "Hand - Nader",
@@ -300,7 +411,7 @@ func main() {
                 },
                 shared.DatastoreField{
                     Description: unifiedgosdk.Pointer("Utilis callide adhuc verumtamen doloremque ceno sui sint."),
-                    ID: unifiedgosdk.Pointer("255473fc-5979-404d-8a7a-9613ed9491c9"),
+                    ID: unifiedgosdk.Pointer("39d93dda-9273-4ed5-b99f-c881c24b724a"),
                     IsIndexed: unifiedgosdk.Pointer(true),
                     IsNullable: unifiedgosdk.Pointer(true),
                     IsUnique: unifiedgosdk.Pointer(true),
@@ -312,7 +423,7 @@ func main() {
                 },
                 shared.DatastoreField{
                     Description: unifiedgosdk.Pointer("Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia."),
-                    ID: unifiedgosdk.Pointer("faa1d69e-cf9e-43db-853c-4bb7ee03d101"),
+                    ID: unifiedgosdk.Pointer("2cab4f71-4abd-4b65-8280-4b47404729c9"),
                     Name: "Gislason, Gorczany and Hegmann",
                     OriginalType: "tego",
                     Precision: unifiedgosdk.Pointer[float64](94.0),
@@ -321,7 +432,7 @@ func main() {
                 },
                 shared.DatastoreField{
                     Description: unifiedgosdk.Pointer("Communis coma cura audio aduro acer canis expedita."),
-                    ID: unifiedgosdk.Pointer("0d6420e0-4961-498b-89c1-70901d2ec232"),
+                    ID: unifiedgosdk.Pointer("7f30df61-a7a5-4dd0-a071-6083fea83e7d"),
                     IsIndexed: unifiedgosdk.Pointer(true),
                     IsPrimaryKey: unifiedgosdk.Pointer(true),
                     IsRequired: unifiedgosdk.Pointer(true),
@@ -331,18 +442,18 @@ func main() {
                     Type: shared.DatastoreFieldTypeEmail,
                 },
             },
-            ID: unifiedgosdk.Pointer("2d6cdfc5-0f49-4315-94e4-dc943a5075b7"),
+            ID: unifiedgosdk.Pointer("73259211-0825-46b6-8b08-fac97a3799b3"),
             Metadata: []shared.DatastoreMetadata{},
             Name: unifiedgosdk.Pointer("Rogahn, Lowe and Heller"),
             Relationships: []shared.DatastoreRelationship{
                 shared.DatastoreRelationship{
                     Field: "Macejkovic - Shields",
                     Name: "Hyatt, Ryan and Nienow",
-                    TableID: "2d6cdfc5-0f49-4315-94e4-dc943a5075b7",
+                    TableID: "73259211-0825-46b6-8b08-fac97a3799b3",
                     Type: shared.DatastoreRelationshipTypeMany,
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-08-13T17:22:19.531Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-08-13T18:27:25.528Z"),
             WebURL: unifiedgosdk.Pointer("https://nervous-deck.com"),
         },
         ConnectionID: "<id>",
@@ -463,7 +574,7 @@ func main() {
             Fields: []shared.DatastoreField{
                 shared.DatastoreField{
                     Description: unifiedgosdk.Pointer("Antea soluta itaque clamo despecto basium accendo."),
-                    ID: unifiedgosdk.Pointer("fb896928-7a9d-40eb-844f-68e77dac0536"),
+                    ID: unifiedgosdk.Pointer("b7e9eda9-28d0-4142-baa0-031672b50c9b"),
                     IsIndexed: unifiedgosdk.Pointer(true),
                     IsUnique: unifiedgosdk.Pointer(true),
                     Name: "Ferry LLC",
@@ -473,7 +584,7 @@ func main() {
                 },
                 shared.DatastoreField{
                     Description: unifiedgosdk.Pointer("Nulla cattus aequus sumo neque alter cauda subseco."),
-                    ID: unifiedgosdk.Pointer("664fa735-0b88-4908-81f2-f0d4042603ea"),
+                    ID: unifiedgosdk.Pointer("2a4ad1ec-dbd0-476d-99bd-17a87bc5fc32"),
                     IsNullable: unifiedgosdk.Pointer(true),
                     IsUnique: unifiedgosdk.Pointer(true),
                     Name: "Hand - Nader",
@@ -483,7 +594,7 @@ func main() {
                 },
                 shared.DatastoreField{
                     Description: unifiedgosdk.Pointer("Utilis callide adhuc verumtamen doloremque ceno sui sint."),
-                    ID: unifiedgosdk.Pointer("255473fc-5979-404d-8a7a-9613ed9491c9"),
+                    ID: unifiedgosdk.Pointer("39d93dda-9273-4ed5-b99f-c881c24b724a"),
                     IsIndexed: unifiedgosdk.Pointer(true),
                     IsNullable: unifiedgosdk.Pointer(true),
                     IsUnique: unifiedgosdk.Pointer(true),
@@ -495,7 +606,7 @@ func main() {
                 },
                 shared.DatastoreField{
                     Description: unifiedgosdk.Pointer("Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia."),
-                    ID: unifiedgosdk.Pointer("faa1d69e-cf9e-43db-853c-4bb7ee03d101"),
+                    ID: unifiedgosdk.Pointer("2cab4f71-4abd-4b65-8280-4b47404729c9"),
                     Name: "Gislason, Gorczany and Hegmann",
                     OriginalType: "tego",
                     Precision: unifiedgosdk.Pointer[float64](94.0),
@@ -504,7 +615,7 @@ func main() {
                 },
                 shared.DatastoreField{
                     Description: unifiedgosdk.Pointer("Communis coma cura audio aduro acer canis expedita."),
-                    ID: unifiedgosdk.Pointer("0d6420e0-4961-498b-89c1-70901d2ec232"),
+                    ID: unifiedgosdk.Pointer("7f30df61-a7a5-4dd0-a071-6083fea83e7d"),
                     IsIndexed: unifiedgosdk.Pointer(true),
                     IsPrimaryKey: unifiedgosdk.Pointer(true),
                     IsRequired: unifiedgosdk.Pointer(true),
@@ -514,18 +625,18 @@ func main() {
                     Type: shared.DatastoreFieldTypeEmail,
                 },
             },
-            ID: unifiedgosdk.Pointer("2d6cdfc5-0f49-4315-94e4-dc943a5075b7"),
+            ID: unifiedgosdk.Pointer("73259211-0825-46b6-8b08-fac97a3799b3"),
             Metadata: []shared.DatastoreMetadata{},
             Name: unifiedgosdk.Pointer("Rogahn, Lowe and Heller"),
             Relationships: []shared.DatastoreRelationship{
                 shared.DatastoreRelationship{
                     Field: "Macejkovic - Shields",
                     Name: "Hyatt, Ryan and Nienow",
-                    TableID: "2d6cdfc5-0f49-4315-94e4-dc943a5075b7",
+                    TableID: "73259211-0825-46b6-8b08-fac97a3799b3",
                     Type: shared.DatastoreRelationshipTypeMany,
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-08-13T17:22:19.531Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-08-13T18:27:25.528Z"),
             WebURL: unifiedgosdk.Pointer("https://nervous-deck.com"),
         },
         ConnectionID: "<id>",

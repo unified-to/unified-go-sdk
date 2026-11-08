@@ -140,6 +140,7 @@ type UnifiedTo struct {
 	Return              *Return
 	Review              *Review
 	Saleschannel        *Saleschannel
+	Table               *Table
 	Compute             *Compute
 	Deployment          *Deployment
 	Domain              *Domain
@@ -162,7 +163,6 @@ type UnifiedTo struct {
 	Database            *Database
 	Query               *Query
 	Record              *Record
-	Table               *Table
 	Enrich              *Enrich
 	Person              *Person
 	Forms               *Forms
@@ -358,10 +358,10 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.39.16",
+		SDKVersion: "0.39.17",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.39.16 2.956.1 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.39.16",
+			UserAgent:         "speakeasy-sdk/go 0.39.17 2.956.1 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.39.17",
 			GenVersion:        "2.956.1",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
@@ -467,6 +467,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Return = newReturn(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Review = newReview(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Saleschannel = newSaleschannel(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Table = newTable(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Compute = newCompute(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Deployment = newDeployment(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Domain = newDomain(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -489,7 +490,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Database = newDatabase(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Query = newQuery(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Record = newRecord(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Table = newTable(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Enrich = newEnrich(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Person = newPerson(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Forms = newForms(sdk, sdk.sdkConfiguration, sdk.hooks)

@@ -47,4 +47,6 @@ value := operations.PatchAccountingSalesorderQueryParamFieldsID
 | `PatchAccountingSalesorderQueryParamFieldsClosedAt`            | closed_at                                                      |
 | `PatchAccountingSalesorderQueryParamFieldsSubscriptionID`      | subscription_id                                                |
 | `PatchAccountingSalesorderQueryParamFieldsPayments`            | payments                                                       |
+| `PatchAccountingSalesorderQueryParamFieldsTableID`             | table_id                                                       |
+| `PatchAccountingSalesorderQueryParamFieldsPaidAmount`          | paid_amount                                                    |
 | `PatchAccountingSalesorderQueryParamFieldsRaw`                 | raw                                                            |
