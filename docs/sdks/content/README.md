@@ -46,7 +46,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Usque laboriosam ventosus adflicto."),
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("c9f5ed3d-7ef9-4b9e-b02b-5fe81807c1e2"),
+            ID: unifiedgosdk.Pointer("178fcaeb-f2e7-40c5-9021-97e51e877d00"),
             Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             Languages: []string{
@@ -106,7 +106,7 @@ func main() {
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ut"),
             ProviderName: unifiedgosdk.Pointer("Bins LLC"),
-            PublishedAt: types.MustNewTimeFromString("2022-09-08T19:53:19.283Z"),
+            PublishedAt: types.MustNewTimeFromString("2022-09-09T04:15:25.612Z"),
             ShortDescription: unifiedgosdk.Pointer("Caritas."),
             Skills: []string{
                 "trucido",
@@ -121,7 +121,7 @@ func main() {
             Tags: []string{
                 "dens",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-10-10T00:13:59.732Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-10T08:58:55.624Z"),
         },
         ConnectionID: "<id>",
     })
@@ -296,7 +296,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Usque laboriosam ventosus adflicto."),
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("5faf247d-64a1-43e5-99e8-c6bc44f0a9ef"),
+            ID: unifiedgosdk.Pointer("663644ab-e9c6-4df0-9aad-632f4297f331"),
             Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             Languages: []string{
@@ -356,7 +356,7 @@ func main() {
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ut"),
             ProviderName: unifiedgosdk.Pointer("Bins LLC"),
-            PublishedAt: types.MustNewTimeFromString("2022-09-08T19:53:19.292Z"),
+            PublishedAt: types.MustNewTimeFromString("2022-09-09T04:15:25.626Z"),
             ShortDescription: unifiedgosdk.Pointer("Caritas."),
             Skills: []string{
                 "trucido",
@@ -371,7 +371,7 @@ func main() {
             Tags: []string{
                 "dens",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-10-10T00:13:59.742Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-10T08:58:55.638Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -493,7 +493,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Usque laboriosam ventosus adflicto."),
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("5faf247d-64a1-43e5-99e8-c6bc44f0a9ef"),
+            ID: unifiedgosdk.Pointer("663644ab-e9c6-4df0-9aad-632f4297f331"),
             Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             Languages: []string{
@@ -553,7 +553,7 @@ func main() {
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ut"),
             ProviderName: unifiedgosdk.Pointer("Bins LLC"),
-            PublishedAt: types.MustNewTimeFromString("2022-09-08T19:53:19.292Z"),
+            PublishedAt: types.MustNewTimeFromString("2022-09-09T04:15:25.626Z"),
             ShortDescription: unifiedgosdk.Pointer("Caritas."),
             Skills: []string{
                 "trucido",
@@ -568,7 +568,7 @@ func main() {
             Tags: []string{
                 "dens",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-10-10T00:13:59.742Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-10T08:58:55.638Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

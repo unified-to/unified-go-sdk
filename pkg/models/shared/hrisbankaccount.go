@@ -87,7 +87,7 @@ type HrisBankaccount struct {
 	SplitType *SplitType `json:"split_type,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
-	// employee ID (required for listcreate) (reference to HrisEmployee)
+	// employee ID (required for list and create) (reference to HrisEmployee)
 	UserID *string `json:"user_id,omitempty"`
 }
 

@@ -9,12 +9,14 @@
 * [CreateUnifiedEnvironment](#createunifiedenvironment) - Create new environments
 * [CreateUnifiedSecretsmanager](#createunifiedsecretsmanager) - Create secrets manager
 * [CreateUnifiedWebhook](#createunifiedwebhook) - Create webhook subscription
+* [CreateUnifiedWorkspaceintegration](#createunifiedworkspaceintegration) - Create workspace integration
 * [GetUnifiedApicall](#getunifiedapicall) - Retrieve specific API Call by its ID
 * [GetUnifiedConnection](#getunifiedconnection) - Retrieve connection
 * [GetUnifiedIntegrationAuth](#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [GetUnifiedIssue](#getunifiedissue) - Retrieve support issue
 * [GetUnifiedSecretsmanager](#getunifiedsecretsmanager) - Retrieve secrets manager
 * [GetUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
+* [GetUnifiedWorkspaceintegration](#getunifiedworkspaceintegration) - Retrieve workspace integration
 * [ListUnifiedApicalls](#listunifiedapicalls) - Returns API Calls
 * [ListUnifiedConnections](#listunifiedconnections) - List all connections
 * [ListUnifiedEnvironments](#listunifiedenvironments) - Returns all environments
@@ -26,18 +28,22 @@
 * [ListUnifiedSecretsmanagerSecrets](#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
 * [ListUnifiedSecretsmanagers](#listunifiedsecretsmanagers) - List secrets managers
 * [ListUnifiedWebhooks](#listunifiedwebhooks) - Returns all registered webhooks
+* [ListUnifiedWorkspaceintegrations](#listunifiedworkspaceintegrations) - List workspace integrations
 * [PatchUnifiedConnection](#patchunifiedconnection) - Update connection
 * [PatchUnifiedWebhook](#patchunifiedwebhook) - Update webhook subscription
 * [PatchUnifiedWebhookResume](#patchunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [PatchUnifiedWebhookTrigger](#patchunifiedwebhooktrigger) - Trigger webhook
+* [PatchUnifiedWorkspaceintegration](#patchunifiedworkspaceintegration) - Update workspace integration
 * [RemoveUnifiedConnection](#removeunifiedconnection) - Remove connection
 * [RemoveUnifiedEnvironment](#removeunifiedenvironment) - Remove an environment
 * [RemoveUnifiedSecretsmanager](#removeunifiedsecretsmanager) - Remove secrets manager
 * [RemoveUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
+* [RemoveUnifiedWorkspaceintegration](#removeunifiedworkspaceintegration) - Remove workspace integration
 * [UpdateUnifiedConnection](#updateunifiedconnection) - Update connection
 * [UpdateUnifiedWebhook](#updateunifiedwebhook) - Update webhook subscription
 * [UpdateUnifiedWebhookResume](#updateunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [UpdateUnifiedWebhookTrigger](#updateunifiedwebhooktrigger) - Trigger webhook
+* [UpdateUnifiedWorkspaceintegration](#updateunifiedworkspaceintegration) - Update workspace integration
 
 ## CreateUnifiedConnection
 
@@ -313,6 +319,61 @@ func main() {
 ### Response
 
 **[*operations.CreateUnifiedWebhookResponse](../../pkg/models/operations/createunifiedwebhookresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateUnifiedWorkspaceintegration
+
+Create workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createUnifiedWorkspaceintegration" method="post" path="/unified/workspaceintegration" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Unified.CreateUnifiedWorkspaceintegration(ctx, shared.WorkspaceIntegration{
+        IntegrationType: "<value>",
+        IsActive: true,
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.WorkspaceIntegration != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `ctx`                                                                          | [context.Context](https://pkg.go.dev/context#Context)                          | :heavy_check_mark:                                                             | The context to use for the request.                                            |
+| `request`                                                                      | [shared.WorkspaceIntegration](../../pkg/models/shared/workspaceintegration.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `opts`                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                   | :heavy_minus_sign:                                                             | The options for this request.                                                  |
+
+### Response
+
+**[*operations.CreateUnifiedWorkspaceintegrationResponse](../../pkg/models/operations/createunifiedworkspaceintegrationresponse.md), error**
 
 ### Errors
 
@@ -638,6 +699,60 @@ func main() {
 ### Response
 
 **[*operations.GetUnifiedWebhookResponse](../../pkg/models/operations/getunifiedwebhookresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetUnifiedWorkspaceintegration
+
+Retrieve workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getUnifiedWorkspaceintegration" method="get" path="/unified/workspaceintegration/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Unified.GetUnifiedWorkspaceintegration(ctx, operations.GetUnifiedWorkspaceintegrationRequest{
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.WorkspaceIntegration != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                    | :heavy_check_mark:                                                                                                       | The context to use for the request.                                                                                      |
+| `request`                                                                                                                | [operations.GetUnifiedWorkspaceintegrationRequest](../../pkg/models/operations/getunifiedworkspaceintegrationrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `opts`                                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                                             | :heavy_minus_sign:                                                                                                       | The options for this request.                                                                                            |
+
+### Response
+
+**[*operations.GetUnifiedWorkspaceintegrationResponse](../../pkg/models/operations/getunifiedworkspaceintegrationresponse.md), error**
 
 ### Errors
 
@@ -1217,6 +1332,58 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListUnifiedWorkspaceintegrations
+
+List workspace integrations
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listUnifiedWorkspaceintegrations" method="get" path="/unified/workspaceintegration" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Unified.ListUnifiedWorkspaceintegrations(ctx, operations.ListUnifiedWorkspaceintegrationsRequest{})
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.WorkspaceIntegrations != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                                        | :heavy_check_mark:                                                                                                           | The context to use for the request.                                                                                          |
+| `request`                                                                                                                    | [operations.ListUnifiedWorkspaceintegrationsRequest](../../pkg/models/operations/listunifiedworkspaceintegrationsrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| `opts`                                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                                 | :heavy_minus_sign:                                                                                                           | The options for this request.                                                                                                |
+
+### Response
+
+**[*operations.ListUnifiedWorkspaceintegrationsResponse](../../pkg/models/operations/listunifiedworkspaceintegrationsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## PatchUnifiedConnection
 
 Update connection
@@ -1449,6 +1616,62 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## PatchUnifiedWorkspaceintegration
+
+Update workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchUnifiedWorkspaceintegration" method="patch" path="/unified/workspaceintegration/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Unified.PatchUnifiedWorkspaceintegration(ctx, operations.PatchUnifiedWorkspaceintegrationRequest{
+        WorkspaceIntegrationPatch: shared.WorkspaceIntegrationPatch{},
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.WorkspaceIntegration != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                                        | :heavy_check_mark:                                                                                                           | The context to use for the request.                                                                                          |
+| `request`                                                                                                                    | [operations.PatchUnifiedWorkspaceintegrationRequest](../../pkg/models/operations/patchunifiedworkspaceintegrationrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| `opts`                                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                                 | :heavy_minus_sign:                                                                                                           | The options for this request.                                                                                                |
+
+### Response
+
+**[*operations.PatchUnifiedWorkspaceintegrationResponse](../../pkg/models/operations/patchunifiedworkspaceintegrationresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## RemoveUnifiedConnection
 
 Remove connection
@@ -1658,6 +1881,60 @@ func main() {
 ### Response
 
 **[*operations.RemoveUnifiedWebhookResponse](../../pkg/models/operations/removeunifiedwebhookresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveUnifiedWorkspaceintegration
+
+Remove workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeUnifiedWorkspaceintegration" method="delete" path="/unified/workspaceintegration/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Unified.RemoveUnifiedWorkspaceintegration(ctx, operations.RemoveUnifiedWorkspaceintegrationRequest{
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                                          | :heavy_check_mark:                                                                                                             | The context to use for the request.                                                                                            |
+| `request`                                                                                                                      | [operations.RemoveUnifiedWorkspaceintegrationRequest](../../pkg/models/operations/removeunifiedworkspaceintegrationrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `opts`                                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                                   | :heavy_minus_sign:                                                                                                             | The options for this request.                                                                                                  |
+
+### Response
+
+**[*operations.RemoveUnifiedWorkspaceintegrationResponse](../../pkg/models/operations/removeunifiedworkspaceintegrationresponse.md), error**
 
 ### Errors
 
@@ -1889,6 +2166,65 @@ func main() {
 ### Response
 
 **[*operations.UpdateUnifiedWebhookTriggerResponse](../../pkg/models/operations/updateunifiedwebhooktriggerresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateUnifiedWorkspaceintegration
+
+Update workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateUnifiedWorkspaceintegration" method="put" path="/unified/workspaceintegration/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Unified.UpdateUnifiedWorkspaceintegration(ctx, operations.UpdateUnifiedWorkspaceintegrationRequest{
+        WorkspaceIntegration: shared.WorkspaceIntegration{
+            IntegrationType: "<value>",
+            IsActive: false,
+        },
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.WorkspaceIntegration != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                                          | :heavy_check_mark:                                                                                                             | The context to use for the request.                                                                                            |
+| `request`                                                                                                                      | [operations.UpdateUnifiedWorkspaceintegrationRequest](../../pkg/models/operations/updateunifiedworkspaceintegrationrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `opts`                                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                                   | :heavy_minus_sign:                                                                                                             | The options for this request.                                                                                                  |
+
+### Response
+
+**[*operations.UpdateUnifiedWorkspaceintegrationResponse](../../pkg/models/operations/updateunifiedworkspaceintegrationresponse.md), error**
 
 ### Errors
 

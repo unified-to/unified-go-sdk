@@ -170,7 +170,7 @@ type HrisEmployee struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	Currency  *string    `json:"currency,omitempty"`
-	// YYYYMM/DD
+	// YYYY-MM-DD
 	DateOfBirth *time.Time `json:"date_of_birth,omitempty"`
 	// The employee's email addresses
 	Emails []HrisEmail `json:"emails,omitempty"`

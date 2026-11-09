@@ -66,7 +66,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("6059cb66-bde5-427b-970e-198c5801066a"),
+			ID:                  unifiedgosdk.Pointer("c0abef68-c894-441b-8e3e-502a6bb73306"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -79,7 +79,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T10:56:23.213Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T17:47:04.491Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -2864,12 +2864,14 @@ func main() {
 * [CreateUnifiedEnvironment](docs/sdks/unified/README.md#createunifiedenvironment) - Create new environments
 * [CreateUnifiedSecretsmanager](docs/sdks/unified/README.md#createunifiedsecretsmanager) - Create secrets manager
 * [CreateUnifiedWebhook](docs/sdks/unified/README.md#createunifiedwebhook) - Create webhook subscription
+* [CreateUnifiedWorkspaceintegration](docs/sdks/unified/README.md#createunifiedworkspaceintegration) - Create workspace integration
 * [GetUnifiedApicall](docs/sdks/unified/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [GetUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
 * [GetUnifiedIntegrationAuth](docs/sdks/unified/README.md#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [GetUnifiedIssue](docs/sdks/unified/README.md#getunifiedissue) - Retrieve support issue
 * [GetUnifiedSecretsmanager](docs/sdks/unified/README.md#getunifiedsecretsmanager) - Retrieve secrets manager
 * [GetUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Retrieve webhook by its ID
+* [GetUnifiedWorkspaceintegration](docs/sdks/unified/README.md#getunifiedworkspaceintegration) - Retrieve workspace integration
 * [ListUnifiedApicalls](docs/sdks/unified/README.md#listunifiedapicalls) - Returns API Calls
 * [ListUnifiedConnections](docs/sdks/unified/README.md#listunifiedconnections) - List all connections
 * [ListUnifiedEnvironments](docs/sdks/unified/README.md#listunifiedenvironments) - Returns all environments
@@ -2881,18 +2883,22 @@ func main() {
 * [ListUnifiedSecretsmanagerSecrets](docs/sdks/unified/README.md#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
 * [ListUnifiedSecretsmanagers](docs/sdks/unified/README.md#listunifiedsecretsmanagers) - List secrets managers
 * [ListUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
+* [ListUnifiedWorkspaceintegrations](docs/sdks/unified/README.md#listunifiedworkspaceintegrations) - List workspace integrations
 * [PatchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection
 * [PatchUnifiedWebhook](docs/sdks/unified/README.md#patchunifiedwebhook) - Update webhook subscription
 * [PatchUnifiedWebhookResume](docs/sdks/unified/README.md#patchunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [PatchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
+* [PatchUnifiedWorkspaceintegration](docs/sdks/unified/README.md#patchunifiedworkspaceintegration) - Update workspace integration
 * [RemoveUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
 * [RemoveUnifiedEnvironment](docs/sdks/unified/README.md#removeunifiedenvironment) - Remove an environment
 * [RemoveUnifiedSecretsmanager](docs/sdks/unified/README.md#removeunifiedsecretsmanager) - Remove secrets manager
 * [RemoveUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
+* [RemoveUnifiedWorkspaceintegration](docs/sdks/unified/README.md#removeunifiedworkspaceintegration) - Remove workspace integration
 * [UpdateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
 * [UpdateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
 * [UpdateUnifiedWebhookResume](docs/sdks/unified/README.md#updateunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [UpdateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
+* [UpdateUnifiedWorkspaceintegration](docs/sdks/unified/README.md#updateunifiedworkspaceintegration) - Update workspace integration
 
 ### [Unittype](docs/sdks/unittype/README.md)
 
@@ -2972,6 +2978,15 @@ func main() {
 * [RemoveCalendarWebinar](docs/sdks/webinar/README.md#removecalendarwebinar) - Remove a webinar
 * [UpdateCalendarWebinar](docs/sdks/webinar/README.md#updatecalendarwebinar) - Update a webinar
 
+### [Workspaceintegration](docs/sdks/workspaceintegration/README.md)
+
+* [CreateUnifiedWorkspaceintegration](docs/sdks/workspaceintegration/README.md#createunifiedworkspaceintegration) - Create workspace integration
+* [GetUnifiedWorkspaceintegration](docs/sdks/workspaceintegration/README.md#getunifiedworkspaceintegration) - Retrieve workspace integration
+* [ListUnifiedWorkspaceintegrations](docs/sdks/workspaceintegration/README.md#listunifiedworkspaceintegrations) - List workspace integrations
+* [PatchUnifiedWorkspaceintegration](docs/sdks/workspaceintegration/README.md#patchunifiedworkspaceintegration) - Update workspace integration
+* [RemoveUnifiedWorkspaceintegration](docs/sdks/workspaceintegration/README.md#removeunifiedworkspaceintegration) - Remove workspace integration
+* [UpdateUnifiedWorkspaceintegration](docs/sdks/workspaceintegration/README.md#updateunifiedworkspaceintegration) - Update workspace integration
+
 </details>
 <!-- End Available Resources and Operations [operations] -->
 
@@ -3026,7 +3041,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("6059cb66-bde5-427b-970e-198c5801066a"),
+			ID:                  unifiedgosdk.Pointer("c0abef68-c894-441b-8e3e-502a6bb73306"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3039,7 +3054,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T10:56:23.213Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T17:47:04.491Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3100,7 +3115,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("6059cb66-bde5-427b-970e-198c5801066a"),
+			ID:                  unifiedgosdk.Pointer("c0abef68-c894-441b-8e3e-502a6bb73306"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3113,7 +3128,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T10:56:23.213Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T17:47:04.491Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3157,7 +3172,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("6059cb66-bde5-427b-970e-198c5801066a"),
+			ID:                  unifiedgosdk.Pointer("c0abef68-c894-441b-8e3e-502a6bb73306"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3170,7 +3185,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T10:56:23.213Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T17:47:04.491Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3257,7 +3272,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("6059cb66-bde5-427b-970e-198c5801066a"),
+			ID:                  unifiedgosdk.Pointer("c0abef68-c894-441b-8e3e-502a6bb73306"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3270,7 +3285,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T10:56:23.213Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T17:47:04.491Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3319,7 +3334,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("6059cb66-bde5-427b-970e-198c5801066a"),
+			ID:                  unifiedgosdk.Pointer("c0abef68-c894-441b-8e3e-502a6bb73306"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3332,7 +3347,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T10:56:23.213Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T17:47:04.491Z"),
 		},
 		ConnectionID: "<id>",
 	}, operations.WithRetries(
@@ -3395,7 +3410,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("6059cb66-bde5-427b-970e-198c5801066a"),
+			ID:                  unifiedgosdk.Pointer("c0abef68-c894-441b-8e3e-502a6bb73306"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3408,7 +3423,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T10:56:23.213Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T17:47:04.491Z"),
 		},
 		ConnectionID: "<id>",
 	})

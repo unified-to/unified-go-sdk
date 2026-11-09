@@ -1,0 +1,18 @@
+# PropertyWorkspaceIntegrationAuth
+
+
+## Fields
+
+| Field                                                              | Type                                                               | Required                                                           | Description                                                        |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `ClientID`                                                         | `*string`                                                          | :heavy_minus_sign:                                                 | N/A                                                                |
+| `ClientSecret`                                                     | `*string`                                                          | :heavy_minus_sign:                                                 | N/A                                                                |
+| `ConsumerKey`                                                      | `*string`                                                          | :heavy_minus_sign:                                                 | N/A                                                                |
+| `ConsumerSecret`                                                   | `*string`                                                          | :heavy_minus_sign:                                                 | N/A                                                                |
+| `DevAPIKey`                                                        | `*string`                                                          | :heavy_minus_sign:                                                 | N/A                                                                |
+| `Key`                                                              | `*string`                                                          | :heavy_minus_sign:                                                 | the private KEY X.509 certificate in Base64 ASCII format           |
+| `NeedsPkce`                                                        | `*bool`                                                            | :heavy_minus_sign:                                                 | opt-in PKCE for OAuth2 when the integration app or org requires it |
+| `Pem`                                                              | `*string`                                                          | :heavy_minus_sign:                                                 | the PEM X.509 certificate in Base64 ASCII format                   |
+| `SamlIdpEntityID`                                                  | `*string`                                                          | :heavy_minus_sign:                                                 | the SAML IdP issuer/entity ID                                      |
+| `SamlIdpURL`                                                       | `*string`                                                          | :heavy_minus_sign:                                                 | the SAML IdP SSO/login URL for end-user SAML login                 |
+| `SamlPem`                                                          | `*string`                                                          | :heavy_minus_sign:                                                 | the SAML IdP signing certificate; PEM X.509 in Base64 ASCII format |
