@@ -375,6 +375,8 @@ custom := shared.PropertyWorkspaceIntegrationPatchPermissions("custom_value")
 | `PropertyWorkspaceIntegrationPatchPermissionsSocialReviewWrite`                  | social_review_write                                                              |
 | `PropertyWorkspaceIntegrationPatchPermissionsSocialInsightRead`                  | social_insight_read                                                              |
 | `PropertyWorkspaceIntegrationPatchPermissionsSocialInsightWrite`                 | social_insight_write                                                             |
+| `PropertyWorkspaceIntegrationPatchPermissionsSocialCommentRead`                  | social_comment_read                                                              |
+| `PropertyWorkspaceIntegrationPatchPermissionsSocialCommentWrite`                 | social_comment_write                                                             |
 | `PropertyWorkspaceIntegrationPatchPermissionsLegalMatterRead`                    | legal_matter_read                                                                |
 | `PropertyWorkspaceIntegrationPatchPermissionsLegalMatterWrite`                   | legal_matter_write                                                               |
 | `PropertyWorkspaceIntegrationPatchPermissionsLegalPracticeareaRead`              | legal_practicearea_read                                                          |

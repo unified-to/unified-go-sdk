@@ -407,6 +407,8 @@ type PropertyWorkspaceIntegrationPatchOverridenScopes struct {
 	SigningSignatoryWrite              *string `json:"signing_signatory_write,omitempty"`
 	SigningTemplateRead                *string `json:"signing_template_read,omitempty"`
 	SigningTemplateWrite               *string `json:"signing_template_write,omitempty"`
+	SocialCommentRead                  *string `json:"social_comment_read,omitempty"`
+	SocialCommentWrite                 *string `json:"social_comment_write,omitempty"`
 	SocialInsightRead                  *string `json:"social_insight_read,omitempty"`
 	SocialInsightWrite                 *string `json:"social_insight_write,omitempty"`
 	SocialPostRead                     *string `json:"social_post_read,omitempty"`
@@ -3275,6 +3277,20 @@ func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetSigningTemplateWri
 		return nil
 	}
 	return p.SigningTemplateWrite
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetSocialCommentRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.SocialCommentRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetSocialCommentWrite() *string {
+	if p == nil {
+		return nil
+	}
+	return p.SocialCommentWrite
 }
 
 func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetSocialInsightRead() *string {

@@ -43,4 +43,6 @@ value := operations.ListAtsCandidatesQueryParamFieldsID
 | `ListAtsCandidatesQueryParamFieldsJobIds`             | job_ids                                               |
 | `ListAtsCandidatesQueryParamFieldsMetadata`           | metadata                                              |
 | `ListAtsCandidatesQueryParamFieldsSummary`            | summary                                               |
+| `ListAtsCandidatesQueryParamFieldsIsPrivate`          | is_private                                            |
+| `ListAtsCandidatesQueryParamFieldsHasDoNotContact`    | has_do_not_contact                                    |
 | `ListAtsCandidatesQueryParamFieldsRaw`                | raw                                                   |

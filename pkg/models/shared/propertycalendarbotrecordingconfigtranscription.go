@@ -28,11 +28,6 @@ type Provider string
 
 const (
 	ProviderMeetingCaptions Provider = "MEETING_CAPTIONS"
-	ProviderAwsTranscribe   Provider = "AWS_TRANSCRIBE"
-	ProviderGoogleSpeech    Provider = "GOOGLE_SPEECH"
-	ProviderAssemblyai      Provider = "ASSEMBLYAI"
-	ProviderDeepgram        Provider = "DEEPGRAM"
-	ProviderCustom          Provider = "CUSTOM"
 )
 
 func (e Provider) ToPointer() *Provider {
@@ -43,7 +38,7 @@ func (e Provider) ToPointer() *Provider {
 func (e *Provider) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "MEETING_CAPTIONS", "AWS_TRANSCRIBE", "GOOGLE_SPEECH", "ASSEMBLYAI", "DEEPGRAM", "CUSTOM":
+		case "MEETING_CAPTIONS":
 			return true
 		}
 	}

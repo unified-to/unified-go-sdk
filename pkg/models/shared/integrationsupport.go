@@ -2,6 +2,29 @@
 
 package shared
 
+type VirtualWebhookBranchID string
+
+const (
+	VirtualWebhookBranchIDSupportedRequired VirtualWebhookBranchID = "supported-required"
+	VirtualWebhookBranchIDSupported         VirtualWebhookBranchID = "supported"
+	VirtualWebhookBranchIDNotSupported      VirtualWebhookBranchID = "not-supported"
+)
+
+func (e VirtualWebhookBranchID) ToPointer() *VirtualWebhookBranchID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookBranchID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookCalendarID string
 
 const (
@@ -1649,6 +1672,7 @@ type IntegrationSupport struct {
 	ListLocationID          *ListLocationID          `json:"list_location_id,omitempty"`
 	ListMatterID            *ListMatterID            `json:"list_matter_id,omitempty"`
 	ListMedium              *ListMedium              `json:"list_medium,omitempty"`
+	ListMeetingURL          *ListMeetingURL          `json:"list_meeting_url,omitempty"`
 	ListMemberID            *ListMemberID            `json:"list_member_id,omitempty"`
 	ListOffset              *ListOffset              `json:"list_offset,omitempty"`
 	ListOrder               *ListOrder               `json:"list_order,omitempty"`
@@ -2229,6 +2253,13 @@ func (i *IntegrationSupport) GetListMedium() *ListMedium {
 		return nil
 	}
 	return i.ListMedium
+}
+
+func (i *IntegrationSupport) GetListMeetingURL() *ListMeetingURL {
+	if i == nil {
+		return nil
+	}
+	return i.ListMeetingURL
 }
 
 func (i *IntegrationSupport) GetListMemberID() *ListMemberID {

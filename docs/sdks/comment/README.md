@@ -5,21 +5,27 @@
 ### Available Operations
 
 * [CreateKmsComment](#createkmscomment) - Create a comment
+* [CreateSocialComment](#createsocialcomment) - Create a comment
 * [CreateTaskComment](#createtaskcomment) - Create a comment
 * [CreateUcComment](#createuccomment) - Create a comment
 * [GetKmsComment](#getkmscomment) - Retrieve a comment
+* [GetSocialComment](#getsocialcomment) - Retrieve a comment
 * [GetTaskComment](#gettaskcomment) - Retrieve a comment
 * [GetUcComment](#getuccomment) - Retrieve a comment
 * [ListKmsComments](#listkmscomments) - List all comments
+* [ListSocialComments](#listsocialcomments) - List all comments
 * [ListTaskComments](#listtaskcomments) - List all comments
 * [ListUcComments](#listuccomments) - List all comments
 * [PatchKmsComment](#patchkmscomment) - Update a comment
+* [PatchSocialComment](#patchsocialcomment) - Update a comment
 * [PatchTaskComment](#patchtaskcomment) - Update a comment
 * [PatchUcComment](#patchuccomment) - Update a comment
 * [RemoveKmsComment](#removekmscomment) - Remove a comment
+* [RemoveSocialComment](#removesocialcomment) - Remove a comment
 * [RemoveTaskComment](#removetaskcomment) - Remove a comment
 * [RemoveUcComment](#removeuccomment) - Remove a comment
 * [UpdateKmsComment](#updatekmscomment) - Update a comment
+* [UpdateSocialComment](#updatesocialcomment) - Update a comment
 * [UpdateTaskComment](#updatetaskcomment) - Update a comment
 * [UpdateUcComment](#updateuccomment) - Update a comment
 
@@ -54,10 +60,10 @@ func main() {
             Content: unifiedgosdk.Pointer("Decimus tolero viriliter usque."),
             ContentType: shared.ContentTypeHTML.ToPointer(),
             CreatedAt: types.MustNewTimeFromString("2022-08-26T14:40:49.732Z"),
-            ID: unifiedgosdk.Pointer("8701e53f-685d-4694-a271-82d587272837"),
+            ID: unifiedgosdk.Pointer("f43f2bf7-9d6b-42d3-86b9-a278cc5e73c5"),
             Metadata: []shared.KmsPageMetadata{},
             Type: shared.KmsCommentTypePage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-02T00:20:43.828Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-02T07:30:40.312Z"),
         },
         ConnectionID: "<id>",
     })
@@ -81,6 +87,62 @@ func main() {
 ### Response
 
 **[*operations.CreateKmsCommentResponse](../../pkg/models/operations/createkmscommentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateSocialComment
+
+Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are mapped to the provider's API. Returns the created SocialComment.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createSocialComment" method="post" path="/social/{connection_id}/comment" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Comment.CreateSocialComment(ctx, operations.CreateSocialCommentRequest{
+        SocialComment: shared.SocialComment{},
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.SocialComment != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.CreateSocialCommentRequest](../../pkg/models/operations/createsocialcommentrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.CreateSocialCommentResponse](../../pkg/models/operations/createsocialcommentresponse.md), error**
 
 ### Errors
 
@@ -118,10 +180,10 @@ func main() {
         TaskComment: shared.TaskComment{
             CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("468196c2-a575-4d06-b7c9-b29eaf73ab05"),
+            ID: unifiedgosdk.Pointer("71aecd3d-dbae-47a1-bc29-14777a1aa6b9"),
             Metadata: []shared.TaskMetadata{},
             Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
-            UpdatedAt: types.MustNewTimeFromString("2021-10-08T16:27:23.907Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-10-08T23:08:56.077Z"),
         },
         ConnectionID: "<id>",
     })
@@ -181,9 +243,9 @@ func main() {
         UcComment: shared.UcComment{
             Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
             CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
-            ID: unifiedgosdk.Pointer("8387047d-c0fe-46c9-a6a8-96b11ba57b8d"),
+            ID: unifiedgosdk.Pointer("a71263f0-31ac-4c31-b10f-512fb8c5eddc"),
             Metadata: []shared.UcMetadata{},
-            UpdatedAt: unifiedgosdk.Pointer("2024-02-14T08:38:50.797Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-14T14:23:08.181Z"),
         },
         ConnectionID: "<id>",
     })
@@ -262,6 +324,61 @@ func main() {
 ### Response
 
 **[*operations.GetKmsCommentResponse](../../pkg/models/operations/getkmscommentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetSocialComment
+
+Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getSocialComment" method="get" path="/social/{connection_id}/comment/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Comment.GetSocialComment(ctx, operations.GetSocialCommentRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.SocialComment != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.GetSocialCommentRequest](../../pkg/models/operations/getsocialcommentrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.GetSocialCommentResponse](../../pkg/models/operations/getsocialcommentresponse.md), error**
 
 ### Errors
 
@@ -433,6 +550,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListSocialComments
+
+Returns a list of SocialComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listSocialComments" method="get" path="/social/{connection_id}/comment" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Comment.ListSocialComments(ctx, operations.ListSocialCommentsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.SocialComments != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.ListSocialCommentsRequest](../../pkg/models/operations/listsocialcommentsrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.ListSocialCommentsResponse](../../pkg/models/operations/listsocialcommentsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListTaskComments
 
 Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -572,10 +743,10 @@ func main() {
             Content: unifiedgosdk.Pointer("Decimus tolero viriliter usque."),
             ContentType: shared.ContentTypeHTML.ToPointer(),
             CreatedAt: types.MustNewTimeFromString("2022-08-26T14:40:49.732Z"),
-            ID: unifiedgosdk.Pointer("8fd954f9-d9d2-48e1-9b57-f66f4feb2a78"),
+            ID: unifiedgosdk.Pointer("5b687765-8bff-429b-b3a8-ef64d8632b5a"),
             Metadata: []shared.KmsPageMetadata{},
             Type: shared.KmsCommentTypePage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-02T00:20:43.831Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-02T07:30:40.316Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -600,6 +771,63 @@ func main() {
 ### Response
 
 **[*operations.PatchKmsCommentResponse](../../pkg/models/operations/patchkmscommentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchSocialComment
+
+Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchSocialComment" method="patch" path="/social/{connection_id}/comment/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Comment.PatchSocialComment(ctx, operations.PatchSocialCommentRequest{
+        SocialComment: shared.SocialComment{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.SocialComment != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.PatchSocialCommentRequest](../../pkg/models/operations/patchsocialcommentrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.PatchSocialCommentResponse](../../pkg/models/operations/patchsocialcommentresponse.md), error**
 
 ### Errors
 
@@ -637,10 +865,10 @@ func main() {
         TaskComment: shared.TaskComment{
             CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("8a4db97e-d3a2-4762-8725-1f5c775b1270"),
+            ID: unifiedgosdk.Pointer("28361fa6-6da2-4f87-bd8c-11c4b3cf2fb1"),
             Metadata: []shared.TaskMetadata{},
             Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
-            UpdatedAt: types.MustNewTimeFromString("2021-10-08T16:27:23.912Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-10-08T23:08:56.079Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -701,9 +929,9 @@ func main() {
         UcComment: shared.UcComment{
             Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
             CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
-            ID: unifiedgosdk.Pointer("30bb0737-694a-422b-a6ba-8cc329cd566a"),
+            ID: unifiedgosdk.Pointer("c1b6991e-59a7-4bec-9ca5-4cd167af58e8"),
             Metadata: []shared.UcMetadata{},
-            UpdatedAt: unifiedgosdk.Pointer("2024-02-14T08:38:50.798Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-14T14:23:08.183Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -783,6 +1011,61 @@ func main() {
 ### Response
 
 **[*operations.RemoveKmsCommentResponse](../../pkg/models/operations/removekmscommentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveSocialComment
+
+Deletes the SocialComment identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeSocialComment" method="delete" path="/social/{connection_id}/comment/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Comment.RemoveSocialComment(ctx, operations.RemoveSocialCommentRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.RemoveSocialCommentRequest](../../pkg/models/operations/removesocialcommentrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.RemoveSocialCommentResponse](../../pkg/models/operations/removesocialcommentresponse.md), error**
 
 ### Errors
 
@@ -931,10 +1214,10 @@ func main() {
             Content: unifiedgosdk.Pointer("Decimus tolero viriliter usque."),
             ContentType: shared.ContentTypeHTML.ToPointer(),
             CreatedAt: types.MustNewTimeFromString("2022-08-26T14:40:49.732Z"),
-            ID: unifiedgosdk.Pointer("8fd954f9-d9d2-48e1-9b57-f66f4feb2a78"),
+            ID: unifiedgosdk.Pointer("5b687765-8bff-429b-b3a8-ef64d8632b5a"),
             Metadata: []shared.KmsPageMetadata{},
             Type: shared.KmsCommentTypePage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-02T00:20:43.831Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-02T07:30:40.316Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -959,6 +1242,63 @@ func main() {
 ### Response
 
 **[*operations.UpdateKmsCommentResponse](../../pkg/models/operations/updatekmscommentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateSocialComment
+
+Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateSocialComment" method="put" path="/social/{connection_id}/comment/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Comment.UpdateSocialComment(ctx, operations.UpdateSocialCommentRequest{
+        SocialComment: shared.SocialComment{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.SocialComment != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.UpdateSocialCommentRequest](../../pkg/models/operations/updatesocialcommentrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.UpdateSocialCommentResponse](../../pkg/models/operations/updatesocialcommentresponse.md), error**
 
 ### Errors
 
@@ -996,10 +1336,10 @@ func main() {
         TaskComment: shared.TaskComment{
             CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("8a4db97e-d3a2-4762-8725-1f5c775b1270"),
+            ID: unifiedgosdk.Pointer("28361fa6-6da2-4f87-bd8c-11c4b3cf2fb1"),
             Metadata: []shared.TaskMetadata{},
             Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
-            UpdatedAt: types.MustNewTimeFromString("2021-10-08T16:27:23.912Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-10-08T23:08:56.079Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1060,9 +1400,9 @@ func main() {
         UcComment: shared.UcComment{
             Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
             CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
-            ID: unifiedgosdk.Pointer("30bb0737-694a-422b-a6ba-8cc329cd566a"),
+            ID: unifiedgosdk.Pointer("c1b6991e-59a7-4bec-9ca5-4cd167af58e8"),
             Metadata: []shared.UcMetadata{},
-            UpdatedAt: unifiedgosdk.Pointer("2024-02-14T08:38:50.798Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-14T14:23:08.183Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

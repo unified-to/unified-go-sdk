@@ -19,8 +19,3 @@ custom := shared.Provider("custom_value")
 | Name                      | Value                     |
 | ------------------------- | ------------------------- |
 | `ProviderMeetingCaptions` | MEETING_CAPTIONS          |
-| `ProviderAwsTranscribe`   | AWS_TRANSCRIBE            |
-| `ProviderGoogleSpeech`    | GOOGLE_SPEECH             |
-| `ProviderAssemblyai`      | ASSEMBLYAI                |
-| `ProviderDeepgram`        | DEEPGRAM                  |
-| `ProviderCustom`          | CUSTOM                    |

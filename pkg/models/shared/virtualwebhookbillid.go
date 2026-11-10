@@ -1336,6 +1336,29 @@ func (e *ListMedium) IsExact() bool {
 	return false
 }
 
+type ListMeetingURL string
+
+const (
+	ListMeetingURLSupportedRequired ListMeetingURL = "supported-required"
+	ListMeetingURLSupported         ListMeetingURL = "supported"
+	ListMeetingURLNotSupported      ListMeetingURL = "not-supported"
+)
+
+func (e ListMeetingURL) ToPointer() *ListMeetingURL {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListMeetingURL) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListMemberID string
 
 const (
@@ -3420,29 +3443,6 @@ func (e VirtualWebhookBillID) ToPointer() *VirtualWebhookBillID {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookBillID) IsExact() bool {
-	if e != nil {
-		switch *e {
-		case "supported-required", "supported", "not-supported":
-			return true
-		}
-	}
-	return false
-}
-
-type VirtualWebhookBranchID string
-
-const (
-	VirtualWebhookBranchIDSupportedRequired VirtualWebhookBranchID = "supported-required"
-	VirtualWebhookBranchIDSupported         VirtualWebhookBranchID = "supported"
-	VirtualWebhookBranchIDNotSupported      VirtualWebhookBranchID = "not-supported"
-)
-
-func (e VirtualWebhookBranchID) ToPointer() *VirtualWebhookBranchID {
-	return &e
-}
-
-// IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *VirtualWebhookBranchID) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":

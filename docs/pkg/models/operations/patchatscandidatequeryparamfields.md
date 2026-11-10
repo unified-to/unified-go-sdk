@@ -43,4 +43,6 @@ value := operations.PatchAtsCandidateQueryParamFieldsID
 | `PatchAtsCandidateQueryParamFieldsJobIds`             | job_ids                                               |
 | `PatchAtsCandidateQueryParamFieldsMetadata`           | metadata                                              |
 | `PatchAtsCandidateQueryParamFieldsSummary`            | summary                                               |
+| `PatchAtsCandidateQueryParamFieldsIsPrivate`          | is_private                                            |
+| `PatchAtsCandidateQueryParamFieldsHasDoNotContact`    | has_do_not_contact                                    |
 | `PatchAtsCandidateQueryParamFieldsRaw`                | raw                                                   |

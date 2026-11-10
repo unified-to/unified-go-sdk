@@ -48,10 +48,14 @@ type AtsCandidate struct {
 	Experiences        []AtsCandidateExperience `json:"experiences,omitempty"`
 	ExternalIdentifier *string                  `json:"external_identifier,omitempty"`
 	FirstName          *string                  `json:"first_name,omitempty"`
-	ID                 *string                  `json:"id,omitempty"`
-	ImageURL           *string                  `json:"image_url,omitempty"`
-	JobIds             []string                 `json:"job_ids,omitempty"`
-	LastName           *string                  `json:"last_name,omitempty"`
+	// Whether the candidate must not be contacted for outreach
+	HasDoNotContact *bool   `json:"has_do_not_contact,omitempty"`
+	ID              *string `json:"id,omitempty"`
+	ImageURL        *string `json:"image_url,omitempty"`
+	// Whether the candidate is confidential / private (visible only to permitted users)
+	IsPrivate *bool    `json:"is_private,omitempty"`
+	JobIds    []string `json:"job_ids,omitempty"`
+	LastName  *string  `json:"last_name,omitempty"`
 	// URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
 	LinkUrls []string      `json:"link_urls,omitempty"`
 	Metadata []AtsMetadata `json:"metadata,omitempty"`
@@ -157,6 +161,13 @@ func (a *AtsCandidate) GetFirstName() *string {
 	return a.FirstName
 }
 
+func (a *AtsCandidate) GetHasDoNotContact() *bool {
+	if a == nil {
+		return nil
+	}
+	return a.HasDoNotContact
+}
+
 func (a *AtsCandidate) GetID() *string {
 	if a == nil {
 		return nil
@@ -169,6 +180,13 @@ func (a *AtsCandidate) GetImageURL() *string {
 		return nil
 	}
 	return a.ImageURL
+}
+
+func (a *AtsCandidate) GetIsPrivate() *bool {
+	if a == nil {
+		return nil
+	}
+	return a.IsPrivate
 }
 
 func (a *AtsCandidate) GetJobIds() []string {

@@ -43,4 +43,6 @@ value := operations.CreateAtsCandidateQueryParamFieldsID
 | `CreateAtsCandidateQueryParamFieldsJobIds`             | job_ids                                                |
 | `CreateAtsCandidateQueryParamFieldsMetadata`           | metadata                                               |
 | `CreateAtsCandidateQueryParamFieldsSummary`            | summary                                                |
+| `CreateAtsCandidateQueryParamFieldsIsPrivate`          | is_private                                             |
+| `CreateAtsCandidateQueryParamFieldsHasDoNotContact`    | has_do_not_contact                                     |
 | `CreateAtsCandidateQueryParamFieldsRaw`                | raw                                                    |

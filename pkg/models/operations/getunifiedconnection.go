@@ -3,13 +3,95 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type GetUnifiedConnectionQueryParamFields string
+
+const (
+	GetUnifiedConnectionQueryParamFieldsID                GetUnifiedConnectionQueryParamFields = "id"
+	GetUnifiedConnectionQueryParamFieldsCreatedAt         GetUnifiedConnectionQueryParamFields = "created_at"
+	GetUnifiedConnectionQueryParamFieldsUpdatedAt         GetUnifiedConnectionQueryParamFields = "updated_at"
+	GetUnifiedConnectionQueryParamFieldsWorkspaceID       GetUnifiedConnectionQueryParamFields = "workspace_id"
+	GetUnifiedConnectionQueryParamFieldsIntegrationType   GetUnifiedConnectionQueryParamFields = "integration_type"
+	GetUnifiedConnectionQueryParamFieldsIntegrationName   GetUnifiedConnectionQueryParamFields = "integration_name"
+	GetUnifiedConnectionQueryParamFieldsExternalXref      GetUnifiedConnectionQueryParamFields = "external_xref"
+	GetUnifiedConnectionQueryParamFieldsPermissions       GetUnifiedConnectionQueryParamFields = "permissions"
+	GetUnifiedConnectionQueryParamFieldsCategories        GetUnifiedConnectionQueryParamFields = "categories"
+	GetUnifiedConnectionQueryParamFieldsAuth              GetUnifiedConnectionQueryParamFields = "auth"
+	GetUnifiedConnectionQueryParamFieldsIsPaused          GetUnifiedConnectionQueryParamFields = "is_paused"
+	GetUnifiedConnectionQueryParamFieldsEnvironment       GetUnifiedConnectionQueryParamFields = "environment"
+	GetUnifiedConnectionQueryParamFieldsLastHealthyAt     GetUnifiedConnectionQueryParamFields = "last_healthy_at"
+	GetUnifiedConnectionQueryParamFieldsLastUnhealthyAt   GetUnifiedConnectionQueryParamFields = "last_unhealthy_at"
+	GetUnifiedConnectionQueryParamFieldsLastUnhealthyCode GetUnifiedConnectionQueryParamFields = "last_unhealthy_code"
+	GetUnifiedConnectionQueryParamFieldsSecretsmanagerID  GetUnifiedConnectionQueryParamFields = "secretsmanager_id"
+	GetUnifiedConnectionQueryParamFieldsSecretsmanagerKey GetUnifiedConnectionQueryParamFields = "secretsmanager_key"
+)
+
+func (e GetUnifiedConnectionQueryParamFields) ToPointer() *GetUnifiedConnectionQueryParamFields {
+	return &e
+}
+func (e *GetUnifiedConnectionQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "workspace_id":
+		fallthrough
+	case "integration_type":
+		fallthrough
+	case "integration_name":
+		fallthrough
+	case "external_xref":
+		fallthrough
+	case "permissions":
+		fallthrough
+	case "categories":
+		fallthrough
+	case "auth":
+		fallthrough
+	case "is_paused":
+		fallthrough
+	case "environment":
+		fallthrough
+	case "last_healthy_at":
+		fallthrough
+	case "last_unhealthy_at":
+		fallthrough
+	case "last_unhealthy_code":
+		fallthrough
+	case "secretsmanager_id":
+		fallthrough
+	case "secretsmanager_key":
+		*e = GetUnifiedConnectionQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetUnifiedConnectionQueryParamFields: %v", v)
+	}
+}
+
 type GetUnifiedConnectionRequest struct {
+	// Fields to return. Leave out auth to get connection metadata without credentials
+	Fields []GetUnifiedConnectionQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Connection
 	ID string `pathParam:"style=simple,explode=false,name=id"`
+}
+
+func (g *GetUnifiedConnectionRequest) GetFields() []GetUnifiedConnectionQueryParamFields {
+	if g == nil {
+		return nil
+	}
+	return g.Fields
 }
 
 func (g *GetUnifiedConnectionRequest) GetID() string {

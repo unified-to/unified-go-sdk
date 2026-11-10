@@ -213,6 +213,7 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeSocialProfile`                 | social_profile                                   |
 | `WebhookObjectTypeSocialReview`                  | social_review                                    |
 | `WebhookObjectTypeSocialInsight`                 | social_insight                                   |
+| `WebhookObjectTypeSocialComment`                 | social_comment                                   |
 | `WebhookObjectTypeLegalMatter`                   | legal_matter                                     |
 | `WebhookObjectTypeLegalPracticearea`             | legal_practicearea                               |
 | `WebhookObjectTypeLegalTimeentry`                | legal_timeentry                                  |

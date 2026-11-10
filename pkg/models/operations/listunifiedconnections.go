@@ -149,16 +149,89 @@ func (e *Categories) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type ListUnifiedConnectionsQueryParamFields string
+
+const (
+	ListUnifiedConnectionsQueryParamFieldsID                ListUnifiedConnectionsQueryParamFields = "id"
+	ListUnifiedConnectionsQueryParamFieldsCreatedAt         ListUnifiedConnectionsQueryParamFields = "created_at"
+	ListUnifiedConnectionsQueryParamFieldsUpdatedAt         ListUnifiedConnectionsQueryParamFields = "updated_at"
+	ListUnifiedConnectionsQueryParamFieldsWorkspaceID       ListUnifiedConnectionsQueryParamFields = "workspace_id"
+	ListUnifiedConnectionsQueryParamFieldsIntegrationType   ListUnifiedConnectionsQueryParamFields = "integration_type"
+	ListUnifiedConnectionsQueryParamFieldsIntegrationName   ListUnifiedConnectionsQueryParamFields = "integration_name"
+	ListUnifiedConnectionsQueryParamFieldsExternalXref      ListUnifiedConnectionsQueryParamFields = "external_xref"
+	ListUnifiedConnectionsQueryParamFieldsPermissions       ListUnifiedConnectionsQueryParamFields = "permissions"
+	ListUnifiedConnectionsQueryParamFieldsCategories        ListUnifiedConnectionsQueryParamFields = "categories"
+	ListUnifiedConnectionsQueryParamFieldsAuth              ListUnifiedConnectionsQueryParamFields = "auth"
+	ListUnifiedConnectionsQueryParamFieldsIsPaused          ListUnifiedConnectionsQueryParamFields = "is_paused"
+	ListUnifiedConnectionsQueryParamFieldsEnvironment       ListUnifiedConnectionsQueryParamFields = "environment"
+	ListUnifiedConnectionsQueryParamFieldsLastHealthyAt     ListUnifiedConnectionsQueryParamFields = "last_healthy_at"
+	ListUnifiedConnectionsQueryParamFieldsLastUnhealthyAt   ListUnifiedConnectionsQueryParamFields = "last_unhealthy_at"
+	ListUnifiedConnectionsQueryParamFieldsLastUnhealthyCode ListUnifiedConnectionsQueryParamFields = "last_unhealthy_code"
+	ListUnifiedConnectionsQueryParamFieldsSecretsmanagerID  ListUnifiedConnectionsQueryParamFields = "secretsmanager_id"
+	ListUnifiedConnectionsQueryParamFieldsSecretsmanagerKey ListUnifiedConnectionsQueryParamFields = "secretsmanager_key"
+)
+
+func (e ListUnifiedConnectionsQueryParamFields) ToPointer() *ListUnifiedConnectionsQueryParamFields {
+	return &e
+}
+func (e *ListUnifiedConnectionsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "workspace_id":
+		fallthrough
+	case "integration_type":
+		fallthrough
+	case "integration_name":
+		fallthrough
+	case "external_xref":
+		fallthrough
+	case "permissions":
+		fallthrough
+	case "categories":
+		fallthrough
+	case "auth":
+		fallthrough
+	case "is_paused":
+		fallthrough
+	case "environment":
+		fallthrough
+	case "last_healthy_at":
+		fallthrough
+	case "last_unhealthy_at":
+		fallthrough
+	case "last_unhealthy_code":
+		fallthrough
+	case "secretsmanager_id":
+		fallthrough
+	case "secretsmanager_key":
+		*e = ListUnifiedConnectionsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListUnifiedConnectionsQueryParamFields: %v", v)
+	}
+}
+
 type ListUnifiedConnectionsRequest struct {
 	// Filter the results on these categories
 	Categories []Categories `queryParam:"style=form,explode=true,name=categories"`
 	Env        *string      `queryParam:"style=form,explode=true,name=env"`
 	// Filter the results to only those integrations for your user referenced by this value
-	ExternalXref *string  `queryParam:"style=form,explode=true,name=external_xref"`
-	Limit        *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset       *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order        *string  `queryParam:"style=form,explode=true,name=order"`
-	Sort         *string  `queryParam:"style=form,explode=true,name=sort"`
+	ExternalXref *string `queryParam:"style=form,explode=true,name=external_xref"`
+	// Fields to return. Leave out auth to get connection metadata without credentials
+	Fields []ListUnifiedConnectionsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                 `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                 `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                  `queryParam:"style=form,explode=true,name=order"`
+	Sort   *string                                  `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -182,6 +255,13 @@ func (l *ListUnifiedConnectionsRequest) GetExternalXref() *string {
 		return nil
 	}
 	return l.ExternalXref
+}
+
+func (l *ListUnifiedConnectionsRequest) GetFields() []ListUnifiedConnectionsQueryParamFields {
+	if l == nil {
+		return nil
+	}
+	return l.Fields
 }
 
 func (l *ListUnifiedConnectionsRequest) GetLimit() *float64 {

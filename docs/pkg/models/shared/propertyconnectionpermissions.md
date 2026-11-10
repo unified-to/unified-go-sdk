@@ -375,6 +375,8 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsSocialReviewWrite`                  | social_review_write                                               |
 | `PropertyConnectionPermissionsSocialInsightRead`                  | social_insight_read                                               |
 | `PropertyConnectionPermissionsSocialInsightWrite`                 | social_insight_write                                              |
+| `PropertyConnectionPermissionsSocialCommentRead`                  | social_comment_read                                               |
+| `PropertyConnectionPermissionsSocialCommentWrite`                 | social_comment_write                                              |
 | `PropertyConnectionPermissionsLegalMatterRead`                    | legal_matter_read                                                 |
 | `PropertyConnectionPermissionsLegalMatterWrite`                   | legal_matter_write                                                |
 | `PropertyConnectionPermissionsLegalPracticeareaRead`              | legal_practicearea_read                                           |

@@ -66,7 +66,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("c0abef68-c894-441b-8e3e-502a6bb73306"),
+			ID:                  unifiedgosdk.Pointer("d95782c3-4153-4c79-b439-0bf001c5e6be"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -79,7 +79,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T17:47:04.491Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T23:49:58.809Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -780,21 +780,27 @@ func main() {
 ### [Comment](docs/sdks/comment/README.md)
 
 * [CreateKmsComment](docs/sdks/comment/README.md#createkmscomment) - Create a comment
+* [CreateSocialComment](docs/sdks/comment/README.md#createsocialcomment) - Create a comment
 * [CreateTaskComment](docs/sdks/comment/README.md#createtaskcomment) - Create a comment
 * [CreateUcComment](docs/sdks/comment/README.md#createuccomment) - Create a comment
 * [GetKmsComment](docs/sdks/comment/README.md#getkmscomment) - Retrieve a comment
+* [GetSocialComment](docs/sdks/comment/README.md#getsocialcomment) - Retrieve a comment
 * [GetTaskComment](docs/sdks/comment/README.md#gettaskcomment) - Retrieve a comment
 * [GetUcComment](docs/sdks/comment/README.md#getuccomment) - Retrieve a comment
 * [ListKmsComments](docs/sdks/comment/README.md#listkmscomments) - List all comments
+* [ListSocialComments](docs/sdks/comment/README.md#listsocialcomments) - List all comments
 * [ListTaskComments](docs/sdks/comment/README.md#listtaskcomments) - List all comments
 * [ListUcComments](docs/sdks/comment/README.md#listuccomments) - List all comments
 * [PatchKmsComment](docs/sdks/comment/README.md#patchkmscomment) - Update a comment
+* [PatchSocialComment](docs/sdks/comment/README.md#patchsocialcomment) - Update a comment
 * [PatchTaskComment](docs/sdks/comment/README.md#patchtaskcomment) - Update a comment
 * [PatchUcComment](docs/sdks/comment/README.md#patchuccomment) - Update a comment
 * [RemoveKmsComment](docs/sdks/comment/README.md#removekmscomment) - Remove a comment
+* [RemoveSocialComment](docs/sdks/comment/README.md#removesocialcomment) - Remove a comment
 * [RemoveTaskComment](docs/sdks/comment/README.md#removetaskcomment) - Remove a comment
 * [RemoveUcComment](docs/sdks/comment/README.md#removeuccomment) - Remove a comment
 * [UpdateKmsComment](docs/sdks/comment/README.md#updatekmscomment) - Update a comment
+* [UpdateSocialComment](docs/sdks/comment/README.md#updatesocialcomment) - Update a comment
 * [UpdateTaskComment](docs/sdks/comment/README.md#updatetaskcomment) - Update a comment
 * [UpdateUcComment](docs/sdks/comment/README.md#updateuccomment) - Update a comment
 
@@ -2604,18 +2610,24 @@ func main() {
 
 ### [Social](docs/sdks/social/README.md)
 
+* [CreateSocialComment](docs/sdks/social/README.md#createsocialcomment) - Create a comment
 * [CreateSocialPost](docs/sdks/social/README.md#createsocialpost) - Create a post
+* [GetSocialComment](docs/sdks/social/README.md#getsocialcomment) - Retrieve a comment
 * [GetSocialInsight](docs/sdks/social/README.md#getsocialinsight) - Retrieve an insight
 * [GetSocialPost](docs/sdks/social/README.md#getsocialpost) - Retrieve a post
 * [GetSocialProfile](docs/sdks/social/README.md#getsocialprofile) - Retrieve a profile
 * [GetSocialReview](docs/sdks/social/README.md#getsocialreview) - Retrieve a review
+* [ListSocialComments](docs/sdks/social/README.md#listsocialcomments) - List all comments
 * [ListSocialInsights](docs/sdks/social/README.md#listsocialinsights) - List all insights
 * [ListSocialPosts](docs/sdks/social/README.md#listsocialposts) - List all posts
 * [ListSocialProfiles](docs/sdks/social/README.md#listsocialprofiles) - List all profiles
 * [ListSocialReviews](docs/sdks/social/README.md#listsocialreviews) - List all reviews
+* [PatchSocialComment](docs/sdks/social/README.md#patchsocialcomment) - Update a comment
 * [PatchSocialPost](docs/sdks/social/README.md#patchsocialpost) - Update a post
 * [PatchSocialReview](docs/sdks/social/README.md#patchsocialreview) - Update a review
+* [RemoveSocialComment](docs/sdks/social/README.md#removesocialcomment) - Remove a comment
 * [RemoveSocialPost](docs/sdks/social/README.md#removesocialpost) - Remove a post
+* [UpdateSocialComment](docs/sdks/social/README.md#updatesocialcomment) - Update a comment
 * [UpdateSocialPost](docs/sdks/social/README.md#updatesocialpost) - Update a post
 * [UpdateSocialReview](docs/sdks/social/README.md#updatesocialreview) - Update a review
 
@@ -3041,7 +3053,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("c0abef68-c894-441b-8e3e-502a6bb73306"),
+			ID:                  unifiedgosdk.Pointer("d95782c3-4153-4c79-b439-0bf001c5e6be"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3054,7 +3066,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T17:47:04.491Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T23:49:58.809Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3115,7 +3127,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("c0abef68-c894-441b-8e3e-502a6bb73306"),
+			ID:                  unifiedgosdk.Pointer("d95782c3-4153-4c79-b439-0bf001c5e6be"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3128,7 +3140,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T17:47:04.491Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T23:49:58.809Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3172,7 +3184,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("c0abef68-c894-441b-8e3e-502a6bb73306"),
+			ID:                  unifiedgosdk.Pointer("d95782c3-4153-4c79-b439-0bf001c5e6be"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3185,7 +3197,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T17:47:04.491Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T23:49:58.809Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3272,7 +3284,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("c0abef68-c894-441b-8e3e-502a6bb73306"),
+			ID:                  unifiedgosdk.Pointer("d95782c3-4153-4c79-b439-0bf001c5e6be"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3285,7 +3297,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T17:47:04.491Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T23:49:58.809Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3334,7 +3346,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("c0abef68-c894-441b-8e3e-502a6bb73306"),
+			ID:                  unifiedgosdk.Pointer("d95782c3-4153-4c79-b439-0bf001c5e6be"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3347,7 +3359,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T17:47:04.491Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T23:49:58.809Z"),
 		},
 		ConnectionID: "<id>",
 	}, operations.WithRetries(
@@ -3410,7 +3422,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("c0abef68-c894-441b-8e3e-502a6bb73306"),
+			ID:                  unifiedgosdk.Pointer("d95782c3-4153-4c79-b439-0bf001c5e6be"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3423,7 +3435,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-11T17:47:04.491Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-11T23:49:58.809Z"),
 		},
 		ConnectionID: "<id>",
 	})

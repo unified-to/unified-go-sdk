@@ -40,6 +40,8 @@ const (
 	ListAtsCandidatesQueryParamFieldsJobIds             ListAtsCandidatesQueryParamFields = "job_ids"
 	ListAtsCandidatesQueryParamFieldsMetadata           ListAtsCandidatesQueryParamFields = "metadata"
 	ListAtsCandidatesQueryParamFieldsSummary            ListAtsCandidatesQueryParamFields = "summary"
+	ListAtsCandidatesQueryParamFieldsIsPrivate          ListAtsCandidatesQueryParamFields = "is_private"
+	ListAtsCandidatesQueryParamFieldsHasDoNotContact    ListAtsCandidatesQueryParamFields = "has_do_not_contact"
 	ListAtsCandidatesQueryParamFieldsRaw                ListAtsCandidatesQueryParamFields = "raw"
 )
 
@@ -107,6 +109,10 @@ func (e *ListAtsCandidatesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "summary":
+		fallthrough
+	case "is_private":
+		fallthrough
+	case "has_do_not_contact":
 		fallthrough
 	case "raw":
 		*e = ListAtsCandidatesQueryParamFields(v)
