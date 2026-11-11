@@ -40,12 +40,12 @@ func main() {
     res, err := s.Domain.CreateComputeDomain(ctx, operations.CreateComputeDomainRequest{
         ComputeDomain: shared.ComputeDomain{
             CreatedAt: types.MustNewTimeFromString("2019-11-22T16:38:26.009Z"),
-            ID: unifiedgosdk.Pointer("d9949f72-37a9-48e2-a0bf-7196300f104f"),
+            ID: unifiedgosdk.Pointer("d7a0abb1-2979-4d0e-99e7-e6f42bca67aa"),
             IsPrimary: unifiedgosdk.Pointer(false),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("mysterious-republican.usable-section.info"),
             Status: shared.ComputeDomainStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-15T01:41:19.869Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-15T15:17:14.388Z"),
         },
         ConnectionID: "<id>",
     })
@@ -214,12 +214,12 @@ func main() {
     res, err := s.Domain.PatchComputeDomain(ctx, operations.PatchComputeDomainRequest{
         ComputeDomain: shared.ComputeDomain{
             CreatedAt: types.MustNewTimeFromString("2019-11-22T16:38:26.009Z"),
-            ID: unifiedgosdk.Pointer("b9c7cae2-e20f-4c58-ade2-813ddb61511f"),
+            ID: unifiedgosdk.Pointer("be9cb3cd-2dc2-4df5-8dfd-82adba30486e"),
             IsPrimary: unifiedgosdk.Pointer(false),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("mysterious-republican.usable-section.info"),
             Status: shared.ComputeDomainStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-15T01:41:19.875Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-15T15:17:14.393Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -335,12 +335,12 @@ func main() {
     res, err := s.Domain.UpdateComputeDomain(ctx, operations.UpdateComputeDomainRequest{
         ComputeDomain: shared.ComputeDomain{
             CreatedAt: types.MustNewTimeFromString("2019-11-22T16:38:26.009Z"),
-            ID: unifiedgosdk.Pointer("b9c7cae2-e20f-4c58-ade2-813ddb61511f"),
+            ID: unifiedgosdk.Pointer("be9cb3cd-2dc2-4df5-8dfd-82adba30486e"),
             IsPrimary: unifiedgosdk.Pointer(false),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("mysterious-republican.usable-section.info"),
             Status: shared.ComputeDomainStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-15T01:41:19.875Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-15T15:17:14.393Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
