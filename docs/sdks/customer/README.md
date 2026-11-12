@@ -46,7 +46,7 @@ func main() {
                     Type: shared.TicketingEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.Pointer("462fddba-d544-45db-9857-b521e36d9d58"),
+            ID: unifiedgosdk.Pointer("307f7c91-233f-4f73-af02-cf5da916c0cc"),
             Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("Christian Windler"),
             Tags: []string{
@@ -67,7 +67,7 @@ func main() {
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-23T16:01:35.828Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-24T14:27:02.580Z"),
         },
         ConnectionID: "<id>",
     })
@@ -242,7 +242,7 @@ func main() {
                     Type: shared.TicketingEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.Pointer("fa066a70-a5bf-45c7-841c-abc0dfa27184"),
+            ID: unifiedgosdk.Pointer("3d345114-6f5d-4f96-bbf4-5c65cc4dc53f"),
             Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("Christian Windler"),
             Tags: []string{
@@ -263,7 +263,7 @@ func main() {
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-23T16:01:35.837Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-24T14:27:02.590Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -385,7 +385,7 @@ func main() {
                     Type: shared.TicketingEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.Pointer("fa066a70-a5bf-45c7-841c-abc0dfa27184"),
+            ID: unifiedgosdk.Pointer("3d345114-6f5d-4f96-bbf4-5c65cc4dc53f"),
             Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("Christian Windler"),
             Tags: []string{
@@ -406,7 +406,7 @@ func main() {
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-23T16:01:35.837Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-24T14:27:02.590Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

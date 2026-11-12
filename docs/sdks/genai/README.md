@@ -66,11 +66,11 @@ func main() {
         GenaiAgent: shared.GenaiAgent{
             CreatedAt: types.MustNewTimeFromString("2020-12-18T02:23:33.723Z"),
             Description: unifiedgosdk.Pointer("Assentator tero sequi."),
-            ID: unifiedgosdk.Pointer("08c25971-f712-4856-acc2-aed68325ec7f"),
+            ID: unifiedgosdk.Pointer("e4082a8b-8e59-427b-9adb-e5409058876b"),
             Instructions: unifiedgosdk.Pointer("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum."),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("daughter with"),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-01T19:31:04.668Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-02T15:23:46.862Z"),
         },
         ConnectionID: "<id>",
     })
@@ -136,7 +136,7 @@ func main() {
             Dimension: unifiedgosdk.Pointer[float64](423.0),
             Embeddings: unifiedgosdk.Pointer("Est."),
             EncondingFormat: shared.EncondingFormatFloat.ToPointer(),
-            ID: unifiedgosdk.Pointer("1f56ba07-63dd-4f88-975f-41235de06c51"),
+            ID: unifiedgosdk.Pointer("69bf5307-cb12-4cea-bd84-6623f1b24b3a"),
             MaxTokens: unifiedgosdk.Pointer[float64](223.0),
             TokensUsed: unifiedgosdk.Pointer[float64](836.0),
             Type: unifiedgosdk.Pointer("classification"),
@@ -200,7 +200,7 @@ func main() {
         GenaiMemory: shared.GenaiMemory{
             Content: unifiedgosdk.Pointer("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus."),
             CreatedAt: types.MustNewTimeFromString("2021-10-22T04:14:41.668Z"),
-            ID: unifiedgosdk.Pointer("838d4fcd-eaab-4a10-9d68-b4b091302990"),
+            ID: unifiedgosdk.Pointer("9d6f0ef4-c69b-423d-b9bf-f6a5271f07c7"),
             Metadata: []shared.GenaiMetadata{
                 shared.GenaiMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateGenaiMetadataExtraDataMapOfAny(
@@ -219,7 +219,7 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("sponte.md"),
             Type: shared.GenaiMemoryTypeMemory.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-05-02T05:41:20.422Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-02T12:56:58.348Z"),
             UserIdentifier: unifiedgosdk.Pointer("9d170613-4338-447d-bdb6-8ea96a2d7513"),
         },
         ConnectionID: "<id>",
@@ -281,10 +281,10 @@ func main() {
         GenaiOrganization: shared.GenaiOrganization{
             CreatedAt: types.MustNewTimeFromString("2020-10-27T16:03:47.122Z"),
             Description: unifiedgosdk.Pointer("Voluptates abeo subseco."),
-            ID: unifiedgosdk.Pointer("d79d3774-cec5-429d-989d-450874024eec"),
+            ID: unifiedgosdk.Pointer("29fe538b-c16f-4432-a26e-cb5be2fc37e6"),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("officially about"),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-03T08:09:05.932Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-03T17:11:29.654Z"),
         },
         ConnectionID: "<id>",
     })
@@ -472,10 +472,10 @@ func main() {
 
     res, err := s.Genai.CreateGenaiTask(ctx, operations.CreateGenaiTaskRequest{
         GenaiTask: shared.GenaiTask{
-            CompletedAt: types.MustNewTimeFromString("2025-10-18T14:15:30.728Z"),
+            CompletedAt: types.MustNewTimeFromString("2025-10-19T10:04:57.990Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-25T20:19:33.247Z"),
             FilesChanged: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("f25eba3c-4261-46a8-be36-a7486ec34a2b"),
+            ID: unifiedgosdk.Pointer("a02b9b7d-0916-4407-839c-598baad9ebd5"),
             Instructions: unifiedgosdk.Pointer("Benigne canonicus officiis solvo adsidue deleo angustus."),
             LinesAdded: unifiedgosdk.Pointer[float64](244.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](118.0),
@@ -490,12 +490,12 @@ func main() {
             PullrequestURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383"),
             RepoURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance"),
             SourceBranchIdentifier: unifiedgosdk.Pointer("main"),
-            StartedAt: types.MustNewTimeFromString("2024-06-02T23:14:02.148Z"),
+            StartedAt: types.MustNewTimeFromString("2024-06-03T13:34:46.469Z"),
             Status: shared.GenaiTaskStatusBlocked.ToPointer(),
             Summary: unifiedgosdk.Pointer("Cur aeternus cogito vesper."),
             TargetBranchIdentifier: unifiedgosdk.Pointer("agent/joshingly-ignorance"),
             TokensUsed: unifiedgosdk.Pointer[float64](2165.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-03-06T12:08:36.005Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-06T21:32:07.328Z"),
             WebURL: unifiedgosdk.Pointer("https://inexperienced-adrenalin.biz/"),
         },
         ConnectionID: "<id>",
@@ -1211,11 +1211,11 @@ func main() {
         GenaiAgent: shared.GenaiAgent{
             CreatedAt: types.MustNewTimeFromString("2020-12-18T02:23:33.723Z"),
             Description: unifiedgosdk.Pointer("Assentator tero sequi."),
-            ID: unifiedgosdk.Pointer("1370ad5a-3186-4eb0-986b-68c00bb34aa7"),
+            ID: unifiedgosdk.Pointer("5c438761-3255-43d0-88ee-d421b660f570"),
             Instructions: unifiedgosdk.Pointer("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum."),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("daughter with"),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-01T19:31:04.672Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-02T15:23:46.866Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1277,7 +1277,7 @@ func main() {
         GenaiMemory: shared.GenaiMemory{
             Content: unifiedgosdk.Pointer("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus."),
             CreatedAt: types.MustNewTimeFromString("2021-10-22T04:14:41.668Z"),
-            ID: unifiedgosdk.Pointer("6159e91f-6835-4ed6-8631-9d9d81607b71"),
+            ID: unifiedgosdk.Pointer("c4df4d28-1721-46eb-a118-2fe302b5f547"),
             Metadata: []shared.GenaiMetadata{
                 shared.GenaiMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateGenaiMetadataExtraDataMapOfAny(
@@ -1296,7 +1296,7 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("sponte.md"),
             Type: shared.GenaiMemoryTypeMemory.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-05-02T05:41:20.425Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-02T12:56:58.350Z"),
             UserIdentifier: unifiedgosdk.Pointer("9d170613-4338-447d-bdb6-8ea96a2d7513"),
         },
         ConnectionID: "<id>",
@@ -1359,10 +1359,10 @@ func main() {
         GenaiOrganization: shared.GenaiOrganization{
             CreatedAt: types.MustNewTimeFromString("2020-10-27T16:03:47.122Z"),
             Description: unifiedgosdk.Pointer("Voluptates abeo subseco."),
-            ID: unifiedgosdk.Pointer("2cefdf61-8b62-47d6-91e7-75d240f259c2"),
+            ID: unifiedgosdk.Pointer("fd267913-3bc9-42fd-a279-8e13965fba06"),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("officially about"),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-03T08:09:05.935Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-03T17:11:29.656Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1422,10 +1422,10 @@ func main() {
 
     res, err := s.Genai.PatchGenaiTask(ctx, operations.PatchGenaiTaskRequest{
         GenaiTask: shared.GenaiTask{
-            CompletedAt: types.MustNewTimeFromString("2025-10-18T14:15:30.739Z"),
+            CompletedAt: types.MustNewTimeFromString("2025-10-19T10:04:57.999Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-25T20:19:33.247Z"),
             FilesChanged: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("09cfab64-0642-4eaf-9a5f-e0843979b43e"),
+            ID: unifiedgosdk.Pointer("98443b7d-e4e0-45b5-9e51-9649215ca125"),
             Instructions: unifiedgosdk.Pointer("Benigne canonicus officiis solvo adsidue deleo angustus."),
             LinesAdded: unifiedgosdk.Pointer[float64](244.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](118.0),
@@ -1440,12 +1440,12 @@ func main() {
             PullrequestURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383"),
             RepoURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance"),
             SourceBranchIdentifier: unifiedgosdk.Pointer("main"),
-            StartedAt: types.MustNewTimeFromString("2024-06-02T23:14:02.157Z"),
+            StartedAt: types.MustNewTimeFromString("2024-06-03T13:34:46.477Z"),
             Status: shared.GenaiTaskStatusBlocked.ToPointer(),
             Summary: unifiedgosdk.Pointer("Cur aeternus cogito vesper."),
             TargetBranchIdentifier: unifiedgosdk.Pointer("agent/joshingly-ignorance"),
             TokensUsed: unifiedgosdk.Pointer[float64](2165.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-03-06T12:08:36.011Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-06T21:32:07.332Z"),
             WebURL: unifiedgosdk.Pointer("https://inexperienced-adrenalin.biz/"),
         },
         ConnectionID: "<id>",
@@ -1783,11 +1783,11 @@ func main() {
         GenaiAgent: shared.GenaiAgent{
             CreatedAt: types.MustNewTimeFromString("2020-12-18T02:23:33.723Z"),
             Description: unifiedgosdk.Pointer("Assentator tero sequi."),
-            ID: unifiedgosdk.Pointer("1370ad5a-3186-4eb0-986b-68c00bb34aa7"),
+            ID: unifiedgosdk.Pointer("5c438761-3255-43d0-88ee-d421b660f570"),
             Instructions: unifiedgosdk.Pointer("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum."),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("daughter with"),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-01T19:31:04.672Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-02T15:23:46.866Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1849,7 +1849,7 @@ func main() {
         GenaiMemory: shared.GenaiMemory{
             Content: unifiedgosdk.Pointer("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus."),
             CreatedAt: types.MustNewTimeFromString("2021-10-22T04:14:41.668Z"),
-            ID: unifiedgosdk.Pointer("6159e91f-6835-4ed6-8631-9d9d81607b71"),
+            ID: unifiedgosdk.Pointer("c4df4d28-1721-46eb-a118-2fe302b5f547"),
             Metadata: []shared.GenaiMetadata{
                 shared.GenaiMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateGenaiMetadataExtraDataMapOfAny(
@@ -1868,7 +1868,7 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("sponte.md"),
             Type: shared.GenaiMemoryTypeMemory.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-05-02T05:41:20.425Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-02T12:56:58.350Z"),
             UserIdentifier: unifiedgosdk.Pointer("9d170613-4338-447d-bdb6-8ea96a2d7513"),
         },
         ConnectionID: "<id>",
@@ -1931,10 +1931,10 @@ func main() {
         GenaiOrganization: shared.GenaiOrganization{
             CreatedAt: types.MustNewTimeFromString("2020-10-27T16:03:47.122Z"),
             Description: unifiedgosdk.Pointer("Voluptates abeo subseco."),
-            ID: unifiedgosdk.Pointer("2cefdf61-8b62-47d6-91e7-75d240f259c2"),
+            ID: unifiedgosdk.Pointer("fd267913-3bc9-42fd-a279-8e13965fba06"),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("officially about"),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-03T08:09:05.935Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-03T17:11:29.656Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1994,10 +1994,10 @@ func main() {
 
     res, err := s.Genai.UpdateGenaiTask(ctx, operations.UpdateGenaiTaskRequest{
         GenaiTask: shared.GenaiTask{
-            CompletedAt: types.MustNewTimeFromString("2025-10-18T14:15:30.739Z"),
+            CompletedAt: types.MustNewTimeFromString("2025-10-19T10:04:57.999Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-25T20:19:33.247Z"),
             FilesChanged: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("09cfab64-0642-4eaf-9a5f-e0843979b43e"),
+            ID: unifiedgosdk.Pointer("98443b7d-e4e0-45b5-9e51-9649215ca125"),
             Instructions: unifiedgosdk.Pointer("Benigne canonicus officiis solvo adsidue deleo angustus."),
             LinesAdded: unifiedgosdk.Pointer[float64](244.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](118.0),
@@ -2012,12 +2012,12 @@ func main() {
             PullrequestURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383"),
             RepoURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance"),
             SourceBranchIdentifier: unifiedgosdk.Pointer("main"),
-            StartedAt: types.MustNewTimeFromString("2024-06-02T23:14:02.157Z"),
+            StartedAt: types.MustNewTimeFromString("2024-06-03T13:34:46.477Z"),
             Status: shared.GenaiTaskStatusBlocked.ToPointer(),
             Summary: unifiedgosdk.Pointer("Cur aeternus cogito vesper."),
             TargetBranchIdentifier: unifiedgosdk.Pointer("agent/joshingly-ignorance"),
             TokensUsed: unifiedgosdk.Pointer[float64](2165.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-03-06T12:08:36.011Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-06T21:32:07.332Z"),
             WebURL: unifiedgosdk.Pointer("https://inexperienced-adrenalin.biz/"),
         },
         ConnectionID: "<id>",

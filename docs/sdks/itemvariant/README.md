@@ -43,7 +43,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-01-20T13:49:12.968Z"),
             Description: unifiedgosdk.Pointer("Stylish Salad designed to make you stand out with little looks"),
             Height: unifiedgosdk.Pointer[float64](54.0),
-            ID: unifiedgosdk.Pointer("89f1b087-1c97-45b4-afeb-db0ba2944951"),
+            ID: unifiedgosdk.Pointer("27e7ad14-81d2-4682-97a5-a983697cf9a4"),
             IsActive: unifiedgosdk.Pointer(true),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsVisible: unifiedgosdk.Pointer(false),
@@ -52,10 +52,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Hic desipio thorax."),
                     Height: unifiedgosdk.Pointer[float64](961.0),
-                    ID: unifiedgosdk.Pointer("fa7fc98c-82e7-4684-a72f-55c9d2c0c87e"),
+                    ID: unifiedgosdk.Pointer("cdb38b39-8566-468d-87e3-acb3e924c644"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("bc162186-7a47-4706-b635-da5da1e05073"),
+                            ID: unifiedgosdk.Pointer("bf0f28aa-4378-4ffc-8923-775445cbd29e"),
                             Slug: unifiedgosdk.Pointer("ubi"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "textus",
@@ -76,7 +76,7 @@ func main() {
                         },
                     )),
                     Format: shared.CommerceMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("8707ca85-c320-47b4-925a-cf78fb3030c9"),
+                    ID: unifiedgosdk.Pointer("fb8dd604-4836-4bae-b126-d4625ce8c5fe"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
@@ -87,7 +87,7 @@ func main() {
             Name: unifiedgosdk.Pointer("Chair"),
             Options: []shared.CommerceItemOption{
                 shared.CommerceItemOption{
-                    ID: unifiedgosdk.Pointer("f72f70bd-402a-455e-a26b-9ee8748ccbd0"),
+                    ID: unifiedgosdk.Pointer("672978ed-f75b-4654-9a9a-48abb5dd7fa7"),
                     Name: "Color",
                     Position: unifiedgosdk.Pointer[float64](1.0),
                     Values: []string{
@@ -95,7 +95,7 @@ func main() {
                     },
                 },
                 shared.CommerceItemOption{
-                    ID: unifiedgosdk.Pointer("6a7da590-b3a3-4a9f-b9a7-72c95ea6d18d"),
+                    ID: unifiedgosdk.Pointer("b2ad4e6c-f242-48a0-ba6a-e7e4839a2385"),
                     Name: "Size",
                     Position: unifiedgosdk.Pointer[float64](2.0),
                     Values: []string{
@@ -118,7 +118,7 @@ func main() {
                 "deserunt",
             },
             TotalStock: unifiedgosdk.Pointer[float64](436.0),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-27T23:10:04.185Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-28T20:06:01.750Z"),
             Weight: unifiedgosdk.Pointer[float64](46.0),
             WeightUnit: shared.CommerceItemvariantWeightUnitOz.ToPointer(),
             Width: unifiedgosdk.Pointer[float64](40.0),
@@ -293,7 +293,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-01-20T13:49:12.968Z"),
             Description: unifiedgosdk.Pointer("Stylish Salad designed to make you stand out with little looks"),
             Height: unifiedgosdk.Pointer[float64](54.0),
-            ID: unifiedgosdk.Pointer("5b5c886f-e46f-4a86-9f6c-9164afd8bd5b"),
+            ID: unifiedgosdk.Pointer("bce4c1d0-901e-41f7-9150-a2e04cb6d071"),
             IsActive: unifiedgosdk.Pointer(true),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsVisible: unifiedgosdk.Pointer(false),
@@ -302,10 +302,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Hic desipio thorax."),
                     Height: unifiedgosdk.Pointer[float64](961.0),
-                    ID: unifiedgosdk.Pointer("0b21f083-43e4-49cb-962e-4e15e6b2e38b"),
+                    ID: unifiedgosdk.Pointer("f9ed1799-0545-4cbd-9521-c9acd25cdb06"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("fedb810c-dfe3-416e-a8a2-b227c5a8dc18"),
+                            ID: unifiedgosdk.Pointer("fa9ac525-4323-4d6d-8c64-d124643fb73f"),
                             Slug: unifiedgosdk.Pointer("ubi"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "textus",
@@ -326,7 +326,7 @@ func main() {
                         },
                     )),
                     Format: shared.CommerceMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("1fb0a598-8732-469e-8268-d4efb83f44f5"),
+                    ID: unifiedgosdk.Pointer("3caf2db3-fb34-463e-8aea-1aa0a63f7eda"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
@@ -337,7 +337,7 @@ func main() {
             Name: unifiedgosdk.Pointer("Chair"),
             Options: []shared.CommerceItemOption{
                 shared.CommerceItemOption{
-                    ID: unifiedgosdk.Pointer("b62534f3-0bad-4236-a3ad-d43fc49b4f7e"),
+                    ID: unifiedgosdk.Pointer("88c8eb4b-4f59-42f4-a711-afc4d72b012e"),
                     Name: "Color",
                     Position: unifiedgosdk.Pointer[float64](1.0),
                     Values: []string{
@@ -345,7 +345,7 @@ func main() {
                     },
                 },
                 shared.CommerceItemOption{
-                    ID: unifiedgosdk.Pointer("06682bcc-3745-4a68-9e7b-eddde2a4b841"),
+                    ID: unifiedgosdk.Pointer("e113454a-37bc-41bf-b60c-a0f6c74a202b"),
                     Name: "Size",
                     Position: unifiedgosdk.Pointer[float64](2.0),
                     Values: []string{
@@ -368,7 +368,7 @@ func main() {
                 "deserunt",
             },
             TotalStock: unifiedgosdk.Pointer[float64](436.0),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-27T23:10:04.206Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-28T20:06:01.773Z"),
             Weight: unifiedgosdk.Pointer[float64](46.0),
             WeightUnit: shared.CommerceItemvariantWeightUnitOz.ToPointer(),
             Width: unifiedgosdk.Pointer[float64](40.0),
@@ -490,7 +490,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-01-20T13:49:12.968Z"),
             Description: unifiedgosdk.Pointer("Stylish Salad designed to make you stand out with little looks"),
             Height: unifiedgosdk.Pointer[float64](54.0),
-            ID: unifiedgosdk.Pointer("5b5c886f-e46f-4a86-9f6c-9164afd8bd5b"),
+            ID: unifiedgosdk.Pointer("bce4c1d0-901e-41f7-9150-a2e04cb6d071"),
             IsActive: unifiedgosdk.Pointer(true),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsVisible: unifiedgosdk.Pointer(false),
@@ -499,10 +499,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Hic desipio thorax."),
                     Height: unifiedgosdk.Pointer[float64](961.0),
-                    ID: unifiedgosdk.Pointer("0b21f083-43e4-49cb-962e-4e15e6b2e38b"),
+                    ID: unifiedgosdk.Pointer("f9ed1799-0545-4cbd-9521-c9acd25cdb06"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("fedb810c-dfe3-416e-a8a2-b227c5a8dc18"),
+                            ID: unifiedgosdk.Pointer("fa9ac525-4323-4d6d-8c64-d124643fb73f"),
                             Slug: unifiedgosdk.Pointer("ubi"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "textus",
@@ -523,7 +523,7 @@ func main() {
                         },
                     )),
                     Format: shared.CommerceMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("1fb0a598-8732-469e-8268-d4efb83f44f5"),
+                    ID: unifiedgosdk.Pointer("3caf2db3-fb34-463e-8aea-1aa0a63f7eda"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
@@ -534,7 +534,7 @@ func main() {
             Name: unifiedgosdk.Pointer("Chair"),
             Options: []shared.CommerceItemOption{
                 shared.CommerceItemOption{
-                    ID: unifiedgosdk.Pointer("b62534f3-0bad-4236-a3ad-d43fc49b4f7e"),
+                    ID: unifiedgosdk.Pointer("88c8eb4b-4f59-42f4-a711-afc4d72b012e"),
                     Name: "Color",
                     Position: unifiedgosdk.Pointer[float64](1.0),
                     Values: []string{
@@ -542,7 +542,7 @@ func main() {
                     },
                 },
                 shared.CommerceItemOption{
-                    ID: unifiedgosdk.Pointer("06682bcc-3745-4a68-9e7b-eddde2a4b841"),
+                    ID: unifiedgosdk.Pointer("e113454a-37bc-41bf-b60c-a0f6c74a202b"),
                     Name: "Size",
                     Position: unifiedgosdk.Pointer[float64](2.0),
                     Values: []string{
@@ -565,7 +565,7 @@ func main() {
                 "deserunt",
             },
             TotalStock: unifiedgosdk.Pointer[float64](436.0),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-27T23:10:04.206Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-28T20:06:01.773Z"),
             Weight: unifiedgosdk.Pointer[float64](46.0),
             WeightUnit: shared.CommerceItemvariantWeightUnitOz.ToPointer(),
             Width: unifiedgosdk.Pointer[float64](40.0),
