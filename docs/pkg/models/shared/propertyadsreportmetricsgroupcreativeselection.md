@@ -22,3 +22,5 @@ custom := shared.PropertyAdsReportMetricsGroupCreativeSelection("custom_value")
 | ---------------------------------------------------------- | ---------------------------------------------------------- |
 | `PropertyAdsReportMetricsGroupCreativeSelectionOptimized`  | OPTIMIZED                                                  |
 | `PropertyAdsReportMetricsGroupCreativeSelectionRoundRobin` | ROUND_ROBIN                                                |
+| `PropertyAdsReportMetricsGroupCreativeSelectionWeighted`   | WEIGHTED                                                   |
+| `PropertyAdsReportMetricsGroupCreativeSelectionSequential` | SEQUENTIAL                                                 |

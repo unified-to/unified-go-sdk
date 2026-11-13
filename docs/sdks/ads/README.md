@@ -17,6 +17,7 @@
 * [GetAdsCreative](#getadscreative) - Retrieve a creative
 * [GetAdsGroup](#getadsgroup) - Retrieve a group
 * [GetAdsInsertionorder](#getadsinsertionorder) - Retrieve an insertionorder
+* [GetAdsInventory](#getadsinventory) - Retrieve an inventory
 * [GetAdsOrganization](#getadsorganization) - Retrieve an organization
 * [GetAdsPromoted](#getadspromoted) - Retrieve a promoted
 * [GetAdsTarget](#getadstarget) - Retrieve a target
@@ -26,6 +27,7 @@
 * [ListAdsCreatives](#listadscreatives) - List all creatives
 * [ListAdsGroups](#listadsgroups) - List all groups
 * [ListAdsInsertionorders](#listadsinsertionorders) - List all insertionorders
+* [ListAdsInventories](#listadsinventories) - List all inventories
 * [ListAdsOrganizations](#listadsorganizations) - List all organizations
 * [ListAdsPromoteds](#listadspromoteds) - List all promoteds
 * [ListAdsReports](#listadsreports) - List all reports
@@ -84,11 +86,11 @@ func main() {
             CreativeAssetURL: unifiedgosdk.Pointer("https://picsum.photos/seed/LwOzrpr9/948/2793"),
             Description: unifiedgosdk.Pointer("Accedo vespillo carpo dolor decet stillicidium comptus tenuis."),
             FinalURL: unifiedgosdk.Pointer("https://improbable-sanity.com"),
-            ID: unifiedgosdk.Pointer("c74d0bdd-69c8-4767-a8fe-7cd83e0abd19"),
+            ID: unifiedgosdk.Pointer("411090df-d8ff-4bc5-9667-8c73aace280f"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Hermiston Group"),
             Status: shared.AdsAdStatusArchived.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-06-27T13:09:02.620Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-06-27T22:45:14.670Z"),
         },
         ConnectionID: "<id>",
     })
@@ -149,12 +151,12 @@ func main() {
         AdsAsset: shared.AdsAsset{
             CreatedAt: types.MustNewTimeFromString("2020-03-27T20:14:38.603Z"),
             Height: unifiedgosdk.Pointer[float64](400.0),
-            ID: unifiedgosdk.Pointer("6ea5083d-139b-4090-bb3f-f251230b7f7d"),
+            ID: unifiedgosdk.Pointer("1a3c6ed5-b77b-40e2-b109-a250430673ea"),
             Metadata: []shared.AdsMetadata{},
             MimeType: unifiedgosdk.Pointer("IMAGE_PNG"),
             Name: unifiedgosdk.Pointer("Lockman - DuBuque"),
             Type: shared.AdsAssetTypeImage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-03-31T20:54:42.881Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-04-01T04:03:14.221Z"),
             URL: unifiedgosdk.Pointer("https://informal-perfection.com/"),
             Width: unifiedgosdk.Pointer[float64](600.0),
         },
@@ -221,18 +223,18 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-05-21T08:51:41.868Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             EffectiveStatus: shared.EffectiveStatusNotEligible.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2025-06-16T01:52:37.794Z"),
-            ID: unifiedgosdk.Pointer("10880dc5-22f2-422e-a815-6b8c6ed37181"),
+            EndAt: types.MustNewTimeFromString("2025-06-16T18:01:34.522Z"),
+            ID: unifiedgosdk.Pointer("2f289a21-6b13-4646-aeeb-3c8b4eee487a"),
             Labels: []string{
                 "comedo",
             },
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Emard Inc"),
-            StartAt: types.MustNewTimeFromString("2022-07-22T06:50:28.696Z"),
+            StartAt: types.MustNewTimeFromString("2022-07-22T07:43:57.713Z"),
             Status: shared.AdsCampaignStatusProcessingFailed.ToPointer(),
             Targeting: &shared.PropertyAdsCampaignTargeting{},
             TotalSpendAmount: unifiedgosdk.Pointer[float64](2349.8642875347286),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-19T14:46:37.560Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-20T10:03:28.975Z"),
         },
         ConnectionID: "<id>",
     })
@@ -292,7 +294,7 @@ func main() {
     res, err := s.Ads.CreateAdsCreative(ctx, operations.CreateAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{
             CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
-            ID: unifiedgosdk.Pointer("1e6bdecb-e8a5-48cc-adbd-19701ce0c40c"),
+            ID: unifiedgosdk.Pointer("3206da5a-141a-423b-ab7d-9f1d69b7b1f0"),
             Labels: []string{
                 "coma",
                 "accedo",
@@ -301,7 +303,7 @@ func main() {
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Brekke, Bradtke and Robel"),
             Status: shared.AdsCreativeStatusPaused.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-07-02T05:52:32.247Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-02T10:40:12.302Z"),
         },
         ConnectionID: "<id>",
     })
@@ -366,15 +368,15 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-08-29T17:59:41.045Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             EffectiveStatus: shared.AdsGroupEffectiveStatusPaused.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2026-07-16T02:05:46.237Z"),
-            ID: unifiedgosdk.Pointer("761df82c-0620-4b7c-b228-12e5a286a1a2"),
+            EndAt: types.MustNewTimeFromString("2026-07-17T00:34:47.757Z"),
+            ID: unifiedgosdk.Pointer("42f1bcf1-7196-4d38-ae00-1b7332a71465"),
             LanguageLocale: unifiedgosdk.Pointer("fr-FR"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Stark - Baumbach"),
-            StartAt: types.MustNewTimeFromString("2026-01-28T21:33:36.045Z"),
+            StartAt: types.MustNewTimeFromString("2026-01-29T18:32:18.917Z"),
             Status: shared.AdsGroupStatusProcessing.ToPointer(),
             Targeting: &shared.PropertyAdsGroupTargeting{},
-            UpdatedAt: types.MustNewTimeFromString("2022-01-20T23:59:49.161Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-21T07:49:47.630Z"),
         },
         ConnectionID: "<id>",
     })
@@ -434,11 +436,11 @@ func main() {
     res, err := s.Ads.CreateAdsInsertionorder(ctx, operations.CreateAdsInsertionorderRequest{
         AdsInsertionorder: shared.AdsInsertionorder{
             CreatedAt: types.MustNewTimeFromString("2021-04-10T06:57:36.611Z"),
-            ID: unifiedgosdk.Pointer("e3cddd4d-cc23-4bb8-bb26-b43fffe89fb4"),
+            ID: unifiedgosdk.Pointer("eac664f9-d61f-4fdc-98a7-4aaeb2f429f3"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Kunde, Smith and Reinger"),
             Status: shared.AdsInsertionorderStatusUnspecified.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-29T00:38:26.218Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-29T00:51:24.173Z"),
         },
         ConnectionID: "<id>",
     })
@@ -500,13 +502,13 @@ func main() {
             AccountNumber: unifiedgosdk.Pointer("LQUJx8zQBW"),
             CreatedAt: types.MustNewTimeFromString("2020-07-23T21:47:11.440Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("dd2182e7-e57d-4fd9-936f-c743f64e6b36"),
+            ID: unifiedgosdk.Pointer("eb623fa1-c848-469d-9036-1fdacac33e8f"),
             Managers: []shared.AdsManager{},
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Ankunding Inc"),
             Status: shared.AdsOrganizationStatusProcessing.ToPointer(),
             Timezone: unifiedgosdk.Pointer("Europe/Chisinau"),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-18T03:46:06.297Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-19T01:11:25.317Z"),
         },
         ConnectionID: "<id>",
     })
@@ -860,6 +862,61 @@ func main() {
 ### Response
 
 **[*operations.GetAdsInsertionorderResponse](../../pkg/models/operations/getadsinsertionorderresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetAdsInventory
+
+Retrieves a single AdsInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getAdsInventory" method="get" path="/ads/{connection_id}/inventory/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ads.GetAdsInventory(ctx, operations.GetAdsInventoryRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AdsInventory != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.GetAdsInventoryRequest](../../pkg/models/operations/getadsinventoryrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+
+### Response
+
+**[*operations.GetAdsInventoryResponse](../../pkg/models/operations/getadsinventoryresponse.md), error**
 
 ### Errors
 
@@ -1356,6 +1413,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListAdsInventories
+
+Returns a list of AdsInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listAdsInventories" method="get" path="/ads/{connection_id}/inventory" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ads.ListAdsInventories(ctx, operations.ListAdsInventoriesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AdsInventories != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.ListAdsInventoriesRequest](../../pkg/models/operations/listadsinventoriesrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.ListAdsInventoriesResponse](../../pkg/models/operations/listadsinventoriesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListAdsOrganizations
 
 Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1607,11 +1718,11 @@ func main() {
             CreativeAssetURL: unifiedgosdk.Pointer("https://picsum.photos/seed/LwOzrpr9/948/2793"),
             Description: unifiedgosdk.Pointer("Accedo vespillo carpo dolor decet stillicidium comptus tenuis."),
             FinalURL: unifiedgosdk.Pointer("https://improbable-sanity.com"),
-            ID: unifiedgosdk.Pointer("0fee2f12-c8bb-4bc4-a4ff-c6a6b6766abf"),
+            ID: unifiedgosdk.Pointer("97c3581d-1ed3-449d-aeec-127eb846a9ea"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Hermiston Group"),
             Status: shared.AdsAdStatusArchived.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-06-27T13:09:02.628Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-06-27T22:45:14.682Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1677,18 +1788,18 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-05-21T08:51:41.868Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             EffectiveStatus: shared.EffectiveStatusNotEligible.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2025-06-16T01:52:37.877Z"),
-            ID: unifiedgosdk.Pointer("00b471b1-e3e2-4102-b88d-3bdf9fc8dd65"),
+            EndAt: types.MustNewTimeFromString("2025-06-16T18:01:34.593Z"),
+            ID: unifiedgosdk.Pointer("e2aa0df7-042e-416c-b6c4-02b84ae64e5c"),
             Labels: []string{
                 "comedo",
             },
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Emard Inc"),
-            StartAt: types.MustNewTimeFromString("2022-07-22T06:50:28.701Z"),
+            StartAt: types.MustNewTimeFromString("2022-07-22T07:43:57.717Z"),
             Status: shared.AdsCampaignStatusProcessingFailed.ToPointer(),
             Targeting: &shared.PropertyAdsCampaignTargeting{},
             TotalSpendAmount: unifiedgosdk.Pointer[float64](2349.8642875347286),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-19T14:46:37.659Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-20T10:03:29.059Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1749,7 +1860,7 @@ func main() {
     res, err := s.Ads.PatchAdsCreative(ctx, operations.PatchAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{
             CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
-            ID: unifiedgosdk.Pointer("6b953613-7b3d-4a15-b939-4c9731d4b8c5"),
+            ID: unifiedgosdk.Pointer("784ee416-5347-4778-890c-306e468cfa65"),
             Labels: []string{
                 "coma",
                 "accedo",
@@ -1758,7 +1869,7 @@ func main() {
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Brekke, Bradtke and Robel"),
             Status: shared.AdsCreativeStatusPaused.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-07-02T05:52:32.252Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-02T10:40:12.306Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1824,15 +1935,15 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-08-29T17:59:41.045Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             EffectiveStatus: shared.AdsGroupEffectiveStatusPaused.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2026-07-16T02:05:46.353Z"),
-            ID: unifiedgosdk.Pointer("6272901f-841a-438c-92ac-25fc1d5dd785"),
+            EndAt: types.MustNewTimeFromString("2026-07-17T00:34:47.867Z"),
+            ID: unifiedgosdk.Pointer("d3e2e1fc-e042-44c4-b7e4-ca01dfedc5b5"),
             LanguageLocale: unifiedgosdk.Pointer("fr-FR"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Stark - Baumbach"),
-            StartAt: types.MustNewTimeFromString("2026-01-28T21:33:36.154Z"),
+            StartAt: types.MustNewTimeFromString("2026-01-29T18:32:19.020Z"),
             Status: shared.AdsGroupStatusProcessing.ToPointer(),
             Targeting: &shared.PropertyAdsGroupTargeting{},
-            UpdatedAt: types.MustNewTimeFromString("2022-01-20T23:59:49.201Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-21T07:49:47.668Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1893,11 +2004,11 @@ func main() {
     res, err := s.Ads.PatchAdsInsertionorder(ctx, operations.PatchAdsInsertionorderRequest{
         AdsInsertionorder: shared.AdsInsertionorder{
             CreatedAt: types.MustNewTimeFromString("2021-04-10T06:57:36.611Z"),
-            ID: unifiedgosdk.Pointer("961231fc-1da9-4beb-913c-04a276fbc553"),
+            ID: unifiedgosdk.Pointer("0da68a6e-0a6e-42c5-9a5c-821508ca4985"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Kunde, Smith and Reinger"),
             Status: shared.AdsInsertionorderStatusUnspecified.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-29T00:38:26.219Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-29T00:51:24.173Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1960,13 +2071,13 @@ func main() {
             AccountNumber: unifiedgosdk.Pointer("LQUJx8zQBW"),
             CreatedAt: types.MustNewTimeFromString("2020-07-23T21:47:11.440Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("c60068b6-b100-4f4d-a2a9-dc1c33f8678c"),
+            ID: unifiedgosdk.Pointer("f99356ae-45de-46c8-87c0-51bd7291e37e"),
             Managers: []shared.AdsManager{},
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Ankunding Inc"),
             Status: shared.AdsOrganizationStatusProcessing.ToPointer(),
             Timezone: unifiedgosdk.Pointer("Europe/Chisinau"),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-18T03:46:06.304Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-19T01:11:25.326Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2363,11 +2474,11 @@ func main() {
             CreativeAssetURL: unifiedgosdk.Pointer("https://picsum.photos/seed/LwOzrpr9/948/2793"),
             Description: unifiedgosdk.Pointer("Accedo vespillo carpo dolor decet stillicidium comptus tenuis."),
             FinalURL: unifiedgosdk.Pointer("https://improbable-sanity.com"),
-            ID: unifiedgosdk.Pointer("0fee2f12-c8bb-4bc4-a4ff-c6a6b6766abf"),
+            ID: unifiedgosdk.Pointer("97c3581d-1ed3-449d-aeec-127eb846a9ea"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Hermiston Group"),
             Status: shared.AdsAdStatusArchived.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-06-27T13:09:02.628Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-06-27T22:45:14.682Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2433,18 +2544,18 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-05-21T08:51:41.868Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             EffectiveStatus: shared.EffectiveStatusNotEligible.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2025-06-16T01:52:37.877Z"),
-            ID: unifiedgosdk.Pointer("00b471b1-e3e2-4102-b88d-3bdf9fc8dd65"),
+            EndAt: types.MustNewTimeFromString("2025-06-16T18:01:34.593Z"),
+            ID: unifiedgosdk.Pointer("e2aa0df7-042e-416c-b6c4-02b84ae64e5c"),
             Labels: []string{
                 "comedo",
             },
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Emard Inc"),
-            StartAt: types.MustNewTimeFromString("2022-07-22T06:50:28.701Z"),
+            StartAt: types.MustNewTimeFromString("2022-07-22T07:43:57.717Z"),
             Status: shared.AdsCampaignStatusProcessingFailed.ToPointer(),
             Targeting: &shared.PropertyAdsCampaignTargeting{},
             TotalSpendAmount: unifiedgosdk.Pointer[float64](2349.8642875347286),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-19T14:46:37.659Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-20T10:03:29.059Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2505,7 +2616,7 @@ func main() {
     res, err := s.Ads.UpdateAdsCreative(ctx, operations.UpdateAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{
             CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
-            ID: unifiedgosdk.Pointer("6b953613-7b3d-4a15-b939-4c9731d4b8c5"),
+            ID: unifiedgosdk.Pointer("784ee416-5347-4778-890c-306e468cfa65"),
             Labels: []string{
                 "coma",
                 "accedo",
@@ -2514,7 +2625,7 @@ func main() {
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Brekke, Bradtke and Robel"),
             Status: shared.AdsCreativeStatusPaused.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-07-02T05:52:32.252Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-02T10:40:12.306Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2580,15 +2691,15 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-08-29T17:59:41.045Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             EffectiveStatus: shared.AdsGroupEffectiveStatusPaused.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2026-07-16T02:05:46.353Z"),
-            ID: unifiedgosdk.Pointer("6272901f-841a-438c-92ac-25fc1d5dd785"),
+            EndAt: types.MustNewTimeFromString("2026-07-17T00:34:47.867Z"),
+            ID: unifiedgosdk.Pointer("d3e2e1fc-e042-44c4-b7e4-ca01dfedc5b5"),
             LanguageLocale: unifiedgosdk.Pointer("fr-FR"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Stark - Baumbach"),
-            StartAt: types.MustNewTimeFromString("2026-01-28T21:33:36.154Z"),
+            StartAt: types.MustNewTimeFromString("2026-01-29T18:32:19.020Z"),
             Status: shared.AdsGroupStatusProcessing.ToPointer(),
             Targeting: &shared.PropertyAdsGroupTargeting{},
-            UpdatedAt: types.MustNewTimeFromString("2022-01-20T23:59:49.201Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-21T07:49:47.668Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2649,11 +2760,11 @@ func main() {
     res, err := s.Ads.UpdateAdsInsertionorder(ctx, operations.UpdateAdsInsertionorderRequest{
         AdsInsertionorder: shared.AdsInsertionorder{
             CreatedAt: types.MustNewTimeFromString("2021-04-10T06:57:36.611Z"),
-            ID: unifiedgosdk.Pointer("961231fc-1da9-4beb-913c-04a276fbc553"),
+            ID: unifiedgosdk.Pointer("0da68a6e-0a6e-42c5-9a5c-821508ca4985"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Kunde, Smith and Reinger"),
             Status: shared.AdsInsertionorderStatusUnspecified.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-29T00:38:26.219Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-29T00:51:24.173Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2716,13 +2827,13 @@ func main() {
             AccountNumber: unifiedgosdk.Pointer("LQUJx8zQBW"),
             CreatedAt: types.MustNewTimeFromString("2020-07-23T21:47:11.440Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("c60068b6-b100-4f4d-a2a9-dc1c33f8678c"),
+            ID: unifiedgosdk.Pointer("f99356ae-45de-46c8-87c0-51bd7291e37e"),
             Managers: []shared.AdsManager{},
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Ankunding Inc"),
             Status: shared.AdsOrganizationStatusProcessing.ToPointer(),
             Timezone: unifiedgosdk.Pointer("Europe/Chisinau"),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-18T03:46:06.304Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-19T01:11:25.326Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

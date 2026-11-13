@@ -175,6 +175,7 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeAdsInsertionorder`             | ads_insertionorder                               |
 | `WebhookObjectTypeAdsTarget`                     | ads_target                                       |
 | `WebhookObjectTypeAdsPromoted`                   | ads_promoted                                     |
+| `WebhookObjectTypeAdsInventory`                  | ads_inventory                                    |
 | `WebhookObjectTypeAnalyticsProperty`             | analytics_property                               |
 | `WebhookObjectTypeAnalyticsEvent`                | analytics_event                                  |
 | `WebhookObjectTypeAnalyticsSession`              | analytics_session                                |

@@ -1,0 +1,12 @@
+# PropertyAdsGroupDeliveryGoal
+
+Booked delivery goal (Google Ad Manager goal)
+
+
+## Fields
+
+| Field                                                                                                          | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `Period`                                                                                                       | [*shared.PropertyAdsGroupDeliveryGoalPeriod](../../../pkg/models/shared/propertyadsgroupdeliverygoalperiod.md) | :heavy_minus_sign:                                                                                             | N/A                                                                                                            |
+| `Quantity`                                                                                                     | `*float64`                                                                                                     | :heavy_minus_sign:                                                                                             | N/A                                                                                                            |
+| `Unit`                                                                                                         | [*shared.PropertyAdsGroupDeliveryGoalUnit](../../../pkg/models/shared/propertyadsgroupdeliverygoalunit.md)     | :heavy_minus_sign:                                                                                             | N/A                                                                                                            |

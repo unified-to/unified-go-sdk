@@ -41,9 +41,9 @@ func main() {
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
             Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
-            ID: unifiedgosdk.Pointer("3c70119f-fa87-4e91-9c92-e9440a7c8ad2"),
+            ID: unifiedgosdk.Pointer("7b805518-2d3e-410a-996d-639e4ae685c8"),
             Metadata: []shared.TicketingMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2024-10-15T01:01:31.826Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-15T17:53:04.540Z"),
         },
         ConnectionID: "<id>",
     })
@@ -213,9 +213,9 @@ func main() {
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
             Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
-            ID: unifiedgosdk.Pointer("e97fe9a2-4b63-4151-831b-3d68f56e32fa"),
+            ID: unifiedgosdk.Pointer("fa6cd2b5-0324-47e8-a784-69f2a3627190"),
             Metadata: []shared.TicketingMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2024-10-15T01:01:31.833Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-15T17:53:04.545Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -332,9 +332,9 @@ func main() {
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
             Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
-            ID: unifiedgosdk.Pointer("e97fe9a2-4b63-4151-831b-3d68f56e32fa"),
+            ID: unifiedgosdk.Pointer("fa6cd2b5-0324-47e8-a784-69f2a3627190"),
             Metadata: []shared.TicketingMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2024-10-15T01:01:31.833Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-15T17:53:04.545Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -48,3 +48,8 @@ value := operations.CreateAdsGroupQueryParamFieldsID
 | `CreateAdsGroupQueryParamFieldsCreativeSelection`    | creative_selection                                   |
 | `CreateAdsGroupQueryParamFieldsMetadata`             | metadata                                             |
 | `CreateAdsGroupQueryParamFieldsRaw`                  | raw                                                  |
+| `CreateAdsGroupQueryParamFieldsDeliveryType`         | delivery_type                                        |
+| `CreateAdsGroupQueryParamFieldsPriority`             | priority                                             |
+| `CreateAdsGroupQueryParamFieldsCostType`             | cost_type                                            |
+| `CreateAdsGroupQueryParamFieldsDeliveryGoal`         | delivery_goal                                        |
+| `CreateAdsGroupQueryParamFieldsCreativeSizes`        | creative_sizes                                       |

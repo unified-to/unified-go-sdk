@@ -6,19 +6,24 @@ package shared
 type AdsTargetType string
 
 const (
-	AdsTargetTypeInterest    AdsTargetType = "INTEREST"
-	AdsTargetTypeBehavior    AdsTargetType = "BEHAVIOR"
-	AdsTargetTypeLocale      AdsTargetType = "LOCALE"
-	AdsTargetTypeCountry     AdsTargetType = "COUNTRY"
-	AdsTargetTypeRegion      AdsTargetType = "REGION"
-	AdsTargetTypeCity        AdsTargetType = "CITY"
-	AdsTargetTypeZip         AdsTargetType = "ZIP"
-	AdsTargetTypeUsDma       AdsTargetType = "US_DMA"
-	AdsTargetTypeTopic       AdsTargetType = "TOPIC"
-	AdsTargetTypeUserList    AdsTargetType = "USER_LIST"
-	AdsTargetTypeCarrier     AdsTargetType = "CARRIER"
-	AdsTargetTypeDeviceModel AdsTargetType = "DEVICE_MODEL"
-	AdsTargetTypeOsVersion   AdsTargetType = "OS_VERSION"
+	AdsTargetTypeInterest        AdsTargetType = "INTEREST"
+	AdsTargetTypeBehavior        AdsTargetType = "BEHAVIOR"
+	AdsTargetTypeLocale          AdsTargetType = "LOCALE"
+	AdsTargetTypeCountry         AdsTargetType = "COUNTRY"
+	AdsTargetTypeRegion          AdsTargetType = "REGION"
+	AdsTargetTypeCity            AdsTargetType = "CITY"
+	AdsTargetTypeZip             AdsTargetType = "ZIP"
+	AdsTargetTypeUsDma           AdsTargetType = "US_DMA"
+	AdsTargetTypeTopic           AdsTargetType = "TOPIC"
+	AdsTargetTypeUserList        AdsTargetType = "USER_LIST"
+	AdsTargetTypeCarrier         AdsTargetType = "CARRIER"
+	AdsTargetTypeDeviceModel     AdsTargetType = "DEVICE_MODEL"
+	AdsTargetTypeOsVersion       AdsTargetType = "OS_VERSION"
+	AdsTargetTypeCustomKey       AdsTargetType = "CUSTOM_KEY"
+	AdsTargetTypeCustomValue     AdsTargetType = "CUSTOM_VALUE"
+	AdsTargetTypeBrowser         AdsTargetType = "BROWSER"
+	AdsTargetTypeOperatingSystem AdsTargetType = "OPERATING_SYSTEM"
+	AdsTargetTypeDeviceCategory  AdsTargetType = "DEVICE_CATEGORY"
 )
 
 func (e AdsTargetType) ToPointer() *AdsTargetType {
@@ -29,7 +34,7 @@ func (e AdsTargetType) ToPointer() *AdsTargetType {
 func (e *AdsTargetType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "INTEREST", "BEHAVIOR", "LOCALE", "COUNTRY", "REGION", "CITY", "ZIP", "US_DMA", "TOPIC", "USER_LIST", "CARRIER", "DEVICE_MODEL", "OS_VERSION":
+		case "INTEREST", "BEHAVIOR", "LOCALE", "COUNTRY", "REGION", "CITY", "ZIP", "US_DMA", "TOPIC", "USER_LIST", "CARRIER", "DEVICE_MODEL", "OS_VERSION", "CUSTOM_KEY", "CUSTOM_VALUE", "BROWSER", "OPERATING_SYSTEM", "DEVICE_CATEGORY":
 			return true
 		}
 	}

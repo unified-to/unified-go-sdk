@@ -109,12 +109,42 @@ func (e *PropertyAdsReportMetricsGroupBudgetUnit) IsExact() bool {
 	return false
 }
 
+// PropertyAdsReportMetricsGroupCostType - How the line item is priced (Google Ad Manager costType)
+type PropertyAdsReportMetricsGroupCostType string
+
+const (
+	PropertyAdsReportMetricsGroupCostTypeCpm         PropertyAdsReportMetricsGroupCostType = "CPM"
+	PropertyAdsReportMetricsGroupCostTypeViewableCpm PropertyAdsReportMetricsGroupCostType = "VIEWABLE_CPM"
+	PropertyAdsReportMetricsGroupCostTypeCpc         PropertyAdsReportMetricsGroupCostType = "CPC"
+	PropertyAdsReportMetricsGroupCostTypeCpd         PropertyAdsReportMetricsGroupCostType = "CPD"
+	PropertyAdsReportMetricsGroupCostTypeCpa         PropertyAdsReportMetricsGroupCostType = "CPA"
+	PropertyAdsReportMetricsGroupCostTypeCpcv        PropertyAdsReportMetricsGroupCostType = "CPCV"
+	PropertyAdsReportMetricsGroupCostTypeOther       PropertyAdsReportMetricsGroupCostType = "OTHER"
+)
+
+func (e PropertyAdsReportMetricsGroupCostType) ToPointer() *PropertyAdsReportMetricsGroupCostType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyAdsReportMetricsGroupCostType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "CPM", "VIEWABLE_CPM", "CPC", "CPD", "CPA", "CPCV", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 // PropertyAdsReportMetricsGroupCreativeSelection - Creative rotation strategy (LinkedIn creativeSelection)
 type PropertyAdsReportMetricsGroupCreativeSelection string
 
 const (
 	PropertyAdsReportMetricsGroupCreativeSelectionOptimized  PropertyAdsReportMetricsGroupCreativeSelection = "OPTIMIZED"
 	PropertyAdsReportMetricsGroupCreativeSelectionRoundRobin PropertyAdsReportMetricsGroupCreativeSelection = "ROUND_ROBIN"
+	PropertyAdsReportMetricsGroupCreativeSelectionWeighted   PropertyAdsReportMetricsGroupCreativeSelection = "WEIGHTED"
+	PropertyAdsReportMetricsGroupCreativeSelectionSequential PropertyAdsReportMetricsGroupCreativeSelection = "SEQUENTIAL"
 )
 
 func (e PropertyAdsReportMetricsGroupCreativeSelection) ToPointer() *PropertyAdsReportMetricsGroupCreativeSelection {
@@ -125,7 +155,38 @@ func (e PropertyAdsReportMetricsGroupCreativeSelection) ToPointer() *PropertyAds
 func (e *PropertyAdsReportMetricsGroupCreativeSelection) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "OPTIMIZED", "ROUND_ROBIN":
+		case "OPTIMIZED", "ROUND_ROBIN", "WEIGHTED", "SEQUENTIAL":
+			return true
+		}
+	}
+	return false
+}
+
+// PropertyAdsReportMetricsGroupDeliveryType - Ad server line item type / delivery class (Google Ad Manager lineItemType)
+type PropertyAdsReportMetricsGroupDeliveryType string
+
+const (
+	PropertyAdsReportMetricsGroupDeliveryTypeStandard      PropertyAdsReportMetricsGroupDeliveryType = "STANDARD"
+	PropertyAdsReportMetricsGroupDeliveryTypeSponsorship   PropertyAdsReportMetricsGroupDeliveryType = "SPONSORSHIP"
+	PropertyAdsReportMetricsGroupDeliveryTypeNetwork       PropertyAdsReportMetricsGroupDeliveryType = "NETWORK"
+	PropertyAdsReportMetricsGroupDeliveryTypeBulk          PropertyAdsReportMetricsGroupDeliveryType = "BULK"
+	PropertyAdsReportMetricsGroupDeliveryTypePricePriority PropertyAdsReportMetricsGroupDeliveryType = "PRICE_PRIORITY"
+	PropertyAdsReportMetricsGroupDeliveryTypeHouse         PropertyAdsReportMetricsGroupDeliveryType = "HOUSE"
+	PropertyAdsReportMetricsGroupDeliveryTypePreferredDeal PropertyAdsReportMetricsGroupDeliveryType = "PREFERRED_DEAL"
+	PropertyAdsReportMetricsGroupDeliveryTypeAdExchange    PropertyAdsReportMetricsGroupDeliveryType = "AD_EXCHANGE"
+	PropertyAdsReportMetricsGroupDeliveryTypeClickTracking PropertyAdsReportMetricsGroupDeliveryType = "CLICK_TRACKING"
+	PropertyAdsReportMetricsGroupDeliveryTypeOther         PropertyAdsReportMetricsGroupDeliveryType = "OTHER"
+)
+
+func (e PropertyAdsReportMetricsGroupDeliveryType) ToPointer() *PropertyAdsReportMetricsGroupDeliveryType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyAdsReportMetricsGroupDeliveryType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "STANDARD", "SPONSORSHIP", "NETWORK", "BULK", "PRICE_PRIORITY", "HOUSE", "PREFERRED_DEAL", "AD_EXCHANGE", "CLICK_TRACKING", "OTHER":
 			return true
 		}
 	}
@@ -274,13 +335,21 @@ type PropertyAdsReportMetricsGroup struct {
 	BudgetUnit           *PropertyAdsReportMetricsGroupBudgetUnit           `json:"budget_unit,omitempty"`
 	// The ID of the campaign the ad group belongs to (an AdsCampaign ID)
 	CampaignID *string `json:"campaign_id,omitempty"`
+	// How the line item is priced (Google Ad Manager costType)
+	CostType *PropertyAdsReportMetricsGroupCostType `json:"cost_type,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt   *time.Time `json:"created_at,omitempty"`
 	CreativeIds []string   `json:"creative_ids,omitempty"`
 	// Creative rotation strategy (LinkedIn creativeSelection)
 	CreativeSelection *PropertyAdsReportMetricsGroupCreativeSelection `json:"creative_selection,omitempty"`
-	Currency          *string                                         `json:"currency,omitempty"`
-	EffectiveStatus   *PropertyAdsReportMetricsGroupEffectiveStatus   `json:"effective_status,omitempty"`
+	// Expected creative sizes (Google Ad Manager creativePlaceholders)
+	CreativeSizes []AdsSize `json:"creative_sizes,omitempty"`
+	Currency      *string   `json:"currency,omitempty"`
+	// Booked delivery goal (Google Ad Manager goal)
+	DeliveryGoal *PropertyAdsReportMetricsGroupDeliveryGoal `json:"delivery_goal,omitempty"`
+	// Ad server line item type / delivery class (Google Ad Manager lineItemType)
+	DeliveryType    *PropertyAdsReportMetricsGroupDeliveryType    `json:"delivery_type,omitempty"`
+	EffectiveStatus *PropertyAdsReportMetricsGroupEffectiveStatus `json:"effective_status,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndAt             *time.Time                                 `json:"end_at,omitempty"`
 	FrequencyCap      *PropertyAdsReportMetricsGroupFrequencyCap `json:"frequency_cap,omitempty"`
@@ -297,8 +366,10 @@ type PropertyAdsReportMetricsGroup struct {
 	OrganizationID   *string                                        `json:"organization_id,omitempty"`
 	Pacing           *PropertyAdsReportMetricsGroupPacing           `json:"pacing,omitempty"`
 	ParentID         *string                                        `json:"parent_id,omitempty"`
-	Promoted         []AdsPromoted                                  `json:"promoted,omitempty"`
-	Raw              map[string]any                                 `json:"raw,omitempty"`
+	// Ad server delivery priority, lower serves first (Google Ad Manager priority, Kevel priority)
+	Priority *float64       `json:"priority,omitempty"`
+	Promoted []AdsPromoted  `json:"promoted,omitempty"`
+	Raw      map[string]any `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartAt   *time.Time                              `json:"start_at,omitempty"`
 	Status    *PropertyAdsReportMetricsGroupStatus    `json:"status,omitempty"`
@@ -382,6 +453,13 @@ func (p *PropertyAdsReportMetricsGroup) GetCampaignID() *string {
 	return p.CampaignID
 }
 
+func (p *PropertyAdsReportMetricsGroup) GetCostType() *PropertyAdsReportMetricsGroupCostType {
+	if p == nil {
+		return nil
+	}
+	return p.CostType
+}
+
 func (p *PropertyAdsReportMetricsGroup) GetCreatedAt() *time.Time {
 	if p == nil {
 		return nil
@@ -403,11 +481,32 @@ func (p *PropertyAdsReportMetricsGroup) GetCreativeSelection() *PropertyAdsRepor
 	return p.CreativeSelection
 }
 
+func (p *PropertyAdsReportMetricsGroup) GetCreativeSizes() []AdsSize {
+	if p == nil {
+		return nil
+	}
+	return p.CreativeSizes
+}
+
 func (p *PropertyAdsReportMetricsGroup) GetCurrency() *string {
 	if p == nil {
 		return nil
 	}
 	return p.Currency
+}
+
+func (p *PropertyAdsReportMetricsGroup) GetDeliveryGoal() *PropertyAdsReportMetricsGroupDeliveryGoal {
+	if p == nil {
+		return nil
+	}
+	return p.DeliveryGoal
+}
+
+func (p *PropertyAdsReportMetricsGroup) GetDeliveryType() *PropertyAdsReportMetricsGroupDeliveryType {
+	if p == nil {
+		return nil
+	}
+	return p.DeliveryType
 }
 
 func (p *PropertyAdsReportMetricsGroup) GetEffectiveStatus() *PropertyAdsReportMetricsGroupEffectiveStatus {
@@ -499,6 +598,13 @@ func (p *PropertyAdsReportMetricsGroup) GetParentID() *string {
 		return nil
 	}
 	return p.ParentID
+}
+
+func (p *PropertyAdsReportMetricsGroup) GetPriority() *float64 {
+	if p == nil {
+		return nil
+	}
+	return p.Priority
 }
 
 func (p *PropertyAdsReportMetricsGroup) GetPromoted() []AdsPromoted {

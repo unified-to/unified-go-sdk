@@ -75,7 +75,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Global"),
             EmploymentType: shared.EmploymentTypeFreelance.ToPointer(),
             HiringManagers: []shared.AtsReference{},
-            ID: unifiedgosdk.Pointer("af0094ff-f6af-4706-a5fc-d0c80cd5fdcc"),
+            ID: unifiedgosdk.Pointer("0582e242-8bc9-455a-ab81-5ade3ac6e01b"),
             Industry: unifiedgosdk.Pointer("Handcrafted Bamboo Soap"),
             LanguageLocale: unifiedgosdk.Pointer("en"),
             Metadata: []shared.AtsMetadata{
@@ -86,7 +86,7 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("9d39ffe2-11f3-4a50-ac73-d57bd1abf2eb"),
+                    ID: unifiedgosdk.Pointer("ff28c930-4a34-474e-a550-86e22d4953f8"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
@@ -101,7 +101,7 @@ func main() {
             Openings: []shared.AtsJobOpening{
                 shared.AtsJobOpening{
                     CloseReason: unifiedgosdk.Pointer("Admoveo trado textilis."),
-                    OpenedAt: types.MustNewTimeFromString("2026-06-27T11:28:18.383Z"),
+                    OpenedAt: types.MustNewTimeFromString("2026-06-28T08:25:02.867Z"),
                     Status: shared.AtsJobOpeningStatusOpen.ToPointer(),
                 },
             },
@@ -115,14 +115,14 @@ func main() {
                         Region: unifiedgosdk.Pointer("Wisconsin"),
                         RegionCode: unifiedgosdk.Pointer("CO"),
                     },
-                    CreatedAt: types.MustNewTimeFromString("2026-08-22T14:19:16.693Z"),
+                    CreatedAt: types.MustNewTimeFromString("2026-08-23T12:19:43.965Z"),
                     Description: unifiedgosdk.Pointer("Beatus eum volutabrum balbus victus ipsa tubineus claustrum."),
-                    ID: unifiedgosdk.Pointer("9edc617e-d647-4efd-8ab0-228631fb2db0"),
+                    ID: unifiedgosdk.Pointer("b3351d54-c3f0-4153-9131-e42d97366f93"),
                     IsActive: unifiedgosdk.Pointer(false),
                     Location: unifiedgosdk.Pointer("1725 Hessel Keys"),
                     Name: unifiedgosdk.Pointer("International Identity Manager"),
                     PostingURL: unifiedgosdk.Pointer("https://obedient-yak.com"),
-                    UpdatedAt: types.MustNewTimeFromString("2026-09-18T09:04:32.837Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2026-09-19T07:35:24.450Z"),
                 },
             },
             PublicJobUrls: []string{
@@ -132,7 +132,7 @@ func main() {
             Questions: []shared.AtsJobQuestion{
                 shared.AtsJobQuestion{
                     Description: unifiedgosdk.Pointer("Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado."),
-                    ID: unifiedgosdk.Pointer("3b52e614-39eb-48e8-95f3-5f6f96da6e4d"),
+                    ID: unifiedgosdk.Pointer("0228ea40-3e3d-4d20-b1f5-b4fec98dbf4b"),
                     MaxLength: unifiedgosdk.Pointer[float64](117.0),
                     MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
@@ -145,7 +145,7 @@ func main() {
                     Type: shared.AtsJobQuestionTypeText,
                 },
                 shared.AtsJobQuestion{
-                    ID: unifiedgosdk.Pointer("d5e4c865-2491-49aa-8555-0cf7e2835404"),
+                    ID: unifiedgosdk.Pointer("689d2876-f31e-4da9-9f65-eba1b2b7b8a6"),
                     MaxLength: unifiedgosdk.Pointer[float64](453.0),
                     MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
@@ -158,7 +158,7 @@ func main() {
                 },
                 shared.AtsJobQuestion{
                     Description: unifiedgosdk.Pointer("Taceo rem compello spectaculum mollitia arcus compello."),
-                    ID: unifiedgosdk.Pointer("d98e1212-5c34-4b7b-ad0b-c85fd9103783"),
+                    ID: unifiedgosdk.Pointer("dcd0f84d-0c17-4b1e-9cef-61338178704d"),
                     MaxLength: unifiedgosdk.Pointer[float64](66.0),
                     MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
@@ -176,7 +176,7 @@ func main() {
             },
             Status: shared.AtsJobStatusArchived.ToPointer(),
             Summary: unifiedgosdk.Pointer("Crepusculum adsuesco vere."),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-17T04:21:23.893Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-17T23:21:59.980Z"),
         },
         ConnectionID: "<id>",
     })
@@ -239,11 +239,11 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-10-28T01:13:19.491Z"),
             Description: unifiedgosdk.Pointer("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo."),
             EmploymentType: shared.HrisJobEmploymentTypeFreelance.ToPointer(),
-            ID: unifiedgosdk.Pointer("31df6efc-32dd-45c8-9c6f-32ed8009bcc1"),
+            ID: unifiedgosdk.Pointer("da37ffab-9383-433d-8e8c-c6f821cba56c"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Internal Integration Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-07T12:42:58.871Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-07T21:36:10.260Z"),
         },
         ConnectionID: "<id>",
     })
@@ -550,7 +550,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Global"),
             EmploymentType: shared.EmploymentTypeFreelance.ToPointer(),
             HiringManagers: []shared.AtsReference{},
-            ID: unifiedgosdk.Pointer("4cbea0cd-4856-4304-bdc3-d1a2b0a04110"),
+            ID: unifiedgosdk.Pointer("625c4b28-e51e-446e-a50d-b644b9643118"),
             Industry: unifiedgosdk.Pointer("Handcrafted Bamboo Soap"),
             LanguageLocale: unifiedgosdk.Pointer("en"),
             Metadata: []shared.AtsMetadata{
@@ -561,7 +561,7 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("8210bb8a-6d15-4a66-b1c3-89d6b7d42898"),
+                    ID: unifiedgosdk.Pointer("d3ad4988-4dad-43c4-b624-12920e95f1ea"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
@@ -576,7 +576,7 @@ func main() {
             Openings: []shared.AtsJobOpening{
                 shared.AtsJobOpening{
                     CloseReason: unifiedgosdk.Pointer("Admoveo trado textilis."),
-                    OpenedAt: types.MustNewTimeFromString("2026-06-27T11:28:18.417Z"),
+                    OpenedAt: types.MustNewTimeFromString("2026-06-28T08:25:02.905Z"),
                     Status: shared.AtsJobOpeningStatusOpen.ToPointer(),
                 },
             },
@@ -590,14 +590,14 @@ func main() {
                         Region: unifiedgosdk.Pointer("Wisconsin"),
                         RegionCode: unifiedgosdk.Pointer("CO"),
                     },
-                    CreatedAt: types.MustNewTimeFromString("2026-08-22T14:19:16.728Z"),
+                    CreatedAt: types.MustNewTimeFromString("2026-08-23T12:19:44.003Z"),
                     Description: unifiedgosdk.Pointer("Beatus eum volutabrum balbus victus ipsa tubineus claustrum."),
-                    ID: unifiedgosdk.Pointer("f03d4197-c8a4-4ab5-a84e-f1e48279d115"),
+                    ID: unifiedgosdk.Pointer("5c1cbb30-6887-4fe1-bb4a-891b616c57ef"),
                     IsActive: unifiedgosdk.Pointer(false),
                     Location: unifiedgosdk.Pointer("1725 Hessel Keys"),
                     Name: unifiedgosdk.Pointer("International Identity Manager"),
                     PostingURL: unifiedgosdk.Pointer("https://obedient-yak.com"),
-                    UpdatedAt: types.MustNewTimeFromString("2026-09-18T09:04:32.873Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2026-09-19T07:35:24.489Z"),
                 },
             },
             PublicJobUrls: []string{
@@ -607,7 +607,7 @@ func main() {
             Questions: []shared.AtsJobQuestion{
                 shared.AtsJobQuestion{
                     Description: unifiedgosdk.Pointer("Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado."),
-                    ID: unifiedgosdk.Pointer("2ada68d2-89da-42a0-9fa5-d02dde0f0337"),
+                    ID: unifiedgosdk.Pointer("1bafabf0-9cff-45d5-bb76-12db74124041"),
                     MaxLength: unifiedgosdk.Pointer[float64](117.0),
                     MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
@@ -620,7 +620,7 @@ func main() {
                     Type: shared.AtsJobQuestionTypeText,
                 },
                 shared.AtsJobQuestion{
-                    ID: unifiedgosdk.Pointer("5cb3d88f-4ee7-4054-b81f-b5378b6ecdd0"),
+                    ID: unifiedgosdk.Pointer("facabaf1-238a-424a-83f0-7fcc05e77d48"),
                     MaxLength: unifiedgosdk.Pointer[float64](453.0),
                     MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
@@ -633,7 +633,7 @@ func main() {
                 },
                 shared.AtsJobQuestion{
                     Description: unifiedgosdk.Pointer("Taceo rem compello spectaculum mollitia arcus compello."),
-                    ID: unifiedgosdk.Pointer("2736ce31-b54d-4943-8502-70317ecc2b6a"),
+                    ID: unifiedgosdk.Pointer("45fdfe48-e2e3-4a69-8f13-cc19c5fac4a0"),
                     MaxLength: unifiedgosdk.Pointer[float64](66.0),
                     MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
@@ -651,7 +651,7 @@ func main() {
             },
             Status: shared.AtsJobStatusArchived.ToPointer(),
             Summary: unifiedgosdk.Pointer("Crepusculum adsuesco vere."),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-17T04:21:23.924Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-17T23:22:00.014Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -715,11 +715,11 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-10-28T01:13:19.491Z"),
             Description: unifiedgosdk.Pointer("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo."),
             EmploymentType: shared.HrisJobEmploymentTypeFreelance.ToPointer(),
-            ID: unifiedgosdk.Pointer("51203b31-0f8c-4af3-9921-d6e3cf1ddda5"),
+            ID: unifiedgosdk.Pointer("b21ddaad-ae98-4445-972d-5b57e3a54e14"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Internal Integration Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-07T12:42:58.904Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-07T21:36:10.297Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -919,7 +919,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Global"),
             EmploymentType: shared.EmploymentTypeFreelance.ToPointer(),
             HiringManagers: []shared.AtsReference{},
-            ID: unifiedgosdk.Pointer("4cbea0cd-4856-4304-bdc3-d1a2b0a04110"),
+            ID: unifiedgosdk.Pointer("625c4b28-e51e-446e-a50d-b644b9643118"),
             Industry: unifiedgosdk.Pointer("Handcrafted Bamboo Soap"),
             LanguageLocale: unifiedgosdk.Pointer("en"),
             Metadata: []shared.AtsMetadata{
@@ -930,7 +930,7 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("8210bb8a-6d15-4a66-b1c3-89d6b7d42898"),
+                    ID: unifiedgosdk.Pointer("d3ad4988-4dad-43c4-b624-12920e95f1ea"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
@@ -945,7 +945,7 @@ func main() {
             Openings: []shared.AtsJobOpening{
                 shared.AtsJobOpening{
                     CloseReason: unifiedgosdk.Pointer("Admoveo trado textilis."),
-                    OpenedAt: types.MustNewTimeFromString("2026-06-27T11:28:18.417Z"),
+                    OpenedAt: types.MustNewTimeFromString("2026-06-28T08:25:02.905Z"),
                     Status: shared.AtsJobOpeningStatusOpen.ToPointer(),
                 },
             },
@@ -959,14 +959,14 @@ func main() {
                         Region: unifiedgosdk.Pointer("Wisconsin"),
                         RegionCode: unifiedgosdk.Pointer("CO"),
                     },
-                    CreatedAt: types.MustNewTimeFromString("2026-08-22T14:19:16.728Z"),
+                    CreatedAt: types.MustNewTimeFromString("2026-08-23T12:19:44.003Z"),
                     Description: unifiedgosdk.Pointer("Beatus eum volutabrum balbus victus ipsa tubineus claustrum."),
-                    ID: unifiedgosdk.Pointer("f03d4197-c8a4-4ab5-a84e-f1e48279d115"),
+                    ID: unifiedgosdk.Pointer("5c1cbb30-6887-4fe1-bb4a-891b616c57ef"),
                     IsActive: unifiedgosdk.Pointer(false),
                     Location: unifiedgosdk.Pointer("1725 Hessel Keys"),
                     Name: unifiedgosdk.Pointer("International Identity Manager"),
                     PostingURL: unifiedgosdk.Pointer("https://obedient-yak.com"),
-                    UpdatedAt: types.MustNewTimeFromString("2026-09-18T09:04:32.873Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2026-09-19T07:35:24.489Z"),
                 },
             },
             PublicJobUrls: []string{
@@ -976,7 +976,7 @@ func main() {
             Questions: []shared.AtsJobQuestion{
                 shared.AtsJobQuestion{
                     Description: unifiedgosdk.Pointer("Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado."),
-                    ID: unifiedgosdk.Pointer("2ada68d2-89da-42a0-9fa5-d02dde0f0337"),
+                    ID: unifiedgosdk.Pointer("1bafabf0-9cff-45d5-bb76-12db74124041"),
                     MaxLength: unifiedgosdk.Pointer[float64](117.0),
                     MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
@@ -989,7 +989,7 @@ func main() {
                     Type: shared.AtsJobQuestionTypeText,
                 },
                 shared.AtsJobQuestion{
-                    ID: unifiedgosdk.Pointer("5cb3d88f-4ee7-4054-b81f-b5378b6ecdd0"),
+                    ID: unifiedgosdk.Pointer("facabaf1-238a-424a-83f0-7fcc05e77d48"),
                     MaxLength: unifiedgosdk.Pointer[float64](453.0),
                     MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
@@ -1002,7 +1002,7 @@ func main() {
                 },
                 shared.AtsJobQuestion{
                     Description: unifiedgosdk.Pointer("Taceo rem compello spectaculum mollitia arcus compello."),
-                    ID: unifiedgosdk.Pointer("2736ce31-b54d-4943-8502-70317ecc2b6a"),
+                    ID: unifiedgosdk.Pointer("45fdfe48-e2e3-4a69-8f13-cc19c5fac4a0"),
                     MaxLength: unifiedgosdk.Pointer[float64](66.0),
                     MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
@@ -1020,7 +1020,7 @@ func main() {
             },
             Status: shared.AtsJobStatusArchived.ToPointer(),
             Summary: unifiedgosdk.Pointer("Crepusculum adsuesco vere."),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-17T04:21:23.924Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-17T23:22:00.014Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1084,11 +1084,11 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-10-28T01:13:19.491Z"),
             Description: unifiedgosdk.Pointer("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo."),
             EmploymentType: shared.HrisJobEmploymentTypeFreelance.ToPointer(),
-            ID: unifiedgosdk.Pointer("51203b31-0f8c-4af3-9921-d6e3cf1ddda5"),
+            ID: unifiedgosdk.Pointer("b21ddaad-ae98-4445-972d-5b57e3a54e14"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Internal Integration Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-07T12:42:58.904Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-07T21:36:10.297Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

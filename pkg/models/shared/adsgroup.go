@@ -109,12 +109,42 @@ func (e *AdsGroupBudgetUnit) IsExact() bool {
 	return false
 }
 
+// CostType - How the line item is priced (Google Ad Manager costType)
+type CostType string
+
+const (
+	CostTypeCpm         CostType = "CPM"
+	CostTypeViewableCpm CostType = "VIEWABLE_CPM"
+	CostTypeCpc         CostType = "CPC"
+	CostTypeCpd         CostType = "CPD"
+	CostTypeCpa         CostType = "CPA"
+	CostTypeCpcv        CostType = "CPCV"
+	CostTypeOther       CostType = "OTHER"
+)
+
+func (e CostType) ToPointer() *CostType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CostType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "CPM", "VIEWABLE_CPM", "CPC", "CPD", "CPA", "CPCV", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 // CreativeSelection - Creative rotation strategy (LinkedIn creativeSelection)
 type CreativeSelection string
 
 const (
 	CreativeSelectionOptimized  CreativeSelection = "OPTIMIZED"
 	CreativeSelectionRoundRobin CreativeSelection = "ROUND_ROBIN"
+	CreativeSelectionWeighted   CreativeSelection = "WEIGHTED"
+	CreativeSelectionSequential CreativeSelection = "SEQUENTIAL"
 )
 
 func (e CreativeSelection) ToPointer() *CreativeSelection {
@@ -125,7 +155,38 @@ func (e CreativeSelection) ToPointer() *CreativeSelection {
 func (e *CreativeSelection) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "OPTIMIZED", "ROUND_ROBIN":
+		case "OPTIMIZED", "ROUND_ROBIN", "WEIGHTED", "SEQUENTIAL":
+			return true
+		}
+	}
+	return false
+}
+
+// DeliveryType - Ad server line item type / delivery class (Google Ad Manager lineItemType)
+type DeliveryType string
+
+const (
+	DeliveryTypeStandard      DeliveryType = "STANDARD"
+	DeliveryTypeSponsorship   DeliveryType = "SPONSORSHIP"
+	DeliveryTypeNetwork       DeliveryType = "NETWORK"
+	DeliveryTypeBulk          DeliveryType = "BULK"
+	DeliveryTypePricePriority DeliveryType = "PRICE_PRIORITY"
+	DeliveryTypeHouse         DeliveryType = "HOUSE"
+	DeliveryTypePreferredDeal DeliveryType = "PREFERRED_DEAL"
+	DeliveryTypeAdExchange    DeliveryType = "AD_EXCHANGE"
+	DeliveryTypeClickTracking DeliveryType = "CLICK_TRACKING"
+	DeliveryTypeOther         DeliveryType = "OTHER"
+)
+
+func (e DeliveryType) ToPointer() *DeliveryType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *DeliveryType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "STANDARD", "SPONSORSHIP", "NETWORK", "BULK", "PRICE_PRIORITY", "HOUSE", "PREFERRED_DEAL", "AD_EXCHANGE", "CLICK_TRACKING", "OTHER":
 			return true
 		}
 	}
@@ -274,13 +335,21 @@ type AdsGroup struct {
 	BudgetUnit           *AdsGroupBudgetUnit   `json:"budget_unit,omitempty"`
 	// The ID of the campaign the ad group belongs to (an AdsCampaign ID)
 	CampaignID *string `json:"campaign_id,omitempty"`
+	// How the line item is priced (Google Ad Manager costType)
+	CostType *CostType `json:"cost_type,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt   *time.Time `json:"created_at,omitempty"`
 	CreativeIds []string   `json:"creative_ids,omitempty"`
 	// Creative rotation strategy (LinkedIn creativeSelection)
-	CreativeSelection *CreativeSelection       `json:"creative_selection,omitempty"`
-	Currency          *string                  `json:"currency,omitempty"`
-	EffectiveStatus   *AdsGroupEffectiveStatus `json:"effective_status,omitempty"`
+	CreativeSelection *CreativeSelection `json:"creative_selection,omitempty"`
+	// Expected creative sizes (Google Ad Manager creativePlaceholders)
+	CreativeSizes []AdsSize `json:"creative_sizes,omitempty"`
+	Currency      *string   `json:"currency,omitempty"`
+	// Booked delivery goal (Google Ad Manager goal)
+	DeliveryGoal *PropertyAdsGroupDeliveryGoal `json:"delivery_goal,omitempty"`
+	// Ad server line item type / delivery class (Google Ad Manager lineItemType)
+	DeliveryType    *DeliveryType            `json:"delivery_type,omitempty"`
+	EffectiveStatus *AdsGroupEffectiveStatus `json:"effective_status,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndAt             *time.Time                    `json:"end_at,omitempty"`
 	FrequencyCap      *PropertyAdsGroupFrequencyCap `json:"frequency_cap,omitempty"`
@@ -297,8 +366,10 @@ type AdsGroup struct {
 	OrganizationID   *string                 `json:"organization_id,omitempty"`
 	Pacing           *PropertyAdsGroupPacing `json:"pacing,omitempty"`
 	ParentID         *string                 `json:"parent_id,omitempty"`
-	Promoted         []AdsPromoted           `json:"promoted,omitempty"`
-	Raw              map[string]any          `json:"raw,omitempty"`
+	// Ad server delivery priority, lower serves first (Google Ad Manager priority, Kevel priority)
+	Priority *float64       `json:"priority,omitempty"`
+	Promoted []AdsPromoted  `json:"promoted,omitempty"`
+	Raw      map[string]any `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartAt   *time.Time                 `json:"start_at,omitempty"`
 	Status    *AdsGroupStatus            `json:"status,omitempty"`
@@ -382,6 +453,13 @@ func (a *AdsGroup) GetCampaignID() *string {
 	return a.CampaignID
 }
 
+func (a *AdsGroup) GetCostType() *CostType {
+	if a == nil {
+		return nil
+	}
+	return a.CostType
+}
+
 func (a *AdsGroup) GetCreatedAt() *time.Time {
 	if a == nil {
 		return nil
@@ -403,11 +481,32 @@ func (a *AdsGroup) GetCreativeSelection() *CreativeSelection {
 	return a.CreativeSelection
 }
 
+func (a *AdsGroup) GetCreativeSizes() []AdsSize {
+	if a == nil {
+		return nil
+	}
+	return a.CreativeSizes
+}
+
 func (a *AdsGroup) GetCurrency() *string {
 	if a == nil {
 		return nil
 	}
 	return a.Currency
+}
+
+func (a *AdsGroup) GetDeliveryGoal() *PropertyAdsGroupDeliveryGoal {
+	if a == nil {
+		return nil
+	}
+	return a.DeliveryGoal
+}
+
+func (a *AdsGroup) GetDeliveryType() *DeliveryType {
+	if a == nil {
+		return nil
+	}
+	return a.DeliveryType
 }
 
 func (a *AdsGroup) GetEffectiveStatus() *AdsGroupEffectiveStatus {
@@ -499,6 +598,13 @@ func (a *AdsGroup) GetParentID() *string {
 		return nil
 	}
 	return a.ParentID
+}
+
+func (a *AdsGroup) GetPriority() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.Priority
 }
 
 func (a *AdsGroup) GetPromoted() []AdsPromoted {

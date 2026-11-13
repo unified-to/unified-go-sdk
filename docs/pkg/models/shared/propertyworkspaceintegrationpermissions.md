@@ -304,6 +304,7 @@ custom := shared.PropertyWorkspaceIntegrationPermissions("custom_value")
 | `PropertyWorkspaceIntegrationPermissionsAdsInsertionorderWrite`             | ads_insertionorder_write                                                    |
 | `PropertyWorkspaceIntegrationPermissionsAdsTargetRead`                      | ads_target_read                                                             |
 | `PropertyWorkspaceIntegrationPermissionsAdsPromotedRead`                    | ads_promoted_read                                                           |
+| `PropertyWorkspaceIntegrationPermissionsAdsInventoryRead`                   | ads_inventory_read                                                          |
 | `PropertyWorkspaceIntegrationPermissionsAnalyticsPropertyRead`              | analytics_property_read                                                     |
 | `PropertyWorkspaceIntegrationPermissionsAnalyticsPropertyWrite`             | analytics_property_write                                                    |
 | `PropertyWorkspaceIntegrationPermissionsAnalyticsEventRead`                 | analytics_event_read                                                        |

@@ -48,3 +48,8 @@ value := operations.PatchAdsGroupQueryParamFieldsID
 | `PatchAdsGroupQueryParamFieldsCreativeSelection`    | creative_selection                                  |
 | `PatchAdsGroupQueryParamFieldsMetadata`             | metadata                                            |
 | `PatchAdsGroupQueryParamFieldsRaw`                  | raw                                                 |
+| `PatchAdsGroupQueryParamFieldsDeliveryType`         | delivery_type                                       |
+| `PatchAdsGroupQueryParamFieldsPriority`             | priority                                            |
+| `PatchAdsGroupQueryParamFieldsCostType`             | cost_type                                           |
+| `PatchAdsGroupQueryParamFieldsDeliveryGoal`         | delivery_goal                                       |
+| `PatchAdsGroupQueryParamFieldsCreativeSizes`        | creative_sizes                                      |

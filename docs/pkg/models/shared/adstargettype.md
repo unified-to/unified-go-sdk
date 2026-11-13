@@ -18,18 +18,23 @@ custom := shared.AdsTargetType("custom_value")
 
 ## Values
 
-| Name                       | Value                      |
-| -------------------------- | -------------------------- |
-| `AdsTargetTypeInterest`    | INTEREST                   |
-| `AdsTargetTypeBehavior`    | BEHAVIOR                   |
-| `AdsTargetTypeLocale`      | LOCALE                     |
-| `AdsTargetTypeCountry`     | COUNTRY                    |
-| `AdsTargetTypeRegion`      | REGION                     |
-| `AdsTargetTypeCity`        | CITY                       |
-| `AdsTargetTypeZip`         | ZIP                        |
-| `AdsTargetTypeUsDma`       | US_DMA                     |
-| `AdsTargetTypeTopic`       | TOPIC                      |
-| `AdsTargetTypeUserList`    | USER_LIST                  |
-| `AdsTargetTypeCarrier`     | CARRIER                    |
-| `AdsTargetTypeDeviceModel` | DEVICE_MODEL               |
-| `AdsTargetTypeOsVersion`   | OS_VERSION                 |
+| Name                           | Value                          |
+| ------------------------------ | ------------------------------ |
+| `AdsTargetTypeInterest`        | INTEREST                       |
+| `AdsTargetTypeBehavior`        | BEHAVIOR                       |
+| `AdsTargetTypeLocale`          | LOCALE                         |
+| `AdsTargetTypeCountry`         | COUNTRY                        |
+| `AdsTargetTypeRegion`          | REGION                         |
+| `AdsTargetTypeCity`            | CITY                           |
+| `AdsTargetTypeZip`             | ZIP                            |
+| `AdsTargetTypeUsDma`           | US_DMA                         |
+| `AdsTargetTypeTopic`           | TOPIC                          |
+| `AdsTargetTypeUserList`        | USER_LIST                      |
+| `AdsTargetTypeCarrier`         | CARRIER                        |
+| `AdsTargetTypeDeviceModel`     | DEVICE_MODEL                   |
+| `AdsTargetTypeOsVersion`       | OS_VERSION                     |
+| `AdsTargetTypeCustomKey`       | CUSTOM_KEY                     |
+| `AdsTargetTypeCustomValue`     | CUSTOM_VALUE                   |
+| `AdsTargetTypeBrowser`         | BROWSER                        |
+| `AdsTargetTypeOperatingSystem` | OPERATING_SYSTEM               |
+| `AdsTargetTypeDeviceCategory`  | DEVICE_CATEGORY                |

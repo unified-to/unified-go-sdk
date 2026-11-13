@@ -70,6 +70,7 @@ type PropertyWorkspaceIntegrationOverridenScopes struct {
 	AdsGroupWrite                      *string `json:"ads_group_write,omitempty"`
 	AdsInsertionorderRead              *string `json:"ads_insertionorder_read,omitempty"`
 	AdsInsertionorderWrite             *string `json:"ads_insertionorder_write,omitempty"`
+	AdsInventoryRead                   *string `json:"ads_inventory_read,omitempty"`
 	AdsOrganizationRead                *string `json:"ads_organization_read,omitempty"`
 	AdsOrganizationWrite               *string `json:"ads_organization_write,omitempty"`
 	AdsPromotedRead                    *string `json:"ads_promoted_read,omitempty"`
@@ -918,6 +919,13 @@ func (p *PropertyWorkspaceIntegrationOverridenScopes) GetAdsInsertionorderWrite(
 		return nil
 	}
 	return p.AdsInsertionorderWrite
+}
+
+func (p *PropertyWorkspaceIntegrationOverridenScopes) GetAdsInventoryRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.AdsInventoryRead
 }
 
 func (p *PropertyWorkspaceIntegrationOverridenScopes) GetAdsOrganizationRead() *string {

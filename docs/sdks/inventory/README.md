@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [CreateCommerceInventory](#createcommerceinventory) - Create an inventory
+* [GetAdsInventory](#getadsinventory) - Retrieve an inventory
 * [GetCommerceInventory](#getcommerceinventory) - Retrieve an inventory
+* [ListAdsInventories](#listadsinventories) - List all inventories
 * [ListCommerceInventories](#listcommerceinventories) - List all inventories
 * [PatchCommerceInventory](#patchcommerceinventory) - Update an inventory
 * [RemoveCommerceInventory](#removecommerceinventory) - Remove an inventory
@@ -40,9 +42,9 @@ func main() {
     res, err := s.Inventory.CreateCommerceInventory(ctx, operations.CreateCommerceInventoryRequest{
         CommerceInventory: shared.CommerceInventory{
             Available: unifiedgosdk.Pointer[float64](337.0),
-            ID: unifiedgosdk.Pointer("9d4416fc-f65c-434d-aed7-61a01fe0a72b"),
+            ID: unifiedgosdk.Pointer("81f635a1-1747-49ee-be92-1539343107e8"),
             Metadata: []shared.CommerceMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2025-12-08T03:33:34.554Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-08T22:31:59.391Z"),
         },
         ConnectionID: "<id>",
     })
@@ -66,6 +68,61 @@ func main() {
 ### Response
 
 **[*operations.CreateCommerceInventoryResponse](../../pkg/models/operations/createcommerceinventoryresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetAdsInventory
+
+Retrieves a single AdsInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getAdsInventory" method="get" path="/ads/{connection_id}/inventory/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Inventory.GetAdsInventory(ctx, operations.GetAdsInventoryRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AdsInventory != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.GetAdsInventoryRequest](../../pkg/models/operations/getadsinventoryrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+
+### Response
+
+**[*operations.GetAdsInventoryResponse](../../pkg/models/operations/getadsinventoryresponse.md), error**
 
 ### Errors
 
@@ -121,6 +178,60 @@ func main() {
 ### Response
 
 **[*operations.GetCommerceInventoryResponse](../../pkg/models/operations/getcommerceinventoryresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListAdsInventories
+
+Returns a list of AdsInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listAdsInventories" method="get" path="/ads/{connection_id}/inventory" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Inventory.ListAdsInventories(ctx, operations.ListAdsInventoriesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AdsInventories != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.ListAdsInventoriesRequest](../../pkg/models/operations/listadsinventoriesrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.ListAdsInventoriesResponse](../../pkg/models/operations/listadsinventoriesresponse.md), error**
 
 ### Errors
 
@@ -211,9 +322,9 @@ func main() {
     res, err := s.Inventory.PatchCommerceInventory(ctx, operations.PatchCommerceInventoryRequest{
         CommerceInventory: shared.CommerceInventory{
             Available: unifiedgosdk.Pointer[float64](337.0),
-            ID: unifiedgosdk.Pointer("b76fbb03-5216-4705-9c3f-1234c1b2483a"),
+            ID: unifiedgosdk.Pointer("c03f8467-9f0f-4c89-85a3-dd15391fd912"),
             Metadata: []shared.CommerceMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2025-12-08T03:33:34.561Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-08T22:31:59.399Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -329,9 +440,9 @@ func main() {
     res, err := s.Inventory.UpdateCommerceInventory(ctx, operations.UpdateCommerceInventoryRequest{
         CommerceInventory: shared.CommerceInventory{
             Available: unifiedgosdk.Pointer[float64](337.0),
-            ID: unifiedgosdk.Pointer("b76fbb03-5216-4705-9c3f-1234c1b2483a"),
+            ID: unifiedgosdk.Pointer("c03f8467-9f0f-4c89-85a3-dd15391fd912"),
             Metadata: []shared.CommerceMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2025-12-08T03:33:34.561Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-08T22:31:59.399Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

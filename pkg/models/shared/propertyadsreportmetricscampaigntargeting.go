@@ -7,11 +7,15 @@ type PropertyAdsReportMetricsCampaignTargeting struct {
 	// Brand safety (Meta: excluded_publisher_categories, etc.; Google
 	BrandSafety *PropertyAdsReportMetricsCampaignTargetingBrandSafety `json:"brand_safety,omitempty"`
 	Content     *PropertyAdsReportMetricsCampaignTargetingContent     `json:"content,omitempty"`
+	// Key-value targeting; clauses are ANDed
+	Custom []CustomTargeting `json:"custom,omitempty"`
 	// Demographic targeting (Meta: age_min, age_max, genders)
 	Demographic *PropertyAdsReportMetricsCampaignTargetingDemographic `json:"demographic,omitempty"`
 	Device      *PropertyAdsReportMetricsCampaignTargetingDevice      `json:"device,omitempty"`
 	Geographic  *PropertyAdsReportMetricsCampaignTargetingGeographic  `json:"geographic,omitempty"`
-	Language    []TargetRef                                           `json:"language,omitempty"`
+	// Publisher inventory (ad units, placements) to include / exclude
+	Inventory *PropertyAdsReportMetricsCampaignTargetingInventory `json:"inventory,omitempty"`
+	Language  []TargetRef                                         `json:"language,omitempty"`
 	// Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
 	Optimization *PropertyAdsReportMetricsCampaignTargetingOptimization `json:"optimization,omitempty"`
 	Placement    *PropertyAdsReportMetricsCampaignTargetingPlacement    `json:"placement,omitempty"`
@@ -39,6 +43,13 @@ func (p *PropertyAdsReportMetricsCampaignTargeting) GetContent() *PropertyAdsRep
 	return p.Content
 }
 
+func (p *PropertyAdsReportMetricsCampaignTargeting) GetCustom() []CustomTargeting {
+	if p == nil {
+		return nil
+	}
+	return p.Custom
+}
+
 func (p *PropertyAdsReportMetricsCampaignTargeting) GetDemographic() *PropertyAdsReportMetricsCampaignTargetingDemographic {
 	if p == nil {
 		return nil
@@ -58,6 +69,13 @@ func (p *PropertyAdsReportMetricsCampaignTargeting) GetGeographic() *PropertyAds
 		return nil
 	}
 	return p.Geographic
+}
+
+func (p *PropertyAdsReportMetricsCampaignTargeting) GetInventory() *PropertyAdsReportMetricsCampaignTargetingInventory {
+	if p == nil {
+		return nil
+	}
+	return p.Inventory
 }
 
 func (p *PropertyAdsReportMetricsCampaignTargeting) GetLanguage() []TargetRef {

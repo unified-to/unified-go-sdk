@@ -48,3 +48,8 @@ value := operations.UpdateAdsGroupQueryParamFieldsID
 | `UpdateAdsGroupQueryParamFieldsCreativeSelection`    | creative_selection                                   |
 | `UpdateAdsGroupQueryParamFieldsMetadata`             | metadata                                             |
 | `UpdateAdsGroupQueryParamFieldsRaw`                  | raw                                                  |
+| `UpdateAdsGroupQueryParamFieldsDeliveryType`         | delivery_type                                        |
+| `UpdateAdsGroupQueryParamFieldsPriority`             | priority                                             |
+| `UpdateAdsGroupQueryParamFieldsCostType`             | cost_type                                            |
+| `UpdateAdsGroupQueryParamFieldsDeliveryGoal`         | delivery_goal                                        |
+| `UpdateAdsGroupQueryParamFieldsCreativeSizes`        | creative_sizes                                       |

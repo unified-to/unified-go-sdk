@@ -45,6 +45,11 @@ const (
 	GetAdsGroupQueryParamFieldsCreativeSelection    GetAdsGroupQueryParamFields = "creative_selection"
 	GetAdsGroupQueryParamFieldsMetadata             GetAdsGroupQueryParamFields = "metadata"
 	GetAdsGroupQueryParamFieldsRaw                  GetAdsGroupQueryParamFields = "raw"
+	GetAdsGroupQueryParamFieldsDeliveryType         GetAdsGroupQueryParamFields = "delivery_type"
+	GetAdsGroupQueryParamFieldsPriority             GetAdsGroupQueryParamFields = "priority"
+	GetAdsGroupQueryParamFieldsCostType             GetAdsGroupQueryParamFields = "cost_type"
+	GetAdsGroupQueryParamFieldsDeliveryGoal         GetAdsGroupQueryParamFields = "delivery_goal"
+	GetAdsGroupQueryParamFieldsCreativeSizes        GetAdsGroupQueryParamFields = "creative_sizes"
 )
 
 func (e GetAdsGroupQueryParamFields) ToPointer() *GetAdsGroupQueryParamFields {
@@ -121,6 +126,16 @@ func (e *GetAdsGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "delivery_type":
+		fallthrough
+	case "priority":
+		fallthrough
+	case "cost_type":
+		fallthrough
+	case "delivery_goal":
+		fallthrough
+	case "creative_sizes":
 		*e = GetAdsGroupQueryParamFields(v)
 		return nil
 	default:

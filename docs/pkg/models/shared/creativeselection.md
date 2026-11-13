@@ -22,3 +22,5 @@ custom := shared.CreativeSelection("custom_value")
 | ----------------------------- | ----------------------------- |
 | `CreativeSelectionOptimized`  | OPTIMIZED                     |
 | `CreativeSelectionRoundRobin` | ROUND_ROBIN                   |
+| `CreativeSelectionWeighted`   | WEIGHTED                      |
+| `CreativeSelectionSequential` | SEQUENTIAL                    |

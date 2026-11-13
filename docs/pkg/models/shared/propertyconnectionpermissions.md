@@ -304,6 +304,7 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsAdsInsertionorderWrite`             | ads_insertionorder_write                                          |
 | `PropertyConnectionPermissionsAdsTargetRead`                      | ads_target_read                                                   |
 | `PropertyConnectionPermissionsAdsPromotedRead`                    | ads_promoted_read                                                 |
+| `PropertyConnectionPermissionsAdsInventoryRead`                   | ads_inventory_read                                                |
 | `PropertyConnectionPermissionsAnalyticsPropertyRead`              | analytics_property_read                                           |
 | `PropertyConnectionPermissionsAnalyticsPropertyWrite`             | analytics_property_write                                          |
 | `PropertyConnectionPermissionsAnalyticsEventRead`                 | analytics_event_read                                              |

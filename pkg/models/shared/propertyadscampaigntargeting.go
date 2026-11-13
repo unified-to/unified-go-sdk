@@ -7,11 +7,15 @@ type PropertyAdsCampaignTargeting struct {
 	// Brand safety (Meta: excluded_publisher_categories, etc.; Google
 	BrandSafety *PropertyAdsCampaignTargetingBrandSafety `json:"brand_safety,omitempty"`
 	Content     *PropertyAdsCampaignTargetingContent     `json:"content,omitempty"`
+	// Key-value targeting; clauses are ANDed
+	Custom []CustomTargeting `json:"custom,omitempty"`
 	// Demographic targeting (Meta: age_min, age_max, genders)
 	Demographic *PropertyAdsCampaignTargetingDemographic `json:"demographic,omitempty"`
 	Device      *PropertyAdsCampaignTargetingDevice      `json:"device,omitempty"`
 	Geographic  *PropertyAdsCampaignTargetingGeographic  `json:"geographic,omitempty"`
-	Language    []TargetRef                              `json:"language,omitempty"`
+	// Publisher inventory (ad units, placements) to include / exclude
+	Inventory *PropertyAdsCampaignTargetingInventory `json:"inventory,omitempty"`
+	Language  []TargetRef                            `json:"language,omitempty"`
 	// Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
 	Optimization *PropertyAdsCampaignTargetingOptimization `json:"optimization,omitempty"`
 	Placement    *PropertyAdsCampaignTargetingPlacement    `json:"placement,omitempty"`
@@ -39,6 +43,13 @@ func (p *PropertyAdsCampaignTargeting) GetContent() *PropertyAdsCampaignTargetin
 	return p.Content
 }
 
+func (p *PropertyAdsCampaignTargeting) GetCustom() []CustomTargeting {
+	if p == nil {
+		return nil
+	}
+	return p.Custom
+}
+
 func (p *PropertyAdsCampaignTargeting) GetDemographic() *PropertyAdsCampaignTargetingDemographic {
 	if p == nil {
 		return nil
@@ -58,6 +69,13 @@ func (p *PropertyAdsCampaignTargeting) GetGeographic() *PropertyAdsCampaignTarge
 		return nil
 	}
 	return p.Geographic
+}
+
+func (p *PropertyAdsCampaignTargeting) GetInventory() *PropertyAdsCampaignTargetingInventory {
+	if p == nil {
+		return nil
+	}
+	return p.Inventory
 }
 
 func (p *PropertyAdsCampaignTargeting) GetLanguage() []TargetRef {

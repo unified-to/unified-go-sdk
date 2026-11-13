@@ -94,6 +94,7 @@ type UnifiedTo struct {
 	Creative             *Creative
 	Group                *Group
 	Insertionorder       *Insertionorder
+	Inventory            *Inventory
 	Promoted             *Promoted
 	Report               *Report
 	Target               *Target
@@ -133,7 +134,6 @@ type UnifiedTo struct {
 	Commerce             *Commerce
 	Availability         *Availability
 	Collection           *Collection
-	Inventory            *Inventory
 	Item                 *Item
 	Itemvariant          *Itemvariant
 	Reservation          *Reservation
@@ -359,10 +359,10 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.39.21",
+		SDKVersion: "0.39.22",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.39.21 2.960.8 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.39.21",
+			UserAgent:         "speakeasy-sdk/go 0.39.22 2.960.8 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.39.22",
 			GenVersion:        "2.960.8",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
@@ -422,6 +422,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Creative = newCreative(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Group = newGroup(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Insertionorder = newInsertionorder(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Inventory = newInventory(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Promoted = newPromoted(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Report = newReport(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Target = newTarget(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -461,7 +462,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Commerce = newCommerce(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Availability = newAvailability(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Collection = newCollection(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Inventory = newInventory(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Item = newItem(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Itemvariant = newItemvariant(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Reservation = newReservation(sdk, sdk.sdkConfiguration, sdk.hooks)
