@@ -53,3 +53,4 @@ value := operations.GetAdsGroupQueryParamFieldsID
 | `GetAdsGroupQueryParamFieldsCostType`             | cost_type                                         |
 | `GetAdsGroupQueryParamFieldsDeliveryGoal`         | delivery_goal                                     |
 | `GetAdsGroupQueryParamFieldsCreativeSizes`        | creative_sizes                                    |
+| `GetAdsGroupQueryParamFieldsConversionTracking`   | conversion_tracking                               |

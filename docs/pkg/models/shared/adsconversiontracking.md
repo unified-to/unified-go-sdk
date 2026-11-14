@@ -1,0 +1,11 @@
+# AdsConversionTracking
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `Identifier`                                                                                 | `string`                                                                                     | :heavy_check_mark:                                                                           | Integration's conversion tracker ID (Floodlight activity ID, conversion tag ID)              |
+| `PostClickWindowDays`                                                                        | `*float64`                                                                                   | :heavy_minus_sign:                                                                           | Days after a click in which a conversion is counted                                          |
+| `PostViewWindowDays`                                                                         | `*float64`                                                                                   | :heavy_minus_sign:                                                                           | Days after a view in which a conversion is counted                                           |
+| `Type`                                                                                       | [*shared.AdsConversionTrackingType](../../../pkg/models/shared/adsconversiontrackingtype.md) | :heavy_minus_sign:                                                                           | N/A                                                                                          |

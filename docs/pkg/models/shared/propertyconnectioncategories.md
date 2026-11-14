@@ -58,3 +58,4 @@ custom := shared.PropertyConnectionCategories("custom_value")
 | `PropertyConnectionCategoriesHealthcare`   | healthcare                                 |
 | `PropertyConnectionCategoriesProperty`     | property                                   |
 | `PropertyConnectionCategoriesPlm`          | plm                                        |
+| `PropertyConnectionCategoriesQms`          | qms                                        |

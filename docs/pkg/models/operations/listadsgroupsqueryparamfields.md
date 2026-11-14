@@ -53,3 +53,4 @@ value := operations.ListAdsGroupsQueryParamFieldsID
 | `ListAdsGroupsQueryParamFieldsCostType`             | cost_type                                           |
 | `ListAdsGroupsQueryParamFieldsDeliveryGoal`         | delivery_goal                                       |
 | `ListAdsGroupsQueryParamFieldsCreativeSizes`        | creative_sizes                                      |
+| `ListAdsGroupsQueryParamFieldsConversionTracking`   | conversion_tracking                                 |

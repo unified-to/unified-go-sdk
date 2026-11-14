@@ -261,3 +261,7 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypePlmDocument`                   | plm_document                                     |
 | `WebhookObjectTypePlmChange`                     | plm_change                                       |
 | `WebhookObjectTypePlmCategory`                   | plm_category                                     |
+| `WebhookObjectTypeQmsIssue`                      | qms_issue                                        |
+| `WebhookObjectTypeQmsAction`                     | qms_action                                       |
+| `WebhookObjectTypeQmsInspection`                 | qms_inspection                                   |
+| `WebhookObjectTypeQmsAudit`                      | qms_audit                                        |

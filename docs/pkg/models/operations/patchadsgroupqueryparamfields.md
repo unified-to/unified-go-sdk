@@ -53,3 +53,4 @@ value := operations.PatchAdsGroupQueryParamFieldsID
 | `PatchAdsGroupQueryParamFieldsCostType`             | cost_type                                           |
 | `PatchAdsGroupQueryParamFieldsDeliveryGoal`         | delivery_goal                                       |
 | `PatchAdsGroupQueryParamFieldsCreativeSizes`        | creative_sizes                                      |
+| `PatchAdsGroupQueryParamFieldsConversionTracking`   | conversion_tracking                                 |

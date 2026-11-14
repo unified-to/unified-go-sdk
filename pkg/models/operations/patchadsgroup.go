@@ -50,6 +50,7 @@ const (
 	PatchAdsGroupQueryParamFieldsCostType             PatchAdsGroupQueryParamFields = "cost_type"
 	PatchAdsGroupQueryParamFieldsDeliveryGoal         PatchAdsGroupQueryParamFields = "delivery_goal"
 	PatchAdsGroupQueryParamFieldsCreativeSizes        PatchAdsGroupQueryParamFields = "creative_sizes"
+	PatchAdsGroupQueryParamFieldsConversionTracking   PatchAdsGroupQueryParamFields = "conversion_tracking"
 )
 
 func (e PatchAdsGroupQueryParamFields) ToPointer() *PatchAdsGroupQueryParamFields {
@@ -136,6 +137,8 @@ func (e *PatchAdsGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "delivery_goal":
 		fallthrough
 	case "creative_sizes":
+		fallthrough
+	case "conversion_tracking":
 		*e = PatchAdsGroupQueryParamFields(v)
 		return nil
 	default:

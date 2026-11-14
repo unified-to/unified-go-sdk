@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.960.8
+// Generated from OpenAPI doc version 1.0 and generator version 2.961.1
 
 import (
 	"context"
@@ -240,6 +240,11 @@ type UnifiedTo struct {
 	Guest                *Guest
 	Listing              *Listing
 	Unittype             *Unittype
+	Qms                  *Qms
+	Action               *Action
+	Audit                *Audit
+	Inspection           *Inspection
+	Issue                *Issue
 	Repo                 *Repo
 	Branch               *Branch
 	Commit               *Commit
@@ -276,7 +281,6 @@ type UnifiedTo struct {
 	Auth                 *Auth
 	Login                *Login
 	Saml                 *Saml
-	Issue                *Issue
 	Notification         *Notification
 	Secretsmanager       *Secretsmanager
 	Webhook              *Webhook
@@ -359,11 +363,11 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.39.22",
+		SDKVersion: "0.39.23",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.39.22 2.960.8 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.39.22",
-			GenVersion:        "2.960.8",
+			UserAgent:         "speakeasy-sdk/go 0.39.23 2.961.1 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.39.23",
+			GenVersion:        "2.961.1",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
 		},
@@ -568,6 +572,11 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Guest = newGuest(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Listing = newListing(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Unittype = newUnittype(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Qms = newQms(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Action = newAction(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Audit = newAudit(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Inspection = newInspection(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Issue = newIssue(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Repo = newRepo(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Branch = newBranch(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Commit = newCommit(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -604,7 +613,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Auth = newAuth(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Login = newLogin(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Saml = newSaml(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Issue = newIssue(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Notification = newNotification(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Secretsmanager = newSecretsmanager(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Webhook = newWebhook(sdk, sdk.sdkConfiguration, sdk.hooks)

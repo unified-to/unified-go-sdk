@@ -38,15 +38,15 @@ func main() {
 
     res, err := s.Call.CreateUcCall(ctx, operations.CreateUcCallRequest{
         UcCall: shared.UcCall{
-            AnswerAt: types.MustNewTimeFromString("2025-05-27T04:15:25.307Z"),
+            AnswerAt: types.MustNewTimeFromString("2025-05-27T18:50:28.143Z"),
             Contacts: []shared.UcContact{},
-            ConversationIdentifier: unifiedgosdk.Pointer("024f4429-1f6a-4660-a6aa-0cc56a17c3ce"),
+            ConversationIdentifier: unifiedgosdk.Pointer("a3c41c5b-c5af-4d2b-bba4-f967547ccc26"),
             CostAmount: unifiedgosdk.Pointer[float64](1.564),
             CreatedAt: types.MustNewTimeFromString("2023-04-22T19:05:34.882Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DurationSeconds: unifiedgosdk.Pointer[float64](2556.0),
-            EndAt: types.MustNewTimeFromString("2024-06-06T07:51:25.112Z"),
-            ID: unifiedgosdk.Pointer("024f4429-1f6a-4660-a6aa-0cc56a17c3ce"),
+            EndAt: types.MustNewTimeFromString("2024-06-06T15:40:46.331Z"),
+            ID: unifiedgosdk.Pointer("a3c41c5b-c5af-4d2b-bba4-f967547ccc26"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.UcMetadata{
                 shared.UcMetadata{
@@ -56,7 +56,7 @@ func main() {
                         },
                     )),
                     Format: shared.UcMetadataFormatPrice.ToPointer(),
-                    ID: unifiedgosdk.Pointer("254b2756-81e9-456c-a75b-0213295a0dbd"),
+                    ID: unifiedgosdk.Pointer("3dd7af5f-84f6-40fa-8671-322958665571"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_field"),
                     Value: unifiedgosdk.Pointer(shared.CreateUcMetadataValueStr(
@@ -64,14 +64,14 @@ func main() {
                     )),
                 },
             },
-            StartAt: types.MustNewTimeFromString("2023-12-21T17:08:48.756Z"),
+            StartAt: types.MustNewTimeFromString("2023-12-21T21:46:32.245Z"),
             Status: shared.UcCallStatusInProgress.ToPointer(),
             Telephone: &shared.PropertyUcCallTelephone{
                 Telephone: "(493) 534-0768",
                 Type: shared.PropertyUcCallTelephoneTypeMobile.ToPointer(),
             },
             Type: shared.UcCallTypeInbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-05T04:53:59.620Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-05T06:53:21.730Z"),
             UserPhone: unifiedgosdk.Pointer("819-894-3317 x163"),
         },
         ConnectionID: "<id>",
@@ -240,15 +240,15 @@ func main() {
 
     res, err := s.Call.PatchUcCall(ctx, operations.PatchUcCallRequest{
         UcCall: shared.UcCall{
-            AnswerAt: types.MustNewTimeFromString("2025-05-27T04:15:25.328Z"),
+            AnswerAt: types.MustNewTimeFromString("2025-05-27T18:50:28.163Z"),
             Contacts: []shared.UcContact{},
-            ConversationIdentifier: unifiedgosdk.Pointer("ab264f15-8aa1-4662-874b-cabbfa9f618e"),
+            ConversationIdentifier: unifiedgosdk.Pointer("376e6c10-8550-4049-9683-01b2544b1dc6"),
             CostAmount: unifiedgosdk.Pointer[float64](1.564),
             CreatedAt: types.MustNewTimeFromString("2023-04-22T19:05:34.882Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DurationSeconds: unifiedgosdk.Pointer[float64](2556.0),
-            EndAt: types.MustNewTimeFromString("2024-06-06T07:51:25.124Z"),
-            ID: unifiedgosdk.Pointer("ab264f15-8aa1-4662-874b-cabbfa9f618e"),
+            EndAt: types.MustNewTimeFromString("2024-06-06T15:40:46.342Z"),
+            ID: unifiedgosdk.Pointer("376e6c10-8550-4049-9683-01b2544b1dc6"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.UcMetadata{
                 shared.UcMetadata{
@@ -258,7 +258,7 @@ func main() {
                         },
                     )),
                     Format: shared.UcMetadataFormatPrice.ToPointer(),
-                    ID: unifiedgosdk.Pointer("82b57455-4a9c-4e15-a430-c49d0faa63fb"),
+                    ID: unifiedgosdk.Pointer("0b758a89-38fd-47ca-adff-317020d56dd1"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_field"),
                     Value: unifiedgosdk.Pointer(shared.CreateUcMetadataValueStr(
@@ -266,14 +266,14 @@ func main() {
                     )),
                 },
             },
-            StartAt: types.MustNewTimeFromString("2023-12-21T17:08:48.763Z"),
+            StartAt: types.MustNewTimeFromString("2023-12-21T21:46:32.252Z"),
             Status: shared.UcCallStatusInProgress.ToPointer(),
             Telephone: &shared.PropertyUcCallTelephone{
                 Telephone: "(493) 534-0768",
                 Type: shared.PropertyUcCallTelephoneTypeMobile.ToPointer(),
             },
             Type: shared.UcCallTypeInbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-05T04:53:59.623Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-05T06:53:21.732Z"),
             UserPhone: unifiedgosdk.Pointer("819-894-3317 x163"),
         },
         ConnectionID: "<id>",
@@ -334,15 +334,15 @@ func main() {
 
     res, err := s.Call.UpdateUcCall(ctx, operations.UpdateUcCallRequest{
         UcCall: shared.UcCall{
-            AnswerAt: types.MustNewTimeFromString("2025-05-27T04:15:25.328Z"),
+            AnswerAt: types.MustNewTimeFromString("2025-05-27T18:50:28.163Z"),
             Contacts: []shared.UcContact{},
-            ConversationIdentifier: unifiedgosdk.Pointer("ab264f15-8aa1-4662-874b-cabbfa9f618e"),
+            ConversationIdentifier: unifiedgosdk.Pointer("376e6c10-8550-4049-9683-01b2544b1dc6"),
             CostAmount: unifiedgosdk.Pointer[float64](1.564),
             CreatedAt: types.MustNewTimeFromString("2023-04-22T19:05:34.882Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DurationSeconds: unifiedgosdk.Pointer[float64](2556.0),
-            EndAt: types.MustNewTimeFromString("2024-06-06T07:51:25.124Z"),
-            ID: unifiedgosdk.Pointer("ab264f15-8aa1-4662-874b-cabbfa9f618e"),
+            EndAt: types.MustNewTimeFromString("2024-06-06T15:40:46.342Z"),
+            ID: unifiedgosdk.Pointer("376e6c10-8550-4049-9683-01b2544b1dc6"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.UcMetadata{
                 shared.UcMetadata{
@@ -352,7 +352,7 @@ func main() {
                         },
                     )),
                     Format: shared.UcMetadataFormatPrice.ToPointer(),
-                    ID: unifiedgosdk.Pointer("82b57455-4a9c-4e15-a430-c49d0faa63fb"),
+                    ID: unifiedgosdk.Pointer("0b758a89-38fd-47ca-adff-317020d56dd1"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_field"),
                     Value: unifiedgosdk.Pointer(shared.CreateUcMetadataValueStr(
@@ -360,14 +360,14 @@ func main() {
                     )),
                 },
             },
-            StartAt: types.MustNewTimeFromString("2023-12-21T17:08:48.763Z"),
+            StartAt: types.MustNewTimeFromString("2023-12-21T21:46:32.252Z"),
             Status: shared.UcCallStatusInProgress.ToPointer(),
             Telephone: &shared.PropertyUcCallTelephone{
                 Telephone: "(493) 534-0768",
                 Type: shared.PropertyUcCallTelephoneTypeMobile.ToPointer(),
             },
             Type: shared.UcCallTypeInbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-05T04:53:59.623Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-05T06:53:21.732Z"),
             UserPhone: unifiedgosdk.Pointer("819-894-3317 x163"),
         },
         ConnectionID: "<id>",

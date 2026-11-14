@@ -38,3 +38,6 @@ custom := shared.AdsTargetType("custom_value")
 | `AdsTargetTypeBrowser`         | BROWSER                        |
 | `AdsTargetTypeOperatingSystem` | OPERATING_SYSTEM               |
 | `AdsTargetTypeDeviceCategory`  | DEVICE_CATEGORY                |
+| `AdsTargetTypeExchange`        | EXCHANGE                       |
+| `AdsTargetTypeDeal`            | DEAL                           |
+| `AdsTargetTypeDealGroup`       | DEAL_GROUP                     |

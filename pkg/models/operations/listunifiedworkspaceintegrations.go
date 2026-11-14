@@ -52,6 +52,7 @@ const (
 	ListUnifiedWorkspaceintegrationsQueryParamCategoriesHealthcare   ListUnifiedWorkspaceintegrationsQueryParamCategories = "healthcare"
 	ListUnifiedWorkspaceintegrationsQueryParamCategoriesProperty     ListUnifiedWorkspaceintegrationsQueryParamCategories = "property"
 	ListUnifiedWorkspaceintegrationsQueryParamCategoriesPlm          ListUnifiedWorkspaceintegrationsQueryParamCategories = "plm"
+	ListUnifiedWorkspaceintegrationsQueryParamCategoriesQms          ListUnifiedWorkspaceintegrationsQueryParamCategories = "qms"
 )
 
 func (e ListUnifiedWorkspaceintegrationsQueryParamCategories) ToPointer() *ListUnifiedWorkspaceintegrationsQueryParamCategories {
@@ -142,6 +143,8 @@ func (e *ListUnifiedWorkspaceintegrationsQueryParamCategories) UnmarshalJSON(dat
 	case "property":
 		fallthrough
 	case "plm":
+		fallthrough
+	case "qms":
 		*e = ListUnifiedWorkspaceintegrationsQueryParamCategories(v)
 		return nil
 	default:

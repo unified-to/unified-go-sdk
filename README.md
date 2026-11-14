@@ -66,7 +66,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("afe85eb5-8dba-4666-92fe-b5f2d78105f9"),
+			ID:                  unifiedgosdk.Pointer("e4e954f3-2aa2-4027-9a54-8f5df3c1dc0c"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -79,7 +79,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-12T17:59:09.381Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T00:17:01.239Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -249,6 +249,14 @@ func main() {
 * [UpdateAccountingTaxrate](docs/sdks/accounting/README.md#updateaccountingtaxrate) - Update a taxrate
 * [UpdateAccountingTransaction](docs/sdks/accounting/README.md#updateaccountingtransaction) - Update a transaction
 * [UpdateAccountingVendorcredit](docs/sdks/accounting/README.md#updateaccountingvendorcredit) - Update a vendorcredit
+
+### [Action](docs/sdks/action/README.md)
+
+* [CreateQmsAction](docs/sdks/action/README.md#createqmsaction) - Create an action
+* [GetQmsAction](docs/sdks/action/README.md#getqmsaction) - Retrieve an action
+* [ListQmsActions](docs/sdks/action/README.md#listqmsactions) - List all actions
+* [PatchQmsAction](docs/sdks/action/README.md#patchqmsaction) - Update an action
+* [UpdateQmsAction](docs/sdks/action/README.md#updateqmsaction) - Update an action
 
 ### [Activation](docs/sdks/activation/README.md)
 
@@ -487,6 +495,14 @@ func main() {
 * [PatchHrisAttendance](docs/sdks/attendance/README.md#patchhrisattendance) - Update an attendance
 * [RemoveHrisAttendance](docs/sdks/attendance/README.md#removehrisattendance) - Remove an attendance
 * [UpdateHrisAttendance](docs/sdks/attendance/README.md#updatehrisattendance) - Update an attendance
+
+### [Audit](docs/sdks/audit/README.md)
+
+* [CreateQmsAudit](docs/sdks/audit/README.md#createqmsaudit) - Create an audit
+* [GetQmsAudit](docs/sdks/audit/README.md#getqmsaudit) - Retrieve an audit
+* [ListQmsAudits](docs/sdks/audit/README.md#listqmsaudits) - List all audits
+* [PatchQmsAudit](docs/sdks/audit/README.md#patchqmsaudit) - Update an audit
+* [UpdateQmsAudit](docs/sdks/audit/README.md#updateqmsaudit) - Update an audit
 
 ### [Auth](docs/sdks/auth/README.md)
 
@@ -1587,6 +1603,14 @@ func main() {
 * [GetSocialInsight](docs/sdks/insight/README.md#getsocialinsight) - Retrieve an insight
 * [ListSocialInsights](docs/sdks/insight/README.md#listsocialinsights) - List all insights
 
+### [Inspection](docs/sdks/inspection/README.md)
+
+* [CreateQmsInspection](docs/sdks/inspection/README.md#createqmsinspection) - Create an inspection
+* [GetQmsInspection](docs/sdks/inspection/README.md#getqmsinspection) - Retrieve an inspection
+* [ListQmsInspections](docs/sdks/inspection/README.md#listqmsinspections) - List all inspections
+* [PatchQmsInspection](docs/sdks/inspection/README.md#patchqmsinspection) - Update an inspection
+* [UpdateQmsInspection](docs/sdks/inspection/README.md#updateqmsinspection) - Update an inspection
+
 ### [Instance](docs/sdks/instance/README.md)
 
 * [CreateComputeInstance](docs/sdks/instance/README.md#createcomputeinstance) - Create an instance
@@ -1642,8 +1666,13 @@ func main() {
 
 ### [Issue](docs/sdks/issue/README.md)
 
+* [CreateQmsIssue](docs/sdks/issue/README.md#createqmsissue) - Create an issue
+* [GetQmsIssue](docs/sdks/issue/README.md#getqmsissue) - Retrieve an issue
 * [GetUnifiedIssue](docs/sdks/issue/README.md#getunifiedissue) - Retrieve support issue
+* [ListQmsIssues](docs/sdks/issue/README.md#listqmsissues) - List all issues
 * [ListUnifiedIssues](docs/sdks/issue/README.md#listunifiedissues) - List support issues
+* [PatchQmsIssue](docs/sdks/issue/README.md#patchqmsissue) - Update an issue
+* [UpdateQmsIssue](docs/sdks/issue/README.md#updateqmsissue) - Update an issue
 
 ### [Item](docs/sdks/item/README.md)
 
@@ -2298,6 +2327,29 @@ func main() {
 
 * [GetAccountingPurchasereceipt](docs/sdks/purchasereceipt/README.md#getaccountingpurchasereceipt) - Retrieve a purchasereceipt
 * [ListAccountingPurchasereceipts](docs/sdks/purchasereceipt/README.md#listaccountingpurchasereceipts) - List all purchasereceipts
+
+### [Qms](docs/sdks/qms/README.md)
+
+* [CreateQmsAction](docs/sdks/qms/README.md#createqmsaction) - Create an action
+* [CreateQmsAudit](docs/sdks/qms/README.md#createqmsaudit) - Create an audit
+* [CreateQmsInspection](docs/sdks/qms/README.md#createqmsinspection) - Create an inspection
+* [CreateQmsIssue](docs/sdks/qms/README.md#createqmsissue) - Create an issue
+* [GetQmsAction](docs/sdks/qms/README.md#getqmsaction) - Retrieve an action
+* [GetQmsAudit](docs/sdks/qms/README.md#getqmsaudit) - Retrieve an audit
+* [GetQmsInspection](docs/sdks/qms/README.md#getqmsinspection) - Retrieve an inspection
+* [GetQmsIssue](docs/sdks/qms/README.md#getqmsissue) - Retrieve an issue
+* [ListQmsActions](docs/sdks/qms/README.md#listqmsactions) - List all actions
+* [ListQmsAudits](docs/sdks/qms/README.md#listqmsaudits) - List all audits
+* [ListQmsInspections](docs/sdks/qms/README.md#listqmsinspections) - List all inspections
+* [ListQmsIssues](docs/sdks/qms/README.md#listqmsissues) - List all issues
+* [PatchQmsAction](docs/sdks/qms/README.md#patchqmsaction) - Update an action
+* [PatchQmsAudit](docs/sdks/qms/README.md#patchqmsaudit) - Update an audit
+* [PatchQmsInspection](docs/sdks/qms/README.md#patchqmsinspection) - Update an inspection
+* [PatchQmsIssue](docs/sdks/qms/README.md#patchqmsissue) - Update an issue
+* [UpdateQmsAction](docs/sdks/qms/README.md#updateqmsaction) - Update an action
+* [UpdateQmsAudit](docs/sdks/qms/README.md#updateqmsaudit) - Update an audit
+* [UpdateQmsInspection](docs/sdks/qms/README.md#updateqmsinspection) - Update an inspection
+* [UpdateQmsIssue](docs/sdks/qms/README.md#updateqmsissue) - Update an issue
 
 ### [Query](docs/sdks/query/README.md)
 
@@ -3057,7 +3109,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("afe85eb5-8dba-4666-92fe-b5f2d78105f9"),
+			ID:                  unifiedgosdk.Pointer("e4e954f3-2aa2-4027-9a54-8f5df3c1dc0c"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3070,7 +3122,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-12T17:59:09.381Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T00:17:01.239Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3131,7 +3183,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("afe85eb5-8dba-4666-92fe-b5f2d78105f9"),
+			ID:                  unifiedgosdk.Pointer("e4e954f3-2aa2-4027-9a54-8f5df3c1dc0c"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3144,7 +3196,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-12T17:59:09.381Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T00:17:01.239Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3188,7 +3240,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("afe85eb5-8dba-4666-92fe-b5f2d78105f9"),
+			ID:                  unifiedgosdk.Pointer("e4e954f3-2aa2-4027-9a54-8f5df3c1dc0c"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3201,7 +3253,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-12T17:59:09.381Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T00:17:01.239Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3288,7 +3340,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("afe85eb5-8dba-4666-92fe-b5f2d78105f9"),
+			ID:                  unifiedgosdk.Pointer("e4e954f3-2aa2-4027-9a54-8f5df3c1dc0c"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3301,7 +3353,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-12T17:59:09.381Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T00:17:01.239Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3350,7 +3402,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("afe85eb5-8dba-4666-92fe-b5f2d78105f9"),
+			ID:                  unifiedgosdk.Pointer("e4e954f3-2aa2-4027-9a54-8f5df3c1dc0c"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3363,7 +3415,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-12T17:59:09.381Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T00:17:01.239Z"),
 		},
 		ConnectionID: "<id>",
 	}, operations.WithRetries(
@@ -3426,7 +3478,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("afe85eb5-8dba-4666-92fe-b5f2d78105f9"),
+			ID:                  unifiedgosdk.Pointer("e4e954f3-2aa2-4027-9a54-8f5df3c1dc0c"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3439,7 +3491,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-12T17:59:09.381Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T00:17:01.239Z"),
 		},
 		ConnectionID: "<id>",
 	})

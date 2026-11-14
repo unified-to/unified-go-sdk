@@ -2,6 +2,29 @@
 
 package shared
 
+type VirtualWebhookBillID string
+
+const (
+	VirtualWebhookBillIDSupportedRequired VirtualWebhookBillID = "supported-required"
+	VirtualWebhookBillIDSupported         VirtualWebhookBillID = "supported"
+	VirtualWebhookBillIDNotSupported      VirtualWebhookBillID = "not-supported"
+)
+
+func (e VirtualWebhookBillID) ToPointer() *VirtualWebhookBillID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookBillID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookBranchID string
 
 const (
@@ -568,6 +591,29 @@ func (e VirtualWebhookIoID) ToPointer() *VirtualWebhookIoID {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookIoID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type VirtualWebhookIssueID string
+
+const (
+	VirtualWebhookIssueIDSupportedRequired VirtualWebhookIssueID = "supported-required"
+	VirtualWebhookIssueIDSupported         VirtualWebhookIssueID = "supported"
+	VirtualWebhookIssueIDNotSupported      VirtualWebhookIssueID = "not-supported"
+)
+
+func (e VirtualWebhookIssueID) ToPointer() *VirtualWebhookIssueID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookIssueID) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -1660,6 +1706,7 @@ type IntegrationSupport struct {
 	ListInterviewID         *ListInterviewID         `json:"list_interview_id,omitempty"`
 	ListInvoiceID           *ListInvoiceID           `json:"list_invoice_id,omitempty"`
 	ListIoID                *ListIoID                `json:"list_io_id,omitempty"`
+	ListIssueID             *ListIssueID             `json:"list_issue_id,omitempty"`
 	ListItemID              *ListItemID              `json:"list_item_id,omitempty"`
 	ListItemVariantID       *ListItemVariantID       `json:"list_item_variant_id,omitempty"`
 	ListJobID               *ListJobID               `json:"list_job_id,omitempty"`
@@ -1794,6 +1841,7 @@ type IntegrationSupport struct {
 	VirtualWebhookGuestID           *VirtualWebhookGuestID                   `json:"virtual_webhook_guest_id,omitempty"`
 	VirtualWebhookInvoiceID         *VirtualWebhookInvoiceID                 `json:"virtual_webhook_invoice_id,omitempty"`
 	VirtualWebhookIoID              *VirtualWebhookIoID                      `json:"virtual_webhook_io_id,omitempty"`
+	VirtualWebhookIssueID           *VirtualWebhookIssueID                   `json:"virtual_webhook_issue_id,omitempty"`
 	VirtualWebhookItemID            *VirtualWebhookItemID                    `json:"virtual_webhook_item_id,omitempty"`
 	VirtualWebhookItemVariantID     *VirtualWebhookItemVariantID             `json:"virtual_webhook_item_variant_id,omitempty"`
 	VirtualWebhookJobID             *VirtualWebhookJobID                     `json:"virtual_webhook_job_id,omitempty"`
@@ -2169,6 +2217,13 @@ func (i *IntegrationSupport) GetListIoID() *ListIoID {
 		return nil
 	}
 	return i.ListIoID
+}
+
+func (i *IntegrationSupport) GetListIssueID() *ListIssueID {
+	if i == nil {
+		return nil
+	}
+	return i.ListIssueID
 }
 
 func (i *IntegrationSupport) GetListItemID() *ListItemID {
@@ -3100,6 +3155,13 @@ func (i *IntegrationSupport) GetVirtualWebhookIoID() *VirtualWebhookIoID {
 		return nil
 	}
 	return i.VirtualWebhookIoID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookIssueID() *VirtualWebhookIssueID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookIssueID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookItemID() *VirtualWebhookItemID {

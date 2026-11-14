@@ -55,3 +55,4 @@ value := operations.ListUnifiedWorkspaceintegrationsQueryParamCategoriesPassthro
 | `ListUnifiedWorkspaceintegrationsQueryParamCategoriesHealthcare`   | healthcare                                                         |
 | `ListUnifiedWorkspaceintegrationsQueryParamCategoriesProperty`     | property                                                           |
 | `ListUnifiedWorkspaceintegrationsQueryParamCategoriesPlm`          | plm                                                                |
+| `ListUnifiedWorkspaceintegrationsQueryParamCategoriesQms`          | qms                                                                |

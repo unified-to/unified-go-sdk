@@ -45,6 +45,7 @@ const (
 	PropertyWorkspaceIntegrationPatchCategoriesHealthcare   PropertyWorkspaceIntegrationPatchCategories = "healthcare"
 	PropertyWorkspaceIntegrationPatchCategoriesProperty     PropertyWorkspaceIntegrationPatchCategories = "property"
 	PropertyWorkspaceIntegrationPatchCategoriesPlm          PropertyWorkspaceIntegrationPatchCategories = "plm"
+	PropertyWorkspaceIntegrationPatchCategoriesQms          PropertyWorkspaceIntegrationPatchCategories = "qms"
 )
 
 func (e PropertyWorkspaceIntegrationPatchCategories) ToPointer() *PropertyWorkspaceIntegrationPatchCategories {
@@ -55,7 +56,7 @@ func (e PropertyWorkspaceIntegrationPatchCategories) ToPointer() *PropertyWorksp
 func (e *PropertyWorkspaceIntegrationPatchCategories) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "passthrough", "hris", "ats", "auth", "saml", "crm", "enrich", "martech", "ticketing", "uc", "accounting", "storage", "commerce", "payment", "genai", "messaging", "kms", "task", "scim", "lms", "repo", "metadata", "calendar", "verification", "ads", "analytics", "forms", "shipping", "assessment", "signing", "clubs", "datastore", "cdp", "performance", "social", "legal", "compute", "healthcare", "property", "plm":
+		case "passthrough", "hris", "ats", "auth", "saml", "crm", "enrich", "martech", "ticketing", "uc", "accounting", "storage", "commerce", "payment", "genai", "messaging", "kms", "task", "scim", "lms", "repo", "metadata", "calendar", "verification", "ads", "analytics", "forms", "shipping", "assessment", "signing", "clubs", "datastore", "cdp", "performance", "social", "legal", "compute", "healthcare", "property", "plm", "qms":
 			return true
 		}
 	}

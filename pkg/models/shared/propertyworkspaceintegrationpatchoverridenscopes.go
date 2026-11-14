@@ -380,6 +380,14 @@ type PropertyWorkspaceIntegrationPatchOverridenScopes struct {
 	PropertyReviewRead                 *string `json:"property_review_read,omitempty"`
 	PropertyReviewWrite                *string `json:"property_review_write,omitempty"`
 	PropertyUnittypeRead               *string `json:"property_unittype_read,omitempty"`
+	QmsActionRead                      *string `json:"qms_action_read,omitempty"`
+	QmsActionWrite                     *string `json:"qms_action_write,omitempty"`
+	QmsAuditRead                       *string `json:"qms_audit_read,omitempty"`
+	QmsAuditWrite                      *string `json:"qms_audit_write,omitempty"`
+	QmsInspectionRead                  *string `json:"qms_inspection_read,omitempty"`
+	QmsInspectionWrite                 *string `json:"qms_inspection_write,omitempty"`
+	QmsIssueRead                       *string `json:"qms_issue_read,omitempty"`
+	QmsIssueWrite                      *string `json:"qms_issue_write,omitempty"`
 	RepoBranchRead                     *string `json:"repo_branch_read,omitempty"`
 	RepoBranchWrite                    *string `json:"repo_branch_write,omitempty"`
 	RepoCommitRead                     *string `json:"repo_commit_read,omitempty"`
@@ -3089,6 +3097,62 @@ func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetPropertyUnittypeRe
 		return nil
 	}
 	return p.PropertyUnittypeRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetQmsActionRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.QmsActionRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetQmsActionWrite() *string {
+	if p == nil {
+		return nil
+	}
+	return p.QmsActionWrite
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetQmsAuditRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.QmsAuditRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetQmsAuditWrite() *string {
+	if p == nil {
+		return nil
+	}
+	return p.QmsAuditWrite
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetQmsInspectionRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.QmsInspectionRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetQmsInspectionWrite() *string {
+	if p == nil {
+		return nil
+	}
+	return p.QmsInspectionWrite
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetQmsIssueRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.QmsIssueRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetQmsIssueWrite() *string {
+	if p == nil {
+		return nil
+	}
+	return p.QmsIssueWrite
 }
 
 func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetRepoBranchRead() *string {

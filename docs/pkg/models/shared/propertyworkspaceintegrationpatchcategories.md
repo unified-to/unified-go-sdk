@@ -58,3 +58,4 @@ custom := shared.PropertyWorkspaceIntegrationPatchCategories("custom_value")
 | `PropertyWorkspaceIntegrationPatchCategoriesHealthcare`   | healthcare                                                |
 | `PropertyWorkspaceIntegrationPatchCategoriesProperty`     | property                                                  |
 | `PropertyWorkspaceIntegrationPatchCategoriesPlm`          | plm                                                       |
+| `PropertyWorkspaceIntegrationPatchCategoriesQms`          | qms                                                       |

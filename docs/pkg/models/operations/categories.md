@@ -55,3 +55,4 @@ value := operations.CategoriesPassthrough
 | `CategoriesHealthcare`   | healthcare               |
 | `CategoriesProperty`     | property                 |
 | `CategoriesPlm`          | plm                      |
+| `CategoriesQms`          | qms                      |

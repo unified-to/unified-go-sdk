@@ -465,3 +465,11 @@ custom := shared.PropertyWorkspaceIntegrationPermissions("custom_value")
 | `PropertyWorkspaceIntegrationPermissionsPlmChangeWrite`                     | plm_change_write                                                            |
 | `PropertyWorkspaceIntegrationPermissionsPlmCategoryRead`                    | plm_category_read                                                           |
 | `PropertyWorkspaceIntegrationPermissionsPlmCategoryWrite`                   | plm_category_write                                                          |
+| `PropertyWorkspaceIntegrationPermissionsQmsIssueRead`                       | qms_issue_read                                                              |
+| `PropertyWorkspaceIntegrationPermissionsQmsIssueWrite`                      | qms_issue_write                                                             |
+| `PropertyWorkspaceIntegrationPermissionsQmsActionRead`                      | qms_action_read                                                             |
+| `PropertyWorkspaceIntegrationPermissionsQmsActionWrite`                     | qms_action_write                                                            |
+| `PropertyWorkspaceIntegrationPermissionsQmsInspectionRead`                  | qms_inspection_read                                                         |
+| `PropertyWorkspaceIntegrationPermissionsQmsInspectionWrite`                 | qms_inspection_write                                                        |
+| `PropertyWorkspaceIntegrationPermissionsQmsAuditRead`                       | qms_audit_read                                                              |
+| `PropertyWorkspaceIntegrationPermissionsQmsAuditWrite`                      | qms_audit_write                                                             |

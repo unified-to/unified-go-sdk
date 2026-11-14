@@ -465,3 +465,11 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsPlmChangeWrite`                     | plm_change_write                                                  |
 | `PropertyConnectionPermissionsPlmCategoryRead`                    | plm_category_read                                                 |
 | `PropertyConnectionPermissionsPlmCategoryWrite`                   | plm_category_write                                                |
+| `PropertyConnectionPermissionsQmsIssueRead`                       | qms_issue_read                                                    |
+| `PropertyConnectionPermissionsQmsIssueWrite`                      | qms_issue_write                                                   |
+| `PropertyConnectionPermissionsQmsActionRead`                      | qms_action_read                                                   |
+| `PropertyConnectionPermissionsQmsActionWrite`                     | qms_action_write                                                  |
+| `PropertyConnectionPermissionsQmsInspectionRead`                  | qms_inspection_read                                               |
+| `PropertyConnectionPermissionsQmsInspectionWrite`                 | qms_inspection_write                                              |
+| `PropertyConnectionPermissionsQmsAuditRead`                       | qms_audit_read                                                    |
+| `PropertyConnectionPermissionsQmsAuditWrite`                      | qms_audit_write                                                   |

@@ -24,6 +24,9 @@ const (
 	AdsTargetTypeBrowser         AdsTargetType = "BROWSER"
 	AdsTargetTypeOperatingSystem AdsTargetType = "OPERATING_SYSTEM"
 	AdsTargetTypeDeviceCategory  AdsTargetType = "DEVICE_CATEGORY"
+	AdsTargetTypeExchange        AdsTargetType = "EXCHANGE"
+	AdsTargetTypeDeal            AdsTargetType = "DEAL"
+	AdsTargetTypeDealGroup       AdsTargetType = "DEAL_GROUP"
 )
 
 func (e AdsTargetType) ToPointer() *AdsTargetType {
@@ -34,7 +37,7 @@ func (e AdsTargetType) ToPointer() *AdsTargetType {
 func (e *AdsTargetType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "INTEREST", "BEHAVIOR", "LOCALE", "COUNTRY", "REGION", "CITY", "ZIP", "US_DMA", "TOPIC", "USER_LIST", "CARRIER", "DEVICE_MODEL", "OS_VERSION", "CUSTOM_KEY", "CUSTOM_VALUE", "BROWSER", "OPERATING_SYSTEM", "DEVICE_CATEGORY":
+		case "INTEREST", "BEHAVIOR", "LOCALE", "COUNTRY", "REGION", "CITY", "ZIP", "US_DMA", "TOPIC", "USER_LIST", "CARRIER", "DEVICE_MODEL", "OS_VERSION", "CUSTOM_KEY", "CUSTOM_VALUE", "BROWSER", "OPERATING_SYSTEM", "DEVICE_CATEGORY", "EXCHANGE", "DEAL", "DEAL_GROUP":
 			return true
 		}
 	}

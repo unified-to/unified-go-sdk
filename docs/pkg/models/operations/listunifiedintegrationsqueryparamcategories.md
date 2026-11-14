@@ -55,3 +55,4 @@ value := operations.ListUnifiedIntegrationsQueryParamCategoriesPassthrough
 | `ListUnifiedIntegrationsQueryParamCategoriesHealthcare`   | healthcare                                                |
 | `ListUnifiedIntegrationsQueryParamCategoriesProperty`     | property                                                  |
 | `ListUnifiedIntegrationsQueryParamCategoriesPlm`          | plm                                                       |
+| `ListUnifiedIntegrationsQueryParamCategoriesQms`          | qms                                                       |

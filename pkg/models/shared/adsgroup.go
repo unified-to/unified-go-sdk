@@ -335,6 +335,8 @@ type AdsGroup struct {
 	BudgetUnit           *AdsGroupBudgetUnit   `json:"budget_unit,omitempty"`
 	// The ID of the campaign the ad group belongs to (an AdsCampaign ID)
 	CampaignID *string `json:"campaign_id,omitempty"`
+	// Conversion trackers counted for this group (DV360 Floodlight activities, Pinterest conversion tag)
+	ConversionTracking []AdsConversionTracking `json:"conversion_tracking,omitempty"`
 	// How the line item is priced (Google Ad Manager costType)
 	CostType *CostType `json:"cost_type,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -451,6 +453,13 @@ func (a *AdsGroup) GetCampaignID() *string {
 		return nil
 	}
 	return a.CampaignID
+}
+
+func (a *AdsGroup) GetConversionTracking() []AdsConversionTracking {
+	if a == nil {
+		return nil
+	}
+	return a.ConversionTracking
 }
 
 func (a *AdsGroup) GetCostType() *CostType {

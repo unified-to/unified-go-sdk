@@ -50,6 +50,7 @@ const (
 	ListAdsGroupsQueryParamFieldsCostType             ListAdsGroupsQueryParamFields = "cost_type"
 	ListAdsGroupsQueryParamFieldsDeliveryGoal         ListAdsGroupsQueryParamFields = "delivery_goal"
 	ListAdsGroupsQueryParamFieldsCreativeSizes        ListAdsGroupsQueryParamFields = "creative_sizes"
+	ListAdsGroupsQueryParamFieldsConversionTracking   ListAdsGroupsQueryParamFields = "conversion_tracking"
 )
 
 func (e ListAdsGroupsQueryParamFields) ToPointer() *ListAdsGroupsQueryParamFields {
@@ -136,6 +137,8 @@ func (e *ListAdsGroupsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "delivery_goal":
 		fallthrough
 	case "creative_sizes":
+		fallthrough
+	case "conversion_tracking":
 		*e = ListAdsGroupsQueryParamFields(v)
 		return nil
 	default:

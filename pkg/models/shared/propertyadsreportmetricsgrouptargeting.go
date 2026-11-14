@@ -20,6 +20,8 @@ type PropertyAdsReportMetricsGroupTargeting struct {
 	Optimization *PropertyAdsReportMetricsGroupTargetingOptimization `json:"optimization,omitempty"`
 	Placement    *PropertyAdsReportMetricsGroupTargetingPlacement    `json:"placement,omitempty"`
 	Schedule     []AdSchedule                                        `json:"schedule,omitempty"`
+	// Buy-side inventory: exchanges, deals, deal groups and seller authorization (DSPs)
+	Supply *PropertyAdsReportMetricsGroupTargetingSupply `json:"supply,omitempty"`
 }
 
 func (p *PropertyAdsReportMetricsGroupTargeting) GetAudience() *PropertyAdsReportMetricsGroupTargetingAudience {
@@ -104,4 +106,11 @@ func (p *PropertyAdsReportMetricsGroupTargeting) GetSchedule() []AdSchedule {
 		return nil
 	}
 	return p.Schedule
+}
+
+func (p *PropertyAdsReportMetricsGroupTargeting) GetSupply() *PropertyAdsReportMetricsGroupTargetingSupply {
+	if p == nil {
+		return nil
+	}
+	return p.Supply
 }
