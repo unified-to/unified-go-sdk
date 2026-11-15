@@ -40,7 +40,7 @@ func main() {
     res, err := s.Shipment.CreateShippingShipment(ctx, operations.CreateShippingShipmentRequest{
         ShippingShipment: shared.ShippingShipment{
             CreatedAt: types.MustNewTimeFromString("2022-09-12T03:11:28.960Z"),
-            ID: unifiedgosdk.Pointer("1bdb4034-3c60-44f4-87e3-0023e85b8c90"),
+            ID: unifiedgosdk.Pointer("56f3736d-bac7-451d-a980-9f880cde40c5"),
             IsReturn: unifiedgosdk.Pointer(false),
             Lineitems: []shared.ShippingShipmentLineitem{},
             Metadata: []shared.ShippingMetadata{},
@@ -50,7 +50,7 @@ func main() {
             ServiceCode: unifiedgosdk.Pointer("OVERNIGHT"),
             ShippedAt: types.MustNewTimeFromString("2022-09-12T07:26:48.479Z"),
             Status: shared.ShippingShipmentStatusDelivered.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-11-16T07:26:19.961Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-11-16T08:28:05.307Z"),
         },
         ConnectionID: "<id>",
     })
@@ -219,7 +219,7 @@ func main() {
     res, err := s.Shipment.PatchShippingShipment(ctx, operations.PatchShippingShipmentRequest{
         ShippingShipment: shared.ShippingShipment{
             CreatedAt: types.MustNewTimeFromString("2022-09-12T03:11:28.960Z"),
-            ID: unifiedgosdk.Pointer("bf16f34d-1600-4118-ae5c-f4ba53187b2a"),
+            ID: unifiedgosdk.Pointer("d6aa7d06-0141-4512-af53-e6f70761c417"),
             IsReturn: unifiedgosdk.Pointer(false),
             Lineitems: []shared.ShippingShipmentLineitem{},
             Metadata: []shared.ShippingMetadata{},
@@ -229,7 +229,7 @@ func main() {
             ServiceCode: unifiedgosdk.Pointer("OVERNIGHT"),
             ShippedAt: types.MustNewTimeFromString("2022-09-12T07:26:48.479Z"),
             Status: shared.ShippingShipmentStatusDelivered.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-11-16T07:26:19.965Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-11-16T08:28:05.310Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -345,7 +345,7 @@ func main() {
     res, err := s.Shipment.UpdateShippingShipment(ctx, operations.UpdateShippingShipmentRequest{
         ShippingShipment: shared.ShippingShipment{
             CreatedAt: types.MustNewTimeFromString("2022-09-12T03:11:28.960Z"),
-            ID: unifiedgosdk.Pointer("bf16f34d-1600-4118-ae5c-f4ba53187b2a"),
+            ID: unifiedgosdk.Pointer("d6aa7d06-0141-4512-af53-e6f70761c417"),
             IsReturn: unifiedgosdk.Pointer(false),
             Lineitems: []shared.ShippingShipmentLineitem{},
             Metadata: []shared.ShippingMetadata{},
@@ -355,7 +355,7 @@ func main() {
             ServiceCode: unifiedgosdk.Pointer("OVERNIGHT"),
             ShippedAt: types.MustNewTimeFromString("2022-09-12T07:26:48.479Z"),
             Status: shared.ShippingShipmentStatusDelivered.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-11-16T07:26:19.965Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-11-16T08:28:05.310Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

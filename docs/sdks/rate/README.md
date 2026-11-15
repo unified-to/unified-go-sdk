@@ -35,7 +35,7 @@ func main() {
     res, err := s.Rate.CreateShippingRate(ctx, operations.CreateShippingRateRequest{
         ShippingRate: shared.ShippingRate{
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("c51502ed-2013-4d60-92f6-0bcf246500b6"),
+            ID: unifiedgosdk.Pointer("40a2ab81-299d-4786-9c0e-28a575c0ebcc"),
             Metadata: []shared.ShippingMetadata{},
             Rates: []shared.ShippingRateRate{
                 shared.ShippingRateRate{
