@@ -111,7 +111,7 @@ func (e *UpdateQmsIssueQueryParamFields) UnmarshalJSON(data []byte) error {
 }
 
 type UpdateQmsIssueRequest struct {
-	// A nonconformance, complaint, audit finding or problem report
+	// A nonconformance, complaint, audit finding or other quality issue
 	QmsIssue shared.QmsIssue `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

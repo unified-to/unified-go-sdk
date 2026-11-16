@@ -31,7 +31,9 @@
 * [PatchPropertyReservation](#patchpropertyreservation) - Update a reservation
 * [PatchPropertyReview](#patchpropertyreview) - Update a review
 * [RemoveAnalyticsProperty](#removeanalyticsproperty) - Remove a property
+* [RemovePropertyGuest](#removepropertyguest) - Remove a guest
 * [RemovePropertyListing](#removepropertylisting) - Remove a listing
+* [RemovePropertyReservation](#removepropertyreservation) - Remove a reservation
 * [UpdateAnalyticsProperty](#updateanalyticsproperty) - Update a property
 * [UpdatePropertyGuest](#updatepropertyguest) - Update a guest
 * [UpdatePropertyListing](#updatepropertylisting) - Update a listing
@@ -68,10 +70,10 @@ func main() {
         AnalyticsProperty: shared.AnalyticsProperty{
             CreatedAt: types.MustNewTimeFromString("2021-09-05T19:04:58.430Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("fb34d07d-2d10-42c9-98a6-61ad58440f42"),
+            ID: unifiedgosdk.Pointer("d7407f89-a6c5-44e3-b1df-6165dbac46f1"),
             Name: unifiedgosdk.Pointer("Daniel, Goldner and Dickinson"),
             Timezone: unifiedgosdk.Pointer("UTC"),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-14T23:20:46.247Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-14T23:27:29.871Z"),
         },
         ConnectionID: "<id>",
     })
@@ -132,13 +134,13 @@ func main() {
         PropertyConversation: shared.PropertyConversation{
             CreatedAt: types.MustNewTimeFromString("2022-06-20T00:02:46.530Z"),
             GuestName: unifiedgosdk.Pointer("Evie Okuneva"),
-            ID: unifiedgosdk.Pointer("38ce2bbc-e97a-4390-ae48-a73206524ae4"),
+            ID: unifiedgosdk.Pointer("0a171b66-ae4d-40a3-bba2-e7963f6873ec"),
             IsUnread: unifiedgosdk.Pointer(false),
             Messages: []shared.PropertyMessage{
                 shared.PropertyMessage{
                     Attachments: []shared.PropertyAttachment{},
-                    CreatedAt: types.MustNewTimeFromString("2025-05-02T20:03:06.987Z"),
-                    ID: unifiedgosdk.Pointer("6a7540b4-e3ca-400a-ae7f-fd6abb2c786e"),
+                    CreatedAt: types.MustNewTimeFromString("2025-05-03T11:08:15.478Z"),
+                    ID: unifiedgosdk.Pointer("37a53cfe-3256-481e-9e6d-8ed6d6d7fe62"),
                     IsAutomatic: unifiedgosdk.Pointer(false),
                     Message: unifiedgosdk.Pointer("Vinitor caterva amor sophismata admitto colo tempore aufero torrens."),
                     SenderName: unifiedgosdk.Pointer("Evie Okuneva"),
@@ -146,8 +148,8 @@ func main() {
                 },
                 shared.PropertyMessage{
                     Attachments: []shared.PropertyAttachment{},
-                    CreatedAt: types.MustNewTimeFromString("2026-05-19T21:45:07.111Z"),
-                    ID: unifiedgosdk.Pointer("5ce0f75b-7e53-437f-9f83-45d915e02618"),
+                    CreatedAt: types.MustNewTimeFromString("2026-05-20T18:20:18.069Z"),
+                    ID: unifiedgosdk.Pointer("3ad2e8f3-1a78-4645-8ff2-df7d33780c2e"),
                     Message: unifiedgosdk.Pointer("Aequitas torqueo curiositas cimentarius repellendus auditor degero ademptio adnuo."),
                     SenderName: unifiedgosdk.Pointer("Ms. Patti Lynch"),
                     SenderType: shared.SenderTypeHost.ToPointer(),
@@ -155,7 +157,7 @@ func main() {
             },
             Metadata: []shared.PropertyMetadata{},
             Source: unifiedgosdk.Pointer("Airbnb"),
-            UpdatedAt: types.MustNewTimeFromString("2026-05-19T21:45:07.111Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-20T18:20:18.069Z"),
         },
         ConnectionID: "<id>",
     })
@@ -231,7 +233,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Melissa"),
-            ID: unifiedgosdk.Pointer("b3625d64-6abb-4eb9-bdec-63b6d0438460"),
+            ID: unifiedgosdk.Pointer("20e86e22-7480-4c2b-97d8-d7e94781c925"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg"),
             Language: unifiedgosdk.Pointer("es"),
             LastName: unifiedgosdk.Pointer("Green"),
@@ -245,7 +247,7 @@ func main() {
                     Type: shared.PropertyTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2025-07-15T08:44:29.256Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-16T01:48:57.563Z"),
         },
         ConnectionID: "<id>",
     })
@@ -335,7 +337,7 @@ func main() {
             Currency: unifiedgosdk.Pointer("USD"),
             Description: unifiedgosdk.Pointer("Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo."),
             HouseRules: unifiedgosdk.Pointer("No smoking. No parties or events."),
-            ID: unifiedgosdk.Pointer("f73fd375-dc75-4c60-b629-571834e64608"),
+            ID: unifiedgosdk.Pointer("478ffb50-6d43-4296-a2eb-ed7594018ed8"),
             ImageUrls: []string{
                 "https://loremflickr.com/23/1328?lock=5798241296161663",
                 "https://loremflickr.com/12/1312?lock=6354590363728966",
@@ -352,7 +354,7 @@ func main() {
             StartPriceAmount: unifiedgosdk.Pointer[float64](470.0),
             Timezone: unifiedgosdk.Pointer("America/Los_Angeles"),
             Type: shared.PropertyListingTypeRoom.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-22T11:53:53.494Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-23T10:28:58.708Z"),
             WebURL: unifiedgosdk.Pointer("https://tight-pronoun.info/"),
         },
         ConnectionID: "<id>",
@@ -417,9 +419,9 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-12-18T19:14:11.415Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DepositAmount: unifiedgosdk.Pointer[float64](594.54),
-            EndAt: types.MustNewTimeFromString("2026-11-29"),
+            EndAt: types.MustNewTimeFromString("2026-11-30"),
             Guests: unifiedgosdk.Pointer[float64](2.0),
-            ID: unifiedgosdk.Pointer("e4129533-abf7-443f-b799-ddfc93fa0f7b"),
+            ID: unifiedgosdk.Pointer("0bbeb3ef-a672-4b3f-be0c-e1f52320d096"),
             LineItems: []shared.PropertyLineitem{
                 shared.PropertyLineitem{
                     Amount: unifiedgosdk.Pointer[float64](1665.0),
@@ -441,7 +443,7 @@ func main() {
                     Type: shared.PropertyLineitemTypeTax.ToPointer(),
                 },
             },
-            StartAt: types.MustNewTimeFromString("2026-11-20"),
+            StartAt: types.MustNewTimeFromString("2026-11-21"),
             TotalAmount: unifiedgosdk.Pointer[float64](1981.8),
         },
         ConnectionID: "<id>",
@@ -512,7 +514,7 @@ func main() {
             GuestEmail: unifiedgosdk.Pointer("anya.parisian@hotmail.com"),
             GuestName: unifiedgosdk.Pointer("Anya Parisian"),
             Guests: unifiedgosdk.Pointer[float64](6.0),
-            ID: unifiedgosdk.Pointer("fff55064-1c39-4334-8130-001a0a747946"),
+            ID: unifiedgosdk.Pointer("b1658336-f92f-40c3-9cd5-a992c28ab97a"),
             LineItems: []shared.PropertyLineitem{
                 shared.PropertyLineitem{
                     Amount: unifiedgosdk.Pointer[float64](1980.0),
@@ -549,7 +551,7 @@ func main() {
             StartAt: types.MustNewTimeFromString("2022-09-25T17:17:08.838Z"),
             Status: shared.PropertyReservationStatusPending.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](2181.6),
-            UpdatedAt: types.MustNewTimeFromString("2022-11-18T02:29:38.932Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-11-18T04:53:17.346Z"),
             WebURL: unifiedgosdk.Pointer("https://antique-tennis.biz/"),
         },
         ConnectionID: "<id>",
@@ -1428,10 +1430,10 @@ func main() {
         AnalyticsProperty: shared.AnalyticsProperty{
             CreatedAt: types.MustNewTimeFromString("2021-09-05T19:04:58.430Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("e1fa25a0-3d34-4086-a8ef-550d6d6071e2"),
+            ID: unifiedgosdk.Pointer("3a8da1ad-b507-4e6f-90ee-0bb81ec68453"),
             Name: unifiedgosdk.Pointer("Daniel, Goldner and Dickinson"),
             Timezone: unifiedgosdk.Pointer("UTC"),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-14T23:20:46.247Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-14T23:27:29.871Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1508,7 +1510,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Melissa"),
-            ID: unifiedgosdk.Pointer("1198668a-6ae6-479f-87de-9e55c5639df2"),
+            ID: unifiedgosdk.Pointer("f011a2ec-db2c-45e8-af41-74a59bec70fa"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg"),
             Language: unifiedgosdk.Pointer("es"),
             LastName: unifiedgosdk.Pointer("Green"),
@@ -1522,7 +1524,7 @@ func main() {
                     Type: shared.PropertyTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2025-07-15T08:44:29.274Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-16T01:48:57.576Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1613,7 +1615,7 @@ func main() {
             Currency: unifiedgosdk.Pointer("USD"),
             Description: unifiedgosdk.Pointer("Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo."),
             HouseRules: unifiedgosdk.Pointer("No smoking. No parties or events."),
-            ID: unifiedgosdk.Pointer("38eb5e16-eba4-4bbd-8682-a051d1a8156f"),
+            ID: unifiedgosdk.Pointer("d21f5e22-100d-4fa2-abc9-cdee7f3dc28c"),
             ImageUrls: []string{
                 "https://loremflickr.com/23/1328?lock=5798241296161663",
                 "https://loremflickr.com/12/1312?lock=6354590363728966",
@@ -1630,7 +1632,7 @@ func main() {
             StartPriceAmount: unifiedgosdk.Pointer[float64](470.0),
             Timezone: unifiedgosdk.Pointer("America/Los_Angeles"),
             Type: shared.PropertyListingTypeRoom.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-22T11:53:53.525Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-23T10:28:58.746Z"),
             WebURL: unifiedgosdk.Pointer("https://tight-pronoun.info/"),
         },
         ConnectionID: "<id>",
@@ -1702,7 +1704,7 @@ func main() {
             GuestEmail: unifiedgosdk.Pointer("anya.parisian@hotmail.com"),
             GuestName: unifiedgosdk.Pointer("Anya Parisian"),
             Guests: unifiedgosdk.Pointer[float64](6.0),
-            ID: unifiedgosdk.Pointer("1f3efd59-4030-411e-8283-672c94816fb0"),
+            ID: unifiedgosdk.Pointer("86782d6b-96b5-42e4-a20b-74b5ed0d12c6"),
             LineItems: []shared.PropertyLineitem{
                 shared.PropertyLineitem{
                     Amount: unifiedgosdk.Pointer[float64](1980.0),
@@ -1739,7 +1741,7 @@ func main() {
             StartAt: types.MustNewTimeFromString("2022-09-25T17:17:08.838Z"),
             Status: shared.PropertyReservationStatusPending.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](2181.6),
-            UpdatedAt: types.MustNewTimeFromString("2022-11-18T02:29:38.935Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-11-18T04:53:17.349Z"),
             WebURL: unifiedgosdk.Pointer("https://antique-tennis.biz/"),
         },
         ConnectionID: "<id>",
@@ -1832,13 +1834,13 @@ func main() {
             },
             Content: unifiedgosdk.Pointer("Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo."),
             CreatedAt: types.MustNewTimeFromString("2022-10-17T11:17:07.682Z"),
-            ID: unifiedgosdk.Pointer("6f08ce4d-16e8-490b-8fe9-a6b6d601f249"),
+            ID: unifiedgosdk.Pointer("349d9838-c9cd-40b9-809e-a365e191756b"),
             IsPublic: unifiedgosdk.Pointer(true),
             Metadata: []shared.PropertyMetadata{},
             PrivateFeedback: unifiedgosdk.Pointer("Tripudio neque communis."),
             Rating: unifiedgosdk.Pointer[float64](3.0),
             Source: unifiedgosdk.Pointer("Airbnb"),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-03T15:37:33.511Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-04T10:48:14.680Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1925,6 +1927,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## RemovePropertyGuest
+
+Deletes the PropertyGuest identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removePropertyGuest" method="delete" path="/property/{connection_id}/guest/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Property.RemovePropertyGuest(ctx, operations.RemovePropertyGuestRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.RemovePropertyGuestRequest](../../pkg/models/operations/removepropertyguestrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.RemovePropertyGuestResponse](../../pkg/models/operations/removepropertyguestresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## RemovePropertyListing
 
 Deletes the PropertyListing identified by `id`.
@@ -1980,6 +2037,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## RemovePropertyReservation
+
+Deletes the PropertyReservation identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removePropertyReservation" method="delete" path="/property/{connection_id}/reservation/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Property.RemovePropertyReservation(ctx, operations.RemovePropertyReservationRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
+| `request`                                                                                                      | [operations.RemovePropertyReservationRequest](../../pkg/models/operations/removepropertyreservationrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
+
+### Response
+
+**[*operations.RemovePropertyReservationResponse](../../pkg/models/operations/removepropertyreservationresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## UpdateAnalyticsProperty
 
 Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
@@ -2010,10 +2122,10 @@ func main() {
         AnalyticsProperty: shared.AnalyticsProperty{
             CreatedAt: types.MustNewTimeFromString("2021-09-05T19:04:58.430Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("e1fa25a0-3d34-4086-a8ef-550d6d6071e2"),
+            ID: unifiedgosdk.Pointer("3a8da1ad-b507-4e6f-90ee-0bb81ec68453"),
             Name: unifiedgosdk.Pointer("Daniel, Goldner and Dickinson"),
             Timezone: unifiedgosdk.Pointer("UTC"),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-14T23:20:46.247Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-14T23:27:29.871Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2090,7 +2202,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Melissa"),
-            ID: unifiedgosdk.Pointer("1198668a-6ae6-479f-87de-9e55c5639df2"),
+            ID: unifiedgosdk.Pointer("f011a2ec-db2c-45e8-af41-74a59bec70fa"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg"),
             Language: unifiedgosdk.Pointer("es"),
             LastName: unifiedgosdk.Pointer("Green"),
@@ -2104,7 +2216,7 @@ func main() {
                     Type: shared.PropertyTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2025-07-15T08:44:29.274Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-16T01:48:57.576Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2195,7 +2307,7 @@ func main() {
             Currency: unifiedgosdk.Pointer("USD"),
             Description: unifiedgosdk.Pointer("Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo."),
             HouseRules: unifiedgosdk.Pointer("No smoking. No parties or events."),
-            ID: unifiedgosdk.Pointer("38eb5e16-eba4-4bbd-8682-a051d1a8156f"),
+            ID: unifiedgosdk.Pointer("d21f5e22-100d-4fa2-abc9-cdee7f3dc28c"),
             ImageUrls: []string{
                 "https://loremflickr.com/23/1328?lock=5798241296161663",
                 "https://loremflickr.com/12/1312?lock=6354590363728966",
@@ -2212,7 +2324,7 @@ func main() {
             StartPriceAmount: unifiedgosdk.Pointer[float64](470.0),
             Timezone: unifiedgosdk.Pointer("America/Los_Angeles"),
             Type: shared.PropertyListingTypeRoom.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-22T11:53:53.525Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-23T10:28:58.746Z"),
             WebURL: unifiedgosdk.Pointer("https://tight-pronoun.info/"),
         },
         ConnectionID: "<id>",
@@ -2284,7 +2396,7 @@ func main() {
             GuestEmail: unifiedgosdk.Pointer("anya.parisian@hotmail.com"),
             GuestName: unifiedgosdk.Pointer("Anya Parisian"),
             Guests: unifiedgosdk.Pointer[float64](6.0),
-            ID: unifiedgosdk.Pointer("1f3efd59-4030-411e-8283-672c94816fb0"),
+            ID: unifiedgosdk.Pointer("86782d6b-96b5-42e4-a20b-74b5ed0d12c6"),
             LineItems: []shared.PropertyLineitem{
                 shared.PropertyLineitem{
                     Amount: unifiedgosdk.Pointer[float64](1980.0),
@@ -2321,7 +2433,7 @@ func main() {
             StartAt: types.MustNewTimeFromString("2022-09-25T17:17:08.838Z"),
             Status: shared.PropertyReservationStatusPending.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](2181.6),
-            UpdatedAt: types.MustNewTimeFromString("2022-11-18T02:29:38.935Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-11-18T04:53:17.349Z"),
             WebURL: unifiedgosdk.Pointer("https://antique-tennis.biz/"),
         },
         ConnectionID: "<id>",
@@ -2414,13 +2526,13 @@ func main() {
             },
             Content: unifiedgosdk.Pointer("Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo."),
             CreatedAt: types.MustNewTimeFromString("2022-10-17T11:17:07.682Z"),
-            ID: unifiedgosdk.Pointer("6f08ce4d-16e8-490b-8fe9-a6b6d601f249"),
+            ID: unifiedgosdk.Pointer("349d9838-c9cd-40b9-809e-a365e191756b"),
             IsPublic: unifiedgosdk.Pointer(true),
             Metadata: []shared.PropertyMetadata{},
             PrivateFeedback: unifiedgosdk.Pointer("Tripudio neque communis."),
             Rating: unifiedgosdk.Pointer[float64](3.0),
             Source: unifiedgosdk.Pointer("Airbnb"),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-03T15:37:33.511Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-04T10:48:14.680Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

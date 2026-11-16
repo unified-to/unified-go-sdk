@@ -32,6 +32,8 @@ func (e *KmsPageType) IsExact() bool {
 }
 
 type KmsPage struct {
+	// The page body, in the format given by `type`. Used to create/update only; read a page's body from `download_url`.
+	Content *string `json:"content,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt   *time.Time        `json:"created_at,omitempty"`
 	DownloadURL *string           `json:"download_url,omitempty"`
@@ -62,6 +64,13 @@ func (k *KmsPage) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (k *KmsPage) GetContent() *string {
+	if k == nil {
+		return nil
+	}
+	return k.Content
 }
 
 func (k *KmsPage) GetCreatedAt() *time.Time {

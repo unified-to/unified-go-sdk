@@ -8,6 +8,7 @@
 * [GetPropertyGuest](#getpropertyguest) - Retrieve a guest
 * [ListPropertyGuests](#listpropertyguests) - List all guests
 * [PatchPropertyGuest](#patchpropertyguest) - Update a guest
+* [RemovePropertyGuest](#removepropertyguest) - Remove a guest
 * [UpdatePropertyGuest](#updatepropertyguest) - Update a guest
 
 ## CreatePropertyGuest
@@ -55,7 +56,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Melissa"),
-            ID: unifiedgosdk.Pointer("b3625d64-6abb-4eb9-bdec-63b6d0438460"),
+            ID: unifiedgosdk.Pointer("20e86e22-7480-4c2b-97d8-d7e94781c925"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg"),
             Language: unifiedgosdk.Pointer("es"),
             LastName: unifiedgosdk.Pointer("Green"),
@@ -69,7 +70,7 @@ func main() {
                     Type: shared.PropertyTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2025-07-15T08:44:29.256Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-16T01:48:57.563Z"),
         },
         ConnectionID: "<id>",
     })
@@ -254,7 +255,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Melissa"),
-            ID: unifiedgosdk.Pointer("1198668a-6ae6-479f-87de-9e55c5639df2"),
+            ID: unifiedgosdk.Pointer("f011a2ec-db2c-45e8-af41-74a59bec70fa"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg"),
             Language: unifiedgosdk.Pointer("es"),
             LastName: unifiedgosdk.Pointer("Green"),
@@ -268,7 +269,7 @@ func main() {
                     Type: shared.PropertyTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2025-07-15T08:44:29.274Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-16T01:48:57.576Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -293,6 +294,61 @@ func main() {
 ### Response
 
 **[*operations.PatchPropertyGuestResponse](../../pkg/models/operations/patchpropertyguestresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemovePropertyGuest
+
+Deletes the PropertyGuest identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removePropertyGuest" method="delete" path="/property/{connection_id}/guest/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Guest.RemovePropertyGuest(ctx, operations.RemovePropertyGuestRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.RemovePropertyGuestRequest](../../pkg/models/operations/removepropertyguestrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.RemovePropertyGuestResponse](../../pkg/models/operations/removepropertyguestresponse.md), error**
 
 ### Errors
 
@@ -345,7 +401,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Melissa"),
-            ID: unifiedgosdk.Pointer("1198668a-6ae6-479f-87de-9e55c5639df2"),
+            ID: unifiedgosdk.Pointer("f011a2ec-db2c-45e8-af41-74a59bec70fa"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg"),
             Language: unifiedgosdk.Pointer("es"),
             LastName: unifiedgosdk.Pointer("Green"),
@@ -359,7 +415,7 @@ func main() {
                     Type: shared.PropertyTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2025-07-15T08:44:29.274Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-16T01:48:57.576Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

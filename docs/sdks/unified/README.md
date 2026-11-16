@@ -30,6 +30,7 @@
 * [ListUnifiedWebhooks](#listunifiedwebhooks) - Returns all registered webhooks
 * [ListUnifiedWorkspaceintegrations](#listunifiedworkspaceintegrations) - List workspace integrations
 * [PatchUnifiedConnection](#patchunifiedconnection) - Update connection
+* [PatchUnifiedSecretsmanager](#patchunifiedsecretsmanager) - Update secrets manager
 * [PatchUnifiedWebhook](#patchunifiedwebhook) - Update webhook subscription
 * [PatchUnifiedWebhookResume](#patchunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [PatchUnifiedWebhookTrigger](#patchunifiedwebhooktrigger) - Trigger webhook
@@ -40,6 +41,7 @@
 * [RemoveUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
 * [RemoveUnifiedWorkspaceintegration](#removeunifiedworkspaceintegration) - Remove workspace integration
 * [UpdateUnifiedConnection](#updateunifiedconnection) - Update connection
+* [UpdateUnifiedSecretsmanager](#updateunifiedsecretsmanager) - Update secrets manager
 * [UpdateUnifiedWebhook](#updateunifiedwebhook) - Update webhook subscription
 * [UpdateUnifiedWebhookResume](#updateunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [UpdateUnifiedWebhookTrigger](#updateunifiedwebhooktrigger) - Trigger webhook
@@ -1448,6 +1450,69 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## PatchUnifiedSecretsmanager
+
+Update secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchUnifiedSecretsmanager" method="patch" path="/unified/secretsmanager/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Unified.PatchUnifiedSecretsmanager(ctx, operations.PatchUnifiedSecretsmanagerRequest{
+        SecretsManager: shared.SecretsManager{
+            Auth: map[string]string{
+                "key": "<value>",
+                "key1": "<value>",
+            },
+            Name: "<value>",
+            Type: shared.SecretsManagerTypeAkeyless,
+        },
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.SecretsManager != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
+| `request`                                                                                                        | [operations.PatchUnifiedSecretsmanagerRequest](../../pkg/models/operations/patchunifiedsecretsmanagerrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `opts`                                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                               | The options for this request.                                                                                    |
+
+### Response
+
+**[*operations.PatchUnifiedSecretsmanagerResponse](../../pkg/models/operations/patchunifiedsecretsmanagerresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## PatchUnifiedWebhook
 
 Update webhook subscription
@@ -1998,6 +2063,68 @@ func main() {
 ### Response
 
 **[*operations.UpdateUnifiedConnectionResponse](../../pkg/models/operations/updateunifiedconnectionresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateUnifiedSecretsmanager
+
+Update secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateUnifiedSecretsmanager" method="put" path="/unified/secretsmanager/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Unified.UpdateUnifiedSecretsmanager(ctx, operations.UpdateUnifiedSecretsmanagerRequest{
+        SecretsManager: shared.SecretsManager{
+            Auth: map[string]string{
+                "key": "<value>",
+            },
+            Name: "<value>",
+            Type: shared.SecretsManagerTypeAlibabacloud,
+        },
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.SecretsManager != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.UpdateUnifiedSecretsmanagerRequest](../../pkg/models/operations/updateunifiedsecretsmanagerrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `opts`                                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                                       | :heavy_minus_sign:                                                                                                 | The options for this request.                                                                                      |
+
+### Response
+
+**[*operations.UpdateUnifiedSecretsmanagerResponse](../../pkg/models/operations/updateunifiedsecretsmanagerresponse.md), error**
 
 ### Errors
 

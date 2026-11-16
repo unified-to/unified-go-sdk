@@ -30,7 +30,6 @@ func (e *QmsInspectionResult) IsExact() bool {
 	return false
 }
 
-// QmsInspectionStatus - Normalized status of a quality record
 type QmsInspectionStatus string
 
 const (
@@ -115,7 +114,6 @@ type QmsInspection struct {
 	Result       *QmsInspectionResult `json:"result,omitempty"`
 	Revision     *string              `json:"revision,omitempty"`
 	SerialNumber *string              `json:"serial_number,omitempty"`
-	// Normalized status of a quality record
 	Status       *QmsInspectionStatus `json:"status,omitempty"`
 	SupplierName *string              `json:"supplier_name,omitempty"`
 	Type         *QmsInspectionType   `json:"type,omitempty"`

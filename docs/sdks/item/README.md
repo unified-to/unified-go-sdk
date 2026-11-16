@@ -44,7 +44,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Decretum vulnero ustulo abeo."),
             Duration: unifiedgosdk.Pointer[float64](104.0),
             GlobalCode: unifiedgosdk.Pointer("978-0-85270-680-0"),
-            ID: unifiedgosdk.Pointer("1ac06f96-af38-4038-acaa-295ff7f37ca9"),
+            ID: unifiedgosdk.Pointer("123beec4-3df5-4140-a14c-3989b6acd49b"),
             IsActive: unifiedgosdk.Pointer(false),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsTaxable: unifiedgosdk.Pointer(true),
@@ -53,10 +53,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Caterva eveniet acies candidus."),
                     Height: unifiedgosdk.Pointer[float64](876.0),
-                    ID: unifiedgosdk.Pointer("6507afbb-fb63-4aea-9ee4-b26588ceea54"),
+                    ID: unifiedgosdk.Pointer("854d4ba6-cdfd-46c2-809e-148813e51d50"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("11b00732-dd87-48f1-b7cc-26ba90efe1eb"),
+                            ID: unifiedgosdk.Pointer("81965c0a-1501-4a6a-8827-bfe34f896762"),
                             Slug: unifiedgosdk.Pointer("doloremque"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "allatus",
@@ -71,10 +71,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Comedo."),
                     Height: unifiedgosdk.Pointer[float64](651.0),
-                    ID: unifiedgosdk.Pointer("f5af87b8-980c-4582-adf8-d79fd534c7a3"),
+                    ID: unifiedgosdk.Pointer("86254c7b-f2cd-4f57-880f-f48805a84561"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("6c5b9da2-bd30-43b3-aba4-9cebbf45ec25"),
+                            ID: unifiedgosdk.Pointer("654fbf7c-41b7-4e2e-b843-51e6f3fbcd93"),
                             Slug: unifiedgosdk.Pointer("bis"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "somniculosus",
@@ -95,7 +95,7 @@ func main() {
                         },
                     )),
                     Format: shared.CommerceMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("da0b8dd4-c371-4d6a-a515-eb90cc82ad86"),
+                    ID: unifiedgosdk.Pointer("879393dc-2f6c-41b8-8ae1-00792aadd906"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
@@ -120,7 +120,7 @@ func main() {
             },
             TotalStock: unifiedgosdk.Pointer[float64](682.0),
             Type: unifiedgosdk.Pointer("SERVICE"),
-            UpdatedAt: types.MustNewTimeFromString("2022-04-29T03:40:47.496Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-04-29T12:36:42.934Z"),
             VendorName: unifiedgosdk.Pointer("Mayer - Flatley"),
             Weight: unifiedgosdk.Pointer[float64](37.0),
             WeightUnit: shared.WeightUnitOz.ToPointer(),
@@ -296,7 +296,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Decretum vulnero ustulo abeo."),
             Duration: unifiedgosdk.Pointer[float64](104.0),
             GlobalCode: unifiedgosdk.Pointer("978-0-85270-680-0"),
-            ID: unifiedgosdk.Pointer("58998127-84d7-49a5-bd44-39bf34249a20"),
+            ID: unifiedgosdk.Pointer("84cbb7ea-c41b-4f2a-ae77-278f95b3c252"),
             IsActive: unifiedgosdk.Pointer(false),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsTaxable: unifiedgosdk.Pointer(true),
@@ -305,10 +305,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Caterva eveniet acies candidus."),
                     Height: unifiedgosdk.Pointer[float64](876.0),
-                    ID: unifiedgosdk.Pointer("4791ed3d-2f2b-49cc-833c-af4c0f2d99e5"),
+                    ID: unifiedgosdk.Pointer("aa88cc0b-b22b-4f06-9b17-e592ebf8c2bc"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("71133047-829b-406f-a068-e1fd83ac236e"),
+                            ID: unifiedgosdk.Pointer("a5f233b0-2401-4c60-b1cf-3d90e4cf306d"),
                             Slug: unifiedgosdk.Pointer("doloremque"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "allatus",
@@ -323,10 +323,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Comedo."),
                     Height: unifiedgosdk.Pointer[float64](651.0),
-                    ID: unifiedgosdk.Pointer("93ee82d3-4c2f-4760-8e39-a31bb46e4105"),
+                    ID: unifiedgosdk.Pointer("2d032b6c-855a-4a2d-b729-b0937a200b46"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("9dfad46b-270e-4ce7-be44-c83e8331dfe5"),
+                            ID: unifiedgosdk.Pointer("ef2b2f0b-cbf6-4cc2-8bbf-4694c2348964"),
                             Slug: unifiedgosdk.Pointer("bis"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "somniculosus",
@@ -347,7 +347,7 @@ func main() {
                         },
                     )),
                     Format: shared.CommerceMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("483810bc-595d-4e1c-b095-ad457f4eab6e"),
+                    ID: unifiedgosdk.Pointer("573e3806-9daf-44f6-926a-f863b327b8c1"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
@@ -372,7 +372,7 @@ func main() {
             },
             TotalStock: unifiedgosdk.Pointer[float64](682.0),
             Type: unifiedgosdk.Pointer("SERVICE"),
-            UpdatedAt: types.MustNewTimeFromString("2022-04-29T03:40:47.509Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-04-29T12:36:42.949Z"),
             VendorName: unifiedgosdk.Pointer("Mayer - Flatley"),
             Weight: unifiedgosdk.Pointer[float64](37.0),
             WeightUnit: shared.WeightUnitOz.ToPointer(),
@@ -495,7 +495,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Decretum vulnero ustulo abeo."),
             Duration: unifiedgosdk.Pointer[float64](104.0),
             GlobalCode: unifiedgosdk.Pointer("978-0-85270-680-0"),
-            ID: unifiedgosdk.Pointer("58998127-84d7-49a5-bd44-39bf34249a20"),
+            ID: unifiedgosdk.Pointer("84cbb7ea-c41b-4f2a-ae77-278f95b3c252"),
             IsActive: unifiedgosdk.Pointer(false),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsTaxable: unifiedgosdk.Pointer(true),
@@ -504,10 +504,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Caterva eveniet acies candidus."),
                     Height: unifiedgosdk.Pointer[float64](876.0),
-                    ID: unifiedgosdk.Pointer("4791ed3d-2f2b-49cc-833c-af4c0f2d99e5"),
+                    ID: unifiedgosdk.Pointer("aa88cc0b-b22b-4f06-9b17-e592ebf8c2bc"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("71133047-829b-406f-a068-e1fd83ac236e"),
+                            ID: unifiedgosdk.Pointer("a5f233b0-2401-4c60-b1cf-3d90e4cf306d"),
                             Slug: unifiedgosdk.Pointer("doloremque"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "allatus",
@@ -522,10 +522,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Comedo."),
                     Height: unifiedgosdk.Pointer[float64](651.0),
-                    ID: unifiedgosdk.Pointer("93ee82d3-4c2f-4760-8e39-a31bb46e4105"),
+                    ID: unifiedgosdk.Pointer("2d032b6c-855a-4a2d-b729-b0937a200b46"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("9dfad46b-270e-4ce7-be44-c83e8331dfe5"),
+                            ID: unifiedgosdk.Pointer("ef2b2f0b-cbf6-4cc2-8bbf-4694c2348964"),
                             Slug: unifiedgosdk.Pointer("bis"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "somniculosus",
@@ -546,7 +546,7 @@ func main() {
                         },
                     )),
                     Format: shared.CommerceMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("483810bc-595d-4e1c-b095-ad457f4eab6e"),
+                    ID: unifiedgosdk.Pointer("573e3806-9daf-44f6-926a-f863b327b8c1"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
@@ -571,7 +571,7 @@ func main() {
             },
             TotalStock: unifiedgosdk.Pointer[float64](682.0),
             Type: unifiedgosdk.Pointer("SERVICE"),
-            UpdatedAt: types.MustNewTimeFromString("2022-04-29T03:40:47.509Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-04-29T12:36:42.949Z"),
             VendorName: unifiedgosdk.Pointer("Mayer - Flatley"),
             Weight: unifiedgosdk.Pointer[float64](37.0),
             WeightUnit: shared.WeightUnitOz.ToPointer(),

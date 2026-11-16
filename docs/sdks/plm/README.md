@@ -23,6 +23,7 @@
 * [PatchPlmDocument](#patchplmdocument) - Update a document
 * [PatchPlmPart](#patchplmpart) - Update a part
 * [RemovePlmBomline](#removeplmbomline) - Remove a bomline
+* [RemovePlmPart](#removeplmpart) - Remove a part
 * [UpdatePlmBomline](#updateplmbomline) - Update a bomline
 * [UpdatePlmChange](#updateplmchange) - Update a change
 * [UpdatePlmDocument](#updateplmdocument) - Update a document
@@ -58,11 +59,11 @@ func main() {
         PlmBomline: shared.PlmBomline{
             CreatedAt: types.MustNewTimeFromString("2022-04-02T07:09:29.598Z"),
             EffectiveAt: types.MustNewTimeFromString("2022-04-02T07:09:29.598Z"),
-            ID: unifiedgosdk.Pointer("889d8c40-9129-484c-8c36-56c828ab50b4"),
+            ID: unifiedgosdk.Pointer("68f978fc-1861-4f81-879b-a493026def14"),
             Quantity: unifiedgosdk.Pointer[float64](7.0),
             ReferenceDesignators: []string{},
             UnitOfMeasure: unifiedgosdk.Pointer("EA"),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-20T04:56:34.235Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-20T10:11:54.602Z"),
         },
         ConnectionID: "<id>",
     })
@@ -124,14 +125,14 @@ func main() {
             AffectedItems: []shared.PlmAffectedItem{},
             CreatedAt: types.MustNewTimeFromString("2021-08-02T05:58:32.287Z"),
             Description: unifiedgosdk.Pointer("Vorago spiculum avaritia adipiscor callide."),
-            ID: unifiedgosdk.Pointer("d3edf26e-a8ae-46b6-906c-20fdc15c96c0"),
+            ID: unifiedgosdk.Pointer("41239822-1f51-435f-936b-1bdf2ce97ebb"),
             Metadata: []shared.PlmMetadata{},
             Name: unifiedgosdk.Pointer("Update goodwill"),
             Number: unifiedgosdk.Pointer("ECO-6591"),
             Priority: unifiedgosdk.Pointer("Medium"),
             Status: shared.PlmChangeStatusInReview.ToPointer(),
             Type: shared.PlmChangeTypeOrder.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-28T10:09:59.749Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-29T08:45:38.255Z"),
             URL: unifiedgosdk.Pointer("https://warmhearted-fraudster.biz/"),
         },
         ConnectionID: "<id>",
@@ -193,9 +194,9 @@ func main() {
         PlmDocument: shared.PlmDocument{
             CreatedAt: types.MustNewTimeFromString("2020-10-16T01:44:30.293Z"),
             FileIds: []string{},
-            ID: unifiedgosdk.Pointer("5d99b746-80c2-4951-9f68-f38dda09ffb8"),
+            ID: unifiedgosdk.Pointer("7ce0a145-7dc4-42ff-b0ee-9609bcac53a6"),
             LifecycleState: unifiedgosdk.Pointer("Under Review"),
-            MasterIdentifier: unifiedgosdk.Pointer("ff4fe878-0b70-47bb-a581-622ca07570e9"),
+            MasterIdentifier: unifiedgosdk.Pointer("9bf5aee9-412c-4f3c-890b-9dbc4aaf2f58"),
             Metadata: []shared.PlmMetadata{},
             Name: unifiedgosdk.Pointer("Procedure taxicab"),
             Number: unifiedgosdk.Pointer("DOC-086886"),
@@ -203,7 +204,7 @@ func main() {
             Revision: unifiedgosdk.Pointer("C"),
             Status: shared.PlmDocumentStatusInReview.ToPointer(),
             Type: shared.PlmDocumentTypeProcedure.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-09T03:28:02.765Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-10T01:56:05.940Z"),
             URL: unifiedgosdk.Pointer("https://uncommon-guide.info/"),
         },
         ConnectionID: "<id>",
@@ -267,10 +268,10 @@ func main() {
             Description: unifiedgosdk.Pointer("Pectus tero ulterius aestivus talis tero ullam cruciamentum."),
             DocumentIds: []string{},
             FileIds: []string{},
-            ID: unifiedgosdk.Pointer("27241081-c029-4b29-964b-24fbcacfb92a"),
+            ID: unifiedgosdk.Pointer("55f2121f-5829-42d7-ac9a-b5130dbaace3"),
             IsAssembly: unifiedgosdk.Pointer(false),
             LifecycleState: unifiedgosdk.Pointer("Design"),
-            MasterIdentifier: unifiedgosdk.Pointer("c5f536cb-06f6-41b3-9d0c-7c501ea6a18f"),
+            MasterIdentifier: unifiedgosdk.Pointer("8ca8b3fc-b802-4767-abb0-2a916d2f0607"),
             Metadata: []shared.PlmMetadata{},
             Name: unifiedgosdk.Pointer("grumpy PCB"),
             Number: unifiedgosdk.Pointer("PRT-009154"),
@@ -280,7 +281,7 @@ func main() {
             Status: shared.PlmPartStatusInWork.ToPointer(),
             Type: shared.PlmPartTypeSoftware.ToPointer(),
             UnitOfMeasure: unifiedgosdk.Pointer("EA"),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-12T16:46:36.790Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-12T22:52:45.496Z"),
             URL: unifiedgosdk.Pointer("https://inborn-independence.info"),
         },
         ConnectionID: "<id>",
@@ -887,11 +888,11 @@ func main() {
         PlmBomline: shared.PlmBomline{
             CreatedAt: types.MustNewTimeFromString("2022-04-02T07:09:29.598Z"),
             EffectiveAt: types.MustNewTimeFromString("2022-04-02T07:09:29.598Z"),
-            ID: unifiedgosdk.Pointer("b2f03758-7e16-461a-a9d5-24a07f0fe833"),
+            ID: unifiedgosdk.Pointer("b711615e-4a69-43ed-8498-1f255ecb991c"),
             Quantity: unifiedgosdk.Pointer[float64](7.0),
             ReferenceDesignators: []string{},
             UnitOfMeasure: unifiedgosdk.Pointer("EA"),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-20T04:56:34.237Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-20T10:11:54.604Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -954,14 +955,14 @@ func main() {
             AffectedItems: []shared.PlmAffectedItem{},
             CreatedAt: types.MustNewTimeFromString("2021-08-02T05:58:32.287Z"),
             Description: unifiedgosdk.Pointer("Vorago spiculum avaritia adipiscor callide."),
-            ID: unifiedgosdk.Pointer("c36b86a0-2fab-46a4-9122-c704bbe0e09a"),
+            ID: unifiedgosdk.Pointer("690696de-5028-446c-841f-601bf2691e3f"),
             Metadata: []shared.PlmMetadata{},
             Name: unifiedgosdk.Pointer("Update goodwill"),
             Number: unifiedgosdk.Pointer("ECO-6591"),
             Priority: unifiedgosdk.Pointer("Medium"),
             Status: shared.PlmChangeStatusInReview.ToPointer(),
             Type: shared.PlmChangeTypeOrder.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-28T10:09:59.763Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-29T08:45:38.277Z"),
             URL: unifiedgosdk.Pointer("https://warmhearted-fraudster.biz/"),
         },
         ConnectionID: "<id>",
@@ -1024,9 +1025,9 @@ func main() {
         PlmDocument: shared.PlmDocument{
             CreatedAt: types.MustNewTimeFromString("2020-10-16T01:44:30.293Z"),
             FileIds: []string{},
-            ID: unifiedgosdk.Pointer("5d262d23-3f54-4337-a502-392c2a26e463"),
+            ID: unifiedgosdk.Pointer("928051f8-29ce-4efc-8719-79ed7b2c668a"),
             LifecycleState: unifiedgosdk.Pointer("Under Review"),
-            MasterIdentifier: unifiedgosdk.Pointer("09fc26a5-c6a7-4cfe-a1c8-f0c99be5a1e8"),
+            MasterIdentifier: unifiedgosdk.Pointer("bad45ee0-9a14-407b-9358-8dcdfb00de03"),
             Metadata: []shared.PlmMetadata{},
             Name: unifiedgosdk.Pointer("Procedure taxicab"),
             Number: unifiedgosdk.Pointer("DOC-086886"),
@@ -1034,7 +1035,7 @@ func main() {
             Revision: unifiedgosdk.Pointer("C"),
             Status: shared.PlmDocumentStatusInReview.ToPointer(),
             Type: shared.PlmDocumentTypeProcedure.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-09T03:28:02.779Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-10T01:56:05.957Z"),
             URL: unifiedgosdk.Pointer("https://uncommon-guide.info/"),
         },
         ConnectionID: "<id>",
@@ -1099,10 +1100,10 @@ func main() {
             Description: unifiedgosdk.Pointer("Pectus tero ulterius aestivus talis tero ullam cruciamentum."),
             DocumentIds: []string{},
             FileIds: []string{},
-            ID: unifiedgosdk.Pointer("722b214b-ee61-45ba-be89-c2d593f1be5d"),
+            ID: unifiedgosdk.Pointer("ed1720ea-b799-4951-8664-92b4d2950c20"),
             IsAssembly: unifiedgosdk.Pointer(false),
             LifecycleState: unifiedgosdk.Pointer("Design"),
-            MasterIdentifier: unifiedgosdk.Pointer("9996ea1d-a829-4026-9638-e575eef6834d"),
+            MasterIdentifier: unifiedgosdk.Pointer("61b2334c-b167-49b1-8b80-ff80fb8811fe"),
             Metadata: []shared.PlmMetadata{},
             Name: unifiedgosdk.Pointer("grumpy PCB"),
             Number: unifiedgosdk.Pointer("PRT-009154"),
@@ -1112,7 +1113,7 @@ func main() {
             Status: shared.PlmPartStatusInWork.ToPointer(),
             Type: shared.PlmPartTypeSoftware.ToPointer(),
             UnitOfMeasure: unifiedgosdk.Pointer("EA"),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-12T16:46:36.796Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-12T22:52:45.501Z"),
             URL: unifiedgosdk.Pointer("https://inborn-independence.info"),
         },
         ConnectionID: "<id>",
@@ -1200,6 +1201,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## RemovePlmPart
+
+Deletes the PlmPart identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removePlmPart" method="delete" path="/plm/{connection_id}/part/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Plm.RemovePlmPart(ctx, operations.RemovePlmPartRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.RemovePlmPartRequest](../../pkg/models/operations/removeplmpartrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+
+### Response
+
+**[*operations.RemovePlmPartResponse](../../pkg/models/operations/removeplmpartresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## UpdatePlmBomline
 
 Updates the PlmBomline identified by `id`. Provide the unified PlmBomline fields to change in the request body.
@@ -1230,11 +1286,11 @@ func main() {
         PlmBomline: shared.PlmBomline{
             CreatedAt: types.MustNewTimeFromString("2022-04-02T07:09:29.598Z"),
             EffectiveAt: types.MustNewTimeFromString("2022-04-02T07:09:29.598Z"),
-            ID: unifiedgosdk.Pointer("b2f03758-7e16-461a-a9d5-24a07f0fe833"),
+            ID: unifiedgosdk.Pointer("b711615e-4a69-43ed-8498-1f255ecb991c"),
             Quantity: unifiedgosdk.Pointer[float64](7.0),
             ReferenceDesignators: []string{},
             UnitOfMeasure: unifiedgosdk.Pointer("EA"),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-20T04:56:34.237Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-20T10:11:54.604Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1297,14 +1353,14 @@ func main() {
             AffectedItems: []shared.PlmAffectedItem{},
             CreatedAt: types.MustNewTimeFromString("2021-08-02T05:58:32.287Z"),
             Description: unifiedgosdk.Pointer("Vorago spiculum avaritia adipiscor callide."),
-            ID: unifiedgosdk.Pointer("c36b86a0-2fab-46a4-9122-c704bbe0e09a"),
+            ID: unifiedgosdk.Pointer("690696de-5028-446c-841f-601bf2691e3f"),
             Metadata: []shared.PlmMetadata{},
             Name: unifiedgosdk.Pointer("Update goodwill"),
             Number: unifiedgosdk.Pointer("ECO-6591"),
             Priority: unifiedgosdk.Pointer("Medium"),
             Status: shared.PlmChangeStatusInReview.ToPointer(),
             Type: shared.PlmChangeTypeOrder.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-28T10:09:59.763Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-29T08:45:38.277Z"),
             URL: unifiedgosdk.Pointer("https://warmhearted-fraudster.biz/"),
         },
         ConnectionID: "<id>",
@@ -1367,9 +1423,9 @@ func main() {
         PlmDocument: shared.PlmDocument{
             CreatedAt: types.MustNewTimeFromString("2020-10-16T01:44:30.293Z"),
             FileIds: []string{},
-            ID: unifiedgosdk.Pointer("5d262d23-3f54-4337-a502-392c2a26e463"),
+            ID: unifiedgosdk.Pointer("928051f8-29ce-4efc-8719-79ed7b2c668a"),
             LifecycleState: unifiedgosdk.Pointer("Under Review"),
-            MasterIdentifier: unifiedgosdk.Pointer("09fc26a5-c6a7-4cfe-a1c8-f0c99be5a1e8"),
+            MasterIdentifier: unifiedgosdk.Pointer("bad45ee0-9a14-407b-9358-8dcdfb00de03"),
             Metadata: []shared.PlmMetadata{},
             Name: unifiedgosdk.Pointer("Procedure taxicab"),
             Number: unifiedgosdk.Pointer("DOC-086886"),
@@ -1377,7 +1433,7 @@ func main() {
             Revision: unifiedgosdk.Pointer("C"),
             Status: shared.PlmDocumentStatusInReview.ToPointer(),
             Type: shared.PlmDocumentTypeProcedure.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-09T03:28:02.779Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-10T01:56:05.957Z"),
             URL: unifiedgosdk.Pointer("https://uncommon-guide.info/"),
         },
         ConnectionID: "<id>",
@@ -1442,10 +1498,10 @@ func main() {
             Description: unifiedgosdk.Pointer("Pectus tero ulterius aestivus talis tero ullam cruciamentum."),
             DocumentIds: []string{},
             FileIds: []string{},
-            ID: unifiedgosdk.Pointer("722b214b-ee61-45ba-be89-c2d593f1be5d"),
+            ID: unifiedgosdk.Pointer("ed1720ea-b799-4951-8664-92b4d2950c20"),
             IsAssembly: unifiedgosdk.Pointer(false),
             LifecycleState: unifiedgosdk.Pointer("Design"),
-            MasterIdentifier: unifiedgosdk.Pointer("9996ea1d-a829-4026-9638-e575eef6834d"),
+            MasterIdentifier: unifiedgosdk.Pointer("61b2334c-b167-49b1-8b80-ff80fb8811fe"),
             Metadata: []shared.PlmMetadata{},
             Name: unifiedgosdk.Pointer("grumpy PCB"),
             Number: unifiedgosdk.Pointer("PRT-009154"),
@@ -1455,7 +1511,7 @@ func main() {
             Status: shared.PlmPartStatusInWork.ToPointer(),
             Type: shared.PlmPartTypeSoftware.ToPointer(),
             UnitOfMeasure: unifiedgosdk.Pointer("EA"),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-12T16:46:36.796Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-12T22:52:45.501Z"),
             URL: unifiedgosdk.Pointer("https://inborn-independence.info"),
         },
         ConnectionID: "<id>",

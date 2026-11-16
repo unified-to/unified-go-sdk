@@ -7,7 +7,6 @@ import (
 	"time"
 )
 
-// QmsActionStatus - Normalized status of a quality record
 type QmsActionStatus string
 
 const (
@@ -83,9 +82,8 @@ type QmsAction struct {
 	// Vendor priority value
 	Priority *string `json:"priority,omitempty"`
 	// Raw data from integration
-	Raw       map[string]any `json:"raw,omitempty"`
-	RootCause *string        `json:"root_cause,omitempty"`
-	// Normalized status of a quality record
+	Raw          map[string]any   `json:"raw,omitempty"`
+	RootCause    *string          `json:"root_cause,omitempty"`
 	Status       *QmsActionStatus `json:"status,omitempty"`
 	SupplierName *string          `json:"supplier_name,omitempty"`
 	Type         *QmsActionType   `json:"type,omitempty"`

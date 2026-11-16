@@ -29,3 +29,4 @@ value := operations.PatchKmsPageQueryParamFieldsID
 | `PatchKmsPageQueryParamFieldsHasChildren` | has_children                              |
 | `PatchKmsPageQueryParamFieldsWebURL`      | web_url                                   |
 | `PatchKmsPageQueryParamFieldsRaw`         | raw                                       |
+| `PatchKmsPageQueryParamFieldsContent`     | content                                   |

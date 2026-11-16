@@ -13,6 +13,7 @@
 * [PatchCommerceReservation](#patchcommercereservation) - Update a reservation
 * [PatchPropertyReservation](#patchpropertyreservation) - Update a reservation
 * [RemoveCommerceReservation](#removecommercereservation) - Remove a reservation
+* [RemovePropertyReservation](#removepropertyreservation) - Remove a reservation
 * [UpdateCommerceReservation](#updatecommercereservation) - Update a reservation
 * [UpdatePropertyReservation](#updatepropertyreservation) - Update a reservation
 
@@ -49,13 +50,13 @@ func main() {
             GuestEmail: unifiedgosdk.Pointer("julien.bartoletti@icloud.com"),
             GuestName: unifiedgosdk.Pointer("Julien Bartoletti"),
             GuestPhone: unifiedgosdk.Pointer("(728) 596-2620"),
-            ID: unifiedgosdk.Pointer("67a5a84c-a95f-4998-bbdd-393bca66b9c5"),
+            ID: unifiedgosdk.Pointer("1c96220b-75c0-4edc-9732-c43fd77447fb"),
             Metadata: []shared.CommerceMetadata{},
             Notes: unifiedgosdk.Pointer("Adsum textilis ipsum despecto."),
             Size: unifiedgosdk.Pointer[float64](10.0),
             StartAt: types.MustNewTimeFromString("2021-12-18T00:40:25.125Z"),
             Status: shared.CommerceReservationStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-09T08:00:44.736Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-09T13:02:55.180Z"),
             URL: unifiedgosdk.Pointer("https://expensive-gift.org"),
         },
         ConnectionID: "<id>",
@@ -126,7 +127,7 @@ func main() {
             GuestEmail: unifiedgosdk.Pointer("anya.parisian@hotmail.com"),
             GuestName: unifiedgosdk.Pointer("Anya Parisian"),
             Guests: unifiedgosdk.Pointer[float64](6.0),
-            ID: unifiedgosdk.Pointer("fff55064-1c39-4334-8130-001a0a747946"),
+            ID: unifiedgosdk.Pointer("b1658336-f92f-40c3-9cd5-a992c28ab97a"),
             LineItems: []shared.PropertyLineitem{
                 shared.PropertyLineitem{
                     Amount: unifiedgosdk.Pointer[float64](1980.0),
@@ -163,7 +164,7 @@ func main() {
             StartAt: types.MustNewTimeFromString("2022-09-25T17:17:08.838Z"),
             Status: shared.PropertyReservationStatusPending.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](2181.6),
-            UpdatedAt: types.MustNewTimeFromString("2022-11-18T02:29:38.932Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-11-18T04:53:17.346Z"),
             WebURL: unifiedgosdk.Pointer("https://antique-tennis.biz/"),
         },
         ConnectionID: "<id>",
@@ -446,13 +447,13 @@ func main() {
             GuestEmail: unifiedgosdk.Pointer("julien.bartoletti@icloud.com"),
             GuestName: unifiedgosdk.Pointer("Julien Bartoletti"),
             GuestPhone: unifiedgosdk.Pointer("(728) 596-2620"),
-            ID: unifiedgosdk.Pointer("157a34d2-1b14-45f0-a71e-d1edcfdd80e4"),
+            ID: unifiedgosdk.Pointer("42975897-3e67-47e6-9c1c-9ea44aaf5bdc"),
             Metadata: []shared.CommerceMetadata{},
             Notes: unifiedgosdk.Pointer("Adsum textilis ipsum despecto."),
             Size: unifiedgosdk.Pointer[float64](10.0),
             StartAt: types.MustNewTimeFromString("2021-12-18T00:40:25.125Z"),
             Status: shared.CommerceReservationStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-09T08:00:44.739Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-09T13:02:55.184Z"),
             URL: unifiedgosdk.Pointer("https://expensive-gift.org"),
         },
         ConnectionID: "<id>",
@@ -524,7 +525,7 @@ func main() {
             GuestEmail: unifiedgosdk.Pointer("anya.parisian@hotmail.com"),
             GuestName: unifiedgosdk.Pointer("Anya Parisian"),
             Guests: unifiedgosdk.Pointer[float64](6.0),
-            ID: unifiedgosdk.Pointer("1f3efd59-4030-411e-8283-672c94816fb0"),
+            ID: unifiedgosdk.Pointer("86782d6b-96b5-42e4-a20b-74b5ed0d12c6"),
             LineItems: []shared.PropertyLineitem{
                 shared.PropertyLineitem{
                     Amount: unifiedgosdk.Pointer[float64](1980.0),
@@ -561,7 +562,7 @@ func main() {
             StartAt: types.MustNewTimeFromString("2022-09-25T17:17:08.838Z"),
             Status: shared.PropertyReservationStatusPending.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](2181.6),
-            UpdatedAt: types.MustNewTimeFromString("2022-11-18T02:29:38.935Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-11-18T04:53:17.349Z"),
             WebURL: unifiedgosdk.Pointer("https://antique-tennis.biz/"),
         },
         ConnectionID: "<id>",
@@ -649,6 +650,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## RemovePropertyReservation
+
+Deletes the PropertyReservation identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removePropertyReservation" method="delete" path="/property/{connection_id}/reservation/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Reservation.RemovePropertyReservation(ctx, operations.RemovePropertyReservationRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
+| `request`                                                                                                      | [operations.RemovePropertyReservationRequest](../../pkg/models/operations/removepropertyreservationrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
+
+### Response
+
+**[*operations.RemovePropertyReservationResponse](../../pkg/models/operations/removepropertyreservationresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## UpdateCommerceReservation
 
 Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
@@ -682,13 +738,13 @@ func main() {
             GuestEmail: unifiedgosdk.Pointer("julien.bartoletti@icloud.com"),
             GuestName: unifiedgosdk.Pointer("Julien Bartoletti"),
             GuestPhone: unifiedgosdk.Pointer("(728) 596-2620"),
-            ID: unifiedgosdk.Pointer("157a34d2-1b14-45f0-a71e-d1edcfdd80e4"),
+            ID: unifiedgosdk.Pointer("42975897-3e67-47e6-9c1c-9ea44aaf5bdc"),
             Metadata: []shared.CommerceMetadata{},
             Notes: unifiedgosdk.Pointer("Adsum textilis ipsum despecto."),
             Size: unifiedgosdk.Pointer[float64](10.0),
             StartAt: types.MustNewTimeFromString("2021-12-18T00:40:25.125Z"),
             Status: shared.CommerceReservationStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-09T08:00:44.739Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-09T13:02:55.184Z"),
             URL: unifiedgosdk.Pointer("https://expensive-gift.org"),
         },
         ConnectionID: "<id>",
@@ -760,7 +816,7 @@ func main() {
             GuestEmail: unifiedgosdk.Pointer("anya.parisian@hotmail.com"),
             GuestName: unifiedgosdk.Pointer("Anya Parisian"),
             Guests: unifiedgosdk.Pointer[float64](6.0),
-            ID: unifiedgosdk.Pointer("1f3efd59-4030-411e-8283-672c94816fb0"),
+            ID: unifiedgosdk.Pointer("86782d6b-96b5-42e4-a20b-74b5ed0d12c6"),
             LineItems: []shared.PropertyLineitem{
                 shared.PropertyLineitem{
                     Amount: unifiedgosdk.Pointer[float64](1980.0),
@@ -797,7 +853,7 @@ func main() {
             StartAt: types.MustNewTimeFromString("2022-09-25T17:17:08.838Z"),
             Status: shared.PropertyReservationStatusPending.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](2181.6),
-            UpdatedAt: types.MustNewTimeFromString("2022-11-18T02:29:38.935Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-11-18T04:53:17.349Z"),
             WebURL: unifiedgosdk.Pointer("https://antique-tennis.biz/"),
         },
         ConnectionID: "<id>",

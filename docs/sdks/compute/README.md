@@ -42,6 +42,7 @@
 * [PatchComputeInstance](#patchcomputeinstance) - Update an instance
 * [PatchComputeKey](#patchcomputekey) - Update a key
 * [PatchComputeService](#patchcomputeservice) - Update a service
+* [PatchComputeSnapshot](#patchcomputesnapshot) - Update a snapshot
 * [PatchComputeTemplate](#patchcomputetemplate) - Update a template
 * [PatchComputeVolume](#patchcomputevolume) - Update a volume
 * [RemoveComputeDeployment](#removecomputedeployment) - Remove a deployment
@@ -59,6 +60,7 @@
 * [UpdateComputeInstance](#updatecomputeinstance) - Update an instance
 * [UpdateComputeKey](#updatecomputekey) - Update a key
 * [UpdateComputeService](#updatecomputeservice) - Update a service
+* [UpdateComputeSnapshot](#updatecomputesnapshot) - Update a snapshot
 * [UpdateComputeTemplate](#updatecomputetemplate) - Update a template
 * [UpdateComputeVolume](#updatecomputevolume) - Update a volume
 
@@ -95,13 +97,13 @@ func main() {
             CommitMessage: unifiedgosdk.Pointer("copy primary pixel"),
             CreatedAt: types.MustNewTimeFromString("2022-06-07T03:52:04.613Z"),
             Environment: shared.EnvironmentPreview.ToPointer(),
-            FinishedAt: types.MustNewTimeFromString("2025-09-17T02:51:20.579Z"),
-            ID: unifiedgosdk.Pointer("9f483a18-3e4f-4a12-8cac-4b81e8816d6f"),
+            FinishedAt: types.MustNewTimeFromString("2025-09-17T19:57:58.301Z"),
+            ID: unifiedgosdk.Pointer("6b8ecb55-733f-42a7-a696-6eb89b602f2e"),
             Metadata: []shared.ComputeMetadata{},
-            StartedAt: types.MustNewTimeFromString("2025-04-26T14:05:35.659Z"),
+            StartedAt: types.MustNewTimeFromString("2025-04-27T05:09:13.130Z"),
             Status: shared.ComputeDeploymentStatusLive.ToPointer(),
             Trigger: shared.TriggerAPI.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-22T02:42:33.327Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-22T22:28:34.659Z"),
             URL: unifiedgosdk.Pointer("https://comfortable-petal.name"),
         },
         ConnectionID: "<id>",
@@ -162,12 +164,12 @@ func main() {
     res, err := s.Compute.CreateComputeDomain(ctx, operations.CreateComputeDomainRequest{
         ComputeDomain: shared.ComputeDomain{
             CreatedAt: types.MustNewTimeFromString("2019-11-22T16:38:26.009Z"),
-            ID: unifiedgosdk.Pointer("2f609a94-2186-413e-a0b7-dc9e1653e2cf"),
+            ID: unifiedgosdk.Pointer("8d57f9da-1162-48a7-8534-d9f26f1c2459"),
             IsPrimary: unifiedgosdk.Pointer(false),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("mysterious-republican.usable-section.info"),
             Status: shared.ComputeDomainStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-17T22:22:46.688Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-18T11:36:43.571Z"),
         },
         ConnectionID: "<id>",
     })
@@ -230,11 +232,11 @@ func main() {
             Environments: []shared.PropertyComputeEnvvarEnvironments{
                 shared.PropertyComputeEnvvarEnvironmentsPreview,
             },
-            ID: unifiedgosdk.Pointer("3740c2e6-9976-46bb-9768-6d712be34c10"),
+            ID: unifiedgosdk.Pointer("046d9645-084b-40e2-8c23-dffcdd328236"),
             IsSecret: unifiedgosdk.Pointer(true),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("AEGER_SUBSTANTIA"),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-22T08:29:16.392Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-23T01:50:37.117Z"),
         },
         ConnectionID: "<id>",
     })
@@ -311,7 +313,7 @@ func main() {
             },
             GpuCount: unifiedgosdk.Pointer[float64](0.0),
             HasInternetAccess: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("0bcd23f8-4218-47eb-bd48-d4a1013e60da"),
+            ID: unifiedgosdk.Pointer("d71d9cc0-6174-4d07-b515-2a12cc09cb1a"),
             Image: unifiedgosdk.Pointer("ubuntu:24.04"),
             Market: shared.MarketSpot.ToPointer(),
             MemoryMb: unifiedgosdk.Pointer[float64](2048.0),
@@ -326,11 +328,11 @@ func main() {
                 Port: unifiedgosdk.Pointer[float64](22.0),
                 Username: unifiedgosdk.Pointer("root"),
             },
-            StartedAt: types.MustNewTimeFromString("2025-04-08T05:22:18.261Z"),
+            StartedAt: types.MustNewTimeFromString("2025-04-08T19:29:11.951Z"),
             Status: shared.ComputeInstanceStatusError.ToPointer(),
             StatusReason: unifiedgosdk.Pointer("Sponte quasi adversus alioqui reiciendis arca carmen canis."),
             Type: shared.ComputeInstanceTypeBaremetal.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-02T21:14:12.321Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-03T12:40:30.266Z"),
         },
         ConnectionID: "<id>",
     })
@@ -390,11 +392,11 @@ func main() {
     res, err := s.Compute.CreateComputeKey(ctx, operations.CreateComputeKeyRequest{
         ComputeKey: shared.ComputeKey{
             CreatedAt: types.MustNewTimeFromString("2023-08-19T14:31:46.492Z"),
-            ID: unifiedgosdk.Pointer("d84cf74f-a1b6-4640-b03e-95024649e6b3"),
+            ID: unifiedgosdk.Pointer("9e03fcaf-c2e0-4c18-8795-ebc74da9f302"),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("nienow-secret"),
             Type: shared.ComputeKeyTypeSecret.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-10-15T22:15:11.227Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-16T06:32:22.374Z"),
         },
         ConnectionID: "<id>",
     })
@@ -456,7 +458,7 @@ func main() {
             Branch: unifiedgosdk.Pointer("main"),
             BuildCommand: unifiedgosdk.Pointer("npm run build"),
             CreatedAt: types.MustNewTimeFromString("2023-10-04T02:06:29.391Z"),
-            ID: unifiedgosdk.Pointer("962fa4ed-e084-496e-9455-e27eeeb57892"),
+            ID: unifiedgosdk.Pointer("13093004-0e53-405b-bf24-5b742f4d6dd4"),
             InstanceCount: unifiedgosdk.Pointer[float64](6.0),
             MaxInstanceCount: unifiedgosdk.Pointer[float64](6.0),
             Metadata: []shared.ComputeMetadata{},
@@ -467,7 +469,7 @@ func main() {
             Runtime: unifiedgosdk.Pointer("python"),
             Status: shared.ComputeServiceStatusSuspended.ToPointer(),
             Type: shared.ComputeServiceTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-04-17T00:39:41.724Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-17T12:04:50.648Z"),
             URL: unifiedgosdk.Pointer("https://tame-sideboard.rotating-shoulder.biz"),
         },
         ConnectionID: "<id>",
@@ -528,13 +530,13 @@ func main() {
     res, err := s.Compute.CreateComputeSnapshot(ctx, operations.CreateComputeSnapshotRequest{
         ComputeSnapshot: shared.ComputeSnapshot{
             CreatedAt: types.MustNewTimeFromString("2021-09-24T14:40:06.110Z"),
-            ID: unifiedgosdk.Pointer("36f9f32e-80e6-4cb5-b2bb-16ee4e948277"),
+            ID: unifiedgosdk.Pointer("6d8f0b02-8caa-49a8-afda-46751c5b7d18"),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("snap-alius"),
             SizeMb: unifiedgosdk.Pointer[float64](169984.0),
             Status: shared.ComputeSnapshotStatusDeleting.ToPointer(),
             Type: shared.ComputeSnapshotTypeDisk.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-22T03:59:45.253Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-23T00:36:31.084Z"),
         },
         ConnectionID: "<id>",
     })
@@ -599,10 +601,10 @@ func main() {
             Dockerfile: unifiedgosdk.Pointer("FROM ubuntu:24.04\nRUN apt-get update"),
             GpuCount: unifiedgosdk.Pointer[float64](2.0),
             GpuModel: shared.ComputeTemplateGpuModelNvidiaGh200.ToPointer(),
-            ID: unifiedgosdk.Pointer("356b6ca1-bedc-4278-b32a-9d43d21952f4"),
+            ID: unifiedgosdk.Pointer("83e9596f-97fa-4f86-9de9-d8a065fe2f99"),
             Image: unifiedgosdk.Pointer("perfumed-molasses/cohibeo:5.2"),
             IsPublic: unifiedgosdk.Pointer(false),
-            LastUsedAt: types.MustNewTimeFromString("2026-04-13T22:16:53.651Z"),
+            LastUsedAt: types.MustNewTimeFromString("2026-04-14T17:47:07.106Z"),
             MemoryMb: unifiedgosdk.Pointer[float64](8192.0),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("multi-byte-card"),
@@ -610,7 +612,7 @@ func main() {
                 8080.0,
             },
             Status: shared.ComputeTemplateStatusOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-26T06:44:43.532Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-26T19:14:31.289Z"),
         },
         ConnectionID: "<id>",
     })
@@ -670,14 +672,14 @@ func main() {
     res, err := s.Compute.CreateComputeVolume(ctx, operations.CreateComputeVolumeRequest{
         ComputeVolume: shared.ComputeVolume{
             CreatedAt: types.MustNewTimeFromString("2022-11-15T15:12:48.055Z"),
-            ID: unifiedgosdk.Pointer("3b5981ac-d71e-4d55-8b65-184711091985"),
+            ID: unifiedgosdk.Pointer("93797dfd-9172-4861-9035-0542fa6ced97"),
             InstanceIds: []string{},
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("vol-solum"),
             SizeMb: unifiedgosdk.Pointer[float64](1024000.0),
             Status: shared.ComputeVolumeStatusOther.ToPointer(),
             Type: shared.ComputeVolumeTypeHighPerformance.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-02-17T18:44:25.703Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-02-18T02:01:24.943Z"),
             UsedMb: unifiedgosdk.Pointer[float64](524986.0),
         },
         ConnectionID: "<id>",
@@ -1995,13 +1997,13 @@ func main() {
             CommitMessage: unifiedgosdk.Pointer("copy primary pixel"),
             CreatedAt: types.MustNewTimeFromString("2022-06-07T03:52:04.613Z"),
             Environment: shared.EnvironmentPreview.ToPointer(),
-            FinishedAt: types.MustNewTimeFromString("2025-09-17T02:51:20.591Z"),
-            ID: unifiedgosdk.Pointer("9d8088df-0bbc-48ca-a0a0-3a6865065608"),
+            FinishedAt: types.MustNewTimeFromString("2025-09-17T19:57:58.321Z"),
+            ID: unifiedgosdk.Pointer("a76f139d-163f-40fd-aca7-5f948f8a64af"),
             Metadata: []shared.ComputeMetadata{},
-            StartedAt: types.MustNewTimeFromString("2025-04-26T14:05:35.670Z"),
+            StartedAt: types.MustNewTimeFromString("2025-04-27T05:09:13.147Z"),
             Status: shared.ComputeDeploymentStatusLive.ToPointer(),
             Trigger: shared.TriggerAPI.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-22T02:42:33.342Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-22T22:28:34.682Z"),
             URL: unifiedgosdk.Pointer("https://comfortable-petal.name"),
         },
         ConnectionID: "<id>",
@@ -2063,12 +2065,12 @@ func main() {
     res, err := s.Compute.PatchComputeDomain(ctx, operations.PatchComputeDomainRequest{
         ComputeDomain: shared.ComputeDomain{
             CreatedAt: types.MustNewTimeFromString("2019-11-22T16:38:26.009Z"),
-            ID: unifiedgosdk.Pointer("a4bcc9bc-4293-409c-b2e7-a5849fc0242c"),
+            ID: unifiedgosdk.Pointer("1977fbb2-e444-47ad-95d7-4b92f199fdca"),
             IsPrimary: unifiedgosdk.Pointer(false),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("mysterious-republican.usable-section.info"),
             Status: shared.ComputeDomainStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-17T22:22:46.694Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-18T11:36:43.578Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2132,11 +2134,11 @@ func main() {
             Environments: []shared.PropertyComputeEnvvarEnvironments{
                 shared.PropertyComputeEnvvarEnvironmentsPreview,
             },
-            ID: unifiedgosdk.Pointer("0f81ab80-5d7f-4619-a840-68fc721a7414"),
+            ID: unifiedgosdk.Pointer("c8760c29-58f8-4ce8-a868-52907b34cbce"),
             IsSecret: unifiedgosdk.Pointer(true),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("AEGER_SUBSTANTIA"),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-22T08:29:16.399Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-23T01:50:37.131Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2214,7 +2216,7 @@ func main() {
             },
             GpuCount: unifiedgosdk.Pointer[float64](0.0),
             HasInternetAccess: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("7c3bbe02-8483-4aad-9486-22ae1df10887"),
+            ID: unifiedgosdk.Pointer("cdb3a71c-48d6-4286-98f6-721578dd1e9d"),
             Image: unifiedgosdk.Pointer("ubuntu:24.04"),
             Market: shared.MarketSpot.ToPointer(),
             MemoryMb: unifiedgosdk.Pointer[float64](2048.0),
@@ -2229,11 +2231,11 @@ func main() {
                 Port: unifiedgosdk.Pointer[float64](22.0),
                 Username: unifiedgosdk.Pointer("root"),
             },
-            StartedAt: types.MustNewTimeFromString("2025-04-08T05:22:18.283Z"),
+            StartedAt: types.MustNewTimeFromString("2025-04-08T19:29:11.975Z"),
             Status: shared.ComputeInstanceStatusError.ToPointer(),
             StatusReason: unifiedgosdk.Pointer("Sponte quasi adversus alioqui reiciendis arca carmen canis."),
             Type: shared.ComputeInstanceTypeBaremetal.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-02T21:14:12.345Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-03T12:40:30.292Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2294,11 +2296,11 @@ func main() {
     res, err := s.Compute.PatchComputeKey(ctx, operations.PatchComputeKeyRequest{
         ComputeKey: shared.ComputeKey{
             CreatedAt: types.MustNewTimeFromString("2023-08-19T14:31:46.492Z"),
-            ID: unifiedgosdk.Pointer("984be7d9-2393-48da-bbeb-098db6ea2b95"),
+            ID: unifiedgosdk.Pointer("b2b29e97-ca89-4175-8ced-7c2cd98513ac"),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("nienow-secret"),
             Type: shared.ComputeKeyTypeSecret.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-10-15T22:15:11.231Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-16T06:32:22.379Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2361,7 +2363,7 @@ func main() {
             Branch: unifiedgosdk.Pointer("main"),
             BuildCommand: unifiedgosdk.Pointer("npm run build"),
             CreatedAt: types.MustNewTimeFromString("2023-10-04T02:06:29.391Z"),
-            ID: unifiedgosdk.Pointer("bf0d1634-c2c4-494e-b58a-3324c62558bc"),
+            ID: unifiedgosdk.Pointer("c7a4b43d-044f-47a9-b469-1c54bcf6535a"),
             InstanceCount: unifiedgosdk.Pointer[float64](6.0),
             MaxInstanceCount: unifiedgosdk.Pointer[float64](6.0),
             Metadata: []shared.ComputeMetadata{},
@@ -2372,7 +2374,7 @@ func main() {
             Runtime: unifiedgosdk.Pointer("python"),
             Status: shared.ComputeServiceStatusSuspended.ToPointer(),
             Type: shared.ComputeServiceTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-04-17T00:39:41.733Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-17T12:04:50.659Z"),
             URL: unifiedgosdk.Pointer("https://tame-sideboard.rotating-shoulder.biz"),
         },
         ConnectionID: "<id>",
@@ -2398,6 +2400,73 @@ func main() {
 ### Response
 
 **[*operations.PatchComputeServiceResponse](../../pkg/models/operations/patchcomputeserviceresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchComputeSnapshot
+
+Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchComputeSnapshot" method="patch" path="/compute/{connection_id}/snapshot/{id}" example="compute_snapshot" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Compute.PatchComputeSnapshot(ctx, operations.PatchComputeSnapshotRequest{
+        ComputeSnapshot: shared.ComputeSnapshot{
+            CreatedAt: types.MustNewTimeFromString("2021-09-24T14:40:06.110Z"),
+            ID: unifiedgosdk.Pointer("82d8808c-cea9-4727-a57a-3fbcd36384f1"),
+            Metadata: []shared.ComputeMetadata{},
+            Name: unifiedgosdk.Pointer("snap-alius"),
+            SizeMb: unifiedgosdk.Pointer[float64](169984.0),
+            Status: shared.ComputeSnapshotStatusDeleting.ToPointer(),
+            Type: shared.ComputeSnapshotTypeDisk.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-23T00:36:31.095Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ComputeSnapshot != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.PatchComputeSnapshotRequest](../../pkg/models/operations/patchcomputesnapshotrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.PatchComputeSnapshotResponse](../../pkg/models/operations/patchcomputesnapshotresponse.md), error**
 
 ### Errors
 
@@ -2439,10 +2508,10 @@ func main() {
             Dockerfile: unifiedgosdk.Pointer("FROM ubuntu:24.04\nRUN apt-get update"),
             GpuCount: unifiedgosdk.Pointer[float64](2.0),
             GpuModel: shared.ComputeTemplateGpuModelNvidiaGh200.ToPointer(),
-            ID: unifiedgosdk.Pointer("b6975f6d-c132-4b59-9c50-1ca7ab34b34a"),
+            ID: unifiedgosdk.Pointer("accff1b2-bc07-421b-818d-cebf072fd872"),
             Image: unifiedgosdk.Pointer("perfumed-molasses/cohibeo:5.2"),
             IsPublic: unifiedgosdk.Pointer(false),
-            LastUsedAt: types.MustNewTimeFromString("2026-04-13T22:16:53.669Z"),
+            LastUsedAt: types.MustNewTimeFromString("2026-04-14T17:47:07.123Z"),
             MemoryMb: unifiedgosdk.Pointer[float64](8192.0),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("multi-byte-card"),
@@ -2450,7 +2519,7 @@ func main() {
                 8080.0,
             },
             Status: shared.ComputeTemplateStatusOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-26T06:44:43.543Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-26T19:14:31.301Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2511,14 +2580,14 @@ func main() {
     res, err := s.Compute.PatchComputeVolume(ctx, operations.PatchComputeVolumeRequest{
         ComputeVolume: shared.ComputeVolume{
             CreatedAt: types.MustNewTimeFromString("2022-11-15T15:12:48.055Z"),
-            ID: unifiedgosdk.Pointer("501c0ac2-ae2e-4819-838c-f5ce7a37b90b"),
+            ID: unifiedgosdk.Pointer("60b60fc7-3652-44ee-a7d3-ffc065762ce4"),
             InstanceIds: []string{},
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("vol-solum"),
             SizeMb: unifiedgosdk.Pointer[float64](1024000.0),
             Status: shared.ComputeVolumeStatusOther.ToPointer(),
             Type: shared.ComputeVolumeTypeHighPerformance.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-02-17T18:44:25.707Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-02-18T02:01:24.948Z"),
             UsedMb: unifiedgosdk.Pointer[float64](524986.0),
         },
         ConnectionID: "<id>",
@@ -3079,13 +3148,13 @@ func main() {
             CommitMessage: unifiedgosdk.Pointer("copy primary pixel"),
             CreatedAt: types.MustNewTimeFromString("2022-06-07T03:52:04.613Z"),
             Environment: shared.EnvironmentPreview.ToPointer(),
-            FinishedAt: types.MustNewTimeFromString("2025-09-17T02:51:20.591Z"),
-            ID: unifiedgosdk.Pointer("9d8088df-0bbc-48ca-a0a0-3a6865065608"),
+            FinishedAt: types.MustNewTimeFromString("2025-09-17T19:57:58.321Z"),
+            ID: unifiedgosdk.Pointer("a76f139d-163f-40fd-aca7-5f948f8a64af"),
             Metadata: []shared.ComputeMetadata{},
-            StartedAt: types.MustNewTimeFromString("2025-04-26T14:05:35.670Z"),
+            StartedAt: types.MustNewTimeFromString("2025-04-27T05:09:13.147Z"),
             Status: shared.ComputeDeploymentStatusLive.ToPointer(),
             Trigger: shared.TriggerAPI.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-22T02:42:33.342Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-22T22:28:34.682Z"),
             URL: unifiedgosdk.Pointer("https://comfortable-petal.name"),
         },
         ConnectionID: "<id>",
@@ -3147,12 +3216,12 @@ func main() {
     res, err := s.Compute.UpdateComputeDomain(ctx, operations.UpdateComputeDomainRequest{
         ComputeDomain: shared.ComputeDomain{
             CreatedAt: types.MustNewTimeFromString("2019-11-22T16:38:26.009Z"),
-            ID: unifiedgosdk.Pointer("a4bcc9bc-4293-409c-b2e7-a5849fc0242c"),
+            ID: unifiedgosdk.Pointer("1977fbb2-e444-47ad-95d7-4b92f199fdca"),
             IsPrimary: unifiedgosdk.Pointer(false),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("mysterious-republican.usable-section.info"),
             Status: shared.ComputeDomainStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-17T22:22:46.694Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-18T11:36:43.578Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3216,11 +3285,11 @@ func main() {
             Environments: []shared.PropertyComputeEnvvarEnvironments{
                 shared.PropertyComputeEnvvarEnvironmentsPreview,
             },
-            ID: unifiedgosdk.Pointer("0f81ab80-5d7f-4619-a840-68fc721a7414"),
+            ID: unifiedgosdk.Pointer("c8760c29-58f8-4ce8-a868-52907b34cbce"),
             IsSecret: unifiedgosdk.Pointer(true),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("AEGER_SUBSTANTIA"),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-22T08:29:16.399Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-23T01:50:37.131Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3298,7 +3367,7 @@ func main() {
             },
             GpuCount: unifiedgosdk.Pointer[float64](0.0),
             HasInternetAccess: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("7c3bbe02-8483-4aad-9486-22ae1df10887"),
+            ID: unifiedgosdk.Pointer("cdb3a71c-48d6-4286-98f6-721578dd1e9d"),
             Image: unifiedgosdk.Pointer("ubuntu:24.04"),
             Market: shared.MarketSpot.ToPointer(),
             MemoryMb: unifiedgosdk.Pointer[float64](2048.0),
@@ -3313,11 +3382,11 @@ func main() {
                 Port: unifiedgosdk.Pointer[float64](22.0),
                 Username: unifiedgosdk.Pointer("root"),
             },
-            StartedAt: types.MustNewTimeFromString("2025-04-08T05:22:18.283Z"),
+            StartedAt: types.MustNewTimeFromString("2025-04-08T19:29:11.975Z"),
             Status: shared.ComputeInstanceStatusError.ToPointer(),
             StatusReason: unifiedgosdk.Pointer("Sponte quasi adversus alioqui reiciendis arca carmen canis."),
             Type: shared.ComputeInstanceTypeBaremetal.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-02T21:14:12.345Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-03T12:40:30.292Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3378,11 +3447,11 @@ func main() {
     res, err := s.Compute.UpdateComputeKey(ctx, operations.UpdateComputeKeyRequest{
         ComputeKey: shared.ComputeKey{
             CreatedAt: types.MustNewTimeFromString("2023-08-19T14:31:46.492Z"),
-            ID: unifiedgosdk.Pointer("984be7d9-2393-48da-bbeb-098db6ea2b95"),
+            ID: unifiedgosdk.Pointer("b2b29e97-ca89-4175-8ced-7c2cd98513ac"),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("nienow-secret"),
             Type: shared.ComputeKeyTypeSecret.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-10-15T22:15:11.231Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-16T06:32:22.379Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3445,7 +3514,7 @@ func main() {
             Branch: unifiedgosdk.Pointer("main"),
             BuildCommand: unifiedgosdk.Pointer("npm run build"),
             CreatedAt: types.MustNewTimeFromString("2023-10-04T02:06:29.391Z"),
-            ID: unifiedgosdk.Pointer("bf0d1634-c2c4-494e-b58a-3324c62558bc"),
+            ID: unifiedgosdk.Pointer("c7a4b43d-044f-47a9-b469-1c54bcf6535a"),
             InstanceCount: unifiedgosdk.Pointer[float64](6.0),
             MaxInstanceCount: unifiedgosdk.Pointer[float64](6.0),
             Metadata: []shared.ComputeMetadata{},
@@ -3456,7 +3525,7 @@ func main() {
             Runtime: unifiedgosdk.Pointer("python"),
             Status: shared.ComputeServiceStatusSuspended.ToPointer(),
             Type: shared.ComputeServiceTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-04-17T00:39:41.733Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-17T12:04:50.659Z"),
             URL: unifiedgosdk.Pointer("https://tame-sideboard.rotating-shoulder.biz"),
         },
         ConnectionID: "<id>",
@@ -3482,6 +3551,73 @@ func main() {
 ### Response
 
 **[*operations.UpdateComputeServiceResponse](../../pkg/models/operations/updatecomputeserviceresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateComputeSnapshot
+
+Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateComputeSnapshot" method="put" path="/compute/{connection_id}/snapshot/{id}" example="compute_snapshot" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Compute.UpdateComputeSnapshot(ctx, operations.UpdateComputeSnapshotRequest{
+        ComputeSnapshot: shared.ComputeSnapshot{
+            CreatedAt: types.MustNewTimeFromString("2021-09-24T14:40:06.110Z"),
+            ID: unifiedgosdk.Pointer("82d8808c-cea9-4727-a57a-3fbcd36384f1"),
+            Metadata: []shared.ComputeMetadata{},
+            Name: unifiedgosdk.Pointer("snap-alius"),
+            SizeMb: unifiedgosdk.Pointer[float64](169984.0),
+            Status: shared.ComputeSnapshotStatusDeleting.ToPointer(),
+            Type: shared.ComputeSnapshotTypeDisk.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-23T00:36:31.095Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ComputeSnapshot != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.UpdateComputeSnapshotRequest](../../pkg/models/operations/updatecomputesnapshotrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.UpdateComputeSnapshotResponse](../../pkg/models/operations/updatecomputesnapshotresponse.md), error**
 
 ### Errors
 
@@ -3523,10 +3659,10 @@ func main() {
             Dockerfile: unifiedgosdk.Pointer("FROM ubuntu:24.04\nRUN apt-get update"),
             GpuCount: unifiedgosdk.Pointer[float64](2.0),
             GpuModel: shared.ComputeTemplateGpuModelNvidiaGh200.ToPointer(),
-            ID: unifiedgosdk.Pointer("b6975f6d-c132-4b59-9c50-1ca7ab34b34a"),
+            ID: unifiedgosdk.Pointer("accff1b2-bc07-421b-818d-cebf072fd872"),
             Image: unifiedgosdk.Pointer("perfumed-molasses/cohibeo:5.2"),
             IsPublic: unifiedgosdk.Pointer(false),
-            LastUsedAt: types.MustNewTimeFromString("2026-04-13T22:16:53.669Z"),
+            LastUsedAt: types.MustNewTimeFromString("2026-04-14T17:47:07.123Z"),
             MemoryMb: unifiedgosdk.Pointer[float64](8192.0),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("multi-byte-card"),
@@ -3534,7 +3670,7 @@ func main() {
                 8080.0,
             },
             Status: shared.ComputeTemplateStatusOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-26T06:44:43.543Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-26T19:14:31.301Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3595,14 +3731,14 @@ func main() {
     res, err := s.Compute.UpdateComputeVolume(ctx, operations.UpdateComputeVolumeRequest{
         ComputeVolume: shared.ComputeVolume{
             CreatedAt: types.MustNewTimeFromString("2022-11-15T15:12:48.055Z"),
-            ID: unifiedgosdk.Pointer("501c0ac2-ae2e-4819-838c-f5ce7a37b90b"),
+            ID: unifiedgosdk.Pointer("60b60fc7-3652-44ee-a7d3-ffc065762ce4"),
             InstanceIds: []string{},
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("vol-solum"),
             SizeMb: unifiedgosdk.Pointer[float64](1024000.0),
             Status: shared.ComputeVolumeStatusOther.ToPointer(),
             Type: shared.ComputeVolumeTypeHighPerformance.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-02-17T18:44:25.707Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-02-18T02:01:24.948Z"),
             UsedMb: unifiedgosdk.Pointer[float64](524986.0),
         },
         ConnectionID: "<id>",

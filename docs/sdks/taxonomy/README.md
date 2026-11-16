@@ -8,6 +8,9 @@
 * [GetHrisTaxonomy](#gethristaxonomy) - Retrieve a taxonomy
 * [ListCrmTaxonomies](#listcrmtaxonomies) - List all taxonomies
 * [ListHrisTaxonomies](#listhristaxonomies) - List all taxonomies
+* [PatchHrisTaxonomy](#patchhristaxonomy) - Update a taxonomy
+* [RemoveHrisTaxonomy](#removehristaxonomy) - Remove a taxonomy
+* [UpdateHrisTaxonomy](#updatehristaxonomy) - Update a taxonomy
 
 ## CreateHrisTaxonomy
 
@@ -44,13 +47,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-06-23T02:10:00.789Z"),
             Description: unifiedgosdk.Pointer("Uterque vespillo adnuo ea commodo turbo suscipio condico."),
             Domain: unifiedgosdk.Pointer("Health"),
-            ID: unifiedgosdk.Pointer("b9c2487d-92d7-4b26-9435-87ca8b0a3578"),
+            ID: unifiedgosdk.Pointer("d901e3cc-43ba-4e97-a0ab-e020b0b7cdd4"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("International Functionality Architect"),
             Subcategory: unifiedgosdk.Pointer("Marble"),
             Type: shared.HrisTaxonomyTypeKnowledge.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-03T16:42:35.687Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-03T21:41:42.424Z"),
             URL: unifiedgosdk.Pointer("https://fixed-membership.biz/"),
         },
         ConnectionID: "<id>",
@@ -238,6 +241,209 @@ func main() {
 ### Response
 
 **[*operations.ListHrisTaxonomiesResponse](../../pkg/models/operations/listhristaxonomiesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchHrisTaxonomy
+
+Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchHrisTaxonomy" method="patch" path="/hris/{connection_id}/taxonomy/{id}" example="hris_taxonomy" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Taxonomy.PatchHrisTaxonomy(ctx, operations.PatchHrisTaxonomyRequest{
+        HrisTaxonomy: shared.HrisTaxonomy{
+            AlternativeNames: []string{
+                "Facilitator",
+                "National",
+            },
+            CreatedAt: types.MustNewTimeFromString("2022-06-23T02:10:00.789Z"),
+            Description: unifiedgosdk.Pointer("Uterque vespillo adnuo ea commodo turbo suscipio condico."),
+            Domain: unifiedgosdk.Pointer("Health"),
+            ID: unifiedgosdk.Pointer("786cf40a-14d3-4a15-a1db-68a96bdfb388"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.HrisMetadata{},
+            Name: unifiedgosdk.Pointer("International Functionality Architect"),
+            Subcategory: unifiedgosdk.Pointer("Marble"),
+            Type: shared.HrisTaxonomyTypeKnowledge.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-03T21:41:42.428Z"),
+            URL: unifiedgosdk.Pointer("https://fixed-membership.biz/"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisTaxonomy != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.PatchHrisTaxonomyRequest](../../pkg/models/operations/patchhristaxonomyrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.PatchHrisTaxonomyResponse](../../pkg/models/operations/patchhristaxonomyresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveHrisTaxonomy
+
+Deletes the HrisTaxonomy identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeHrisTaxonomy" method="delete" path="/hris/{connection_id}/taxonomy/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Taxonomy.RemoveHrisTaxonomy(ctx, operations.RemoveHrisTaxonomyRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.RemoveHrisTaxonomyRequest](../../pkg/models/operations/removehristaxonomyrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.RemoveHrisTaxonomyResponse](../../pkg/models/operations/removehristaxonomyresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateHrisTaxonomy
+
+Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateHrisTaxonomy" method="put" path="/hris/{connection_id}/taxonomy/{id}" example="hris_taxonomy" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Taxonomy.UpdateHrisTaxonomy(ctx, operations.UpdateHrisTaxonomyRequest{
+        HrisTaxonomy: shared.HrisTaxonomy{
+            AlternativeNames: []string{
+                "Facilitator",
+                "National",
+            },
+            CreatedAt: types.MustNewTimeFromString("2022-06-23T02:10:00.789Z"),
+            Description: unifiedgosdk.Pointer("Uterque vespillo adnuo ea commodo turbo suscipio condico."),
+            Domain: unifiedgosdk.Pointer("Health"),
+            ID: unifiedgosdk.Pointer("786cf40a-14d3-4a15-a1db-68a96bdfb388"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.HrisMetadata{},
+            Name: unifiedgosdk.Pointer("International Functionality Architect"),
+            Subcategory: unifiedgosdk.Pointer("Marble"),
+            Type: shared.HrisTaxonomyTypeKnowledge.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-03T21:41:42.428Z"),
+            URL: unifiedgosdk.Pointer("https://fixed-membership.biz/"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisTaxonomy != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.UpdateHrisTaxonomyRequest](../../pkg/models/operations/updatehristaxonomyrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.UpdateHrisTaxonomyResponse](../../pkg/models/operations/updatehristaxonomyresponse.md), error**
 
 ### Errors
 

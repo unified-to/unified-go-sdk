@@ -26,6 +26,7 @@ const (
 	GetKmsPageQueryParamFieldsHasChildren GetKmsPageQueryParamFields = "has_children"
 	GetKmsPageQueryParamFieldsWebURL      GetKmsPageQueryParamFields = "web_url"
 	GetKmsPageQueryParamFieldsRaw         GetKmsPageQueryParamFields = "raw"
+	GetKmsPageQueryParamFieldsContent     GetKmsPageQueryParamFields = "content"
 )
 
 func (e GetKmsPageQueryParamFields) ToPointer() *GetKmsPageQueryParamFields {
@@ -64,6 +65,8 @@ func (e *GetKmsPageQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "web_url":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "content":
 		*e = GetKmsPageQueryParamFields(v)
 		return nil
 	default:

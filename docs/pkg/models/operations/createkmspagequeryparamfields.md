@@ -29,3 +29,4 @@ value := operations.CreateKmsPageQueryParamFieldsID
 | `CreateKmsPageQueryParamFieldsHasChildren` | has_children                               |
 | `CreateKmsPageQueryParamFieldsWebURL`      | web_url                                    |
 | `CreateKmsPageQueryParamFieldsRaw`         | raw                                        |
+| `CreateKmsPageQueryParamFieldsContent`     | content                                    |

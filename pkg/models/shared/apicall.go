@@ -53,6 +53,8 @@ type APICall struct {
 	Name string `json:"name"`
 	// The called API method's HTTP verb and route path (PUT /crm/{integration}/deak/{id})
 	Path string `json:"path"`
+	// Names of the query-string parameters sent with this API call (eg. updated_gte, offset). Values are not stored.
+	QueryParams []string `json:"query_params,omitempty"`
 	// The size of the response
 	Size *float64 `json:"size,omitempty"`
 	// The resulting HTTP status code (200)
@@ -166,6 +168,13 @@ func (a *APICall) GetPath() string {
 		return ""
 	}
 	return a.Path
+}
+
+func (a *APICall) GetQueryParams() []string {
+	if a == nil {
+		return nil
+	}
+	return a.QueryParams
 }
 
 func (a *APICall) GetSize() *float64 {

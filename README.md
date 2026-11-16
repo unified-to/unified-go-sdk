@@ -66,7 +66,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("a7d68ed7-67e7-492b-93d8-a334e2e68e9c"),
+			ID:                  unifiedgosdk.Pointer("4561498c-f6ac-4da7-b837-d5ba086e0d3a"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -79,7 +79,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-13T06:24:03.667Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T12:17:22.262Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -949,6 +949,7 @@ func main() {
 * [PatchComputeInstance](docs/sdks/compute/README.md#patchcomputeinstance) - Update an instance
 * [PatchComputeKey](docs/sdks/compute/README.md#patchcomputekey) - Update a key
 * [PatchComputeService](docs/sdks/compute/README.md#patchcomputeservice) - Update a service
+* [PatchComputeSnapshot](docs/sdks/compute/README.md#patchcomputesnapshot) - Update a snapshot
 * [PatchComputeTemplate](docs/sdks/compute/README.md#patchcomputetemplate) - Update a template
 * [PatchComputeVolume](docs/sdks/compute/README.md#patchcomputevolume) - Update a volume
 * [RemoveComputeDeployment](docs/sdks/compute/README.md#removecomputedeployment) - Remove a deployment
@@ -966,6 +967,7 @@ func main() {
 * [UpdateComputeInstance](docs/sdks/compute/README.md#updatecomputeinstance) - Update an instance
 * [UpdateComputeKey](docs/sdks/compute/README.md#updatecomputekey) - Update a key
 * [UpdateComputeService](docs/sdks/compute/README.md#updatecomputeservice) - Update a service
+* [UpdateComputeSnapshot](docs/sdks/compute/README.md#updatecomputesnapshot) - Update a snapshot
 * [UpdateComputeTemplate](docs/sdks/compute/README.md#updatecomputetemplate) - Update a template
 * [UpdateComputeVolume](docs/sdks/compute/README.md#updatecomputevolume) - Update a volume
 
@@ -1440,6 +1442,7 @@ func main() {
 * [GetPropertyGuest](docs/sdks/guest/README.md#getpropertyguest) - Retrieve a guest
 * [ListPropertyGuests](docs/sdks/guest/README.md#listpropertyguests) - List all guests
 * [PatchPropertyGuest](docs/sdks/guest/README.md#patchpropertyguest) - Update a guest
+* [RemovePropertyGuest](docs/sdks/guest/README.md#removepropertyguest) - Remove a guest
 * [UpdatePropertyGuest](docs/sdks/guest/README.md#updatepropertyguest) - Update a guest
 
 ### [Healthcare](docs/sdks/healthcare/README.md)
@@ -1553,6 +1556,7 @@ func main() {
 * [PatchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
 * [PatchHrisJob](docs/sdks/hris/README.md#patchhrisjob) - Update a job
 * [PatchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
+* [PatchHrisTaxonomy](docs/sdks/hris/README.md#patchhristaxonomy) - Update a taxonomy
 * [PatchHrisTimeoff](docs/sdks/hris/README.md#patchhristimeoff) - Update a timeoff
 * [PatchHrisTimeshift](docs/sdks/hris/README.md#patchhristimeshift) - Update a timeshift
 * [RemoveHrisAttendance](docs/sdks/hris/README.md#removehrisattendance) - Remove an attendance
@@ -1567,6 +1571,7 @@ func main() {
 * [RemoveHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
 * [RemoveHrisJob](docs/sdks/hris/README.md#removehrisjob) - Remove a job
 * [RemoveHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
+* [RemoveHrisTaxonomy](docs/sdks/hris/README.md#removehristaxonomy) - Remove a taxonomy
 * [RemoveHrisTimeoff](docs/sdks/hris/README.md#removehristimeoff) - Remove a timeoff
 * [RemoveHrisTimeshift](docs/sdks/hris/README.md#removehristimeshift) - Remove a timeshift
 * [UpdateHrisAttendance](docs/sdks/hris/README.md#updatehrisattendance) - Update an attendance
@@ -1581,6 +1586,7 @@ func main() {
 * [UpdateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
 * [UpdateHrisJob](docs/sdks/hris/README.md#updatehrisjob) - Update a job
 * [UpdateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
+* [UpdateHrisTaxonomy](docs/sdks/hris/README.md#updatehristaxonomy) - Update a taxonomy
 * [UpdateHrisTimeoff](docs/sdks/hris/README.md#updatehristimeoff) - Update a timeoff
 * [UpdateHrisTimeshift](docs/sdks/hris/README.md#updatehristimeshift) - Update a timeshift
 
@@ -2071,6 +2077,7 @@ func main() {
 * [GetPlmPart](docs/sdks/part/README.md#getplmpart) - Retrieve a part
 * [ListPlmParts](docs/sdks/part/README.md#listplmparts) - List all parts
 * [PatchPlmPart](docs/sdks/part/README.md#patchplmpart) - Update a part
+* [RemovePlmPart](docs/sdks/part/README.md#removeplmpart) - Remove a part
 * [UpdatePlmPart](docs/sdks/part/README.md#updateplmpart) - Update a part
 
 ### [Passthrough](docs/sdks/passthrough/README.md)
@@ -2196,6 +2203,7 @@ func main() {
 * [PatchPlmDocument](docs/sdks/plm/README.md#patchplmdocument) - Update a document
 * [PatchPlmPart](docs/sdks/plm/README.md#patchplmpart) - Update a part
 * [RemovePlmBomline](docs/sdks/plm/README.md#removeplmbomline) - Remove a bomline
+* [RemovePlmPart](docs/sdks/plm/README.md#removeplmpart) - Remove a part
 * [UpdatePlmBomline](docs/sdks/plm/README.md#updateplmbomline) - Update a bomline
 * [UpdatePlmChange](docs/sdks/plm/README.md#updateplmchange) - Update a change
 * [UpdatePlmDocument](docs/sdks/plm/README.md#updateplmdocument) - Update a document
@@ -2298,7 +2306,9 @@ func main() {
 * [PatchPropertyReservation](docs/sdks/property/README.md#patchpropertyreservation) - Update a reservation
 * [PatchPropertyReview](docs/sdks/property/README.md#patchpropertyreview) - Update a review
 * [RemoveAnalyticsProperty](docs/sdks/property/README.md#removeanalyticsproperty) - Remove a property
+* [RemovePropertyGuest](docs/sdks/property/README.md#removepropertyguest) - Remove a guest
 * [RemovePropertyListing](docs/sdks/property/README.md#removepropertylisting) - Remove a listing
+* [RemovePropertyReservation](docs/sdks/property/README.md#removepropertyreservation) - Remove a reservation
 * [UpdateAnalyticsProperty](docs/sdks/property/README.md#updateanalyticsproperty) - Update a property
 * [UpdatePropertyGuest](docs/sdks/property/README.md#updatepropertyguest) - Update a guest
 * [UpdatePropertyListing](docs/sdks/property/README.md#updatepropertylisting) - Update a listing
@@ -2469,6 +2479,7 @@ func main() {
 * [PatchCommerceReservation](docs/sdks/reservation/README.md#patchcommercereservation) - Update a reservation
 * [PatchPropertyReservation](docs/sdks/reservation/README.md#patchpropertyreservation) - Update a reservation
 * [RemoveCommerceReservation](docs/sdks/reservation/README.md#removecommercereservation) - Remove a reservation
+* [RemovePropertyReservation](docs/sdks/reservation/README.md#removepropertyreservation) - Remove a reservation
 * [UpdateCommerceReservation](docs/sdks/reservation/README.md#updatecommercereservation) - Update a reservation
 * [UpdatePropertyReservation](docs/sdks/reservation/README.md#updatepropertyreservation) - Update a reservation
 
@@ -2566,7 +2577,9 @@ func main() {
 * [ListUnifiedSecretsmanagerInstructions](docs/sdks/secretsmanager/README.md#listunifiedsecretsmanagerinstructions) - List secrets manager setup instructions
 * [ListUnifiedSecretsmanagerSecrets](docs/sdks/secretsmanager/README.md#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
 * [ListUnifiedSecretsmanagers](docs/sdks/secretsmanager/README.md#listunifiedsecretsmanagers) - List secrets managers
+* [PatchUnifiedSecretsmanager](docs/sdks/secretsmanager/README.md#patchunifiedsecretsmanager) - Update secrets manager
 * [RemoveUnifiedSecretsmanager](docs/sdks/secretsmanager/README.md#removeunifiedsecretsmanager) - Remove secrets manager
+* [UpdateUnifiedSecretsmanager](docs/sdks/secretsmanager/README.md#updateunifiedsecretsmanager) - Update secrets manager
 
 ### [Segment](docs/sdks/segment/README.md)
 
@@ -2662,7 +2675,9 @@ func main() {
 * [CreateComputeSnapshot](docs/sdks/snapshot/README.md#createcomputesnapshot) - Create a snapshot
 * [GetComputeSnapshot](docs/sdks/snapshot/README.md#getcomputesnapshot) - Retrieve a snapshot
 * [ListComputeSnapshots](docs/sdks/snapshot/README.md#listcomputesnapshots) - List all snapshots
+* [PatchComputeSnapshot](docs/sdks/snapshot/README.md#patchcomputesnapshot) - Update a snapshot
 * [RemoveComputeSnapshot](docs/sdks/snapshot/README.md#removecomputesnapshot) - Remove a snapshot
+* [UpdateComputeSnapshot](docs/sdks/snapshot/README.md#updatecomputesnapshot) - Update a snapshot
 
 ### [Social](docs/sdks/social/README.md)
 
@@ -2788,6 +2803,9 @@ func main() {
 * [GetHrisTaxonomy](docs/sdks/taxonomy/README.md#gethristaxonomy) - Retrieve a taxonomy
 * [ListCrmTaxonomies](docs/sdks/taxonomy/README.md#listcrmtaxonomies) - List all taxonomies
 * [ListHrisTaxonomies](docs/sdks/taxonomy/README.md#listhristaxonomies) - List all taxonomies
+* [PatchHrisTaxonomy](docs/sdks/taxonomy/README.md#patchhristaxonomy) - Update a taxonomy
+* [RemoveHrisTaxonomy](docs/sdks/taxonomy/README.md#removehristaxonomy) - Remove a taxonomy
+* [UpdateHrisTaxonomy](docs/sdks/taxonomy/README.md#updatehristaxonomy) - Update a taxonomy
 
 ### [Taxrate](docs/sdks/taxrate/README.md)
 
@@ -2953,6 +2971,7 @@ func main() {
 * [ListUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
 * [ListUnifiedWorkspaceintegrations](docs/sdks/unified/README.md#listunifiedworkspaceintegrations) - List workspace integrations
 * [PatchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection
+* [PatchUnifiedSecretsmanager](docs/sdks/unified/README.md#patchunifiedsecretsmanager) - Update secrets manager
 * [PatchUnifiedWebhook](docs/sdks/unified/README.md#patchunifiedwebhook) - Update webhook subscription
 * [PatchUnifiedWebhookResume](docs/sdks/unified/README.md#patchunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [PatchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
@@ -2963,6 +2982,7 @@ func main() {
 * [RemoveUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [RemoveUnifiedWorkspaceintegration](docs/sdks/unified/README.md#removeunifiedworkspaceintegration) - Remove workspace integration
 * [UpdateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
+* [UpdateUnifiedSecretsmanager](docs/sdks/unified/README.md#updateunifiedsecretsmanager) - Update secrets manager
 * [UpdateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
 * [UpdateUnifiedWebhookResume](docs/sdks/unified/README.md#updateunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [UpdateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
@@ -3109,7 +3129,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("a7d68ed7-67e7-492b-93d8-a334e2e68e9c"),
+			ID:                  unifiedgosdk.Pointer("4561498c-f6ac-4da7-b837-d5ba086e0d3a"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3122,7 +3142,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-13T06:24:03.667Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T12:17:22.262Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3183,7 +3203,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("a7d68ed7-67e7-492b-93d8-a334e2e68e9c"),
+			ID:                  unifiedgosdk.Pointer("4561498c-f6ac-4da7-b837-d5ba086e0d3a"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3196,7 +3216,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-13T06:24:03.667Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T12:17:22.262Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3240,7 +3260,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("a7d68ed7-67e7-492b-93d8-a334e2e68e9c"),
+			ID:                  unifiedgosdk.Pointer("4561498c-f6ac-4da7-b837-d5ba086e0d3a"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3253,7 +3273,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-13T06:24:03.667Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T12:17:22.262Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3340,7 +3360,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("a7d68ed7-67e7-492b-93d8-a334e2e68e9c"),
+			ID:                  unifiedgosdk.Pointer("4561498c-f6ac-4da7-b837-d5ba086e0d3a"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3353,7 +3373,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-13T06:24:03.667Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T12:17:22.262Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3402,7 +3422,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("a7d68ed7-67e7-492b-93d8-a334e2e68e9c"),
+			ID:                  unifiedgosdk.Pointer("4561498c-f6ac-4da7-b837-d5ba086e0d3a"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3415,7 +3435,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-13T06:24:03.667Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T12:17:22.262Z"),
 		},
 		ConnectionID: "<id>",
 	}, operations.WithRetries(
@@ -3478,7 +3498,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("a7d68ed7-67e7-492b-93d8-a334e2e68e9c"),
+			ID:                  unifiedgosdk.Pointer("4561498c-f6ac-4da7-b837-d5ba086e0d3a"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3491,7 +3511,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-13T06:24:03.667Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T12:17:22.262Z"),
 		},
 		ConnectionID: "<id>",
 	})

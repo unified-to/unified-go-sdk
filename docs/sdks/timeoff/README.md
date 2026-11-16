@@ -39,7 +39,7 @@ func main() {
 
     res, err := s.Timeoff.CreateHrisTimeoff(ctx, operations.CreateHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
-            ApprovedAt: types.MustNewTimeFromString("2022-02-25T06:43:45.945Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-02-25T08:29:13.530Z"),
             Attachments: []shared.HrisAttachment{
                 shared.HrisAttachment{
                     ContentType: unifiedgosdk.Pointer("application/pdf"),
@@ -53,16 +53,16 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-10-06T18:00:20.615Z"),
             Duration: unifiedgosdk.Pointer[float64](4.0),
             DurationType: shared.DurationTypeDay.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2025-01-13T18:12:14.841Z"),
-            ID: unifiedgosdk.Pointer("261c197f-14b5-461a-8877-51b8a9ce14b3"),
+            EndAt: types.MustNewTimeFromString("2025-01-14T09:02:41.733Z"),
+            ID: unifiedgosdk.Pointer("18ea8abb-c77e-4254-a0e6-ab3761402ee2"),
             IsPaid: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             OriginalType: unifiedgosdk.Pointer("acerbitas ut"),
             Reason: unifiedgosdk.Pointer("verto"),
-            StartAt: types.MustNewTimeFromString("2023-09-14T07:18:05.850Z"),
+            StartAt: types.MustNewTimeFromString("2023-09-14T16:05:19.448Z"),
             Status: shared.HrisTimeoffStatusDenied.ToPointer(),
             Type: shared.HrisTimeoffTypeInLieu.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-07-16T14:48:30.498Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-16T18:19:17.016Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",
@@ -231,7 +231,7 @@ func main() {
 
     res, err := s.Timeoff.PatchHrisTimeoff(ctx, operations.PatchHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
-            ApprovedAt: types.MustNewTimeFromString("2022-02-25T06:43:45.947Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-02-25T08:29:13.532Z"),
             Attachments: []shared.HrisAttachment{
                 shared.HrisAttachment{
                     ContentType: unifiedgosdk.Pointer("application/pdf"),
@@ -245,16 +245,16 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-10-06T18:00:20.615Z"),
             Duration: unifiedgosdk.Pointer[float64](4.0),
             DurationType: shared.DurationTypeDay.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2025-01-13T18:12:14.852Z"),
-            ID: unifiedgosdk.Pointer("033541b9-b6b9-40ba-bdc3-29b87ff8ef24"),
+            EndAt: types.MustNewTimeFromString("2025-01-14T09:02:41.748Z"),
+            ID: unifiedgosdk.Pointer("864363dc-eb82-4d4b-a6f4-3ebcbae87b9f"),
             IsPaid: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             OriginalType: unifiedgosdk.Pointer("acerbitas ut"),
             Reason: unifiedgosdk.Pointer("verto"),
-            StartAt: types.MustNewTimeFromString("2023-09-14T07:18:05.857Z"),
+            StartAt: types.MustNewTimeFromString("2023-09-14T16:05:19.457Z"),
             Status: shared.HrisTimeoffStatusDenied.ToPointer(),
             Type: shared.HrisTimeoffTypeInLieu.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-07-16T14:48:30.501Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-16T18:19:17.019Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",
@@ -370,7 +370,7 @@ func main() {
 
     res, err := s.Timeoff.UpdateHrisTimeoff(ctx, operations.UpdateHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
-            ApprovedAt: types.MustNewTimeFromString("2022-02-25T06:43:45.947Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-02-25T08:29:13.532Z"),
             Attachments: []shared.HrisAttachment{
                 shared.HrisAttachment{
                     ContentType: unifiedgosdk.Pointer("application/pdf"),
@@ -384,16 +384,16 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-10-06T18:00:20.615Z"),
             Duration: unifiedgosdk.Pointer[float64](4.0),
             DurationType: shared.DurationTypeDay.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2025-01-13T18:12:14.852Z"),
-            ID: unifiedgosdk.Pointer("033541b9-b6b9-40ba-bdc3-29b87ff8ef24"),
+            EndAt: types.MustNewTimeFromString("2025-01-14T09:02:41.748Z"),
+            ID: unifiedgosdk.Pointer("864363dc-eb82-4d4b-a6f4-3ebcbae87b9f"),
             IsPaid: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             OriginalType: unifiedgosdk.Pointer("acerbitas ut"),
             Reason: unifiedgosdk.Pointer("verto"),
-            StartAt: types.MustNewTimeFromString("2023-09-14T07:18:05.857Z"),
+            StartAt: types.MustNewTimeFromString("2023-09-14T16:05:19.457Z"),
             Status: shared.HrisTimeoffStatusDenied.ToPointer(),
             Type: shared.HrisTimeoffTypeInLieu.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-07-16T14:48:30.501Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-16T18:19:17.019Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",

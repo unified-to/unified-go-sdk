@@ -7,7 +7,6 @@ import (
 	"time"
 )
 
-// Disposition - What to do with the nonconforming material
 type Disposition string
 
 const (
@@ -58,7 +57,6 @@ func (e *Severity) IsExact() bool {
 	return false
 }
 
-// QmsIssueSource - Where a quality issue was found
 type QmsIssueSource string
 
 const (
@@ -84,7 +82,6 @@ func (e *QmsIssueSource) IsExact() bool {
 	return false
 }
 
-// QmsIssueStatus - Normalized status of a quality record
 type QmsIssueStatus string
 
 const (
@@ -135,7 +132,7 @@ func (e *QmsIssueType) IsExact() bool {
 	return false
 }
 
-// QmsIssue - A nonconformance, complaint, audit finding or problem report
+// QmsIssue - A nonconformance, complaint, audit finding or other quality issue
 type QmsIssue struct {
 	// Linked QmsAction IDs
 	ActionIds     []string          `json:"action_ids,omitempty"`
@@ -145,9 +142,8 @@ type QmsIssue struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	ClosedAt *time.Time `json:"closed_at,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt   *time.Time `json:"created_at,omitempty"`
-	Description *string    `json:"description,omitempty"`
-	// What to do with the nonconforming material
+	CreatedAt   *time.Time   `json:"created_at,omitempty"`
+	Description *string      `json:"description,omitempty"`
 	Disposition *Disposition `json:"disposition,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	DueAt *time.Time `json:"due_at,omitempty"`
@@ -169,14 +165,12 @@ type QmsIssue struct {
 	// Raw data from integration
 	Raw map[string]any `json:"raw,omitempty"`
 	// Who raised the issue (reference to HrisEmployee)
-	ReporterUserID *string   `json:"reporter_user_id,omitempty"`
-	Severity       *Severity `json:"severity,omitempty"`
-	// Where a quality issue was found
-	Source *QmsIssueSource `json:"source,omitempty"`
-	// Normalized status of a quality record
-	Status       *QmsIssueStatus `json:"status,omitempty"`
-	SupplierName *string         `json:"supplier_name,omitempty"`
-	Type         *QmsIssueType   `json:"type,omitempty"`
+	ReporterUserID *string         `json:"reporter_user_id,omitempty"`
+	Severity       *Severity       `json:"severity,omitempty"`
+	Source         *QmsIssueSource `json:"source,omitempty"`
+	Status         *QmsIssueStatus `json:"status,omitempty"`
+	SupplierName   *string         `json:"supplier_name,omitempty"`
+	Type           *QmsIssueType   `json:"type,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	// Deep link to the vendor UI

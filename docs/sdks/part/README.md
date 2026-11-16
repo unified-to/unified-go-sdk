@@ -8,6 +8,7 @@
 * [GetPlmPart](#getplmpart) - Retrieve a part
 * [ListPlmParts](#listplmparts) - List all parts
 * [PatchPlmPart](#patchplmpart) - Update a part
+* [RemovePlmPart](#removeplmpart) - Remove a part
 * [UpdatePlmPart](#updateplmpart) - Update a part
 
 ## CreatePlmPart
@@ -42,10 +43,10 @@ func main() {
             Description: unifiedgosdk.Pointer("Pectus tero ulterius aestivus talis tero ullam cruciamentum."),
             DocumentIds: []string{},
             FileIds: []string{},
-            ID: unifiedgosdk.Pointer("27241081-c029-4b29-964b-24fbcacfb92a"),
+            ID: unifiedgosdk.Pointer("55f2121f-5829-42d7-ac9a-b5130dbaace3"),
             IsAssembly: unifiedgosdk.Pointer(false),
             LifecycleState: unifiedgosdk.Pointer("Design"),
-            MasterIdentifier: unifiedgosdk.Pointer("c5f536cb-06f6-41b3-9d0c-7c501ea6a18f"),
+            MasterIdentifier: unifiedgosdk.Pointer("8ca8b3fc-b802-4767-abb0-2a916d2f0607"),
             Metadata: []shared.PlmMetadata{},
             Name: unifiedgosdk.Pointer("grumpy PCB"),
             Number: unifiedgosdk.Pointer("PRT-009154"),
@@ -55,7 +56,7 @@ func main() {
             Status: shared.PlmPartStatusInWork.ToPointer(),
             Type: shared.PlmPartTypeSoftware.ToPointer(),
             UnitOfMeasure: unifiedgosdk.Pointer("EA"),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-12T16:46:36.790Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-12T22:52:45.496Z"),
             URL: unifiedgosdk.Pointer("https://inborn-independence.info"),
         },
         ConnectionID: "<id>",
@@ -228,10 +229,10 @@ func main() {
             Description: unifiedgosdk.Pointer("Pectus tero ulterius aestivus talis tero ullam cruciamentum."),
             DocumentIds: []string{},
             FileIds: []string{},
-            ID: unifiedgosdk.Pointer("722b214b-ee61-45ba-be89-c2d593f1be5d"),
+            ID: unifiedgosdk.Pointer("ed1720ea-b799-4951-8664-92b4d2950c20"),
             IsAssembly: unifiedgosdk.Pointer(false),
             LifecycleState: unifiedgosdk.Pointer("Design"),
-            MasterIdentifier: unifiedgosdk.Pointer("9996ea1d-a829-4026-9638-e575eef6834d"),
+            MasterIdentifier: unifiedgosdk.Pointer("61b2334c-b167-49b1-8b80-ff80fb8811fe"),
             Metadata: []shared.PlmMetadata{},
             Name: unifiedgosdk.Pointer("grumpy PCB"),
             Number: unifiedgosdk.Pointer("PRT-009154"),
@@ -241,7 +242,7 @@ func main() {
             Status: shared.PlmPartStatusInWork.ToPointer(),
             Type: shared.PlmPartTypeSoftware.ToPointer(),
             UnitOfMeasure: unifiedgosdk.Pointer("EA"),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-12T16:46:36.796Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-12T22:52:45.501Z"),
             URL: unifiedgosdk.Pointer("https://inborn-independence.info"),
         },
         ConnectionID: "<id>",
@@ -267,6 +268,61 @@ func main() {
 ### Response
 
 **[*operations.PatchPlmPartResponse](../../pkg/models/operations/patchplmpartresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemovePlmPart
+
+Deletes the PlmPart identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removePlmPart" method="delete" path="/plm/{connection_id}/part/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Part.RemovePlmPart(ctx, operations.RemovePlmPartRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.RemovePlmPartRequest](../../pkg/models/operations/removeplmpartrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+
+### Response
+
+**[*operations.RemovePlmPartResponse](../../pkg/models/operations/removeplmpartresponse.md), error**
 
 ### Errors
 
@@ -306,10 +362,10 @@ func main() {
             Description: unifiedgosdk.Pointer("Pectus tero ulterius aestivus talis tero ullam cruciamentum."),
             DocumentIds: []string{},
             FileIds: []string{},
-            ID: unifiedgosdk.Pointer("722b214b-ee61-45ba-be89-c2d593f1be5d"),
+            ID: unifiedgosdk.Pointer("ed1720ea-b799-4951-8664-92b4d2950c20"),
             IsAssembly: unifiedgosdk.Pointer(false),
             LifecycleState: unifiedgosdk.Pointer("Design"),
-            MasterIdentifier: unifiedgosdk.Pointer("9996ea1d-a829-4026-9638-e575eef6834d"),
+            MasterIdentifier: unifiedgosdk.Pointer("61b2334c-b167-49b1-8b80-ff80fb8811fe"),
             Metadata: []shared.PlmMetadata{},
             Name: unifiedgosdk.Pointer("grumpy PCB"),
             Number: unifiedgosdk.Pointer("PRT-009154"),
@@ -319,7 +375,7 @@ func main() {
             Status: shared.PlmPartStatusInWork.ToPointer(),
             Type: shared.PlmPartTypeSoftware.ToPointer(),
             UnitOfMeasure: unifiedgosdk.Pointer("EA"),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-12T16:46:36.796Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-12T22:52:45.501Z"),
             URL: unifiedgosdk.Pointer("https://inborn-independence.info"),
         },
         ConnectionID: "<id>",

@@ -67,6 +67,7 @@
 * [PatchHrisGroup](#patchhrisgroup) - Update a group
 * [PatchHrisJob](#patchhrisjob) - Update a job
 * [PatchHrisLocation](#patchhrislocation) - Update a location
+* [PatchHrisTaxonomy](#patchhristaxonomy) - Update a taxonomy
 * [PatchHrisTimeoff](#patchhristimeoff) - Update a timeoff
 * [PatchHrisTimeshift](#patchhristimeshift) - Update a timeshift
 * [RemoveHrisAttendance](#removehrisattendance) - Remove an attendance
@@ -81,6 +82,7 @@
 * [RemoveHrisGroup](#removehrisgroup) - Remove a group
 * [RemoveHrisJob](#removehrisjob) - Remove a job
 * [RemoveHrisLocation](#removehrislocation) - Remove a location
+* [RemoveHrisTaxonomy](#removehristaxonomy) - Remove a taxonomy
 * [RemoveHrisTimeoff](#removehristimeoff) - Remove a timeoff
 * [RemoveHrisTimeshift](#removehristimeshift) - Remove a timeshift
 * [UpdateHrisAttendance](#updatehrisattendance) - Update an attendance
@@ -95,6 +97,7 @@
 * [UpdateHrisGroup](#updatehrisgroup) - Update a group
 * [UpdateHrisJob](#updatehrisjob) - Update a job
 * [UpdateHrisLocation](#updatehrislocation) - Update a location
+* [UpdateHrisTaxonomy](#updatehristaxonomy) - Update a taxonomy
 * [UpdateHrisTimeoff](#updatehristimeoff) - Update a timeoff
 * [UpdateHrisTimeshift](#updatehristimeshift) - Update a timeshift
 
@@ -134,32 +137,32 @@ func main() {
                 Region: unifiedgosdk.Pointer("Tennessee"),
                 RegionCode: unifiedgosdk.Pointer("CA"),
             },
-            ApprovedAt: types.MustNewTimeFromString("2021-09-20T02:42:05.057Z"),
+            ApprovedAt: types.MustNewTimeFromString("2021-09-20T03:11:13.046Z"),
             Breaks: []shared.HrisAttendanceBreak{
                 shared.HrisAttendanceBreak{
                     DurationMinutes: unifiedgosdk.Pointer[float64](51.0),
-                    EndAt: types.MustNewTimeFromString("2024-02-26T15:53:18.490Z"),
-                    ID: unifiedgosdk.Pointer("e37c1a2c-2435-4ed4-a9ee-4dc9e52a8666"),
+                    EndAt: types.MustNewTimeFromString("2024-02-27T03:05:38.954Z"),
+                    ID: unifiedgosdk.Pointer("8ce194a9-7e22-4a9c-8bcf-c8c17acb3dc0"),
                     IsPaid: unifiedgosdk.Pointer(false),
                     Name: unifiedgosdk.Pointer("Lunch"),
-                    StartAt: types.MustNewTimeFromString("2023-11-09T15:36:00.184Z"),
+                    StartAt: types.MustNewTimeFromString("2023-11-10T01:29:31.239Z"),
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2021-08-10T19:43:18.452Z"),
             Currency: unifiedgosdk.Pointer("EUR"),
             DeclaredTipsAmount: unifiedgosdk.Pointer[float64](54.0),
             EmployeeUserID: "<id>",
-            EndAt: types.MustTimeFromString("2024-05-06T08:12:12.121Z"),
+            EndAt: types.MustTimeFromString("2024-05-06T20:14:55.594Z"),
             HourlyRate: unifiedgosdk.Pointer[float64](16.0),
             Hours: unifiedgosdk.Pointer[float64](10.0),
-            ID: unifiedgosdk.Pointer("15bb4580-e4c2-48c0-b8a6-4b48b8106931"),
+            ID: unifiedgosdk.Pointer("1e81ecab-ae5a-48db-9255-c5592bb2a185"),
             JobName: unifiedgosdk.Pointer("Human Accountability Administrator"),
             Metadata: []shared.HrisMetadata{},
             NonCashTipsAmount: unifiedgosdk.Pointer[float64](167.0),
-            StartAt: types.MustTimeFromString("2021-11-12T06:08:11.875Z"),
+            StartAt: types.MustTimeFromString("2021-11-12T07:15:45.441Z"),
             Status: shared.HrisAttendanceStatusOpen.ToPointer(),
             Timezone: unifiedgosdk.Pointer("America/Atikokan"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-22T00:23:43.488Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-22T02:22:26.960Z"),
         },
         ConnectionID: "<id>",
     })
@@ -225,7 +228,7 @@ func main() {
             CountryCode: unifiedgosdk.Pointer("US"),
             CreatedAt: types.MustNewTimeFromString("2019-11-16T16:43:45.976Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("76f1c2d2-aa80-4b84-ba75-576901ea47ae"),
+            ID: unifiedgosdk.Pointer("a51378eb-054d-4270-aedf-ef0c142e9e9f"),
             IsPrimary: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Granville Schumm - Checking"),
@@ -233,7 +236,7 @@ func main() {
             RoutingNumber: unifiedgosdk.Pointer("448650724"),
             SplitAmount: unifiedgosdk.Pointer[float64](98.0),
             SplitType: shared.SplitTypePercentage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-21T13:56:50.943Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-22T08:44:52.348Z"),
         },
         ConnectionID: "<id>",
     })
@@ -300,13 +303,13 @@ func main() {
             EmployerContributionMaxAmount: unifiedgosdk.Pointer[float64](179093.0),
             EmployerContributionType: shared.EmployerContributionTypePercentage.ToPointer(),
             Frequency: shared.HrisBenefitFrequencyMonth.ToPointer(),
-            ID: unifiedgosdk.Pointer("e2933262-b765-4c11-972e-c6ff5621aede"),
+            ID: unifiedgosdk.Pointer("aad4f088-72e7-48f0-a07e-7b5493a57ce7"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Frozen Wooden Ball"),
             Tax: shared.TaxPreTax.ToPointer(),
             Type: shared.HrisBenefitTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-03-31T18:17:23.566Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-01T04:23:22.735Z"),
         },
         ConnectionID: "<id>",
     })
@@ -374,11 +377,11 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CreatedAt: types.MustNewTimeFromString("2021-05-02T22:27:38.970Z"),
-            ID: unifiedgosdk.Pointer("3330bbc5-ef9b-41ba-b191-8aaf9c329ecf"),
+            ID: unifiedgosdk.Pointer("a00d0102-41f0-462d-8b8d-ff9f8fdc7c10"),
             LegalName: unifiedgosdk.Pointer("Gottlieb Group LLC"),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Gottlieb Group"),
-            UpdatedAt: types.MustNewTimeFromString("2026-11-02T13:27:49.828Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-11-03T12:29:09.171Z"),
         },
         ConnectionID: "<id>",
     })
@@ -444,14 +447,14 @@ func main() {
             EmployerType: shared.EmployerTypePercentage.ToPointer(),
             Frequency: shared.HrisDeductionFrequencyOneTime.ToPointer(),
             GarnishmentType: shared.GarnishmentTypeChildSupport.ToPointer(),
-            ID: unifiedgosdk.Pointer("f2343fec-3cc2-4f8d-a25a-ec078af19c8e"),
+            ID: unifiedgosdk.Pointer("dffa2e8d-0b57-4261-9662-48ac87f11eb6"),
             IsActive: unifiedgosdk.Pointer(true),
             MaxAmount: unifiedgosdk.Pointer[float64](21794.0),
             Metadata: []shared.HrisMetadata{},
             Notes: unifiedgosdk.Pointer("Carmen desidero."),
-            StartAt: types.MustNewTimeFromString("2025-04-03T09:05:13.873Z"),
+            StartAt: types.MustNewTimeFromString("2025-04-04T02:43:25.443Z"),
             Type: shared.HrisDeductionTypeFixed.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-06T16:36:06.601Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-07T06:51:11.146Z"),
         },
         ConnectionID: "<id>",
     })
@@ -518,7 +521,7 @@ func main() {
             HasHdEncrypted: unifiedgosdk.Pointer(true),
             HasPasswordManager: unifiedgosdk.Pointer(true),
             HasScreenlock: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("76ca48e7-601e-4314-b085-a71f86767037"),
+            ID: unifiedgosdk.Pointer("aa52bf35-5ca2-4115-a37b-ad2aee422567"),
             IsMissing: unifiedgosdk.Pointer(false),
             Manufacturer: unifiedgosdk.Pointer("Hackett Inc"),
             Metadata: []shared.HrisMetadata{},
@@ -526,7 +529,7 @@ func main() {
             Name: unifiedgosdk.Pointer("august-laptop"),
             Os: unifiedgosdk.Pointer("transmitter"),
             OsVersion: unifiedgosdk.Pointer("8.4.8"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-22T03:52:53.399Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-22T16:42:11.344Z"),
             Version: unifiedgosdk.Pointer("4.15.7"),
         },
         ConnectionID: "<id>",
@@ -589,10 +592,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-27T11:47:26.086Z"),
             DocumentURL: unifiedgosdk.Pointer("https://sore-decision.biz/"),
             Filename: unifiedgosdk.Pointer("ridge_forager.xsl"),
-            ID: unifiedgosdk.Pointer("dfe61b60-6fce-4281-9b9e-5fbd1232aff0"),
+            ID: unifiedgosdk.Pointer("c3397d96-fb00-41a2-8aea-5a7adba2a953"),
             Metadata: []shared.HrisMetadata{},
             Type: shared.HrisDocumentTypePolicy.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-30T04:14:17.111Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-30T21:26:24.221Z"),
         },
         ConnectionID: "<id>",
     })
@@ -655,12 +658,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-01-26T12:44:52.326Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             Frequency: shared.HrisEarningFrequencySemimonthly.ToPointer(),
-            ID: unifiedgosdk.Pointer("2bdc81f9-1009-4c3e-b522-778f29f3eaa7"),
+            ID: unifiedgosdk.Pointer("ba0b0886-ddcc-49ff-9d33-89e8b92cb89b"),
             Metadata: []shared.HrisMetadata{},
             Notes: unifiedgosdk.Pointer("Deporto truculenter vinum beatae."),
-            StartAt: types.MustNewTimeFromString("2022-08-05T19:13:11.888Z"),
+            StartAt: types.MustNewTimeFromString("2022-08-06T05:41:05.144Z"),
             Status: shared.HrisEarningStatusEnded.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-02-12T05:01:13.615Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-02-12T08:07:23.811Z"),
         },
         ConnectionID: "<id>",
     })
@@ -755,7 +758,7 @@ func main() {
             Gender: shared.HrisEmployeeGenderMale.ToPointer(),
             HasMfa: unifiedgosdk.Pointer(true),
             HiredAt: types.MustNewTimeFromString("2019-09-16T15:08:53.262Z"),
-            ID: unifiedgosdk.Pointer("e14cdf47-3bdb-4025-9d25-190295eaaf71"),
+            ID: unifiedgosdk.Pointer("71f2cc19-541a-4c74-999b-a62c4f8214c7"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg"),
             LanguageLocale: unifiedgosdk.Pointer("in"),
             LastName: unifiedgosdk.Pointer("Prohaska"),
@@ -769,7 +772,7 @@ func main() {
                         },
                     )),
                     Format: shared.HrisMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("5b6c8bb0-14f1-4510-bbf9-11e85e193165"),
+                    ID: unifiedgosdk.Pointer("f5ee550c-e187-4256-b99a-0e9d24ec9b84"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateHrisMetadataValueStr(
@@ -819,7 +822,7 @@ func main() {
             TimeoffDaysUsed: unifiedgosdk.Pointer[float64](9.0),
             Timezone: unifiedgosdk.Pointer("Europe/Ljubljana"),
             Title: unifiedgosdk.Pointer("District Branding Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2020-07-22T03:16:54.176Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-07-22T06:01:19.164Z"),
         },
         ConnectionID: "<id>",
     })
@@ -880,12 +883,12 @@ func main() {
         HrisGroup: shared.HrisGroup{
             CreatedAt: types.MustNewTimeFromString("2023-11-01T13:13:40.714Z"),
             Description: unifiedgosdk.Pointer("Absorbeo casso."),
-            ID: unifiedgosdk.Pointer("be21c0e7-3740-49db-9162-780c6d3c7382"),
+            ID: unifiedgosdk.Pointer("8c80774b-84ff-41f9-9a99-1363631b1a22"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Games"),
             Type: shared.HrisGroupTypeBranch.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-06-12T12:01:51.485Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-13T07:56:55.144Z"),
         },
         ConnectionID: "<id>",
     })
@@ -948,11 +951,11 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-10-28T01:13:19.491Z"),
             Description: unifiedgosdk.Pointer("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo."),
             EmploymentType: shared.HrisJobEmploymentTypeFreelance.ToPointer(),
-            ID: unifiedgosdk.Pointer("ebcb36fc-38c9-4b28-ba25-1a2eecbab5a8"),
+            ID: unifiedgosdk.Pointer("7802585b-28fa-46cf-a6ee-d80352b13e31"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Internal Integration Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-08T16:02:02.025Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-09T00:46:32.808Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1023,7 +1026,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-07-18T10:32:01.414Z"),
             Currency: unifiedgosdk.Pointer("MNT"),
             Description: unifiedgosdk.Pointer("Commemoro acervus."),
-            ID: unifiedgosdk.Pointer("062b7c92-2ac6-4739-be29-d953cfd32b66"),
+            ID: unifiedgosdk.Pointer("62a01669-90d4-420f-95cb-a67cce7d819a"),
             IsActive: unifiedgosdk.Pointer(false),
             IsHq: unifiedgosdk.Pointer(true),
             LanguageLocale: unifiedgosdk.Pointer("it"),
@@ -1044,7 +1047,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("Asia/Jerusalem"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-30T06:15:57.407Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-30T14:44:28.145Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1110,13 +1113,13 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-06-23T02:10:00.789Z"),
             Description: unifiedgosdk.Pointer("Uterque vespillo adnuo ea commodo turbo suscipio condico."),
             Domain: unifiedgosdk.Pointer("Health"),
-            ID: unifiedgosdk.Pointer("b9c2487d-92d7-4b26-9435-87ca8b0a3578"),
+            ID: unifiedgosdk.Pointer("d901e3cc-43ba-4e97-a0ab-e020b0b7cdd4"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("International Functionality Architect"),
             Subcategory: unifiedgosdk.Pointer("Marble"),
             Type: shared.HrisTaxonomyTypeKnowledge.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-03T16:42:35.687Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-03T21:41:42.424Z"),
             URL: unifiedgosdk.Pointer("https://fixed-membership.biz/"),
         },
         ConnectionID: "<id>",
@@ -1176,7 +1179,7 @@ func main() {
 
     res, err := s.Hris.CreateHrisTimeoff(ctx, operations.CreateHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
-            ApprovedAt: types.MustNewTimeFromString("2022-02-25T06:43:45.945Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-02-25T08:29:13.530Z"),
             Attachments: []shared.HrisAttachment{
                 shared.HrisAttachment{
                     ContentType: unifiedgosdk.Pointer("application/pdf"),
@@ -1190,16 +1193,16 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-10-06T18:00:20.615Z"),
             Duration: unifiedgosdk.Pointer[float64](4.0),
             DurationType: shared.DurationTypeDay.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2025-01-13T18:12:14.841Z"),
-            ID: unifiedgosdk.Pointer("261c197f-14b5-461a-8877-51b8a9ce14b3"),
+            EndAt: types.MustNewTimeFromString("2025-01-14T09:02:41.733Z"),
+            ID: unifiedgosdk.Pointer("18ea8abb-c77e-4254-a0e6-ab3761402ee2"),
             IsPaid: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             OriginalType: unifiedgosdk.Pointer("acerbitas ut"),
             Reason: unifiedgosdk.Pointer("verto"),
-            StartAt: types.MustNewTimeFromString("2023-09-14T07:18:05.850Z"),
+            StartAt: types.MustNewTimeFromString("2023-09-14T16:05:19.448Z"),
             Status: shared.HrisTimeoffStatusDenied.ToPointer(),
             Type: shared.HrisTimeoffTypeInLieu.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-07-16T14:48:30.498Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-16T18:19:17.016Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",
@@ -1259,7 +1262,7 @@ func main() {
 
     res, err := s.Hris.CreateHrisTimeshift(ctx, operations.CreateHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
-            ApprovedAt: types.MustNewTimeFromString("2022-07-28T12:16:20.387Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-07-28T21:55:40.632Z"),
             Compensation: []shared.HrisCompensation{
                 shared.HrisCompensation{
                     Amount: unifiedgosdk.Pointer[float64](76761.0),
@@ -1271,13 +1274,13 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
-            EndAt: types.MustNewTimeFromString("2026-10-21T20:50:30.570Z"),
+            EndAt: types.MustNewTimeFromString("2026-10-22T19:47:55.877Z"),
             Hours: unifiedgosdk.Pointer[float64](6.0),
-            ID: unifiedgosdk.Pointer("d2a7d55a-a549-4c46-8003-c1b947d8f6dc"),
+            ID: unifiedgosdk.Pointer("877a2273-316e-49ef-b9d7-b19824e84406"),
             IsApproved: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-07-26T19:59:00.443Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-07-08T18:28:21.717Z"),
+            StartAt: types.MustNewTimeFromString("2023-07-27T08:45:51.429Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-09T00:49:07.910Z"),
         },
         ConnectionID: "<id>",
     })
@@ -3306,32 +3309,32 @@ func main() {
                 Region: unifiedgosdk.Pointer("Tennessee"),
                 RegionCode: unifiedgosdk.Pointer("CA"),
             },
-            ApprovedAt: types.MustNewTimeFromString("2021-09-20T02:42:05.058Z"),
+            ApprovedAt: types.MustNewTimeFromString("2021-09-20T03:11:13.046Z"),
             Breaks: []shared.HrisAttendanceBreak{
                 shared.HrisAttendanceBreak{
                     DurationMinutes: unifiedgosdk.Pointer[float64](51.0),
-                    EndAt: types.MustNewTimeFromString("2024-02-26T15:53:18.503Z"),
-                    ID: unifiedgosdk.Pointer("22c852aa-fe67-4fdc-9080-a92b144c1094"),
+                    EndAt: types.MustNewTimeFromString("2024-02-27T03:05:38.966Z"),
+                    ID: unifiedgosdk.Pointer("56bf8011-4544-43ff-8af3-9d2257afb8ac"),
                     IsPaid: unifiedgosdk.Pointer(false),
                     Name: unifiedgosdk.Pointer("Lunch"),
-                    StartAt: types.MustNewTimeFromString("2023-11-09T15:36:00.196Z"),
+                    StartAt: types.MustNewTimeFromString("2023-11-10T01:29:31.250Z"),
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2021-08-10T19:43:18.452Z"),
             Currency: unifiedgosdk.Pointer("EUR"),
             DeclaredTipsAmount: unifiedgosdk.Pointer[float64](54.0),
             EmployeeUserID: "<id>",
-            EndAt: types.MustTimeFromString("2024-05-06T08:12:12.135Z"),
+            EndAt: types.MustTimeFromString("2024-05-06T20:14:55.607Z"),
             HourlyRate: unifiedgosdk.Pointer[float64](16.0),
             Hours: unifiedgosdk.Pointer[float64](10.0),
-            ID: unifiedgosdk.Pointer("2493d77d-3b98-4af5-b12e-6ab688468b29"),
+            ID: unifiedgosdk.Pointer("ba3f051f-aea7-4f12-acf1-8b22c6482874"),
             JobName: unifiedgosdk.Pointer("Human Accountability Administrator"),
             Metadata: []shared.HrisMetadata{},
             NonCashTipsAmount: unifiedgosdk.Pointer[float64](167.0),
-            StartAt: types.MustTimeFromString("2021-11-12T06:08:11.876Z"),
+            StartAt: types.MustTimeFromString("2021-11-12T07:15:45.442Z"),
             Status: shared.HrisAttendanceStatusOpen.ToPointer(),
             Timezone: unifiedgosdk.Pointer("America/Atikokan"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-22T00:23:43.490Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-22T02:22:26.963Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3398,7 +3401,7 @@ func main() {
             CountryCode: unifiedgosdk.Pointer("US"),
             CreatedAt: types.MustNewTimeFromString("2019-11-16T16:43:45.976Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("26e6b94c-4fb7-4b76-bca7-7fc7a80ff174"),
+            ID: unifiedgosdk.Pointer("4020a46b-787f-4153-9dcc-d57540091743"),
             IsPrimary: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Granville Schumm - Checking"),
@@ -3406,7 +3409,7 @@ func main() {
             RoutingNumber: unifiedgosdk.Pointer("448650724"),
             SplitAmount: unifiedgosdk.Pointer[float64](98.0),
             SplitType: shared.SplitTypePercentage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-21T13:56:50.955Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-22T08:44:52.365Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3474,13 +3477,13 @@ func main() {
             EmployerContributionMaxAmount: unifiedgosdk.Pointer[float64](179093.0),
             EmployerContributionType: shared.EmployerContributionTypePercentage.ToPointer(),
             Frequency: shared.HrisBenefitFrequencyMonth.ToPointer(),
-            ID: unifiedgosdk.Pointer("2f9b32f8-3da7-4f0d-9ce7-75c43b1f2aa6"),
+            ID: unifiedgosdk.Pointer("050b0b3d-0cc7-41b0-82ec-9130a58680c4"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Frozen Wooden Ball"),
             Tax: shared.TaxPreTax.ToPointer(),
             Type: shared.HrisBenefitTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-03-31T18:17:23.575Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-01T04:23:22.744Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3549,11 +3552,11 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CreatedAt: types.MustNewTimeFromString("2021-05-02T22:27:38.970Z"),
-            ID: unifiedgosdk.Pointer("2a965799-d059-49ea-a891-8c847774bdcd"),
+            ID: unifiedgosdk.Pointer("46327815-32fb-42cf-873a-3187c6d5b573"),
             LegalName: unifiedgosdk.Pointer("Gottlieb Group LLC"),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Gottlieb Group"),
-            UpdatedAt: types.MustNewTimeFromString("2026-11-02T13:27:49.842Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-11-03T12:29:09.190Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3620,14 +3623,14 @@ func main() {
             EmployerType: shared.EmployerTypePercentage.ToPointer(),
             Frequency: shared.HrisDeductionFrequencyOneTime.ToPointer(),
             GarnishmentType: shared.GarnishmentTypeChildSupport.ToPointer(),
-            ID: unifiedgosdk.Pointer("18d1563d-667f-4898-a99e-024d630fd331"),
+            ID: unifiedgosdk.Pointer("2450e4de-e8ee-4a89-9686-716b472b4de0"),
             IsActive: unifiedgosdk.Pointer(true),
             MaxAmount: unifiedgosdk.Pointer[float64](21794.0),
             Metadata: []shared.HrisMetadata{},
             Notes: unifiedgosdk.Pointer("Carmen desidero."),
-            StartAt: types.MustNewTimeFromString("2025-04-03T09:05:13.886Z"),
+            StartAt: types.MustNewTimeFromString("2025-04-04T02:43:25.457Z"),
             Type: shared.HrisDeductionTypeFixed.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-06T16:36:06.612Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-07T06:51:11.158Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3695,7 +3698,7 @@ func main() {
             HasHdEncrypted: unifiedgosdk.Pointer(true),
             HasPasswordManager: unifiedgosdk.Pointer(true),
             HasScreenlock: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("c110c621-c8dd-4857-9984-afb4d3da65f9"),
+            ID: unifiedgosdk.Pointer("d0cc3b33-195f-44bb-a361-c6f2501efcf8"),
             IsMissing: unifiedgosdk.Pointer(false),
             Manufacturer: unifiedgosdk.Pointer("Hackett Inc"),
             Metadata: []shared.HrisMetadata{},
@@ -3703,7 +3706,7 @@ func main() {
             Name: unifiedgosdk.Pointer("august-laptop"),
             Os: unifiedgosdk.Pointer("transmitter"),
             OsVersion: unifiedgosdk.Pointer("8.4.8"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-22T03:52:53.408Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-22T16:42:11.353Z"),
             Version: unifiedgosdk.Pointer("4.15.7"),
         },
         ConnectionID: "<id>",
@@ -3767,10 +3770,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-27T11:47:26.086Z"),
             DocumentURL: unifiedgosdk.Pointer("https://sore-decision.biz/"),
             Filename: unifiedgosdk.Pointer("ridge_forager.xsl"),
-            ID: unifiedgosdk.Pointer("e60099ab-59ac-4cd6-beec-bd2ae212775d"),
+            ID: unifiedgosdk.Pointer("3f17350e-7b85-4764-bac5-1b0eac4189a4"),
             Metadata: []shared.HrisMetadata{},
             Type: shared.HrisDocumentTypePolicy.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-30T04:14:17.120Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-30T21:26:24.232Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3834,12 +3837,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-01-26T12:44:52.326Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             Frequency: shared.HrisEarningFrequencySemimonthly.ToPointer(),
-            ID: unifiedgosdk.Pointer("45e91bce-e0c1-491c-a247-85b39bed5dee"),
+            ID: unifiedgosdk.Pointer("03214074-92b7-451e-810f-f7f4735063f3"),
             Metadata: []shared.HrisMetadata{},
             Notes: unifiedgosdk.Pointer("Deporto truculenter vinum beatae."),
-            StartAt: types.MustNewTimeFromString("2022-08-05T19:13:11.896Z"),
+            StartAt: types.MustNewTimeFromString("2022-08-06T05:41:05.152Z"),
             Status: shared.HrisEarningStatusEnded.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-02-12T05:01:13.618Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-02-12T08:07:23.813Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3935,7 +3938,7 @@ func main() {
             Gender: shared.HrisEmployeeGenderMale.ToPointer(),
             HasMfa: unifiedgosdk.Pointer(true),
             HiredAt: types.MustNewTimeFromString("2019-09-16T15:08:53.262Z"),
-            ID: unifiedgosdk.Pointer("70ada308-d135-4f81-bc27-2a76bdff63d5"),
+            ID: unifiedgosdk.Pointer("8b135799-e101-4ad7-9a67-59f9c4bdd1d3"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg"),
             LanguageLocale: unifiedgosdk.Pointer("in"),
             LastName: unifiedgosdk.Pointer("Prohaska"),
@@ -3949,7 +3952,7 @@ func main() {
                         },
                     )),
                     Format: shared.HrisMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("c67e8eb9-56e7-4ad5-b9e5-2b3e0640cfe6"),
+                    ID: unifiedgosdk.Pointer("3dc78e11-785f-4789-9122-ddc9ef6fde6a"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateHrisMetadataValueStr(
@@ -3999,7 +4002,7 @@ func main() {
             TimeoffDaysUsed: unifiedgosdk.Pointer[float64](9.0),
             Timezone: unifiedgosdk.Pointer("Europe/Ljubljana"),
             Title: unifiedgosdk.Pointer("District Branding Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2020-07-22T03:16:54.187Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-07-22T06:01:19.175Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -4061,12 +4064,12 @@ func main() {
         HrisGroup: shared.HrisGroup{
             CreatedAt: types.MustNewTimeFromString("2023-11-01T13:13:40.714Z"),
             Description: unifiedgosdk.Pointer("Absorbeo casso."),
-            ID: unifiedgosdk.Pointer("16169def-5a08-4540-b831-2e7fa4e76439"),
+            ID: unifiedgosdk.Pointer("8d955f7b-d063-4bd6-a012-d638760f03bc"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Games"),
             Type: shared.HrisGroupTypeBranch.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-06-12T12:01:51.497Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-13T07:56:55.159Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -4130,11 +4133,11 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-10-28T01:13:19.491Z"),
             Description: unifiedgosdk.Pointer("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo."),
             EmploymentType: shared.HrisJobEmploymentTypeFreelance.ToPointer(),
-            ID: unifiedgosdk.Pointer("0f9287ab-e2c2-4f6e-857f-eb6d47baae20"),
+            ID: unifiedgosdk.Pointer("fb766da0-dd73-44f6-bea8-2518e2f8a241"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Internal Integration Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-08T16:02:02.076Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-09T00:46:32.861Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -4206,7 +4209,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-07-18T10:32:01.414Z"),
             Currency: unifiedgosdk.Pointer("MNT"),
             Description: unifiedgosdk.Pointer("Commemoro acervus."),
-            ID: unifiedgosdk.Pointer("76798ab9-0927-4bfa-9f86-699d5b6f3756"),
+            ID: unifiedgosdk.Pointer("0570a50f-570a-485a-a443-ce951edcbb28"),
             IsActive: unifiedgosdk.Pointer(false),
             IsHq: unifiedgosdk.Pointer(true),
             LanguageLocale: unifiedgosdk.Pointer("it"),
@@ -4227,7 +4230,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("Asia/Jerusalem"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-30T06:15:57.415Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-30T14:44:28.153Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -4252,6 +4255,80 @@ func main() {
 ### Response
 
 **[*operations.PatchHrisLocationResponse](../../pkg/models/operations/patchhrislocationresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchHrisTaxonomy
+
+Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchHrisTaxonomy" method="patch" path="/hris/{connection_id}/taxonomy/{id}" example="hris_taxonomy" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Hris.PatchHrisTaxonomy(ctx, operations.PatchHrisTaxonomyRequest{
+        HrisTaxonomy: shared.HrisTaxonomy{
+            AlternativeNames: []string{
+                "Facilitator",
+                "National",
+            },
+            CreatedAt: types.MustNewTimeFromString("2022-06-23T02:10:00.789Z"),
+            Description: unifiedgosdk.Pointer("Uterque vespillo adnuo ea commodo turbo suscipio condico."),
+            Domain: unifiedgosdk.Pointer("Health"),
+            ID: unifiedgosdk.Pointer("786cf40a-14d3-4a15-a1db-68a96bdfb388"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.HrisMetadata{},
+            Name: unifiedgosdk.Pointer("International Functionality Architect"),
+            Subcategory: unifiedgosdk.Pointer("Marble"),
+            Type: shared.HrisTaxonomyTypeKnowledge.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-03T21:41:42.428Z"),
+            URL: unifiedgosdk.Pointer("https://fixed-membership.biz/"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisTaxonomy != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.PatchHrisTaxonomyRequest](../../pkg/models/operations/patchhristaxonomyrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.PatchHrisTaxonomyResponse](../../pkg/models/operations/patchhristaxonomyresponse.md), error**
 
 ### Errors
 
@@ -4287,7 +4364,7 @@ func main() {
 
     res, err := s.Hris.PatchHrisTimeoff(ctx, operations.PatchHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
-            ApprovedAt: types.MustNewTimeFromString("2022-02-25T06:43:45.947Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-02-25T08:29:13.532Z"),
             Attachments: []shared.HrisAttachment{
                 shared.HrisAttachment{
                     ContentType: unifiedgosdk.Pointer("application/pdf"),
@@ -4301,16 +4378,16 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-10-06T18:00:20.615Z"),
             Duration: unifiedgosdk.Pointer[float64](4.0),
             DurationType: shared.DurationTypeDay.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2025-01-13T18:12:14.852Z"),
-            ID: unifiedgosdk.Pointer("033541b9-b6b9-40ba-bdc3-29b87ff8ef24"),
+            EndAt: types.MustNewTimeFromString("2025-01-14T09:02:41.748Z"),
+            ID: unifiedgosdk.Pointer("864363dc-eb82-4d4b-a6f4-3ebcbae87b9f"),
             IsPaid: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             OriginalType: unifiedgosdk.Pointer("acerbitas ut"),
             Reason: unifiedgosdk.Pointer("verto"),
-            StartAt: types.MustNewTimeFromString("2023-09-14T07:18:05.857Z"),
+            StartAt: types.MustNewTimeFromString("2023-09-14T16:05:19.457Z"),
             Status: shared.HrisTimeoffStatusDenied.ToPointer(),
             Type: shared.HrisTimeoffTypeInLieu.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-07-16T14:48:30.501Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-16T18:19:17.019Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",
@@ -4371,7 +4448,7 @@ func main() {
 
     res, err := s.Hris.PatchHrisTimeshift(ctx, operations.PatchHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
-            ApprovedAt: types.MustNewTimeFromString("2022-07-28T12:16:20.395Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-07-28T21:55:40.641Z"),
             Compensation: []shared.HrisCompensation{
                 shared.HrisCompensation{
                     Amount: unifiedgosdk.Pointer[float64](76761.0),
@@ -4383,13 +4460,13 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
-            EndAt: types.MustNewTimeFromString("2026-10-21T20:50:30.586Z"),
+            EndAt: types.MustNewTimeFromString("2026-10-22T19:47:55.897Z"),
             Hours: unifiedgosdk.Pointer[float64](6.0),
-            ID: unifiedgosdk.Pointer("74bf76ce-7a88-4428-b97f-65f43b6fec51"),
+            ID: unifiedgosdk.Pointer("f75f7095-93f4-4f60-96cb-ecf659aca827"),
             IsApproved: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-07-26T19:59:00.453Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-07-08T18:28:21.721Z"),
+            StartAt: types.MustNewTimeFromString("2023-07-27T08:45:51.441Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-09T00:49:07.915Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5081,6 +5158,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## RemoveHrisTaxonomy
+
+Deletes the HrisTaxonomy identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeHrisTaxonomy" method="delete" path="/hris/{connection_id}/taxonomy/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Hris.RemoveHrisTaxonomy(ctx, operations.RemoveHrisTaxonomyRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.RemoveHrisTaxonomyRequest](../../pkg/models/operations/removehristaxonomyrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.RemoveHrisTaxonomyResponse](../../pkg/models/operations/removehristaxonomyresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## RemoveHrisTimeoff
 
 Deletes the HrisTimeoff identified by `id`.
@@ -5227,32 +5359,32 @@ func main() {
                 Region: unifiedgosdk.Pointer("Tennessee"),
                 RegionCode: unifiedgosdk.Pointer("CA"),
             },
-            ApprovedAt: types.MustNewTimeFromString("2021-09-20T02:42:05.058Z"),
+            ApprovedAt: types.MustNewTimeFromString("2021-09-20T03:11:13.046Z"),
             Breaks: []shared.HrisAttendanceBreak{
                 shared.HrisAttendanceBreak{
                     DurationMinutes: unifiedgosdk.Pointer[float64](51.0),
-                    EndAt: types.MustNewTimeFromString("2024-02-26T15:53:18.503Z"),
-                    ID: unifiedgosdk.Pointer("22c852aa-fe67-4fdc-9080-a92b144c1094"),
+                    EndAt: types.MustNewTimeFromString("2024-02-27T03:05:38.966Z"),
+                    ID: unifiedgosdk.Pointer("56bf8011-4544-43ff-8af3-9d2257afb8ac"),
                     IsPaid: unifiedgosdk.Pointer(false),
                     Name: unifiedgosdk.Pointer("Lunch"),
-                    StartAt: types.MustNewTimeFromString("2023-11-09T15:36:00.196Z"),
+                    StartAt: types.MustNewTimeFromString("2023-11-10T01:29:31.250Z"),
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2021-08-10T19:43:18.452Z"),
             Currency: unifiedgosdk.Pointer("EUR"),
             DeclaredTipsAmount: unifiedgosdk.Pointer[float64](54.0),
             EmployeeUserID: "<id>",
-            EndAt: types.MustTimeFromString("2024-05-06T08:12:12.135Z"),
+            EndAt: types.MustTimeFromString("2024-05-06T20:14:55.607Z"),
             HourlyRate: unifiedgosdk.Pointer[float64](16.0),
             Hours: unifiedgosdk.Pointer[float64](10.0),
-            ID: unifiedgosdk.Pointer("2493d77d-3b98-4af5-b12e-6ab688468b29"),
+            ID: unifiedgosdk.Pointer("ba3f051f-aea7-4f12-acf1-8b22c6482874"),
             JobName: unifiedgosdk.Pointer("Human Accountability Administrator"),
             Metadata: []shared.HrisMetadata{},
             NonCashTipsAmount: unifiedgosdk.Pointer[float64](167.0),
-            StartAt: types.MustTimeFromString("2021-11-12T06:08:11.876Z"),
+            StartAt: types.MustTimeFromString("2021-11-12T07:15:45.442Z"),
             Status: shared.HrisAttendanceStatusOpen.ToPointer(),
             Timezone: unifiedgosdk.Pointer("America/Atikokan"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-22T00:23:43.490Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-22T02:22:26.963Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5319,7 +5451,7 @@ func main() {
             CountryCode: unifiedgosdk.Pointer("US"),
             CreatedAt: types.MustNewTimeFromString("2019-11-16T16:43:45.976Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("26e6b94c-4fb7-4b76-bca7-7fc7a80ff174"),
+            ID: unifiedgosdk.Pointer("4020a46b-787f-4153-9dcc-d57540091743"),
             IsPrimary: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Granville Schumm - Checking"),
@@ -5327,7 +5459,7 @@ func main() {
             RoutingNumber: unifiedgosdk.Pointer("448650724"),
             SplitAmount: unifiedgosdk.Pointer[float64](98.0),
             SplitType: shared.SplitTypePercentage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-21T13:56:50.955Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-22T08:44:52.365Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5395,13 +5527,13 @@ func main() {
             EmployerContributionMaxAmount: unifiedgosdk.Pointer[float64](179093.0),
             EmployerContributionType: shared.EmployerContributionTypePercentage.ToPointer(),
             Frequency: shared.HrisBenefitFrequencyMonth.ToPointer(),
-            ID: unifiedgosdk.Pointer("2f9b32f8-3da7-4f0d-9ce7-75c43b1f2aa6"),
+            ID: unifiedgosdk.Pointer("050b0b3d-0cc7-41b0-82ec-9130a58680c4"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Frozen Wooden Ball"),
             Tax: shared.TaxPreTax.ToPointer(),
             Type: shared.HrisBenefitTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-03-31T18:17:23.575Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-01T04:23:22.744Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5470,11 +5602,11 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CreatedAt: types.MustNewTimeFromString("2021-05-02T22:27:38.970Z"),
-            ID: unifiedgosdk.Pointer("2a965799-d059-49ea-a891-8c847774bdcd"),
+            ID: unifiedgosdk.Pointer("46327815-32fb-42cf-873a-3187c6d5b573"),
             LegalName: unifiedgosdk.Pointer("Gottlieb Group LLC"),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Gottlieb Group"),
-            UpdatedAt: types.MustNewTimeFromString("2026-11-02T13:27:49.842Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-11-03T12:29:09.190Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5541,14 +5673,14 @@ func main() {
             EmployerType: shared.EmployerTypePercentage.ToPointer(),
             Frequency: shared.HrisDeductionFrequencyOneTime.ToPointer(),
             GarnishmentType: shared.GarnishmentTypeChildSupport.ToPointer(),
-            ID: unifiedgosdk.Pointer("18d1563d-667f-4898-a99e-024d630fd331"),
+            ID: unifiedgosdk.Pointer("2450e4de-e8ee-4a89-9686-716b472b4de0"),
             IsActive: unifiedgosdk.Pointer(true),
             MaxAmount: unifiedgosdk.Pointer[float64](21794.0),
             Metadata: []shared.HrisMetadata{},
             Notes: unifiedgosdk.Pointer("Carmen desidero."),
-            StartAt: types.MustNewTimeFromString("2025-04-03T09:05:13.886Z"),
+            StartAt: types.MustNewTimeFromString("2025-04-04T02:43:25.457Z"),
             Type: shared.HrisDeductionTypeFixed.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-06T16:36:06.612Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-07T06:51:11.158Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5616,7 +5748,7 @@ func main() {
             HasHdEncrypted: unifiedgosdk.Pointer(true),
             HasPasswordManager: unifiedgosdk.Pointer(true),
             HasScreenlock: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("c110c621-c8dd-4857-9984-afb4d3da65f9"),
+            ID: unifiedgosdk.Pointer("d0cc3b33-195f-44bb-a361-c6f2501efcf8"),
             IsMissing: unifiedgosdk.Pointer(false),
             Manufacturer: unifiedgosdk.Pointer("Hackett Inc"),
             Metadata: []shared.HrisMetadata{},
@@ -5624,7 +5756,7 @@ func main() {
             Name: unifiedgosdk.Pointer("august-laptop"),
             Os: unifiedgosdk.Pointer("transmitter"),
             OsVersion: unifiedgosdk.Pointer("8.4.8"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-22T03:52:53.408Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-22T16:42:11.353Z"),
             Version: unifiedgosdk.Pointer("4.15.7"),
         },
         ConnectionID: "<id>",
@@ -5688,10 +5820,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-27T11:47:26.086Z"),
             DocumentURL: unifiedgosdk.Pointer("https://sore-decision.biz/"),
             Filename: unifiedgosdk.Pointer("ridge_forager.xsl"),
-            ID: unifiedgosdk.Pointer("e60099ab-59ac-4cd6-beec-bd2ae212775d"),
+            ID: unifiedgosdk.Pointer("3f17350e-7b85-4764-bac5-1b0eac4189a4"),
             Metadata: []shared.HrisMetadata{},
             Type: shared.HrisDocumentTypePolicy.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-30T04:14:17.120Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-30T21:26:24.232Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5755,12 +5887,12 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-01-26T12:44:52.326Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             Frequency: shared.HrisEarningFrequencySemimonthly.ToPointer(),
-            ID: unifiedgosdk.Pointer("45e91bce-e0c1-491c-a247-85b39bed5dee"),
+            ID: unifiedgosdk.Pointer("03214074-92b7-451e-810f-f7f4735063f3"),
             Metadata: []shared.HrisMetadata{},
             Notes: unifiedgosdk.Pointer("Deporto truculenter vinum beatae."),
-            StartAt: types.MustNewTimeFromString("2022-08-05T19:13:11.896Z"),
+            StartAt: types.MustNewTimeFromString("2022-08-06T05:41:05.152Z"),
             Status: shared.HrisEarningStatusEnded.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-02-12T05:01:13.618Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-02-12T08:07:23.813Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5856,7 +5988,7 @@ func main() {
             Gender: shared.HrisEmployeeGenderMale.ToPointer(),
             HasMfa: unifiedgosdk.Pointer(true),
             HiredAt: types.MustNewTimeFromString("2019-09-16T15:08:53.262Z"),
-            ID: unifiedgosdk.Pointer("70ada308-d135-4f81-bc27-2a76bdff63d5"),
+            ID: unifiedgosdk.Pointer("8b135799-e101-4ad7-9a67-59f9c4bdd1d3"),
             ImageURL: unifiedgosdk.Pointer("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg"),
             LanguageLocale: unifiedgosdk.Pointer("in"),
             LastName: unifiedgosdk.Pointer("Prohaska"),
@@ -5870,7 +6002,7 @@ func main() {
                         },
                     )),
                     Format: shared.HrisMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("c67e8eb9-56e7-4ad5-b9e5-2b3e0640cfe6"),
+                    ID: unifiedgosdk.Pointer("3dc78e11-785f-4789-9122-ddc9ef6fde6a"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateHrisMetadataValueStr(
@@ -5920,7 +6052,7 @@ func main() {
             TimeoffDaysUsed: unifiedgosdk.Pointer[float64](9.0),
             Timezone: unifiedgosdk.Pointer("Europe/Ljubljana"),
             Title: unifiedgosdk.Pointer("District Branding Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2020-07-22T03:16:54.187Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-07-22T06:01:19.175Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5982,12 +6114,12 @@ func main() {
         HrisGroup: shared.HrisGroup{
             CreatedAt: types.MustNewTimeFromString("2023-11-01T13:13:40.714Z"),
             Description: unifiedgosdk.Pointer("Absorbeo casso."),
-            ID: unifiedgosdk.Pointer("16169def-5a08-4540-b831-2e7fa4e76439"),
+            ID: unifiedgosdk.Pointer("8d955f7b-d063-4bd6-a012-d638760f03bc"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Games"),
             Type: shared.HrisGroupTypeBranch.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-06-12T12:01:51.497Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-13T07:56:55.159Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -6051,11 +6183,11 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-10-28T01:13:19.491Z"),
             Description: unifiedgosdk.Pointer("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo."),
             EmploymentType: shared.HrisJobEmploymentTypeFreelance.ToPointer(),
-            ID: unifiedgosdk.Pointer("0f9287ab-e2c2-4f6e-857f-eb6d47baae20"),
+            ID: unifiedgosdk.Pointer("fb766da0-dd73-44f6-bea8-2518e2f8a241"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Internal Integration Specialist"),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-08T16:02:02.076Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-09T00:46:32.861Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -6127,7 +6259,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-07-18T10:32:01.414Z"),
             Currency: unifiedgosdk.Pointer("MNT"),
             Description: unifiedgosdk.Pointer("Commemoro acervus."),
-            ID: unifiedgosdk.Pointer("76798ab9-0927-4bfa-9f86-699d5b6f3756"),
+            ID: unifiedgosdk.Pointer("0570a50f-570a-485a-a443-ce951edcbb28"),
             IsActive: unifiedgosdk.Pointer(false),
             IsHq: unifiedgosdk.Pointer(true),
             LanguageLocale: unifiedgosdk.Pointer("it"),
@@ -6148,7 +6280,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("Asia/Jerusalem"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-30T06:15:57.415Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-30T14:44:28.153Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -6173,6 +6305,80 @@ func main() {
 ### Response
 
 **[*operations.UpdateHrisLocationResponse](../../pkg/models/operations/updatehrislocationresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateHrisTaxonomy
+
+Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateHrisTaxonomy" method="put" path="/hris/{connection_id}/taxonomy/{id}" example="hris_taxonomy" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Hris.UpdateHrisTaxonomy(ctx, operations.UpdateHrisTaxonomyRequest{
+        HrisTaxonomy: shared.HrisTaxonomy{
+            AlternativeNames: []string{
+                "Facilitator",
+                "National",
+            },
+            CreatedAt: types.MustNewTimeFromString("2022-06-23T02:10:00.789Z"),
+            Description: unifiedgosdk.Pointer("Uterque vespillo adnuo ea commodo turbo suscipio condico."),
+            Domain: unifiedgosdk.Pointer("Health"),
+            ID: unifiedgosdk.Pointer("786cf40a-14d3-4a15-a1db-68a96bdfb388"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.HrisMetadata{},
+            Name: unifiedgosdk.Pointer("International Functionality Architect"),
+            Subcategory: unifiedgosdk.Pointer("Marble"),
+            Type: shared.HrisTaxonomyTypeKnowledge.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-03T21:41:42.428Z"),
+            URL: unifiedgosdk.Pointer("https://fixed-membership.biz/"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisTaxonomy != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.UpdateHrisTaxonomyRequest](../../pkg/models/operations/updatehristaxonomyrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.UpdateHrisTaxonomyResponse](../../pkg/models/operations/updatehristaxonomyresponse.md), error**
 
 ### Errors
 
@@ -6208,7 +6414,7 @@ func main() {
 
     res, err := s.Hris.UpdateHrisTimeoff(ctx, operations.UpdateHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
-            ApprovedAt: types.MustNewTimeFromString("2022-02-25T06:43:45.947Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-02-25T08:29:13.532Z"),
             Attachments: []shared.HrisAttachment{
                 shared.HrisAttachment{
                     ContentType: unifiedgosdk.Pointer("application/pdf"),
@@ -6222,16 +6428,16 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-10-06T18:00:20.615Z"),
             Duration: unifiedgosdk.Pointer[float64](4.0),
             DurationType: shared.DurationTypeDay.ToPointer(),
-            EndAt: types.MustNewTimeFromString("2025-01-13T18:12:14.852Z"),
-            ID: unifiedgosdk.Pointer("033541b9-b6b9-40ba-bdc3-29b87ff8ef24"),
+            EndAt: types.MustNewTimeFromString("2025-01-14T09:02:41.748Z"),
+            ID: unifiedgosdk.Pointer("864363dc-eb82-4d4b-a6f4-3ebcbae87b9f"),
             IsPaid: unifiedgosdk.Pointer(true),
             Metadata: []shared.HrisMetadata{},
             OriginalType: unifiedgosdk.Pointer("acerbitas ut"),
             Reason: unifiedgosdk.Pointer("verto"),
-            StartAt: types.MustNewTimeFromString("2023-09-14T07:18:05.857Z"),
+            StartAt: types.MustNewTimeFromString("2023-09-14T16:05:19.457Z"),
             Status: shared.HrisTimeoffStatusDenied.ToPointer(),
             Type: shared.HrisTimeoffTypeInLieu.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-07-16T14:48:30.501Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-16T18:19:17.019Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",
@@ -6292,7 +6498,7 @@ func main() {
 
     res, err := s.Hris.UpdateHrisTimeshift(ctx, operations.UpdateHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
-            ApprovedAt: types.MustNewTimeFromString("2022-07-28T12:16:20.395Z"),
+            ApprovedAt: types.MustNewTimeFromString("2022-07-28T21:55:40.641Z"),
             Compensation: []shared.HrisCompensation{
                 shared.HrisCompensation{
                     Amount: unifiedgosdk.Pointer[float64](76761.0),
@@ -6304,13 +6510,13 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
-            EndAt: types.MustNewTimeFromString("2026-10-21T20:50:30.586Z"),
+            EndAt: types.MustNewTimeFromString("2026-10-22T19:47:55.897Z"),
             Hours: unifiedgosdk.Pointer[float64](6.0),
-            ID: unifiedgosdk.Pointer("74bf76ce-7a88-4428-b97f-65f43b6fec51"),
+            ID: unifiedgosdk.Pointer("f75f7095-93f4-4f60-96cb-ecf659aca827"),
             IsApproved: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
-            StartAt: types.MustNewTimeFromString("2023-07-26T19:59:00.453Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-07-08T18:28:21.721Z"),
+            StartAt: types.MustNewTimeFromString("2023-07-27T08:45:51.441Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-09T00:49:07.915Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

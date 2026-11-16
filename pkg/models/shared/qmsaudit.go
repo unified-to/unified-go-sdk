@@ -7,7 +7,6 @@ import (
 	"time"
 )
 
-// QmsAuditStatus - Normalized status of a quality record
 type QmsAuditStatus string
 
 const (
@@ -87,8 +86,7 @@ type QmsAudit struct {
 	// Standard audited against, e.g. AS9100D
 	Standard *string `json:"standard,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	StartAt *time.Time `json:"start_at,omitempty"`
-	// Normalized status of a quality record
+	StartAt      *time.Time      `json:"start_at,omitempty"`
 	Status       *QmsAuditStatus `json:"status,omitempty"`
 	SupplierName *string         `json:"supplier_name,omitempty"`
 	Type         *QmsAuditType   `json:"type,omitempty"`
