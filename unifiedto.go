@@ -202,6 +202,7 @@ type UnifiedTo struct {
 	Paycode              *Paycode
 	Payroll              *Payroll
 	Payslip              *Payslip
+	Taxwithholding       *Taxwithholding
 	Timeoff              *Timeoff
 	Timeshift            *Timeshift
 	Kms                  *Kms
@@ -363,10 +364,10 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.39.25",
+		SDKVersion: "0.39.26",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.39.25 2.961.1 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.39.25",
+			UserAgent:         "speakeasy-sdk/go 0.39.26 2.961.1 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.39.26",
 			GenVersion:        "2.961.1",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
@@ -534,6 +535,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Paycode = newPaycode(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Payroll = newPayroll(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Payslip = newPayslip(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Taxwithholding = newTaxwithholding(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Timeoff = newTimeoff(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Timeshift = newTimeshift(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Kms = newKms(sdk, sdk.sdkConfiguration, sdk.hooks)

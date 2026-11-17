@@ -293,6 +293,8 @@ type PropertyWorkspaceIntegrationPatchOverridenScopes struct {
 	HrisPayslipWrite                   *string `json:"hris_payslip_write,omitempty"`
 	HrisTaxonomyRead                   *string `json:"hris_taxonomy_read,omitempty"`
 	HrisTaxonomyWrite                  *string `json:"hris_taxonomy_write,omitempty"`
+	HrisTaxwithholdingRead             *string `json:"hris_taxwithholding_read,omitempty"`
+	HrisTaxwithholdingWrite            *string `json:"hris_taxwithholding_write,omitempty"`
 	HrisTimeoffRead                    *string `json:"hris_timeoff_read,omitempty"`
 	HrisTimeoffWrite                   *string `json:"hris_timeoff_write,omitempty"`
 	HrisTimeshiftRead                  *string `json:"hris_timeshift_read,omitempty"`
@@ -2488,6 +2490,20 @@ func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetHrisTaxonomyWrite(
 		return nil
 	}
 	return p.HrisTaxonomyWrite
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetHrisTaxwithholdingRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.HrisTaxwithholdingRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetHrisTaxwithholdingWrite() *string {
+	if p == nil {
+		return nil
+	}
+	return p.HrisTaxwithholdingWrite
 }
 
 func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetHrisTimeoffRead() *string {

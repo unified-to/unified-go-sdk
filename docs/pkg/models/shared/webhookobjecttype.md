@@ -103,6 +103,7 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeHrisPayroll`                   | hris_payroll                                     |
 | `WebhookObjectTypeHrisPaycode`                   | hris_paycode                                     |
 | `WebhookObjectTypeHrisEarning`                   | hris_earning                                     |
+| `WebhookObjectTypeHrisTaxwithholding`            | hris_taxwithholding                              |
 | `WebhookObjectTypeMartechList`                   | martech_list                                     |
 | `WebhookObjectTypeMartechMember`                 | martech_member                                   |
 | `WebhookObjectTypeMartechCampaign`               | martech_campaign                                 |

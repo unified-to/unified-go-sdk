@@ -66,7 +66,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("4561498c-f6ac-4da7-b837-d5ba086e0d3a"),
+			ID:                  unifiedgosdk.Pointer("2e95e504-8590-472e-a592-d3074fbde9a1"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -79,7 +79,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-13T12:17:22.262Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T18:07:57.178Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -1506,6 +1506,7 @@ func main() {
 * [CreateHrisJob](docs/sdks/hris/README.md#createhrisjob) - Create a job
 * [CreateHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
 * [CreateHrisTaxonomy](docs/sdks/hris/README.md#createhristaxonomy) - Create a taxonomy
+* [CreateHrisTaxwithholding](docs/sdks/hris/README.md#createhristaxwithholding) - Create a taxwithholding
 * [CreateHrisTimeoff](docs/sdks/hris/README.md#createhristimeoff) - Create a timeoff
 * [CreateHrisTimeshift](docs/sdks/hris/README.md#createhristimeshift) - Create a timeshift
 * [GetHrisAttendance](docs/sdks/hris/README.md#gethrisattendance) - Retrieve an attendance
@@ -1524,6 +1525,7 @@ func main() {
 * [GetHrisPayroll](docs/sdks/hris/README.md#gethrispayroll) - Retrieve a payroll
 * [GetHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
 * [GetHrisTaxonomy](docs/sdks/hris/README.md#gethristaxonomy) - Retrieve a taxonomy
+* [GetHrisTaxwithholding](docs/sdks/hris/README.md#gethristaxwithholding) - Retrieve a taxwithholding
 * [GetHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
 * [GetHrisTimeshift](docs/sdks/hris/README.md#gethristimeshift) - Retrieve a timeshift
 * [ListHrisAttendances](docs/sdks/hris/README.md#listhrisattendances) - List all attendances
@@ -1542,6 +1544,7 @@ func main() {
 * [ListHrisPayrolls](docs/sdks/hris/README.md#listhrispayrolls) - List all payrolls
 * [ListHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslips
 * [ListHrisTaxonomies](docs/sdks/hris/README.md#listhristaxonomies) - List all taxonomies
+* [ListHrisTaxwithholdings](docs/sdks/hris/README.md#listhristaxwithholdings) - List all taxwithholdings
 * [ListHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
 * [ListHrisTimeshifts](docs/sdks/hris/README.md#listhristimeshifts) - List all timeshifts
 * [PatchHrisAttendance](docs/sdks/hris/README.md#patchhrisattendance) - Update an attendance
@@ -1557,6 +1560,7 @@ func main() {
 * [PatchHrisJob](docs/sdks/hris/README.md#patchhrisjob) - Update a job
 * [PatchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
 * [PatchHrisTaxonomy](docs/sdks/hris/README.md#patchhristaxonomy) - Update a taxonomy
+* [PatchHrisTaxwithholding](docs/sdks/hris/README.md#patchhristaxwithholding) - Update a taxwithholding
 * [PatchHrisTimeoff](docs/sdks/hris/README.md#patchhristimeoff) - Update a timeoff
 * [PatchHrisTimeshift](docs/sdks/hris/README.md#patchhristimeshift) - Update a timeshift
 * [RemoveHrisAttendance](docs/sdks/hris/README.md#removehrisattendance) - Remove an attendance
@@ -1572,6 +1576,7 @@ func main() {
 * [RemoveHrisJob](docs/sdks/hris/README.md#removehrisjob) - Remove a job
 * [RemoveHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
 * [RemoveHrisTaxonomy](docs/sdks/hris/README.md#removehristaxonomy) - Remove a taxonomy
+* [RemoveHrisTaxwithholding](docs/sdks/hris/README.md#removehristaxwithholding) - Remove a taxwithholding
 * [RemoveHrisTimeoff](docs/sdks/hris/README.md#removehristimeoff) - Remove a timeoff
 * [RemoveHrisTimeshift](docs/sdks/hris/README.md#removehristimeshift) - Remove a timeshift
 * [UpdateHrisAttendance](docs/sdks/hris/README.md#updatehrisattendance) - Update an attendance
@@ -1587,6 +1592,7 @@ func main() {
 * [UpdateHrisJob](docs/sdks/hris/README.md#updatehrisjob) - Update a job
 * [UpdateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
 * [UpdateHrisTaxonomy](docs/sdks/hris/README.md#updatehristaxonomy) - Update a taxonomy
+* [UpdateHrisTaxwithholding](docs/sdks/hris/README.md#updatehristaxwithholding) - Update a taxwithholding
 * [UpdateHrisTimeoff](docs/sdks/hris/README.md#updatehristimeoff) - Update a timeoff
 * [UpdateHrisTimeshift](docs/sdks/hris/README.md#updatehristimeshift) - Update a timeshift
 
@@ -2816,6 +2822,15 @@ func main() {
 * [RemoveAccountingTaxrate](docs/sdks/taxrate/README.md#removeaccountingtaxrate) - Remove a taxrate
 * [UpdateAccountingTaxrate](docs/sdks/taxrate/README.md#updateaccountingtaxrate) - Update a taxrate
 
+### [Taxwithholding](docs/sdks/taxwithholding/README.md)
+
+* [CreateHrisTaxwithholding](docs/sdks/taxwithholding/README.md#createhristaxwithholding) - Create a taxwithholding
+* [GetHrisTaxwithholding](docs/sdks/taxwithholding/README.md#gethristaxwithholding) - Retrieve a taxwithholding
+* [ListHrisTaxwithholdings](docs/sdks/taxwithholding/README.md#listhristaxwithholdings) - List all taxwithholdings
+* [PatchHrisTaxwithholding](docs/sdks/taxwithholding/README.md#patchhristaxwithholding) - Update a taxwithholding
+* [RemoveHrisTaxwithholding](docs/sdks/taxwithholding/README.md#removehristaxwithholding) - Remove a taxwithholding
+* [UpdateHrisTaxwithholding](docs/sdks/taxwithholding/README.md#updatehristaxwithholding) - Update a taxwithholding
+
 ### [Template](docs/sdks/template/README.md)
 
 * [CreateComputeTemplate](docs/sdks/template/README.md#createcomputetemplate) - Create a template
@@ -3129,7 +3144,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("4561498c-f6ac-4da7-b837-d5ba086e0d3a"),
+			ID:                  unifiedgosdk.Pointer("2e95e504-8590-472e-a592-d3074fbde9a1"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3142,7 +3157,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-13T12:17:22.262Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T18:07:57.178Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3203,7 +3218,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("4561498c-f6ac-4da7-b837-d5ba086e0d3a"),
+			ID:                  unifiedgosdk.Pointer("2e95e504-8590-472e-a592-d3074fbde9a1"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3216,7 +3231,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-13T12:17:22.262Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T18:07:57.178Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3260,7 +3275,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("4561498c-f6ac-4da7-b837-d5ba086e0d3a"),
+			ID:                  unifiedgosdk.Pointer("2e95e504-8590-472e-a592-d3074fbde9a1"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3273,7 +3288,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-13T12:17:22.262Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T18:07:57.178Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3360,7 +3375,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("4561498c-f6ac-4da7-b837-d5ba086e0d3a"),
+			ID:                  unifiedgosdk.Pointer("2e95e504-8590-472e-a592-d3074fbde9a1"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3373,7 +3388,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-13T12:17:22.262Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T18:07:57.178Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3422,7 +3437,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("4561498c-f6ac-4da7-b837-d5ba086e0d3a"),
+			ID:                  unifiedgosdk.Pointer("2e95e504-8590-472e-a592-d3074fbde9a1"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3435,7 +3450,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-13T12:17:22.262Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T18:07:57.178Z"),
 		},
 		ConnectionID: "<id>",
 	}, operations.WithRetries(
@@ -3498,7 +3513,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("4561498c-f6ac-4da7-b837-d5ba086e0d3a"),
+			ID:                  unifiedgosdk.Pointer("2e95e504-8590-472e-a592-d3074fbde9a1"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -3511,7 +3526,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-13T12:17:22.262Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-13T18:07:57.178Z"),
 		},
 		ConnectionID: "<id>",
 	})

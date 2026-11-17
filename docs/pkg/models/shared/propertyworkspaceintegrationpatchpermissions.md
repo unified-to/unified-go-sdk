@@ -191,6 +191,8 @@ custom := shared.PropertyWorkspaceIntegrationPatchPermissions("custom_value")
 | `PropertyWorkspaceIntegrationPatchPermissionsHrisPaycodeWrite`                   | hris_paycode_write                                                               |
 | `PropertyWorkspaceIntegrationPatchPermissionsHrisEarningRead`                    | hris_earning_read                                                                |
 | `PropertyWorkspaceIntegrationPatchPermissionsHrisEarningWrite`                   | hris_earning_write                                                               |
+| `PropertyWorkspaceIntegrationPatchPermissionsHrisTaxwithholdingRead`             | hris_taxwithholding_read                                                         |
+| `PropertyWorkspaceIntegrationPatchPermissionsHrisTaxwithholdingWrite`            | hris_taxwithholding_write                                                        |
 | `PropertyWorkspaceIntegrationPatchPermissionsUcCallRead`                         | uc_call_read                                                                     |
 | `PropertyWorkspaceIntegrationPatchPermissionsUcCallWrite`                        | uc_call_write                                                                    |
 | `PropertyWorkspaceIntegrationPatchPermissionsUcContactRead`                      | uc_contact_read                                                                  |

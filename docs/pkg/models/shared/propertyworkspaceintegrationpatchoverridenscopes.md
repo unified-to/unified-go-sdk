@@ -295,6 +295,8 @@
 | `HrisPayslipWrite`                   | `*string`                            | :heavy_minus_sign:                   | N/A                                  |
 | `HrisTaxonomyRead`                   | `*string`                            | :heavy_minus_sign:                   | N/A                                  |
 | `HrisTaxonomyWrite`                  | `*string`                            | :heavy_minus_sign:                   | N/A                                  |
+| `HrisTaxwithholdingRead`             | `*string`                            | :heavy_minus_sign:                   | N/A                                  |
+| `HrisTaxwithholdingWrite`            | `*string`                            | :heavy_minus_sign:                   | N/A                                  |
 | `HrisTimeoffRead`                    | `*string`                            | :heavy_minus_sign:                   | N/A                                  |
 | `HrisTimeoffWrite`                   | `*string`                            | :heavy_minus_sign:                   | N/A                                  |
 | `HrisTimeshiftRead`                  | `*string`                            | :heavy_minus_sign:                   | N/A                                  |

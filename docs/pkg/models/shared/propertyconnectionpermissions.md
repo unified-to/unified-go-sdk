@@ -191,6 +191,8 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsHrisPaycodeWrite`                   | hris_paycode_write                                                |
 | `PropertyConnectionPermissionsHrisEarningRead`                    | hris_earning_read                                                 |
 | `PropertyConnectionPermissionsHrisEarningWrite`                   | hris_earning_write                                                |
+| `PropertyConnectionPermissionsHrisTaxwithholdingRead`             | hris_taxwithholding_read                                          |
+| `PropertyConnectionPermissionsHrisTaxwithholdingWrite`            | hris_taxwithholding_write                                         |
 | `PropertyConnectionPermissionsUcCallRead`                         | uc_call_read                                                      |
 | `PropertyConnectionPermissionsUcCallWrite`                        | uc_call_write                                                     |
 | `PropertyConnectionPermissionsUcContactRead`                      | uc_contact_read                                                   |
