@@ -43,10 +43,10 @@ func main() {
             Fields: map[string]shared.DatastoreFieldValue{
 
             },
-            ID: unifiedgosdk.Pointer("4fa68d9a-c18d-4866-8cf0-775ba0b27961"),
+            ID: unifiedgosdk.Pointer("6865151b-95c3-40b0-8d21-22ab0bd78561"),
             Metadata: []shared.DatastoreMetadata{},
             RowNumber: unifiedgosdk.Pointer[float64](33.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-21T20:01:08.307Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-22T08:31:15.237Z"),
         },
         ConnectionID: "<id>",
     })
@@ -218,10 +218,10 @@ func main() {
             Fields: map[string]shared.DatastoreFieldValue{
 
             },
-            ID: unifiedgosdk.Pointer("12a8b1df-d270-4f82-9704-2426c83134b0"),
+            ID: unifiedgosdk.Pointer("21109ab5-88da-4549-8d5f-934b579dd5ab"),
             Metadata: []shared.DatastoreMetadata{},
             RowNumber: unifiedgosdk.Pointer[float64](33.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-21T20:01:08.315Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-22T08:31:15.244Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -340,10 +340,10 @@ func main() {
             Fields: map[string]shared.DatastoreFieldValue{
 
             },
-            ID: unifiedgosdk.Pointer("12a8b1df-d270-4f82-9704-2426c83134b0"),
+            ID: unifiedgosdk.Pointer("21109ab5-88da-4549-8d5f-934b579dd5ab"),
             Metadata: []shared.DatastoreMetadata{},
             RowNumber: unifiedgosdk.Pointer[float64](33.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-03-21T20:01:08.315Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-22T08:31:15.244Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
