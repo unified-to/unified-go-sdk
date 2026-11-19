@@ -38,13 +38,13 @@ func main() {
         PropertyConversation: shared.PropertyConversation{
             CreatedAt: types.MustNewTimeFromString("2022-06-20T00:02:46.530Z"),
             GuestName: unifiedgosdk.Pointer("Evie Okuneva"),
-            ID: unifiedgosdk.Pointer("ab3028bc-922d-44df-af81-d35a08262c15"),
+            ID: unifiedgosdk.Pointer("f292016e-46ea-46c0-9add-8925284433f7"),
             IsUnread: unifiedgosdk.Pointer(false),
             Messages: []shared.PropertyMessage{
                 shared.PropertyMessage{
                     Attachments: []shared.PropertyAttachment{},
-                    CreatedAt: types.MustNewTimeFromString("2025-05-04T15:14:47.187Z"),
-                    ID: unifiedgosdk.Pointer("b7266cff-07e2-4772-96d0-3f003bd81e3b"),
+                    CreatedAt: types.MustNewTimeFromString("2025-05-05T08:23:48.712Z"),
+                    ID: unifiedgosdk.Pointer("97bb23e4-b2e9-4c4e-bf67-03c123196165"),
                     IsAutomatic: unifiedgosdk.Pointer(false),
                     Message: unifiedgosdk.Pointer("Vinitor caterva amor sophismata admitto colo tempore aufero torrens."),
                     SenderName: unifiedgosdk.Pointer("Evie Okuneva"),
@@ -52,8 +52,8 @@ func main() {
                 },
                 shared.PropertyMessage{
                     Attachments: []shared.PropertyAttachment{},
-                    CreatedAt: types.MustNewTimeFromString("2026-05-22T08:41:47.242Z"),
-                    ID: unifiedgosdk.Pointer("c04ecad4-3665-4353-8a7d-07577e1cde0d"),
+                    CreatedAt: types.MustNewTimeFromString("2026-05-23T08:06:01.537Z"),
+                    ID: unifiedgosdk.Pointer("2bfa44f3-0790-42e0-8a65-260435af235e"),
                     Message: unifiedgosdk.Pointer("Aequitas torqueo curiositas cimentarius repellendus auditor degero ademptio adnuo."),
                     SenderName: unifiedgosdk.Pointer("Ms. Patti Lynch"),
                     SenderType: shared.SenderTypeHost.ToPointer(),
@@ -61,7 +61,7 @@ func main() {
             },
             Metadata: []shared.PropertyMetadata{},
             Source: unifiedgosdk.Pointer("Airbnb"),
-            UpdatedAt: types.MustNewTimeFromString("2026-05-22T08:41:47.242Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-23T08:06:01.537Z"),
         },
         ConnectionID: "<id>",
     })
