@@ -40,5 +40,6 @@ value := operations.GetHrisPayslipQueryParamFieldsID
 | `GetHrisPayslipQueryParamFieldsEmployerContributionAmount` | employer_contribution_amount                               |
 | `GetHrisPayslipQueryParamFieldsGrossYtdAmount`             | gross_ytd_amount                                           |
 | `GetHrisPayslipQueryParamFieldsNetYtdAmount`               | net_ytd_amount                                             |
+| `GetHrisPayslipQueryParamFieldsYtdHours`                   | ytd_hours                                                  |
 | `GetHrisPayslipQueryParamFieldsMetadata`                   | metadata                                                   |
 | `GetHrisPayslipQueryParamFieldsRaw`                        | raw                                                        |

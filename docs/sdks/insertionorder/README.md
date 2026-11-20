@@ -40,11 +40,11 @@ func main() {
     res, err := s.Insertionorder.CreateAdsInsertionorder(ctx, operations.CreateAdsInsertionorderRequest{
         AdsInsertionorder: shared.AdsInsertionorder{
             CreatedAt: types.MustNewTimeFromString("2021-04-10T06:57:36.611Z"),
-            ID: unifiedgosdk.Pointer("87e3ca9c-81ed-464d-b83b-5ce6995365b3"),
+            ID: unifiedgosdk.Pointer("bc923904-8133-473e-83ef-a3b2ac719b3b"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Kunde, Smith and Reinger"),
             Status: shared.AdsInsertionorderStatusUnspecified.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-29T02:09:19.025Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-29T02:23:49.578Z"),
         },
         ConnectionID: "<id>",
     })
@@ -213,11 +213,11 @@ func main() {
     res, err := s.Insertionorder.PatchAdsInsertionorder(ctx, operations.PatchAdsInsertionorderRequest{
         AdsInsertionorder: shared.AdsInsertionorder{
             CreatedAt: types.MustNewTimeFromString("2021-04-10T06:57:36.611Z"),
-            ID: unifiedgosdk.Pointer("ad7e3915-9e11-4133-ba0f-5bc97b01269b"),
+            ID: unifiedgosdk.Pointer("1ae8b4a4-4110-404a-bdf3-c693f0969d23"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Kunde, Smith and Reinger"),
             Status: shared.AdsInsertionorderStatusUnspecified.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-29T02:09:19.026Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-29T02:23:49.579Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -333,11 +333,11 @@ func main() {
     res, err := s.Insertionorder.UpdateAdsInsertionorder(ctx, operations.UpdateAdsInsertionorderRequest{
         AdsInsertionorder: shared.AdsInsertionorder{
             CreatedAt: types.MustNewTimeFromString("2021-04-10T06:57:36.611Z"),
-            ID: unifiedgosdk.Pointer("ad7e3915-9e11-4133-ba0f-5bc97b01269b"),
+            ID: unifiedgosdk.Pointer("1ae8b4a4-4110-404a-bdf3-c693f0969d23"),
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Kunde, Smith and Reinger"),
             Status: shared.AdsInsertionorderStatusUnspecified.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-29T02:09:19.026Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-29T02:23:49.579Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

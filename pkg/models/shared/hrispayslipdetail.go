@@ -5,46 +5,55 @@ package shared
 type HrisPayslipDetailType string
 
 const (
-	HrisPayslipDetailTypeEarningSalary                  HrisPayslipDetailType = "EARNING_SALARY"
-	HrisPayslipDetailTypeEarningOvertime                HrisPayslipDetailType = "EARNING_OVERTIME"
-	HrisPayslipDetailTypeEarningTip                     HrisPayslipDetailType = "EARNING_TIP"
-	HrisPayslipDetailTypeEarningBonus                   HrisPayslipDetailType = "EARNING_BONUS"
-	HrisPayslipDetailTypeEarningCommission              HrisPayslipDetailType = "EARNING_COMMISSION"
-	HrisPayslipDetailTypeEarningAdjustment              HrisPayslipDetailType = "EARNING_ADJUSTMENT"
-	HrisPayslipDetailTypeEarning                        HrisPayslipDetailType = "EARNING"
-	HrisPayslipDetailTypePretaxDeduction                HrisPayslipDetailType = "PRETAX_DEDUCTION"
-	HrisPayslipDetailTypePretaxDeductionHealthInsurance HrisPayslipDetailType = "PRETAX_DEDUCTION_HEALTH_INSURANCE"
-	HrisPayslipDetailTypePretaxDeductionRetirement      HrisPayslipDetailType = "PRETAX_DEDUCTION_RETIREMENT"
-	HrisPayslipDetailTypePretaxDeductionHra             HrisPayslipDetailType = "PRETAX_DEDUCTION_HRA"
-	HrisPayslipDetailTypeTaxFederal                     HrisPayslipDetailType = "TAX_FEDERAL"
-	HrisPayslipDetailTypeTaxRegion                      HrisPayslipDetailType = "TAX_REGION"
-	HrisPayslipDetailTypeTaxLocal                       HrisPayslipDetailType = "TAX_LOCAL"
-	HrisPayslipDetailTypePosttaxBenefit                 HrisPayslipDetailType = "POSTTAX_BENEFIT"
-	HrisPayslipDetailTypePosttaxGarnishment             HrisPayslipDetailType = "POSTTAX_GARNISHMENT"
-	HrisPayslipDetailTypeReimbursement                  HrisPayslipDetailType = "REIMBURSEMENT"
-	HrisPayslipDetailTypeEarningRegular                 HrisPayslipDetailType = "EARNING_REGULAR"
-	HrisPayslipDetailTypeEarningDoubleOvertime          HrisPayslipDetailType = "EARNING_DOUBLE_OVERTIME"
-	HrisPayslipDetailTypeEarningPto                     HrisPayslipDetailType = "EARNING_PTO"
-	HrisPayslipDetailTypeEarningSick                    HrisPayslipDetailType = "EARNING_SICK"
-	HrisPayslipDetailTypeEarningHoliday                 HrisPayslipDetailType = "EARNING_HOLIDAY"
-	HrisPayslipDetailTypeEarningSeverance               HrisPayslipDetailType = "EARNING_SEVERANCE"
-	HrisPayslipDetailTypeEarningReimbursement           HrisPayslipDetailType = "EARNING_REIMBURSEMENT"
-	HrisPayslipDetailTypeTaxSocialSecurity              HrisPayslipDetailType = "TAX_SOCIAL_SECURITY"
-	HrisPayslipDetailTypeTaxMedicare                    HrisPayslipDetailType = "TAX_MEDICARE"
-	HrisPayslipDetailTypeTaxUnemployment                HrisPayslipDetailType = "TAX_UNEMPLOYMENT"
-	HrisPayslipDetailTypeTaxEmployer                    HrisPayslipDetailType = "TAX_EMPLOYER"
-	HrisPayslipDetailTypePretaxDeductionHsa             HrisPayslipDetailType = "PRETAX_DEDUCTION_HSA"
-	HrisPayslipDetailTypePretaxDeductionFsa             HrisPayslipDetailType = "PRETAX_DEDUCTION_FSA"
-	HrisPayslipDetailTypePretaxDeductionDependentCare   HrisPayslipDetailType = "PRETAX_DEDUCTION_DEPENDENT_CARE"
-	HrisPayslipDetailTypePretaxDeductionCommuter        HrisPayslipDetailType = "PRETAX_DEDUCTION_COMMUTER"
-	HrisPayslipDetailTypePretaxDeductionDental          HrisPayslipDetailType = "PRETAX_DEDUCTION_DENTAL"
-	HrisPayslipDetailTypePretaxDeductionVision          HrisPayslipDetailType = "PRETAX_DEDUCTION_VISION"
-	HrisPayslipDetailTypePosttaxDeduction               HrisPayslipDetailType = "POSTTAX_DEDUCTION"
-	HrisPayslipDetailTypePosttaxRetirementRoth          HrisPayslipDetailType = "POSTTAX_RETIREMENT_ROTH"
-	HrisPayslipDetailTypePosttaxLoanRepayment           HrisPayslipDetailType = "POSTTAX_LOAN_REPAYMENT"
-	HrisPayslipDetailTypeEmployerContribution           HrisPayslipDetailType = "EMPLOYER_CONTRIBUTION"
-	HrisPayslipDetailTypePension                        HrisPayslipDetailType = "PENSION"
-	HrisPayslipDetailTypeEarningCashInLieu              HrisPayslipDetailType = "EARNING_CASH_IN_LIEU"
+	HrisPayslipDetailTypeEarningSalary                    HrisPayslipDetailType = "EARNING_SALARY"
+	HrisPayslipDetailTypeEarningOvertime                  HrisPayslipDetailType = "EARNING_OVERTIME"
+	HrisPayslipDetailTypeEarningTip                       HrisPayslipDetailType = "EARNING_TIP"
+	HrisPayslipDetailTypeEarningBonus                     HrisPayslipDetailType = "EARNING_BONUS"
+	HrisPayslipDetailTypeEarningCommission                HrisPayslipDetailType = "EARNING_COMMISSION"
+	HrisPayslipDetailTypeEarningAdjustment                HrisPayslipDetailType = "EARNING_ADJUSTMENT"
+	HrisPayslipDetailTypeEarning                          HrisPayslipDetailType = "EARNING"
+	HrisPayslipDetailTypePretaxDeduction                  HrisPayslipDetailType = "PRETAX_DEDUCTION"
+	HrisPayslipDetailTypePretaxDeductionHealthInsurance   HrisPayslipDetailType = "PRETAX_DEDUCTION_HEALTH_INSURANCE"
+	HrisPayslipDetailTypePretaxDeductionRetirement        HrisPayslipDetailType = "PRETAX_DEDUCTION_RETIREMENT"
+	HrisPayslipDetailTypePretaxDeductionHra               HrisPayslipDetailType = "PRETAX_DEDUCTION_HRA"
+	HrisPayslipDetailTypeTaxFederal                       HrisPayslipDetailType = "TAX_FEDERAL"
+	HrisPayslipDetailTypeTaxRegion                        HrisPayslipDetailType = "TAX_REGION"
+	HrisPayslipDetailTypeTaxLocal                         HrisPayslipDetailType = "TAX_LOCAL"
+	HrisPayslipDetailTypePosttaxBenefit                   HrisPayslipDetailType = "POSTTAX_BENEFIT"
+	HrisPayslipDetailTypePosttaxGarnishment               HrisPayslipDetailType = "POSTTAX_GARNISHMENT"
+	HrisPayslipDetailTypeReimbursement                    HrisPayslipDetailType = "REIMBURSEMENT"
+	HrisPayslipDetailTypeEarningRegular                   HrisPayslipDetailType = "EARNING_REGULAR"
+	HrisPayslipDetailTypeEarningDoubleOvertime            HrisPayslipDetailType = "EARNING_DOUBLE_OVERTIME"
+	HrisPayslipDetailTypeEarningPto                       HrisPayslipDetailType = "EARNING_PTO"
+	HrisPayslipDetailTypeEarningSick                      HrisPayslipDetailType = "EARNING_SICK"
+	HrisPayslipDetailTypeEarningHoliday                   HrisPayslipDetailType = "EARNING_HOLIDAY"
+	HrisPayslipDetailTypeEarningSeverance                 HrisPayslipDetailType = "EARNING_SEVERANCE"
+	HrisPayslipDetailTypeEarningReimbursement             HrisPayslipDetailType = "EARNING_REIMBURSEMENT"
+	HrisPayslipDetailTypeTaxSocialSecurity                HrisPayslipDetailType = "TAX_SOCIAL_SECURITY"
+	HrisPayslipDetailTypeTaxMedicare                      HrisPayslipDetailType = "TAX_MEDICARE"
+	HrisPayslipDetailTypeTaxUnemployment                  HrisPayslipDetailType = "TAX_UNEMPLOYMENT"
+	HrisPayslipDetailTypeTaxEmployer                      HrisPayslipDetailType = "TAX_EMPLOYER"
+	HrisPayslipDetailTypePretaxDeductionHsa               HrisPayslipDetailType = "PRETAX_DEDUCTION_HSA"
+	HrisPayslipDetailTypePretaxDeductionFsa               HrisPayslipDetailType = "PRETAX_DEDUCTION_FSA"
+	HrisPayslipDetailTypePretaxDeductionDependentCare     HrisPayslipDetailType = "PRETAX_DEDUCTION_DEPENDENT_CARE"
+	HrisPayslipDetailTypePretaxDeductionCommuter          HrisPayslipDetailType = "PRETAX_DEDUCTION_COMMUTER"
+	HrisPayslipDetailTypePretaxDeductionDental            HrisPayslipDetailType = "PRETAX_DEDUCTION_DENTAL"
+	HrisPayslipDetailTypePretaxDeductionVision            HrisPayslipDetailType = "PRETAX_DEDUCTION_VISION"
+	HrisPayslipDetailTypePosttaxDeduction                 HrisPayslipDetailType = "POSTTAX_DEDUCTION"
+	HrisPayslipDetailTypePosttaxRetirementRoth            HrisPayslipDetailType = "POSTTAX_RETIREMENT_ROTH"
+	HrisPayslipDetailTypePosttaxLoanRepayment             HrisPayslipDetailType = "POSTTAX_LOAN_REPAYMENT"
+	HrisPayslipDetailTypeEmployerContribution             HrisPayslipDetailType = "EMPLOYER_CONTRIBUTION"
+	HrisPayslipDetailTypePension                          HrisPayslipDetailType = "PENSION"
+	HrisPayslipDetailTypeEarningCashInLieu                HrisPayslipDetailType = "EARNING_CASH_IN_LIEU"
+	HrisPayslipDetailTypePretaxDeductionRetirementCatchup HrisPayslipDetailType = "PRETAX_DEDUCTION_RETIREMENT_CATCHUP"
+	HrisPayslipDetailTypePosttaxRetirementRothCatchup     HrisPayslipDetailType = "POSTTAX_RETIREMENT_ROTH_CATCHUP"
+	HrisPayslipDetailTypePosttaxRetirementAfterTax        HrisPayslipDetailType = "POSTTAX_RETIREMENT_AFTER_TAX"
+	HrisPayslipDetailTypeEmployerContributionRetirement   HrisPayslipDetailType = "EMPLOYER_CONTRIBUTION_RETIREMENT"
+	HrisPayslipDetailTypeEmployerContributionHsa          HrisPayslipDetailType = "EMPLOYER_CONTRIBUTION_HSA"
+	HrisPayslipDetailTypeEmployerContributionFsa          HrisPayslipDetailType = "EMPLOYER_CONTRIBUTION_FSA"
+	HrisPayslipDetailTypePosttaxDeductionCollegeSavings   HrisPayslipDetailType = "POSTTAX_DEDUCTION_COLLEGE_SAVINGS"
+	HrisPayslipDetailTypePosttaxDeductionUnionDues        HrisPayslipDetailType = "POSTTAX_DEDUCTION_UNION_DUES"
+	HrisPayslipDetailTypePosttaxDeductionEwaRepayment     HrisPayslipDetailType = "POSTTAX_DEDUCTION_EWA_REPAYMENT"
 )
 
 func (e HrisPayslipDetailType) ToPointer() *HrisPayslipDetailType {
@@ -55,7 +64,7 @@ func (e HrisPayslipDetailType) ToPointer() *HrisPayslipDetailType {
 func (e *HrisPayslipDetailType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "EARNING_SALARY", "EARNING_OVERTIME", "EARNING_TIP", "EARNING_BONUS", "EARNING_COMMISSION", "EARNING_ADJUSTMENT", "EARNING", "PRETAX_DEDUCTION", "PRETAX_DEDUCTION_HEALTH_INSURANCE", "PRETAX_DEDUCTION_RETIREMENT", "PRETAX_DEDUCTION_HRA", "TAX_FEDERAL", "TAX_REGION", "TAX_LOCAL", "POSTTAX_BENEFIT", "POSTTAX_GARNISHMENT", "REIMBURSEMENT", "EARNING_REGULAR", "EARNING_DOUBLE_OVERTIME", "EARNING_PTO", "EARNING_SICK", "EARNING_HOLIDAY", "EARNING_SEVERANCE", "EARNING_REIMBURSEMENT", "TAX_SOCIAL_SECURITY", "TAX_MEDICARE", "TAX_UNEMPLOYMENT", "TAX_EMPLOYER", "PRETAX_DEDUCTION_HSA", "PRETAX_DEDUCTION_FSA", "PRETAX_DEDUCTION_DEPENDENT_CARE", "PRETAX_DEDUCTION_COMMUTER", "PRETAX_DEDUCTION_DENTAL", "PRETAX_DEDUCTION_VISION", "POSTTAX_DEDUCTION", "POSTTAX_RETIREMENT_ROTH", "POSTTAX_LOAN_REPAYMENT", "EMPLOYER_CONTRIBUTION", "PENSION", "EARNING_CASH_IN_LIEU":
+		case "EARNING_SALARY", "EARNING_OVERTIME", "EARNING_TIP", "EARNING_BONUS", "EARNING_COMMISSION", "EARNING_ADJUSTMENT", "EARNING", "PRETAX_DEDUCTION", "PRETAX_DEDUCTION_HEALTH_INSURANCE", "PRETAX_DEDUCTION_RETIREMENT", "PRETAX_DEDUCTION_HRA", "TAX_FEDERAL", "TAX_REGION", "TAX_LOCAL", "POSTTAX_BENEFIT", "POSTTAX_GARNISHMENT", "REIMBURSEMENT", "EARNING_REGULAR", "EARNING_DOUBLE_OVERTIME", "EARNING_PTO", "EARNING_SICK", "EARNING_HOLIDAY", "EARNING_SEVERANCE", "EARNING_REIMBURSEMENT", "TAX_SOCIAL_SECURITY", "TAX_MEDICARE", "TAX_UNEMPLOYMENT", "TAX_EMPLOYER", "PRETAX_DEDUCTION_HSA", "PRETAX_DEDUCTION_FSA", "PRETAX_DEDUCTION_DEPENDENT_CARE", "PRETAX_DEDUCTION_COMMUTER", "PRETAX_DEDUCTION_DENTAL", "PRETAX_DEDUCTION_VISION", "POSTTAX_DEDUCTION", "POSTTAX_RETIREMENT_ROTH", "POSTTAX_LOAN_REPAYMENT", "EMPLOYER_CONTRIBUTION", "PENSION", "EARNING_CASH_IN_LIEU", "PRETAX_DEDUCTION_RETIREMENT_CATCHUP", "POSTTAX_RETIREMENT_ROTH_CATCHUP", "POSTTAX_RETIREMENT_AFTER_TAX", "EMPLOYER_CONTRIBUTION_RETIREMENT", "EMPLOYER_CONTRIBUTION_HSA", "EMPLOYER_CONTRIBUTION_FSA", "POSTTAX_DEDUCTION_COLLEGE_SAVINGS", "POSTTAX_DEDUCTION_UNION_DUES", "POSTTAX_DEDUCTION_EWA_REPAYMENT":
 			return true
 		}
 	}
@@ -71,9 +80,13 @@ type HrisPayslipDetail struct {
 	EmployeeAmount *float64 `json:"employee_amount,omitempty"`
 	Hours          *float64 `json:"hours,omitempty"`
 	// true when this line is paid by the employer (employer tax or contribution)
-	IsEmployer *bool   `json:"is_employer,omitempty"`
-	IsPreTax   *bool   `json:"is_pre_tax,omitempty"`
-	Name       *string `json:"name,omitempty"`
+	IsEmployer *bool `json:"is_employer,omitempty"`
+	IsPreTax   *bool `json:"is_pre_tax,omitempty"`
+	// true when this line counts as retirement-plan compensation
+	IsRetirementEligible *bool `json:"is_retirement_eligible,omitempty"`
+	// the payroll system's identifier for the retirement-plan loan this line repays
+	LoanIdentifier *string `json:"loan_identifier,omitempty"`
+	Name           *string `json:"name,omitempty"`
 	// integration pay-code label before normalization
 	OriginalType *string `json:"original_type,omitempty"`
 	// the hris_paycode for this line
@@ -83,6 +96,8 @@ type HrisPayslipDetail struct {
 	Type       *HrisPayslipDetailType `json:"type,omitempty"`
 	// year-to-date amount for this line
 	YtdAmount *float64 `json:"ytd_amount,omitempty"`
+	// year-to-date hours for this line
+	YtdHours *float64 `json:"ytd_hours,omitempty"`
 }
 
 func (h *HrisPayslipDetail) GetAmount() float64 {
@@ -148,6 +163,20 @@ func (h *HrisPayslipDetail) GetIsPreTax() *bool {
 	return h.IsPreTax
 }
 
+func (h *HrisPayslipDetail) GetIsRetirementEligible() *bool {
+	if h == nil {
+		return nil
+	}
+	return h.IsRetirementEligible
+}
+
+func (h *HrisPayslipDetail) GetLoanIdentifier() *string {
+	if h == nil {
+		return nil
+	}
+	return h.LoanIdentifier
+}
+
 func (h *HrisPayslipDetail) GetName() *string {
 	if h == nil {
 		return nil
@@ -188,4 +217,11 @@ func (h *HrisPayslipDetail) GetYtdAmount() *float64 {
 		return nil
 	}
 	return h.YtdAmount
+}
+
+func (h *HrisPayslipDetail) GetYtdHours() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.YtdHours
 }

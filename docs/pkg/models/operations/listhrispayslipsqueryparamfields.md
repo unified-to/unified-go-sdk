@@ -40,5 +40,6 @@ value := operations.ListHrisPayslipsQueryParamFieldsID
 | `ListHrisPayslipsQueryParamFieldsEmployerContributionAmount` | employer_contribution_amount                                 |
 | `ListHrisPayslipsQueryParamFieldsGrossYtdAmount`             | gross_ytd_amount                                             |
 | `ListHrisPayslipsQueryParamFieldsNetYtdAmount`               | net_ytd_amount                                               |
+| `ListHrisPayslipsQueryParamFieldsYtdHours`                   | ytd_hours                                                    |
 | `ListHrisPayslipsQueryParamFieldsMetadata`                   | metadata                                                     |
 | `ListHrisPayslipsQueryParamFieldsRaw`                        | raw                                                          |

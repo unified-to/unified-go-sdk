@@ -34,6 +34,34 @@ func (e *CoverageLevel) IsExact() bool {
 	return false
 }
 
+// EmployerContributionCategory - kind of employer retirement contribution (eg. MATCH, SAFE_HARBOR_MATCH, PROFIT_SHARING)
+type EmployerContributionCategory string
+
+const (
+	EmployerContributionCategoryMatch                 EmployerContributionCategory = "MATCH"
+	EmployerContributionCategorySafeHarborMatch       EmployerContributionCategory = "SAFE_HARBOR_MATCH"
+	EmployerContributionCategorySafeHarborNonelective EmployerContributionCategory = "SAFE_HARBOR_NONELECTIVE"
+	EmployerContributionCategoryQacaMatch             EmployerContributionCategory = "QACA_MATCH"
+	EmployerContributionCategoryNonelective           EmployerContributionCategory = "NONELECTIVE"
+	EmployerContributionCategoryProfitSharing         EmployerContributionCategory = "PROFIT_SHARING"
+	EmployerContributionCategoryOther                 EmployerContributionCategory = "OTHER"
+)
+
+func (e EmployerContributionCategory) ToPointer() *EmployerContributionCategory {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *EmployerContributionCategory) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "MATCH", "SAFE_HARBOR_MATCH", "SAFE_HARBOR_NONELECTIVE", "QACA_MATCH", "NONELECTIVE", "PROFIT_SHARING", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type EmployerContributionType string
 
 const (
@@ -80,6 +108,35 @@ func (e *HrisBenefitFrequency) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "ONE_TIME", "DAY", "QUARTER", "YEAR", "HOUR", "MONTH", "WEEK", "BIWEEKLY", "SEMIMONTHLY":
+			return true
+		}
+	}
+	return false
+}
+
+// RetirementPlanType - the retirement plan this benefit belongs to (for RETIREMENT* types)
+type RetirementPlanType string
+
+const (
+	RetirementPlanTypePlan401K  RetirementPlanType = "PLAN_401K"
+	RetirementPlanTypePlan403B  RetirementPlanType = "PLAN_403B"
+	RetirementPlanTypePlan457B  RetirementPlanType = "PLAN_457B"
+	RetirementPlanTypeSimpleIra RetirementPlanType = "SIMPLE_IRA"
+	RetirementPlanTypeSepIra    RetirementPlanType = "SEP_IRA"
+	RetirementPlanTypeNqdc      RetirementPlanType = "NQDC"
+	RetirementPlanTypePension   RetirementPlanType = "PENSION"
+	RetirementPlanTypeOther     RetirementPlanType = "OTHER"
+)
+
+func (e RetirementPlanType) ToPointer() *RetirementPlanType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *RetirementPlanType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "PLAN_401K", "PLAN_403B", "PLAN_457B", "SIMPLE_IRA", "SEP_IRA", "NQDC", "PENSION", "OTHER":
 			return true
 		}
 	}
@@ -135,6 +192,12 @@ const (
 	HrisBenefitTypeCommuter                HrisBenefitType = "COMMUTER"
 	HrisBenefitTypeDependentCare           HrisBenefitType = "DEPENDENT_CARE"
 	HrisBenefitTypePension                 HrisBenefitType = "PENSION"
+	HrisBenefitTypeRetirementCatchup       HrisBenefitType = "RETIREMENT_CATCHUP"
+	HrisBenefitTypeRetirementRothCatchup   HrisBenefitType = "RETIREMENT_ROTH_CATCHUP"
+	HrisBenefitTypeRetirementAfterTax      HrisBenefitType = "RETIREMENT_AFTER_TAX"
+	HrisBenefitTypeCollegeSavings          HrisBenefitType = "COLLEGE_SAVINGS"
+	HrisBenefitTypeEarnedWageAccess        HrisBenefitType = "EARNED_WAGE_ACCESS"
+	HrisBenefitTypeUnionDues               HrisBenefitType = "UNION_DUES"
 )
 
 func (e HrisBenefitType) ToPointer() *HrisBenefitType {
@@ -145,7 +208,7 @@ func (e HrisBenefitType) ToPointer() *HrisBenefitType {
 func (e *HrisBenefitType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "RETIREMENT", "HEALTH", "DENTAL", "VISION", "LIFE", "HSA", "FSA", "SHORT_TERM_DISABILITY", "LONG_TERM_DISABILITY", "WORKERS_COMP", "HOUSING_STIPEND", "EMPLOYER_TAX_CONTRIBUTION", "GARNISHMENT", "LOAN_REPAYMENT", "CHARITABLE_CONTRIBUTION", "OTHER", "RETIREMENT_ROTH", "COMMUTER", "DEPENDENT_CARE", "PENSION":
+		case "RETIREMENT", "HEALTH", "DENTAL", "VISION", "LIFE", "HSA", "FSA", "SHORT_TERM_DISABILITY", "LONG_TERM_DISABILITY", "WORKERS_COMP", "HOUSING_STIPEND", "EMPLOYER_TAX_CONTRIBUTION", "GARNISHMENT", "LOAN_REPAYMENT", "CHARITABLE_CONTRIBUTION", "OTHER", "RETIREMENT_ROTH", "COMMUTER", "DEPENDENT_CARE", "PENSION", "RETIREMENT_CATCHUP", "RETIREMENT_ROTH_CATCHUP", "RETIREMENT_AFTER_TAX", "COLLEGE_SAVINGS", "EARNED_WAGE_ACCESS", "UNION_DUES":
 			return true
 		}
 	}
@@ -154,6 +217,8 @@ func (e *HrisBenefitType) IsExact() bool {
 
 // HrisBenefit - Company-wide benefit plans available to employees.
 type HrisBenefit struct {
+	// the payroll system's code for this benefit plan
+	Code *string `json:"code,omitempty"`
 	// (reference to HrisCompany)
 	CompanyID     *string        `json:"company_id,omitempty"`
 	CoverageLevel *CoverageLevel `json:"coverage_level,omitempty"`
@@ -164,6 +229,8 @@ type HrisBenefit struct {
 	Description *string `json:"description,omitempty"`
 	// percentage or money
 	EmployerContributionAmount *float64 `json:"employer_contribution_amount,omitempty"`
+	// kind of employer retirement contribution (eg. MATCH, SAFE_HARBOR_MATCH, PROFIT_SHARING)
+	EmployerContributionCategory *EmployerContributionCategory `json:"employer_contribution_category,omitempty"`
 	// always money
 	EmployerContributionMaxAmount *float64                  `json:"employer_contribution_max_amount,omitempty"`
 	EmployerContributionType      *EmployerContributionType `json:"employer_contribution_type,omitempty"`
@@ -175,6 +242,8 @@ type HrisBenefit struct {
 	// e.g. "401(k) Plan"
 	Name *string        `json:"name,omitempty"`
 	Raw  map[string]any `json:"raw,omitempty"`
+	// the retirement plan this benefit belongs to (for RETIREMENT* types)
+	RetirementPlanType *RetirementPlanType `json:"retirement_plan_type,omitempty"`
 	// Tax describes the tax treatment of the benefit
 	Tax  *Tax             `json:"tax,omitempty"`
 	Type *HrisBenefitType `json:"type,omitempty"`
@@ -191,6 +260,13 @@ func (h *HrisBenefit) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (h *HrisBenefit) GetCode() *string {
+	if h == nil {
+		return nil
+	}
+	return h.Code
 }
 
 func (h *HrisBenefit) GetCompanyID() *string {
@@ -233,6 +309,13 @@ func (h *HrisBenefit) GetEmployerContributionAmount() *float64 {
 		return nil
 	}
 	return h.EmployerContributionAmount
+}
+
+func (h *HrisBenefit) GetEmployerContributionCategory() *EmployerContributionCategory {
+	if h == nil {
+		return nil
+	}
+	return h.EmployerContributionCategory
 }
 
 func (h *HrisBenefit) GetEmployerContributionMaxAmount() *float64 {
@@ -289,6 +372,13 @@ func (h *HrisBenefit) GetRaw() map[string]any {
 		return nil
 	}
 	return h.Raw
+}
+
+func (h *HrisBenefit) GetRetirementPlanType() *RetirementPlanType {
+	if h == nil {
+		return nil
+	}
+	return h.RetirementPlanType
 }
 
 func (h *HrisBenefit) GetTax() *Tax {

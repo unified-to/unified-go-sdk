@@ -11,46 +11,55 @@ import (
 type DetailType string
 
 const (
-	DetailTypeEarningSalary                  DetailType = "EARNING_SALARY"
-	DetailTypeEarningOvertime                DetailType = "EARNING_OVERTIME"
-	DetailTypeEarningTip                     DetailType = "EARNING_TIP"
-	DetailTypeEarningBonus                   DetailType = "EARNING_BONUS"
-	DetailTypeEarningCommission              DetailType = "EARNING_COMMISSION"
-	DetailTypeEarningAdjustment              DetailType = "EARNING_ADJUSTMENT"
-	DetailTypeEarning                        DetailType = "EARNING"
-	DetailTypePretaxDeduction                DetailType = "PRETAX_DEDUCTION"
-	DetailTypePretaxDeductionHealthInsurance DetailType = "PRETAX_DEDUCTION_HEALTH_INSURANCE"
-	DetailTypePretaxDeductionRetirement      DetailType = "PRETAX_DEDUCTION_RETIREMENT"
-	DetailTypePretaxDeductionHra             DetailType = "PRETAX_DEDUCTION_HRA"
-	DetailTypeTaxFederal                     DetailType = "TAX_FEDERAL"
-	DetailTypeTaxRegion                      DetailType = "TAX_REGION"
-	DetailTypeTaxLocal                       DetailType = "TAX_LOCAL"
-	DetailTypePosttaxBenefit                 DetailType = "POSTTAX_BENEFIT"
-	DetailTypePosttaxGarnishment             DetailType = "POSTTAX_GARNISHMENT"
-	DetailTypeReimbursement                  DetailType = "REIMBURSEMENT"
-	DetailTypeEarningRegular                 DetailType = "EARNING_REGULAR"
-	DetailTypeEarningDoubleOvertime          DetailType = "EARNING_DOUBLE_OVERTIME"
-	DetailTypeEarningPto                     DetailType = "EARNING_PTO"
-	DetailTypeEarningSick                    DetailType = "EARNING_SICK"
-	DetailTypeEarningHoliday                 DetailType = "EARNING_HOLIDAY"
-	DetailTypeEarningSeverance               DetailType = "EARNING_SEVERANCE"
-	DetailTypeEarningReimbursement           DetailType = "EARNING_REIMBURSEMENT"
-	DetailTypeTaxSocialSecurity              DetailType = "TAX_SOCIAL_SECURITY"
-	DetailTypeTaxMedicare                    DetailType = "TAX_MEDICARE"
-	DetailTypeTaxUnemployment                DetailType = "TAX_UNEMPLOYMENT"
-	DetailTypeTaxEmployer                    DetailType = "TAX_EMPLOYER"
-	DetailTypePretaxDeductionHsa             DetailType = "PRETAX_DEDUCTION_HSA"
-	DetailTypePretaxDeductionFsa             DetailType = "PRETAX_DEDUCTION_FSA"
-	DetailTypePretaxDeductionDependentCare   DetailType = "PRETAX_DEDUCTION_DEPENDENT_CARE"
-	DetailTypePretaxDeductionCommuter        DetailType = "PRETAX_DEDUCTION_COMMUTER"
-	DetailTypePretaxDeductionDental          DetailType = "PRETAX_DEDUCTION_DENTAL"
-	DetailTypePretaxDeductionVision          DetailType = "PRETAX_DEDUCTION_VISION"
-	DetailTypePosttaxDeduction               DetailType = "POSTTAX_DEDUCTION"
-	DetailTypePosttaxRetirementRoth          DetailType = "POSTTAX_RETIREMENT_ROTH"
-	DetailTypePosttaxLoanRepayment           DetailType = "POSTTAX_LOAN_REPAYMENT"
-	DetailTypeEmployerContribution           DetailType = "EMPLOYER_CONTRIBUTION"
-	DetailTypePension                        DetailType = "PENSION"
-	DetailTypeEarningCashInLieu              DetailType = "EARNING_CASH_IN_LIEU"
+	DetailTypeEarningSalary                    DetailType = "EARNING_SALARY"
+	DetailTypeEarningOvertime                  DetailType = "EARNING_OVERTIME"
+	DetailTypeEarningTip                       DetailType = "EARNING_TIP"
+	DetailTypeEarningBonus                     DetailType = "EARNING_BONUS"
+	DetailTypeEarningCommission                DetailType = "EARNING_COMMISSION"
+	DetailTypeEarningAdjustment                DetailType = "EARNING_ADJUSTMENT"
+	DetailTypeEarning                          DetailType = "EARNING"
+	DetailTypePretaxDeduction                  DetailType = "PRETAX_DEDUCTION"
+	DetailTypePretaxDeductionHealthInsurance   DetailType = "PRETAX_DEDUCTION_HEALTH_INSURANCE"
+	DetailTypePretaxDeductionRetirement        DetailType = "PRETAX_DEDUCTION_RETIREMENT"
+	DetailTypePretaxDeductionHra               DetailType = "PRETAX_DEDUCTION_HRA"
+	DetailTypeTaxFederal                       DetailType = "TAX_FEDERAL"
+	DetailTypeTaxRegion                        DetailType = "TAX_REGION"
+	DetailTypeTaxLocal                         DetailType = "TAX_LOCAL"
+	DetailTypePosttaxBenefit                   DetailType = "POSTTAX_BENEFIT"
+	DetailTypePosttaxGarnishment               DetailType = "POSTTAX_GARNISHMENT"
+	DetailTypeReimbursement                    DetailType = "REIMBURSEMENT"
+	DetailTypeEarningRegular                   DetailType = "EARNING_REGULAR"
+	DetailTypeEarningDoubleOvertime            DetailType = "EARNING_DOUBLE_OVERTIME"
+	DetailTypeEarningPto                       DetailType = "EARNING_PTO"
+	DetailTypeEarningSick                      DetailType = "EARNING_SICK"
+	DetailTypeEarningHoliday                   DetailType = "EARNING_HOLIDAY"
+	DetailTypeEarningSeverance                 DetailType = "EARNING_SEVERANCE"
+	DetailTypeEarningReimbursement             DetailType = "EARNING_REIMBURSEMENT"
+	DetailTypeTaxSocialSecurity                DetailType = "TAX_SOCIAL_SECURITY"
+	DetailTypeTaxMedicare                      DetailType = "TAX_MEDICARE"
+	DetailTypeTaxUnemployment                  DetailType = "TAX_UNEMPLOYMENT"
+	DetailTypeTaxEmployer                      DetailType = "TAX_EMPLOYER"
+	DetailTypePretaxDeductionHsa               DetailType = "PRETAX_DEDUCTION_HSA"
+	DetailTypePretaxDeductionFsa               DetailType = "PRETAX_DEDUCTION_FSA"
+	DetailTypePretaxDeductionDependentCare     DetailType = "PRETAX_DEDUCTION_DEPENDENT_CARE"
+	DetailTypePretaxDeductionCommuter          DetailType = "PRETAX_DEDUCTION_COMMUTER"
+	DetailTypePretaxDeductionDental            DetailType = "PRETAX_DEDUCTION_DENTAL"
+	DetailTypePretaxDeductionVision            DetailType = "PRETAX_DEDUCTION_VISION"
+	DetailTypePosttaxDeduction                 DetailType = "POSTTAX_DEDUCTION"
+	DetailTypePosttaxRetirementRoth            DetailType = "POSTTAX_RETIREMENT_ROTH"
+	DetailTypePosttaxLoanRepayment             DetailType = "POSTTAX_LOAN_REPAYMENT"
+	DetailTypeEmployerContribution             DetailType = "EMPLOYER_CONTRIBUTION"
+	DetailTypePension                          DetailType = "PENSION"
+	DetailTypeEarningCashInLieu                DetailType = "EARNING_CASH_IN_LIEU"
+	DetailTypePretaxDeductionRetirementCatchup DetailType = "PRETAX_DEDUCTION_RETIREMENT_CATCHUP"
+	DetailTypePosttaxRetirementRothCatchup     DetailType = "POSTTAX_RETIREMENT_ROTH_CATCHUP"
+	DetailTypePosttaxRetirementAfterTax        DetailType = "POSTTAX_RETIREMENT_AFTER_TAX"
+	DetailTypeEmployerContributionRetirement   DetailType = "EMPLOYER_CONTRIBUTION_RETIREMENT"
+	DetailTypeEmployerContributionHsa          DetailType = "EMPLOYER_CONTRIBUTION_HSA"
+	DetailTypeEmployerContributionFsa          DetailType = "EMPLOYER_CONTRIBUTION_FSA"
+	DetailTypePosttaxDeductionCollegeSavings   DetailType = "POSTTAX_DEDUCTION_COLLEGE_SAVINGS"
+	DetailTypePosttaxDeductionUnionDues        DetailType = "POSTTAX_DEDUCTION_UNION_DUES"
+	DetailTypePosttaxDeductionEwaRepayment     DetailType = "POSTTAX_DEDUCTION_EWA_REPAYMENT"
 )
 
 func (e DetailType) ToPointer() *DetailType {
@@ -61,7 +70,7 @@ func (e DetailType) ToPointer() *DetailType {
 func (e *DetailType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "EARNING_SALARY", "EARNING_OVERTIME", "EARNING_TIP", "EARNING_BONUS", "EARNING_COMMISSION", "EARNING_ADJUSTMENT", "EARNING", "PRETAX_DEDUCTION", "PRETAX_DEDUCTION_HEALTH_INSURANCE", "PRETAX_DEDUCTION_RETIREMENT", "PRETAX_DEDUCTION_HRA", "TAX_FEDERAL", "TAX_REGION", "TAX_LOCAL", "POSTTAX_BENEFIT", "POSTTAX_GARNISHMENT", "REIMBURSEMENT", "EARNING_REGULAR", "EARNING_DOUBLE_OVERTIME", "EARNING_PTO", "EARNING_SICK", "EARNING_HOLIDAY", "EARNING_SEVERANCE", "EARNING_REIMBURSEMENT", "TAX_SOCIAL_SECURITY", "TAX_MEDICARE", "TAX_UNEMPLOYMENT", "TAX_EMPLOYER", "PRETAX_DEDUCTION_HSA", "PRETAX_DEDUCTION_FSA", "PRETAX_DEDUCTION_DEPENDENT_CARE", "PRETAX_DEDUCTION_COMMUTER", "PRETAX_DEDUCTION_DENTAL", "PRETAX_DEDUCTION_VISION", "POSTTAX_DEDUCTION", "POSTTAX_RETIREMENT_ROTH", "POSTTAX_LOAN_REPAYMENT", "EMPLOYER_CONTRIBUTION", "PENSION", "EARNING_CASH_IN_LIEU":
+		case "EARNING_SALARY", "EARNING_OVERTIME", "EARNING_TIP", "EARNING_BONUS", "EARNING_COMMISSION", "EARNING_ADJUSTMENT", "EARNING", "PRETAX_DEDUCTION", "PRETAX_DEDUCTION_HEALTH_INSURANCE", "PRETAX_DEDUCTION_RETIREMENT", "PRETAX_DEDUCTION_HRA", "TAX_FEDERAL", "TAX_REGION", "TAX_LOCAL", "POSTTAX_BENEFIT", "POSTTAX_GARNISHMENT", "REIMBURSEMENT", "EARNING_REGULAR", "EARNING_DOUBLE_OVERTIME", "EARNING_PTO", "EARNING_SICK", "EARNING_HOLIDAY", "EARNING_SEVERANCE", "EARNING_REIMBURSEMENT", "TAX_SOCIAL_SECURITY", "TAX_MEDICARE", "TAX_UNEMPLOYMENT", "TAX_EMPLOYER", "PRETAX_DEDUCTION_HSA", "PRETAX_DEDUCTION_FSA", "PRETAX_DEDUCTION_DEPENDENT_CARE", "PRETAX_DEDUCTION_COMMUTER", "PRETAX_DEDUCTION_DENTAL", "PRETAX_DEDUCTION_VISION", "POSTTAX_DEDUCTION", "POSTTAX_RETIREMENT_ROTH", "POSTTAX_LOAN_REPAYMENT", "EMPLOYER_CONTRIBUTION", "PENSION", "EARNING_CASH_IN_LIEU", "PRETAX_DEDUCTION_RETIREMENT_CATCHUP", "POSTTAX_RETIREMENT_ROTH_CATCHUP", "POSTTAX_RETIREMENT_AFTER_TAX", "EMPLOYER_CONTRIBUTION_RETIREMENT", "EMPLOYER_CONTRIBUTION_HSA", "EMPLOYER_CONTRIBUTION_FSA", "POSTTAX_DEDUCTION_COLLEGE_SAVINGS", "POSTTAX_DEDUCTION_UNION_DUES", "POSTTAX_DEDUCTION_EWA_REPAYMENT":
 			return true
 		}
 	}
@@ -102,15 +111,17 @@ type HrisPaycode struct {
 	CreatedAt   *time.Time `json:"created_at,omitempty"`
 	Description *string    `json:"description,omitempty"`
 	// the normalized payslip-line type this code produces
-	DetailType *DetailType      `json:"detail_type,omitempty"`
-	ID         *string          `json:"id,omitempty"`
-	IsActive   *bool            `json:"is_active,omitempty"`
-	IsEmployer *bool            `json:"is_employer,omitempty"`
-	IsPreTax   *bool            `json:"is_pre_tax,omitempty"`
-	Metadata   []HrisMetadata   `json:"metadata,omitempty"`
-	Name       *string          `json:"name,omitempty"`
-	Raw        map[string]any   `json:"raw,omitempty"`
-	Type       *HrisPaycodeType `json:"type,omitempty"`
+	DetailType *DetailType `json:"detail_type,omitempty"`
+	ID         *string     `json:"id,omitempty"`
+	IsActive   *bool       `json:"is_active,omitempty"`
+	IsEmployer *bool       `json:"is_employer,omitempty"`
+	IsPreTax   *bool       `json:"is_pre_tax,omitempty"`
+	// true when earnings under this code count as retirement-plan compensation
+	IsRetirementEligible *bool            `json:"is_retirement_eligible,omitempty"`
+	Metadata             []HrisMetadata   `json:"metadata,omitempty"`
+	Name                 *string          `json:"name,omitempty"`
+	Raw                  map[string]any   `json:"raw,omitempty"`
+	Type                 *HrisPaycodeType `json:"type,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
@@ -187,6 +198,13 @@ func (h *HrisPaycode) GetIsPreTax() *bool {
 		return nil
 	}
 	return h.IsPreTax
+}
+
+func (h *HrisPaycode) GetIsRetirementEligible() *bool {
+	if h == nil {
+		return nil
+	}
+	return h.IsRetirementEligible
 }
 
 func (h *HrisPaycode) GetMetadata() []HrisMetadata {

@@ -43,9 +43,9 @@ func main() {
 
     res, err := s.Assessment.CreateAssessmentOrder(ctx, operations.CreateAssessmentOrderRequest{
         AssessmentOrder: shared.AssessmentOrder{
-            ConnectionID: "<id>",
+            ConnectionID: "",
             CreatedAt: types.MustNewTimeFromString("2021-09-18T10:33:57.803Z"),
-            ID: unifiedgosdk.Pointer("f032d138-4a7e-414e-a916-a2aee8321d0d"),
+            ID: unifiedgosdk.Pointer("d347d08d-23d9-476e-8705-44dc4c74e300"),
             Metadata: []shared.AssessmentMetadata{},
             Parameters: []shared.AssessmentParameterInput{},
             ProfileAddresses: []shared.AssessmentAddress{},
@@ -72,7 +72,7 @@ func main() {
             ResponseURL: unifiedgosdk.Pointer("https://rowdy-fisherman.biz/"),
             Status: shared.AssessmentOrderStatusRejected.ToPointer(),
             TargetURL: unifiedgosdk.Pointer("https://cautious-turret.info"),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-02T13:03:09.694Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-02T20:03:45.877Z"),
             WorkspaceID: "<id>",
         },
         ConnectionID: "<id>",
@@ -139,7 +139,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla."),
             HasRedirectURL: unifiedgosdk.Pointer(true),
             HasTargetURL: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("8d4f9a2c-672b-4974-9a29-9bff784b44db"),
+            ID: unifiedgosdk.Pointer("15778361-8907-4f71-85c5-2cc7b4fd6556"),
             InfoURL: unifiedgosdk.Pointer("https://ugly-instance.biz/"),
             IntegrationTypes: []string{
                 "viridis",
@@ -154,7 +154,7 @@ func main() {
                 "clamo",
             },
             Type: shared.AssessmentPackageTypeVideoInterview,
-            UpdatedAt: types.MustNewTimeFromString("2023-10-01T15:36:52.267Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-01T21:19:43.330Z"),
         },
         ConnectionID: "<id>",
     })
@@ -377,9 +377,9 @@ func main() {
 
     res, err := s.Assessment.PatchAssessmentOrder(ctx, operations.PatchAssessmentOrderRequest{
         AssessmentOrder: shared.AssessmentOrder{
-            ConnectionID: "<id>",
+            ConnectionID: "",
             CreatedAt: types.MustNewTimeFromString("2021-09-18T10:33:57.803Z"),
-            ID: unifiedgosdk.Pointer("476940e1-07c6-4a41-942b-9e5e0d55219e"),
+            ID: unifiedgosdk.Pointer("cd6a7dce-32df-4ad4-ab76-c97c58ddcad7"),
             Metadata: []shared.AssessmentMetadata{},
             Parameters: []shared.AssessmentParameterInput{},
             ProfileAddresses: []shared.AssessmentAddress{},
@@ -406,7 +406,7 @@ func main() {
             ResponseURL: unifiedgosdk.Pointer("https://rowdy-fisherman.biz/"),
             Status: shared.AssessmentOrderStatusRejected.ToPointer(),
             TargetURL: unifiedgosdk.Pointer("https://cautious-turret.info"),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-02T13:03:09.705Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-02T20:03:45.883Z"),
             WorkspaceID: "<id>",
         },
         ConnectionID: "<id>",
@@ -474,7 +474,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla."),
             HasRedirectURL: unifiedgosdk.Pointer(true),
             HasTargetURL: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("7fa4a8b6-7a05-4c9f-8d82-1452ef854f5d"),
+            ID: unifiedgosdk.Pointer("388bd2f8-3704-413b-98de-2e6be9aa7f5c"),
             InfoURL: unifiedgosdk.Pointer("https://ugly-instance.biz/"),
             IntegrationTypes: []string{
                 "viridis",
@@ -489,7 +489,7 @@ func main() {
                 "clamo",
             },
             Type: shared.AssessmentPackageTypeVideoInterview,
-            UpdatedAt: types.MustNewTimeFromString("2023-10-01T15:36:52.271Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-01T21:19:43.333Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -604,9 +604,9 @@ func main() {
 
     res, err := s.Assessment.UpdateAssessmentOrder(ctx, operations.UpdateAssessmentOrderRequest{
         AssessmentOrder: shared.AssessmentOrder{
-            ConnectionID: "<id>",
+            ConnectionID: "",
             CreatedAt: types.MustNewTimeFromString("2021-09-18T10:33:57.803Z"),
-            ID: unifiedgosdk.Pointer("476940e1-07c6-4a41-942b-9e5e0d55219e"),
+            ID: unifiedgosdk.Pointer("cd6a7dce-32df-4ad4-ab76-c97c58ddcad7"),
             Metadata: []shared.AssessmentMetadata{},
             Parameters: []shared.AssessmentParameterInput{},
             ProfileAddresses: []shared.AssessmentAddress{},
@@ -633,7 +633,7 @@ func main() {
             ResponseURL: unifiedgosdk.Pointer("https://rowdy-fisherman.biz/"),
             Status: shared.AssessmentOrderStatusRejected.ToPointer(),
             TargetURL: unifiedgosdk.Pointer("https://cautious-turret.info"),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-02T13:03:09.705Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-02T20:03:45.883Z"),
             WorkspaceID: "<id>",
         },
         ConnectionID: "<id>",
@@ -701,7 +701,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla."),
             HasRedirectURL: unifiedgosdk.Pointer(true),
             HasTargetURL: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("7fa4a8b6-7a05-4c9f-8d82-1452ef854f5d"),
+            ID: unifiedgosdk.Pointer("388bd2f8-3704-413b-98de-2e6be9aa7f5c"),
             InfoURL: unifiedgosdk.Pointer("https://ugly-instance.biz/"),
             IntegrationTypes: []string{
                 "viridis",
@@ -716,7 +716,7 @@ func main() {
                 "clamo",
             },
             Type: shared.AssessmentPackageTypeVideoInterview,
-            UpdatedAt: types.MustNewTimeFromString("2023-10-01T15:36:52.271Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-01T21:19:43.333Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -12,51 +12,57 @@ import (
 type PatchHrisEmployeeQueryParamFields string
 
 const (
-	PatchHrisEmployeeQueryParamFieldsID                    PatchHrisEmployeeQueryParamFields = "id"
-	PatchHrisEmployeeQueryParamFieldsCreatedAt             PatchHrisEmployeeQueryParamFields = "created_at"
-	PatchHrisEmployeeQueryParamFieldsUpdatedAt             PatchHrisEmployeeQueryParamFields = "updated_at"
-	PatchHrisEmployeeQueryParamFieldsName                  PatchHrisEmployeeQueryParamFields = "name"
-	PatchHrisEmployeeQueryParamFieldsFirstName             PatchHrisEmployeeQueryParamFields = "first_name"
-	PatchHrisEmployeeQueryParamFieldsLastName              PatchHrisEmployeeQueryParamFields = "last_name"
-	PatchHrisEmployeeQueryParamFieldsEmails                PatchHrisEmployeeQueryParamFields = "emails"
-	PatchHrisEmployeeQueryParamFieldsTitle                 PatchHrisEmployeeQueryParamFields = "title"
-	PatchHrisEmployeeQueryParamFieldsJobID                 PatchHrisEmployeeQueryParamFields = "job_id"
-	PatchHrisEmployeeQueryParamFieldsManagerID             PatchHrisEmployeeQueryParamFields = "manager_id"
-	PatchHrisEmployeeQueryParamFieldsEmploymentStatus      PatchHrisEmployeeQueryParamFields = "employment_status"
-	PatchHrisEmployeeQueryParamFieldsGender                PatchHrisEmployeeQueryParamFields = "gender"
-	PatchHrisEmployeeQueryParamFieldsTelephones            PatchHrisEmployeeQueryParamFields = "telephones"
-	PatchHrisEmployeeQueryParamFieldsDateOfBirth           PatchHrisEmployeeQueryParamFields = "date_of_birth"
-	PatchHrisEmployeeQueryParamFieldsEmployeeNumber        PatchHrisEmployeeQueryParamFields = "employee_number"
-	PatchHrisEmployeeQueryParamFieldsHiredAt               PatchHrisEmployeeQueryParamFields = "hired_at"
-	PatchHrisEmployeeQueryParamFieldsTerminatedAt          PatchHrisEmployeeQueryParamFields = "terminated_at"
-	PatchHrisEmployeeQueryParamFieldsTerminationReason     PatchHrisEmployeeQueryParamFields = "termination_reason"
-	PatchHrisEmployeeQueryParamFieldsMaritalStatus         PatchHrisEmployeeQueryParamFields = "marital_status"
-	PatchHrisEmployeeQueryParamFieldsEmploymentType        PatchHrisEmployeeQueryParamFields = "employment_type"
-	PatchHrisEmployeeQueryParamFieldsAddress               PatchHrisEmployeeQueryParamFields = "address"
-	PatchHrisEmployeeQueryParamFieldsLanguageLocale        PatchHrisEmployeeQueryParamFields = "language_locale"
-	PatchHrisEmployeeQueryParamFieldsCurrency              PatchHrisEmployeeQueryParamFields = "currency"
-	PatchHrisEmployeeQueryParamFieldsTimezone              PatchHrisEmployeeQueryParamFields = "timezone"
-	PatchHrisEmployeeQueryParamFieldsImageURL              PatchHrisEmployeeQueryParamFields = "image_url"
-	PatchHrisEmployeeQueryParamFieldsCompanyID             PatchHrisEmployeeQueryParamFields = "company_id"
-	PatchHrisEmployeeQueryParamFieldsPronouns              PatchHrisEmployeeQueryParamFields = "pronouns"
-	PatchHrisEmployeeQueryParamFieldsEmployeeRoles         PatchHrisEmployeeQueryParamFields = "employee_roles"
-	PatchHrisEmployeeQueryParamFieldsCompensation          PatchHrisEmployeeQueryParamFields = "compensation"
-	PatchHrisEmployeeQueryParamFieldsSalutation            PatchHrisEmployeeQueryParamFields = "salutation"
-	PatchHrisEmployeeQueryParamFieldsBio                   PatchHrisEmployeeQueryParamFields = "bio"
-	PatchHrisEmployeeQueryParamFieldsSsnSin                PatchHrisEmployeeQueryParamFields = "ssn_sin"
-	PatchHrisEmployeeQueryParamFieldsGroups                PatchHrisEmployeeQueryParamFields = "groups"
-	PatchHrisEmployeeQueryParamFieldsLocations             PatchHrisEmployeeQueryParamFields = "locations"
-	PatchHrisEmployeeQueryParamFieldsMetadata              PatchHrisEmployeeQueryParamFields = "metadata"
-	PatchHrisEmployeeQueryParamFieldsStorageQuotaAllocated PatchHrisEmployeeQueryParamFields = "storage_quota_allocated"
-	PatchHrisEmployeeQueryParamFieldsStorageQuotaUsed      PatchHrisEmployeeQueryParamFields = "storage_quota_used"
-	PatchHrisEmployeeQueryParamFieldsStorageQuotaAvailable PatchHrisEmployeeQueryParamFields = "storage_quota_available"
-	PatchHrisEmployeeQueryParamFieldsRelationships         PatchHrisEmployeeQueryParamFields = "relationships"
-	PatchHrisEmployeeQueryParamFieldsHasMfa                PatchHrisEmployeeQueryParamFields = "has_mfa"
-	PatchHrisEmployeeQueryParamFieldsTimeoffDaysTotal      PatchHrisEmployeeQueryParamFields = "timeoff_days_total"
-	PatchHrisEmployeeQueryParamFieldsTimeoffDaysUsed       PatchHrisEmployeeQueryParamFields = "timeoff_days_used"
-	PatchHrisEmployeeQueryParamFieldsFlsaStatus            PatchHrisEmployeeQueryParamFields = "flsa_status"
-	PatchHrisEmployeeQueryParamFieldsPayFrequency          PatchHrisEmployeeQueryParamFields = "pay_frequency"
-	PatchHrisEmployeeQueryParamFieldsRaw                   PatchHrisEmployeeQueryParamFields = "raw"
+	PatchHrisEmployeeQueryParamFieldsID                     PatchHrisEmployeeQueryParamFields = "id"
+	PatchHrisEmployeeQueryParamFieldsCreatedAt              PatchHrisEmployeeQueryParamFields = "created_at"
+	PatchHrisEmployeeQueryParamFieldsUpdatedAt              PatchHrisEmployeeQueryParamFields = "updated_at"
+	PatchHrisEmployeeQueryParamFieldsName                   PatchHrisEmployeeQueryParamFields = "name"
+	PatchHrisEmployeeQueryParamFieldsFirstName              PatchHrisEmployeeQueryParamFields = "first_name"
+	PatchHrisEmployeeQueryParamFieldsLastName               PatchHrisEmployeeQueryParamFields = "last_name"
+	PatchHrisEmployeeQueryParamFieldsEmails                 PatchHrisEmployeeQueryParamFields = "emails"
+	PatchHrisEmployeeQueryParamFieldsTitle                  PatchHrisEmployeeQueryParamFields = "title"
+	PatchHrisEmployeeQueryParamFieldsJobID                  PatchHrisEmployeeQueryParamFields = "job_id"
+	PatchHrisEmployeeQueryParamFieldsManagerID              PatchHrisEmployeeQueryParamFields = "manager_id"
+	PatchHrisEmployeeQueryParamFieldsEmploymentStatus       PatchHrisEmployeeQueryParamFields = "employment_status"
+	PatchHrisEmployeeQueryParamFieldsGender                 PatchHrisEmployeeQueryParamFields = "gender"
+	PatchHrisEmployeeQueryParamFieldsTelephones             PatchHrisEmployeeQueryParamFields = "telephones"
+	PatchHrisEmployeeQueryParamFieldsDateOfBirth            PatchHrisEmployeeQueryParamFields = "date_of_birth"
+	PatchHrisEmployeeQueryParamFieldsEmployeeNumber         PatchHrisEmployeeQueryParamFields = "employee_number"
+	PatchHrisEmployeeQueryParamFieldsHiredAt                PatchHrisEmployeeQueryParamFields = "hired_at"
+	PatchHrisEmployeeQueryParamFieldsTerminatedAt           PatchHrisEmployeeQueryParamFields = "terminated_at"
+	PatchHrisEmployeeQueryParamFieldsTerminationReason      PatchHrisEmployeeQueryParamFields = "termination_reason"
+	PatchHrisEmployeeQueryParamFieldsMaritalStatus          PatchHrisEmployeeQueryParamFields = "marital_status"
+	PatchHrisEmployeeQueryParamFieldsEmploymentType         PatchHrisEmployeeQueryParamFields = "employment_type"
+	PatchHrisEmployeeQueryParamFieldsAddress                PatchHrisEmployeeQueryParamFields = "address"
+	PatchHrisEmployeeQueryParamFieldsLanguageLocale         PatchHrisEmployeeQueryParamFields = "language_locale"
+	PatchHrisEmployeeQueryParamFieldsCurrency               PatchHrisEmployeeQueryParamFields = "currency"
+	PatchHrisEmployeeQueryParamFieldsTimezone               PatchHrisEmployeeQueryParamFields = "timezone"
+	PatchHrisEmployeeQueryParamFieldsImageURL               PatchHrisEmployeeQueryParamFields = "image_url"
+	PatchHrisEmployeeQueryParamFieldsCompanyID              PatchHrisEmployeeQueryParamFields = "company_id"
+	PatchHrisEmployeeQueryParamFieldsPronouns               PatchHrisEmployeeQueryParamFields = "pronouns"
+	PatchHrisEmployeeQueryParamFieldsEmployeeRoles          PatchHrisEmployeeQueryParamFields = "employee_roles"
+	PatchHrisEmployeeQueryParamFieldsCompensation           PatchHrisEmployeeQueryParamFields = "compensation"
+	PatchHrisEmployeeQueryParamFieldsSalutation             PatchHrisEmployeeQueryParamFields = "salutation"
+	PatchHrisEmployeeQueryParamFieldsBio                    PatchHrisEmployeeQueryParamFields = "bio"
+	PatchHrisEmployeeQueryParamFieldsSsnSin                 PatchHrisEmployeeQueryParamFields = "ssn_sin"
+	PatchHrisEmployeeQueryParamFieldsGroups                 PatchHrisEmployeeQueryParamFields = "groups"
+	PatchHrisEmployeeQueryParamFieldsLocations              PatchHrisEmployeeQueryParamFields = "locations"
+	PatchHrisEmployeeQueryParamFieldsMetadata               PatchHrisEmployeeQueryParamFields = "metadata"
+	PatchHrisEmployeeQueryParamFieldsStorageQuotaAllocated  PatchHrisEmployeeQueryParamFields = "storage_quota_allocated"
+	PatchHrisEmployeeQueryParamFieldsStorageQuotaUsed       PatchHrisEmployeeQueryParamFields = "storage_quota_used"
+	PatchHrisEmployeeQueryParamFieldsStorageQuotaAvailable  PatchHrisEmployeeQueryParamFields = "storage_quota_available"
+	PatchHrisEmployeeQueryParamFieldsRelationships          PatchHrisEmployeeQueryParamFields = "relationships"
+	PatchHrisEmployeeQueryParamFieldsHasMfa                 PatchHrisEmployeeQueryParamFields = "has_mfa"
+	PatchHrisEmployeeQueryParamFieldsTimeoffDaysTotal       PatchHrisEmployeeQueryParamFields = "timeoff_days_total"
+	PatchHrisEmployeeQueryParamFieldsTimeoffDaysUsed        PatchHrisEmployeeQueryParamFields = "timeoff_days_used"
+	PatchHrisEmployeeQueryParamFieldsFlsaStatus             PatchHrisEmployeeQueryParamFields = "flsa_status"
+	PatchHrisEmployeeQueryParamFieldsPayFrequency           PatchHrisEmployeeQueryParamFields = "pay_frequency"
+	PatchHrisEmployeeQueryParamFieldsRehiredAt              PatchHrisEmployeeQueryParamFields = "rehired_at"
+	PatchHrisEmployeeQueryParamFieldsServiceStartedAt       PatchHrisEmployeeQueryParamFields = "service_started_at"
+	PatchHrisEmployeeQueryParamFieldsSeniorityStartedAt     PatchHrisEmployeeQueryParamFields = "seniority_started_at"
+	PatchHrisEmployeeQueryParamFieldsLeaveStartAt           PatchHrisEmployeeQueryParamFields = "leave_start_at"
+	PatchHrisEmployeeQueryParamFieldsLeaveEndAt             PatchHrisEmployeeQueryParamFields = "leave_end_at"
+	PatchHrisEmployeeQueryParamFieldsEmploymentStatusReason PatchHrisEmployeeQueryParamFields = "employment_status_reason"
+	PatchHrisEmployeeQueryParamFieldsRaw                    PatchHrisEmployeeQueryParamFields = "raw"
 )
 
 func (e PatchHrisEmployeeQueryParamFields) ToPointer() *PatchHrisEmployeeQueryParamFields {
@@ -155,6 +161,18 @@ func (e *PatchHrisEmployeeQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "flsa_status":
 		fallthrough
 	case "pay_frequency":
+		fallthrough
+	case "rehired_at":
+		fallthrough
+	case "service_started_at":
+		fallthrough
+	case "seniority_started_at":
+		fallthrough
+	case "leave_start_at":
+		fallthrough
+	case "leave_end_at":
+		fallthrough
+	case "employment_status_reason":
 		fallthrough
 	case "raw":
 		*e = PatchHrisEmployeeQueryParamFields(v)

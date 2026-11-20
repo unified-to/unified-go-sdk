@@ -29,6 +29,33 @@ func (e *EmploymentStatus) IsExact() bool {
 	return false
 }
 
+// EmploymentStatusReason - why the employee is not actively working (eg. LEAVE, TERMINATED, RETIRED)
+type EmploymentStatusReason string
+
+const (
+	EmploymentStatusReasonLeave      EmploymentStatusReason = "LEAVE"
+	EmploymentStatusReasonTerminated EmploymentStatusReason = "TERMINATED"
+	EmploymentStatusReasonRetired    EmploymentStatusReason = "RETIRED"
+	EmploymentStatusReasonDeceased   EmploymentStatusReason = "DECEASED"
+	EmploymentStatusReasonDisabled   EmploymentStatusReason = "DISABLED"
+	EmploymentStatusReasonOther      EmploymentStatusReason = "OTHER"
+)
+
+func (e EmploymentStatusReason) ToPointer() *EmploymentStatusReason {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *EmploymentStatusReason) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "LEAVE", "TERMINATED", "RETIRED", "DECEASED", "DISABLED", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisEmployeeEmploymentType string
 
 const (
@@ -178,7 +205,9 @@ type HrisEmployee struct {
 	EmployeeNumber   *string                             `json:"employee_number,omitempty"`
 	EmployeeRoles    []PropertyHrisEmployeeEmployeeRoles `json:"employee_roles,omitempty"`
 	EmploymentStatus *EmploymentStatus                   `json:"employment_status,omitempty"`
-	EmploymentType   *HrisEmployeeEmploymentType         `json:"employment_type,omitempty"`
+	// why the employee is not actively working (eg. LEAVE, TERMINATED, RETIRED)
+	EmploymentStatusReason *EmploymentStatusReason     `json:"employment_status_reason,omitempty"`
+	EmploymentType         *HrisEmployeeEmploymentType `json:"employment_type,omitempty"`
 	// The employee's first (given) name
 	FirstName *string `json:"first_name,omitempty"`
 	// US Fair Labor Standards Act classification
@@ -197,7 +226,11 @@ type HrisEmployee struct {
 	JobID          *string `json:"job_id,omitempty"`
 	LanguageLocale *string `json:"language_locale,omitempty"`
 	// The employee's last (family) name
-	LastName      *string                    `json:"last_name,omitempty"`
+	LastName *string `json:"last_name,omitempty"`
+	// expected or actual end of the current leave of absence (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	LeaveEndAt *time.Time `json:"leave_end_at,omitempty"`
+	// start of the current leave of absence (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	LeaveStartAt  *time.Time                 `json:"leave_start_at,omitempty"`
 	Locations     []HrisLocation             `json:"locations,omitempty"`
 	ManagerID     *string                    `json:"manager_id,omitempty"`
 	MaritalStatus *HrisEmployeeMaritalStatus `json:"marital_status,omitempty"`
@@ -208,10 +241,16 @@ type HrisEmployee struct {
 	PayFrequency *PayFrequency  `json:"pay_frequency,omitempty"`
 	Pronouns     *string        `json:"pronouns,omitempty"`
 	Raw          map[string]any `json:"raw,omitempty"`
+	// most recent rehire date (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	RehiredAt *time.Time `json:"rehired_at,omitempty"`
 	// the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
 	Relationships []HrisEmployeerelationship `json:"relationships,omitempty"`
 	// Mr. Mrs. Ms.
-	Salutation            *string         `json:"salutation,omitempty"`
+	Salutation *string `json:"salutation,omitempty"`
+	// seniority date (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	SeniorityStartedAt *time.Time `json:"seniority_started_at,omitempty"`
+	// adjusted service date used for benefits eligibility and vesting (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ServiceStartedAt      *time.Time      `json:"service_started_at,omitempty"`
 	SsnSin                *string         `json:"ssn_sin,omitempty"`
 	StorageQuotaAllocated *float64        `json:"storage_quota_allocated,omitempty"`
 	StorageQuotaAvailable *float64        `json:"storage_quota_available,omitempty"`
@@ -318,6 +357,13 @@ func (h *HrisEmployee) GetEmploymentStatus() *EmploymentStatus {
 	return h.EmploymentStatus
 }
 
+func (h *HrisEmployee) GetEmploymentStatusReason() *EmploymentStatusReason {
+	if h == nil {
+		return nil
+	}
+	return h.EmploymentStatusReason
+}
+
 func (h *HrisEmployee) GetEmploymentType() *HrisEmployeeEmploymentType {
 	if h == nil {
 		return nil
@@ -402,6 +448,20 @@ func (h *HrisEmployee) GetLastName() *string {
 	return h.LastName
 }
 
+func (h *HrisEmployee) GetLeaveEndAt() *time.Time {
+	if h == nil {
+		return nil
+	}
+	return h.LeaveEndAt
+}
+
+func (h *HrisEmployee) GetLeaveStartAt() *time.Time {
+	if h == nil {
+		return nil
+	}
+	return h.LeaveStartAt
+}
+
 func (h *HrisEmployee) GetLocations() []HrisLocation {
 	if h == nil {
 		return nil
@@ -458,6 +518,13 @@ func (h *HrisEmployee) GetRaw() map[string]any {
 	return h.Raw
 }
 
+func (h *HrisEmployee) GetRehiredAt() *time.Time {
+	if h == nil {
+		return nil
+	}
+	return h.RehiredAt
+}
+
 func (h *HrisEmployee) GetRelationships() []HrisEmployeerelationship {
 	if h == nil {
 		return nil
@@ -470,6 +537,20 @@ func (h *HrisEmployee) GetSalutation() *string {
 		return nil
 	}
 	return h.Salutation
+}
+
+func (h *HrisEmployee) GetSeniorityStartedAt() *time.Time {
+	if h == nil {
+		return nil
+	}
+	return h.SeniorityStartedAt
+}
+
+func (h *HrisEmployee) GetServiceStartedAt() *time.Time {
+	if h == nil {
+		return nil
+	}
+	return h.ServiceStartedAt
 }
 
 func (h *HrisEmployee) GetSsnSin() *string {

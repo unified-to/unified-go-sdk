@@ -13,19 +13,20 @@ value := operations.GetHrisPaycodeQueryParamFieldsID
 
 ## Values
 
-| Name                                        | Value                                       |
-| ------------------------------------------- | ------------------------------------------- |
-| `GetHrisPaycodeQueryParamFieldsID`          | id                                          |
-| `GetHrisPaycodeQueryParamFieldsCreatedAt`   | created_at                                  |
-| `GetHrisPaycodeQueryParamFieldsUpdatedAt`   | updated_at                                  |
-| `GetHrisPaycodeQueryParamFieldsCompanyID`   | company_id                                  |
-| `GetHrisPaycodeQueryParamFieldsName`        | name                                        |
-| `GetHrisPaycodeQueryParamFieldsCode`        | code                                        |
-| `GetHrisPaycodeQueryParamFieldsDescription` | description                                 |
-| `GetHrisPaycodeQueryParamFieldsType`        | type                                        |
-| `GetHrisPaycodeQueryParamFieldsDetailType`  | detail_type                                 |
-| `GetHrisPaycodeQueryParamFieldsIsPreTax`    | is_pre_tax                                  |
-| `GetHrisPaycodeQueryParamFieldsIsEmployer`  | is_employer                                 |
-| `GetHrisPaycodeQueryParamFieldsIsActive`    | is_active                                   |
-| `GetHrisPaycodeQueryParamFieldsMetadata`    | metadata                                    |
-| `GetHrisPaycodeQueryParamFieldsRaw`         | raw                                         |
+| Name                                                 | Value                                                |
+| ---------------------------------------------------- | ---------------------------------------------------- |
+| `GetHrisPaycodeQueryParamFieldsID`                   | id                                                   |
+| `GetHrisPaycodeQueryParamFieldsCreatedAt`            | created_at                                           |
+| `GetHrisPaycodeQueryParamFieldsUpdatedAt`            | updated_at                                           |
+| `GetHrisPaycodeQueryParamFieldsCompanyID`            | company_id                                           |
+| `GetHrisPaycodeQueryParamFieldsName`                 | name                                                 |
+| `GetHrisPaycodeQueryParamFieldsCode`                 | code                                                 |
+| `GetHrisPaycodeQueryParamFieldsDescription`          | description                                          |
+| `GetHrisPaycodeQueryParamFieldsType`                 | type                                                 |
+| `GetHrisPaycodeQueryParamFieldsDetailType`           | detail_type                                          |
+| `GetHrisPaycodeQueryParamFieldsIsPreTax`             | is_pre_tax                                           |
+| `GetHrisPaycodeQueryParamFieldsIsEmployer`           | is_employer                                          |
+| `GetHrisPaycodeQueryParamFieldsIsActive`             | is_active                                            |
+| `GetHrisPaycodeQueryParamFieldsIsRetirementEligible` | is_retirement_eligible                               |
+| `GetHrisPaycodeQueryParamFieldsMetadata`             | metadata                                             |
+| `GetHrisPaycodeQueryParamFieldsRaw`                  | raw                                                  |

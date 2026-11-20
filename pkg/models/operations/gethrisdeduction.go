@@ -31,6 +31,7 @@ const (
 	GetHrisDeductionQueryParamFieldsMaxAmount       GetHrisDeductionQueryParamFields = "max_amount"
 	GetHrisDeductionQueryParamFieldsPaycodeID       GetHrisDeductionQueryParamFields = "paycode_id"
 	GetHrisDeductionQueryParamFieldsGarnishmentType GetHrisDeductionQueryParamFields = "garnishment_type"
+	GetHrisDeductionQueryParamFieldsLoanIdentifier  GetHrisDeductionQueryParamFields = "loan_identifier"
 	GetHrisDeductionQueryParamFieldsMetadata        GetHrisDeductionQueryParamFields = "metadata"
 	GetHrisDeductionQueryParamFieldsRaw             GetHrisDeductionQueryParamFields = "raw"
 )
@@ -81,6 +82,8 @@ func (e *GetHrisDeductionQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "paycode_id":
 		fallthrough
 	case "garnishment_type":
+		fallthrough
+	case "loan_identifier":
 		fallthrough
 	case "metadata":
 		fallthrough

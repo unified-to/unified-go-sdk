@@ -34,5 +34,6 @@ value := operations.PatchHrisDeductionQueryParamFieldsID
 | `PatchHrisDeductionQueryParamFieldsMaxAmount`       | max_amount                                          |
 | `PatchHrisDeductionQueryParamFieldsPaycodeID`       | paycode_id                                          |
 | `PatchHrisDeductionQueryParamFieldsGarnishmentType` | garnishment_type                                    |
+| `PatchHrisDeductionQueryParamFieldsLoanIdentifier`  | loan_identifier                                     |
 | `PatchHrisDeductionQueryParamFieldsMetadata`        | metadata                                            |
 | `PatchHrisDeductionQueryParamFieldsRaw`             | raw                                                 |

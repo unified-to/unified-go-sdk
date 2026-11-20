@@ -12,51 +12,57 @@ import (
 type CreateHrisEmployeeQueryParamFields string
 
 const (
-	CreateHrisEmployeeQueryParamFieldsID                    CreateHrisEmployeeQueryParamFields = "id"
-	CreateHrisEmployeeQueryParamFieldsCreatedAt             CreateHrisEmployeeQueryParamFields = "created_at"
-	CreateHrisEmployeeQueryParamFieldsUpdatedAt             CreateHrisEmployeeQueryParamFields = "updated_at"
-	CreateHrisEmployeeQueryParamFieldsName                  CreateHrisEmployeeQueryParamFields = "name"
-	CreateHrisEmployeeQueryParamFieldsFirstName             CreateHrisEmployeeQueryParamFields = "first_name"
-	CreateHrisEmployeeQueryParamFieldsLastName              CreateHrisEmployeeQueryParamFields = "last_name"
-	CreateHrisEmployeeQueryParamFieldsEmails                CreateHrisEmployeeQueryParamFields = "emails"
-	CreateHrisEmployeeQueryParamFieldsTitle                 CreateHrisEmployeeQueryParamFields = "title"
-	CreateHrisEmployeeQueryParamFieldsJobID                 CreateHrisEmployeeQueryParamFields = "job_id"
-	CreateHrisEmployeeQueryParamFieldsManagerID             CreateHrisEmployeeQueryParamFields = "manager_id"
-	CreateHrisEmployeeQueryParamFieldsEmploymentStatus      CreateHrisEmployeeQueryParamFields = "employment_status"
-	CreateHrisEmployeeQueryParamFieldsGender                CreateHrisEmployeeQueryParamFields = "gender"
-	CreateHrisEmployeeQueryParamFieldsTelephones            CreateHrisEmployeeQueryParamFields = "telephones"
-	CreateHrisEmployeeQueryParamFieldsDateOfBirth           CreateHrisEmployeeQueryParamFields = "date_of_birth"
-	CreateHrisEmployeeQueryParamFieldsEmployeeNumber        CreateHrisEmployeeQueryParamFields = "employee_number"
-	CreateHrisEmployeeQueryParamFieldsHiredAt               CreateHrisEmployeeQueryParamFields = "hired_at"
-	CreateHrisEmployeeQueryParamFieldsTerminatedAt          CreateHrisEmployeeQueryParamFields = "terminated_at"
-	CreateHrisEmployeeQueryParamFieldsTerminationReason     CreateHrisEmployeeQueryParamFields = "termination_reason"
-	CreateHrisEmployeeQueryParamFieldsMaritalStatus         CreateHrisEmployeeQueryParamFields = "marital_status"
-	CreateHrisEmployeeQueryParamFieldsEmploymentType        CreateHrisEmployeeQueryParamFields = "employment_type"
-	CreateHrisEmployeeQueryParamFieldsAddress               CreateHrisEmployeeQueryParamFields = "address"
-	CreateHrisEmployeeQueryParamFieldsLanguageLocale        CreateHrisEmployeeQueryParamFields = "language_locale"
-	CreateHrisEmployeeQueryParamFieldsCurrency              CreateHrisEmployeeQueryParamFields = "currency"
-	CreateHrisEmployeeQueryParamFieldsTimezone              CreateHrisEmployeeQueryParamFields = "timezone"
-	CreateHrisEmployeeQueryParamFieldsImageURL              CreateHrisEmployeeQueryParamFields = "image_url"
-	CreateHrisEmployeeQueryParamFieldsCompanyID             CreateHrisEmployeeQueryParamFields = "company_id"
-	CreateHrisEmployeeQueryParamFieldsPronouns              CreateHrisEmployeeQueryParamFields = "pronouns"
-	CreateHrisEmployeeQueryParamFieldsEmployeeRoles         CreateHrisEmployeeQueryParamFields = "employee_roles"
-	CreateHrisEmployeeQueryParamFieldsCompensation          CreateHrisEmployeeQueryParamFields = "compensation"
-	CreateHrisEmployeeQueryParamFieldsSalutation            CreateHrisEmployeeQueryParamFields = "salutation"
-	CreateHrisEmployeeQueryParamFieldsBio                   CreateHrisEmployeeQueryParamFields = "bio"
-	CreateHrisEmployeeQueryParamFieldsSsnSin                CreateHrisEmployeeQueryParamFields = "ssn_sin"
-	CreateHrisEmployeeQueryParamFieldsGroups                CreateHrisEmployeeQueryParamFields = "groups"
-	CreateHrisEmployeeQueryParamFieldsLocations             CreateHrisEmployeeQueryParamFields = "locations"
-	CreateHrisEmployeeQueryParamFieldsMetadata              CreateHrisEmployeeQueryParamFields = "metadata"
-	CreateHrisEmployeeQueryParamFieldsStorageQuotaAllocated CreateHrisEmployeeQueryParamFields = "storage_quota_allocated"
-	CreateHrisEmployeeQueryParamFieldsStorageQuotaUsed      CreateHrisEmployeeQueryParamFields = "storage_quota_used"
-	CreateHrisEmployeeQueryParamFieldsStorageQuotaAvailable CreateHrisEmployeeQueryParamFields = "storage_quota_available"
-	CreateHrisEmployeeQueryParamFieldsRelationships         CreateHrisEmployeeQueryParamFields = "relationships"
-	CreateHrisEmployeeQueryParamFieldsHasMfa                CreateHrisEmployeeQueryParamFields = "has_mfa"
-	CreateHrisEmployeeQueryParamFieldsTimeoffDaysTotal      CreateHrisEmployeeQueryParamFields = "timeoff_days_total"
-	CreateHrisEmployeeQueryParamFieldsTimeoffDaysUsed       CreateHrisEmployeeQueryParamFields = "timeoff_days_used"
-	CreateHrisEmployeeQueryParamFieldsFlsaStatus            CreateHrisEmployeeQueryParamFields = "flsa_status"
-	CreateHrisEmployeeQueryParamFieldsPayFrequency          CreateHrisEmployeeQueryParamFields = "pay_frequency"
-	CreateHrisEmployeeQueryParamFieldsRaw                   CreateHrisEmployeeQueryParamFields = "raw"
+	CreateHrisEmployeeQueryParamFieldsID                     CreateHrisEmployeeQueryParamFields = "id"
+	CreateHrisEmployeeQueryParamFieldsCreatedAt              CreateHrisEmployeeQueryParamFields = "created_at"
+	CreateHrisEmployeeQueryParamFieldsUpdatedAt              CreateHrisEmployeeQueryParamFields = "updated_at"
+	CreateHrisEmployeeQueryParamFieldsName                   CreateHrisEmployeeQueryParamFields = "name"
+	CreateHrisEmployeeQueryParamFieldsFirstName              CreateHrisEmployeeQueryParamFields = "first_name"
+	CreateHrisEmployeeQueryParamFieldsLastName               CreateHrisEmployeeQueryParamFields = "last_name"
+	CreateHrisEmployeeQueryParamFieldsEmails                 CreateHrisEmployeeQueryParamFields = "emails"
+	CreateHrisEmployeeQueryParamFieldsTitle                  CreateHrisEmployeeQueryParamFields = "title"
+	CreateHrisEmployeeQueryParamFieldsJobID                  CreateHrisEmployeeQueryParamFields = "job_id"
+	CreateHrisEmployeeQueryParamFieldsManagerID              CreateHrisEmployeeQueryParamFields = "manager_id"
+	CreateHrisEmployeeQueryParamFieldsEmploymentStatus       CreateHrisEmployeeQueryParamFields = "employment_status"
+	CreateHrisEmployeeQueryParamFieldsGender                 CreateHrisEmployeeQueryParamFields = "gender"
+	CreateHrisEmployeeQueryParamFieldsTelephones             CreateHrisEmployeeQueryParamFields = "telephones"
+	CreateHrisEmployeeQueryParamFieldsDateOfBirth            CreateHrisEmployeeQueryParamFields = "date_of_birth"
+	CreateHrisEmployeeQueryParamFieldsEmployeeNumber         CreateHrisEmployeeQueryParamFields = "employee_number"
+	CreateHrisEmployeeQueryParamFieldsHiredAt                CreateHrisEmployeeQueryParamFields = "hired_at"
+	CreateHrisEmployeeQueryParamFieldsTerminatedAt           CreateHrisEmployeeQueryParamFields = "terminated_at"
+	CreateHrisEmployeeQueryParamFieldsTerminationReason      CreateHrisEmployeeQueryParamFields = "termination_reason"
+	CreateHrisEmployeeQueryParamFieldsMaritalStatus          CreateHrisEmployeeQueryParamFields = "marital_status"
+	CreateHrisEmployeeQueryParamFieldsEmploymentType         CreateHrisEmployeeQueryParamFields = "employment_type"
+	CreateHrisEmployeeQueryParamFieldsAddress                CreateHrisEmployeeQueryParamFields = "address"
+	CreateHrisEmployeeQueryParamFieldsLanguageLocale         CreateHrisEmployeeQueryParamFields = "language_locale"
+	CreateHrisEmployeeQueryParamFieldsCurrency               CreateHrisEmployeeQueryParamFields = "currency"
+	CreateHrisEmployeeQueryParamFieldsTimezone               CreateHrisEmployeeQueryParamFields = "timezone"
+	CreateHrisEmployeeQueryParamFieldsImageURL               CreateHrisEmployeeQueryParamFields = "image_url"
+	CreateHrisEmployeeQueryParamFieldsCompanyID              CreateHrisEmployeeQueryParamFields = "company_id"
+	CreateHrisEmployeeQueryParamFieldsPronouns               CreateHrisEmployeeQueryParamFields = "pronouns"
+	CreateHrisEmployeeQueryParamFieldsEmployeeRoles          CreateHrisEmployeeQueryParamFields = "employee_roles"
+	CreateHrisEmployeeQueryParamFieldsCompensation           CreateHrisEmployeeQueryParamFields = "compensation"
+	CreateHrisEmployeeQueryParamFieldsSalutation             CreateHrisEmployeeQueryParamFields = "salutation"
+	CreateHrisEmployeeQueryParamFieldsBio                    CreateHrisEmployeeQueryParamFields = "bio"
+	CreateHrisEmployeeQueryParamFieldsSsnSin                 CreateHrisEmployeeQueryParamFields = "ssn_sin"
+	CreateHrisEmployeeQueryParamFieldsGroups                 CreateHrisEmployeeQueryParamFields = "groups"
+	CreateHrisEmployeeQueryParamFieldsLocations              CreateHrisEmployeeQueryParamFields = "locations"
+	CreateHrisEmployeeQueryParamFieldsMetadata               CreateHrisEmployeeQueryParamFields = "metadata"
+	CreateHrisEmployeeQueryParamFieldsStorageQuotaAllocated  CreateHrisEmployeeQueryParamFields = "storage_quota_allocated"
+	CreateHrisEmployeeQueryParamFieldsStorageQuotaUsed       CreateHrisEmployeeQueryParamFields = "storage_quota_used"
+	CreateHrisEmployeeQueryParamFieldsStorageQuotaAvailable  CreateHrisEmployeeQueryParamFields = "storage_quota_available"
+	CreateHrisEmployeeQueryParamFieldsRelationships          CreateHrisEmployeeQueryParamFields = "relationships"
+	CreateHrisEmployeeQueryParamFieldsHasMfa                 CreateHrisEmployeeQueryParamFields = "has_mfa"
+	CreateHrisEmployeeQueryParamFieldsTimeoffDaysTotal       CreateHrisEmployeeQueryParamFields = "timeoff_days_total"
+	CreateHrisEmployeeQueryParamFieldsTimeoffDaysUsed        CreateHrisEmployeeQueryParamFields = "timeoff_days_used"
+	CreateHrisEmployeeQueryParamFieldsFlsaStatus             CreateHrisEmployeeQueryParamFields = "flsa_status"
+	CreateHrisEmployeeQueryParamFieldsPayFrequency           CreateHrisEmployeeQueryParamFields = "pay_frequency"
+	CreateHrisEmployeeQueryParamFieldsRehiredAt              CreateHrisEmployeeQueryParamFields = "rehired_at"
+	CreateHrisEmployeeQueryParamFieldsServiceStartedAt       CreateHrisEmployeeQueryParamFields = "service_started_at"
+	CreateHrisEmployeeQueryParamFieldsSeniorityStartedAt     CreateHrisEmployeeQueryParamFields = "seniority_started_at"
+	CreateHrisEmployeeQueryParamFieldsLeaveStartAt           CreateHrisEmployeeQueryParamFields = "leave_start_at"
+	CreateHrisEmployeeQueryParamFieldsLeaveEndAt             CreateHrisEmployeeQueryParamFields = "leave_end_at"
+	CreateHrisEmployeeQueryParamFieldsEmploymentStatusReason CreateHrisEmployeeQueryParamFields = "employment_status_reason"
+	CreateHrisEmployeeQueryParamFieldsRaw                    CreateHrisEmployeeQueryParamFields = "raw"
 )
 
 func (e CreateHrisEmployeeQueryParamFields) ToPointer() *CreateHrisEmployeeQueryParamFields {
@@ -155,6 +161,18 @@ func (e *CreateHrisEmployeeQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "flsa_status":
 		fallthrough
 	case "pay_frequency":
+		fallthrough
+	case "rehired_at":
+		fallthrough
+	case "service_started_at":
+		fallthrough
+	case "seniority_started_at":
+		fallthrough
+	case "leave_start_at":
+		fallthrough
+	case "leave_end_at":
+		fallthrough
+	case "employment_status_reason":
 		fallthrough
 	case "raw":
 		*e = CreateHrisEmployeeQueryParamFields(v)

@@ -12,20 +12,21 @@ import (
 type ListHrisPaycodesQueryParamFields string
 
 const (
-	ListHrisPaycodesQueryParamFieldsID          ListHrisPaycodesQueryParamFields = "id"
-	ListHrisPaycodesQueryParamFieldsCreatedAt   ListHrisPaycodesQueryParamFields = "created_at"
-	ListHrisPaycodesQueryParamFieldsUpdatedAt   ListHrisPaycodesQueryParamFields = "updated_at"
-	ListHrisPaycodesQueryParamFieldsCompanyID   ListHrisPaycodesQueryParamFields = "company_id"
-	ListHrisPaycodesQueryParamFieldsName        ListHrisPaycodesQueryParamFields = "name"
-	ListHrisPaycodesQueryParamFieldsCode        ListHrisPaycodesQueryParamFields = "code"
-	ListHrisPaycodesQueryParamFieldsDescription ListHrisPaycodesQueryParamFields = "description"
-	ListHrisPaycodesQueryParamFieldsType        ListHrisPaycodesQueryParamFields = "type"
-	ListHrisPaycodesQueryParamFieldsDetailType  ListHrisPaycodesQueryParamFields = "detail_type"
-	ListHrisPaycodesQueryParamFieldsIsPreTax    ListHrisPaycodesQueryParamFields = "is_pre_tax"
-	ListHrisPaycodesQueryParamFieldsIsEmployer  ListHrisPaycodesQueryParamFields = "is_employer"
-	ListHrisPaycodesQueryParamFieldsIsActive    ListHrisPaycodesQueryParamFields = "is_active"
-	ListHrisPaycodesQueryParamFieldsMetadata    ListHrisPaycodesQueryParamFields = "metadata"
-	ListHrisPaycodesQueryParamFieldsRaw         ListHrisPaycodesQueryParamFields = "raw"
+	ListHrisPaycodesQueryParamFieldsID                   ListHrisPaycodesQueryParamFields = "id"
+	ListHrisPaycodesQueryParamFieldsCreatedAt            ListHrisPaycodesQueryParamFields = "created_at"
+	ListHrisPaycodesQueryParamFieldsUpdatedAt            ListHrisPaycodesQueryParamFields = "updated_at"
+	ListHrisPaycodesQueryParamFieldsCompanyID            ListHrisPaycodesQueryParamFields = "company_id"
+	ListHrisPaycodesQueryParamFieldsName                 ListHrisPaycodesQueryParamFields = "name"
+	ListHrisPaycodesQueryParamFieldsCode                 ListHrisPaycodesQueryParamFields = "code"
+	ListHrisPaycodesQueryParamFieldsDescription          ListHrisPaycodesQueryParamFields = "description"
+	ListHrisPaycodesQueryParamFieldsType                 ListHrisPaycodesQueryParamFields = "type"
+	ListHrisPaycodesQueryParamFieldsDetailType           ListHrisPaycodesQueryParamFields = "detail_type"
+	ListHrisPaycodesQueryParamFieldsIsPreTax             ListHrisPaycodesQueryParamFields = "is_pre_tax"
+	ListHrisPaycodesQueryParamFieldsIsEmployer           ListHrisPaycodesQueryParamFields = "is_employer"
+	ListHrisPaycodesQueryParamFieldsIsActive             ListHrisPaycodesQueryParamFields = "is_active"
+	ListHrisPaycodesQueryParamFieldsIsRetirementEligible ListHrisPaycodesQueryParamFields = "is_retirement_eligible"
+	ListHrisPaycodesQueryParamFieldsMetadata             ListHrisPaycodesQueryParamFields = "metadata"
+	ListHrisPaycodesQueryParamFieldsRaw                  ListHrisPaycodesQueryParamFields = "raw"
 )
 
 func (e ListHrisPaycodesQueryParamFields) ToPointer() *ListHrisPaycodesQueryParamFields {
@@ -60,6 +61,8 @@ func (e *ListHrisPaycodesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_employer":
 		fallthrough
 	case "is_active":
+		fallthrough
+	case "is_retirement_eligible":
 		fallthrough
 	case "metadata":
 		fallthrough

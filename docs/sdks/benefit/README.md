@@ -39,6 +39,7 @@ func main() {
 
     res, err := s.Benefit.CreateHrisBenefit(ctx, operations.CreateHrisBenefitRequest{
         HrisBenefit: shared.HrisBenefit{
+            Code: unifiedgosdk.Pointer("E7P1FZ"),
             CoverageLevel: shared.CoverageLevelEmployeeSpouse.ToPointer(),
             CreatedAt: types.MustNewTimeFromString("2020-06-11T01:24:05.654Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
@@ -47,13 +48,13 @@ func main() {
             EmployerContributionMaxAmount: unifiedgosdk.Pointer[float64](179093.0),
             EmployerContributionType: shared.EmployerContributionTypePercentage.ToPointer(),
             Frequency: shared.HrisBenefitFrequencyMonth.ToPointer(),
-            ID: unifiedgosdk.Pointer("08bf4cec-7317-4d01-ae1c-da2c3b4b791d"),
+            ID: unifiedgosdk.Pointer("91d01e92-3d07-412f-9dbc-12d3cd80500d"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Frozen Wooden Ball"),
             Tax: shared.TaxPreTax.ToPointer(),
-            Type: shared.HrisBenefitTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-02T10:41:27.685Z"),
+            Type: shared.HrisBenefitTypeEmployerTaxContribution.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-18T07:58:48.211Z"),
         },
         ConnectionID: "<id>",
     })
@@ -221,6 +222,7 @@ func main() {
 
     res, err := s.Benefit.PatchHrisBenefit(ctx, operations.PatchHrisBenefitRequest{
         HrisBenefit: shared.HrisBenefit{
+            Code: unifiedgosdk.Pointer("E7P1FZ"),
             CoverageLevel: shared.CoverageLevelEmployeeSpouse.ToPointer(),
             CreatedAt: types.MustNewTimeFromString("2020-06-11T01:24:05.654Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
@@ -229,13 +231,13 @@ func main() {
             EmployerContributionMaxAmount: unifiedgosdk.Pointer[float64](179093.0),
             EmployerContributionType: shared.EmployerContributionTypePercentage.ToPointer(),
             Frequency: shared.HrisBenefitFrequencyMonth.ToPointer(),
-            ID: unifiedgosdk.Pointer("0398e8b2-a16c-4972-9dfb-36b7992bcfba"),
+            ID: unifiedgosdk.Pointer("6c015a45-4dc9-41d5-a80d-f2390e634acd"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Frozen Wooden Ball"),
             Tax: shared.TaxPreTax.ToPointer(),
-            Type: shared.HrisBenefitTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-02T10:41:27.692Z"),
+            Type: shared.HrisBenefitTypeEmployerTaxContribution.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-18T07:58:48.219Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -350,6 +352,7 @@ func main() {
 
     res, err := s.Benefit.UpdateHrisBenefit(ctx, operations.UpdateHrisBenefitRequest{
         HrisBenefit: shared.HrisBenefit{
+            Code: unifiedgosdk.Pointer("E7P1FZ"),
             CoverageLevel: shared.CoverageLevelEmployeeSpouse.ToPointer(),
             CreatedAt: types.MustNewTimeFromString("2020-06-11T01:24:05.654Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
@@ -358,13 +361,13 @@ func main() {
             EmployerContributionMaxAmount: unifiedgosdk.Pointer[float64](179093.0),
             EmployerContributionType: shared.EmployerContributionTypePercentage.ToPointer(),
             Frequency: shared.HrisBenefitFrequencyMonth.ToPointer(),
-            ID: unifiedgosdk.Pointer("0398e8b2-a16c-4972-9dfb-36b7992bcfba"),
+            ID: unifiedgosdk.Pointer("6c015a45-4dc9-41d5-a80d-f2390e634acd"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.HrisMetadata{},
             Name: unifiedgosdk.Pointer("Frozen Wooden Ball"),
             Tax: shared.TaxPreTax.ToPointer(),
-            Type: shared.HrisBenefitTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-02T10:41:27.692Z"),
+            Type: shared.HrisBenefitTypeEmployerTaxContribution.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-18T07:58:48.219Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

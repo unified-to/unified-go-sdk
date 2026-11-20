@@ -101,6 +101,8 @@ type HrisPayslip struct {
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	// the employee (reference to HrisEmployee)
 	UserID *string `json:"user_id,omitempty"`
+	// year-to-date hours paid as of this payslip
+	YtdHours *float64 `json:"ytd_hours,omitempty"`
 }
 
 func (h HrisPayslip) MarshalJSON() ([]byte, error) {
@@ -301,4 +303,11 @@ func (h *HrisPayslip) GetUserID() *string {
 		return nil
 	}
 	return h.UserID
+}
+
+func (h *HrisPayslip) GetYtdHours() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.YtdHours
 }

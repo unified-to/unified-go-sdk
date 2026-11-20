@@ -12,51 +12,57 @@ import (
 type GetHrisEmployeeQueryParamFields string
 
 const (
-	GetHrisEmployeeQueryParamFieldsID                    GetHrisEmployeeQueryParamFields = "id"
-	GetHrisEmployeeQueryParamFieldsCreatedAt             GetHrisEmployeeQueryParamFields = "created_at"
-	GetHrisEmployeeQueryParamFieldsUpdatedAt             GetHrisEmployeeQueryParamFields = "updated_at"
-	GetHrisEmployeeQueryParamFieldsName                  GetHrisEmployeeQueryParamFields = "name"
-	GetHrisEmployeeQueryParamFieldsFirstName             GetHrisEmployeeQueryParamFields = "first_name"
-	GetHrisEmployeeQueryParamFieldsLastName              GetHrisEmployeeQueryParamFields = "last_name"
-	GetHrisEmployeeQueryParamFieldsEmails                GetHrisEmployeeQueryParamFields = "emails"
-	GetHrisEmployeeQueryParamFieldsTitle                 GetHrisEmployeeQueryParamFields = "title"
-	GetHrisEmployeeQueryParamFieldsJobID                 GetHrisEmployeeQueryParamFields = "job_id"
-	GetHrisEmployeeQueryParamFieldsManagerID             GetHrisEmployeeQueryParamFields = "manager_id"
-	GetHrisEmployeeQueryParamFieldsEmploymentStatus      GetHrisEmployeeQueryParamFields = "employment_status"
-	GetHrisEmployeeQueryParamFieldsGender                GetHrisEmployeeQueryParamFields = "gender"
-	GetHrisEmployeeQueryParamFieldsTelephones            GetHrisEmployeeQueryParamFields = "telephones"
-	GetHrisEmployeeQueryParamFieldsDateOfBirth           GetHrisEmployeeQueryParamFields = "date_of_birth"
-	GetHrisEmployeeQueryParamFieldsEmployeeNumber        GetHrisEmployeeQueryParamFields = "employee_number"
-	GetHrisEmployeeQueryParamFieldsHiredAt               GetHrisEmployeeQueryParamFields = "hired_at"
-	GetHrisEmployeeQueryParamFieldsTerminatedAt          GetHrisEmployeeQueryParamFields = "terminated_at"
-	GetHrisEmployeeQueryParamFieldsTerminationReason     GetHrisEmployeeQueryParamFields = "termination_reason"
-	GetHrisEmployeeQueryParamFieldsMaritalStatus         GetHrisEmployeeQueryParamFields = "marital_status"
-	GetHrisEmployeeQueryParamFieldsEmploymentType        GetHrisEmployeeQueryParamFields = "employment_type"
-	GetHrisEmployeeQueryParamFieldsAddress               GetHrisEmployeeQueryParamFields = "address"
-	GetHrisEmployeeQueryParamFieldsLanguageLocale        GetHrisEmployeeQueryParamFields = "language_locale"
-	GetHrisEmployeeQueryParamFieldsCurrency              GetHrisEmployeeQueryParamFields = "currency"
-	GetHrisEmployeeQueryParamFieldsTimezone              GetHrisEmployeeQueryParamFields = "timezone"
-	GetHrisEmployeeQueryParamFieldsImageURL              GetHrisEmployeeQueryParamFields = "image_url"
-	GetHrisEmployeeQueryParamFieldsCompanyID             GetHrisEmployeeQueryParamFields = "company_id"
-	GetHrisEmployeeQueryParamFieldsPronouns              GetHrisEmployeeQueryParamFields = "pronouns"
-	GetHrisEmployeeQueryParamFieldsEmployeeRoles         GetHrisEmployeeQueryParamFields = "employee_roles"
-	GetHrisEmployeeQueryParamFieldsCompensation          GetHrisEmployeeQueryParamFields = "compensation"
-	GetHrisEmployeeQueryParamFieldsSalutation            GetHrisEmployeeQueryParamFields = "salutation"
-	GetHrisEmployeeQueryParamFieldsBio                   GetHrisEmployeeQueryParamFields = "bio"
-	GetHrisEmployeeQueryParamFieldsSsnSin                GetHrisEmployeeQueryParamFields = "ssn_sin"
-	GetHrisEmployeeQueryParamFieldsGroups                GetHrisEmployeeQueryParamFields = "groups"
-	GetHrisEmployeeQueryParamFieldsLocations             GetHrisEmployeeQueryParamFields = "locations"
-	GetHrisEmployeeQueryParamFieldsMetadata              GetHrisEmployeeQueryParamFields = "metadata"
-	GetHrisEmployeeQueryParamFieldsStorageQuotaAllocated GetHrisEmployeeQueryParamFields = "storage_quota_allocated"
-	GetHrisEmployeeQueryParamFieldsStorageQuotaUsed      GetHrisEmployeeQueryParamFields = "storage_quota_used"
-	GetHrisEmployeeQueryParamFieldsStorageQuotaAvailable GetHrisEmployeeQueryParamFields = "storage_quota_available"
-	GetHrisEmployeeQueryParamFieldsRelationships         GetHrisEmployeeQueryParamFields = "relationships"
-	GetHrisEmployeeQueryParamFieldsHasMfa                GetHrisEmployeeQueryParamFields = "has_mfa"
-	GetHrisEmployeeQueryParamFieldsTimeoffDaysTotal      GetHrisEmployeeQueryParamFields = "timeoff_days_total"
-	GetHrisEmployeeQueryParamFieldsTimeoffDaysUsed       GetHrisEmployeeQueryParamFields = "timeoff_days_used"
-	GetHrisEmployeeQueryParamFieldsFlsaStatus            GetHrisEmployeeQueryParamFields = "flsa_status"
-	GetHrisEmployeeQueryParamFieldsPayFrequency          GetHrisEmployeeQueryParamFields = "pay_frequency"
-	GetHrisEmployeeQueryParamFieldsRaw                   GetHrisEmployeeQueryParamFields = "raw"
+	GetHrisEmployeeQueryParamFieldsID                     GetHrisEmployeeQueryParamFields = "id"
+	GetHrisEmployeeQueryParamFieldsCreatedAt              GetHrisEmployeeQueryParamFields = "created_at"
+	GetHrisEmployeeQueryParamFieldsUpdatedAt              GetHrisEmployeeQueryParamFields = "updated_at"
+	GetHrisEmployeeQueryParamFieldsName                   GetHrisEmployeeQueryParamFields = "name"
+	GetHrisEmployeeQueryParamFieldsFirstName              GetHrisEmployeeQueryParamFields = "first_name"
+	GetHrisEmployeeQueryParamFieldsLastName               GetHrisEmployeeQueryParamFields = "last_name"
+	GetHrisEmployeeQueryParamFieldsEmails                 GetHrisEmployeeQueryParamFields = "emails"
+	GetHrisEmployeeQueryParamFieldsTitle                  GetHrisEmployeeQueryParamFields = "title"
+	GetHrisEmployeeQueryParamFieldsJobID                  GetHrisEmployeeQueryParamFields = "job_id"
+	GetHrisEmployeeQueryParamFieldsManagerID              GetHrisEmployeeQueryParamFields = "manager_id"
+	GetHrisEmployeeQueryParamFieldsEmploymentStatus       GetHrisEmployeeQueryParamFields = "employment_status"
+	GetHrisEmployeeQueryParamFieldsGender                 GetHrisEmployeeQueryParamFields = "gender"
+	GetHrisEmployeeQueryParamFieldsTelephones             GetHrisEmployeeQueryParamFields = "telephones"
+	GetHrisEmployeeQueryParamFieldsDateOfBirth            GetHrisEmployeeQueryParamFields = "date_of_birth"
+	GetHrisEmployeeQueryParamFieldsEmployeeNumber         GetHrisEmployeeQueryParamFields = "employee_number"
+	GetHrisEmployeeQueryParamFieldsHiredAt                GetHrisEmployeeQueryParamFields = "hired_at"
+	GetHrisEmployeeQueryParamFieldsTerminatedAt           GetHrisEmployeeQueryParamFields = "terminated_at"
+	GetHrisEmployeeQueryParamFieldsTerminationReason      GetHrisEmployeeQueryParamFields = "termination_reason"
+	GetHrisEmployeeQueryParamFieldsMaritalStatus          GetHrisEmployeeQueryParamFields = "marital_status"
+	GetHrisEmployeeQueryParamFieldsEmploymentType         GetHrisEmployeeQueryParamFields = "employment_type"
+	GetHrisEmployeeQueryParamFieldsAddress                GetHrisEmployeeQueryParamFields = "address"
+	GetHrisEmployeeQueryParamFieldsLanguageLocale         GetHrisEmployeeQueryParamFields = "language_locale"
+	GetHrisEmployeeQueryParamFieldsCurrency               GetHrisEmployeeQueryParamFields = "currency"
+	GetHrisEmployeeQueryParamFieldsTimezone               GetHrisEmployeeQueryParamFields = "timezone"
+	GetHrisEmployeeQueryParamFieldsImageURL               GetHrisEmployeeQueryParamFields = "image_url"
+	GetHrisEmployeeQueryParamFieldsCompanyID              GetHrisEmployeeQueryParamFields = "company_id"
+	GetHrisEmployeeQueryParamFieldsPronouns               GetHrisEmployeeQueryParamFields = "pronouns"
+	GetHrisEmployeeQueryParamFieldsEmployeeRoles          GetHrisEmployeeQueryParamFields = "employee_roles"
+	GetHrisEmployeeQueryParamFieldsCompensation           GetHrisEmployeeQueryParamFields = "compensation"
+	GetHrisEmployeeQueryParamFieldsSalutation             GetHrisEmployeeQueryParamFields = "salutation"
+	GetHrisEmployeeQueryParamFieldsBio                    GetHrisEmployeeQueryParamFields = "bio"
+	GetHrisEmployeeQueryParamFieldsSsnSin                 GetHrisEmployeeQueryParamFields = "ssn_sin"
+	GetHrisEmployeeQueryParamFieldsGroups                 GetHrisEmployeeQueryParamFields = "groups"
+	GetHrisEmployeeQueryParamFieldsLocations              GetHrisEmployeeQueryParamFields = "locations"
+	GetHrisEmployeeQueryParamFieldsMetadata               GetHrisEmployeeQueryParamFields = "metadata"
+	GetHrisEmployeeQueryParamFieldsStorageQuotaAllocated  GetHrisEmployeeQueryParamFields = "storage_quota_allocated"
+	GetHrisEmployeeQueryParamFieldsStorageQuotaUsed       GetHrisEmployeeQueryParamFields = "storage_quota_used"
+	GetHrisEmployeeQueryParamFieldsStorageQuotaAvailable  GetHrisEmployeeQueryParamFields = "storage_quota_available"
+	GetHrisEmployeeQueryParamFieldsRelationships          GetHrisEmployeeQueryParamFields = "relationships"
+	GetHrisEmployeeQueryParamFieldsHasMfa                 GetHrisEmployeeQueryParamFields = "has_mfa"
+	GetHrisEmployeeQueryParamFieldsTimeoffDaysTotal       GetHrisEmployeeQueryParamFields = "timeoff_days_total"
+	GetHrisEmployeeQueryParamFieldsTimeoffDaysUsed        GetHrisEmployeeQueryParamFields = "timeoff_days_used"
+	GetHrisEmployeeQueryParamFieldsFlsaStatus             GetHrisEmployeeQueryParamFields = "flsa_status"
+	GetHrisEmployeeQueryParamFieldsPayFrequency           GetHrisEmployeeQueryParamFields = "pay_frequency"
+	GetHrisEmployeeQueryParamFieldsRehiredAt              GetHrisEmployeeQueryParamFields = "rehired_at"
+	GetHrisEmployeeQueryParamFieldsServiceStartedAt       GetHrisEmployeeQueryParamFields = "service_started_at"
+	GetHrisEmployeeQueryParamFieldsSeniorityStartedAt     GetHrisEmployeeQueryParamFields = "seniority_started_at"
+	GetHrisEmployeeQueryParamFieldsLeaveStartAt           GetHrisEmployeeQueryParamFields = "leave_start_at"
+	GetHrisEmployeeQueryParamFieldsLeaveEndAt             GetHrisEmployeeQueryParamFields = "leave_end_at"
+	GetHrisEmployeeQueryParamFieldsEmploymentStatusReason GetHrisEmployeeQueryParamFields = "employment_status_reason"
+	GetHrisEmployeeQueryParamFieldsRaw                    GetHrisEmployeeQueryParamFields = "raw"
 )
 
 func (e GetHrisEmployeeQueryParamFields) ToPointer() *GetHrisEmployeeQueryParamFields {
@@ -155,6 +161,18 @@ func (e *GetHrisEmployeeQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "flsa_status":
 		fallthrough
 	case "pay_frequency":
+		fallthrough
+	case "rehired_at":
+		fallthrough
+	case "service_started_at":
+		fallthrough
+	case "seniority_started_at":
+		fallthrough
+	case "leave_start_at":
+		fallthrough
+	case "leave_end_at":
+		fallthrough
+	case "employment_status_reason":
 		fallthrough
 	case "raw":
 		*e = GetHrisEmployeeQueryParamFields(v)

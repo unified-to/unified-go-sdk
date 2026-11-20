@@ -158,6 +158,8 @@ type PropertyHrisPayslipDeduction struct {
 	GarnishmentType *PropertyHrisPayslipDeductionGarnishmentType `json:"garnishment_type,omitempty"`
 	ID              *string                                      `json:"id,omitempty"`
 	IsActive        *bool                                        `json:"is_active,omitempty"`
+	// the payroll system's identifier for the retirement-plan loan this deduction repays
+	LoanIdentifier *string `json:"loan_identifier,omitempty"`
 	// annual maximum employee amount (always money)
 	MaxAmount *float64       `json:"max_amount,omitempty"`
 	Metadata  []HrisMetadata `json:"metadata,omitempty"`
@@ -267,6 +269,13 @@ func (p *PropertyHrisPayslipDeduction) GetIsActive() *bool {
 		return nil
 	}
 	return p.IsActive
+}
+
+func (p *PropertyHrisPayslipDeduction) GetLoanIdentifier() *string {
+	if p == nil {
+		return nil
+	}
+	return p.LoanIdentifier
 }
 
 func (p *PropertyHrisPayslipDeduction) GetMaxAmount() *float64 {

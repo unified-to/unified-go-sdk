@@ -40,13 +40,13 @@ func main() {
     res, err := s.Snapshot.CreateComputeSnapshot(ctx, operations.CreateComputeSnapshotRequest{
         ComputeSnapshot: shared.ComputeSnapshot{
             CreatedAt: types.MustNewTimeFromString("2021-09-24T14:40:06.110Z"),
-            ID: unifiedgosdk.Pointer("8075ac95-23ca-4df4-85af-d9f691adaec1"),
+            ID: unifiedgosdk.Pointer("6d7c701e-2d95-440e-9c59-a4ada50e3e02"),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("snap-alius"),
             SizeMb: unifiedgosdk.Pointer[float64](169984.0),
             Status: shared.ComputeSnapshotStatusDeleting.ToPointer(),
             Type: shared.ComputeSnapshotTypeDisk.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-25T14:26:59.530Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-26T13:53:50.041Z"),
         },
         ConnectionID: "<id>",
     })
@@ -215,13 +215,13 @@ func main() {
     res, err := s.Snapshot.PatchComputeSnapshot(ctx, operations.PatchComputeSnapshotRequest{
         ComputeSnapshot: shared.ComputeSnapshot{
             CreatedAt: types.MustNewTimeFromString("2021-09-24T14:40:06.110Z"),
-            ID: unifiedgosdk.Pointer("8f0f2db2-1cbf-400a-941e-6a9dc116f95c"),
+            ID: unifiedgosdk.Pointer("ddac98a3-e090-443d-81b6-0390e1efeb48"),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("snap-alius"),
             SizeMb: unifiedgosdk.Pointer[float64](169984.0),
             Status: shared.ComputeSnapshotStatusDeleting.ToPointer(),
             Type: shared.ComputeSnapshotTypeDisk.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-25T14:26:59.538Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-26T13:53:50.047Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -337,13 +337,13 @@ func main() {
     res, err := s.Snapshot.UpdateComputeSnapshot(ctx, operations.UpdateComputeSnapshotRequest{
         ComputeSnapshot: shared.ComputeSnapshot{
             CreatedAt: types.MustNewTimeFromString("2021-09-24T14:40:06.110Z"),
-            ID: unifiedgosdk.Pointer("8f0f2db2-1cbf-400a-941e-6a9dc116f95c"),
+            ID: unifiedgosdk.Pointer("ddac98a3-e090-443d-81b6-0390e1efeb48"),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("snap-alius"),
             SizeMb: unifiedgosdk.Pointer[float64](169984.0),
             Status: shared.ComputeSnapshotStatusDeleting.ToPointer(),
             Type: shared.ComputeSnapshotTypeDisk.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-25T14:26:59.538Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-26T13:53:50.047Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

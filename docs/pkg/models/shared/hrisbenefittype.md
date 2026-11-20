@@ -38,3 +38,9 @@ custom := shared.HrisBenefitType("custom_value")
 | `HrisBenefitTypeCommuter`                | COMMUTER                                 |
 | `HrisBenefitTypeDependentCare`           | DEPENDENT_CARE                           |
 | `HrisBenefitTypePension`                 | PENSION                                  |
+| `HrisBenefitTypeRetirementCatchup`       | RETIREMENT_CATCHUP                       |
+| `HrisBenefitTypeRetirementRothCatchup`   | RETIREMENT_ROTH_CATCHUP                  |
+| `HrisBenefitTypeRetirementAfterTax`      | RETIREMENT_AFTER_TAX                     |
+| `HrisBenefitTypeCollegeSavings`          | COLLEGE_SAVINGS                          |
+| `HrisBenefitTypeEarnedWageAccess`        | EARNED_WAGE_ACCESS                       |
+| `HrisBenefitTypeUnionDues`               | UNION_DUES                               |

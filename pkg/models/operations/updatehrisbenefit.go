@@ -27,6 +27,9 @@ const (
 	UpdateHrisBenefitQueryParamFieldsEmployerContributionMaxAmount UpdateHrisBenefitQueryParamFields = "employer_contribution_max_amount"
 	UpdateHrisBenefitQueryParamFieldsCoverageLevel                 UpdateHrisBenefitQueryParamFields = "coverage_level"
 	UpdateHrisBenefitQueryParamFieldsCurrency                      UpdateHrisBenefitQueryParamFields = "currency"
+	UpdateHrisBenefitQueryParamFieldsCode                          UpdateHrisBenefitQueryParamFields = "code"
+	UpdateHrisBenefitQueryParamFieldsRetirementPlanType            UpdateHrisBenefitQueryParamFields = "retirement_plan_type"
+	UpdateHrisBenefitQueryParamFieldsEmployerContributionCategory  UpdateHrisBenefitQueryParamFields = "employer_contribution_category"
 	UpdateHrisBenefitQueryParamFieldsMetadata                      UpdateHrisBenefitQueryParamFields = "metadata"
 	UpdateHrisBenefitQueryParamFieldsRaw                           UpdateHrisBenefitQueryParamFields = "raw"
 )
@@ -69,6 +72,12 @@ func (e *UpdateHrisBenefitQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "coverage_level":
 		fallthrough
 	case "currency":
+		fallthrough
+	case "code":
+		fallthrough
+	case "retirement_plan_type":
+		fallthrough
+	case "employer_contribution_category":
 		fallthrough
 	case "metadata":
 		fallthrough
