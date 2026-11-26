@@ -12,16 +12,16 @@ import (
 type CreateGenaiEmbeddingQueryParamFields string
 
 const (
-	CreateGenaiEmbeddingQueryParamFieldsModelID         CreateGenaiEmbeddingQueryParamFields = "model_id"
-	CreateGenaiEmbeddingQueryParamFieldsContent         CreateGenaiEmbeddingQueryParamFields = "content"
-	CreateGenaiEmbeddingQueryParamFieldsEncondingFormat CreateGenaiEmbeddingQueryParamFields = "enconding_format"
-	CreateGenaiEmbeddingQueryParamFieldsType            CreateGenaiEmbeddingQueryParamFields = "type"
-	CreateGenaiEmbeddingQueryParamFieldsDimension       CreateGenaiEmbeddingQueryParamFields = "dimension"
-	CreateGenaiEmbeddingQueryParamFieldsMaxTokens       CreateGenaiEmbeddingQueryParamFields = "max_tokens"
-	CreateGenaiEmbeddingQueryParamFieldsEmbeddings      CreateGenaiEmbeddingQueryParamFields = "embeddings"
-	CreateGenaiEmbeddingQueryParamFieldsTokensUsed      CreateGenaiEmbeddingQueryParamFields = "tokens_used"
-	CreateGenaiEmbeddingQueryParamFieldsRaw             CreateGenaiEmbeddingQueryParamFields = "raw"
-	CreateGenaiEmbeddingQueryParamFieldsID              CreateGenaiEmbeddingQueryParamFields = "id"
+	CreateGenaiEmbeddingQueryParamFieldsModelID        CreateGenaiEmbeddingQueryParamFields = "model_id"
+	CreateGenaiEmbeddingQueryParamFieldsContent        CreateGenaiEmbeddingQueryParamFields = "content"
+	CreateGenaiEmbeddingQueryParamFieldsEncodingFormat CreateGenaiEmbeddingQueryParamFields = "encoding_format"
+	CreateGenaiEmbeddingQueryParamFieldsType           CreateGenaiEmbeddingQueryParamFields = "type"
+	CreateGenaiEmbeddingQueryParamFieldsDimension      CreateGenaiEmbeddingQueryParamFields = "dimension"
+	CreateGenaiEmbeddingQueryParamFieldsMaxTokens      CreateGenaiEmbeddingQueryParamFields = "max_tokens"
+	CreateGenaiEmbeddingQueryParamFieldsEmbeddings     CreateGenaiEmbeddingQueryParamFields = "embeddings"
+	CreateGenaiEmbeddingQueryParamFieldsTokensUsed     CreateGenaiEmbeddingQueryParamFields = "tokens_used"
+	CreateGenaiEmbeddingQueryParamFieldsRaw            CreateGenaiEmbeddingQueryParamFields = "raw"
+	CreateGenaiEmbeddingQueryParamFieldsID             CreateGenaiEmbeddingQueryParamFields = "id"
 )
 
 func (e CreateGenaiEmbeddingQueryParamFields) ToPointer() *CreateGenaiEmbeddingQueryParamFields {
@@ -37,7 +37,7 @@ func (e *CreateGenaiEmbeddingQueryParamFields) UnmarshalJSON(data []byte) error 
 		fallthrough
 	case "content":
 		fallthrough
-	case "enconding_format":
+	case "encoding_format":
 		fallthrough
 	case "type":
 		fallthrough

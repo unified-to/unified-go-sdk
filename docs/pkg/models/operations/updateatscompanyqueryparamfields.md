@@ -25,4 +25,5 @@ value := operations.UpdateAtsCompanyQueryParamFieldsID
 | `UpdateAtsCompanyQueryParamFieldsParentID`     | parent_id                                      |
 | `UpdateAtsCompanyQueryParamFieldsRecruiterIds` | recruiter_ids                                  |
 | `UpdateAtsCompanyQueryParamFieldsMetadata`     | metadata                                       |
+| `UpdateAtsCompanyQueryParamFieldsFees`         | fees                                           |
 | `UpdateAtsCompanyQueryParamFieldsRaw`          | raw                                            |

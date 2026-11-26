@@ -40,11 +40,11 @@ func main() {
     res, err := s.Key.CreateComputeKey(ctx, operations.CreateComputeKeyRequest{
         ComputeKey: shared.ComputeKey{
             CreatedAt: types.MustNewTimeFromString("2023-08-19T14:31:46.492Z"),
-            ID: unifiedgosdk.Pointer("2289fdc6-07cb-4039-8288-9a39aab79c9e"),
+            ID: unifiedgosdk.Pointer("2d1825a2-72ea-414d-834d-17dfab042554"),
             Metadata: []shared.ComputeMetadata{},
-            Name: unifiedgosdk.Pointer("nienow-secret"),
+            Name: unifiedgosdk.Pointer("huels-secret"),
             Type: shared.ComputeKeyTypeSecret.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-10-17T16:49:33.683Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-19T19:57:27.995Z"),
         },
         ConnectionID: "<id>",
     })
@@ -213,11 +213,11 @@ func main() {
     res, err := s.Key.PatchComputeKey(ctx, operations.PatchComputeKeyRequest{
         ComputeKey: shared.ComputeKey{
             CreatedAt: types.MustNewTimeFromString("2023-08-19T14:31:46.492Z"),
-            ID: unifiedgosdk.Pointer("3d269dd3-b108-461e-af25-e091e969f303"),
+            ID: unifiedgosdk.Pointer("1495e344-ad38-4a26-b6c9-3f7913db260e"),
             Metadata: []shared.ComputeMetadata{},
-            Name: unifiedgosdk.Pointer("nienow-secret"),
+            Name: unifiedgosdk.Pointer("huels-secret"),
             Type: shared.ComputeKeyTypeSecret.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-10-17T16:49:33.686Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-19T19:57:28.001Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -333,11 +333,11 @@ func main() {
     res, err := s.Key.UpdateComputeKey(ctx, operations.UpdateComputeKeyRequest{
         ComputeKey: shared.ComputeKey{
             CreatedAt: types.MustNewTimeFromString("2023-08-19T14:31:46.492Z"),
-            ID: unifiedgosdk.Pointer("3d269dd3-b108-461e-af25-e091e969f303"),
+            ID: unifiedgosdk.Pointer("1495e344-ad38-4a26-b6c9-3f7913db260e"),
             Metadata: []shared.ComputeMetadata{},
-            Name: unifiedgosdk.Pointer("nienow-secret"),
+            Name: unifiedgosdk.Pointer("huels-secret"),
             Type: shared.ComputeKeyTypeSecret.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-10-17T16:49:33.686Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-19T19:57:28.001Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -27,6 +27,9 @@ const (
 	ListPaymentLinksQueryParamFieldsSuccessURL      ListPaymentLinksQueryParamFields = "success_url"
 	ListPaymentLinksQueryParamFieldsMetadata        ListPaymentLinksQueryParamFields = "metadata"
 	ListPaymentLinksQueryParamFieldsRaw             ListPaymentLinksQueryParamFields = "raw"
+	ListPaymentLinksQueryParamFieldsContactName     ListPaymentLinksQueryParamFields = "contact_name"
+	ListPaymentLinksQueryParamFieldsContactEmail    ListPaymentLinksQueryParamFields = "contact_email"
+	ListPaymentLinksQueryParamFieldsContactPhone    ListPaymentLinksQueryParamFields = "contact_phone"
 )
 
 func (e ListPaymentLinksQueryParamFields) ToPointer() *ListPaymentLinksQueryParamFields {
@@ -67,6 +70,12 @@ func (e *ListPaymentLinksQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "contact_name":
+		fallthrough
+	case "contact_email":
+		fallthrough
+	case "contact_phone":
 		*e = ListPaymentLinksQueryParamFields(v)
 		return nil
 	default:

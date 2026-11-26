@@ -2,6 +2,29 @@
 
 package shared
 
+type VirtualWebhookBenefitID string
+
+const (
+	VirtualWebhookBenefitIDSupportedRequired VirtualWebhookBenefitID = "supported-required"
+	VirtualWebhookBenefitIDSupported         VirtualWebhookBenefitID = "supported"
+	VirtualWebhookBenefitIDNotSupported      VirtualWebhookBenefitID = "not-supported"
+)
+
+func (e VirtualWebhookBenefitID) ToPointer() *VirtualWebhookBenefitID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookBenefitID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookBillID string
 
 const (
@@ -1635,6 +1658,29 @@ func (e *VirtualWebhookUserMentionedID) IsExact() bool {
 	return false
 }
 
+type VirtualWebhookVehicleID string
+
+const (
+	VirtualWebhookVehicleIDSupportedRequired VirtualWebhookVehicleID = "supported-required"
+	VirtualWebhookVehicleIDSupported         VirtualWebhookVehicleID = "supported"
+	VirtualWebhookVehicleIDNotSupported      VirtualWebhookVehicleID = "not-supported"
+)
+
+func (e VirtualWebhookVehicleID) ToPointer() *VirtualWebhookVehicleID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookVehicleID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookVisitorID string
 
 const (
@@ -1772,6 +1818,7 @@ type IntegrationSupport struct {
 	ListUpdatedGte          *ListUpdatedGte          `json:"list_updated_gte,omitempty"`
 	ListUserID              *ListUserID              `json:"list_user_id,omitempty"`
 	ListUserMentionedID     *ListUserMentionedID     `json:"list_user_mentioned_id,omitempty"`
+	ListVehicleID           *ListVehicleID           `json:"list_vehicle_id,omitempty"`
 	ListVisitorID           *ListVisitorID           `json:"list_visitor_id,omitempty"`
 	Methods                 map[string]bool          `json:"methods,omitempty"`
 	NativeWebhookCalendarID *NativeWebhookCalendarID `json:"native_webhook_calendar_id,omitempty"`
@@ -1886,6 +1933,7 @@ type IntegrationSupport struct {
 	VirtualWebhookUpdatedGte        *VirtualWebhookUpdatedGte                `json:"virtual_webhook_updated_gte,omitempty"`
 	VirtualWebhookUserID            *VirtualWebhookUserID                    `json:"virtual_webhook_user_id,omitempty"`
 	VirtualWebhookUserMentionedID   *VirtualWebhookUserMentionedID           `json:"virtual_webhook_user_mentioned_id,omitempty"`
+	VirtualWebhookVehicleID         *VirtualWebhookVehicleID                 `json:"virtual_webhook_vehicle_id,omitempty"`
 	VirtualWebhookVisitorID         *VirtualWebhookVisitorID                 `json:"virtual_webhook_visitor_id,omitempty"`
 	WebhookEvents                   *PropertyIntegrationSupportWebhookEvents `json:"webhook_events,omitempty"`
 }
@@ -2681,6 +2729,13 @@ func (i *IntegrationSupport) GetListUserMentionedID() *ListUserMentionedID {
 	return i.ListUserMentionedID
 }
 
+func (i *IntegrationSupport) GetListVehicleID() *ListVehicleID {
+	if i == nil {
+		return nil
+	}
+	return i.ListVehicleID
+}
+
 func (i *IntegrationSupport) GetListVisitorID() *ListVisitorID {
 	if i == nil {
 		return nil
@@ -3470,6 +3525,13 @@ func (i *IntegrationSupport) GetVirtualWebhookUserMentionedID() *VirtualWebhookU
 		return nil
 	}
 	return i.VirtualWebhookUserMentionedID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookVehicleID() *VirtualWebhookVehicleID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookVehicleID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookVisitorID() *VirtualWebhookVisitorID {

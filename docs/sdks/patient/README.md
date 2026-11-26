@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [CreateHealthcarePatient](#createhealthcarepatient) - Create a patient
+* [GetFhirPatient](#getfhirpatient) - Read a Patient
 * [GetHealthcarePatient](#gethealthcarepatient) - Retrieve a patient
+* [ListFhirPatients](#listfhirpatients) - Search Patient resources
 * [ListHealthcarePatients](#listhealthcarepatients) - List all patients
 * [PatchHealthcarePatient](#patchhealthcarepatient) - Update a patient
 * [UpdateHealthcarePatient](#updatehealthcarepatient) - Update a patient
@@ -39,21 +41,21 @@ func main() {
     res, err := s.Patient.CreateHealthcarePatient(ctx, operations.CreateHealthcarePatientRequest{
         HealthcarePatient: shared.HealthcarePatient{
             Address: &shared.PropertyHealthcarePatientAddress{
-                Address1: unifiedgosdk.Pointer("162 Kirlin Mall"),
-                City: unifiedgosdk.Pointer("Dickinsonborough"),
+                Address1: unifiedgosdk.Pointer("3645 Leonardo Place"),
+                City: unifiedgosdk.Pointer("Estelleland"),
                 Country: unifiedgosdk.Pointer("US"),
-                PostalCode: unifiedgosdk.Pointer("54031"),
-                Region: unifiedgosdk.Pointer("Nebraska"),
+                PostalCode: unifiedgosdk.Pointer("99263-6004"),
+                Region: unifiedgosdk.Pointer("New Jersey"),
             },
-            Birthdate: unifiedgosdk.Pointer("2025-03-14"),
+            Birthdate: unifiedgosdk.Pointer("1941-12-25"),
             Contacts: []shared.HealthcarePatientContact{
                 shared.HealthcarePatientContact{
                     Emails: []shared.HealthcareEmail{},
-                    Name: unifiedgosdk.Pointer("Antonia Lebsack"),
+                    Name: unifiedgosdk.Pointer("Ambrose Welch"),
                     Relationship: unifiedgosdk.Pointer("Spouse"),
                     Telephones: []shared.HealthcareTelephone{
                         shared.HealthcareTelephone{
-                            Telephone: "(695) 328-7029 x4412",
+                            Telephone: "323.524.3947 x89014",
                             Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                         },
                     },
@@ -62,33 +64,33 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-06-05T21:08:04.917Z"),
             Emails: []shared.HealthcareEmail{
                 shared.HealthcareEmail{
-                    Email: "alejandrin.parker@icloud.com",
+                    Email: "monroe.bauch@icloud.com",
                     Type: shared.HealthcareEmailTypeHome.ToPointer(),
                 },
             },
-            FirstName: unifiedgosdk.Pointer("Alejandrin"),
+            FirstName: unifiedgosdk.Pointer("Monroe"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("5a581dbe-2a73-4f27-9680-298be2e10459"),
+            ID: unifiedgosdk.Pointer("dff6a86b-b0b3-45a0-9d2e-a048ad9a8c9c"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
-                    Value: "57992636",
+                    Value: "51559512",
                 },
             },
             IsActive: unifiedgosdk.Pointer(true),
             IsDeceased: unifiedgosdk.Pointer(false),
             Language: unifiedgosdk.Pointer("zh"),
-            LastName: unifiedgosdk.Pointer("Parker"),
+            LastName: unifiedgosdk.Pointer("Bauch"),
             Metadata: []shared.HealthcareMetadata{},
-            Name: unifiedgosdk.Pointer("Alejandrin Parker"),
+            Name: unifiedgosdk.Pointer("Monroe Bauch"),
             PractitionerIds: []string{},
             Telephones: []shared.HealthcareTelephone{
                 shared.HealthcareTelephone{
-                    Telephone: "1-219-555-9023 x08295",
+                    Telephone: "1-555-902-3082 x9590",
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-07-21T00:03:20.030Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-07-26T14:14:55.162Z"),
         },
         ConnectionID: "<id>",
     })
@@ -112,6 +114,61 @@ func main() {
 ### Response
 
 **[*operations.CreateHealthcarePatientResponse](../../pkg/models/operations/createhealthcarepatientresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetFhirPatient
+
+Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getFhirPatient" method="get" path="/fhir/{connection_id}/Patient/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Patient.GetFhirPatient(ctx, operations.GetFhirPatientRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.FhirPatient != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetFhirPatientRequest](../../pkg/models/operations/getfhirpatientrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+
+### Response
+
+**[*operations.GetFhirPatientResponse](../../pkg/models/operations/getfhirpatientresponse.md), error**
 
 ### Errors
 
@@ -167,6 +224,60 @@ func main() {
 ### Response
 
 **[*operations.GetHealthcarePatientResponse](../../pkg/models/operations/gethealthcarepatientresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListFhirPatients
+
+Returns a searchset Bundle; follow its next link for more pages. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listFhirPatients" method="get" path="/fhir/{connection_id}/Patient" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Patient.ListFhirPatients(ctx, operations.ListFhirPatientsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.FhirBundle != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.ListFhirPatientsRequest](../../pkg/models/operations/listfhirpatientsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.ListFhirPatientsResponse](../../pkg/models/operations/listfhirpatientsresponse.md), error**
 
 ### Errors
 
@@ -257,21 +368,21 @@ func main() {
     res, err := s.Patient.PatchHealthcarePatient(ctx, operations.PatchHealthcarePatientRequest{
         HealthcarePatient: shared.HealthcarePatient{
             Address: &shared.PropertyHealthcarePatientAddress{
-                Address1: unifiedgosdk.Pointer("162 Kirlin Mall"),
-                City: unifiedgosdk.Pointer("Dickinsonborough"),
+                Address1: unifiedgosdk.Pointer("3645 Leonardo Place"),
+                City: unifiedgosdk.Pointer("Estelleland"),
                 Country: unifiedgosdk.Pointer("US"),
-                PostalCode: unifiedgosdk.Pointer("54031"),
-                Region: unifiedgosdk.Pointer("Nebraska"),
+                PostalCode: unifiedgosdk.Pointer("99263-6004"),
+                Region: unifiedgosdk.Pointer("New Jersey"),
             },
-            Birthdate: unifiedgosdk.Pointer("2025-03-14"),
+            Birthdate: unifiedgosdk.Pointer("1941-12-25"),
             Contacts: []shared.HealthcarePatientContact{
                 shared.HealthcarePatientContact{
                     Emails: []shared.HealthcareEmail{},
-                    Name: unifiedgosdk.Pointer("Antonia Lebsack"),
+                    Name: unifiedgosdk.Pointer("Ambrose Welch"),
                     Relationship: unifiedgosdk.Pointer("Spouse"),
                     Telephones: []shared.HealthcareTelephone{
                         shared.HealthcareTelephone{
-                            Telephone: "(695) 328-7029 x4412",
+                            Telephone: "323.524.3947 x89014",
                             Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                         },
                     },
@@ -280,33 +391,33 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-06-05T21:08:04.917Z"),
             Emails: []shared.HealthcareEmail{
                 shared.HealthcareEmail{
-                    Email: "alejandrin.parker@icloud.com",
+                    Email: "monroe.bauch@icloud.com",
                     Type: shared.HealthcareEmailTypeHome.ToPointer(),
                 },
             },
-            FirstName: unifiedgosdk.Pointer("Alejandrin"),
+            FirstName: unifiedgosdk.Pointer("Monroe"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("28368477-3a1e-435a-bf96-f0bdd978749d"),
+            ID: unifiedgosdk.Pointer("6165f303-7a38-47b9-a8fd-20b049ab394d"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
-                    Value: "57992636",
+                    Value: "51559512",
                 },
             },
             IsActive: unifiedgosdk.Pointer(true),
             IsDeceased: unifiedgosdk.Pointer(false),
             Language: unifiedgosdk.Pointer("zh"),
-            LastName: unifiedgosdk.Pointer("Parker"),
+            LastName: unifiedgosdk.Pointer("Bauch"),
             Metadata: []shared.HealthcareMetadata{},
-            Name: unifiedgosdk.Pointer("Alejandrin Parker"),
+            Name: unifiedgosdk.Pointer("Monroe Bauch"),
             PractitionerIds: []string{},
             Telephones: []shared.HealthcareTelephone{
                 shared.HealthcareTelephone{
-                    Telephone: "1-219-555-9023 x08295",
+                    Telephone: "1-555-902-3082 x9590",
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-07-21T00:03:20.054Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-07-26T14:14:55.203Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -367,21 +478,21 @@ func main() {
     res, err := s.Patient.UpdateHealthcarePatient(ctx, operations.UpdateHealthcarePatientRequest{
         HealthcarePatient: shared.HealthcarePatient{
             Address: &shared.PropertyHealthcarePatientAddress{
-                Address1: unifiedgosdk.Pointer("162 Kirlin Mall"),
-                City: unifiedgosdk.Pointer("Dickinsonborough"),
+                Address1: unifiedgosdk.Pointer("3645 Leonardo Place"),
+                City: unifiedgosdk.Pointer("Estelleland"),
                 Country: unifiedgosdk.Pointer("US"),
-                PostalCode: unifiedgosdk.Pointer("54031"),
-                Region: unifiedgosdk.Pointer("Nebraska"),
+                PostalCode: unifiedgosdk.Pointer("99263-6004"),
+                Region: unifiedgosdk.Pointer("New Jersey"),
             },
-            Birthdate: unifiedgosdk.Pointer("2025-03-14"),
+            Birthdate: unifiedgosdk.Pointer("1941-12-25"),
             Contacts: []shared.HealthcarePatientContact{
                 shared.HealthcarePatientContact{
                     Emails: []shared.HealthcareEmail{},
-                    Name: unifiedgosdk.Pointer("Antonia Lebsack"),
+                    Name: unifiedgosdk.Pointer("Ambrose Welch"),
                     Relationship: unifiedgosdk.Pointer("Spouse"),
                     Telephones: []shared.HealthcareTelephone{
                         shared.HealthcareTelephone{
-                            Telephone: "(695) 328-7029 x4412",
+                            Telephone: "323.524.3947 x89014",
                             Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                         },
                     },
@@ -390,33 +501,33 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-06-05T21:08:04.917Z"),
             Emails: []shared.HealthcareEmail{
                 shared.HealthcareEmail{
-                    Email: "alejandrin.parker@icloud.com",
+                    Email: "monroe.bauch@icloud.com",
                     Type: shared.HealthcareEmailTypeHome.ToPointer(),
                 },
             },
-            FirstName: unifiedgosdk.Pointer("Alejandrin"),
+            FirstName: unifiedgosdk.Pointer("Monroe"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("28368477-3a1e-435a-bf96-f0bdd978749d"),
+            ID: unifiedgosdk.Pointer("6165f303-7a38-47b9-a8fd-20b049ab394d"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
-                    Value: "57992636",
+                    Value: "51559512",
                 },
             },
             IsActive: unifiedgosdk.Pointer(true),
             IsDeceased: unifiedgosdk.Pointer(false),
             Language: unifiedgosdk.Pointer("zh"),
-            LastName: unifiedgosdk.Pointer("Parker"),
+            LastName: unifiedgosdk.Pointer("Bauch"),
             Metadata: []shared.HealthcareMetadata{},
-            Name: unifiedgosdk.Pointer("Alejandrin Parker"),
+            Name: unifiedgosdk.Pointer("Monroe Bauch"),
             PractitionerIds: []string{},
             Telephones: []shared.HealthcareTelephone{
                 shared.HealthcareTelephone{
-                    Telephone: "1-219-555-9023 x08295",
+                    Telephone: "1-555-902-3082 x9590",
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-07-21T00:03:20.054Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-07-26T14:14:55.203Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

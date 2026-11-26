@@ -73,6 +73,8 @@ type AtsJob struct {
 	CreatedAt      *time.Time      `json:"created_at,omitempty"`
 	Description    *string         `json:"description,omitempty"`
 	EmploymentType *EmploymentType `json:"employment_type,omitempty"`
+	// The placement fee agreed with the client for this job
+	Fees []AtsFee `json:"fees,omitempty"`
 	// The departments/divisions/teams that this job belongs to
 	Groups           []AtsGroup     `json:"groups,omitempty"`
 	HiringManagerIds []string       `json:"hiring_manager_ids,omitempty"`
@@ -165,6 +167,13 @@ func (a *AtsJob) GetEmploymentType() *EmploymentType {
 		return nil
 	}
 	return a.EmploymentType
+}
+
+func (a *AtsJob) GetFees() []AtsFee {
+	if a == nil {
+		return nil
+	}
+	return a.Fees
 }
 
 func (a *AtsJob) GetGroups() []AtsGroup {

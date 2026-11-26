@@ -2,20 +2,20 @@
 
 package shared
 
-// Mode - Google: bid_only falsetrue
-type Mode string
+// PropertyAdsCampaignTargetingOptimizationMode - Google: bid_only falsetrue
+type PropertyAdsCampaignTargetingOptimizationMode string
 
 const (
-	ModeTargeting   Mode = "TARGETING"
-	ModeObservation Mode = "OBSERVATION"
+	PropertyAdsCampaignTargetingOptimizationModeTargeting   PropertyAdsCampaignTargetingOptimizationMode = "TARGETING"
+	PropertyAdsCampaignTargetingOptimizationModeObservation PropertyAdsCampaignTargetingOptimizationMode = "OBSERVATION"
 )
 
-func (e Mode) ToPointer() *Mode {
+func (e PropertyAdsCampaignTargetingOptimizationMode) ToPointer() *PropertyAdsCampaignTargetingOptimizationMode {
 	return &e
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *Mode) IsExact() bool {
+func (e *PropertyAdsCampaignTargetingOptimizationMode) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "TARGETING", "OBSERVATION":
@@ -30,8 +30,8 @@ type PropertyAdsCampaignTargetingOptimization struct {
 	AdvantageAudience   *bool `json:"advantage_audience,omitempty"`
 	AdvantagePlacements *bool `json:"advantage_placements,omitempty"`
 	// Google: bid_only falsetrue
-	Mode                              *Mode `json:"mode,omitempty"`
-	TargetingOptimizationExpansionAll *bool `json:"targeting_optimization_expansion_all,omitempty"`
+	Mode                              *PropertyAdsCampaignTargetingOptimizationMode `json:"mode,omitempty"`
+	TargetingOptimizationExpansionAll *bool                                         `json:"targeting_optimization_expansion_all,omitempty"`
 }
 
 func (p *PropertyAdsCampaignTargetingOptimization) GetAdvantageAudience() *bool {
@@ -48,7 +48,7 @@ func (p *PropertyAdsCampaignTargetingOptimization) GetAdvantagePlacements() *boo
 	return p.AdvantagePlacements
 }
 
-func (p *PropertyAdsCampaignTargetingOptimization) GetMode() *Mode {
+func (p *PropertyAdsCampaignTargetingOptimization) GetMode() *PropertyAdsCampaignTargetingOptimizationMode {
 	if p == nil {
 		return nil
 	}

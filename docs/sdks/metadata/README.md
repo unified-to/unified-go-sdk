@@ -6,6 +6,7 @@
 
 * [CreateMetadataMetadata](#createmetadatametadata) - Create a metadata
 * [GetMetadataMetadata](#getmetadatametadata) - Retrieve a metadata
+* [ListFhirMetadatas](#listfhirmetadatas) - Get the CapabilityStatement
 * [ListMetadataMetadatas](#listmetadatametadatas) - List all metadatas
 * [PatchMetadataMetadata](#patchmetadatametadata) - Update a metadata
 * [RemoveMetadataMetadata](#removemetadatametadata) - Remove a metadata
@@ -41,17 +42,17 @@ func main() {
         MetadataMetadata: shared.MetadataMetadata{
             CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
             Format: shared.MetadataMetadataFormatPrice.ToPointer(),
-            ID: unifiedgosdk.Pointer("ae2a3441-cf54-4a23-9f6a-e97e36112d78"),
+            ID: unifiedgosdk.Pointer("c153b1cc-b8e9-447d-a214-d4c41b384040"),
             IsRequired: unifiedgosdk.Pointer(false),
-            Name: "autem",
-            ObjectType: "healthcare_patient",
+            Name: "tollo",
+            ObjectType: "healthcare_document",
             Objects: map[string]string{
 
             },
             Options: []string{},
-            OriginalFormat: unifiedgosdk.Pointer("advoco"),
-            Slug: unifiedgosdk.Pointer("arbustum"),
-            UpdatedAt: types.MustNewTimeFromString("2025-04-12T10:37:36.365Z"),
+            OriginalFormat: unifiedgosdk.Pointer("deputo"),
+            Slug: unifiedgosdk.Pointer("acidus"),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-16T16:59:01.954Z"),
         },
         ConnectionID: "<id>",
     })
@@ -130,6 +131,60 @@ func main() {
 ### Response
 
 **[*operations.GetMetadataMetadataResponse](../../pkg/models/operations/getmetadatametadataresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListFhirMetadatas
+
+The resources, interactions and search parameters this connection's integration supports. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listFhirMetadatas" method="get" path="/fhir/{connection_id}/metadata" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Metadata.ListFhirMetadatas(ctx, operations.ListFhirMetadatasRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.FhirCapabilityStatement != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.ListFhirMetadatasRequest](../../pkg/models/operations/listfhirmetadatasrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.ListFhirMetadatasResponse](../../pkg/models/operations/listfhirmetadatasresponse.md), error**
 
 ### Errors
 
@@ -221,17 +276,17 @@ func main() {
         MetadataMetadata: shared.MetadataMetadata{
             CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
             Format: shared.MetadataMetadataFormatPrice.ToPointer(),
-            ID: unifiedgosdk.Pointer("0fe78a32-fa92-4bcc-9603-140025e1bb94"),
+            ID: unifiedgosdk.Pointer("99f9ab13-11c4-4432-8ea8-0f8a5f8e858c"),
             IsRequired: unifiedgosdk.Pointer(false),
-            Name: "autem",
-            ObjectType: "healthcare_patient",
+            Name: "tollo",
+            ObjectType: "healthcare_document",
             Objects: map[string]string{
 
             },
             Options: []string{},
-            OriginalFormat: unifiedgosdk.Pointer("advoco"),
-            Slug: unifiedgosdk.Pointer("arbustum"),
-            UpdatedAt: types.MustNewTimeFromString("2025-04-12T10:37:36.369Z"),
+            OriginalFormat: unifiedgosdk.Pointer("deputo"),
+            Slug: unifiedgosdk.Pointer("acidus"),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-16T16:59:01.960Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -348,17 +403,17 @@ func main() {
         MetadataMetadata: shared.MetadataMetadata{
             CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
             Format: shared.MetadataMetadataFormatPrice.ToPointer(),
-            ID: unifiedgosdk.Pointer("0fe78a32-fa92-4bcc-9603-140025e1bb94"),
+            ID: unifiedgosdk.Pointer("99f9ab13-11c4-4432-8ea8-0f8a5f8e858c"),
             IsRequired: unifiedgosdk.Pointer(false),
-            Name: "autem",
-            ObjectType: "healthcare_patient",
+            Name: "tollo",
+            ObjectType: "healthcare_document",
             Objects: map[string]string{
 
             },
             Options: []string{},
-            OriginalFormat: unifiedgosdk.Pointer("advoco"),
-            Slug: unifiedgosdk.Pointer("arbustum"),
-            UpdatedAt: types.MustNewTimeFromString("2025-04-12T10:37:36.369Z"),
+            OriginalFormat: unifiedgosdk.Pointer("deputo"),
+            Slug: unifiedgosdk.Pointer("acidus"),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-16T16:59:01.960Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

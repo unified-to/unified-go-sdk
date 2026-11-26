@@ -69,3 +69,4 @@ custom := shared.DetailType("custom_value")
 | `DetailTypePosttaxDeductionCollegeSavings`   | POSTTAX_DEDUCTION_COLLEGE_SAVINGS            |
 | `DetailTypePosttaxDeductionUnionDues`        | POSTTAX_DEDUCTION_UNION_DUES                 |
 | `DetailTypePosttaxDeductionEwaRepayment`     | POSTTAX_DEDUCTION_EWA_REPAYMENT              |
+| `DetailTypeEarningTaxableBenefit`            | EARNING_TAXABLE_BENEFIT                      |

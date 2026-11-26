@@ -2,23 +2,23 @@
 
 package shared
 
-type EncondingFormat string
+type EncodingFormat string
 
 const (
-	EncondingFormatFloat   EncondingFormat = "FLOAT"
-	EncondingFormatUint8   EncondingFormat = "UINT8"
-	EncondingFormatInt8    EncondingFormat = "INT8"
-	EncondingFormatBinary  EncondingFormat = "BINARY"
-	EncondingFormatUbinary EncondingFormat = "UBINARY"
-	EncondingFormatBase64  EncondingFormat = "BASE64"
+	EncodingFormatFloat   EncodingFormat = "FLOAT"
+	EncodingFormatUint8   EncodingFormat = "UINT8"
+	EncodingFormatInt8    EncodingFormat = "INT8"
+	EncodingFormatBinary  EncodingFormat = "BINARY"
+	EncodingFormatUbinary EncodingFormat = "UBINARY"
+	EncodingFormatBase64  EncodingFormat = "BASE64"
 )
 
-func (e EncondingFormat) ToPointer() *EncondingFormat {
+func (e EncodingFormat) ToPointer() *EncodingFormat {
 	return &e
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *EncondingFormat) IsExact() bool {
+func (e *EncodingFormat) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "FLOAT", "UINT8", "INT8", "BINARY", "UBINARY", "BASE64":
@@ -34,13 +34,13 @@ type GenaiEmbedding struct {
 	// 256, 512, 1024, and 1536
 	Dimension *float64 `json:"dimension,omitempty"`
 	// JSON string based off of the format
-	Embeddings      *string          `json:"embeddings,omitempty"`
-	EncondingFormat *EncondingFormat `json:"enconding_format,omitempty"`
-	ID              *string          `json:"id,omitempty"`
-	MaxTokens       *float64         `json:"max_tokens,omitempty"`
-	ModelID         *string          `json:"model_id,omitempty"`
-	Raw             map[string]any   `json:"raw,omitempty"`
-	TokensUsed      *float64         `json:"tokens_used,omitempty"`
+	Embeddings     *string         `json:"embeddings,omitempty"`
+	EncodingFormat *EncodingFormat `json:"encoding_format,omitempty"`
+	ID             *string         `json:"id,omitempty"`
+	MaxTokens      *float64        `json:"max_tokens,omitempty"`
+	ModelID        *string         `json:"model_id,omitempty"`
+	Raw            map[string]any  `json:"raw,omitempty"`
+	TokensUsed     *float64        `json:"tokens_used,omitempty"`
 	// 'SEARCH_DOC' | 'SEARCH_QUERY' | 'CLUSTERING' | 'CLASSIFICATION';
 	Type *string `json:"type,omitempty"`
 }
@@ -66,11 +66,11 @@ func (g *GenaiEmbedding) GetEmbeddings() *string {
 	return g.Embeddings
 }
 
-func (g *GenaiEmbedding) GetEncondingFormat() *EncondingFormat {
+func (g *GenaiEmbedding) GetEncodingFormat() *EncodingFormat {
 	if g == nil {
 		return nil
 	}
-	return g.EncondingFormat
+	return g.EncodingFormat
 }
 
 func (g *GenaiEmbedding) GetID() *string {

@@ -25,4 +25,5 @@ value := operations.CreateAtsCompanyQueryParamFieldsID
 | `CreateAtsCompanyQueryParamFieldsParentID`     | parent_id                                      |
 | `CreateAtsCompanyQueryParamFieldsRecruiterIds` | recruiter_ids                                  |
 | `CreateAtsCompanyQueryParamFieldsMetadata`     | metadata                                       |
+| `CreateAtsCompanyQueryParamFieldsFees`         | fees                                           |
 | `CreateAtsCompanyQueryParamFieldsRaw`          | raw                                            |

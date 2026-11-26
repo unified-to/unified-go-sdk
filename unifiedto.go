@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.961.1
+// Generated from OpenAPI doc version 1.0 and generator version 2.968.1
 
 import (
 	"context"
@@ -163,8 +163,27 @@ type UnifiedTo struct {
 	Database             *Database
 	Query                *Query
 	Record               *Record
+	Dms                  *Dms
+	Appointment          *Appointment
+	Opcode               *Opcode
+	Part                 *Part
+	Partsale             *Partsale
+	Repairorder          *Repairorder
+	Vehicle              *Vehicle
+	Vehiclesale          *Vehiclesale
 	Enrich               *Enrich
 	Person               *Person
+	Fhir                 *Fhir
+	Allergyintolerance   *Allergyintolerance
+	Condition            *Condition
+	Diagnosticreport     *Diagnosticreport
+	Encounter            *Encounter
+	Immunization         *Immunization
+	Medicationrequest    *Medicationrequest
+	Observation          *Observation
+	Patient              *Patient
+	Practitioner         *Practitioner
+	Metadata             *Metadata
 	Forms                *Forms
 	Form                 *Form
 	Submission           *Submission
@@ -178,17 +197,10 @@ type UnifiedTo struct {
 	Task                 *Task
 	Healthcare           *Healthcare
 	Allergy              *Allergy
-	Appointment          *Appointment
 	Careplan             *Careplan
-	Condition            *Condition
 	Coverage             *Coverage
-	Encounter            *Encounter
 	Goal                 *Goal
-	Immunization         *Immunization
 	Medication           *Medication
-	Observation          *Observation
-	Patient              *Patient
-	Practitioner         *Practitioner
 	Procedure            *Procedure
 	Slot                 *Slot
 	Hris                 *Hris
@@ -224,7 +236,6 @@ type UnifiedTo struct {
 	Messaging            *Messaging
 	Channel              *Channel
 	Message              *Message
-	Metadata             *Metadata
 	Passthrough          *Passthrough
 	Payment              *Payment
 	Payout               *Payout
@@ -236,7 +247,9 @@ type UnifiedTo struct {
 	Plm                  *Plm
 	Bomline              *Bomline
 	Change               *Change
-	Part                 *Part
+	Printing             *Printing
+	File                 *File
+	Product              *Product
 	Conversation         *Conversation
 	Guest                *Guest
 	Listing              *Listing
@@ -265,7 +278,6 @@ type UnifiedTo struct {
 	Insight              *Insight
 	Post                 *Post
 	Storage              *Storage
-	File                 *File
 	Ticketing            *Ticketing
 	Customer             *Customer
 	Note                 *Note
@@ -364,11 +376,11 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.39.29",
+		SDKVersion: "0.39.30",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.39.29 2.961.1 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.39.29",
-			GenVersion:        "2.961.1",
+			UserAgent:         "speakeasy-sdk/go 0.39.30 2.968.1 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.39.30",
+			GenVersion:        "2.968.1",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
 		},
@@ -496,8 +508,27 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Database = newDatabase(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Query = newQuery(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Record = newRecord(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Dms = newDms(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Appointment = newAppointment(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Opcode = newOpcode(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Part = newPart(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Partsale = newPartsale(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Repairorder = newRepairorder(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Vehicle = newVehicle(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Vehiclesale = newVehiclesale(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Enrich = newEnrich(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Person = newPerson(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Fhir = newFhir(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Allergyintolerance = newAllergyintolerance(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Condition = newCondition(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Diagnosticreport = newDiagnosticreport(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Encounter = newEncounter(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Immunization = newImmunization(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Medicationrequest = newMedicationrequest(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Observation = newObservation(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Patient = newPatient(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Practitioner = newPractitioner(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Metadata = newMetadata(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Forms = newForms(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Form = newForm(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Submission = newSubmission(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -511,17 +542,10 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Task = newTask(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Healthcare = newHealthcare(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Allergy = newAllergy(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Appointment = newAppointment(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Careplan = newCareplan(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Condition = newCondition(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Coverage = newCoverage(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Encounter = newEncounter(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Goal = newGoal(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Immunization = newImmunization(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Medication = newMedication(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Observation = newObservation(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Patient = newPatient(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Practitioner = newPractitioner(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Procedure = newProcedure(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Slot = newSlot(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Hris = newHris(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -557,7 +581,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Messaging = newMessaging(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Channel = newChannel(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Message = newMessage(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Metadata = newMetadata(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Passthrough = newPassthrough(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Payment = newPayment(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Payout = newPayout(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -569,7 +592,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Plm = newPlm(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Bomline = newBomline(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Change = newChange(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Part = newPart(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Printing = newPrinting(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.File = newFile(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Product = newProduct(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Conversation = newConversation(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Guest = newGuest(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Listing = newListing(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -598,7 +623,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Insight = newInsight(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Post = newPost(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Storage = newStorage(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.File = newFile(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Ticketing = newTicketing(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Customer = newCustomer(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Note = newNote(sdk, sdk.sdkConfiguration, sdk.hooks)

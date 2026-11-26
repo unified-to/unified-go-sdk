@@ -35,4 +35,5 @@ value := operations.CreateCrmDealQueryParamFieldsID
 | `CreateCrmDealQueryParamFieldsCompanyIds`  | company_ids                                |
 | `CreateCrmDealQueryParamFieldsDescription` | description                                |
 | `CreateCrmDealQueryParamFieldsMetadata`    | metadata                                   |
+| `CreateCrmDealQueryParamFieldsVehicleIds`  | vehicle_ids                                |
 | `CreateCrmDealQueryParamFieldsRaw`         | raw                                        |

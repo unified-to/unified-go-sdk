@@ -9,8 +9,14 @@ import (
 
 type PaymentLink struct {
 	Amount *float64 `json:"amount,omitempty"`
+	// payer's email
+	ContactEmail *string `json:"contact_email,omitempty"`
 	// ID of the AccountingContact (reference to AccountingContact)
 	ContactID *string `json:"contact_id,omitempty"`
+	// payer's name, for providers that take payer details on the link rather than a contact_id
+	ContactName *string `json:"contact_name,omitempty"`
+	// payer's phone
+	ContactPhone *string `json:"contact_phone,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt       *time.Time        `json:"created_at,omitempty"`
 	Currency        *string           `json:"currency,omitempty"`
@@ -48,11 +54,32 @@ func (p *PaymentLink) GetAmount() *float64 {
 	return p.Amount
 }
 
+func (p *PaymentLink) GetContactEmail() *string {
+	if p == nil {
+		return nil
+	}
+	return p.ContactEmail
+}
+
 func (p *PaymentLink) GetContactID() *string {
 	if p == nil {
 		return nil
 	}
 	return p.ContactID
+}
+
+func (p *PaymentLink) GetContactName() *string {
+	if p == nil {
+		return nil
+	}
+	return p.ContactName
+}
+
+func (p *PaymentLink) GetContactPhone() *string {
+	if p == nil {
+		return nil
+	}
+	return p.ContactPhone
 }
 
 func (p *PaymentLink) GetCreatedAt() *time.Time {

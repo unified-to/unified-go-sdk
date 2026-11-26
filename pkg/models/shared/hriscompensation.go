@@ -2,6 +2,11 @@
 
 package shared
 
+import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
+	"time"
+)
+
 type HrisCompensationFrequency string
 
 const (
@@ -59,13 +64,28 @@ func (e *HrisCompensationType) IsExact() bool {
 }
 
 type HrisCompensation struct {
-	Amount    *float64                   `json:"amount,omitempty"`
-	Currency  *string                    `json:"currency,omitempty"`
+	Amount   *float64 `json:"amount,omitempty"`
+	Currency *string  `json:"currency,omitempty"`
+	// date this pay stopped (empty = still current) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt     *time.Time                 `json:"end_at,omitempty"`
 	Frequency *HrisCompensationFrequency `json:"frequency,omitempty"`
 	// (reference to HrisGroup)
-	GroupID *string               `json:"group_id,omitempty"`
-	Notes   *string               `json:"notes,omitempty"`
+	GroupID *string `json:"group_id,omitempty"`
+	Notes   *string `json:"notes,omitempty"`
+	// date this pay became effective (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time            `json:"start_at,omitempty"`
 	Type    *HrisCompensationType `json:"type,omitempty"`
+}
+
+func (h HrisCompensation) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(h, "", false)
+}
+
+func (h *HrisCompensation) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &h, "", false, nil); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (h *HrisCompensation) GetAmount() *float64 {
@@ -80,6 +100,13 @@ func (h *HrisCompensation) GetCurrency() *string {
 		return nil
 	}
 	return h.Currency
+}
+
+func (h *HrisCompensation) GetEndAt() *time.Time {
+	if h == nil {
+		return nil
+	}
+	return h.EndAt
 }
 
 func (h *HrisCompensation) GetFrequency() *HrisCompensationFrequency {
@@ -101,6 +128,13 @@ func (h *HrisCompensation) GetNotes() *string {
 		return nil
 	}
 	return h.Notes
+}
+
+func (h *HrisCompensation) GetStartAt() *time.Time {
+	if h == nil {
+		return nil
+	}
+	return h.StartAt
 }
 
 func (h *HrisCompensation) GetType() *HrisCompensationType {

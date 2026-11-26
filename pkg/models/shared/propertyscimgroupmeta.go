@@ -2,19 +2,19 @@
 
 package shared
 
-type ResourceType string
+type PropertyScimGroupMetaResourceType string
 
 const (
-	ResourceTypeUser  ResourceType = "User"
-	ResourceTypeGroup ResourceType = "Group"
+	PropertyScimGroupMetaResourceTypeUser  PropertyScimGroupMetaResourceType = "User"
+	PropertyScimGroupMetaResourceTypeGroup PropertyScimGroupMetaResourceType = "Group"
 )
 
-func (e ResourceType) ToPointer() *ResourceType {
+func (e PropertyScimGroupMetaResourceType) ToPointer() *PropertyScimGroupMetaResourceType {
 	return &e
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *ResourceType) IsExact() bool {
+func (e *PropertyScimGroupMetaResourceType) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "User", "Group":
@@ -25,11 +25,11 @@ func (e *ResourceType) IsExact() bool {
 }
 
 type PropertyScimGroupMeta struct {
-	Created      *string       `json:"created,omitempty"`
-	LastModified *string       `json:"lastModified,omitempty"`
-	Location     *string       `json:"location,omitempty"`
-	ResourceType *ResourceType `json:"resourceType,omitempty"`
-	Version      *string       `json:"version,omitempty"`
+	Created      *string                            `json:"created,omitempty"`
+	LastModified *string                            `json:"lastModified,omitempty"`
+	Location     *string                            `json:"location,omitempty"`
+	ResourceType *PropertyScimGroupMetaResourceType `json:"resourceType,omitempty"`
+	Version      *string                            `json:"version,omitempty"`
 }
 
 func (p *PropertyScimGroupMeta) GetCreated() *string {
@@ -53,7 +53,7 @@ func (p *PropertyScimGroupMeta) GetLocation() *string {
 	return p.Location
 }
 
-func (p *PropertyScimGroupMeta) GetResourceType() *ResourceType {
+func (p *PropertyScimGroupMeta) GetResourceType() *PropertyScimGroupMetaResourceType {
 	if p == nil {
 		return nil
 	}

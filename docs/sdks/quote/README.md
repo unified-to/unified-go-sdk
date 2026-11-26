@@ -5,6 +5,7 @@
 ### Available Operations
 
 * [CreateAccountingQuote](#createaccountingquote) - Create a quote
+* [CreatePrintingQuote](#createprintingquote) - Create a quote
 * [CreatePropertyQuote](#createpropertyquote) - Create a quote
 * [GetAccountingQuote](#getaccountingquote) - Retrieve a quote
 * [ListAccountingQuotes](#listaccountingquotes) - List all quotes
@@ -68,6 +69,136 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## CreatePrintingQuote
+
+Creates a PrintingQuote. Provide the unified PrintingQuote fields in the request body; they are mapped to the provider's API. Returns the created PrintingQuote.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createPrintingQuote" method="post" path="/printing/{connection_id}/quote" example="printing_quote" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Quote.CreatePrintingQuote(ctx, operations.CreatePrintingQuoteRequest{
+        PrintingQuote: shared.PrintingQuote{
+            CreatedAt: types.MustNewTimeFromString("2019-01-02T03:42:06.944Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            ID: unifiedgosdk.Pointer("c0ca1481-d794-43b1-a1f3-80d0a7364419"),
+            Lineitems: []shared.PrintingLineitem{
+                shared.PrintingLineitem{
+                    Files: []shared.PrintingLineitemFile{
+                        shared.PrintingLineitemFile{
+                            Placement: unifiedgosdk.Pointer("default"),
+                            URL: unifiedgosdk.Pointer("https://picsum.photos/seed/0Y5Bjnoiwx/3057/3113"),
+                        },
+                    },
+                    ID: unifiedgosdk.Pointer("1"),
+                    Name: unifiedgosdk.Pointer("Practical Wooden Salad"),
+                    Quantity: unifiedgosdk.Pointer[float64](2.0),
+                    RetailPriceAmount: unifiedgosdk.Pointer[float64](50.83),
+                    UnitPriceAmount: unifiedgosdk.Pointer[float64](21.72),
+                },
+                shared.PrintingLineitem{
+                    Files: []shared.PrintingLineitemFile{
+                        shared.PrintingLineitemFile{
+                            Placement: unifiedgosdk.Pointer("default"),
+                            URL: unifiedgosdk.Pointer("https://picsum.photos/seed/rcPUF/2295/1801"),
+                        },
+                    },
+                    ID: unifiedgosdk.Pointer("2"),
+                    Name: unifiedgosdk.Pointer("Handmade Gold Car"),
+                    Quantity: unifiedgosdk.Pointer[float64](4.0),
+                    RetailPriceAmount: unifiedgosdk.Pointer[float64](35.47),
+                    Sku: unifiedgosdk.Pointer("I79GIBCK"),
+                    UnitPriceAmount: unifiedgosdk.Pointer[float64](17.64),
+                },
+            },
+            Metadata: []shared.PrintingMetadata{},
+            ShippingAddress: &shared.PropertyPrintingQuoteShippingAddress{
+                Address1: unifiedgosdk.Pointer("4290 Garden Street"),
+                Address2: unifiedgosdk.Pointer("Suite 874"),
+                City: unifiedgosdk.Pointer("Cartwrightshire"),
+                CompanyName: unifiedgosdk.Pointer("Kris and Sons"),
+                Country: unifiedgosdk.Pointer("United States"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                Email: unifiedgosdk.Pointer("jada73@hotmail.com"),
+                Name: unifiedgosdk.Pointer("Heaven Crist"),
+                PostalCode: unifiedgosdk.Pointer("92871"),
+                Region: unifiedgosdk.Pointer("North Carolina"),
+                RegionCode: unifiedgosdk.Pointer("KY"),
+                Telephone: unifiedgosdk.Pointer("653.412.8900 x9387"),
+            },
+            ShippingAmount: unifiedgosdk.Pointer[float64](4.69),
+            ShippingMethod: unifiedgosdk.Pointer("STANDARD"),
+            ShippingOptions: []shared.PrintingShippingoption{
+                shared.PrintingShippingoption{
+                    Amount: unifiedgosdk.Pointer[float64](4.69),
+                    Code: unifiedgosdk.Pointer("STANDARD"),
+                    Currency: unifiedgosdk.Pointer("USD"),
+                    MaxDeliveryDays: unifiedgosdk.Pointer[float64](5.0),
+                    MinDeliveryDays: unifiedgosdk.Pointer[float64](3.0),
+                    Name: unifiedgosdk.Pointer("Flat Rate (3-5 business days after fulfillment)"),
+                },
+                shared.PrintingShippingoption{
+                    Amount: unifiedgosdk.Pointer[float64](12.99),
+                    Code: unifiedgosdk.Pointer("EXPRESS"),
+                    Currency: unifiedgosdk.Pointer("USD"),
+                    MaxDeliveryDays: unifiedgosdk.Pointer[float64](3.0),
+                    MinDeliveryDays: unifiedgosdk.Pointer[float64](1.0),
+                    Name: unifiedgosdk.Pointer("Express (1-3 business days after fulfillment)"),
+                },
+            },
+            SubtotalAmount: unifiedgosdk.Pointer[float64](114.0),
+            TaxAmount: unifiedgosdk.Pointer[float64](9.12),
+            TotalAmount: unifiedgosdk.Pointer[float64](127.81),
+            UpdatedAt: types.MustNewTimeFromString("2019-01-02T03:42:06.944Z"),
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.PrintingQuote != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.CreatePrintingQuoteRequest](../../pkg/models/operations/createprintingquoterequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.CreatePrintingQuoteResponse](../../pkg/models/operations/createprintingquoteresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## CreatePropertyQuote
 
 Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are mapped to the provider's API. Returns the created PropertyQuote.
@@ -101,9 +232,9 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-12-18T19:14:11.415Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DepositAmount: unifiedgosdk.Pointer[float64](594.54),
-            EndAt: types.MustNewTimeFromString("2026-12-04"),
+            EndAt: types.MustNewTimeFromString("2026-12-10"),
             Guests: unifiedgosdk.Pointer[float64](2.0),
-            ID: unifiedgosdk.Pointer("f8b15b00-0d94-428e-ab0b-d10dee2cbd4e"),
+            ID: unifiedgosdk.Pointer("79bad845-f909-47ac-8337-dd74eb519111"),
             LineItems: []shared.PropertyLineitem{
                 shared.PropertyLineitem{
                     Amount: unifiedgosdk.Pointer[float64](1665.0),
@@ -125,7 +256,7 @@ func main() {
                     Type: shared.PropertyLineitemTypeTax.ToPointer(),
                 },
             },
-            StartAt: types.MustNewTimeFromString("2026-11-25"),
+            StartAt: types.MustNewTimeFromString("2026-12-01"),
             TotalAmount: unifiedgosdk.Pointer[float64](1981.8),
         },
         ConnectionID: "<id>",

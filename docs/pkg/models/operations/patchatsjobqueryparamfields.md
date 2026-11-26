@@ -44,4 +44,5 @@ value := operations.PatchAtsJobQueryParamFieldsID
 | `PatchAtsJobQueryParamFieldsUserID`                 | user_id                                             |
 | `PatchAtsJobQueryParamFieldsIndustry`               | industry                                            |
 | `PatchAtsJobQueryParamFieldsSummary`                | summary                                             |
+| `PatchAtsJobQueryParamFieldsFees`                   | fees                                                |
 | `PatchAtsJobQueryParamFieldsRaw`                    | raw                                                 |

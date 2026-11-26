@@ -40,12 +40,12 @@ func main() {
     res, err := s.Space.CreateKmsSpace(ctx, operations.CreateKmsSpaceRequest{
         KmsSpace: shared.KmsSpace{
             CreatedAt: types.MustNewTimeFromString("2022-10-31T00:56:54.246Z"),
-            Description: unifiedgosdk.Pointer("Acer."),
-            ID: unifiedgosdk.Pointer("e1b0516d-1c43-479a-9f94-3c6a223921f9"),
+            Description: unifiedgosdk.Pointer("Ante statua defluo virga autem."),
+            ID: unifiedgosdk.Pointer("6893b74d-41f6-45a7-9e0d-9d93ca50ccb2"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.KmsPageMetadata{},
-            Name: unifiedgosdk.Pointer("into nor afore"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-22T20:18:39.167Z"),
+            Name: unifiedgosdk.Pointer("remark"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-27T14:11:10.012Z"),
         },
         ConnectionID: "<id>",
     })
@@ -214,12 +214,12 @@ func main() {
     res, err := s.Space.PatchKmsSpace(ctx, operations.PatchKmsSpaceRequest{
         KmsSpace: shared.KmsSpace{
             CreatedAt: types.MustNewTimeFromString("2022-10-31T00:56:54.246Z"),
-            Description: unifiedgosdk.Pointer("Acer."),
-            ID: unifiedgosdk.Pointer("3c1685f5-3507-467e-a3fe-6e20eaa7b9db"),
+            Description: unifiedgosdk.Pointer("Ante statua defluo virga autem."),
+            ID: unifiedgosdk.Pointer("47a19989-160f-4ac4-995c-48e9b816470c"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.KmsPageMetadata{},
-            Name: unifiedgosdk.Pointer("into nor afore"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-22T20:18:39.172Z"),
+            Name: unifiedgosdk.Pointer("remark"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-27T14:11:10.028Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -335,12 +335,12 @@ func main() {
     res, err := s.Space.UpdateKmsSpace(ctx, operations.UpdateKmsSpaceRequest{
         KmsSpace: shared.KmsSpace{
             CreatedAt: types.MustNewTimeFromString("2022-10-31T00:56:54.246Z"),
-            Description: unifiedgosdk.Pointer("Acer."),
-            ID: unifiedgosdk.Pointer("3c1685f5-3507-467e-a3fe-6e20eaa7b9db"),
+            Description: unifiedgosdk.Pointer("Ante statua defluo virga autem."),
+            ID: unifiedgosdk.Pointer("47a19989-160f-4ac4-995c-48e9b816470c"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.KmsPageMetadata{},
-            Name: unifiedgosdk.Pointer("into nor afore"),
-            UpdatedAt: types.MustNewTimeFromString("2026-01-22T20:18:39.172Z"),
+            Name: unifiedgosdk.Pointer("remark"),
+            UpdatedAt: types.MustNewTimeFromString("2026-01-27T14:11:10.028Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -56,3 +56,6 @@ value := operations.ListUnifiedWorkspaceintegrationsQueryParamCategoriesPassthro
 | `ListUnifiedWorkspaceintegrationsQueryParamCategoriesProperty`     | property                                                           |
 | `ListUnifiedWorkspaceintegrationsQueryParamCategoriesPlm`          | plm                                                                |
 | `ListUnifiedWorkspaceintegrationsQueryParamCategoriesQms`          | qms                                                                |
+| `ListUnifiedWorkspaceintegrationsQueryParamCategoriesDms`          | dms                                                                |
+| `ListUnifiedWorkspaceintegrationsQueryParamCategoriesFhir`         | fhir                                                               |
+| `ListUnifiedWorkspaceintegrationsQueryParamCategoriesPrinting`     | printing                                                           |

@@ -35,4 +35,5 @@ value := operations.ListCrmLeadsQueryParamFieldsID
 | `ListCrmLeadsQueryParamFieldsTitle`         | title                                       |
 | `ListCrmLeadsQueryParamFieldsLinkUrls`      | link_urls                                   |
 | `ListCrmLeadsQueryParamFieldsMetadata`      | metadata                                    |
+| `ListCrmLeadsQueryParamFieldsVehicleIds`    | vehicle_ids                                 |
 | `ListCrmLeadsQueryParamFieldsRaw`           | raw                                         |

@@ -1,0 +1,12 @@
+# FhirBundle
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `Entry`                                                                               | [][shared.FhirBundleEntry](../../../pkg/models/shared/fhirbundleentry.md)             | :heavy_minus_sign:                                                                    | Entry in the bundle - will have a resource or information                             |
+| `Link`                                                                                | [][shared.FhirBundleLink](../../../pkg/models/shared/fhirbundlelink.md)               | :heavy_minus_sign:                                                                    | Links related to this Bundle (self, next)                                             |
+| `ResourceType`                                                                        | [shared.FhirBundleResourceType](../../../pkg/models/shared/fhirbundleresourcetype.md) | :heavy_check_mark:                                                                    | Always Bundle                                                                         |
+| `Total`                                                                               | `*float64`                                                                            | :heavy_minus_sign:                                                                    | Total number of matches, when the integration reports it                              |
+| `Type`                                                                                | [shared.FhirBundleType](../../../pkg/models/shared/fhirbundletype.md)                 | :heavy_check_mark:                                                                    | searchset                                                                             |

@@ -39,13 +39,13 @@ func main() {
 
     res, err := s.Practicearea.CreateLegalPracticearea(ctx, operations.CreateLegalPracticeareaRequest{
         LegalPracticearea: shared.LegalPracticearea{
-            Code: unifiedgosdk.Pointer("QCA"),
+            Code: unifiedgosdk.Pointer("TLV"),
             CreatedAt: types.MustNewTimeFromString("2023-01-28T21:00:26.264Z"),
-            ID: unifiedgosdk.Pointer("a1ccf307-ff9c-446b-8e73-183ee31184a8"),
+            ID: unifiedgosdk.Pointer("6e80e2a8-e98e-4b30-af94-295f90f3fcc3"),
             Metadata: []shared.LegalMetadata{},
-            Name: unifiedgosdk.Pointer("witty Law"),
+            Name: unifiedgosdk.Pointer("advanced Law"),
             Type: shared.LegalPracticeareaTypeEducation.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-17T11:13:07.452Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-21T14:07:42.972Z"),
         },
         ConnectionID: "<id>",
     })
@@ -213,13 +213,13 @@ func main() {
 
     res, err := s.Practicearea.PatchLegalPracticearea(ctx, operations.PatchLegalPracticeareaRequest{
         LegalPracticearea: shared.LegalPracticearea{
-            Code: unifiedgosdk.Pointer("QCA"),
+            Code: unifiedgosdk.Pointer("TLV"),
             CreatedAt: types.MustNewTimeFromString("2023-01-28T21:00:26.264Z"),
-            ID: unifiedgosdk.Pointer("849c484f-1e9f-4847-a0a1-342f4a5c9dfb"),
+            ID: unifiedgosdk.Pointer("8efcf265-64b5-4bb7-bc00-fa8eae79f4b1"),
             Metadata: []shared.LegalMetadata{},
-            Name: unifiedgosdk.Pointer("witty Law"),
+            Name: unifiedgosdk.Pointer("advanced Law"),
             Type: shared.LegalPracticeareaTypeEducation.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-17T11:13:07.458Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-21T14:07:42.982Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -334,13 +334,13 @@ func main() {
 
     res, err := s.Practicearea.UpdateLegalPracticearea(ctx, operations.UpdateLegalPracticeareaRequest{
         LegalPracticearea: shared.LegalPracticearea{
-            Code: unifiedgosdk.Pointer("QCA"),
+            Code: unifiedgosdk.Pointer("TLV"),
             CreatedAt: types.MustNewTimeFromString("2023-01-28T21:00:26.264Z"),
-            ID: unifiedgosdk.Pointer("849c484f-1e9f-4847-a0a1-342f4a5c9dfb"),
+            ID: unifiedgosdk.Pointer("8efcf265-64b5-4bb7-bc00-fa8eae79f4b1"),
             Metadata: []shared.LegalMetadata{},
-            Name: unifiedgosdk.Pointer("witty Law"),
+            Name: unifiedgosdk.Pointer("advanced Law"),
             Type: shared.LegalPracticeareaTypeEducation.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-17T11:13:07.458Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-21T14:07:42.982Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

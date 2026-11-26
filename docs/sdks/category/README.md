@@ -48,12 +48,12 @@ func main() {
     res, err := s.Category.CreateAccountingCategory(ctx, operations.CreateAccountingCategoryRequest{
         AccountingCategory: shared.AccountingCategory{
             CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
-            Description: unifiedgosdk.Pointer("Textus ab thymum labore basium."),
-            ID: unifiedgosdk.Pointer("6d9bdace-407e-4cb5-ba9e-7ad6d3b359d6"),
+            Description: unifiedgosdk.Pointer("Labore basium corrumpo crinis ars subito pecto."),
+            ID: unifiedgosdk.Pointer("d3eec0b9-fcdb-4d47-a61c-7a1c7783d46b"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
-            Name: unifiedgosdk.Pointer("Beauty"),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-01T17:05:16.776Z"),
+            Name: unifiedgosdk.Pointer("Automotive"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-05T17:22:55.933Z"),
         },
         ConnectionID: "<id>",
     })
@@ -113,12 +113,12 @@ func main() {
     res, err := s.Category.CreateTicketingCategory(ctx, operations.CreateTicketingCategoryRequest{
         TicketingCategory: shared.TicketingCategory{
             CreatedAt: types.MustNewTimeFromString("2019-10-19T22:02:51.067Z"),
-            Description: unifiedgosdk.Pointer("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero."),
-            ID: unifiedgosdk.Pointer("5c5e6b17-19b2-49a8-be9e-6a965ac4b403"),
+            Description: unifiedgosdk.Pointer("Carpo depulso torqueo coniecto curtus. Nam optio tendo utroque. Tumultus delectus arbitro amplus. Coerceo clam comprehendo vulnero triduana deprimo cruciamentum talio virtus. Substantia cogito deleo derelinquo traho."),
+            ID: unifiedgosdk.Pointer("469d8fa9-51c6-4a11-873c-7ce915f6bcc8"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.TicketingMetadata{},
-            Name: unifiedgosdk.Pointer("amicitia"),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-09T17:35:18.513Z"),
+            Name: unifiedgosdk.Pointer("tempus"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-15T00:53:05.593Z"),
         },
         ConnectionID: "<id>",
     })
@@ -505,12 +505,12 @@ func main() {
     res, err := s.Category.PatchAccountingCategory(ctx, operations.PatchAccountingCategoryRequest{
         AccountingCategory: shared.AccountingCategory{
             CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
-            Description: unifiedgosdk.Pointer("Textus ab thymum labore basium."),
-            ID: unifiedgosdk.Pointer("60abeb57-c2fd-4a73-a422-763f44b7adc8"),
+            Description: unifiedgosdk.Pointer("Labore basium corrumpo crinis ars subito pecto."),
+            ID: unifiedgosdk.Pointer("8ad31ec9-616a-430a-82f4-2b8248db6e4e"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
-            Name: unifiedgosdk.Pointer("Beauty"),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-01T17:05:16.781Z"),
+            Name: unifiedgosdk.Pointer("Automotive"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-05T17:22:55.941Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -571,12 +571,12 @@ func main() {
     res, err := s.Category.PatchTicketingCategory(ctx, operations.PatchTicketingCategoryRequest{
         TicketingCategory: shared.TicketingCategory{
             CreatedAt: types.MustNewTimeFromString("2019-10-19T22:02:51.067Z"),
-            Description: unifiedgosdk.Pointer("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero."),
-            ID: unifiedgosdk.Pointer("29aade4b-6138-4e5e-8f70-8379d582bb53"),
+            Description: unifiedgosdk.Pointer("Carpo depulso torqueo coniecto curtus. Nam optio tendo utroque. Tumultus delectus arbitro amplus. Coerceo clam comprehendo vulnero triduana deprimo cruciamentum talio virtus. Substantia cogito deleo derelinquo traho."),
+            ID: unifiedgosdk.Pointer("8f2f7a27-70d2-4309-907c-6ac72a8d00ad"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.TicketingMetadata{},
-            Name: unifiedgosdk.Pointer("amicitia"),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-09T17:35:18.519Z"),
+            Name: unifiedgosdk.Pointer("tempus"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-15T00:53:05.599Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -747,12 +747,12 @@ func main() {
     res, err := s.Category.UpdateAccountingCategory(ctx, operations.UpdateAccountingCategoryRequest{
         AccountingCategory: shared.AccountingCategory{
             CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
-            Description: unifiedgosdk.Pointer("Textus ab thymum labore basium."),
-            ID: unifiedgosdk.Pointer("60abeb57-c2fd-4a73-a422-763f44b7adc8"),
+            Description: unifiedgosdk.Pointer("Labore basium corrumpo crinis ars subito pecto."),
+            ID: unifiedgosdk.Pointer("8ad31ec9-616a-430a-82f4-2b8248db6e4e"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
-            Name: unifiedgosdk.Pointer("Beauty"),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-01T17:05:16.781Z"),
+            Name: unifiedgosdk.Pointer("Automotive"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-05T17:22:55.941Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -813,12 +813,12 @@ func main() {
     res, err := s.Category.UpdateTicketingCategory(ctx, operations.UpdateTicketingCategoryRequest{
         TicketingCategory: shared.TicketingCategory{
             CreatedAt: types.MustNewTimeFromString("2019-10-19T22:02:51.067Z"),
-            Description: unifiedgosdk.Pointer("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero."),
-            ID: unifiedgosdk.Pointer("29aade4b-6138-4e5e-8f70-8379d582bb53"),
+            Description: unifiedgosdk.Pointer("Carpo depulso torqueo coniecto curtus. Nam optio tendo utroque. Tumultus delectus arbitro amplus. Coerceo clam comprehendo vulnero triduana deprimo cruciamentum talio virtus. Substantia cogito deleo derelinquo traho."),
+            ID: unifiedgosdk.Pointer("8f2f7a27-70d2-4309-907c-6ac72a8d00ad"),
             IsActive: unifiedgosdk.Pointer(true),
             Metadata: []shared.TicketingMetadata{},
-            Name: unifiedgosdk.Pointer("amicitia"),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-09T17:35:18.519Z"),
+            Name: unifiedgosdk.Pointer("tempus"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-15T00:53:05.599Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

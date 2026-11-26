@@ -41,6 +41,7 @@ const (
 	ListAtsJobsQueryParamFieldsUserID                 ListAtsJobsQueryParamFields = "user_id"
 	ListAtsJobsQueryParamFieldsIndustry               ListAtsJobsQueryParamFields = "industry"
 	ListAtsJobsQueryParamFieldsSummary                ListAtsJobsQueryParamFields = "summary"
+	ListAtsJobsQueryParamFieldsFees                   ListAtsJobsQueryParamFields = "fees"
 	ListAtsJobsQueryParamFieldsRaw                    ListAtsJobsQueryParamFields = "raw"
 )
 
@@ -110,6 +111,8 @@ func (e *ListAtsJobsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "industry":
 		fallthrough
 	case "summary":
+		fallthrough
+	case "fees":
 		fallthrough
 	case "raw":
 		*e = ListAtsJobsQueryParamFields(v)

@@ -40,13 +40,13 @@ func main() {
     res, err := s.Signatory.CreateSigningSignatory(ctx, operations.CreateSigningSignatoryRequest{
         SigningSignatory: shared.SigningSignatory{
             CreatedAt: types.MustNewTimeFromString("2022-04-16T19:25:01.966Z"),
-            Email: unifiedgosdk.Pointer("anais.lakin@icloud.com"),
-            ID: unifiedgosdk.Pointer("81a6b158-4f62-43c4-8003-b2e0f2c5eb63"),
+            Email: unifiedgosdk.Pointer("karli.fisher@icloud.com"),
+            ID: unifiedgosdk.Pointer("e11d7584-8b61-4f73-93ff-9d5f951c79fd"),
             Metadata: []shared.SigningMetadata{},
-            Name: unifiedgosdk.Pointer("Anais Lakin"),
+            Name: unifiedgosdk.Pointer("Karli Fisher"),
             Role: shared.SigningSignatoryRoleSigner.ToPointer(),
             Status: shared.SigningSignatoryStatusError.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-05-31T16:45:23.917Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-06-03T10:50:39.446Z"),
         },
         ConnectionID: "<id>",
     })
@@ -215,13 +215,13 @@ func main() {
     res, err := s.Signatory.PatchSigningSignatory(ctx, operations.PatchSigningSignatoryRequest{
         SigningSignatory: shared.SigningSignatory{
             CreatedAt: types.MustNewTimeFromString("2022-04-16T19:25:01.966Z"),
-            Email: unifiedgosdk.Pointer("anais.lakin@icloud.com"),
-            ID: unifiedgosdk.Pointer("abdcfacb-17a9-41f1-9723-51c994381cb7"),
+            Email: unifiedgosdk.Pointer("karli.fisher@icloud.com"),
+            ID: unifiedgosdk.Pointer("95874f7a-bb76-41c9-ac65-d9d97a4ed0af"),
             Metadata: []shared.SigningMetadata{},
-            Name: unifiedgosdk.Pointer("Anais Lakin"),
+            Name: unifiedgosdk.Pointer("Karli Fisher"),
             Role: shared.SigningSignatoryRoleSigner.ToPointer(),
             Status: shared.SigningSignatoryStatusError.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-05-31T16:45:23.921Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-06-03T10:50:39.452Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -337,13 +337,13 @@ func main() {
     res, err := s.Signatory.UpdateSigningSignatory(ctx, operations.UpdateSigningSignatoryRequest{
         SigningSignatory: shared.SigningSignatory{
             CreatedAt: types.MustNewTimeFromString("2022-04-16T19:25:01.966Z"),
-            Email: unifiedgosdk.Pointer("anais.lakin@icloud.com"),
-            ID: unifiedgosdk.Pointer("abdcfacb-17a9-41f1-9723-51c994381cb7"),
+            Email: unifiedgosdk.Pointer("karli.fisher@icloud.com"),
+            ID: unifiedgosdk.Pointer("95874f7a-bb76-41c9-ac65-d9d97a4ed0af"),
             Metadata: []shared.SigningMetadata{},
-            Name: unifiedgosdk.Pointer("Anais Lakin"),
+            Name: unifiedgosdk.Pointer("Karli Fisher"),
             Role: shared.SigningSignatoryRoleSigner.ToPointer(),
             Status: shared.SigningSignatoryStatusError.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-05-31T16:45:23.921Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-06-03T10:50:39.452Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

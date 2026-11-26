@@ -42,7 +42,9 @@ type AtsOffer struct {
 	CreatorUserID *string `json:"creator_user_id,omitempty"`
 	// newly hired employee id (reference to HrisEmployee)
 	EmployeeUserID *string `json:"employee_user_id,omitempty"`
-	ID             *string `json:"id,omitempty"`
+	// The placement fee earned on this hire
+	Fees []AtsFee `json:"fees,omitempty"`
+	ID   *string  `json:"id,omitempty"`
 	// date the offer was rejected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	RejectedAt *time.Time `json:"rejected_at,omitempty"`
 	// date the offer was sent (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -98,6 +100,13 @@ func (a *AtsOffer) GetEmployeeUserID() *string {
 		return nil
 	}
 	return a.EmployeeUserID
+}
+
+func (a *AtsOffer) GetFees() []AtsFee {
+	if a == nil {
+		return nil
+	}
+	return a.Fees
 }
 
 func (a *AtsOffer) GetID() *string {

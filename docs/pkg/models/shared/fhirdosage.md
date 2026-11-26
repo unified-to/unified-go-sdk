@@ -1,0 +1,10 @@
+# FhirDosage
+
+
+## Fields
+
+| Field                                                                                    | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `DoseAndRate`                                                                            | [][shared.FhirDoseAndRate](../../../pkg/models/shared/fhirdoseandrate.md)                | :heavy_minus_sign:                                                                       | Amount of medication administered                                                        |
+| `Route`                                                                                  | [*shared.PropertyFhirDosageRoute](../../../pkg/models/shared/propertyfhirdosageroute.md) | :heavy_minus_sign:                                                                       | How drug should enter body                                                               |
+| `Text`                                                                                   | `*string`                                                                                | :heavy_minus_sign:                                                                       | Free text dosage instructions e.g. SIG                                                   |

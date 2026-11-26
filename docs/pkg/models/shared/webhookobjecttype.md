@@ -266,3 +266,15 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeQmsAction`                     | qms_action                                       |
 | `WebhookObjectTypeQmsInspection`                 | qms_inspection                                   |
 | `WebhookObjectTypeQmsAudit`                      | qms_audit                                        |
+| `WebhookObjectTypeDmsVehicle`                    | dms_vehicle                                      |
+| `WebhookObjectTypeDmsVehiclesale`                | dms_vehiclesale                                  |
+| `WebhookObjectTypeDmsRepairorder`                | dms_repairorder                                  |
+| `WebhookObjectTypeDmsAppointment`                | dms_appointment                                  |
+| `WebhookObjectTypeDmsPart`                       | dms_part                                         |
+| `WebhookObjectTypeDmsPartsale`                   | dms_partsale                                     |
+| `WebhookObjectTypeDmsOpcode`                     | dms_opcode                                       |
+| `WebhookObjectTypePrintingProduct`               | printing_product                                 |
+| `WebhookObjectTypePrintingTemplate`              | printing_template                                |
+| `WebhookObjectTypePrintingFile`                  | printing_file                                    |
+| `WebhookObjectTypePrintingQuote`                 | printing_quote                                   |
+| `WebhookObjectTypePrintingOrder`                 | printing_order                                   |

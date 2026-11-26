@@ -30,3 +30,6 @@ value := operations.PatchPaymentLinkQueryParamFieldsID
 | `PatchPaymentLinkQueryParamFieldsSuccessURL`      | success_url                                       |
 | `PatchPaymentLinkQueryParamFieldsMetadata`        | metadata                                          |
 | `PatchPaymentLinkQueryParamFieldsRaw`             | raw                                               |
+| `PatchPaymentLinkQueryParamFieldsContactName`     | contact_name                                      |
+| `PatchPaymentLinkQueryParamFieldsContactEmail`    | contact_email                                     |
+| `PatchPaymentLinkQueryParamFieldsContactPhone`    | contact_phone                                     |

@@ -1,0 +1,18 @@
+# PrintingProductVariant
+
+A size / color variant of a blank catalog product
+
+
+## Fields
+
+| Field                                                                          | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `Color`                                                                        | `*string`                                                                      | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `ColorCode`                                                                    | `*string`                                                                      | :heavy_minus_sign:                                                             | Hexadecimal RGB color code                                                     |
+| `Identifier`                                                                   | `*string`                                                                      | :heavy_minus_sign:                                                             | Variant identifier, used as `variant_identifier` on order and quote line items |
+| `ImageURL`                                                                     | `*string`                                                                      | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `IsAvailable`                                                                  | `*bool`                                                                        | :heavy_minus_sign:                                                             | Variant is in stock and can be ordered                                         |
+| `Name`                                                                         | `*string`                                                                      | :heavy_minus_sign:                                                             | Display name                                                                   |
+| `Placements`                                                                   | [][shared.PrintingPlacement](../../../pkg/models/shared/printingplacement.md)  | :heavy_minus_sign:                                                             | Print areas of this variant, when they differ per variant                      |
+| `PriceAmount`                                                                  | `*float64`                                                                     | :heavy_minus_sign:                                                             | Base production price of the blank variant                                     |
+| `Size`                                                                         | `*string`                                                                      | :heavy_minus_sign:                                                             | N/A                                                                            |

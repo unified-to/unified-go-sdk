@@ -41,25 +41,25 @@ func main() {
 
     res, err := s.Member.CreateMartechMember(ctx, operations.CreateMartechMemberRequest{
         MarketingMember: shared.MarketingMember{
-            Company: unifiedgosdk.Pointer("Miller - Franecki"),
+            Company: unifiedgosdk.Pointer("Abernathy - Carter"),
             CreatedAt: types.MustNewTimeFromString("2022-04-15T15:32:38.496Z"),
             Emails: []shared.MarketingEmail{
                 shared.MarketingEmail{
-                    Email: "jude.leffler@hotmail.com",
+                    Email: "jeremy.franecki@hotmail.com",
                     Type: shared.MarketingEmailTypeHome.ToPointer(),
                 },
             },
-            FirstName: unifiedgosdk.Pointer("Jude"),
-            ID: unifiedgosdk.Pointer("81779b78-2cdb-4123-b337-bdc777adb635"),
-            LastName: unifiedgosdk.Pointer("Leffler"),
+            FirstName: unifiedgosdk.Pointer("Jeremy"),
+            ID: unifiedgosdk.Pointer("c61f81b3-39a3-4859-863e-65393718483d"),
+            LastName: unifiedgosdk.Pointer("Franecki"),
             Metadata: []shared.MarketingMetadata{},
-            Name: unifiedgosdk.Pointer("Jude Leffler"),
+            Name: unifiedgosdk.Pointer("Jeremy Franecki"),
             Status: shared.MarketingMemberStatusUnsubscribed.ToPointer(),
             Tags: []string{
-                "adnuo",
-                "verumtamen",
+                "deleniti",
+                "subvenio",
             },
-            UpdatedAt: types.MustNewTimeFromString("2025-07-30T06:55:27.084Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-03T13:12:17.034Z"),
         },
         ConnectionID: "<id>",
     })
@@ -336,25 +336,25 @@ func main() {
 
     res, err := s.Member.PatchMartechMember(ctx, operations.PatchMartechMemberRequest{
         MarketingMember: shared.MarketingMember{
-            Company: unifiedgosdk.Pointer("Miller - Franecki"),
+            Company: unifiedgosdk.Pointer("Abernathy - Carter"),
             CreatedAt: types.MustNewTimeFromString("2022-04-15T15:32:38.496Z"),
             Emails: []shared.MarketingEmail{
                 shared.MarketingEmail{
-                    Email: "jude.leffler@hotmail.com",
+                    Email: "jeremy.franecki@hotmail.com",
                     Type: shared.MarketingEmailTypeHome.ToPointer(),
                 },
             },
-            FirstName: unifiedgosdk.Pointer("Jude"),
-            ID: unifiedgosdk.Pointer("64f3b1f8-e188-42a2-b0ca-178208ce4c53"),
-            LastName: unifiedgosdk.Pointer("Leffler"),
+            FirstName: unifiedgosdk.Pointer("Jeremy"),
+            ID: unifiedgosdk.Pointer("fc9c66b0-a07a-46e6-ada1-4fef2af15598"),
+            LastName: unifiedgosdk.Pointer("Franecki"),
             Metadata: []shared.MarketingMetadata{},
-            Name: unifiedgosdk.Pointer("Jude Leffler"),
+            Name: unifiedgosdk.Pointer("Jeremy Franecki"),
             Status: shared.MarketingMemberStatusUnsubscribed.ToPointer(),
             Tags: []string{
-                "adnuo",
-                "verumtamen",
+                "deleniti",
+                "subvenio",
             },
-            UpdatedAt: types.MustNewTimeFromString("2025-07-30T06:55:27.090Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-03T13:12:17.042Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -469,25 +469,25 @@ func main() {
 
     res, err := s.Member.UpdateMartechMember(ctx, operations.UpdateMartechMemberRequest{
         MarketingMember: shared.MarketingMember{
-            Company: unifiedgosdk.Pointer("Miller - Franecki"),
+            Company: unifiedgosdk.Pointer("Abernathy - Carter"),
             CreatedAt: types.MustNewTimeFromString("2022-04-15T15:32:38.496Z"),
             Emails: []shared.MarketingEmail{
                 shared.MarketingEmail{
-                    Email: "jude.leffler@hotmail.com",
+                    Email: "jeremy.franecki@hotmail.com",
                     Type: shared.MarketingEmailTypeHome.ToPointer(),
                 },
             },
-            FirstName: unifiedgosdk.Pointer("Jude"),
-            ID: unifiedgosdk.Pointer("64f3b1f8-e188-42a2-b0ca-178208ce4c53"),
-            LastName: unifiedgosdk.Pointer("Leffler"),
+            FirstName: unifiedgosdk.Pointer("Jeremy"),
+            ID: unifiedgosdk.Pointer("fc9c66b0-a07a-46e6-ada1-4fef2af15598"),
+            LastName: unifiedgosdk.Pointer("Franecki"),
             Metadata: []shared.MarketingMetadata{},
-            Name: unifiedgosdk.Pointer("Jude Leffler"),
+            Name: unifiedgosdk.Pointer("Jeremy Franecki"),
             Status: shared.MarketingMemberStatusUnsubscribed.ToPointer(),
             Tags: []string{
-                "adnuo",
-                "verumtamen",
+                "deleniti",
+                "subvenio",
             },
-            UpdatedAt: types.MustNewTimeFromString("2025-07-30T06:55:27.090Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-03T13:12:17.042Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

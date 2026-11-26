@@ -1,0 +1,3277 @@
+# Dms
+
+## Overview
+
+### Available Operations
+
+* [CreateDmsAppointment](#createdmsappointment) - Create an appointment
+* [CreateDmsOpcode](#createdmsopcode) - Create an opcode
+* [CreateDmsPart](#createdmspart) - Create a part
+* [CreateDmsPartsale](#createdmspartsale) - Create a partsale
+* [CreateDmsRepairorder](#createdmsrepairorder) - Create a repairorder
+* [CreateDmsVehicle](#createdmsvehicle) - Create a vehicle
+* [CreateDmsVehiclesale](#createdmsvehiclesale) - Create a vehiclesale
+* [GetDmsAppointment](#getdmsappointment) - Retrieve an appointment
+* [GetDmsOpcode](#getdmsopcode) - Retrieve an opcode
+* [GetDmsPart](#getdmspart) - Retrieve a part
+* [GetDmsPartsale](#getdmspartsale) - Retrieve a partsale
+* [GetDmsRepairorder](#getdmsrepairorder) - Retrieve a repairorder
+* [GetDmsVehicle](#getdmsvehicle) - Retrieve a vehicle
+* [GetDmsVehiclesale](#getdmsvehiclesale) - Retrieve a vehiclesale
+* [ListDmsAppointments](#listdmsappointments) - List all appointments
+* [ListDmsOpcodes](#listdmsopcodes) - List all opcodes
+* [ListDmsParts](#listdmsparts) - List all parts
+* [ListDmsPartsales](#listdmspartsales) - List all partsales
+* [ListDmsRepairorders](#listdmsrepairorders) - List all repairorders
+* [ListDmsVehicles](#listdmsvehicles) - List all vehicles
+* [ListDmsVehiclesales](#listdmsvehiclesales) - List all vehiclesales
+* [PatchDmsAppointment](#patchdmsappointment) - Update an appointment
+* [PatchDmsOpcode](#patchdmsopcode) - Update an opcode
+* [PatchDmsPart](#patchdmspart) - Update a part
+* [PatchDmsPartsale](#patchdmspartsale) - Update a partsale
+* [PatchDmsRepairorder](#patchdmsrepairorder) - Update a repairorder
+* [PatchDmsVehicle](#patchdmsvehicle) - Update a vehicle
+* [PatchDmsVehiclesale](#patchdmsvehiclesale) - Update a vehiclesale
+* [RemoveDmsAppointment](#removedmsappointment) - Remove an appointment
+* [UpdateDmsAppointment](#updatedmsappointment) - Update an appointment
+* [UpdateDmsOpcode](#updatedmsopcode) - Update an opcode
+* [UpdateDmsPart](#updatedmspart) - Update a part
+* [UpdateDmsPartsale](#updatedmspartsale) - Update a partsale
+* [UpdateDmsRepairorder](#updatedmsrepairorder) - Update a repairorder
+* [UpdateDmsVehicle](#updatedmsvehicle) - Update a vehicle
+* [UpdateDmsVehiclesale](#updatedmsvehiclesale) - Update a vehiclesale
+
+## CreateDmsAppointment
+
+Creates a DmsAppointment. Provide the unified DmsAppointment fields in the request body; they are mapped to the provider's API. Returns the created DmsAppointment.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createDmsAppointment" method="post" path="/dms/{connection_id}/appointment" example="dms_appointment" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.CreateDmsAppointment(ctx, operations.CreateDmsAppointmentRequest{
+        DmsAppointment: shared.DmsAppointment{
+            CreatedAt: types.MustNewTimeFromString("2023-10-16T02:56:45.127Z"),
+            EndAt: types.MustNewTimeFromString("2026-05-07T05:34:50.610Z"),
+            ID: unifiedgosdk.Pointer("430e7b3d-b8dd-439a-b13f-8bdf6962dc64"),
+            Metadata: []shared.DmsMetadata{},
+            Notes: unifiedgosdk.Pointer("Soluta conitor timidus confero."),
+            Number: unifiedgosdk.Pointer("A541909"),
+            Services: []shared.DmsAppointmentService{
+                shared.DmsAppointmentService{
+                    ID: unifiedgosdk.Pointer("4c2736ea-f419-4ae0-997a-4991e091d780"),
+                    Name: unifiedgosdk.Pointer("Customer concern"),
+                    PayType: shared.PayTypeWarranty.ToPointer(),
+                    TechnicianUserIds: []string{},
+                },
+                shared.DmsAppointmentService{
+                    Complaint: unifiedgosdk.Pointer("Check engine light on"),
+                    ID: unifiedgosdk.Pointer("62b7aa53-d974-49b9-a2ae-a89a668b90aa"),
+                    Name: unifiedgosdk.Pointer("Customer concern"),
+                    PayType: shared.PayTypeCustomer.ToPointer(),
+                    TechnicianUserIds: []string{},
+                },
+                shared.DmsAppointmentService{
+                    Complaint: unifiedgosdk.Pointer("Due for service"),
+                    ID: unifiedgosdk.Pointer("94fb6c00-9163-48d5-8efd-784e629482a9"),
+                    Name: unifiedgosdk.Pointer("Customer concern"),
+                    PayType: shared.PayTypeCustomer.ToPointer(),
+                    TechnicianUserIds: []string{},
+                },
+            },
+            StartAt: types.MustNewTimeFromString("2026-05-06T22:34:50.610Z"),
+            Status: shared.DmsAppointmentStatusCancelled.ToPointer(),
+            TransportType: shared.TransportTypeLoaner.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-06T04:21:26.986Z"),
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsAppointment != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.CreateDmsAppointmentRequest](../../pkg/models/operations/createdmsappointmentrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.CreateDmsAppointmentResponse](../../pkg/models/operations/createdmsappointmentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateDmsOpcode
+
+Creates a DmsOpcode. Provide the unified DmsOpcode fields in the request body; they are mapped to the provider's API. Returns the created DmsOpcode.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createDmsOpcode" method="post" path="/dms/{connection_id}/opcode" example="dms_opcode" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.CreateDmsOpcode(ctx, operations.CreateDmsOpcodeRequest{
+        DmsOpcode: shared.DmsOpcode{
+            Category: unifiedgosdk.Pointer("Electrical"),
+            Code: unifiedgosdk.Pointer("02AUS"),
+            CreatedAt: types.MustNewTimeFromString("2021-01-12T19:03:17.545Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            Description: unifiedgosdk.Pointer("Oil and filter change"),
+            EstimatedHours: unifiedgosdk.Pointer[float64](3.2),
+            FlatRateHours: unifiedgosdk.Pointer[float64](3.5),
+            ID: unifiedgosdk.Pointer("954698ce-2e67-4d5f-83be-eadc7f421dad"),
+            IsActive: unifiedgosdk.Pointer(true),
+            LaborRateAmount: unifiedgosdk.Pointer[float64](216.0),
+            Metadata: []shared.DmsMetadata{},
+            OemCode: unifiedgosdk.Pointer("05604A3"),
+            Parts: []shared.DmsPartline{},
+            PayType: shared.DmsOpcodePayTypeCustomer.ToPointer(),
+            SkillCode: unifiedgosdk.Pointer("A"),
+            Type: shared.DmsOpcodeTypeLabor.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2021-11-03T12:17:13.054Z"),
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsOpcode != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.CreateDmsOpcodeRequest](../../pkg/models/operations/createdmsopcoderequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+
+### Response
+
+**[*operations.CreateDmsOpcodeResponse](../../pkg/models/operations/createdmsopcoderesponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateDmsPart
+
+Creates a DmsPart. Provide the unified DmsPart fields in the request body; they are mapped to the provider's API. Returns the created DmsPart.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createDmsPart" method="post" path="/dms/{connection_id}/part" example="dms_part" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.CreateDmsPart(ctx, operations.CreateDmsPartRequest{
+        DmsPart: shared.DmsPart{
+            BinLocations: []string{
+                "S18-6",
+            },
+            Category: unifiedgosdk.Pointer("Ignition"),
+            CostAmount: unifiedgosdk.Pointer[float64](25.26),
+            CreatedAt: types.MustNewTimeFromString("2020-07-02T08:18:03.858Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            Description: unifiedgosdk.Pointer("Cabin filter"),
+            ID: unifiedgosdk.Pointer("22491d01-65de-41d8-9e74-a6471e5f3b6c"),
+            LastSoldAt: types.MustNewTimeFromString("2020-11-23T02:58:30.888Z"),
+            ListPriceAmount: unifiedgosdk.Pointer[float64](39.61),
+            ManufacturerCode: unifiedgosdk.Pointer("TOY"),
+            MaxStockQuantity: unifiedgosdk.Pointer[float64](21.0),
+            Metadata: []shared.DmsMetadata{},
+            MinStockQuantity: unifiedgosdk.Pointer[float64](3.0),
+            PackQuantity: unifiedgosdk.Pointer[float64](1.0),
+            PartNumber: unifiedgosdk.Pointer("73992-IM3FI"),
+            QuantityAvailable: unifiedgosdk.Pointer[float64](13.0),
+            QuantityOnHand: unifiedgosdk.Pointer[float64](15.0),
+            QuantityOnOrder: unifiedgosdk.Pointer[float64](14.0),
+            SourceCode: unifiedgosdk.Pointer("30"),
+            TradePriceAmount: unifiedgosdk.Pointer[float64](29.05),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-22T17:30:11.488Z"),
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsPart != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.CreateDmsPartRequest](../../pkg/models/operations/createdmspartrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+
+### Response
+
+**[*operations.CreateDmsPartResponse](../../pkg/models/operations/createdmspartresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateDmsPartsale
+
+Creates a DmsPartsale. Provide the unified DmsPartsale fields in the request body; they are mapped to the provider's API. Returns the created DmsPartsale.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createDmsPartsale" method="post" path="/dms/{connection_id}/partsale" example="dms_partsale" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.CreateDmsPartsale(ctx, operations.CreateDmsPartsaleRequest{
+        DmsPartsale: shared.DmsPartsale{
+            CostAmount: unifiedgosdk.Pointer[float64](0.0),
+            CreatedAt: types.MustNewTimeFromString("2023-05-22T03:39:30.335Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            FreightAmount: unifiedgosdk.Pointer[float64](0.0),
+            ID: unifiedgosdk.Pointer("8c8fcfa6-dca2-491c-9275-b6a5936d328a"),
+            Lines: []shared.DmsPartline{
+                shared.DmsPartline{
+                    ID: unifiedgosdk.Pointer("3675b135-1418-494c-bbb8-9b768f22c5cd"),
+                    PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
+                    Quantity: unifiedgosdk.Pointer[float64](5.0),
+                    QuantityOrdered: unifiedgosdk.Pointer[float64](5.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](491.45),
+                    UnitPriceAmount: unifiedgosdk.Pointer[float64](98.29),
+                },
+                shared.DmsPartline{
+                    ID: unifiedgosdk.Pointer("99850d2e-ecde-4846-bc73-e9e1b93c4214"),
+                    PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
+                    Quantity: unifiedgosdk.Pointer[float64](2.0),
+                    QuantityOrdered: unifiedgosdk.Pointer[float64](2.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](240.9),
+                    UnitPriceAmount: unifiedgosdk.Pointer[float64](120.45),
+                },
+                shared.DmsPartline{
+                    ID: unifiedgosdk.Pointer("49f90062-4f84-478b-a7c0-a8caa949741a"),
+                    PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
+                    Quantity: unifiedgosdk.Pointer[float64](3.0),
+                    QuantityOrdered: unifiedgosdk.Pointer[float64](3.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](249.54),
+                    UnitPriceAmount: unifiedgosdk.Pointer[float64](83.18),
+                },
+            },
+            Metadata: []shared.DmsMetadata{},
+            Number: unifiedgosdk.Pointer("P292867"),
+            PayType: shared.DmsPartsalePayTypeCustomer.ToPointer(),
+            Status: shared.DmsPartsaleStatusVoided.ToPointer(),
+            SubtotalAmount: unifiedgosdk.Pointer[float64](981.89),
+            TaxAmount: unifiedgosdk.Pointer[float64](68.73),
+            TotalAmount: unifiedgosdk.Pointer[float64](1050.62),
+            Type: shared.DmsPartsaleTypeSale.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-17T16:03:18.260Z"),
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsPartsale != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.CreateDmsPartsaleRequest](../../pkg/models/operations/createdmspartsalerequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.CreateDmsPartsaleResponse](../../pkg/models/operations/createdmspartsaleresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateDmsRepairorder
+
+Creates a DmsRepairorder. Provide the unified DmsRepairorder fields in the request body; they are mapped to the provider's API. Returns the created DmsRepairorder.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createDmsRepairorder" method="post" path="/dms/{connection_id}/repairorder" example="dms_repairorder" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.CreateDmsRepairorder(ctx, operations.CreateDmsRepairorderRequest{
+        DmsRepairorder: shared.DmsRepairorder{
+            BalanceAmount: unifiedgosdk.Pointer[float64](3193.86),
+            CompletedAt: types.MustNewTimeFromString("2026-11-12T19:17:42.253Z"),
+            CreatedAt: types.MustNewTimeFromString("2022-10-25T15:50:48.007Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            EstimateAmount: unifiedgosdk.Pointer[float64](3264.0),
+            ID: unifiedgosdk.Pointer("7fb2dd80-bcfa-4c94-8c60-b2d2b9a4343a"),
+            Jobs: []shared.DmsRepairorderJob{
+                shared.DmsRepairorderJob{
+                    ActualHours: unifiedgosdk.Pointer[float64](3.6),
+                    Cause: unifiedgosdk.Pointer("Scheduled maintenance"),
+                    Complaint: unifiedgosdk.Pointer("Due for service"),
+                    Correction: unifiedgosdk.Pointer("Aufero cumque vicinus aptus assumenda quis aptus."),
+                    ID: unifiedgosdk.Pointer("a3e10710-eaf3-42c0-a284-3b2bb7a069e7"),
+                    LaborAmount: unifiedgosdk.Pointer[float64](681.6),
+                    Labors: []shared.DmsRepairorderLabor{
+                        shared.DmsRepairorderLabor{
+                            ID: unifiedgosdk.Pointer("9dfd5a09-1f6c-421b-b16c-aed61a5c14e6"),
+                            PayType: shared.DmsRepairorderLaborPayTypeWarranty.ToPointer(),
+                            RateAmount: unifiedgosdk.Pointer[float64](213.0),
+                            SoldHours: unifiedgosdk.Pointer[float64](3.2),
+                            TechnicianUserIds: []string{},
+                            TotalAmount: unifiedgosdk.Pointer[float64](681.6),
+                        },
+                    },
+                    Name: unifiedgosdk.Pointer("Customer concern"),
+                    Number: unifiedgosdk.Pointer("A"),
+                    Parts: []shared.DmsPartline{},
+                    PartsAmount: unifiedgosdk.Pointer[float64](0.0),
+                    PayType: shared.DmsRepairorderJobPayTypeWarranty.ToPointer(),
+                    SoldHours: unifiedgosdk.Pointer[float64](3.2),
+                    Status: shared.DmsRepairorderJobStatusCompleted.ToPointer(),
+                    TechnicianUserIds: []string{},
+                    TotalAmount: unifiedgosdk.Pointer[float64](681.6),
+                },
+                shared.DmsRepairorderJob{
+                    ActualHours: unifiedgosdk.Pointer[float64](3.0),
+                    Cause: unifiedgosdk.Pointer("Worn brake pads"),
+                    Complaint: unifiedgosdk.Pointer("Vibration at highway speed"),
+                    Correction: unifiedgosdk.Pointer("Somnus avaritia utroque vulnero ullam ancilla."),
+                    ID: unifiedgosdk.Pointer("45a15ebd-8869-4c49-9e59-c8ab00015b01"),
+                    LaborAmount: unifiedgosdk.Pointer[float64](446.4),
+                    Labors: []shared.DmsRepairorderLabor{
+                        shared.DmsRepairorderLabor{
+                            ID: unifiedgosdk.Pointer("d18cb9c4-81bd-4cd5-bf32-eff004254921"),
+                            PayType: shared.DmsRepairorderLaborPayTypeWarranty.ToPointer(),
+                            RateAmount: unifiedgosdk.Pointer[float64](144.0),
+                            SoldHours: unifiedgosdk.Pointer[float64](3.1),
+                            TechnicianUserIds: []string{},
+                            TotalAmount: unifiedgosdk.Pointer[float64](446.4),
+                        },
+                    },
+                    Name: unifiedgosdk.Pointer("Customer concern"),
+                    Number: unifiedgosdk.Pointer("B"),
+                    Parts: []shared.DmsPartline{
+                        shared.DmsPartline{
+                            ID: unifiedgosdk.Pointer("a9f379cc-9f18-4ac2-9723-7fda4061e45e"),
+                            PayType: shared.DmsPartlinePayTypeWarranty.ToPointer(),
+                            Quantity: unifiedgosdk.Pointer[float64](4.0),
+                            QuantityOrdered: unifiedgosdk.Pointer[float64](4.0),
+                            TotalAmount: unifiedgosdk.Pointer[float64](890.44),
+                            UnitPriceAmount: unifiedgosdk.Pointer[float64](222.61),
+                        },
+                        shared.DmsPartline{
+                            ID: unifiedgosdk.Pointer("884c9571-00e2-402a-9c24-6522d26444c3"),
+                            PayType: shared.DmsPartlinePayTypeWarranty.ToPointer(),
+                            Quantity: unifiedgosdk.Pointer[float64](2.0),
+                            QuantityOrdered: unifiedgosdk.Pointer[float64](2.0),
+                            TotalAmount: unifiedgosdk.Pointer[float64](216.18),
+                            UnitPriceAmount: unifiedgosdk.Pointer[float64](108.09),
+                        },
+                    },
+                    PartsAmount: unifiedgosdk.Pointer[float64](1106.6200000000001),
+                    PayType: shared.DmsRepairorderJobPayTypeWarranty.ToPointer(),
+                    SoldHours: unifiedgosdk.Pointer[float64](3.1),
+                    Status: shared.DmsRepairorderJobStatusCompleted.ToPointer(),
+                    TechnicianUserIds: []string{},
+                    TotalAmount: unifiedgosdk.Pointer[float64](1553.02),
+                },
+                shared.DmsRepairorderJob{
+                    ActualHours: unifiedgosdk.Pointer[float64](1.5),
+                    Cause: unifiedgosdk.Pointer("Scheduled maintenance"),
+                    Complaint: unifiedgosdk.Pointer("Noise when braking"),
+                    Correction: unifiedgosdk.Pointer("Degero theca natus."),
+                    ID: unifiedgosdk.Pointer("e20d5136-0721-4308-84ca-8e748a8afbe4"),
+                    LaborAmount: unifiedgosdk.Pointer[float64](232.4),
+                    Labors: []shared.DmsRepairorderLabor{
+                        shared.DmsRepairorderLabor{
+                            ID: unifiedgosdk.Pointer("18657ec3-723a-4418-9319-fdb6e7cfd8e9"),
+                            PayType: shared.DmsRepairorderLaborPayTypeCustomer.ToPointer(),
+                            RateAmount: unifiedgosdk.Pointer[float64](166.0),
+                            SoldHours: unifiedgosdk.Pointer[float64](1.4),
+                            TechnicianUserIds: []string{},
+                            TotalAmount: unifiedgosdk.Pointer[float64](232.4),
+                        },
+                    },
+                    Name: unifiedgosdk.Pointer("Customer concern"),
+                    Number: unifiedgosdk.Pointer("C"),
+                    Parts: []shared.DmsPartline{
+                        shared.DmsPartline{
+                            ID: unifiedgosdk.Pointer("b26e6eaa-eadf-444f-b4be-3438e950d554"),
+                            PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
+                            Quantity: unifiedgosdk.Pointer[float64](1.0),
+                            QuantityOrdered: unifiedgosdk.Pointer[float64](1.0),
+                            TotalAmount: unifiedgosdk.Pointer[float64](216.02),
+                            UnitPriceAmount: unifiedgosdk.Pointer[float64](216.02),
+                        },
+                        shared.DmsPartline{
+                            ID: unifiedgosdk.Pointer("775ba6c5-dc39-4dfd-9c5e-f2139c2f652f"),
+                            PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
+                            Quantity: unifiedgosdk.Pointer[float64](2.0),
+                            QuantityOrdered: unifiedgosdk.Pointer[float64](2.0),
+                            TotalAmount: unifiedgosdk.Pointer[float64](358.16),
+                            UnitPriceAmount: unifiedgosdk.Pointer[float64](179.08),
+                        },
+                    },
+                    PartsAmount: unifiedgosdk.Pointer[float64](574.1800000000001),
+                    PayType: shared.DmsRepairorderJobPayTypeCustomer.ToPointer(),
+                    SoldHours: unifiedgosdk.Pointer[float64](1.4),
+                    Status: shared.DmsRepairorderJobStatusCompleted.ToPointer(),
+                    TechnicianUserIds: []string{},
+                    TotalAmount: unifiedgosdk.Pointer[float64](806.58),
+                },
+            },
+            LaborAmount: unifiedgosdk.Pointer[float64](1360.4),
+            Metadata: []shared.DmsMetadata{},
+            MiscAmount: unifiedgosdk.Pointer[float64](35.0),
+            Number: unifiedgosdk.Pointer("143398"),
+            OdometerIn: unifiedgosdk.Pointer[float64](7776.0),
+            OdometerOut: unifiedgosdk.Pointer[float64](7776.0),
+            OdometerUnit: shared.DmsRepairorderOdometerUnitMiles.ToPointer(),
+            OpenedAt: types.MustNewTimeFromString("2025-02-07T19:13:16.323Z"),
+            PartsAmount: unifiedgosdk.Pointer[float64](1680.8000000000002),
+            PayType: shared.DmsRepairorderPayTypeWarranty.ToPointer(),
+            PromisedAt: types.MustNewTimeFromString("2025-02-09T03:13:16.323Z"),
+            PurchaseOrderNumber: unifiedgosdk.Pointer("182743"),
+            Status: shared.DmsRepairorderStatusCompleted.ToPointer(),
+            SubletAmount: unifiedgosdk.Pointer[float64](0.0),
+            TagNumber: unifiedgosdk.Pointer("758"),
+            TaxAmount: unifiedgosdk.Pointer[float64](117.66),
+            TechnicianUserIds: []string{},
+            TotalAmount: unifiedgosdk.Pointer[float64](3193.86),
+            Totals: []shared.DmsRepairorderTotal{
+                shared.DmsRepairorderTotal{
+                    DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+                    LaborAmount: unifiedgosdk.Pointer[float64](232.4),
+                    PartsAmount: unifiedgosdk.Pointer[float64](574.1800000000001),
+                    PayType: shared.DmsRepairorderTotalPayTypeCustomer.ToPointer(),
+                    SubletAmount: unifiedgosdk.Pointer[float64](0.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](806.58),
+                },
+                shared.DmsRepairorderTotal{
+                    DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+                    LaborAmount: unifiedgosdk.Pointer[float64](1128.0),
+                    PartsAmount: unifiedgosdk.Pointer[float64](1106.6200000000001),
+                    PayType: shared.DmsRepairorderTotalPayTypeWarranty.ToPointer(),
+                    SubletAmount: unifiedgosdk.Pointer[float64](0.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](2234.62),
+                },
+            },
+            TransportType: shared.DmsRepairorderTransportTypeLoaner.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-27T22:05:41.752Z"),
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsRepairorder != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.CreateDmsRepairorderRequest](../../pkg/models/operations/createdmsrepairorderrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.CreateDmsRepairorderResponse](../../pkg/models/operations/createdmsrepairorderresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateDmsVehicle
+
+Creates a DmsVehicle. Provide the unified DmsVehicle fields in the request body; they are mapped to the provider's API. Returns the created DmsVehicle.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createDmsVehicle" method="post" path="/dms/{connection_id}/vehicle" example="dms_vehicle" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.CreateDmsVehicle(ctx, operations.CreateDmsVehicleRequest{
+        DmsVehicle: shared.DmsVehicle{
+            BodyStyle: unifiedgosdk.Pointer("Pickup"),
+            Condition: shared.ConditionNew.ToPointer(),
+            CostAmount: unifiedgosdk.Pointer[float64](26498.0),
+            CreatedAt: types.MustNewTimeFromString("2021-02-03T08:01:58.559Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            Description: unifiedgosdk.Pointer("2023 Citroën Silverado"),
+            ExteriorColor: unifiedgosdk.Pointer("lavender"),
+            FuelType: shared.FuelTypeElectric.ToPointer(),
+            ID: unifiedgosdk.Pointer("e02606d0-aeac-4d15-872c-6ad4c43411b3"),
+            ImageUrls: []string{
+                "https://picsum.photos/seed/tOUr5K/1358/1877",
+            },
+            InteriorColor: unifiedgosdk.Pointer("Black"),
+            InternetPriceAmount: unifiedgosdk.Pointer[float64](29526.0),
+            IsActive: unifiedgosdk.Pointer(true),
+            IsCertified: unifiedgosdk.Pointer(false),
+            IsInventory: unifiedgosdk.Pointer(true),
+            IsPublished: unifiedgosdk.Pointer(false),
+            Make: unifiedgosdk.Pointer("Citroën"),
+            Metadata: []shared.DmsMetadata{},
+            Model: unifiedgosdk.Pointer("Silverado"),
+            ModelCode: unifiedgosdk.Pointer("PMU8KI"),
+            MsrpAmount: unifiedgosdk.Pointer[float64](33100.0),
+            Odometer: unifiedgosdk.Pointer[float64](1.0),
+            OdometerUnit: shared.DmsVehicleOdometerUnitMiles.ToPointer(),
+            Options: []shared.DmsVehicleOption{
+                shared.DmsVehicleOption{
+                    Code: unifiedgosdk.Pointer("SXE"),
+                    CostAmount: unifiedgosdk.Pointer[float64](250.0),
+                    Description: unifiedgosdk.Pointer("Tow package"),
+                    PriceAmount: unifiedgosdk.Pointer[float64](1400.0),
+                    Type: shared.DmsVehicleOptionTypeDealer.ToPointer(),
+                },
+                shared.DmsVehicleOption{
+                    Code: unifiedgosdk.Pointer("458"),
+                    CostAmount: unifiedgosdk.Pointer[float64](700.0),
+                    Description: unifiedgosdk.Pointer("Tow package"),
+                    PriceAmount: unifiedgosdk.Pointer[float64](600.0),
+                    Type: shared.DmsVehicleOptionTypeDealer.ToPointer(),
+                },
+            },
+            PriceAmount: unifiedgosdk.Pointer[float64](29926.0),
+            ReceivedAt: types.MustNewTimeFromString("2021-02-03T08:01:58.559Z"),
+            Status: shared.DmsVehicleStatusOther.ToPointer(),
+            StockNumber: unifiedgosdk.Pointer("N24959"),
+            Transmission: unifiedgosdk.Pointer("Manual"),
+            Trim: unifiedgosdk.Pointer("Base"),
+            Type: shared.DmsVehicleTypeSuv.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-03T01:42:43.733Z"),
+            Vin: unifiedgosdk.Pointer("C29ZDU474DDR70955"),
+            WarrantyExpiresAt: types.MustNewTimeFromString("2022-03-28T09:10:09.889Z"),
+            Year: unifiedgosdk.Pointer[float64](2023.0),
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsVehicle != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.CreateDmsVehicleRequest](../../pkg/models/operations/createdmsvehiclerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.CreateDmsVehicleResponse](../../pkg/models/operations/createdmsvehicleresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateDmsVehiclesale
+
+Creates a DmsVehiclesale. Provide the unified DmsVehiclesale fields in the request body; they are mapped to the provider's API. Returns the created DmsVehiclesale.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createDmsVehiclesale" method="post" path="/dms/{connection_id}/vehiclesale" example="dms_vehiclesale" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.CreateDmsVehiclesale(ctx, operations.CreateDmsVehiclesaleRequest{
+        DmsVehiclesale: shared.DmsVehiclesale{
+            BackGrossAmount: unifiedgosdk.Pointer[float64](4565.0),
+            CreatedAt: types.MustNewTimeFromString("2020-04-02T08:14:56.150Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            DownPaymentAmount: unifiedgosdk.Pointer[float64](6700.0),
+            Fees: []shared.DmsVehiclesaleFee{
+                shared.DmsVehiclesaleFee{
+                    CostAmount: unifiedgosdk.Pointer[float64](0.0),
+                    IsCapitalized: unifiedgosdk.Pointer(true),
+                    Name: unifiedgosdk.Pointer("Documentation fee"),
+                    PriceAmount: unifiedgosdk.Pointer[float64](499.0),
+                },
+                shared.DmsVehiclesaleFee{
+                    IsCapitalized: unifiedgosdk.Pointer(false),
+                    Name: unifiedgosdk.Pointer("Title and registration"),
+                    PriceAmount: unifiedgosdk.Pointer[float64](392.0),
+                },
+            },
+            Finance: &shared.PropertyDmsVehiclesaleFinance{
+                FinancedAmount: unifiedgosdk.Pointer[float64](0.0),
+                FirstPaymentAt: types.MustNewTimeFromString("2022-08-16T02:28:39.768Z"),
+                InterestRate: unifiedgosdk.Pointer[float64](6.68),
+                LenderName: unifiedgosdk.Pointer("Mueller, Yundt and Murray Financial"),
+                PaymentAmount: unifiedgosdk.Pointer[float64](339.0),
+                PaymentFrequency: shared.PaymentFrequencyMonthly.ToPointer(),
+                TermMonths: unifiedgosdk.Pointer[float64](72.0),
+            },
+            FinanceType: shared.FinanceTypeFinance.ToPointer(),
+            ID: unifiedgosdk.Pointer("e4fbdb78-a120-48db-8840-3f369b3e43ef"),
+            Metadata: []shared.DmsMetadata{},
+            Number: unifiedgosdk.Pointer("D84591"),
+            Products: []shared.DmsVehiclesaleProduct{
+                shared.DmsVehiclesaleProduct{
+                    ContractNumber: unifiedgosdk.Pointer("B7JN10GVB7"),
+                    CostAmount: unifiedgosdk.Pointer[float64](1320.0),
+                    Name: unifiedgosdk.Pointer("Tire & Wheel"),
+                    PriceAmount: unifiedgosdk.Pointer[float64](3300.0),
+                    Provider: unifiedgosdk.Pointer("Renner and Sons"),
+                    TermMonths: unifiedgosdk.Pointer[float64](60.0),
+                    Type: shared.DmsVehiclesaleProductTypeProtection.ToPointer(),
+                },
+                shared.DmsVehiclesaleProduct{
+                    ContractNumber: unifiedgosdk.Pointer("VIZU7K3VRU"),
+                    CostAmount: unifiedgosdk.Pointer[float64](1115.0),
+                    DeductibleAmount: unifiedgosdk.Pointer[float64](100.0),
+                    Name: unifiedgosdk.Pointer("Platinum Vehicle Service Contract"),
+                    PriceAmount: unifiedgosdk.Pointer[float64](3700.0),
+                    Provider: unifiedgosdk.Pointer("Frami, Wisozk and Gleichner"),
+                    TermMonths: unifiedgosdk.Pointer[float64](72.0),
+                    Type: shared.DmsVehiclesaleProductTypeServiceContract.ToPointer(),
+                },
+            },
+            RebateAmount: unifiedgosdk.Pointer[float64](500.0),
+            SoldAt: types.MustNewTimeFromString("2022-08-14T11:13:05.481Z"),
+            Source: unifiedgosdk.Pointer("Website"),
+            Status: shared.DmsVehiclesaleStatusSold.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            Taxes: []shared.DmsVehiclesaleTax{
+                shared.DmsVehiclesaleTax{
+                    Name: unifiedgosdk.Pointer("State sales tax"),
+                    Rate: unifiedgosdk.Pointer[float64](8.25),
+                    TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+                },
+            },
+            TotalAmount: unifiedgosdk.Pointer[float64](7891.0),
+            TradeIns: []shared.DmsVehiclesaleTradein{},
+            Type: shared.DmsVehiclesaleTypeRetail.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-16T02:25:03.816Z"),
+            Vehicles: []shared.DmsVehiclesaleVehicle{},
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsVehiclesale != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.CreateDmsVehiclesaleRequest](../../pkg/models/operations/createdmsvehiclesalerequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.CreateDmsVehiclesaleResponse](../../pkg/models/operations/createdmsvehiclesaleresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetDmsAppointment
+
+Retrieves a single DmsAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getDmsAppointment" method="get" path="/dms/{connection_id}/appointment/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.GetDmsAppointment(ctx, operations.GetDmsAppointmentRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsAppointment != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.GetDmsAppointmentRequest](../../pkg/models/operations/getdmsappointmentrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.GetDmsAppointmentResponse](../../pkg/models/operations/getdmsappointmentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetDmsOpcode
+
+Retrieves a single DmsOpcode by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getDmsOpcode" method="get" path="/dms/{connection_id}/opcode/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.GetDmsOpcode(ctx, operations.GetDmsOpcodeRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsOpcode != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.GetDmsOpcodeRequest](../../pkg/models/operations/getdmsopcoderequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
+
+### Response
+
+**[*operations.GetDmsOpcodeResponse](../../pkg/models/operations/getdmsopcoderesponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetDmsPart
+
+Retrieves a single DmsPart by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getDmsPart" method="get" path="/dms/{connection_id}/part/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.GetDmsPart(ctx, operations.GetDmsPartRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsPart != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
+| `request`                                                                        | [operations.GetDmsPartRequest](../../pkg/models/operations/getdmspartrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `opts`                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                     | :heavy_minus_sign:                                                               | The options for this request.                                                    |
+
+### Response
+
+**[*operations.GetDmsPartResponse](../../pkg/models/operations/getdmspartresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetDmsPartsale
+
+Retrieves a single DmsPartsale by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getDmsPartsale" method="get" path="/dms/{connection_id}/partsale/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.GetDmsPartsale(ctx, operations.GetDmsPartsaleRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsPartsale != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetDmsPartsaleRequest](../../pkg/models/operations/getdmspartsalerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+
+### Response
+
+**[*operations.GetDmsPartsaleResponse](../../pkg/models/operations/getdmspartsaleresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetDmsRepairorder
+
+Retrieves a single DmsRepairorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getDmsRepairorder" method="get" path="/dms/{connection_id}/repairorder/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.GetDmsRepairorder(ctx, operations.GetDmsRepairorderRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsRepairorder != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.GetDmsRepairorderRequest](../../pkg/models/operations/getdmsrepairorderrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.GetDmsRepairorderResponse](../../pkg/models/operations/getdmsrepairorderresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetDmsVehicle
+
+Retrieves a single DmsVehicle by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getDmsVehicle" method="get" path="/dms/{connection_id}/vehicle/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.GetDmsVehicle(ctx, operations.GetDmsVehicleRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsVehicle != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.GetDmsVehicleRequest](../../pkg/models/operations/getdmsvehiclerequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+
+### Response
+
+**[*operations.GetDmsVehicleResponse](../../pkg/models/operations/getdmsvehicleresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetDmsVehiclesale
+
+Retrieves a single DmsVehiclesale by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getDmsVehiclesale" method="get" path="/dms/{connection_id}/vehiclesale/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.GetDmsVehiclesale(ctx, operations.GetDmsVehiclesaleRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsVehiclesale != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.GetDmsVehiclesaleRequest](../../pkg/models/operations/getdmsvehiclesalerequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.GetDmsVehiclesaleResponse](../../pkg/models/operations/getdmsvehiclesaleresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListDmsAppointments
+
+Returns a list of DmsAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listDmsAppointments" method="get" path="/dms/{connection_id}/appointment" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.ListDmsAppointments(ctx, operations.ListDmsAppointmentsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsAppointments != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.ListDmsAppointmentsRequest](../../pkg/models/operations/listdmsappointmentsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.ListDmsAppointmentsResponse](../../pkg/models/operations/listdmsappointmentsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListDmsOpcodes
+
+Returns a list of DmsOpcodes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listDmsOpcodes" method="get" path="/dms/{connection_id}/opcode" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.ListDmsOpcodes(ctx, operations.ListDmsOpcodesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsOpcodes != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.ListDmsOpcodesRequest](../../pkg/models/operations/listdmsopcodesrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+
+### Response
+
+**[*operations.ListDmsOpcodesResponse](../../pkg/models/operations/listdmsopcodesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListDmsParts
+
+Returns a list of DmsParts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listDmsParts" method="get" path="/dms/{connection_id}/part" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.ListDmsParts(ctx, operations.ListDmsPartsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsParts != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.ListDmsPartsRequest](../../pkg/models/operations/listdmspartsrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
+
+### Response
+
+**[*operations.ListDmsPartsResponse](../../pkg/models/operations/listdmspartsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListDmsPartsales
+
+Returns a list of DmsPartsales. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listDmsPartsales" method="get" path="/dms/{connection_id}/partsale" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.ListDmsPartsales(ctx, operations.ListDmsPartsalesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsPartsales != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.ListDmsPartsalesRequest](../../pkg/models/operations/listdmspartsalesrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.ListDmsPartsalesResponse](../../pkg/models/operations/listdmspartsalesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListDmsRepairorders
+
+Returns a list of DmsRepairorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listDmsRepairorders" method="get" path="/dms/{connection_id}/repairorder" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.ListDmsRepairorders(ctx, operations.ListDmsRepairordersRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsRepairorders != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.ListDmsRepairordersRequest](../../pkg/models/operations/listdmsrepairordersrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.ListDmsRepairordersResponse](../../pkg/models/operations/listdmsrepairordersresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListDmsVehicles
+
+Returns a list of DmsVehicles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listDmsVehicles" method="get" path="/dms/{connection_id}/vehicle" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.ListDmsVehicles(ctx, operations.ListDmsVehiclesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsVehicles != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.ListDmsVehiclesRequest](../../pkg/models/operations/listdmsvehiclesrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+
+### Response
+
+**[*operations.ListDmsVehiclesResponse](../../pkg/models/operations/listdmsvehiclesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListDmsVehiclesales
+
+Returns a list of DmsVehiclesales. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listDmsVehiclesales" method="get" path="/dms/{connection_id}/vehiclesale" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.ListDmsVehiclesales(ctx, operations.ListDmsVehiclesalesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsVehiclesales != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.ListDmsVehiclesalesRequest](../../pkg/models/operations/listdmsvehiclesalesrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.ListDmsVehiclesalesResponse](../../pkg/models/operations/listdmsvehiclesalesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchDmsAppointment
+
+Updates the DmsAppointment identified by `id`. Provide the unified DmsAppointment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchDmsAppointment" method="patch" path="/dms/{connection_id}/appointment/{id}" example="dms_appointment" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.PatchDmsAppointment(ctx, operations.PatchDmsAppointmentRequest{
+        DmsAppointment: shared.DmsAppointment{
+            CreatedAt: types.MustNewTimeFromString("2023-10-16T02:56:45.127Z"),
+            EndAt: types.MustNewTimeFromString("2026-05-07T05:34:50.631Z"),
+            ID: unifiedgosdk.Pointer("4adcb137-9ab5-4404-99d5-9b49a342578e"),
+            Metadata: []shared.DmsMetadata{},
+            Notes: unifiedgosdk.Pointer("Soluta conitor timidus confero."),
+            Number: unifiedgosdk.Pointer("A541909"),
+            Services: []shared.DmsAppointmentService{
+                shared.DmsAppointmentService{
+                    ID: unifiedgosdk.Pointer("d7f17954-4053-4eba-a7be-f4016074238d"),
+                    Name: unifiedgosdk.Pointer("Customer concern"),
+                    PayType: shared.PayTypeWarranty.ToPointer(),
+                    TechnicianUserIds: []string{},
+                },
+                shared.DmsAppointmentService{
+                    Complaint: unifiedgosdk.Pointer("Check engine light on"),
+                    ID: unifiedgosdk.Pointer("52fba2cc-a29d-457d-a0d5-14d9e9481c0d"),
+                    Name: unifiedgosdk.Pointer("Customer concern"),
+                    PayType: shared.PayTypeCustomer.ToPointer(),
+                    TechnicianUserIds: []string{},
+                },
+                shared.DmsAppointmentService{
+                    Complaint: unifiedgosdk.Pointer("Due for service"),
+                    ID: unifiedgosdk.Pointer("c653de4e-1054-4fec-9696-51886b2362b2"),
+                    Name: unifiedgosdk.Pointer("Customer concern"),
+                    PayType: shared.PayTypeCustomer.ToPointer(),
+                    TechnicianUserIds: []string{},
+                },
+            },
+            StartAt: types.MustNewTimeFromString("2026-05-06T22:34:50.631Z"),
+            Status: shared.DmsAppointmentStatusCancelled.ToPointer(),
+            TransportType: shared.TransportTypeLoaner.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-06T04:21:26.998Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsAppointment != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.PatchDmsAppointmentRequest](../../pkg/models/operations/patchdmsappointmentrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.PatchDmsAppointmentResponse](../../pkg/models/operations/patchdmsappointmentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchDmsOpcode
+
+Updates the DmsOpcode identified by `id`. Provide the unified DmsOpcode fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchDmsOpcode" method="patch" path="/dms/{connection_id}/opcode/{id}" example="dms_opcode" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.PatchDmsOpcode(ctx, operations.PatchDmsOpcodeRequest{
+        DmsOpcode: shared.DmsOpcode{
+            Category: unifiedgosdk.Pointer("Electrical"),
+            Code: unifiedgosdk.Pointer("02AUS"),
+            CreatedAt: types.MustNewTimeFromString("2021-01-12T19:03:17.545Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            Description: unifiedgosdk.Pointer("Oil and filter change"),
+            EstimatedHours: unifiedgosdk.Pointer[float64](3.2),
+            FlatRateHours: unifiedgosdk.Pointer[float64](3.5),
+            ID: unifiedgosdk.Pointer("8a3a625f-cde5-4df7-9a76-7e5d72f2508e"),
+            IsActive: unifiedgosdk.Pointer(true),
+            LaborRateAmount: unifiedgosdk.Pointer[float64](216.0),
+            Metadata: []shared.DmsMetadata{},
+            OemCode: unifiedgosdk.Pointer("05604A3"),
+            Parts: []shared.DmsPartline{},
+            PayType: shared.DmsOpcodePayTypeCustomer.ToPointer(),
+            SkillCode: unifiedgosdk.Pointer("A"),
+            Type: shared.DmsOpcodeTypeLabor.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2021-11-03T12:17:13.057Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsOpcode != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.PatchDmsOpcodeRequest](../../pkg/models/operations/patchdmsopcoderequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+
+### Response
+
+**[*operations.PatchDmsOpcodeResponse](../../pkg/models/operations/patchdmsopcoderesponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchDmsPart
+
+Updates the DmsPart identified by `id`. Provide the unified DmsPart fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchDmsPart" method="patch" path="/dms/{connection_id}/part/{id}" example="dms_part" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.PatchDmsPart(ctx, operations.PatchDmsPartRequest{
+        DmsPart: shared.DmsPart{
+            BinLocations: []string{
+                "S18-6",
+            },
+            Category: unifiedgosdk.Pointer("Ignition"),
+            CostAmount: unifiedgosdk.Pointer[float64](25.26),
+            CreatedAt: types.MustNewTimeFromString("2020-07-02T08:18:03.858Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            Description: unifiedgosdk.Pointer("Cabin filter"),
+            ID: unifiedgosdk.Pointer("a76e2648-fede-463a-ae14-9b48940c3d9a"),
+            LastSoldAt: types.MustNewTimeFromString("2020-11-23T02:58:30.889Z"),
+            ListPriceAmount: unifiedgosdk.Pointer[float64](39.61),
+            ManufacturerCode: unifiedgosdk.Pointer("TOY"),
+            MaxStockQuantity: unifiedgosdk.Pointer[float64](21.0),
+            Metadata: []shared.DmsMetadata{},
+            MinStockQuantity: unifiedgosdk.Pointer[float64](3.0),
+            PackQuantity: unifiedgosdk.Pointer[float64](1.0),
+            PartNumber: unifiedgosdk.Pointer("73992-IM3FI"),
+            QuantityAvailable: unifiedgosdk.Pointer[float64](13.0),
+            QuantityOnHand: unifiedgosdk.Pointer[float64](15.0),
+            QuantityOnOrder: unifiedgosdk.Pointer[float64](14.0),
+            SourceCode: unifiedgosdk.Pointer("30"),
+            TradePriceAmount: unifiedgosdk.Pointer[float64](29.05),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-22T17:30:11.498Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsPart != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.PatchDmsPartRequest](../../pkg/models/operations/patchdmspartrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
+
+### Response
+
+**[*operations.PatchDmsPartResponse](../../pkg/models/operations/patchdmspartresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchDmsPartsale
+
+Updates the DmsPartsale identified by `id`. Provide the unified DmsPartsale fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchDmsPartsale" method="patch" path="/dms/{connection_id}/partsale/{id}" example="dms_partsale" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.PatchDmsPartsale(ctx, operations.PatchDmsPartsaleRequest{
+        DmsPartsale: shared.DmsPartsale{
+            CostAmount: unifiedgosdk.Pointer[float64](0.0),
+            CreatedAt: types.MustNewTimeFromString("2023-05-22T03:39:30.335Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            FreightAmount: unifiedgosdk.Pointer[float64](0.0),
+            ID: unifiedgosdk.Pointer("c577212b-856c-4afa-b866-510023c35189"),
+            Lines: []shared.DmsPartline{
+                shared.DmsPartline{
+                    ID: unifiedgosdk.Pointer("95290c13-4f44-4bb9-92a2-e5dab8e5e43f"),
+                    PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
+                    Quantity: unifiedgosdk.Pointer[float64](5.0),
+                    QuantityOrdered: unifiedgosdk.Pointer[float64](5.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](491.45),
+                    UnitPriceAmount: unifiedgosdk.Pointer[float64](98.29),
+                },
+                shared.DmsPartline{
+                    ID: unifiedgosdk.Pointer("08f9368b-c157-4968-bdd5-4af302744207"),
+                    PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
+                    Quantity: unifiedgosdk.Pointer[float64](2.0),
+                    QuantityOrdered: unifiedgosdk.Pointer[float64](2.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](240.9),
+                    UnitPriceAmount: unifiedgosdk.Pointer[float64](120.45),
+                },
+                shared.DmsPartline{
+                    ID: unifiedgosdk.Pointer("8a489684-dbcc-4342-ab28-1caac8e76023"),
+                    PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
+                    Quantity: unifiedgosdk.Pointer[float64](3.0),
+                    QuantityOrdered: unifiedgosdk.Pointer[float64](3.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](249.54),
+                    UnitPriceAmount: unifiedgosdk.Pointer[float64](83.18),
+                },
+            },
+            Metadata: []shared.DmsMetadata{},
+            Number: unifiedgosdk.Pointer("P292867"),
+            PayType: shared.DmsPartsalePayTypeCustomer.ToPointer(),
+            Status: shared.DmsPartsaleStatusVoided.ToPointer(),
+            SubtotalAmount: unifiedgosdk.Pointer[float64](981.89),
+            TaxAmount: unifiedgosdk.Pointer[float64](68.73),
+            TotalAmount: unifiedgosdk.Pointer[float64](1050.62),
+            Type: shared.DmsPartsaleTypeSale.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-17T16:03:18.289Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsPartsale != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.PatchDmsPartsaleRequest](../../pkg/models/operations/patchdmspartsalerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.PatchDmsPartsaleResponse](../../pkg/models/operations/patchdmspartsaleresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchDmsRepairorder
+
+Updates the DmsRepairorder identified by `id`. Provide the unified DmsRepairorder fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchDmsRepairorder" method="patch" path="/dms/{connection_id}/repairorder/{id}" example="dms_repairorder" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.PatchDmsRepairorder(ctx, operations.PatchDmsRepairorderRequest{
+        DmsRepairorder: shared.DmsRepairorder{
+            BalanceAmount: unifiedgosdk.Pointer[float64](3193.86),
+            CompletedAt: types.MustNewTimeFromString("2026-11-12T19:17:42.307Z"),
+            CreatedAt: types.MustNewTimeFromString("2022-10-25T15:50:48.007Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            EstimateAmount: unifiedgosdk.Pointer[float64](3264.0),
+            ID: unifiedgosdk.Pointer("205d65d6-f300-436e-a728-71ed9ac8cb5c"),
+            Jobs: []shared.DmsRepairorderJob{
+                shared.DmsRepairorderJob{
+                    ActualHours: unifiedgosdk.Pointer[float64](3.6),
+                    Cause: unifiedgosdk.Pointer("Scheduled maintenance"),
+                    Complaint: unifiedgosdk.Pointer("Due for service"),
+                    Correction: unifiedgosdk.Pointer("Aufero cumque vicinus aptus assumenda quis aptus."),
+                    ID: unifiedgosdk.Pointer("426874d7-2e52-4162-8b6c-8639c58d18b5"),
+                    LaborAmount: unifiedgosdk.Pointer[float64](681.6),
+                    Labors: []shared.DmsRepairorderLabor{
+                        shared.DmsRepairorderLabor{
+                            ID: unifiedgosdk.Pointer("e1009e6c-2d8d-446c-8269-bcc66c32cd67"),
+                            PayType: shared.DmsRepairorderLaborPayTypeWarranty.ToPointer(),
+                            RateAmount: unifiedgosdk.Pointer[float64](213.0),
+                            SoldHours: unifiedgosdk.Pointer[float64](3.2),
+                            TechnicianUserIds: []string{},
+                            TotalAmount: unifiedgosdk.Pointer[float64](681.6),
+                        },
+                    },
+                    Name: unifiedgosdk.Pointer("Customer concern"),
+                    Number: unifiedgosdk.Pointer("A"),
+                    Parts: []shared.DmsPartline{},
+                    PartsAmount: unifiedgosdk.Pointer[float64](0.0),
+                    PayType: shared.DmsRepairorderJobPayTypeWarranty.ToPointer(),
+                    SoldHours: unifiedgosdk.Pointer[float64](3.2),
+                    Status: shared.DmsRepairorderJobStatusCompleted.ToPointer(),
+                    TechnicianUserIds: []string{},
+                    TotalAmount: unifiedgosdk.Pointer[float64](681.6),
+                },
+                shared.DmsRepairorderJob{
+                    ActualHours: unifiedgosdk.Pointer[float64](3.0),
+                    Cause: unifiedgosdk.Pointer("Worn brake pads"),
+                    Complaint: unifiedgosdk.Pointer("Vibration at highway speed"),
+                    Correction: unifiedgosdk.Pointer("Somnus avaritia utroque vulnero ullam ancilla."),
+                    ID: unifiedgosdk.Pointer("7a124d15-1bb6-491d-adc1-579be2c00466"),
+                    LaborAmount: unifiedgosdk.Pointer[float64](446.4),
+                    Labors: []shared.DmsRepairorderLabor{
+                        shared.DmsRepairorderLabor{
+                            ID: unifiedgosdk.Pointer("bf400c19-1912-4255-b38c-bdc5cb87abf6"),
+                            PayType: shared.DmsRepairorderLaborPayTypeWarranty.ToPointer(),
+                            RateAmount: unifiedgosdk.Pointer[float64](144.0),
+                            SoldHours: unifiedgosdk.Pointer[float64](3.1),
+                            TechnicianUserIds: []string{},
+                            TotalAmount: unifiedgosdk.Pointer[float64](446.4),
+                        },
+                    },
+                    Name: unifiedgosdk.Pointer("Customer concern"),
+                    Number: unifiedgosdk.Pointer("B"),
+                    Parts: []shared.DmsPartline{
+                        shared.DmsPartline{
+                            ID: unifiedgosdk.Pointer("5d8d7099-cdda-4146-b08c-46d84fba20a8"),
+                            PayType: shared.DmsPartlinePayTypeWarranty.ToPointer(),
+                            Quantity: unifiedgosdk.Pointer[float64](4.0),
+                            QuantityOrdered: unifiedgosdk.Pointer[float64](4.0),
+                            TotalAmount: unifiedgosdk.Pointer[float64](890.44),
+                            UnitPriceAmount: unifiedgosdk.Pointer[float64](222.61),
+                        },
+                        shared.DmsPartline{
+                            ID: unifiedgosdk.Pointer("9a7d805a-b9d9-4663-86e4-0e9b32dba051"),
+                            PayType: shared.DmsPartlinePayTypeWarranty.ToPointer(),
+                            Quantity: unifiedgosdk.Pointer[float64](2.0),
+                            QuantityOrdered: unifiedgosdk.Pointer[float64](2.0),
+                            TotalAmount: unifiedgosdk.Pointer[float64](216.18),
+                            UnitPriceAmount: unifiedgosdk.Pointer[float64](108.09),
+                        },
+                    },
+                    PartsAmount: unifiedgosdk.Pointer[float64](1106.6200000000001),
+                    PayType: shared.DmsRepairorderJobPayTypeWarranty.ToPointer(),
+                    SoldHours: unifiedgosdk.Pointer[float64](3.1),
+                    Status: shared.DmsRepairorderJobStatusCompleted.ToPointer(),
+                    TechnicianUserIds: []string{},
+                    TotalAmount: unifiedgosdk.Pointer[float64](1553.02),
+                },
+                shared.DmsRepairorderJob{
+                    ActualHours: unifiedgosdk.Pointer[float64](1.5),
+                    Cause: unifiedgosdk.Pointer("Scheduled maintenance"),
+                    Complaint: unifiedgosdk.Pointer("Noise when braking"),
+                    Correction: unifiedgosdk.Pointer("Degero theca natus."),
+                    ID: unifiedgosdk.Pointer("8fe8640a-c7a2-4ad5-86ef-a016db57c58a"),
+                    LaborAmount: unifiedgosdk.Pointer[float64](232.4),
+                    Labors: []shared.DmsRepairorderLabor{
+                        shared.DmsRepairorderLabor{
+                            ID: unifiedgosdk.Pointer("1e1d8015-f3f9-4d90-bede-5f2b99783e47"),
+                            PayType: shared.DmsRepairorderLaborPayTypeCustomer.ToPointer(),
+                            RateAmount: unifiedgosdk.Pointer[float64](166.0),
+                            SoldHours: unifiedgosdk.Pointer[float64](1.4),
+                            TechnicianUserIds: []string{},
+                            TotalAmount: unifiedgosdk.Pointer[float64](232.4),
+                        },
+                    },
+                    Name: unifiedgosdk.Pointer("Customer concern"),
+                    Number: unifiedgosdk.Pointer("C"),
+                    Parts: []shared.DmsPartline{
+                        shared.DmsPartline{
+                            ID: unifiedgosdk.Pointer("9237d282-5b87-4e09-bb1f-363fc2a6296e"),
+                            PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
+                            Quantity: unifiedgosdk.Pointer[float64](1.0),
+                            QuantityOrdered: unifiedgosdk.Pointer[float64](1.0),
+                            TotalAmount: unifiedgosdk.Pointer[float64](216.02),
+                            UnitPriceAmount: unifiedgosdk.Pointer[float64](216.02),
+                        },
+                        shared.DmsPartline{
+                            ID: unifiedgosdk.Pointer("884766ed-b7f1-4902-9a06-1a0837b87653"),
+                            PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
+                            Quantity: unifiedgosdk.Pointer[float64](2.0),
+                            QuantityOrdered: unifiedgosdk.Pointer[float64](2.0),
+                            TotalAmount: unifiedgosdk.Pointer[float64](358.16),
+                            UnitPriceAmount: unifiedgosdk.Pointer[float64](179.08),
+                        },
+                    },
+                    PartsAmount: unifiedgosdk.Pointer[float64](574.1800000000001),
+                    PayType: shared.DmsRepairorderJobPayTypeCustomer.ToPointer(),
+                    SoldHours: unifiedgosdk.Pointer[float64](1.4),
+                    Status: shared.DmsRepairorderJobStatusCompleted.ToPointer(),
+                    TechnicianUserIds: []string{},
+                    TotalAmount: unifiedgosdk.Pointer[float64](806.58),
+                },
+            },
+            LaborAmount: unifiedgosdk.Pointer[float64](1360.4),
+            Metadata: []shared.DmsMetadata{},
+            MiscAmount: unifiedgosdk.Pointer[float64](35.0),
+            Number: unifiedgosdk.Pointer("143398"),
+            OdometerIn: unifiedgosdk.Pointer[float64](7776.0),
+            OdometerOut: unifiedgosdk.Pointer[float64](7776.0),
+            OdometerUnit: shared.DmsRepairorderOdometerUnitMiles.ToPointer(),
+            OpenedAt: types.MustNewTimeFromString("2025-02-07T19:13:16.353Z"),
+            PartsAmount: unifiedgosdk.Pointer[float64](1680.8000000000002),
+            PayType: shared.DmsRepairorderPayTypeWarranty.ToPointer(),
+            PromisedAt: types.MustNewTimeFromString("2025-02-09T03:13:16.353Z"),
+            PurchaseOrderNumber: unifiedgosdk.Pointer("182743"),
+            Status: shared.DmsRepairorderStatusCompleted.ToPointer(),
+            SubletAmount: unifiedgosdk.Pointer[float64](0.0),
+            TagNumber: unifiedgosdk.Pointer("758"),
+            TaxAmount: unifiedgosdk.Pointer[float64](117.66),
+            TechnicianUserIds: []string{},
+            TotalAmount: unifiedgosdk.Pointer[float64](3193.86),
+            Totals: []shared.DmsRepairorderTotal{
+                shared.DmsRepairorderTotal{
+                    DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+                    LaborAmount: unifiedgosdk.Pointer[float64](232.4),
+                    PartsAmount: unifiedgosdk.Pointer[float64](574.1800000000001),
+                    PayType: shared.DmsRepairorderTotalPayTypeCustomer.ToPointer(),
+                    SubletAmount: unifiedgosdk.Pointer[float64](0.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](806.58),
+                },
+                shared.DmsRepairorderTotal{
+                    DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+                    LaborAmount: unifiedgosdk.Pointer[float64](1128.0),
+                    PartsAmount: unifiedgosdk.Pointer[float64](1106.6200000000001),
+                    PayType: shared.DmsRepairorderTotalPayTypeWarranty.ToPointer(),
+                    SubletAmount: unifiedgosdk.Pointer[float64](0.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](2234.62),
+                },
+            },
+            TransportType: shared.DmsRepairorderTransportTypeLoaner.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-27T22:05:41.793Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsRepairorder != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.PatchDmsRepairorderRequest](../../pkg/models/operations/patchdmsrepairorderrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.PatchDmsRepairorderResponse](../../pkg/models/operations/patchdmsrepairorderresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchDmsVehicle
+
+Updates the DmsVehicle identified by `id`. Provide the unified DmsVehicle fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchDmsVehicle" method="patch" path="/dms/{connection_id}/vehicle/{id}" example="dms_vehicle" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.PatchDmsVehicle(ctx, operations.PatchDmsVehicleRequest{
+        DmsVehicle: shared.DmsVehicle{
+            BodyStyle: unifiedgosdk.Pointer("Pickup"),
+            Condition: shared.ConditionNew.ToPointer(),
+            CostAmount: unifiedgosdk.Pointer[float64](26498.0),
+            CreatedAt: types.MustNewTimeFromString("2021-02-03T08:01:58.559Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            Description: unifiedgosdk.Pointer("2023 Citroën Silverado"),
+            ExteriorColor: unifiedgosdk.Pointer("lavender"),
+            FuelType: shared.FuelTypeElectric.ToPointer(),
+            ID: unifiedgosdk.Pointer("79085b50-74a7-4f1d-8d69-d4979c6610bf"),
+            ImageUrls: []string{
+                "https://picsum.photos/seed/tOUr5K/1358/1877",
+            },
+            InteriorColor: unifiedgosdk.Pointer("Black"),
+            InternetPriceAmount: unifiedgosdk.Pointer[float64](29526.0),
+            IsActive: unifiedgosdk.Pointer(true),
+            IsCertified: unifiedgosdk.Pointer(false),
+            IsInventory: unifiedgosdk.Pointer(true),
+            IsPublished: unifiedgosdk.Pointer(false),
+            Make: unifiedgosdk.Pointer("Citroën"),
+            Metadata: []shared.DmsMetadata{},
+            Model: unifiedgosdk.Pointer("Silverado"),
+            ModelCode: unifiedgosdk.Pointer("PMU8KI"),
+            MsrpAmount: unifiedgosdk.Pointer[float64](33100.0),
+            Odometer: unifiedgosdk.Pointer[float64](1.0),
+            OdometerUnit: shared.DmsVehicleOdometerUnitMiles.ToPointer(),
+            Options: []shared.DmsVehicleOption{
+                shared.DmsVehicleOption{
+                    Code: unifiedgosdk.Pointer("SXE"),
+                    CostAmount: unifiedgosdk.Pointer[float64](250.0),
+                    Description: unifiedgosdk.Pointer("Tow package"),
+                    PriceAmount: unifiedgosdk.Pointer[float64](1400.0),
+                    Type: shared.DmsVehicleOptionTypeDealer.ToPointer(),
+                },
+                shared.DmsVehicleOption{
+                    Code: unifiedgosdk.Pointer("458"),
+                    CostAmount: unifiedgosdk.Pointer[float64](700.0),
+                    Description: unifiedgosdk.Pointer("Tow package"),
+                    PriceAmount: unifiedgosdk.Pointer[float64](600.0),
+                    Type: shared.DmsVehicleOptionTypeDealer.ToPointer(),
+                },
+            },
+            PriceAmount: unifiedgosdk.Pointer[float64](29926.0),
+            ReceivedAt: types.MustNewTimeFromString("2021-02-03T08:01:58.559Z"),
+            Status: shared.DmsVehicleStatusOther.ToPointer(),
+            StockNumber: unifiedgosdk.Pointer("N24959"),
+            Transmission: unifiedgosdk.Pointer("Manual"),
+            Trim: unifiedgosdk.Pointer("Base"),
+            Type: shared.DmsVehicleTypeSuv.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-03T01:42:43.749Z"),
+            Vin: unifiedgosdk.Pointer("C29ZDU474DDR70955"),
+            WarrantyExpiresAt: types.MustNewTimeFromString("2022-03-28T09:10:09.889Z"),
+            Year: unifiedgosdk.Pointer[float64](2023.0),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsVehicle != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.PatchDmsVehicleRequest](../../pkg/models/operations/patchdmsvehiclerequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+
+### Response
+
+**[*operations.PatchDmsVehicleResponse](../../pkg/models/operations/patchdmsvehicleresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchDmsVehiclesale
+
+Updates the DmsVehiclesale identified by `id`. Provide the unified DmsVehiclesale fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchDmsVehiclesale" method="patch" path="/dms/{connection_id}/vehiclesale/{id}" example="dms_vehiclesale" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.PatchDmsVehiclesale(ctx, operations.PatchDmsVehiclesaleRequest{
+        DmsVehiclesale: shared.DmsVehiclesale{
+            BackGrossAmount: unifiedgosdk.Pointer[float64](4565.0),
+            CreatedAt: types.MustNewTimeFromString("2020-04-02T08:14:56.150Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            DownPaymentAmount: unifiedgosdk.Pointer[float64](6700.0),
+            Fees: []shared.DmsVehiclesaleFee{
+                shared.DmsVehiclesaleFee{
+                    CostAmount: unifiedgosdk.Pointer[float64](0.0),
+                    IsCapitalized: unifiedgosdk.Pointer(true),
+                    Name: unifiedgosdk.Pointer("Documentation fee"),
+                    PriceAmount: unifiedgosdk.Pointer[float64](499.0),
+                },
+                shared.DmsVehiclesaleFee{
+                    IsCapitalized: unifiedgosdk.Pointer(false),
+                    Name: unifiedgosdk.Pointer("Title and registration"),
+                    PriceAmount: unifiedgosdk.Pointer[float64](392.0),
+                },
+            },
+            Finance: &shared.PropertyDmsVehiclesaleFinance{
+                FinancedAmount: unifiedgosdk.Pointer[float64](0.0),
+                FirstPaymentAt: types.MustNewTimeFromString("2022-08-16T02:28:39.785Z"),
+                InterestRate: unifiedgosdk.Pointer[float64](6.68),
+                LenderName: unifiedgosdk.Pointer("Mueller, Yundt and Murray Financial"),
+                PaymentAmount: unifiedgosdk.Pointer[float64](339.0),
+                PaymentFrequency: shared.PaymentFrequencyMonthly.ToPointer(),
+                TermMonths: unifiedgosdk.Pointer[float64](72.0),
+            },
+            FinanceType: shared.FinanceTypeFinance.ToPointer(),
+            ID: unifiedgosdk.Pointer("9cf21810-137c-43f8-9e85-5b0d7caf29db"),
+            Metadata: []shared.DmsMetadata{},
+            Number: unifiedgosdk.Pointer("D84591"),
+            Products: []shared.DmsVehiclesaleProduct{
+                shared.DmsVehiclesaleProduct{
+                    ContractNumber: unifiedgosdk.Pointer("B7JN10GVB7"),
+                    CostAmount: unifiedgosdk.Pointer[float64](1320.0),
+                    Name: unifiedgosdk.Pointer("Tire & Wheel"),
+                    PriceAmount: unifiedgosdk.Pointer[float64](3300.0),
+                    Provider: unifiedgosdk.Pointer("Renner and Sons"),
+                    TermMonths: unifiedgosdk.Pointer[float64](60.0),
+                    Type: shared.DmsVehiclesaleProductTypeProtection.ToPointer(),
+                },
+                shared.DmsVehiclesaleProduct{
+                    ContractNumber: unifiedgosdk.Pointer("VIZU7K3VRU"),
+                    CostAmount: unifiedgosdk.Pointer[float64](1115.0),
+                    DeductibleAmount: unifiedgosdk.Pointer[float64](100.0),
+                    Name: unifiedgosdk.Pointer("Platinum Vehicle Service Contract"),
+                    PriceAmount: unifiedgosdk.Pointer[float64](3700.0),
+                    Provider: unifiedgosdk.Pointer("Frami, Wisozk and Gleichner"),
+                    TermMonths: unifiedgosdk.Pointer[float64](72.0),
+                    Type: shared.DmsVehiclesaleProductTypeServiceContract.ToPointer(),
+                },
+            },
+            RebateAmount: unifiedgosdk.Pointer[float64](500.0),
+            SoldAt: types.MustNewTimeFromString("2022-08-14T11:13:05.498Z"),
+            Source: unifiedgosdk.Pointer("Website"),
+            Status: shared.DmsVehiclesaleStatusSold.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            Taxes: []shared.DmsVehiclesaleTax{
+                shared.DmsVehiclesaleTax{
+                    Name: unifiedgosdk.Pointer("State sales tax"),
+                    Rate: unifiedgosdk.Pointer[float64](8.25),
+                    TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+                },
+            },
+            TotalAmount: unifiedgosdk.Pointer[float64](7891.0),
+            TradeIns: []shared.DmsVehiclesaleTradein{},
+            Type: shared.DmsVehiclesaleTypeRetail.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-16T02:25:03.853Z"),
+            Vehicles: []shared.DmsVehiclesaleVehicle{},
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsVehiclesale != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.PatchDmsVehiclesaleRequest](../../pkg/models/operations/patchdmsvehiclesalerequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.PatchDmsVehiclesaleResponse](../../pkg/models/operations/patchdmsvehiclesaleresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveDmsAppointment
+
+Deletes the DmsAppointment identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeDmsAppointment" method="delete" path="/dms/{connection_id}/appointment/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.RemoveDmsAppointment(ctx, operations.RemoveDmsAppointmentRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.RemoveDmsAppointmentRequest](../../pkg/models/operations/removedmsappointmentrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.RemoveDmsAppointmentResponse](../../pkg/models/operations/removedmsappointmentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateDmsAppointment
+
+Updates the DmsAppointment identified by `id`. Provide the unified DmsAppointment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateDmsAppointment" method="put" path="/dms/{connection_id}/appointment/{id}" example="dms_appointment" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.UpdateDmsAppointment(ctx, operations.UpdateDmsAppointmentRequest{
+        DmsAppointment: shared.DmsAppointment{
+            CreatedAt: types.MustNewTimeFromString("2023-10-16T02:56:45.127Z"),
+            EndAt: types.MustNewTimeFromString("2026-05-07T05:34:50.631Z"),
+            ID: unifiedgosdk.Pointer("4adcb137-9ab5-4404-99d5-9b49a342578e"),
+            Metadata: []shared.DmsMetadata{},
+            Notes: unifiedgosdk.Pointer("Soluta conitor timidus confero."),
+            Number: unifiedgosdk.Pointer("A541909"),
+            Services: []shared.DmsAppointmentService{
+                shared.DmsAppointmentService{
+                    ID: unifiedgosdk.Pointer("d7f17954-4053-4eba-a7be-f4016074238d"),
+                    Name: unifiedgosdk.Pointer("Customer concern"),
+                    PayType: shared.PayTypeWarranty.ToPointer(),
+                    TechnicianUserIds: []string{},
+                },
+                shared.DmsAppointmentService{
+                    Complaint: unifiedgosdk.Pointer("Check engine light on"),
+                    ID: unifiedgosdk.Pointer("52fba2cc-a29d-457d-a0d5-14d9e9481c0d"),
+                    Name: unifiedgosdk.Pointer("Customer concern"),
+                    PayType: shared.PayTypeCustomer.ToPointer(),
+                    TechnicianUserIds: []string{},
+                },
+                shared.DmsAppointmentService{
+                    Complaint: unifiedgosdk.Pointer("Due for service"),
+                    ID: unifiedgosdk.Pointer("c653de4e-1054-4fec-9696-51886b2362b2"),
+                    Name: unifiedgosdk.Pointer("Customer concern"),
+                    PayType: shared.PayTypeCustomer.ToPointer(),
+                    TechnicianUserIds: []string{},
+                },
+            },
+            StartAt: types.MustNewTimeFromString("2026-05-06T22:34:50.631Z"),
+            Status: shared.DmsAppointmentStatusCancelled.ToPointer(),
+            TransportType: shared.TransportTypeLoaner.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-06T04:21:26.998Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsAppointment != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.UpdateDmsAppointmentRequest](../../pkg/models/operations/updatedmsappointmentrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.UpdateDmsAppointmentResponse](../../pkg/models/operations/updatedmsappointmentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateDmsOpcode
+
+Updates the DmsOpcode identified by `id`. Provide the unified DmsOpcode fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateDmsOpcode" method="put" path="/dms/{connection_id}/opcode/{id}" example="dms_opcode" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.UpdateDmsOpcode(ctx, operations.UpdateDmsOpcodeRequest{
+        DmsOpcode: shared.DmsOpcode{
+            Category: unifiedgosdk.Pointer("Electrical"),
+            Code: unifiedgosdk.Pointer("02AUS"),
+            CreatedAt: types.MustNewTimeFromString("2021-01-12T19:03:17.545Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            Description: unifiedgosdk.Pointer("Oil and filter change"),
+            EstimatedHours: unifiedgosdk.Pointer[float64](3.2),
+            FlatRateHours: unifiedgosdk.Pointer[float64](3.5),
+            ID: unifiedgosdk.Pointer("8a3a625f-cde5-4df7-9a76-7e5d72f2508e"),
+            IsActive: unifiedgosdk.Pointer(true),
+            LaborRateAmount: unifiedgosdk.Pointer[float64](216.0),
+            Metadata: []shared.DmsMetadata{},
+            OemCode: unifiedgosdk.Pointer("05604A3"),
+            Parts: []shared.DmsPartline{},
+            PayType: shared.DmsOpcodePayTypeCustomer.ToPointer(),
+            SkillCode: unifiedgosdk.Pointer("A"),
+            Type: shared.DmsOpcodeTypeLabor.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2021-11-03T12:17:13.057Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsOpcode != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.UpdateDmsOpcodeRequest](../../pkg/models/operations/updatedmsopcoderequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+
+### Response
+
+**[*operations.UpdateDmsOpcodeResponse](../../pkg/models/operations/updatedmsopcoderesponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateDmsPart
+
+Updates the DmsPart identified by `id`. Provide the unified DmsPart fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateDmsPart" method="put" path="/dms/{connection_id}/part/{id}" example="dms_part" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.UpdateDmsPart(ctx, operations.UpdateDmsPartRequest{
+        DmsPart: shared.DmsPart{
+            BinLocations: []string{
+                "S18-6",
+            },
+            Category: unifiedgosdk.Pointer("Ignition"),
+            CostAmount: unifiedgosdk.Pointer[float64](25.26),
+            CreatedAt: types.MustNewTimeFromString("2020-07-02T08:18:03.858Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            Description: unifiedgosdk.Pointer("Cabin filter"),
+            ID: unifiedgosdk.Pointer("a76e2648-fede-463a-ae14-9b48940c3d9a"),
+            LastSoldAt: types.MustNewTimeFromString("2020-11-23T02:58:30.889Z"),
+            ListPriceAmount: unifiedgosdk.Pointer[float64](39.61),
+            ManufacturerCode: unifiedgosdk.Pointer("TOY"),
+            MaxStockQuantity: unifiedgosdk.Pointer[float64](21.0),
+            Metadata: []shared.DmsMetadata{},
+            MinStockQuantity: unifiedgosdk.Pointer[float64](3.0),
+            PackQuantity: unifiedgosdk.Pointer[float64](1.0),
+            PartNumber: unifiedgosdk.Pointer("73992-IM3FI"),
+            QuantityAvailable: unifiedgosdk.Pointer[float64](13.0),
+            QuantityOnHand: unifiedgosdk.Pointer[float64](15.0),
+            QuantityOnOrder: unifiedgosdk.Pointer[float64](14.0),
+            SourceCode: unifiedgosdk.Pointer("30"),
+            TradePriceAmount: unifiedgosdk.Pointer[float64](29.05),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-22T17:30:11.498Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsPart != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.UpdateDmsPartRequest](../../pkg/models/operations/updatedmspartrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+
+### Response
+
+**[*operations.UpdateDmsPartResponse](../../pkg/models/operations/updatedmspartresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateDmsPartsale
+
+Updates the DmsPartsale identified by `id`. Provide the unified DmsPartsale fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateDmsPartsale" method="put" path="/dms/{connection_id}/partsale/{id}" example="dms_partsale" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.UpdateDmsPartsale(ctx, operations.UpdateDmsPartsaleRequest{
+        DmsPartsale: shared.DmsPartsale{
+            CostAmount: unifiedgosdk.Pointer[float64](0.0),
+            CreatedAt: types.MustNewTimeFromString("2023-05-22T03:39:30.335Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            FreightAmount: unifiedgosdk.Pointer[float64](0.0),
+            ID: unifiedgosdk.Pointer("c577212b-856c-4afa-b866-510023c35189"),
+            Lines: []shared.DmsPartline{
+                shared.DmsPartline{
+                    ID: unifiedgosdk.Pointer("95290c13-4f44-4bb9-92a2-e5dab8e5e43f"),
+                    PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
+                    Quantity: unifiedgosdk.Pointer[float64](5.0),
+                    QuantityOrdered: unifiedgosdk.Pointer[float64](5.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](491.45),
+                    UnitPriceAmount: unifiedgosdk.Pointer[float64](98.29),
+                },
+                shared.DmsPartline{
+                    ID: unifiedgosdk.Pointer("08f9368b-c157-4968-bdd5-4af302744207"),
+                    PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
+                    Quantity: unifiedgosdk.Pointer[float64](2.0),
+                    QuantityOrdered: unifiedgosdk.Pointer[float64](2.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](240.9),
+                    UnitPriceAmount: unifiedgosdk.Pointer[float64](120.45),
+                },
+                shared.DmsPartline{
+                    ID: unifiedgosdk.Pointer("8a489684-dbcc-4342-ab28-1caac8e76023"),
+                    PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
+                    Quantity: unifiedgosdk.Pointer[float64](3.0),
+                    QuantityOrdered: unifiedgosdk.Pointer[float64](3.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](249.54),
+                    UnitPriceAmount: unifiedgosdk.Pointer[float64](83.18),
+                },
+            },
+            Metadata: []shared.DmsMetadata{},
+            Number: unifiedgosdk.Pointer("P292867"),
+            PayType: shared.DmsPartsalePayTypeCustomer.ToPointer(),
+            Status: shared.DmsPartsaleStatusVoided.ToPointer(),
+            SubtotalAmount: unifiedgosdk.Pointer[float64](981.89),
+            TaxAmount: unifiedgosdk.Pointer[float64](68.73),
+            TotalAmount: unifiedgosdk.Pointer[float64](1050.62),
+            Type: shared.DmsPartsaleTypeSale.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-17T16:03:18.289Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsPartsale != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.UpdateDmsPartsaleRequest](../../pkg/models/operations/updatedmspartsalerequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.UpdateDmsPartsaleResponse](../../pkg/models/operations/updatedmspartsaleresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateDmsRepairorder
+
+Updates the DmsRepairorder identified by `id`. Provide the unified DmsRepairorder fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateDmsRepairorder" method="put" path="/dms/{connection_id}/repairorder/{id}" example="dms_repairorder" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.UpdateDmsRepairorder(ctx, operations.UpdateDmsRepairorderRequest{
+        DmsRepairorder: shared.DmsRepairorder{
+            BalanceAmount: unifiedgosdk.Pointer[float64](3193.86),
+            CompletedAt: types.MustNewTimeFromString("2026-11-12T19:17:42.307Z"),
+            CreatedAt: types.MustNewTimeFromString("2022-10-25T15:50:48.007Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            EstimateAmount: unifiedgosdk.Pointer[float64](3264.0),
+            ID: unifiedgosdk.Pointer("205d65d6-f300-436e-a728-71ed9ac8cb5c"),
+            Jobs: []shared.DmsRepairorderJob{
+                shared.DmsRepairorderJob{
+                    ActualHours: unifiedgosdk.Pointer[float64](3.6),
+                    Cause: unifiedgosdk.Pointer("Scheduled maintenance"),
+                    Complaint: unifiedgosdk.Pointer("Due for service"),
+                    Correction: unifiedgosdk.Pointer("Aufero cumque vicinus aptus assumenda quis aptus."),
+                    ID: unifiedgosdk.Pointer("426874d7-2e52-4162-8b6c-8639c58d18b5"),
+                    LaborAmount: unifiedgosdk.Pointer[float64](681.6),
+                    Labors: []shared.DmsRepairorderLabor{
+                        shared.DmsRepairorderLabor{
+                            ID: unifiedgosdk.Pointer("e1009e6c-2d8d-446c-8269-bcc66c32cd67"),
+                            PayType: shared.DmsRepairorderLaborPayTypeWarranty.ToPointer(),
+                            RateAmount: unifiedgosdk.Pointer[float64](213.0),
+                            SoldHours: unifiedgosdk.Pointer[float64](3.2),
+                            TechnicianUserIds: []string{},
+                            TotalAmount: unifiedgosdk.Pointer[float64](681.6),
+                        },
+                    },
+                    Name: unifiedgosdk.Pointer("Customer concern"),
+                    Number: unifiedgosdk.Pointer("A"),
+                    Parts: []shared.DmsPartline{},
+                    PartsAmount: unifiedgosdk.Pointer[float64](0.0),
+                    PayType: shared.DmsRepairorderJobPayTypeWarranty.ToPointer(),
+                    SoldHours: unifiedgosdk.Pointer[float64](3.2),
+                    Status: shared.DmsRepairorderJobStatusCompleted.ToPointer(),
+                    TechnicianUserIds: []string{},
+                    TotalAmount: unifiedgosdk.Pointer[float64](681.6),
+                },
+                shared.DmsRepairorderJob{
+                    ActualHours: unifiedgosdk.Pointer[float64](3.0),
+                    Cause: unifiedgosdk.Pointer("Worn brake pads"),
+                    Complaint: unifiedgosdk.Pointer("Vibration at highway speed"),
+                    Correction: unifiedgosdk.Pointer("Somnus avaritia utroque vulnero ullam ancilla."),
+                    ID: unifiedgosdk.Pointer("7a124d15-1bb6-491d-adc1-579be2c00466"),
+                    LaborAmount: unifiedgosdk.Pointer[float64](446.4),
+                    Labors: []shared.DmsRepairorderLabor{
+                        shared.DmsRepairorderLabor{
+                            ID: unifiedgosdk.Pointer("bf400c19-1912-4255-b38c-bdc5cb87abf6"),
+                            PayType: shared.DmsRepairorderLaborPayTypeWarranty.ToPointer(),
+                            RateAmount: unifiedgosdk.Pointer[float64](144.0),
+                            SoldHours: unifiedgosdk.Pointer[float64](3.1),
+                            TechnicianUserIds: []string{},
+                            TotalAmount: unifiedgosdk.Pointer[float64](446.4),
+                        },
+                    },
+                    Name: unifiedgosdk.Pointer("Customer concern"),
+                    Number: unifiedgosdk.Pointer("B"),
+                    Parts: []shared.DmsPartline{
+                        shared.DmsPartline{
+                            ID: unifiedgosdk.Pointer("5d8d7099-cdda-4146-b08c-46d84fba20a8"),
+                            PayType: shared.DmsPartlinePayTypeWarranty.ToPointer(),
+                            Quantity: unifiedgosdk.Pointer[float64](4.0),
+                            QuantityOrdered: unifiedgosdk.Pointer[float64](4.0),
+                            TotalAmount: unifiedgosdk.Pointer[float64](890.44),
+                            UnitPriceAmount: unifiedgosdk.Pointer[float64](222.61),
+                        },
+                        shared.DmsPartline{
+                            ID: unifiedgosdk.Pointer("9a7d805a-b9d9-4663-86e4-0e9b32dba051"),
+                            PayType: shared.DmsPartlinePayTypeWarranty.ToPointer(),
+                            Quantity: unifiedgosdk.Pointer[float64](2.0),
+                            QuantityOrdered: unifiedgosdk.Pointer[float64](2.0),
+                            TotalAmount: unifiedgosdk.Pointer[float64](216.18),
+                            UnitPriceAmount: unifiedgosdk.Pointer[float64](108.09),
+                        },
+                    },
+                    PartsAmount: unifiedgosdk.Pointer[float64](1106.6200000000001),
+                    PayType: shared.DmsRepairorderJobPayTypeWarranty.ToPointer(),
+                    SoldHours: unifiedgosdk.Pointer[float64](3.1),
+                    Status: shared.DmsRepairorderJobStatusCompleted.ToPointer(),
+                    TechnicianUserIds: []string{},
+                    TotalAmount: unifiedgosdk.Pointer[float64](1553.02),
+                },
+                shared.DmsRepairorderJob{
+                    ActualHours: unifiedgosdk.Pointer[float64](1.5),
+                    Cause: unifiedgosdk.Pointer("Scheduled maintenance"),
+                    Complaint: unifiedgosdk.Pointer("Noise when braking"),
+                    Correction: unifiedgosdk.Pointer("Degero theca natus."),
+                    ID: unifiedgosdk.Pointer("8fe8640a-c7a2-4ad5-86ef-a016db57c58a"),
+                    LaborAmount: unifiedgosdk.Pointer[float64](232.4),
+                    Labors: []shared.DmsRepairorderLabor{
+                        shared.DmsRepairorderLabor{
+                            ID: unifiedgosdk.Pointer("1e1d8015-f3f9-4d90-bede-5f2b99783e47"),
+                            PayType: shared.DmsRepairorderLaborPayTypeCustomer.ToPointer(),
+                            RateAmount: unifiedgosdk.Pointer[float64](166.0),
+                            SoldHours: unifiedgosdk.Pointer[float64](1.4),
+                            TechnicianUserIds: []string{},
+                            TotalAmount: unifiedgosdk.Pointer[float64](232.4),
+                        },
+                    },
+                    Name: unifiedgosdk.Pointer("Customer concern"),
+                    Number: unifiedgosdk.Pointer("C"),
+                    Parts: []shared.DmsPartline{
+                        shared.DmsPartline{
+                            ID: unifiedgosdk.Pointer("9237d282-5b87-4e09-bb1f-363fc2a6296e"),
+                            PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
+                            Quantity: unifiedgosdk.Pointer[float64](1.0),
+                            QuantityOrdered: unifiedgosdk.Pointer[float64](1.0),
+                            TotalAmount: unifiedgosdk.Pointer[float64](216.02),
+                            UnitPriceAmount: unifiedgosdk.Pointer[float64](216.02),
+                        },
+                        shared.DmsPartline{
+                            ID: unifiedgosdk.Pointer("884766ed-b7f1-4902-9a06-1a0837b87653"),
+                            PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
+                            Quantity: unifiedgosdk.Pointer[float64](2.0),
+                            QuantityOrdered: unifiedgosdk.Pointer[float64](2.0),
+                            TotalAmount: unifiedgosdk.Pointer[float64](358.16),
+                            UnitPriceAmount: unifiedgosdk.Pointer[float64](179.08),
+                        },
+                    },
+                    PartsAmount: unifiedgosdk.Pointer[float64](574.1800000000001),
+                    PayType: shared.DmsRepairorderJobPayTypeCustomer.ToPointer(),
+                    SoldHours: unifiedgosdk.Pointer[float64](1.4),
+                    Status: shared.DmsRepairorderJobStatusCompleted.ToPointer(),
+                    TechnicianUserIds: []string{},
+                    TotalAmount: unifiedgosdk.Pointer[float64](806.58),
+                },
+            },
+            LaborAmount: unifiedgosdk.Pointer[float64](1360.4),
+            Metadata: []shared.DmsMetadata{},
+            MiscAmount: unifiedgosdk.Pointer[float64](35.0),
+            Number: unifiedgosdk.Pointer("143398"),
+            OdometerIn: unifiedgosdk.Pointer[float64](7776.0),
+            OdometerOut: unifiedgosdk.Pointer[float64](7776.0),
+            OdometerUnit: shared.DmsRepairorderOdometerUnitMiles.ToPointer(),
+            OpenedAt: types.MustNewTimeFromString("2025-02-07T19:13:16.353Z"),
+            PartsAmount: unifiedgosdk.Pointer[float64](1680.8000000000002),
+            PayType: shared.DmsRepairorderPayTypeWarranty.ToPointer(),
+            PromisedAt: types.MustNewTimeFromString("2025-02-09T03:13:16.353Z"),
+            PurchaseOrderNumber: unifiedgosdk.Pointer("182743"),
+            Status: shared.DmsRepairorderStatusCompleted.ToPointer(),
+            SubletAmount: unifiedgosdk.Pointer[float64](0.0),
+            TagNumber: unifiedgosdk.Pointer("758"),
+            TaxAmount: unifiedgosdk.Pointer[float64](117.66),
+            TechnicianUserIds: []string{},
+            TotalAmount: unifiedgosdk.Pointer[float64](3193.86),
+            Totals: []shared.DmsRepairorderTotal{
+                shared.DmsRepairorderTotal{
+                    DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+                    LaborAmount: unifiedgosdk.Pointer[float64](232.4),
+                    PartsAmount: unifiedgosdk.Pointer[float64](574.1800000000001),
+                    PayType: shared.DmsRepairorderTotalPayTypeCustomer.ToPointer(),
+                    SubletAmount: unifiedgosdk.Pointer[float64](0.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](806.58),
+                },
+                shared.DmsRepairorderTotal{
+                    DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+                    LaborAmount: unifiedgosdk.Pointer[float64](1128.0),
+                    PartsAmount: unifiedgosdk.Pointer[float64](1106.6200000000001),
+                    PayType: shared.DmsRepairorderTotalPayTypeWarranty.ToPointer(),
+                    SubletAmount: unifiedgosdk.Pointer[float64](0.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](2234.62),
+                },
+            },
+            TransportType: shared.DmsRepairorderTransportTypeLoaner.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-27T22:05:41.793Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsRepairorder != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.UpdateDmsRepairorderRequest](../../pkg/models/operations/updatedmsrepairorderrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.UpdateDmsRepairorderResponse](../../pkg/models/operations/updatedmsrepairorderresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateDmsVehicle
+
+Updates the DmsVehicle identified by `id`. Provide the unified DmsVehicle fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateDmsVehicle" method="put" path="/dms/{connection_id}/vehicle/{id}" example="dms_vehicle" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.UpdateDmsVehicle(ctx, operations.UpdateDmsVehicleRequest{
+        DmsVehicle: shared.DmsVehicle{
+            BodyStyle: unifiedgosdk.Pointer("Pickup"),
+            Condition: shared.ConditionNew.ToPointer(),
+            CostAmount: unifiedgosdk.Pointer[float64](26498.0),
+            CreatedAt: types.MustNewTimeFromString("2021-02-03T08:01:58.559Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            Description: unifiedgosdk.Pointer("2023 Citroën Silverado"),
+            ExteriorColor: unifiedgosdk.Pointer("lavender"),
+            FuelType: shared.FuelTypeElectric.ToPointer(),
+            ID: unifiedgosdk.Pointer("79085b50-74a7-4f1d-8d69-d4979c6610bf"),
+            ImageUrls: []string{
+                "https://picsum.photos/seed/tOUr5K/1358/1877",
+            },
+            InteriorColor: unifiedgosdk.Pointer("Black"),
+            InternetPriceAmount: unifiedgosdk.Pointer[float64](29526.0),
+            IsActive: unifiedgosdk.Pointer(true),
+            IsCertified: unifiedgosdk.Pointer(false),
+            IsInventory: unifiedgosdk.Pointer(true),
+            IsPublished: unifiedgosdk.Pointer(false),
+            Make: unifiedgosdk.Pointer("Citroën"),
+            Metadata: []shared.DmsMetadata{},
+            Model: unifiedgosdk.Pointer("Silverado"),
+            ModelCode: unifiedgosdk.Pointer("PMU8KI"),
+            MsrpAmount: unifiedgosdk.Pointer[float64](33100.0),
+            Odometer: unifiedgosdk.Pointer[float64](1.0),
+            OdometerUnit: shared.DmsVehicleOdometerUnitMiles.ToPointer(),
+            Options: []shared.DmsVehicleOption{
+                shared.DmsVehicleOption{
+                    Code: unifiedgosdk.Pointer("SXE"),
+                    CostAmount: unifiedgosdk.Pointer[float64](250.0),
+                    Description: unifiedgosdk.Pointer("Tow package"),
+                    PriceAmount: unifiedgosdk.Pointer[float64](1400.0),
+                    Type: shared.DmsVehicleOptionTypeDealer.ToPointer(),
+                },
+                shared.DmsVehicleOption{
+                    Code: unifiedgosdk.Pointer("458"),
+                    CostAmount: unifiedgosdk.Pointer[float64](700.0),
+                    Description: unifiedgosdk.Pointer("Tow package"),
+                    PriceAmount: unifiedgosdk.Pointer[float64](600.0),
+                    Type: shared.DmsVehicleOptionTypeDealer.ToPointer(),
+                },
+            },
+            PriceAmount: unifiedgosdk.Pointer[float64](29926.0),
+            ReceivedAt: types.MustNewTimeFromString("2021-02-03T08:01:58.559Z"),
+            Status: shared.DmsVehicleStatusOther.ToPointer(),
+            StockNumber: unifiedgosdk.Pointer("N24959"),
+            Transmission: unifiedgosdk.Pointer("Manual"),
+            Trim: unifiedgosdk.Pointer("Base"),
+            Type: shared.DmsVehicleTypeSuv.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-03T01:42:43.749Z"),
+            Vin: unifiedgosdk.Pointer("C29ZDU474DDR70955"),
+            WarrantyExpiresAt: types.MustNewTimeFromString("2022-03-28T09:10:09.889Z"),
+            Year: unifiedgosdk.Pointer[float64](2023.0),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsVehicle != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.UpdateDmsVehicleRequest](../../pkg/models/operations/updatedmsvehiclerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.UpdateDmsVehicleResponse](../../pkg/models/operations/updatedmsvehicleresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateDmsVehiclesale
+
+Updates the DmsVehiclesale identified by `id`. Provide the unified DmsVehiclesale fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateDmsVehiclesale" method="put" path="/dms/{connection_id}/vehiclesale/{id}" example="dms_vehiclesale" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Dms.UpdateDmsVehiclesale(ctx, operations.UpdateDmsVehiclesaleRequest{
+        DmsVehiclesale: shared.DmsVehiclesale{
+            BackGrossAmount: unifiedgosdk.Pointer[float64](4565.0),
+            CreatedAt: types.MustNewTimeFromString("2020-04-02T08:14:56.150Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            DownPaymentAmount: unifiedgosdk.Pointer[float64](6700.0),
+            Fees: []shared.DmsVehiclesaleFee{
+                shared.DmsVehiclesaleFee{
+                    CostAmount: unifiedgosdk.Pointer[float64](0.0),
+                    IsCapitalized: unifiedgosdk.Pointer(true),
+                    Name: unifiedgosdk.Pointer("Documentation fee"),
+                    PriceAmount: unifiedgosdk.Pointer[float64](499.0),
+                },
+                shared.DmsVehiclesaleFee{
+                    IsCapitalized: unifiedgosdk.Pointer(false),
+                    Name: unifiedgosdk.Pointer("Title and registration"),
+                    PriceAmount: unifiedgosdk.Pointer[float64](392.0),
+                },
+            },
+            Finance: &shared.PropertyDmsVehiclesaleFinance{
+                FinancedAmount: unifiedgosdk.Pointer[float64](0.0),
+                FirstPaymentAt: types.MustNewTimeFromString("2022-08-16T02:28:39.785Z"),
+                InterestRate: unifiedgosdk.Pointer[float64](6.68),
+                LenderName: unifiedgosdk.Pointer("Mueller, Yundt and Murray Financial"),
+                PaymentAmount: unifiedgosdk.Pointer[float64](339.0),
+                PaymentFrequency: shared.PaymentFrequencyMonthly.ToPointer(),
+                TermMonths: unifiedgosdk.Pointer[float64](72.0),
+            },
+            FinanceType: shared.FinanceTypeFinance.ToPointer(),
+            ID: unifiedgosdk.Pointer("9cf21810-137c-43f8-9e85-5b0d7caf29db"),
+            Metadata: []shared.DmsMetadata{},
+            Number: unifiedgosdk.Pointer("D84591"),
+            Products: []shared.DmsVehiclesaleProduct{
+                shared.DmsVehiclesaleProduct{
+                    ContractNumber: unifiedgosdk.Pointer("B7JN10GVB7"),
+                    CostAmount: unifiedgosdk.Pointer[float64](1320.0),
+                    Name: unifiedgosdk.Pointer("Tire & Wheel"),
+                    PriceAmount: unifiedgosdk.Pointer[float64](3300.0),
+                    Provider: unifiedgosdk.Pointer("Renner and Sons"),
+                    TermMonths: unifiedgosdk.Pointer[float64](60.0),
+                    Type: shared.DmsVehiclesaleProductTypeProtection.ToPointer(),
+                },
+                shared.DmsVehiclesaleProduct{
+                    ContractNumber: unifiedgosdk.Pointer("VIZU7K3VRU"),
+                    CostAmount: unifiedgosdk.Pointer[float64](1115.0),
+                    DeductibleAmount: unifiedgosdk.Pointer[float64](100.0),
+                    Name: unifiedgosdk.Pointer("Platinum Vehicle Service Contract"),
+                    PriceAmount: unifiedgosdk.Pointer[float64](3700.0),
+                    Provider: unifiedgosdk.Pointer("Frami, Wisozk and Gleichner"),
+                    TermMonths: unifiedgosdk.Pointer[float64](72.0),
+                    Type: shared.DmsVehiclesaleProductTypeServiceContract.ToPointer(),
+                },
+            },
+            RebateAmount: unifiedgosdk.Pointer[float64](500.0),
+            SoldAt: types.MustNewTimeFromString("2022-08-14T11:13:05.498Z"),
+            Source: unifiedgosdk.Pointer("Website"),
+            Status: shared.DmsVehiclesaleStatusSold.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            Taxes: []shared.DmsVehiclesaleTax{
+                shared.DmsVehiclesaleTax{
+                    Name: unifiedgosdk.Pointer("State sales tax"),
+                    Rate: unifiedgosdk.Pointer[float64](8.25),
+                    TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+                },
+            },
+            TotalAmount: unifiedgosdk.Pointer[float64](7891.0),
+            TradeIns: []shared.DmsVehiclesaleTradein{},
+            Type: shared.DmsVehiclesaleTypeRetail.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-16T02:25:03.853Z"),
+            Vehicles: []shared.DmsVehiclesaleVehicle{},
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DmsVehiclesale != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.UpdateDmsVehiclesaleRequest](../../pkg/models/operations/updatedmsvehiclesalerequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.UpdateDmsVehiclesaleResponse](../../pkg/models/operations/updatedmsvehiclesaleresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |

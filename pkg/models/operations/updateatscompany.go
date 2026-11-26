@@ -22,6 +22,7 @@ const (
 	UpdateAtsCompanyQueryParamFieldsParentID     UpdateAtsCompanyQueryParamFields = "parent_id"
 	UpdateAtsCompanyQueryParamFieldsRecruiterIds UpdateAtsCompanyQueryParamFields = "recruiter_ids"
 	UpdateAtsCompanyQueryParamFieldsMetadata     UpdateAtsCompanyQueryParamFields = "metadata"
+	UpdateAtsCompanyQueryParamFieldsFees         UpdateAtsCompanyQueryParamFields = "fees"
 	UpdateAtsCompanyQueryParamFieldsRaw          UpdateAtsCompanyQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *UpdateAtsCompanyQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "recruiter_ids":
 		fallthrough
 	case "metadata":
+		fallthrough
+	case "fees":
 		fallthrough
 	case "raw":
 		*e = UpdateAtsCompanyQueryParamFields(v)

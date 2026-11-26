@@ -59,3 +59,6 @@ custom := shared.PropertyIntegrationCategories("custom_value")
 | `PropertyIntegrationCategoriesProperty`     | property                                    |
 | `PropertyIntegrationCategoriesPlm`          | plm                                         |
 | `PropertyIntegrationCategoriesQms`          | qms                                         |
+| `PropertyIntegrationCategoriesDms`          | dms                                         |
+| `PropertyIntegrationCategoriesFhir`         | fhir                                        |
+| `PropertyIntegrationCategoriesPrinting`     | printing                                    |

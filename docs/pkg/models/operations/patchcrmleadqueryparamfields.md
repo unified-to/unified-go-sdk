@@ -35,4 +35,5 @@ value := operations.PatchCrmLeadQueryParamFieldsID
 | `PatchCrmLeadQueryParamFieldsTitle`         | title                                       |
 | `PatchCrmLeadQueryParamFieldsLinkUrls`      | link_urls                                   |
 | `PatchCrmLeadQueryParamFieldsMetadata`      | metadata                                    |
+| `PatchCrmLeadQueryParamFieldsVehicleIds`    | vehicle_ids                                 |
 | `PatchCrmLeadQueryParamFieldsRaw`           | raw                                         |

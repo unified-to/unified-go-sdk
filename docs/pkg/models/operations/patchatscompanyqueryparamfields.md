@@ -25,4 +25,5 @@ value := operations.PatchAtsCompanyQueryParamFieldsID
 | `PatchAtsCompanyQueryParamFieldsParentID`     | parent_id                                     |
 | `PatchAtsCompanyQueryParamFieldsRecruiterIds` | recruiter_ids                                 |
 | `PatchAtsCompanyQueryParamFieldsMetadata`     | metadata                                      |
+| `PatchAtsCompanyQueryParamFieldsFees`         | fees                                          |
 | `PatchAtsCompanyQueryParamFieldsRaw`          | raw                                           |

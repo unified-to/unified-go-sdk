@@ -57,13 +57,13 @@ func main() {
 
     res, err := s.Comment.CreateKmsComment(ctx, operations.CreateKmsCommentRequest{
         KmsComment: shared.KmsComment{
-            Content: unifiedgosdk.Pointer("Decimus tolero viriliter usque."),
+            Content: unifiedgosdk.Pointer("Usque arbor laudantium somniculosus officiis conicio vox artificiose crux truculenter."),
             ContentType: shared.ContentTypeHTML.ToPointer(),
             CreatedAt: types.MustNewTimeFromString("2022-08-26T14:40:49.732Z"),
-            ID: unifiedgosdk.Pointer("0cfb1dcc-2fed-4aea-afd3-d0116728a438"),
+            ID: unifiedgosdk.Pointer("51dc0e31-fe11-4bd9-b60b-873d4ec9acf6"),
             Metadata: []shared.KmsPageMetadata{},
             Type: shared.KmsCommentTypePage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-05T07:34:07.105Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-07T02:36:59.813Z"),
         },
         ConnectionID: "<id>",
     })
@@ -179,11 +179,11 @@ func main() {
     res, err := s.Comment.CreateTaskComment(ctx, operations.CreateTaskCommentRequest{
         TaskComment: shared.TaskComment{
             CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
-            HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("21b097e9-0586-47fa-afc4-398fcb13c768"),
+            HasChildren: unifiedgosdk.Pointer(false),
+            ID: unifiedgosdk.Pointer("46af8969-ca4d-4cee-8b68-9578fe03205c"),
             Metadata: []shared.TaskMetadata{},
-            Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
-            UpdatedAt: types.MustNewTimeFromString("2021-10-11T18:26:44.485Z"),
+            Text: unifiedgosdk.Pointer("Tabernus circumvenio demens placeat."),
+            UpdatedAt: types.MustNewTimeFromString("2021-10-13T10:38:58.535Z"),
         },
         ConnectionID: "<id>",
     })
@@ -241,11 +241,11 @@ func main() {
 
     res, err := s.Comment.CreateUcComment(ctx, operations.CreateUcCommentRequest{
         UcComment: shared.UcComment{
-            Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
+            Content: unifiedgosdk.Pointer("Aestivus odit ducimus nulla talis."),
             CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
-            ID: unifiedgosdk.Pointer("12a25d56-8f55-4548-ba73-cd08afad252d"),
+            ID: unifiedgosdk.Pointer("7f9f5143-956f-491f-ba70-070e1108257d"),
             Metadata: []shared.UcMetadata{},
-            UpdatedAt: unifiedgosdk.Pointer("2024-02-17T00:05:12.867Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-18T10:33:29.703Z"),
         },
         ConnectionID: "<id>",
     })
@@ -740,13 +740,13 @@ func main() {
 
     res, err := s.Comment.PatchKmsComment(ctx, operations.PatchKmsCommentRequest{
         KmsComment: shared.KmsComment{
-            Content: unifiedgosdk.Pointer("Decimus tolero viriliter usque."),
+            Content: unifiedgosdk.Pointer("Usque arbor laudantium somniculosus officiis conicio vox artificiose crux truculenter."),
             ContentType: shared.ContentTypeHTML.ToPointer(),
             CreatedAt: types.MustNewTimeFromString("2022-08-26T14:40:49.732Z"),
-            ID: unifiedgosdk.Pointer("66869dd0-f98e-42cd-8523-07af5855ad57"),
+            ID: unifiedgosdk.Pointer("54c3fa02-40b6-491a-8665-068c121e5b6c"),
             Metadata: []shared.KmsPageMetadata{},
             Type: shared.KmsCommentTypePage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-05T07:34:07.107Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-07T02:36:59.817Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -864,11 +864,11 @@ func main() {
     res, err := s.Comment.PatchTaskComment(ctx, operations.PatchTaskCommentRequest{
         TaskComment: shared.TaskComment{
             CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
-            HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("4b15a5c9-7a3a-4eae-a69a-b8c51d769517"),
+            HasChildren: unifiedgosdk.Pointer(false),
+            ID: unifiedgosdk.Pointer("f168a1a4-2671-46d0-a8a1-c9ef7d806f19"),
             Metadata: []shared.TaskMetadata{},
-            Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
-            UpdatedAt: types.MustNewTimeFromString("2021-10-11T18:26:44.486Z"),
+            Text: unifiedgosdk.Pointer("Tabernus circumvenio demens placeat."),
+            UpdatedAt: types.MustNewTimeFromString("2021-10-13T10:38:58.538Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -927,11 +927,11 @@ func main() {
 
     res, err := s.Comment.PatchUcComment(ctx, operations.PatchUcCommentRequest{
         UcComment: shared.UcComment{
-            Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
+            Content: unifiedgosdk.Pointer("Aestivus odit ducimus nulla talis."),
             CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
-            ID: unifiedgosdk.Pointer("2a85d470-6047-432c-a003-3d807646628c"),
+            ID: unifiedgosdk.Pointer("b44a8148-7740-4287-92d1-2c64e6d34670"),
             Metadata: []shared.UcMetadata{},
-            UpdatedAt: unifiedgosdk.Pointer("2024-02-17T00:05:12.869Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-18T10:33:29.705Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1211,13 +1211,13 @@ func main() {
 
     res, err := s.Comment.UpdateKmsComment(ctx, operations.UpdateKmsCommentRequest{
         KmsComment: shared.KmsComment{
-            Content: unifiedgosdk.Pointer("Decimus tolero viriliter usque."),
+            Content: unifiedgosdk.Pointer("Usque arbor laudantium somniculosus officiis conicio vox artificiose crux truculenter."),
             ContentType: shared.ContentTypeHTML.ToPointer(),
             CreatedAt: types.MustNewTimeFromString("2022-08-26T14:40:49.732Z"),
-            ID: unifiedgosdk.Pointer("66869dd0-f98e-42cd-8523-07af5855ad57"),
+            ID: unifiedgosdk.Pointer("54c3fa02-40b6-491a-8665-068c121e5b6c"),
             Metadata: []shared.KmsPageMetadata{},
             Type: shared.KmsCommentTypePage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-05T07:34:07.107Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-07T02:36:59.817Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1335,11 +1335,11 @@ func main() {
     res, err := s.Comment.UpdateTaskComment(ctx, operations.UpdateTaskCommentRequest{
         TaskComment: shared.TaskComment{
             CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
-            HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("4b15a5c9-7a3a-4eae-a69a-b8c51d769517"),
+            HasChildren: unifiedgosdk.Pointer(false),
+            ID: unifiedgosdk.Pointer("f168a1a4-2671-46d0-a8a1-c9ef7d806f19"),
             Metadata: []shared.TaskMetadata{},
-            Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
-            UpdatedAt: types.MustNewTimeFromString("2021-10-11T18:26:44.486Z"),
+            Text: unifiedgosdk.Pointer("Tabernus circumvenio demens placeat."),
+            UpdatedAt: types.MustNewTimeFromString("2021-10-13T10:38:58.538Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1398,11 +1398,11 @@ func main() {
 
     res, err := s.Comment.UpdateUcComment(ctx, operations.UpdateUcCommentRequest{
         UcComment: shared.UcComment{
-            Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
+            Content: unifiedgosdk.Pointer("Aestivus odit ducimus nulla talis."),
             CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
-            ID: unifiedgosdk.Pointer("2a85d470-6047-432c-a003-3d807646628c"),
+            ID: unifiedgosdk.Pointer("b44a8148-7740-4287-92d1-2c64e6d34670"),
             Metadata: []shared.UcMetadata{},
-            UpdatedAt: unifiedgosdk.Pointer("2024-02-17T00:05:12.869Z"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-18T10:33:29.705Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

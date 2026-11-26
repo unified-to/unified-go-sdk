@@ -56,3 +56,6 @@ value := operations.QueryParamCategoriesPassthrough
 | `QueryParamCategoriesProperty`     | property                           |
 | `QueryParamCategoriesPlm`          | plm                                |
 | `QueryParamCategoriesQms`          | qms                                |
+| `QueryParamCategoriesDms`          | dms                                |
+| `QueryParamCategoriesFhir`         | fhir                               |
+| `QueryParamCategoriesPrinting`     | printing                           |

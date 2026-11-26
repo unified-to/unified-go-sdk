@@ -7,22 +7,22 @@ import (
 	"time"
 )
 
-// Criticality - Potential severity of future reactions
-type Criticality string
+// HealthcareAllergyCriticality - Potential severity of future reactions
+type HealthcareAllergyCriticality string
 
 const (
-	CriticalityLow            Criticality = "LOW"
-	CriticalityHigh           Criticality = "HIGH"
-	CriticalityUnableToAssess Criticality = "UNABLE_TO_ASSESS"
-	CriticalityOther          Criticality = "OTHER"
+	HealthcareAllergyCriticalityLow            HealthcareAllergyCriticality = "LOW"
+	HealthcareAllergyCriticalityHigh           HealthcareAllergyCriticality = "HIGH"
+	HealthcareAllergyCriticalityUnableToAssess HealthcareAllergyCriticality = "UNABLE_TO_ASSESS"
+	HealthcareAllergyCriticalityOther          HealthcareAllergyCriticality = "OTHER"
 )
 
-func (e Criticality) ToPointer() *Criticality {
+func (e HealthcareAllergyCriticality) ToPointer() *HealthcareAllergyCriticality {
 	return &e
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *Criticality) IsExact() bool {
+func (e *HealthcareAllergyCriticality) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "LOW", "HIGH", "UNABLE_TO_ASSESS", "OTHER":
@@ -89,7 +89,7 @@ type HealthcareAllergy struct {
 	// When the allergy record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// Potential severity of future reactions
-	Criticality *Criticality `json:"criticality,omitempty"`
+	Criticality *HealthcareAllergyCriticality `json:"criticality,omitempty"`
 	// The encounter in which the allergy was recorded
 	EncounterID *string `json:"encounter_id,omitempty"`
 	// Unique identifier for the allergy/intolerance
@@ -145,7 +145,7 @@ func (h *HealthcareAllergy) GetCreatedAt() *time.Time {
 	return h.CreatedAt
 }
 
-func (h *HealthcareAllergy) GetCriticality() *Criticality {
+func (h *HealthcareAllergy) GetCriticality() *HealthcareAllergyCriticality {
 	if h == nil {
 		return nil
 	}

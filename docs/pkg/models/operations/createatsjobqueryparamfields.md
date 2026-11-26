@@ -44,4 +44,5 @@ value := operations.CreateAtsJobQueryParamFieldsID
 | `CreateAtsJobQueryParamFieldsUserID`                 | user_id                                              |
 | `CreateAtsJobQueryParamFieldsIndustry`               | industry                                             |
 | `CreateAtsJobQueryParamFieldsSummary`                | summary                                              |
+| `CreateAtsJobQueryParamFieldsFees`                   | fees                                                 |
 | `CreateAtsJobQueryParamFieldsRaw`                    | raw                                                  |

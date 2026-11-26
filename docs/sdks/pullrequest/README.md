@@ -39,18 +39,18 @@ func main() {
 
     res, err := s.Pullrequest.CreateRepoPullrequest(ctx, operations.CreateRepoPullrequestRequest{
         RepoPullrequest: shared.RepoPullrequest{
-            ClosedAt: types.MustNewTimeFromString("2025-05-19T11:10:49.182Z"),
+            ClosedAt: types.MustNewTimeFromString("2025-05-23T00:25:56.420Z"),
             CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
-            ID: unifiedgosdk.Pointer("8b33eaac-ea84-4d66-a78a-2e61a1d407d8"),
+            ID: unifiedgosdk.Pointer("ade6170e-665c-4eac-aab3-99fbead99f34"),
             Labels: []string{
-                "creptio",
-                "tutamen",
+                "crudelis",
+                "uxor",
             },
             Metadata: []shared.RepoMetadata{},
-            Notes: unifiedgosdk.Pointer("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo."),
+            Notes: unifiedgosdk.Pointer("Amet asporto defero coadunatio. Curtus ceno consuasor aggero veritatis suggero adeo creptio tutamen. Aqua delicate adopto derelinquo caritas bibo maiores vulgivagus succurro temporibus."),
             Status: shared.RepoPullrequestStatusApproved.ToPointer(),
-            Title: unifiedgosdk.Pointer("reboot mobile application"),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-10T01:19:54.063Z"),
+            Title: unifiedgosdk.Pointer("compress redundant application"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-14T18:34:14.678Z"),
         },
         ConnectionID: "<id>",
     })
@@ -218,18 +218,18 @@ func main() {
 
     res, err := s.Pullrequest.PatchRepoPullrequest(ctx, operations.PatchRepoPullrequestRequest{
         RepoPullrequest: shared.RepoPullrequest{
-            ClosedAt: types.MustNewTimeFromString("2025-05-19T11:10:49.187Z"),
+            ClosedAt: types.MustNewTimeFromString("2025-05-23T00:25:56.428Z"),
             CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
-            ID: unifiedgosdk.Pointer("65dfda9c-ecce-4366-b1c9-160d1d650ed7"),
+            ID: unifiedgosdk.Pointer("1b6021d6-2f9f-4f94-ad5a-21ca8064197c"),
             Labels: []string{
-                "creptio",
-                "tutamen",
+                "crudelis",
+                "uxor",
             },
             Metadata: []shared.RepoMetadata{},
-            Notes: unifiedgosdk.Pointer("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo."),
+            Notes: unifiedgosdk.Pointer("Amet asporto defero coadunatio. Curtus ceno consuasor aggero veritatis suggero adeo creptio tutamen. Aqua delicate adopto derelinquo caritas bibo maiores vulgivagus succurro temporibus."),
             Status: shared.RepoPullrequestStatusApproved.ToPointer(),
-            Title: unifiedgosdk.Pointer("reboot mobile application"),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-10T01:19:54.071Z"),
+            Title: unifiedgosdk.Pointer("compress redundant application"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-14T18:34:14.689Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -344,18 +344,18 @@ func main() {
 
     res, err := s.Pullrequest.UpdateRepoPullrequest(ctx, operations.UpdateRepoPullrequestRequest{
         RepoPullrequest: shared.RepoPullrequest{
-            ClosedAt: types.MustNewTimeFromString("2025-05-19T11:10:49.187Z"),
+            ClosedAt: types.MustNewTimeFromString("2025-05-23T00:25:56.428Z"),
             CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
-            ID: unifiedgosdk.Pointer("65dfda9c-ecce-4366-b1c9-160d1d650ed7"),
+            ID: unifiedgosdk.Pointer("1b6021d6-2f9f-4f94-ad5a-21ca8064197c"),
             Labels: []string{
-                "creptio",
-                "tutamen",
+                "crudelis",
+                "uxor",
             },
             Metadata: []shared.RepoMetadata{},
-            Notes: unifiedgosdk.Pointer("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo."),
+            Notes: unifiedgosdk.Pointer("Amet asporto defero coadunatio. Curtus ceno consuasor aggero veritatis suggero adeo creptio tutamen. Aqua delicate adopto derelinquo caritas bibo maiores vulgivagus succurro temporibus."),
             Status: shared.RepoPullrequestStatusApproved.ToPointer(),
-            Title: unifiedgosdk.Pointer("reboot mobile application"),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-10T01:19:54.071Z"),
+            Title: unifiedgosdk.Pointer("compress redundant application"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-14T18:34:14.689Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

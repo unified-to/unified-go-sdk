@@ -41,23 +41,23 @@ func main() {
 
     res, err := s.Scorecard.CreateAtsScorecard(ctx, operations.CreateAtsScorecardRequest{
         AtsScorecard: shared.AtsScorecard{
-            Comment: unifiedgosdk.Pointer("Maiores enim."),
+            Comment: unifiedgosdk.Pointer("Aliquam."),
             CreatedAt: types.MustNewTimeFromString("2022-02-20T17:09:45.498Z"),
-            ID: unifiedgosdk.Pointer("de05cef4-02dd-40f6-b809-0ca0d6f52643"),
+            ID: unifiedgosdk.Pointer("ec942085-8f88-4f52-9049-78fb3f9ae674"),
             Metadata: []shared.AtsMetadata{},
             Questions: []shared.AtsScorecardQuestion{
                 shared.AtsScorecardQuestion{
-                    Description: unifiedgosdk.Pointer("Sulum textor eveniet facere vita."),
-                    Text: "Aliquam.",
+                    Description: unifiedgosdk.Pointer("Pecto vulpes libero vomer comburo."),
+                    Text: "Desidero modi tamdiu auxilium defessus adimpleo clementia tero.",
                 },
                 shared.AtsScorecardQuestion{
-                    Answer: unifiedgosdk.Pointer("Decretum."),
-                    Description: unifiedgosdk.Pointer("Conatus cicuta doloremque statua bonus."),
-                    Text: "Pecto vulpes libero vomer comburo.",
+                    Answer: unifiedgosdk.Pointer("Conatus cicuta doloremque statua bonus."),
+                    Description: unifiedgosdk.Pointer("Aduro viscus celebrer."),
+                    Text: "Decretum.",
                 },
             },
             Recommendation: shared.RecommendationStrongYes.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-13T20:13:37.581Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-15T11:39:27.949Z"),
         },
         ConnectionID: "<id>",
     })
@@ -334,23 +334,23 @@ func main() {
 
     res, err := s.Scorecard.PatchAtsScorecard(ctx, operations.PatchAtsScorecardRequest{
         AtsScorecard: shared.AtsScorecard{
-            Comment: unifiedgosdk.Pointer("Maiores enim."),
+            Comment: unifiedgosdk.Pointer("Aliquam."),
             CreatedAt: types.MustNewTimeFromString("2022-02-20T17:09:45.498Z"),
-            ID: unifiedgosdk.Pointer("a05dc2a2-783a-4f91-87ca-a44107eda2d5"),
+            ID: unifiedgosdk.Pointer("4e4c2a4e-6a58-45eb-8e47-b9cbc56fd736"),
             Metadata: []shared.AtsMetadata{},
             Questions: []shared.AtsScorecardQuestion{
                 shared.AtsScorecardQuestion{
-                    Description: unifiedgosdk.Pointer("Sulum textor eveniet facere vita."),
-                    Text: "Aliquam.",
+                    Description: unifiedgosdk.Pointer("Pecto vulpes libero vomer comburo."),
+                    Text: "Desidero modi tamdiu auxilium defessus adimpleo clementia tero.",
                 },
                 shared.AtsScorecardQuestion{
-                    Answer: unifiedgosdk.Pointer("Decretum."),
-                    Description: unifiedgosdk.Pointer("Conatus cicuta doloremque statua bonus."),
-                    Text: "Pecto vulpes libero vomer comburo.",
+                    Answer: unifiedgosdk.Pointer("Conatus cicuta doloremque statua bonus."),
+                    Description: unifiedgosdk.Pointer("Aduro viscus celebrer."),
+                    Text: "Decretum.",
                 },
             },
             Recommendation: shared.RecommendationStrongYes.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-13T20:13:37.584Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-15T11:39:27.951Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -465,23 +465,23 @@ func main() {
 
     res, err := s.Scorecard.UpdateAtsScorecard(ctx, operations.UpdateAtsScorecardRequest{
         AtsScorecard: shared.AtsScorecard{
-            Comment: unifiedgosdk.Pointer("Maiores enim."),
+            Comment: unifiedgosdk.Pointer("Aliquam."),
             CreatedAt: types.MustNewTimeFromString("2022-02-20T17:09:45.498Z"),
-            ID: unifiedgosdk.Pointer("a05dc2a2-783a-4f91-87ca-a44107eda2d5"),
+            ID: unifiedgosdk.Pointer("4e4c2a4e-6a58-45eb-8e47-b9cbc56fd736"),
             Metadata: []shared.AtsMetadata{},
             Questions: []shared.AtsScorecardQuestion{
                 shared.AtsScorecardQuestion{
-                    Description: unifiedgosdk.Pointer("Sulum textor eveniet facere vita."),
-                    Text: "Aliquam.",
+                    Description: unifiedgosdk.Pointer("Pecto vulpes libero vomer comburo."),
+                    Text: "Desidero modi tamdiu auxilium defessus adimpleo clementia tero.",
                 },
                 shared.AtsScorecardQuestion{
-                    Answer: unifiedgosdk.Pointer("Decretum."),
-                    Description: unifiedgosdk.Pointer("Conatus cicuta doloremque statua bonus."),
-                    Text: "Pecto vulpes libero vomer comburo.",
+                    Answer: unifiedgosdk.Pointer("Conatus cicuta doloremque statua bonus."),
+                    Description: unifiedgosdk.Pointer("Aduro viscus celebrer."),
+                    Text: "Decretum.",
                 },
             },
             Recommendation: shared.RecommendationStrongYes.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-13T20:13:37.584Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-15T11:39:27.951Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

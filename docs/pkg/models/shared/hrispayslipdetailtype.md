@@ -67,3 +67,4 @@ custom := shared.HrisPayslipDetailType("custom_value")
 | `HrisPayslipDetailTypePosttaxDeductionCollegeSavings`   | POSTTAX_DEDUCTION_COLLEGE_SAVINGS                       |
 | `HrisPayslipDetailTypePosttaxDeductionUnionDues`        | POSTTAX_DEDUCTION_UNION_DUES                            |
 | `HrisPayslipDetailTypePosttaxDeductionEwaRepayment`     | POSTTAX_DEDUCTION_EWA_REPAYMENT                         |
+| `HrisPayslipDetailTypeEarningTaxableBenefit`            | EARNING_TAXABLE_BENEFIT                                 |

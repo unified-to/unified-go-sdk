@@ -30,3 +30,6 @@ value := operations.ListPaymentLinksQueryParamFieldsID
 | `ListPaymentLinksQueryParamFieldsSuccessURL`      | success_url                                       |
 | `ListPaymentLinksQueryParamFieldsMetadata`        | metadata                                          |
 | `ListPaymentLinksQueryParamFieldsRaw`             | raw                                               |
+| `ListPaymentLinksQueryParamFieldsContactName`     | contact_name                                      |
+| `ListPaymentLinksQueryParamFieldsContactEmail`    | contact_email                                     |
+| `ListPaymentLinksQueryParamFieldsContactPhone`    | contact_phone                                     |

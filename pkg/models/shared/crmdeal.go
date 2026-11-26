@@ -39,8 +39,10 @@ type CrmDeal struct {
 	// The last date that this deal object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	// (reference to HrisEmployee)
-	UserID    *string `json:"user_id,omitempty"`
-	WonReason *string `json:"won_reason,omitempty"`
+	UserID *string `json:"user_id,omitempty"`
+	// DMS Vehicles this deal is for
+	VehicleIds []string `json:"vehicle_ids,omitempty"`
+	WonReason  *string  `json:"won_reason,omitempty"`
 }
 
 func (c CrmDeal) MarshalJSON() ([]byte, error) {
@@ -192,6 +194,13 @@ func (c *CrmDeal) GetUserID() *string {
 		return nil
 	}
 	return c.UserID
+}
+
+func (c *CrmDeal) GetVehicleIds() []string {
+	if c == nil {
+		return nil
+	}
+	return c.VehicleIds
 }
 
 func (c *CrmDeal) GetWonReason() *string {

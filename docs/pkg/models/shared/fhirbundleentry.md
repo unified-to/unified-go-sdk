@@ -1,0 +1,10 @@
+# FhirBundleEntry
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `FullURL`                                                                                            | `*string`                                                                                            | :heavy_minus_sign:                                                                                   | URI for resource (Absolute URL)                                                                      |
+| `Resource`                                                                                           | [*shared.Resource](../../../pkg/models/shared/resource.md)                                           | :heavy_minus_sign:                                                                                   | A resource of the searched type                                                                      |
+| `Search`                                                                                             | [*shared.PropertyFhirBundleEntrySearch](../../../pkg/models/shared/propertyfhirbundleentrysearch.md) | :heavy_minus_sign:                                                                                   | Search related information                                                                           |

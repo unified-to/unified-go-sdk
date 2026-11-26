@@ -1,0 +1,11 @@
+# FhirIdentifier
+
+
+## Fields
+
+| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `System`                                                                                       | `*string`                                                                                      | :heavy_minus_sign:                                                                             | The namespace for the identifier value                                                         |
+| `Type`                                                                                         | [*shared.PropertyFhirIdentifierType](../../../pkg/models/shared/propertyfhiridentifiertype.md) | :heavy_minus_sign:                                                                             | Description of the identifier (v2-0203 code, eg. MR, NPI)                                      |
+| `Use`                                                                                          | `*string`                                                                                      | :heavy_minus_sign:                                                                             | usual \| official \| temp \| secondary \| old                                                  |
+| `Value`                                                                                        | `*string`                                                                                      | :heavy_minus_sign:                                                                             | The value that is unique                                                                       |

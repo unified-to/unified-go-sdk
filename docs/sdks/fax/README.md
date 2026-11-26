@@ -37,18 +37,18 @@ func main() {
 
     res, err := s.Fax.CreateUcFax(ctx, operations.CreateUcFaxRequest{
         UcFax: shared.UcFax{
-            CostAmount: unifiedgosdk.Pointer[float64](1.2207),
+            CostAmount: unifiedgosdk.Pointer[float64](1.8536),
             CreatedAt: types.MustNewTimeFromString("2022-10-25T13:37:51.431Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            FromTelephone: unifiedgosdk.Pointer("+13605107540"),
-            ID: unifiedgosdk.Pointer("7d444244-44b6-4547-9284-3f55fd5e6413"),
-            MediaURL: unifiedgosdk.Pointer("https://doting-jump.biz"),
+            FromTelephone: unifiedgosdk.Pointer("+15108540908"),
+            ID: unifiedgosdk.Pointer("2e13c7ac-bfdc-412a-8b29-02f1bebb12ef"),
+            MediaURL: unifiedgosdk.Pointer("https://pitiful-stranger.net/"),
             Metadata: []shared.UcMetadata{},
-            Pages: unifiedgosdk.Pointer[float64](20.0),
+            Pages: unifiedgosdk.Pointer[float64](10.0),
             Status: shared.UcFaxStatusDelivered.ToPointer(),
-            ToTelephone: unifiedgosdk.Pointer("+19083998866"),
+            ToTelephone: unifiedgosdk.Pointer("+13999866972"),
             Type: shared.UcFaxTypeInbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-17T07:10:35.291Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-17T23:52:59.787Z"),
         },
         ConnectionID: "<id>",
     })

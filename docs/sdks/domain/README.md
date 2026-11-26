@@ -40,12 +40,12 @@ func main() {
     res, err := s.Domain.CreateComputeDomain(ctx, operations.CreateComputeDomainRequest{
         ComputeDomain: shared.ComputeDomain{
             CreatedAt: types.MustNewTimeFromString("2019-11-22T16:38:26.009Z"),
-            ID: unifiedgosdk.Pointer("c1eb9bce-793a-4ed1-bd52-c0374d746b37"),
+            ID: unifiedgosdk.Pointer("a2506cfd-0855-4509-9ffd-283e4739dde3"),
             IsPrimary: unifiedgosdk.Pointer(false),
             Metadata: []shared.ComputeMetadata{},
-            Name: unifiedgosdk.Pointer("mysterious-republican.usable-section.info"),
+            Name: unifiedgosdk.Pointer("steel-hovercraft.humiliating-lender.com"),
             Status: shared.ComputeDomainStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-20T18:21:48.966Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-24T04:00:54.241Z"),
         },
         ConnectionID: "<id>",
     })
@@ -214,12 +214,12 @@ func main() {
     res, err := s.Domain.PatchComputeDomain(ctx, operations.PatchComputeDomainRequest{
         ComputeDomain: shared.ComputeDomain{
             CreatedAt: types.MustNewTimeFromString("2019-11-22T16:38:26.009Z"),
-            ID: unifiedgosdk.Pointer("4541ad87-f175-43f8-a501-3fb4b4c22bf8"),
+            ID: unifiedgosdk.Pointer("e78aa062-ca04-48f2-b441-968602cd36a9"),
             IsPrimary: unifiedgosdk.Pointer(false),
             Metadata: []shared.ComputeMetadata{},
-            Name: unifiedgosdk.Pointer("mysterious-republican.usable-section.info"),
+            Name: unifiedgosdk.Pointer("steel-hovercraft.humiliating-lender.com"),
             Status: shared.ComputeDomainStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-20T18:21:48.971Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-24T04:00:54.248Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -335,12 +335,12 @@ func main() {
     res, err := s.Domain.UpdateComputeDomain(ctx, operations.UpdateComputeDomainRequest{
         ComputeDomain: shared.ComputeDomain{
             CreatedAt: types.MustNewTimeFromString("2019-11-22T16:38:26.009Z"),
-            ID: unifiedgosdk.Pointer("4541ad87-f175-43f8-a501-3fb4b4c22bf8"),
+            ID: unifiedgosdk.Pointer("e78aa062-ca04-48f2-b441-968602cd36a9"),
             IsPrimary: unifiedgosdk.Pointer(false),
             Metadata: []shared.ComputeMetadata{},
-            Name: unifiedgosdk.Pointer("mysterious-republican.usable-section.info"),
+            Name: unifiedgosdk.Pointer("steel-hovercraft.humiliating-lender.com"),
             Status: shared.ComputeDomainStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-20T18:21:48.971Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-24T04:00:54.248Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

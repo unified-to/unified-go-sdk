@@ -206,6 +206,20 @@ type PropertyWorkspaceIntegrationPatchOverridenScopes struct {
 	DatastoreRecordWrite               *string `json:"datastore_record_write,omitempty"`
 	DatastoreTableRead                 *string `json:"datastore_table_read,omitempty"`
 	DatastoreTableWrite                *string `json:"datastore_table_write,omitempty"`
+	DmsAppointmentRead                 *string `json:"dms_appointment_read,omitempty"`
+	DmsAppointmentWrite                *string `json:"dms_appointment_write,omitempty"`
+	DmsOpcodeRead                      *string `json:"dms_opcode_read,omitempty"`
+	DmsOpcodeWrite                     *string `json:"dms_opcode_write,omitempty"`
+	DmsPartRead                        *string `json:"dms_part_read,omitempty"`
+	DmsPartWrite                       *string `json:"dms_part_write,omitempty"`
+	DmsPartsaleRead                    *string `json:"dms_partsale_read,omitempty"`
+	DmsPartsaleWrite                   *string `json:"dms_partsale_write,omitempty"`
+	DmsRepairorderRead                 *string `json:"dms_repairorder_read,omitempty"`
+	DmsRepairorderWrite                *string `json:"dms_repairorder_write,omitempty"`
+	DmsVehicleRead                     *string `json:"dms_vehicle_read,omitempty"`
+	DmsVehicleWrite                    *string `json:"dms_vehicle_write,omitempty"`
+	DmsVehiclesaleRead                 *string `json:"dms_vehiclesale_read,omitempty"`
+	DmsVehiclesaleWrite                *string `json:"dms_vehiclesale_write,omitempty"`
 	EnrichCompanyRead                  *string `json:"enrich_company_read,omitempty"`
 	EnrichPersonRead                   *string `json:"enrich_person_read,omitempty"`
 	FormsFormRead                      *string `json:"forms_form_read,omitempty"`
@@ -368,6 +382,16 @@ type PropertyWorkspaceIntegrationPatchOverridenScopes struct {
 	PlmDocumentWrite                   *string `json:"plm_document_write,omitempty"`
 	PlmPartRead                        *string `json:"plm_part_read,omitempty"`
 	PlmPartWrite                       *string `json:"plm_part_write,omitempty"`
+	PrintingFileRead                   *string `json:"printing_file_read,omitempty"`
+	PrintingFileWrite                  *string `json:"printing_file_write,omitempty"`
+	PrintingOrderRead                  *string `json:"printing_order_read,omitempty"`
+	PrintingOrderWrite                 *string `json:"printing_order_write,omitempty"`
+	PrintingProductRead                *string `json:"printing_product_read,omitempty"`
+	PrintingProductWrite               *string `json:"printing_product_write,omitempty"`
+	PrintingQuoteRead                  *string `json:"printing_quote_read,omitempty"`
+	PrintingQuoteWrite                 *string `json:"printing_quote_write,omitempty"`
+	PrintingTemplateRead               *string `json:"printing_template_read,omitempty"`
+	PrintingTemplateWrite              *string `json:"printing_template_write,omitempty"`
 	PropertyAvailabilityRead           *string `json:"property_availability_read,omitempty"`
 	PropertyConversationRead           *string `json:"property_conversation_read,omitempty"`
 	PropertyConversationWrite          *string `json:"property_conversation_write,omitempty"`
@@ -1883,6 +1907,104 @@ func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetDatastoreTableWrit
 	return p.DatastoreTableWrite
 }
 
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetDmsAppointmentRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.DmsAppointmentRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetDmsAppointmentWrite() *string {
+	if p == nil {
+		return nil
+	}
+	return p.DmsAppointmentWrite
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetDmsOpcodeRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.DmsOpcodeRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetDmsOpcodeWrite() *string {
+	if p == nil {
+		return nil
+	}
+	return p.DmsOpcodeWrite
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetDmsPartRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.DmsPartRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetDmsPartWrite() *string {
+	if p == nil {
+		return nil
+	}
+	return p.DmsPartWrite
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetDmsPartsaleRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.DmsPartsaleRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetDmsPartsaleWrite() *string {
+	if p == nil {
+		return nil
+	}
+	return p.DmsPartsaleWrite
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetDmsRepairorderRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.DmsRepairorderRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetDmsRepairorderWrite() *string {
+	if p == nil {
+		return nil
+	}
+	return p.DmsRepairorderWrite
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetDmsVehicleRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.DmsVehicleRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetDmsVehicleWrite() *string {
+	if p == nil {
+		return nil
+	}
+	return p.DmsVehicleWrite
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetDmsVehiclesaleRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.DmsVehiclesaleRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetDmsVehiclesaleWrite() *string {
+	if p == nil {
+		return nil
+	}
+	return p.DmsVehiclesaleWrite
+}
+
 func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetEnrichCompanyRead() *string {
 	if p == nil {
 		return nil
@@ -3015,6 +3137,76 @@ func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetPlmPartWrite() *st
 		return nil
 	}
 	return p.PlmPartWrite
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetPrintingFileRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.PrintingFileRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetPrintingFileWrite() *string {
+	if p == nil {
+		return nil
+	}
+	return p.PrintingFileWrite
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetPrintingOrderRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.PrintingOrderRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetPrintingOrderWrite() *string {
+	if p == nil {
+		return nil
+	}
+	return p.PrintingOrderWrite
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetPrintingProductRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.PrintingProductRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetPrintingProductWrite() *string {
+	if p == nil {
+		return nil
+	}
+	return p.PrintingProductWrite
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetPrintingQuoteRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.PrintingQuoteRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetPrintingQuoteWrite() *string {
+	if p == nil {
+		return nil
+	}
+	return p.PrintingQuoteWrite
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetPrintingTemplateRead() *string {
+	if p == nil {
+		return nil
+	}
+	return p.PrintingTemplateRead
+}
+
+func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetPrintingTemplateWrite() *string {
+	if p == nil {
+		return nil
+	}
+	return p.PrintingTemplateWrite
 }
 
 func (p *PropertyWorkspaceIntegrationPatchOverridenScopes) GetPropertyAvailabilityRead() *string {

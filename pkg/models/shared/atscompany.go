@@ -10,9 +10,11 @@ import (
 type AtsCompany struct {
 	Address *PropertyAtsCompanyAddress `json:"address,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt *time.Time    `json:"created_at,omitempty"`
-	ID        *string       `json:"id,omitempty"`
-	Metadata  []AtsMetadata `json:"metadata,omitempty"`
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// The client's default placement fee agreement
+	Fees     []AtsFee      `json:"fees,omitempty"`
+	ID       *string       `json:"id,omitempty"`
+	Metadata []AtsMetadata `json:"metadata,omitempty"`
 	// The company's name
 	Name         *string        `json:"name,omitempty"`
 	ParentID     *string        `json:"parent_id,omitempty"`
@@ -47,6 +49,13 @@ func (a *AtsCompany) GetCreatedAt() *time.Time {
 		return nil
 	}
 	return a.CreatedAt
+}
+
+func (a *AtsCompany) GetFees() []AtsFee {
+	if a == nil {
+		return nil
+	}
+	return a.Fees
 }
 
 func (a *AtsCompany) GetID() *string {

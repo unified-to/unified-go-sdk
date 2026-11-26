@@ -35,7 +35,7 @@ func main() {
     res, err := s.Rate.CreateShippingRate(ctx, operations.CreateShippingRateRequest{
         ShippingRate: shared.ShippingRate{
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("80a07a1b-7c0d-47f9-87ed-e69451a4c979"),
+            ID: unifiedgosdk.Pointer("d53aa5af-ea1f-477d-8576-757b52f619df"),
             Metadata: []shared.ShippingMetadata{},
             Rates: []shared.ShippingRateRate{
                 shared.ShippingRateRate{
@@ -43,7 +43,7 @@ func main() {
                     BaseAmount: unifiedgosdk.Pointer[float64](46.01),
                     Currency: unifiedgosdk.Pointer("USD"),
                     DeliveryDays: unifiedgosdk.Pointer[float64](2.0),
-                    Description: unifiedgosdk.Pointer("Veniam denego vulgo bos turpis pax."),
+                    Description: unifiedgosdk.Pointer("Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum."),
                     DiscountAmount: unifiedgosdk.Pointer[float64](4.6),
                     EstimatedDays: unifiedgosdk.Pointer[float64](2.0),
                     EstimatedDeliveryEndAt: types.MustNewTimeFromString("2021-09-03T01:03:36.021Z"),

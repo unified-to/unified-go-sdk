@@ -35,4 +35,5 @@ value := operations.UpdateCrmLeadQueryParamFieldsID
 | `UpdateCrmLeadQueryParamFieldsTitle`         | title                                        |
 | `UpdateCrmLeadQueryParamFieldsLinkUrls`      | link_urls                                    |
 | `UpdateCrmLeadQueryParamFieldsMetadata`      | metadata                                     |
+| `UpdateCrmLeadQueryParamFieldsVehicleIds`    | vehicle_ids                                  |
 | `UpdateCrmLeadQueryParamFieldsRaw`           | raw                                          |

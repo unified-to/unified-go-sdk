@@ -6,8 +6,10 @@
 
 * [CreateComputeTemplate](#createcomputetemplate) - Create a template
 * [GetComputeTemplate](#getcomputetemplate) - Retrieve a template
+* [GetPrintingTemplate](#getprintingtemplate) - Retrieve a template
 * [GetSigningTemplate](#getsigningtemplate) - Retrieve a template
 * [ListComputeTemplates](#listcomputetemplates) - List all templates
+* [ListPrintingTemplates](#listprintingtemplates) - List all templates
 * [ListSigningTemplates](#listsigningtemplates) - List all templates
 * [PatchComputeTemplate](#patchcomputetemplate) - Update a template
 * [RemoveComputeTemplate](#removecomputetemplate) - Remove a template
@@ -47,18 +49,18 @@ func main() {
             Dockerfile: unifiedgosdk.Pointer("FROM ubuntu:24.04\nRUN apt-get update"),
             GpuCount: unifiedgosdk.Pointer[float64](2.0),
             GpuModel: shared.ComputeTemplateGpuModelNvidiaGh200.ToPointer(),
-            ID: unifiedgosdk.Pointer("079c9561-21c6-483c-a0d5-9fb3e9cab6d8"),
-            Image: unifiedgosdk.Pointer("perfumed-molasses/cohibeo:5.2"),
+            ID: unifiedgosdk.Pointer("fb3f3548-75f1-48f2-a6f6-6afd9111d80f"),
+            Image: unifiedgosdk.Pointer("jaunty-tarragon/demum:5.2"),
             IsPublic: unifiedgosdk.Pointer(false),
-            LastUsedAt: types.MustNewTimeFromString("2026-04-18T02:29:07.029Z"),
+            LastUsedAt: types.MustNewTimeFromString("2026-04-23T02:50:02.087Z"),
             MemoryMb: unifiedgosdk.Pointer[float64](8192.0),
             Metadata: []shared.ComputeMetadata{},
-            Name: unifiedgosdk.Pointer("multi-byte-card"),
+            Name: unifiedgosdk.Pointer("online-matrix"),
             Ports: []float64{
                 8080.0,
             },
             Status: shared.ComputeTemplateStatusOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-28T22:56:55.667Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-04T04:03:34.504Z"),
         },
         ConnectionID: "<id>",
     })
@@ -137,6 +139,61 @@ func main() {
 ### Response
 
 **[*operations.GetComputeTemplateResponse](../../pkg/models/operations/getcomputetemplateresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetPrintingTemplate
+
+Retrieves a single PrintingTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getPrintingTemplate" method="get" path="/printing/{connection_id}/template/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Template.GetPrintingTemplate(ctx, operations.GetPrintingTemplateRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.PrintingTemplate != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.GetPrintingTemplateRequest](../../pkg/models/operations/getprintingtemplaterequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.GetPrintingTemplateResponse](../../pkg/models/operations/getprintingtemplateresponse.md), error**
 
 ### Errors
 
@@ -253,6 +310,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListPrintingTemplates
+
+Returns a list of PrintingTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listPrintingTemplates" method="get" path="/printing/{connection_id}/template" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Template.ListPrintingTemplates(ctx, operations.ListPrintingTemplatesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.PrintingTemplates != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.ListPrintingTemplatesRequest](../../pkg/models/operations/listprintingtemplatesrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.ListPrintingTemplatesResponse](../../pkg/models/operations/listprintingtemplatesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListSigningTemplates
 
 Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -341,18 +452,18 @@ func main() {
             Dockerfile: unifiedgosdk.Pointer("FROM ubuntu:24.04\nRUN apt-get update"),
             GpuCount: unifiedgosdk.Pointer[float64](2.0),
             GpuModel: shared.ComputeTemplateGpuModelNvidiaGh200.ToPointer(),
-            ID: unifiedgosdk.Pointer("2f2c6505-b774-4d59-b9dc-103297b41d05"),
-            Image: unifiedgosdk.Pointer("perfumed-molasses/cohibeo:5.2"),
+            ID: unifiedgosdk.Pointer("ed3fcdd5-af02-4c39-a002-189e7122956a"),
+            Image: unifiedgosdk.Pointer("jaunty-tarragon/demum:5.2"),
             IsPublic: unifiedgosdk.Pointer(false),
-            LastUsedAt: types.MustNewTimeFromString("2026-04-18T02:29:07.039Z"),
+            LastUsedAt: types.MustNewTimeFromString("2026-04-23T02:50:02.104Z"),
             MemoryMb: unifiedgosdk.Pointer[float64](8192.0),
             Metadata: []shared.ComputeMetadata{},
-            Name: unifiedgosdk.Pointer("multi-byte-card"),
+            Name: unifiedgosdk.Pointer("online-matrix"),
             Ports: []float64{
                 8080.0,
             },
             Status: shared.ComputeTemplateStatusOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-28T22:56:55.673Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-04T04:03:34.515Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -473,18 +584,18 @@ func main() {
             Dockerfile: unifiedgosdk.Pointer("FROM ubuntu:24.04\nRUN apt-get update"),
             GpuCount: unifiedgosdk.Pointer[float64](2.0),
             GpuModel: shared.ComputeTemplateGpuModelNvidiaGh200.ToPointer(),
-            ID: unifiedgosdk.Pointer("2f2c6505-b774-4d59-b9dc-103297b41d05"),
-            Image: unifiedgosdk.Pointer("perfumed-molasses/cohibeo:5.2"),
+            ID: unifiedgosdk.Pointer("ed3fcdd5-af02-4c39-a002-189e7122956a"),
+            Image: unifiedgosdk.Pointer("jaunty-tarragon/demum:5.2"),
             IsPublic: unifiedgosdk.Pointer(false),
-            LastUsedAt: types.MustNewTimeFromString("2026-04-18T02:29:07.039Z"),
+            LastUsedAt: types.MustNewTimeFromString("2026-04-23T02:50:02.104Z"),
             MemoryMb: unifiedgosdk.Pointer[float64](8192.0),
             Metadata: []shared.ComputeMetadata{},
-            Name: unifiedgosdk.Pointer("multi-byte-card"),
+            Name: unifiedgosdk.Pointer("online-matrix"),
             Ports: []float64{
                 8080.0,
             },
             Status: shared.ComputeTemplateStatusOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-28T22:56:55.673Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-04T04:03:34.515Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

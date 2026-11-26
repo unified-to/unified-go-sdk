@@ -35,13 +35,13 @@ func main() {
         GenaiEmbedding: shared.GenaiEmbedding{
             Content: []shared.GenaiEmbeddingContent{
                 shared.GenaiEmbeddingContent{
-                    Text: "Utrimque temptatio pecco demulceo.",
+                    Text: "Demulceo adulescens est delectatio solitudo videlicet volo.",
                 },
             },
             Dimension: unifiedgosdk.Pointer[float64](423.0),
-            Embeddings: unifiedgosdk.Pointer("Est."),
-            EncondingFormat: shared.EncondingFormatFloat.ToPointer(),
-            ID: unifiedgosdk.Pointer("2b6a04af-e167-4d40-b1cc-cb03839ecab8"),
+            Embeddings: unifiedgosdk.Pointer("Venia tutis cernuus viscus officiis utilis porro utique."),
+            EncodingFormat: shared.EncodingFormatFloat.ToPointer(),
+            ID: unifiedgosdk.Pointer("665804d4-bba4-4aca-ab81-29fc9b08b0b9"),
             MaxTokens: unifiedgosdk.Pointer[float64](223.0),
             TokensUsed: unifiedgosdk.Pointer[float64](836.0),
             Type: unifiedgosdk.Pointer("classification"),

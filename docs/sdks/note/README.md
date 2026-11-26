@@ -40,10 +40,10 @@ func main() {
     res, err := s.Note.CreateTicketingNote(ctx, operations.CreateTicketingNoteRequest{
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
-            Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
-            ID: unifiedgosdk.Pointer("d59a4ba2-e788-44e1-9816-902685490788"),
+            Description: unifiedgosdk.Pointer("Vitiosus recusandae tristis."),
+            ID: unifiedgosdk.Pointer("30dc7126-2087-4a78-bb00-162b9c6e0921"),
             Metadata: []shared.TicketingMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2024-10-20T18:03:34.540Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-25T00:23:49.913Z"),
         },
         ConnectionID: "<id>",
     })
@@ -212,10 +212,10 @@ func main() {
     res, err := s.Note.PatchTicketingNote(ctx, operations.PatchTicketingNoteRequest{
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
-            Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
-            ID: unifiedgosdk.Pointer("49d6d635-f954-4150-b05a-ae4bc9c1d7e9"),
+            Description: unifiedgosdk.Pointer("Vitiosus recusandae tristis."),
+            ID: unifiedgosdk.Pointer("a9a638fa-09d9-4846-a298-6a27a2520233"),
             Metadata: []shared.TicketingMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2024-10-20T18:03:34.544Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-25T00:23:49.918Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -331,10 +331,10 @@ func main() {
     res, err := s.Note.UpdateTicketingNote(ctx, operations.UpdateTicketingNoteRequest{
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
-            Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
-            ID: unifiedgosdk.Pointer("49d6d635-f954-4150-b05a-ae4bc9c1d7e9"),
+            Description: unifiedgosdk.Pointer("Vitiosus recusandae tristis."),
+            ID: unifiedgosdk.Pointer("a9a638fa-09d9-4846-a298-6a27a2520233"),
             Metadata: []shared.TicketingMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2024-10-20T18:03:34.544Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-25T00:23:49.918Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

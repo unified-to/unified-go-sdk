@@ -39,6 +39,8 @@ type CrmLead struct {
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	// (reference to HrisEmployee)
 	UserID *string `json:"user_id,omitempty"`
+	// DMS Vehicles the lead is interested in
+	VehicleIds []string `json:"vehicle_ids,omitempty"`
 }
 
 func (c CrmLead) MarshalJSON() ([]byte, error) {
@@ -197,4 +199,11 @@ func (c *CrmLead) GetUserID() *string {
 		return nil
 	}
 	return c.UserID
+}
+
+func (c *CrmLead) GetVehicleIds() []string {
+	if c == nil {
+		return nil
+	}
+	return c.VehicleIds
 }

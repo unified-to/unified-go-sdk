@@ -65,21 +65,21 @@ func main() {
 			CreatedAt:           types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
-			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("2cca726e-41f6-4659-8444-0819a46e32bf"),
+			Description:         unifiedgosdk.Pointer("Comedo vilitas harum cupiditate animus quo iste."),
+			ID:                  unifiedgosdk.Pointer("163a68aa-dffa-47cd-8735-bba178c623d5"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
-			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
+			Name:                unifiedgosdk.Pointer("Savings Account"),
 			Status:              shared.StatusArchived.ToPointer(),
 			Taxonomy: []shared.AccountingAccountTaxonomy{
 				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("vilitas"),
+					OriginalType: unifiedgosdk.Pointer("peccatus"),
 					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "comedo",
+					Value:        "vesper",
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-14T12:39:16.755Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-16T00:59:24.548Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -366,6 +366,11 @@ func main() {
 * [GetHealthcareAllergy](docs/sdks/allergy/README.md#gethealthcareallergy) - Retrieve an allergy
 * [ListHealthcareAllergies](docs/sdks/allergy/README.md#listhealthcareallergies) - List all allergies
 
+### [Allergyintolerance](docs/sdks/allergyintolerance/README.md)
+
+* [GetFhirAllergyintolerance](docs/sdks/allergyintolerance/README.md#getfhirallergyintolerance) - Read a AllergyIntolerance
+* [ListFhirAllergyintolerances](docs/sdks/allergyintolerance/README.md#listfhirallergyintolerances) - Search AllergyIntolerance resources
+
 ### [Analytics](docs/sdks/analytics/README.md)
 
 * [CreateAnalyticsEvent](docs/sdks/analytics/README.md#createanalyticsevent) - Create an event
@@ -408,11 +413,17 @@ func main() {
 
 ### [Appointment](docs/sdks/appointment/README.md)
 
+* [CreateDmsAppointment](docs/sdks/appointment/README.md#createdmsappointment) - Create an appointment
 * [CreateHealthcareAppointment](docs/sdks/appointment/README.md#createhealthcareappointment) - Create an appointment
+* [GetDmsAppointment](docs/sdks/appointment/README.md#getdmsappointment) - Retrieve an appointment
 * [GetHealthcareAppointment](docs/sdks/appointment/README.md#gethealthcareappointment) - Retrieve an appointment
+* [ListDmsAppointments](docs/sdks/appointment/README.md#listdmsappointments) - List all appointments
 * [ListHealthcareAppointments](docs/sdks/appointment/README.md#listhealthcareappointments) - List all appointments
+* [PatchDmsAppointment](docs/sdks/appointment/README.md#patchdmsappointment) - Update an appointment
 * [PatchHealthcareAppointment](docs/sdks/appointment/README.md#patchhealthcareappointment) - Update an appointment
+* [RemoveDmsAppointment](docs/sdks/appointment/README.md#removedmsappointment) - Remove an appointment
 * [RemoveHealthcareAppointment](docs/sdks/appointment/README.md#removehealthcareappointment) - Remove an appointment
+* [UpdateDmsAppointment](docs/sdks/appointment/README.md#updatedmsappointment) - Update an appointment
 * [UpdateHealthcareAppointment](docs/sdks/appointment/README.md#updatehealthcareappointment) - Update an appointment
 
 ### [Assessment](docs/sdks/assessment/README.md)
@@ -973,7 +984,9 @@ func main() {
 
 ### [Condition](docs/sdks/condition/README.md)
 
+* [GetFhirCondition](docs/sdks/condition/README.md#getfhircondition) - Read a Condition
 * [GetHealthcareCondition](docs/sdks/condition/README.md#gethealthcarecondition) - Retrieve a condition
+* [ListFhirConditions](docs/sdks/condition/README.md#listfhirconditions) - Search Condition resources
 * [ListHealthcareConditions](docs/sdks/condition/README.md#listhealthcareconditions) - List all conditions
 
 ### [Connection](docs/sdks/connection/README.md)
@@ -1184,6 +1197,50 @@ func main() {
 * [RemoveHrisDevice](docs/sdks/device/README.md#removehrisdevice) - Remove a device
 * [UpdateHrisDevice](docs/sdks/device/README.md#updatehrisdevice) - Update a device
 
+### [Diagnosticreport](docs/sdks/diagnosticreport/README.md)
+
+* [GetFhirDiagnosticreport](docs/sdks/diagnosticreport/README.md#getfhirdiagnosticreport) - Read a DiagnosticReport
+* [ListFhirDiagnosticreports](docs/sdks/diagnosticreport/README.md#listfhirdiagnosticreports) - Search DiagnosticReport resources
+
+### [Dms](docs/sdks/dms/README.md)
+
+* [CreateDmsAppointment](docs/sdks/dms/README.md#createdmsappointment) - Create an appointment
+* [CreateDmsOpcode](docs/sdks/dms/README.md#createdmsopcode) - Create an opcode
+* [CreateDmsPart](docs/sdks/dms/README.md#createdmspart) - Create a part
+* [CreateDmsPartsale](docs/sdks/dms/README.md#createdmspartsale) - Create a partsale
+* [CreateDmsRepairorder](docs/sdks/dms/README.md#createdmsrepairorder) - Create a repairorder
+* [CreateDmsVehicle](docs/sdks/dms/README.md#createdmsvehicle) - Create a vehicle
+* [CreateDmsVehiclesale](docs/sdks/dms/README.md#createdmsvehiclesale) - Create a vehiclesale
+* [GetDmsAppointment](docs/sdks/dms/README.md#getdmsappointment) - Retrieve an appointment
+* [GetDmsOpcode](docs/sdks/dms/README.md#getdmsopcode) - Retrieve an opcode
+* [GetDmsPart](docs/sdks/dms/README.md#getdmspart) - Retrieve a part
+* [GetDmsPartsale](docs/sdks/dms/README.md#getdmspartsale) - Retrieve a partsale
+* [GetDmsRepairorder](docs/sdks/dms/README.md#getdmsrepairorder) - Retrieve a repairorder
+* [GetDmsVehicle](docs/sdks/dms/README.md#getdmsvehicle) - Retrieve a vehicle
+* [GetDmsVehiclesale](docs/sdks/dms/README.md#getdmsvehiclesale) - Retrieve a vehiclesale
+* [ListDmsAppointments](docs/sdks/dms/README.md#listdmsappointments) - List all appointments
+* [ListDmsOpcodes](docs/sdks/dms/README.md#listdmsopcodes) - List all opcodes
+* [ListDmsParts](docs/sdks/dms/README.md#listdmsparts) - List all parts
+* [ListDmsPartsales](docs/sdks/dms/README.md#listdmspartsales) - List all partsales
+* [ListDmsRepairorders](docs/sdks/dms/README.md#listdmsrepairorders) - List all repairorders
+* [ListDmsVehicles](docs/sdks/dms/README.md#listdmsvehicles) - List all vehicles
+* [ListDmsVehiclesales](docs/sdks/dms/README.md#listdmsvehiclesales) - List all vehiclesales
+* [PatchDmsAppointment](docs/sdks/dms/README.md#patchdmsappointment) - Update an appointment
+* [PatchDmsOpcode](docs/sdks/dms/README.md#patchdmsopcode) - Update an opcode
+* [PatchDmsPart](docs/sdks/dms/README.md#patchdmspart) - Update a part
+* [PatchDmsPartsale](docs/sdks/dms/README.md#patchdmspartsale) - Update a partsale
+* [PatchDmsRepairorder](docs/sdks/dms/README.md#patchdmsrepairorder) - Update a repairorder
+* [PatchDmsVehicle](docs/sdks/dms/README.md#patchdmsvehicle) - Update a vehicle
+* [PatchDmsVehiclesale](docs/sdks/dms/README.md#patchdmsvehiclesale) - Update a vehiclesale
+* [RemoveDmsAppointment](docs/sdks/dms/README.md#removedmsappointment) - Remove an appointment
+* [UpdateDmsAppointment](docs/sdks/dms/README.md#updatedmsappointment) - Update an appointment
+* [UpdateDmsOpcode](docs/sdks/dms/README.md#updatedmsopcode) - Update an opcode
+* [UpdateDmsPart](docs/sdks/dms/README.md#updatedmspart) - Update a part
+* [UpdateDmsPartsale](docs/sdks/dms/README.md#updatedmspartsale) - Update a partsale
+* [UpdateDmsRepairorder](docs/sdks/dms/README.md#updatedmsrepairorder) - Update a repairorder
+* [UpdateDmsVehicle](docs/sdks/dms/README.md#updatedmsvehicle) - Update a vehicle
+* [UpdateDmsVehiclesale](docs/sdks/dms/README.md#updatedmsvehiclesale) - Update a vehiclesale
+
 ### [Document](docs/sdks/document/README.md)
 
 * [CreateAtsDocument](docs/sdks/document/README.md#createatsdocument) - Create a document
@@ -1246,7 +1303,9 @@ func main() {
 
 ### [Encounter](docs/sdks/encounter/README.md)
 
+* [GetFhirEncounter](docs/sdks/encounter/README.md#getfhirencounter) - Read a Encounter
 * [GetHealthcareEncounter](docs/sdks/encounter/README.md#gethealthcareencounter) - Retrieve an encounter
+* [ListFhirEncounters](docs/sdks/encounter/README.md#listfhirencounters) - Search Encounter resources
 * [ListHealthcareEncounters](docs/sdks/encounter/README.md#listhealthcareencounters) - List all encounters
 
 ### [Enrich](docs/sdks/enrich/README.md)
@@ -1334,10 +1393,35 @@ func main() {
 * [GetPerformanceFeedback](docs/sdks/feedback/README.md#getperformancefeedback) - Retrieve a feedback
 * [ListPerformanceFeedbacks](docs/sdks/feedback/README.md#listperformancefeedbacks) - List all feedbacks
 
+### [Fhir](docs/sdks/fhir/README.md)
+
+* [GetFhirAllergyintolerance](docs/sdks/fhir/README.md#getfhirallergyintolerance) - Read a AllergyIntolerance
+* [GetFhirCondition](docs/sdks/fhir/README.md#getfhircondition) - Read a Condition
+* [GetFhirDiagnosticreport](docs/sdks/fhir/README.md#getfhirdiagnosticreport) - Read a DiagnosticReport
+* [GetFhirEncounter](docs/sdks/fhir/README.md#getfhirencounter) - Read a Encounter
+* [GetFhirImmunization](docs/sdks/fhir/README.md#getfhirimmunization) - Read a Immunization
+* [GetFhirMedicationrequest](docs/sdks/fhir/README.md#getfhirmedicationrequest) - Read a MedicationRequest
+* [GetFhirObservation](docs/sdks/fhir/README.md#getfhirobservation) - Read a Observation
+* [GetFhirPatient](docs/sdks/fhir/README.md#getfhirpatient) - Read a Patient
+* [GetFhirPractitioner](docs/sdks/fhir/README.md#getfhirpractitioner) - Read a Practitioner
+* [ListFhirAllergyintolerances](docs/sdks/fhir/README.md#listfhirallergyintolerances) - Search AllergyIntolerance resources
+* [ListFhirConditions](docs/sdks/fhir/README.md#listfhirconditions) - Search Condition resources
+* [ListFhirDiagnosticreports](docs/sdks/fhir/README.md#listfhirdiagnosticreports) - Search DiagnosticReport resources
+* [ListFhirEncounters](docs/sdks/fhir/README.md#listfhirencounters) - Search Encounter resources
+* [ListFhirImmunizations](docs/sdks/fhir/README.md#listfhirimmunizations) - Search Immunization resources
+* [ListFhirMedicationrequests](docs/sdks/fhir/README.md#listfhirmedicationrequests) - Search MedicationRequest resources
+* [ListFhirMetadatas](docs/sdks/fhir/README.md#listfhirmetadatas) - Get the CapabilityStatement
+* [ListFhirObservations](docs/sdks/fhir/README.md#listfhirobservations) - Search Observation resources
+* [ListFhirPatients](docs/sdks/fhir/README.md#listfhirpatients) - Search Patient resources
+* [ListFhirPractitioners](docs/sdks/fhir/README.md#listfhirpractitioners) - Search Practitioner resources
+
 ### [File](docs/sdks/file/README.md)
 
+* [CreatePrintingFile](docs/sdks/file/README.md#createprintingfile) - Create a file
 * [CreateStorageFile](docs/sdks/file/README.md#createstoragefile) - Create a file
+* [GetPrintingFile](docs/sdks/file/README.md#getprintingfile) - Retrieve a file
 * [GetStorageFile](docs/sdks/file/README.md#getstoragefile) - Retrieve a file
+* [ListPrintingFiles](docs/sdks/file/README.md#listprintingfiles) - List all files
 * [ListStorageFiles](docs/sdks/file/README.md#liststoragefiles) - List all files
 * [PatchStorageFile](docs/sdks/file/README.md#patchstoragefile) - Update a file
 * [RemoveStorageFile](docs/sdks/file/README.md#removestoragefile) - Remove a file
@@ -1598,7 +1682,9 @@ func main() {
 
 ### [Immunization](docs/sdks/immunization/README.md)
 
+* [GetFhirImmunization](docs/sdks/immunization/README.md#getfhirimmunization) - Read a Immunization
 * [GetHealthcareImmunization](docs/sdks/immunization/README.md#gethealthcareimmunization) - Retrieve an immunization
+* [ListFhirImmunizations](docs/sdks/immunization/README.md#listfhirimmunizations) - Search Immunization resources
 * [ListHealthcareImmunizations](docs/sdks/immunization/README.md#listhealthcareimmunizations) - List all immunizations
 
 ### [Insertionorder](docs/sdks/insertionorder/README.md)
@@ -1942,6 +2028,11 @@ func main() {
 * [GetHealthcareMedication](docs/sdks/medication/README.md#gethealthcaremedication) - Retrieve a medication
 * [ListHealthcareMedications](docs/sdks/medication/README.md#listhealthcaremedications) - List all medications
 
+### [Medicationrequest](docs/sdks/medicationrequest/README.md)
+
+* [GetFhirMedicationrequest](docs/sdks/medicationrequest/README.md#getfhirmedicationrequest) - Read a MedicationRequest
+* [ListFhirMedicationrequests](docs/sdks/medicationrequest/README.md#listfhirmedicationrequests) - Search MedicationRequest resources
+
 ### [Member](docs/sdks/member/README.md)
 
 * [CreateMartechMember](docs/sdks/member/README.md#createmartechmember) - Create a member
@@ -1992,6 +2083,7 @@ func main() {
 
 * [CreateMetadataMetadata](docs/sdks/metadata/README.md#createmetadatametadata) - Create a metadata
 * [GetMetadataMetadata](docs/sdks/metadata/README.md#getmetadatametadata) - Retrieve a metadata
+* [ListFhirMetadatas](docs/sdks/metadata/README.md#listfhirmetadatas) - Get the CapabilityStatement
 * [ListMetadataMetadatas](docs/sdks/metadata/README.md#listmetadatametadatas) - List all metadatas
 * [PatchMetadataMetadata](docs/sdks/metadata/README.md#patchmetadatametadata) - Update a metadata
 * [RemoveMetadataMetadata](docs/sdks/metadata/README.md#removemetadatametadata) - Remove a metadata
@@ -2018,21 +2110,37 @@ func main() {
 ### [Observation](docs/sdks/observation/README.md)
 
 * [CreateHealthcareObservation](docs/sdks/observation/README.md#createhealthcareobservation) - Create an observation
+* [GetFhirObservation](docs/sdks/observation/README.md#getfhirobservation) - Read a Observation
 * [GetHealthcareObservation](docs/sdks/observation/README.md#gethealthcareobservation) - Retrieve an observation
+* [ListFhirObservations](docs/sdks/observation/README.md#listfhirobservations) - Search Observation resources
 * [ListHealthcareObservations](docs/sdks/observation/README.md#listhealthcareobservations) - List all observations
+
+### [Opcode](docs/sdks/opcode/README.md)
+
+* [CreateDmsOpcode](docs/sdks/opcode/README.md#createdmsopcode) - Create an opcode
+* [GetDmsOpcode](docs/sdks/opcode/README.md#getdmsopcode) - Retrieve an opcode
+* [ListDmsOpcodes](docs/sdks/opcode/README.md#listdmsopcodes) - List all opcodes
+* [PatchDmsOpcode](docs/sdks/opcode/README.md#patchdmsopcode) - Update an opcode
+* [UpdateDmsOpcode](docs/sdks/opcode/README.md#updatedmsopcode) - Update an opcode
 
 ### [Order](docs/sdks/order/README.md)
 
 * [~~CreateAccountingOrder~~](docs/sdks/order/README.md#createaccountingorder) - Create an order :warning: **Deprecated**
 * [CreateAssessmentOrder](docs/sdks/order/README.md#createassessmentorder) - Create an order
+* [CreatePrintingOrder](docs/sdks/order/README.md#createprintingorder) - Create an order
 * [~~GetAccountingOrder~~](docs/sdks/order/README.md#getaccountingorder) - Retrieve an order :warning: **Deprecated**
 * [GetAssessmentOrder](docs/sdks/order/README.md#getassessmentorder) - Retrieve an order
+* [GetPrintingOrder](docs/sdks/order/README.md#getprintingorder) - Retrieve an order
 * [~~ListAccountingOrders~~](docs/sdks/order/README.md#listaccountingorders) - List all orders :warning: **Deprecated**
+* [ListPrintingOrders](docs/sdks/order/README.md#listprintingorders) - List all orders
 * [~~PatchAccountingOrder~~](docs/sdks/order/README.md#patchaccountingorder) - Update an order :warning: **Deprecated**
 * [PatchAssessmentOrder](docs/sdks/order/README.md#patchassessmentorder) - Update an order
+* [PatchPrintingOrder](docs/sdks/order/README.md#patchprintingorder) - Update an order
 * [~~RemoveAccountingOrder~~](docs/sdks/order/README.md#removeaccountingorder) - Remove an order :warning: **Deprecated**
+* [RemovePrintingOrder](docs/sdks/order/README.md#removeprintingorder) - Remove an order
 * [~~UpdateAccountingOrder~~](docs/sdks/order/README.md#updateaccountingorder) - Update an order :warning: **Deprecated**
 * [UpdateAssessmentOrder](docs/sdks/order/README.md#updateassessmentorder) - Update an order
+* [UpdatePrintingOrder](docs/sdks/order/README.md#updateprintingorder) - Update an order
 
 ### [Organization](docs/sdks/organization/README.md)
 
@@ -2079,12 +2187,25 @@ func main() {
 
 ### [Part](docs/sdks/part/README.md)
 
+* [CreateDmsPart](docs/sdks/part/README.md#createdmspart) - Create a part
 * [CreatePlmPart](docs/sdks/part/README.md#createplmpart) - Create a part
+* [GetDmsPart](docs/sdks/part/README.md#getdmspart) - Retrieve a part
 * [GetPlmPart](docs/sdks/part/README.md#getplmpart) - Retrieve a part
+* [ListDmsParts](docs/sdks/part/README.md#listdmsparts) - List all parts
 * [ListPlmParts](docs/sdks/part/README.md#listplmparts) - List all parts
+* [PatchDmsPart](docs/sdks/part/README.md#patchdmspart) - Update a part
 * [PatchPlmPart](docs/sdks/part/README.md#patchplmpart) - Update a part
 * [RemovePlmPart](docs/sdks/part/README.md#removeplmpart) - Remove a part
+* [UpdateDmsPart](docs/sdks/part/README.md#updatedmspart) - Update a part
 * [UpdatePlmPart](docs/sdks/part/README.md#updateplmpart) - Update a part
+
+### [Partsale](docs/sdks/partsale/README.md)
+
+* [CreateDmsPartsale](docs/sdks/partsale/README.md#createdmspartsale) - Create a partsale
+* [GetDmsPartsale](docs/sdks/partsale/README.md#getdmspartsale) - Retrieve a partsale
+* [ListDmsPartsales](docs/sdks/partsale/README.md#listdmspartsales) - List all partsales
+* [PatchDmsPartsale](docs/sdks/partsale/README.md#patchdmspartsale) - Update a partsale
+* [UpdateDmsPartsale](docs/sdks/partsale/README.md#updatedmspartsale) - Update a partsale
 
 ### [Passthrough](docs/sdks/passthrough/README.md)
 
@@ -2100,7 +2221,9 @@ func main() {
 ### [Patient](docs/sdks/patient/README.md)
 
 * [CreateHealthcarePatient](docs/sdks/patient/README.md#createhealthcarepatient) - Create a patient
+* [GetFhirPatient](docs/sdks/patient/README.md#getfhirpatient) - Read a Patient
 * [GetHealthcarePatient](docs/sdks/patient/README.md#gethealthcarepatient) - Retrieve a patient
+* [ListFhirPatients](docs/sdks/patient/README.md#listfhirpatients) - Search Patient resources
 * [ListHealthcarePatients](docs/sdks/patient/README.md#listhealthcarepatients) - List all patients
 * [PatchHealthcarePatient](docs/sdks/patient/README.md#patchhealthcarepatient) - Update a patient
 * [UpdateHealthcarePatient](docs/sdks/patient/README.md#updatehealthcarepatient) - Update a patient
@@ -2235,13 +2358,37 @@ func main() {
 
 ### [Practitioner](docs/sdks/practitioner/README.md)
 
+* [GetFhirPractitioner](docs/sdks/practitioner/README.md#getfhirpractitioner) - Read a Practitioner
 * [GetHealthcarePractitioner](docs/sdks/practitioner/README.md#gethealthcarepractitioner) - Retrieve a practitioner
+* [ListFhirPractitioners](docs/sdks/practitioner/README.md#listfhirpractitioners) - Search Practitioner resources
 * [ListHealthcarePractitioners](docs/sdks/practitioner/README.md#listhealthcarepractitioners) - List all practitioners
+
+### [Printing](docs/sdks/printing/README.md)
+
+* [CreatePrintingFile](docs/sdks/printing/README.md#createprintingfile) - Create a file
+* [CreatePrintingOrder](docs/sdks/printing/README.md#createprintingorder) - Create an order
+* [CreatePrintingQuote](docs/sdks/printing/README.md#createprintingquote) - Create a quote
+* [GetPrintingFile](docs/sdks/printing/README.md#getprintingfile) - Retrieve a file
+* [GetPrintingOrder](docs/sdks/printing/README.md#getprintingorder) - Retrieve an order
+* [GetPrintingProduct](docs/sdks/printing/README.md#getprintingproduct) - Retrieve a product
+* [GetPrintingTemplate](docs/sdks/printing/README.md#getprintingtemplate) - Retrieve a template
+* [ListPrintingFiles](docs/sdks/printing/README.md#listprintingfiles) - List all files
+* [ListPrintingOrders](docs/sdks/printing/README.md#listprintingorders) - List all orders
+* [ListPrintingProducts](docs/sdks/printing/README.md#listprintingproducts) - List all products
+* [ListPrintingTemplates](docs/sdks/printing/README.md#listprintingtemplates) - List all templates
+* [PatchPrintingOrder](docs/sdks/printing/README.md#patchprintingorder) - Update an order
+* [RemovePrintingOrder](docs/sdks/printing/README.md#removeprintingorder) - Remove an order
+* [UpdatePrintingOrder](docs/sdks/printing/README.md#updateprintingorder) - Update an order
 
 ### [Procedure](docs/sdks/procedure/README.md)
 
 * [GetHealthcareProcedure](docs/sdks/procedure/README.md#gethealthcareprocedure) - Retrieve a procedure
 * [ListHealthcareProcedures](docs/sdks/procedure/README.md#listhealthcareprocedures) - List all procedures
+
+### [Product](docs/sdks/product/README.md)
+
+* [GetPrintingProduct](docs/sdks/product/README.md#getprintingproduct) - Retrieve a product
+* [ListPrintingProducts](docs/sdks/product/README.md#listprintingproducts) - List all products
 
 ### [Profile](docs/sdks/profile/README.md)
 
@@ -2374,6 +2521,7 @@ func main() {
 ### [Quote](docs/sdks/quote/README.md)
 
 * [CreateAccountingQuote](docs/sdks/quote/README.md#createaccountingquote) - Create a quote
+* [CreatePrintingQuote](docs/sdks/quote/README.md#createprintingquote) - Create a quote
 * [CreatePropertyQuote](docs/sdks/quote/README.md#createpropertyquote) - Create a quote
 * [GetAccountingQuote](docs/sdks/quote/README.md#getaccountingquote) - Retrieve a quote
 * [ListAccountingQuotes](docs/sdks/quote/README.md#listaccountingquotes) - List all quotes
@@ -2414,6 +2562,14 @@ func main() {
 
 * [GetComputeRegion](docs/sdks/region/README.md#getcomputeregion) - Retrieve a region
 * [ListComputeRegions](docs/sdks/region/README.md#listcomputeregions) - List all regions
+
+### [Repairorder](docs/sdks/repairorder/README.md)
+
+* [CreateDmsRepairorder](docs/sdks/repairorder/README.md#createdmsrepairorder) - Create a repairorder
+* [GetDmsRepairorder](docs/sdks/repairorder/README.md#getdmsrepairorder) - Retrieve a repairorder
+* [ListDmsRepairorders](docs/sdks/repairorder/README.md#listdmsrepairorders) - List all repairorders
+* [PatchDmsRepairorder](docs/sdks/repairorder/README.md#patchdmsrepairorder) - Update a repairorder
+* [UpdateDmsRepairorder](docs/sdks/repairorder/README.md#updatedmsrepairorder) - Update a repairorder
 
 ### [Repo](docs/sdks/repo/README.md)
 
@@ -2835,8 +2991,10 @@ func main() {
 
 * [CreateComputeTemplate](docs/sdks/template/README.md#createcomputetemplate) - Create a template
 * [GetComputeTemplate](docs/sdks/template/README.md#getcomputetemplate) - Retrieve a template
+* [GetPrintingTemplate](docs/sdks/template/README.md#getprintingtemplate) - Retrieve a template
 * [GetSigningTemplate](docs/sdks/template/README.md#getsigningtemplate) - Retrieve a template
 * [ListComputeTemplates](docs/sdks/template/README.md#listcomputetemplates) - List all templates
+* [ListPrintingTemplates](docs/sdks/template/README.md#listprintingtemplates) - List all templates
 * [ListSigningTemplates](docs/sdks/template/README.md#listsigningtemplates) - List all templates
 * [PatchComputeTemplate](docs/sdks/template/README.md#patchcomputetemplate) - Update a template
 * [RemoveComputeTemplate](docs/sdks/template/README.md#removecomputetemplate) - Remove a template
@@ -3021,6 +3179,22 @@ func main() {
 * [RemoveScimUsers](docs/sdks/user/README.md#removescimusers) - Delete user
 * [UpdateScimUsers](docs/sdks/user/README.md#updatescimusers) - Update user
 
+### [Vehicle](docs/sdks/vehicle/README.md)
+
+* [CreateDmsVehicle](docs/sdks/vehicle/README.md#createdmsvehicle) - Create a vehicle
+* [GetDmsVehicle](docs/sdks/vehicle/README.md#getdmsvehicle) - Retrieve a vehicle
+* [ListDmsVehicles](docs/sdks/vehicle/README.md#listdmsvehicles) - List all vehicles
+* [PatchDmsVehicle](docs/sdks/vehicle/README.md#patchdmsvehicle) - Update a vehicle
+* [UpdateDmsVehicle](docs/sdks/vehicle/README.md#updatedmsvehicle) - Update a vehicle
+
+### [Vehiclesale](docs/sdks/vehiclesale/README.md)
+
+* [CreateDmsVehiclesale](docs/sdks/vehiclesale/README.md#createdmsvehiclesale) - Create a vehiclesale
+* [GetDmsVehiclesale](docs/sdks/vehiclesale/README.md#getdmsvehiclesale) - Retrieve a vehiclesale
+* [ListDmsVehiclesales](docs/sdks/vehiclesale/README.md#listdmsvehiclesales) - List all vehiclesales
+* [PatchDmsVehiclesale](docs/sdks/vehiclesale/README.md#patchdmsvehiclesale) - Update a vehiclesale
+* [UpdateDmsVehiclesale](docs/sdks/vehiclesale/README.md#updatedmsvehiclesale) - Update a vehiclesale
+
 ### [Vendorcredit](docs/sdks/vendorcredit/README.md)
 
 * [CreateAccountingVendorcredit](docs/sdks/vendorcredit/README.md#createaccountingvendorcredit) - Create a vendorcredit
@@ -3143,21 +3317,21 @@ func main() {
 			CreatedAt:           types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
-			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("2cca726e-41f6-4659-8444-0819a46e32bf"),
+			Description:         unifiedgosdk.Pointer("Comedo vilitas harum cupiditate animus quo iste."),
+			ID:                  unifiedgosdk.Pointer("163a68aa-dffa-47cd-8735-bba178c623d5"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
-			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
+			Name:                unifiedgosdk.Pointer("Savings Account"),
 			Status:              shared.StatusArchived.ToPointer(),
 			Taxonomy: []shared.AccountingAccountTaxonomy{
 				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("vilitas"),
+					OriginalType: unifiedgosdk.Pointer("peccatus"),
 					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "comedo",
+					Value:        "vesper",
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-14T12:39:16.755Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-16T00:59:24.548Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3217,21 +3391,21 @@ func main() {
 			CreatedAt:           types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
-			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("2cca726e-41f6-4659-8444-0819a46e32bf"),
+			Description:         unifiedgosdk.Pointer("Comedo vilitas harum cupiditate animus quo iste."),
+			ID:                  unifiedgosdk.Pointer("163a68aa-dffa-47cd-8735-bba178c623d5"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
-			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
+			Name:                unifiedgosdk.Pointer("Savings Account"),
 			Status:              shared.StatusArchived.ToPointer(),
 			Taxonomy: []shared.AccountingAccountTaxonomy{
 				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("vilitas"),
+					OriginalType: unifiedgosdk.Pointer("peccatus"),
 					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "comedo",
+					Value:        "vesper",
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-14T12:39:16.755Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-16T00:59:24.548Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3274,21 +3448,21 @@ func main() {
 			CreatedAt:           types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
-			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("2cca726e-41f6-4659-8444-0819a46e32bf"),
+			Description:         unifiedgosdk.Pointer("Comedo vilitas harum cupiditate animus quo iste."),
+			ID:                  unifiedgosdk.Pointer("163a68aa-dffa-47cd-8735-bba178c623d5"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
-			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
+			Name:                unifiedgosdk.Pointer("Savings Account"),
 			Status:              shared.StatusArchived.ToPointer(),
 			Taxonomy: []shared.AccountingAccountTaxonomy{
 				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("vilitas"),
+					OriginalType: unifiedgosdk.Pointer("peccatus"),
 					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "comedo",
+					Value:        "vesper",
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-14T12:39:16.755Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-16T00:59:24.548Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3374,21 +3548,21 @@ func main() {
 			CreatedAt:           types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
-			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("2cca726e-41f6-4659-8444-0819a46e32bf"),
+			Description:         unifiedgosdk.Pointer("Comedo vilitas harum cupiditate animus quo iste."),
+			ID:                  unifiedgosdk.Pointer("163a68aa-dffa-47cd-8735-bba178c623d5"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
-			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
+			Name:                unifiedgosdk.Pointer("Savings Account"),
 			Status:              shared.StatusArchived.ToPointer(),
 			Taxonomy: []shared.AccountingAccountTaxonomy{
 				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("vilitas"),
+					OriginalType: unifiedgosdk.Pointer("peccatus"),
 					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "comedo",
+					Value:        "vesper",
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-14T12:39:16.755Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-16T00:59:24.548Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3436,21 +3610,21 @@ func main() {
 			CreatedAt:           types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
-			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("2cca726e-41f6-4659-8444-0819a46e32bf"),
+			Description:         unifiedgosdk.Pointer("Comedo vilitas harum cupiditate animus quo iste."),
+			ID:                  unifiedgosdk.Pointer("163a68aa-dffa-47cd-8735-bba178c623d5"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
-			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
+			Name:                unifiedgosdk.Pointer("Savings Account"),
 			Status:              shared.StatusArchived.ToPointer(),
 			Taxonomy: []shared.AccountingAccountTaxonomy{
 				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("vilitas"),
+					OriginalType: unifiedgosdk.Pointer("peccatus"),
 					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "comedo",
+					Value:        "vesper",
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-14T12:39:16.755Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-16T00:59:24.548Z"),
 		},
 		ConnectionID: "<id>",
 	}, operations.WithRetries(
@@ -3512,21 +3686,21 @@ func main() {
 			CreatedAt:           types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
-			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("2cca726e-41f6-4659-8444-0819a46e32bf"),
+			Description:         unifiedgosdk.Pointer("Comedo vilitas harum cupiditate animus quo iste."),
+			ID:                  unifiedgosdk.Pointer("163a68aa-dffa-47cd-8735-bba178c623d5"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
-			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
+			Name:                unifiedgosdk.Pointer("Savings Account"),
 			Status:              shared.StatusArchived.ToPointer(),
 			Taxonomy: []shared.AccountingAccountTaxonomy{
 				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("vilitas"),
+					OriginalType: unifiedgosdk.Pointer("peccatus"),
 					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "comedo",
+					Value:        "vesper",
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-14T12:39:16.755Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-16T00:59:24.548Z"),
 		},
 		ConnectionID: "<id>",
 	})

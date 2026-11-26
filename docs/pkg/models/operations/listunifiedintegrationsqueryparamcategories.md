@@ -56,3 +56,6 @@ value := operations.ListUnifiedIntegrationsQueryParamCategoriesPassthrough
 | `ListUnifiedIntegrationsQueryParamCategoriesProperty`     | property                                                  |
 | `ListUnifiedIntegrationsQueryParamCategoriesPlm`          | plm                                                       |
 | `ListUnifiedIntegrationsQueryParamCategoriesQms`          | qms                                                       |
+| `ListUnifiedIntegrationsQueryParamCategoriesDms`          | dms                                                       |
+| `ListUnifiedIntegrationsQueryParamCategoriesFhir`         | fhir                                                      |
+| `ListUnifiedIntegrationsQueryParamCategoriesPrinting`     | printing                                                  |

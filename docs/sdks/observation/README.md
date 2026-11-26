@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [CreateHealthcareObservation](#createhealthcareobservation) - Create an observation
+* [GetFhirObservation](#getfhirobservation) - Read a Observation
 * [GetHealthcareObservation](#gethealthcareobservation) - Retrieve an observation
+* [ListFhirObservations](#listfhirobservations) - Search Observation resources
 * [ListHealthcareObservations](#listhealthcareobservations) - List all observations
 
 ## CreateHealthcareObservation
@@ -68,15 +70,15 @@ func main() {
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2022-12-06T21:34:04.293Z"),
-            ID: unifiedgosdk.Pointer("10c5f88e-f278-4111-8db6-1e98c841ba44"),
+            ID: unifiedgosdk.Pointer("a6583e2b-74d5-4ad6-83dc-3f2a82d8fad2"),
             Interpretation: shared.InterpretationCriticalHigh.ToPointer(),
-            IssuedAt: types.MustNewTimeFromString("2025-05-30T05:45:24.956Z"),
+            IssuedAt: types.MustNewTimeFromString("2025-06-02T23:22:16.931Z"),
             Metadata: []shared.HealthcareMetadata{},
             Name: unifiedgosdk.Pointer("Blood pressure panel"),
-            ObservedAt: types.MustNewTimeFromString("2025-02-05T14:37:53.481Z"),
+            ObservedAt: types.MustNewTimeFromString("2025-02-08T20:59:54.124Z"),
             Status: shared.HealthcareObservationStatusCorrected.ToPointer(),
             Type: shared.HealthcareObservationTypeVitalSigns.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-18T18:56:56.281Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-23T20:35:22.904Z"),
         },
         ConnectionID: "<id>",
     })
@@ -100,6 +102,61 @@ func main() {
 ### Response
 
 **[*operations.CreateHealthcareObservationResponse](../../pkg/models/operations/createhealthcareobservationresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetFhirObservation
+
+Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getFhirObservation" method="get" path="/fhir/{connection_id}/Observation/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Observation.GetFhirObservation(ctx, operations.GetFhirObservationRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.FhirObservation != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.GetFhirObservationRequest](../../pkg/models/operations/getfhirobservationrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.GetFhirObservationResponse](../../pkg/models/operations/getfhirobservationresponse.md), error**
 
 ### Errors
 
@@ -155,6 +212,60 @@ func main() {
 ### Response
 
 **[*operations.GetHealthcareObservationResponse](../../pkg/models/operations/gethealthcareobservationresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListFhirObservations
+
+Returns a searchset Bundle; follow its next link for more pages. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listFhirObservations" method="get" path="/fhir/{connection_id}/Observation" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Observation.ListFhirObservations(ctx, operations.ListFhirObservationsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.FhirBundle != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.ListFhirObservationsRequest](../../pkg/models/operations/listfhirobservationsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.ListFhirObservationsResponse](../../pkg/models/operations/listfhirobservationsresponse.md), error**
 
 ### Errors
 

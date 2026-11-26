@@ -40,12 +40,12 @@ func main() {
     res, err := s.Agent.CreateGenaiAgent(ctx, operations.CreateGenaiAgentRequest{
         GenaiAgent: shared.GenaiAgent{
             CreatedAt: types.MustNewTimeFromString("2020-12-18T02:23:33.723Z"),
-            Description: unifiedgosdk.Pointer("Assentator tero sequi."),
-            ID: unifiedgosdk.Pointer("cebd6adb-180f-4386-9c82-fdab14f62005"),
-            Instructions: unifiedgosdk.Pointer("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum."),
+            Description: unifiedgosdk.Pointer("Sperno despecto."),
+            ID: unifiedgosdk.Pointer("d291a0bc-e6b6-4b22-ac5b-cdcb95f5636e"),
+            Instructions: unifiedgosdk.Pointer("Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non."),
             IsActive: unifiedgosdk.Pointer(false),
-            Name: unifiedgosdk.Pointer("daughter with"),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-09T05:32:50.429Z"),
+            Name: unifiedgosdk.Pointer("testimonial suddenly"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-14T03:39:19.695Z"),
         },
         ConnectionID: "<id>",
     })
@@ -214,12 +214,12 @@ func main() {
     res, err := s.Agent.PatchGenaiAgent(ctx, operations.PatchGenaiAgentRequest{
         GenaiAgent: shared.GenaiAgent{
             CreatedAt: types.MustNewTimeFromString("2020-12-18T02:23:33.723Z"),
-            Description: unifiedgosdk.Pointer("Assentator tero sequi."),
-            ID: unifiedgosdk.Pointer("43b2126f-466c-4de5-a434-851cb94ec142"),
-            Instructions: unifiedgosdk.Pointer("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum."),
+            Description: unifiedgosdk.Pointer("Sperno despecto."),
+            ID: unifiedgosdk.Pointer("3e36559a-d979-42c3-9b9e-648f1aa534e8"),
+            Instructions: unifiedgosdk.Pointer("Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non."),
             IsActive: unifiedgosdk.Pointer(false),
-            Name: unifiedgosdk.Pointer("daughter with"),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-09T05:32:50.432Z"),
+            Name: unifiedgosdk.Pointer("testimonial suddenly"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-14T03:39:19.700Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -335,12 +335,12 @@ func main() {
     res, err := s.Agent.UpdateGenaiAgent(ctx, operations.UpdateGenaiAgentRequest{
         GenaiAgent: shared.GenaiAgent{
             CreatedAt: types.MustNewTimeFromString("2020-12-18T02:23:33.723Z"),
-            Description: unifiedgosdk.Pointer("Assentator tero sequi."),
-            ID: unifiedgosdk.Pointer("43b2126f-466c-4de5-a434-851cb94ec142"),
-            Instructions: unifiedgosdk.Pointer("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum."),
+            Description: unifiedgosdk.Pointer("Sperno despecto."),
+            ID: unifiedgosdk.Pointer("3e36559a-d979-42c3-9b9e-648f1aa534e8"),
+            Instructions: unifiedgosdk.Pointer("Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non."),
             IsActive: unifiedgosdk.Pointer(false),
-            Name: unifiedgosdk.Pointer("daughter with"),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-09T05:32:50.432Z"),
+            Name: unifiedgosdk.Pointer("testimonial suddenly"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-14T03:39:19.700Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

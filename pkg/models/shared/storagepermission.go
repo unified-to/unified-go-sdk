@@ -4,10 +4,12 @@ package shared
 
 type StoragePermission struct {
 	// (reference to HrisGroup)
-	GroupID  *string                          `json:"group_id,omitempty"`
-	IsHidden *bool                            `json:"is_hidden,omitempty"`
-	IsPublic *bool                            `json:"is_public,omitempty"`
-	Roles    []PropertyStoragePermissionRoles `json:"roles"`
+	GroupID  *string `json:"group_id,omitempty"`
+	IsHidden *bool   `json:"is_hidden,omitempty"`
+	// Shared with everyone in the owner's organization/domain/enterprise (e.g. Google Drive domain, Box company or Microsoft organization sharing links)
+	IsOrganization *bool                            `json:"is_organization,omitempty"`
+	IsPublic       *bool                            `json:"is_public,omitempty"`
+	Roles          []PropertyStoragePermissionRoles `json:"roles"`
 	// (reference to HrisEmployee)
 	UserID *string `json:"user_id,omitempty"`
 }
@@ -24,6 +26,13 @@ func (s *StoragePermission) GetIsHidden() *bool {
 		return nil
 	}
 	return s.IsHidden
+}
+
+func (s *StoragePermission) GetIsOrganization() *bool {
+	if s == nil {
+		return nil
+	}
+	return s.IsOrganization
 }
 
 func (s *StoragePermission) GetIsPublic() *bool {

@@ -35,4 +35,5 @@ value := operations.PatchCrmDealQueryParamFieldsID
 | `PatchCrmDealQueryParamFieldsCompanyIds`  | company_ids                               |
 | `PatchCrmDealQueryParamFieldsDescription` | description                               |
 | `PatchCrmDealQueryParamFieldsMetadata`    | metadata                                  |
+| `PatchCrmDealQueryParamFieldsVehicleIds`  | vehicle_ids                               |
 | `PatchCrmDealQueryParamFieldsRaw`         | raw                                       |

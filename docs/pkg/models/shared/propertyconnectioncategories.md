@@ -59,3 +59,6 @@ custom := shared.PropertyConnectionCategories("custom_value")
 | `PropertyConnectionCategoriesProperty`     | property                                   |
 | `PropertyConnectionCategoriesPlm`          | plm                                        |
 | `PropertyConnectionCategoriesQms`          | qms                                        |
+| `PropertyConnectionCategoriesDms`          | dms                                        |
+| `PropertyConnectionCategoriesFhir`         | fhir                                       |
+| `PropertyConnectionCategoriesPrinting`     | printing                                   |

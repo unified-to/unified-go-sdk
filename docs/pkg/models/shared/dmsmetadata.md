@@ -1,0 +1,13 @@
+# DmsMetadata
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ExtraData`                                                                        | [*shared.DmsMetadataExtraData](../../../pkg/models/shared/dmsmetadataextradata.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `Format`                                                                           | [*shared.DmsMetadataFormat](../../../pkg/models/shared/dmsmetadataformat.md)       | :heavy_minus_sign:                                                                 | The data type of the custom field, which determines how `value` is formatted.      |
+| `ID`                                                                               | `*string`                                                                          | :heavy_minus_sign:                                                                 | The ID of the custom field definition (from the metadata/metadata endpoint).       |
+| `Namespace`                                                                        | `*string`                                                                          | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `Slug`                                                                             | `*string`                                                                          | :heavy_minus_sign:                                                                 | The integration's API name (key) of an existing custom field.                      |
+| `Value`                                                                            | [*shared.DmsMetadataValue](../../../pkg/models/shared/dmsmetadatavalue.md)         | :heavy_minus_sign:                                                                 | The field's value, typed by `format`.                                              |

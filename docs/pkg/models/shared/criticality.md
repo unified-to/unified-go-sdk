@@ -1,6 +1,6 @@
 # Criticality
 
-Potential severity of future reactions
+low | high | unable-to-assess
 
 ## Example Usage
 
@@ -20,7 +20,6 @@ custom := shared.Criticality("custom_value")
 
 | Name                        | Value                       |
 | --------------------------- | --------------------------- |
-| `CriticalityLow`            | LOW                         |
-| `CriticalityHigh`           | HIGH                        |
-| `CriticalityUnableToAssess` | UNABLE_TO_ASSESS            |
-| `CriticalityOther`          | OTHER                       |
+| `CriticalityLow`            | low                         |
+| `CriticalityHigh`           | high                        |
+| `CriticalityUnableToAssess` | unable-to-assess            |

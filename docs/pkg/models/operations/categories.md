@@ -56,3 +56,6 @@ value := operations.CategoriesPassthrough
 | `CategoriesProperty`     | property                 |
 | `CategoriesPlm`          | plm                      |
 | `CategoriesQms`          | qms                      |
+| `CategoriesDms`          | dms                      |
+| `CategoriesFhir`         | fhir                     |
+| `CategoriesPrinting`     | printing                 |
