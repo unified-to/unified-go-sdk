@@ -12,18 +12,19 @@ import (
 type CreateLmsInstructorQueryParamFields string
 
 const (
-	CreateLmsInstructorQueryParamFieldsID         CreateLmsInstructorQueryParamFields = "id"
-	CreateLmsInstructorQueryParamFieldsCreatedAt  CreateLmsInstructorQueryParamFields = "created_at"
-	CreateLmsInstructorQueryParamFieldsUpdatedAt  CreateLmsInstructorQueryParamFields = "updated_at"
-	CreateLmsInstructorQueryParamFieldsName       CreateLmsInstructorQueryParamFields = "name"
-	CreateLmsInstructorQueryParamFieldsFirstName  CreateLmsInstructorQueryParamFields = "first_name"
-	CreateLmsInstructorQueryParamFieldsLastName   CreateLmsInstructorQueryParamFields = "last_name"
-	CreateLmsInstructorQueryParamFieldsEmails     CreateLmsInstructorQueryParamFields = "emails"
-	CreateLmsInstructorQueryParamFieldsTitle      CreateLmsInstructorQueryParamFields = "title"
-	CreateLmsInstructorQueryParamFieldsTelephones CreateLmsInstructorQueryParamFields = "telephones"
-	CreateLmsInstructorQueryParamFieldsImageURL   CreateLmsInstructorQueryParamFields = "image_url"
-	CreateLmsInstructorQueryParamFieldsMetadata   CreateLmsInstructorQueryParamFields = "metadata"
-	CreateLmsInstructorQueryParamFieldsRaw        CreateLmsInstructorQueryParamFields = "raw"
+	CreateLmsInstructorQueryParamFieldsID               CreateLmsInstructorQueryParamFields = "id"
+	CreateLmsInstructorQueryParamFieldsCreatedAt        CreateLmsInstructorQueryParamFields = "created_at"
+	CreateLmsInstructorQueryParamFieldsUpdatedAt        CreateLmsInstructorQueryParamFields = "updated_at"
+	CreateLmsInstructorQueryParamFieldsName             CreateLmsInstructorQueryParamFields = "name"
+	CreateLmsInstructorQueryParamFieldsFirstName        CreateLmsInstructorQueryParamFields = "first_name"
+	CreateLmsInstructorQueryParamFieldsLastName         CreateLmsInstructorQueryParamFields = "last_name"
+	CreateLmsInstructorQueryParamFieldsEmails           CreateLmsInstructorQueryParamFields = "emails"
+	CreateLmsInstructorQueryParamFieldsTitle            CreateLmsInstructorQueryParamFields = "title"
+	CreateLmsInstructorQueryParamFieldsTelephones       CreateLmsInstructorQueryParamFields = "telephones"
+	CreateLmsInstructorQueryParamFieldsImageURL         CreateLmsInstructorQueryParamFields = "image_url"
+	CreateLmsInstructorQueryParamFieldsMetadata         CreateLmsInstructorQueryParamFields = "metadata"
+	CreateLmsInstructorQueryParamFieldsRaw              CreateLmsInstructorQueryParamFields = "raw"
+	CreateLmsInstructorQueryParamFieldsUnifiedPersonIds CreateLmsInstructorQueryParamFields = "__unified_person_ids"
 )
 
 func (e CreateLmsInstructorQueryParamFields) ToPointer() *CreateLmsInstructorQueryParamFields {
@@ -58,6 +59,8 @@ func (e *CreateLmsInstructorQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = CreateLmsInstructorQueryParamFields(v)
 		return nil
 	default:

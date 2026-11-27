@@ -13,18 +13,19 @@ value := operations.GetMartechMemberQueryParamFieldsID
 
 ## Values
 
-| Name                                        | Value                                       |
-| ------------------------------------------- | ------------------------------------------- |
-| `GetMartechMemberQueryParamFieldsID`        | id                                          |
-| `GetMartechMemberQueryParamFieldsCreatedAt` | created_at                                  |
-| `GetMartechMemberQueryParamFieldsUpdatedAt` | updated_at                                  |
-| `GetMartechMemberQueryParamFieldsName`      | name                                        |
-| `GetMartechMemberQueryParamFieldsFirstName` | first_name                                  |
-| `GetMartechMemberQueryParamFieldsLastName`  | last_name                                   |
-| `GetMartechMemberQueryParamFieldsCompany`   | company                                     |
-| `GetMartechMemberQueryParamFieldsEmails`    | emails                                      |
-| `GetMartechMemberQueryParamFieldsListIds`   | list_ids                                    |
-| `GetMartechMemberQueryParamFieldsTags`      | tags                                        |
-| `GetMartechMemberQueryParamFieldsStatus`    | status                                      |
-| `GetMartechMemberQueryParamFieldsMetadata`  | metadata                                    |
-| `GetMartechMemberQueryParamFieldsRaw`       | raw                                         |
+| Name                                               | Value                                              |
+| -------------------------------------------------- | -------------------------------------------------- |
+| `GetMartechMemberQueryParamFieldsID`               | id                                                 |
+| `GetMartechMemberQueryParamFieldsCreatedAt`        | created_at                                         |
+| `GetMartechMemberQueryParamFieldsUpdatedAt`        | updated_at                                         |
+| `GetMartechMemberQueryParamFieldsName`             | name                                               |
+| `GetMartechMemberQueryParamFieldsFirstName`        | first_name                                         |
+| `GetMartechMemberQueryParamFieldsLastName`         | last_name                                          |
+| `GetMartechMemberQueryParamFieldsCompany`          | company                                            |
+| `GetMartechMemberQueryParamFieldsEmails`           | emails                                             |
+| `GetMartechMemberQueryParamFieldsListIds`          | list_ids                                           |
+| `GetMartechMemberQueryParamFieldsTags`             | tags                                               |
+| `GetMartechMemberQueryParamFieldsStatus`           | status                                             |
+| `GetMartechMemberQueryParamFieldsMetadata`         | metadata                                           |
+| `GetMartechMemberQueryParamFieldsRaw`              | raw                                                |
+| `GetMartechMemberQueryParamFieldsUnifiedPersonIds` | __unified_person_ids                               |

@@ -5,6 +5,10 @@ package shared
 type GenaiPrompt struct {
 	// One answer per question, matched by id.
 	Answers []GenaiAnswer `json:"answers,omitempty"`
+	// Ask the LLM API to keep this conversation so that a later prompt can continue it with parent_id (eg. Anthropic message threads, which are kept for about 5 minutes).
+	HasThread *bool `json:"has_thread,omitempty"`
+	// The id of this prompt, returned by the LLM API. Send it as parent_id on the next prompt to continue the conversation.
+	ID *string `json:"id,omitempty"`
 	// a float between 0-1
 	MaxTokens *float64 `json:"max_tokens,omitempty"`
 	// OAuth Bearer token for MCP servers that require authentication.
@@ -16,6 +20,8 @@ type GenaiPrompt struct {
 	Messages []GenaiContent `json:"messages,omitempty"`
 	// The ID of the model to use (a GenaiModel ID)
 	ModelID *string `json:"model_id,omitempty"`
+	// The id of the previous prompt (genai_prompt) that this prompt continues. When set, messages holds only the new messages; the LLM API keeps the earlier ones (eg. Anthropic message threads, OpenAI previous_response_id). If the LLM API no longer has that prompt, send the full conversation again without parent_id.
+	ParentID *string `json:"parent_id,omitempty"`
 	// Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev).
 	Questions []GenaiQuestion `json:"questions,omitempty"`
 	Raw       map[string]any  `json:"raw,omitempty"`
@@ -32,6 +38,20 @@ func (g *GenaiPrompt) GetAnswers() []GenaiAnswer {
 		return nil
 	}
 	return g.Answers
+}
+
+func (g *GenaiPrompt) GetHasThread() *bool {
+	if g == nil {
+		return nil
+	}
+	return g.HasThread
+}
+
+func (g *GenaiPrompt) GetID() *string {
+	if g == nil {
+		return nil
+	}
+	return g.ID
 }
 
 func (g *GenaiPrompt) GetMaxTokens() *float64 {
@@ -74,6 +94,13 @@ func (g *GenaiPrompt) GetModelID() *string {
 		return nil
 	}
 	return g.ModelID
+}
+
+func (g *GenaiPrompt) GetParentID() *string {
+	if g == nil {
+		return nil
+	}
+	return g.ParentID
 }
 
 func (g *GenaiPrompt) GetQuestions() []GenaiQuestion {

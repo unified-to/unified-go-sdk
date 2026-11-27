@@ -12,18 +12,19 @@ import (
 type PatchLmsStudentQueryParamFields string
 
 const (
-	PatchLmsStudentQueryParamFieldsID         PatchLmsStudentQueryParamFields = "id"
-	PatchLmsStudentQueryParamFieldsCreatedAt  PatchLmsStudentQueryParamFields = "created_at"
-	PatchLmsStudentQueryParamFieldsUpdatedAt  PatchLmsStudentQueryParamFields = "updated_at"
-	PatchLmsStudentQueryParamFieldsName       PatchLmsStudentQueryParamFields = "name"
-	PatchLmsStudentQueryParamFieldsFirstName  PatchLmsStudentQueryParamFields = "first_name"
-	PatchLmsStudentQueryParamFieldsLastName   PatchLmsStudentQueryParamFields = "last_name"
-	PatchLmsStudentQueryParamFieldsEmails     PatchLmsStudentQueryParamFields = "emails"
-	PatchLmsStudentQueryParamFieldsTelephones PatchLmsStudentQueryParamFields = "telephones"
-	PatchLmsStudentQueryParamFieldsAddress    PatchLmsStudentQueryParamFields = "address"
-	PatchLmsStudentQueryParamFieldsImageURL   PatchLmsStudentQueryParamFields = "image_url"
-	PatchLmsStudentQueryParamFieldsMetadata   PatchLmsStudentQueryParamFields = "metadata"
-	PatchLmsStudentQueryParamFieldsRaw        PatchLmsStudentQueryParamFields = "raw"
+	PatchLmsStudentQueryParamFieldsID               PatchLmsStudentQueryParamFields = "id"
+	PatchLmsStudentQueryParamFieldsCreatedAt        PatchLmsStudentQueryParamFields = "created_at"
+	PatchLmsStudentQueryParamFieldsUpdatedAt        PatchLmsStudentQueryParamFields = "updated_at"
+	PatchLmsStudentQueryParamFieldsName             PatchLmsStudentQueryParamFields = "name"
+	PatchLmsStudentQueryParamFieldsFirstName        PatchLmsStudentQueryParamFields = "first_name"
+	PatchLmsStudentQueryParamFieldsLastName         PatchLmsStudentQueryParamFields = "last_name"
+	PatchLmsStudentQueryParamFieldsEmails           PatchLmsStudentQueryParamFields = "emails"
+	PatchLmsStudentQueryParamFieldsTelephones       PatchLmsStudentQueryParamFields = "telephones"
+	PatchLmsStudentQueryParamFieldsAddress          PatchLmsStudentQueryParamFields = "address"
+	PatchLmsStudentQueryParamFieldsImageURL         PatchLmsStudentQueryParamFields = "image_url"
+	PatchLmsStudentQueryParamFieldsMetadata         PatchLmsStudentQueryParamFields = "metadata"
+	PatchLmsStudentQueryParamFieldsRaw              PatchLmsStudentQueryParamFields = "raw"
+	PatchLmsStudentQueryParamFieldsUnifiedPersonIds PatchLmsStudentQueryParamFields = "__unified_person_ids"
 )
 
 func (e PatchLmsStudentQueryParamFields) ToPointer() *PatchLmsStudentQueryParamFields {
@@ -58,6 +59,8 @@ func (e *PatchLmsStudentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = PatchLmsStudentQueryParamFields(v)
 		return nil
 	default:

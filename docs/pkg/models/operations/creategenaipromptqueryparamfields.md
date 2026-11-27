@@ -27,4 +27,7 @@ value := operations.CreateGenaiPromptQueryParamFieldsModelID
 | `CreateGenaiPromptQueryParamFieldsQuestions`             | questions                                                |
 | `CreateGenaiPromptQueryParamFieldsAnswers`               | answers                                                  |
 | `CreateGenaiPromptQueryParamFieldsSkillIds`              | skill_ids                                                |
+| `CreateGenaiPromptQueryParamFieldsID`                    | id                                                       |
+| `CreateGenaiPromptQueryParamFieldsParentID`              | parent_id                                                |
+| `CreateGenaiPromptQueryParamFieldsHasThread`             | has_thread                                               |
 | `CreateGenaiPromptQueryParamFieldsRaw`                   | raw                                                      |

@@ -24,6 +24,9 @@ const (
 	CreateGenaiPromptQueryParamFieldsQuestions             CreateGenaiPromptQueryParamFields = "questions"
 	CreateGenaiPromptQueryParamFieldsAnswers               CreateGenaiPromptQueryParamFields = "answers"
 	CreateGenaiPromptQueryParamFieldsSkillIds              CreateGenaiPromptQueryParamFields = "skill_ids"
+	CreateGenaiPromptQueryParamFieldsID                    CreateGenaiPromptQueryParamFields = "id"
+	CreateGenaiPromptQueryParamFieldsParentID              CreateGenaiPromptQueryParamFields = "parent_id"
+	CreateGenaiPromptQueryParamFieldsHasThread             CreateGenaiPromptQueryParamFields = "has_thread"
 	CreateGenaiPromptQueryParamFieldsRaw                   CreateGenaiPromptQueryParamFields = "raw"
 )
 
@@ -59,6 +62,12 @@ func (e *CreateGenaiPromptQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "answers":
 		fallthrough
 	case "skill_ids":
+		fallthrough
+	case "id":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "has_thread":
 		fallthrough
 	case "raw":
 		*e = CreateGenaiPromptQueryParamFields(v)

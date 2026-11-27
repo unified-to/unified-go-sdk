@@ -12,18 +12,19 @@ import (
 type ListUcContactsQueryParamFields string
 
 const (
-	ListUcContactsQueryParamFieldsID         ListUcContactsQueryParamFields = "id"
-	ListUcContactsQueryParamFieldsCreatedAt  ListUcContactsQueryParamFields = "created_at"
-	ListUcContactsQueryParamFieldsUpdatedAt  ListUcContactsQueryParamFields = "updated_at"
-	ListUcContactsQueryParamFieldsName       ListUcContactsQueryParamFields = "name"
-	ListUcContactsQueryParamFieldsFirstName  ListUcContactsQueryParamFields = "first_name"
-	ListUcContactsQueryParamFieldsLastName   ListUcContactsQueryParamFields = "last_name"
-	ListUcContactsQueryParamFieldsTitle      ListUcContactsQueryParamFields = "title"
-	ListUcContactsQueryParamFieldsCompany    ListUcContactsQueryParamFields = "company"
-	ListUcContactsQueryParamFieldsEmails     ListUcContactsQueryParamFields = "emails"
-	ListUcContactsQueryParamFieldsTelephones ListUcContactsQueryParamFields = "telephones"
-	ListUcContactsQueryParamFieldsMetadata   ListUcContactsQueryParamFields = "metadata"
-	ListUcContactsQueryParamFieldsRaw        ListUcContactsQueryParamFields = "raw"
+	ListUcContactsQueryParamFieldsID               ListUcContactsQueryParamFields = "id"
+	ListUcContactsQueryParamFieldsCreatedAt        ListUcContactsQueryParamFields = "created_at"
+	ListUcContactsQueryParamFieldsUpdatedAt        ListUcContactsQueryParamFields = "updated_at"
+	ListUcContactsQueryParamFieldsName             ListUcContactsQueryParamFields = "name"
+	ListUcContactsQueryParamFieldsFirstName        ListUcContactsQueryParamFields = "first_name"
+	ListUcContactsQueryParamFieldsLastName         ListUcContactsQueryParamFields = "last_name"
+	ListUcContactsQueryParamFieldsTitle            ListUcContactsQueryParamFields = "title"
+	ListUcContactsQueryParamFieldsCompany          ListUcContactsQueryParamFields = "company"
+	ListUcContactsQueryParamFieldsEmails           ListUcContactsQueryParamFields = "emails"
+	ListUcContactsQueryParamFieldsTelephones       ListUcContactsQueryParamFields = "telephones"
+	ListUcContactsQueryParamFieldsMetadata         ListUcContactsQueryParamFields = "metadata"
+	ListUcContactsQueryParamFieldsRaw              ListUcContactsQueryParamFields = "raw"
+	ListUcContactsQueryParamFieldsUnifiedPersonIds ListUcContactsQueryParamFields = "__unified_person_ids"
 )
 
 func (e ListUcContactsQueryParamFields) ToPointer() *ListUcContactsQueryParamFields {
@@ -58,6 +59,8 @@ func (e *ListUcContactsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = ListUcContactsQueryParamFields(v)
 		return nil
 	default:

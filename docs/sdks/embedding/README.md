@@ -41,7 +41,7 @@ func main() {
             Dimension: unifiedgosdk.Pointer[float64](423.0),
             Embeddings: unifiedgosdk.Pointer("Venia tutis cernuus viscus officiis utilis porro utique."),
             EncodingFormat: shared.EncodingFormatFloat.ToPointer(),
-            ID: unifiedgosdk.Pointer("665804d4-bba4-4aca-ab81-29fc9b08b0b9"),
+            ID: unifiedgosdk.Pointer("11db6f2b-f8ae-4068-829e-6b1af0b40ea6"),
             MaxTokens: unifiedgosdk.Pointer[float64](223.0),
             TokensUsed: unifiedgosdk.Pointer[float64](836.0),
             Type: unifiedgosdk.Pointer("classification"),

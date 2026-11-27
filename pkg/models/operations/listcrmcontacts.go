@@ -12,25 +12,26 @@ import (
 type ListCrmContactsQueryParamFields string
 
 const (
-	ListCrmContactsQueryParamFieldsID         ListCrmContactsQueryParamFields = "id"
-	ListCrmContactsQueryParamFieldsCreatedAt  ListCrmContactsQueryParamFields = "created_at"
-	ListCrmContactsQueryParamFieldsUpdatedAt  ListCrmContactsQueryParamFields = "updated_at"
-	ListCrmContactsQueryParamFieldsName       ListCrmContactsQueryParamFields = "name"
-	ListCrmContactsQueryParamFieldsFirstName  ListCrmContactsQueryParamFields = "first_name"
-	ListCrmContactsQueryParamFieldsLastName   ListCrmContactsQueryParamFields = "last_name"
-	ListCrmContactsQueryParamFieldsTitle      ListCrmContactsQueryParamFields = "title"
-	ListCrmContactsQueryParamFieldsCompany    ListCrmContactsQueryParamFields = "company"
-	ListCrmContactsQueryParamFieldsEmails     ListCrmContactsQueryParamFields = "emails"
-	ListCrmContactsQueryParamFieldsTelephones ListCrmContactsQueryParamFields = "telephones"
-	ListCrmContactsQueryParamFieldsDealIds    ListCrmContactsQueryParamFields = "deal_ids"
-	ListCrmContactsQueryParamFieldsCompanyIds ListCrmContactsQueryParamFields = "company_ids"
-	ListCrmContactsQueryParamFieldsAddress    ListCrmContactsQueryParamFields = "address"
-	ListCrmContactsQueryParamFieldsUserID     ListCrmContactsQueryParamFields = "user_id"
-	ListCrmContactsQueryParamFieldsLinkUrls   ListCrmContactsQueryParamFields = "link_urls"
-	ListCrmContactsQueryParamFieldsMetadata   ListCrmContactsQueryParamFields = "metadata"
-	ListCrmContactsQueryParamFieldsDepartment ListCrmContactsQueryParamFields = "department"
-	ListCrmContactsQueryParamFieldsImageURL   ListCrmContactsQueryParamFields = "image_url"
-	ListCrmContactsQueryParamFieldsRaw        ListCrmContactsQueryParamFields = "raw"
+	ListCrmContactsQueryParamFieldsID               ListCrmContactsQueryParamFields = "id"
+	ListCrmContactsQueryParamFieldsCreatedAt        ListCrmContactsQueryParamFields = "created_at"
+	ListCrmContactsQueryParamFieldsUpdatedAt        ListCrmContactsQueryParamFields = "updated_at"
+	ListCrmContactsQueryParamFieldsName             ListCrmContactsQueryParamFields = "name"
+	ListCrmContactsQueryParamFieldsFirstName        ListCrmContactsQueryParamFields = "first_name"
+	ListCrmContactsQueryParamFieldsLastName         ListCrmContactsQueryParamFields = "last_name"
+	ListCrmContactsQueryParamFieldsTitle            ListCrmContactsQueryParamFields = "title"
+	ListCrmContactsQueryParamFieldsCompany          ListCrmContactsQueryParamFields = "company"
+	ListCrmContactsQueryParamFieldsEmails           ListCrmContactsQueryParamFields = "emails"
+	ListCrmContactsQueryParamFieldsTelephones       ListCrmContactsQueryParamFields = "telephones"
+	ListCrmContactsQueryParamFieldsDealIds          ListCrmContactsQueryParamFields = "deal_ids"
+	ListCrmContactsQueryParamFieldsCompanyIds       ListCrmContactsQueryParamFields = "company_ids"
+	ListCrmContactsQueryParamFieldsAddress          ListCrmContactsQueryParamFields = "address"
+	ListCrmContactsQueryParamFieldsUserID           ListCrmContactsQueryParamFields = "user_id"
+	ListCrmContactsQueryParamFieldsLinkUrls         ListCrmContactsQueryParamFields = "link_urls"
+	ListCrmContactsQueryParamFieldsMetadata         ListCrmContactsQueryParamFields = "metadata"
+	ListCrmContactsQueryParamFieldsDepartment       ListCrmContactsQueryParamFields = "department"
+	ListCrmContactsQueryParamFieldsImageURL         ListCrmContactsQueryParamFields = "image_url"
+	ListCrmContactsQueryParamFieldsRaw              ListCrmContactsQueryParamFields = "raw"
+	ListCrmContactsQueryParamFieldsUnifiedPersonIds ListCrmContactsQueryParamFields = "__unified_person_ids"
 )
 
 func (e ListCrmContactsQueryParamFields) ToPointer() *ListCrmContactsQueryParamFields {
@@ -79,6 +80,8 @@ func (e *ListCrmContactsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "image_url":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = ListCrmContactsQueryParamFields(v)
 		return nil
 	default:

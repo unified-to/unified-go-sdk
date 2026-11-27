@@ -66,3 +66,4 @@ value := operations.PatchHrisEmployeeQueryParamFieldsID
 | `PatchHrisEmployeeQueryParamFieldsLeaveEndAt`             | leave_end_at                                              |
 | `PatchHrisEmployeeQueryParamFieldsEmploymentStatusReason` | employment_status_reason                                  |
 | `PatchHrisEmployeeQueryParamFieldsRaw`                    | raw                                                       |
+| `PatchHrisEmployeeQueryParamFieldsUnifiedPersonIds`       | __unified_person_ids                                      |

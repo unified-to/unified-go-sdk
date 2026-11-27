@@ -12,18 +12,19 @@ import (
 type GetLmsInstructorQueryParamFields string
 
 const (
-	GetLmsInstructorQueryParamFieldsID         GetLmsInstructorQueryParamFields = "id"
-	GetLmsInstructorQueryParamFieldsCreatedAt  GetLmsInstructorQueryParamFields = "created_at"
-	GetLmsInstructorQueryParamFieldsUpdatedAt  GetLmsInstructorQueryParamFields = "updated_at"
-	GetLmsInstructorQueryParamFieldsName       GetLmsInstructorQueryParamFields = "name"
-	GetLmsInstructorQueryParamFieldsFirstName  GetLmsInstructorQueryParamFields = "first_name"
-	GetLmsInstructorQueryParamFieldsLastName   GetLmsInstructorQueryParamFields = "last_name"
-	GetLmsInstructorQueryParamFieldsEmails     GetLmsInstructorQueryParamFields = "emails"
-	GetLmsInstructorQueryParamFieldsTitle      GetLmsInstructorQueryParamFields = "title"
-	GetLmsInstructorQueryParamFieldsTelephones GetLmsInstructorQueryParamFields = "telephones"
-	GetLmsInstructorQueryParamFieldsImageURL   GetLmsInstructorQueryParamFields = "image_url"
-	GetLmsInstructorQueryParamFieldsMetadata   GetLmsInstructorQueryParamFields = "metadata"
-	GetLmsInstructorQueryParamFieldsRaw        GetLmsInstructorQueryParamFields = "raw"
+	GetLmsInstructorQueryParamFieldsID               GetLmsInstructorQueryParamFields = "id"
+	GetLmsInstructorQueryParamFieldsCreatedAt        GetLmsInstructorQueryParamFields = "created_at"
+	GetLmsInstructorQueryParamFieldsUpdatedAt        GetLmsInstructorQueryParamFields = "updated_at"
+	GetLmsInstructorQueryParamFieldsName             GetLmsInstructorQueryParamFields = "name"
+	GetLmsInstructorQueryParamFieldsFirstName        GetLmsInstructorQueryParamFields = "first_name"
+	GetLmsInstructorQueryParamFieldsLastName         GetLmsInstructorQueryParamFields = "last_name"
+	GetLmsInstructorQueryParamFieldsEmails           GetLmsInstructorQueryParamFields = "emails"
+	GetLmsInstructorQueryParamFieldsTitle            GetLmsInstructorQueryParamFields = "title"
+	GetLmsInstructorQueryParamFieldsTelephones       GetLmsInstructorQueryParamFields = "telephones"
+	GetLmsInstructorQueryParamFieldsImageURL         GetLmsInstructorQueryParamFields = "image_url"
+	GetLmsInstructorQueryParamFieldsMetadata         GetLmsInstructorQueryParamFields = "metadata"
+	GetLmsInstructorQueryParamFieldsRaw              GetLmsInstructorQueryParamFields = "raw"
+	GetLmsInstructorQueryParamFieldsUnifiedPersonIds GetLmsInstructorQueryParamFields = "__unified_person_ids"
 )
 
 func (e GetLmsInstructorQueryParamFields) ToPointer() *GetLmsInstructorQueryParamFields {
@@ -58,6 +59,8 @@ func (e *GetLmsInstructorQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = GetLmsInstructorQueryParamFields(v)
 		return nil
 	default:

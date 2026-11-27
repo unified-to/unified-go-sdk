@@ -40,12 +40,12 @@ func main() {
     res, err := s.Domain.CreateComputeDomain(ctx, operations.CreateComputeDomainRequest{
         ComputeDomain: shared.ComputeDomain{
             CreatedAt: types.MustNewTimeFromString("2019-11-22T16:38:26.009Z"),
-            ID: unifiedgosdk.Pointer("a2506cfd-0855-4509-9ffd-283e4739dde3"),
+            ID: unifiedgosdk.Pointer("3d37e988-b831-47d2-83cb-1d70fb1a6d2c"),
             IsPrimary: unifiedgosdk.Pointer(false),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("steel-hovercraft.humiliating-lender.com"),
             Status: shared.ComputeDomainStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-24T04:00:54.241Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-24T18:40:00.889Z"),
         },
         ConnectionID: "<id>",
     })
@@ -214,12 +214,12 @@ func main() {
     res, err := s.Domain.PatchComputeDomain(ctx, operations.PatchComputeDomainRequest{
         ComputeDomain: shared.ComputeDomain{
             CreatedAt: types.MustNewTimeFromString("2019-11-22T16:38:26.009Z"),
-            ID: unifiedgosdk.Pointer("e78aa062-ca04-48f2-b441-968602cd36a9"),
+            ID: unifiedgosdk.Pointer("533b31c8-6cbf-4fef-8f8c-79d9aa982687"),
             IsPrimary: unifiedgosdk.Pointer(false),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("steel-hovercraft.humiliating-lender.com"),
             Status: shared.ComputeDomainStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-24T04:00:54.248Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-24T18:40:00.904Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -335,12 +335,12 @@ func main() {
     res, err := s.Domain.UpdateComputeDomain(ctx, operations.UpdateComputeDomainRequest{
         ComputeDomain: shared.ComputeDomain{
             CreatedAt: types.MustNewTimeFromString("2019-11-22T16:38:26.009Z"),
-            ID: unifiedgosdk.Pointer("e78aa062-ca04-48f2-b441-968602cd36a9"),
+            ID: unifiedgosdk.Pointer("533b31c8-6cbf-4fef-8f8c-79d9aa982687"),
             IsPrimary: unifiedgosdk.Pointer(false),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("steel-hovercraft.humiliating-lender.com"),
             Status: shared.ComputeDomainStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-24T04:00:54.248Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-24T18:40:00.904Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

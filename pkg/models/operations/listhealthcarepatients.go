@@ -12,29 +12,30 @@ import (
 type ListHealthcarePatientsQueryParamFields string
 
 const (
-	ListHealthcarePatientsQueryParamFieldsID              ListHealthcarePatientsQueryParamFields = "id"
-	ListHealthcarePatientsQueryParamFieldsCreatedAt       ListHealthcarePatientsQueryParamFields = "created_at"
-	ListHealthcarePatientsQueryParamFieldsUpdatedAt       ListHealthcarePatientsQueryParamFields = "updated_at"
-	ListHealthcarePatientsQueryParamFieldsName            ListHealthcarePatientsQueryParamFields = "name"
-	ListHealthcarePatientsQueryParamFieldsFirstName       ListHealthcarePatientsQueryParamFields = "first_name"
-	ListHealthcarePatientsQueryParamFieldsLastName        ListHealthcarePatientsQueryParamFields = "last_name"
-	ListHealthcarePatientsQueryParamFieldsGender          ListHealthcarePatientsQueryParamFields = "gender"
-	ListHealthcarePatientsQueryParamFieldsBirthdate       ListHealthcarePatientsQueryParamFields = "birthdate"
-	ListHealthcarePatientsQueryParamFieldsIsDeceased      ListHealthcarePatientsQueryParamFields = "is_deceased"
-	ListHealthcarePatientsQueryParamFieldsDeceasedAt      ListHealthcarePatientsQueryParamFields = "deceased_at"
-	ListHealthcarePatientsQueryParamFieldsEmails          ListHealthcarePatientsQueryParamFields = "emails"
-	ListHealthcarePatientsQueryParamFieldsTelephones      ListHealthcarePatientsQueryParamFields = "telephones"
-	ListHealthcarePatientsQueryParamFieldsAddress         ListHealthcarePatientsQueryParamFields = "address"
-	ListHealthcarePatientsQueryParamFieldsLanguage        ListHealthcarePatientsQueryParamFields = "language"
-	ListHealthcarePatientsQueryParamFieldsIdentifiers     ListHealthcarePatientsQueryParamFields = "identifiers"
-	ListHealthcarePatientsQueryParamFieldsPractitionerIds ListHealthcarePatientsQueryParamFields = "practitioner_ids"
-	ListHealthcarePatientsQueryParamFieldsIsActive        ListHealthcarePatientsQueryParamFields = "is_active"
-	ListHealthcarePatientsQueryParamFieldsRaces           ListHealthcarePatientsQueryParamFields = "races"
-	ListHealthcarePatientsQueryParamFieldsEthnicities     ListHealthcarePatientsQueryParamFields = "ethnicities"
-	ListHealthcarePatientsQueryParamFieldsMaritalStatus   ListHealthcarePatientsQueryParamFields = "marital_status"
-	ListHealthcarePatientsQueryParamFieldsContacts        ListHealthcarePatientsQueryParamFields = "contacts"
-	ListHealthcarePatientsQueryParamFieldsMetadata        ListHealthcarePatientsQueryParamFields = "metadata"
-	ListHealthcarePatientsQueryParamFieldsRaw             ListHealthcarePatientsQueryParamFields = "raw"
+	ListHealthcarePatientsQueryParamFieldsID               ListHealthcarePatientsQueryParamFields = "id"
+	ListHealthcarePatientsQueryParamFieldsCreatedAt        ListHealthcarePatientsQueryParamFields = "created_at"
+	ListHealthcarePatientsQueryParamFieldsUpdatedAt        ListHealthcarePatientsQueryParamFields = "updated_at"
+	ListHealthcarePatientsQueryParamFieldsName             ListHealthcarePatientsQueryParamFields = "name"
+	ListHealthcarePatientsQueryParamFieldsFirstName        ListHealthcarePatientsQueryParamFields = "first_name"
+	ListHealthcarePatientsQueryParamFieldsLastName         ListHealthcarePatientsQueryParamFields = "last_name"
+	ListHealthcarePatientsQueryParamFieldsGender           ListHealthcarePatientsQueryParamFields = "gender"
+	ListHealthcarePatientsQueryParamFieldsBirthdate        ListHealthcarePatientsQueryParamFields = "birthdate"
+	ListHealthcarePatientsQueryParamFieldsIsDeceased       ListHealthcarePatientsQueryParamFields = "is_deceased"
+	ListHealthcarePatientsQueryParamFieldsDeceasedAt       ListHealthcarePatientsQueryParamFields = "deceased_at"
+	ListHealthcarePatientsQueryParamFieldsEmails           ListHealthcarePatientsQueryParamFields = "emails"
+	ListHealthcarePatientsQueryParamFieldsTelephones       ListHealthcarePatientsQueryParamFields = "telephones"
+	ListHealthcarePatientsQueryParamFieldsAddress          ListHealthcarePatientsQueryParamFields = "address"
+	ListHealthcarePatientsQueryParamFieldsLanguage         ListHealthcarePatientsQueryParamFields = "language"
+	ListHealthcarePatientsQueryParamFieldsIdentifiers      ListHealthcarePatientsQueryParamFields = "identifiers"
+	ListHealthcarePatientsQueryParamFieldsPractitionerIds  ListHealthcarePatientsQueryParamFields = "practitioner_ids"
+	ListHealthcarePatientsQueryParamFieldsIsActive         ListHealthcarePatientsQueryParamFields = "is_active"
+	ListHealthcarePatientsQueryParamFieldsRaces            ListHealthcarePatientsQueryParamFields = "races"
+	ListHealthcarePatientsQueryParamFieldsEthnicities      ListHealthcarePatientsQueryParamFields = "ethnicities"
+	ListHealthcarePatientsQueryParamFieldsMaritalStatus    ListHealthcarePatientsQueryParamFields = "marital_status"
+	ListHealthcarePatientsQueryParamFieldsContacts         ListHealthcarePatientsQueryParamFields = "contacts"
+	ListHealthcarePatientsQueryParamFieldsMetadata         ListHealthcarePatientsQueryParamFields = "metadata"
+	ListHealthcarePatientsQueryParamFieldsRaw              ListHealthcarePatientsQueryParamFields = "raw"
+	ListHealthcarePatientsQueryParamFieldsUnifiedPersonIds ListHealthcarePatientsQueryParamFields = "__unified_person_ids"
 )
 
 func (e ListHealthcarePatientsQueryParamFields) ToPointer() *ListHealthcarePatientsQueryParamFields {
@@ -91,6 +92,8 @@ func (e *ListHealthcarePatientsQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = ListHealthcarePatientsQueryParamFields(v)
 		return nil
 	default:

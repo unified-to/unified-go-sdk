@@ -61,7 +61,7 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
-            ID: unifiedgosdk.Pointer("2979e2a1-ffd4-4322-8fc3-477ee3de2622"),
+            ID: unifiedgosdk.Pointer("410d7025-adb5-4e29-9e74-fef109eb0e5c"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             PostedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
@@ -76,7 +76,7 @@ func main() {
             Status: shared.AccountingOrderStatusAuthorized.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingOrderTypeSales.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-02-15T17:02:42.994Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-15T22:19:45.585Z"),
         },
         ConnectionID: "<id>",
     })
@@ -137,7 +137,7 @@ func main() {
         AssessmentOrder: shared.AssessmentOrder{
             ConnectionID: "",
             CreatedAt: types.MustNewTimeFromString("2021-09-18T10:33:57.803Z"),
-            ID: unifiedgosdk.Pointer("0e9aae88-f7b1-44db-9eb7-bae5b1c01c18"),
+            ID: unifiedgosdk.Pointer("e8d78f32-f6d9-4e12-88ae-f61049f014d3"),
             Metadata: []shared.AssessmentMetadata{},
             Parameters: []shared.AssessmentParameterInput{},
             ProfileAddresses: []shared.AssessmentAddress{},
@@ -164,7 +164,7 @@ func main() {
             ResponseURL: unifiedgosdk.Pointer("https://nervous-daughter.info/"),
             Status: shared.AssessmentOrderStatusRejected.ToPointer(),
             TargetURL: unifiedgosdk.Pointer("https://idolized-suv.info"),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-04T10:05:17.586Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-04T16:54:41.752Z"),
             WorkspaceID: "<id>",
         },
         ConnectionID: "<id>",
@@ -227,7 +227,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-03-14T11:16:15.147Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("9d6516d5-784b-4442-9751-127e629dba39"),
+            ID: unifiedgosdk.Pointer("2b4fc37b-71b7-43c6-8929-02e13342224d"),
             Lineitems: []shared.PrintingLineitem{
                 shared.PrintingLineitem{
                     Files: []shared.PrintingLineitemFile{
@@ -277,7 +277,7 @@ func main() {
             SubtotalAmount: unifiedgosdk.Pointer[float64](62.78),
             TaxAmount: unifiedgosdk.Pointer[float64](5.02),
             TotalAmount: unifiedgosdk.Pointer[float64](72.49),
-            UpdatedAt: types.MustNewTimeFromString("2025-01-23T00:20:58.017Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-23T15:57:51.868Z"),
         },
         ConnectionID: "<id>",
     })
@@ -625,7 +625,7 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
-            ID: unifiedgosdk.Pointer("b048f651-5d88-4b31-b8fd-14f1914ea89f"),
+            ID: unifiedgosdk.Pointer("5b81cbcb-6a46-43cf-8689-b836783aea44"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             PostedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
@@ -640,7 +640,7 @@ func main() {
             Status: shared.AccountingOrderStatusAuthorized.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingOrderTypeSales.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-02-15T17:02:43.001Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-15T22:19:45.596Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -702,7 +702,7 @@ func main() {
         AssessmentOrder: shared.AssessmentOrder{
             ConnectionID: "",
             CreatedAt: types.MustNewTimeFromString("2021-09-18T10:33:57.803Z"),
-            ID: unifiedgosdk.Pointer("1fcae33f-aaf4-4fbf-ada4-05639d7c5869"),
+            ID: unifiedgosdk.Pointer("1f63d2e4-8ffe-44a0-bcc4-99845750a4d0"),
             Metadata: []shared.AssessmentMetadata{},
             Parameters: []shared.AssessmentParameterInput{},
             ProfileAddresses: []shared.AssessmentAddress{},
@@ -729,7 +729,7 @@ func main() {
             ResponseURL: unifiedgosdk.Pointer("https://nervous-daughter.info/"),
             Status: shared.AssessmentOrderStatusRejected.ToPointer(),
             TargetURL: unifiedgosdk.Pointer("https://idolized-suv.info"),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-04T10:05:17.593Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-04T16:54:41.763Z"),
             WorkspaceID: "<id>",
         },
         ConnectionID: "<id>",
@@ -793,7 +793,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-03-14T11:16:15.147Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("af220e4d-5540-45c4-bb37-aeb092251e06"),
+            ID: unifiedgosdk.Pointer("129e003f-16bb-48f1-a792-47face2e04e3"),
             Lineitems: []shared.PrintingLineitem{
                 shared.PrintingLineitem{
                     Files: []shared.PrintingLineitemFile{
@@ -843,7 +843,7 @@ func main() {
             SubtotalAmount: unifiedgosdk.Pointer[float64](62.78),
             TaxAmount: unifiedgosdk.Pointer[float64](5.02),
             TotalAmount: unifiedgosdk.Pointer[float64](72.49),
-            UpdatedAt: types.MustNewTimeFromString("2025-01-23T00:20:58.037Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-23T15:57:51.886Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1027,7 +1027,7 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
-            ID: unifiedgosdk.Pointer("b048f651-5d88-4b31-b8fd-14f1914ea89f"),
+            ID: unifiedgosdk.Pointer("5b81cbcb-6a46-43cf-8689-b836783aea44"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             PostedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
@@ -1042,7 +1042,7 @@ func main() {
             Status: shared.AccountingOrderStatusAuthorized.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingOrderTypeSales.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-02-15T17:02:43.001Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-15T22:19:45.596Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1104,7 +1104,7 @@ func main() {
         AssessmentOrder: shared.AssessmentOrder{
             ConnectionID: "",
             CreatedAt: types.MustNewTimeFromString("2021-09-18T10:33:57.803Z"),
-            ID: unifiedgosdk.Pointer("1fcae33f-aaf4-4fbf-ada4-05639d7c5869"),
+            ID: unifiedgosdk.Pointer("1f63d2e4-8ffe-44a0-bcc4-99845750a4d0"),
             Metadata: []shared.AssessmentMetadata{},
             Parameters: []shared.AssessmentParameterInput{},
             ProfileAddresses: []shared.AssessmentAddress{},
@@ -1131,7 +1131,7 @@ func main() {
             ResponseURL: unifiedgosdk.Pointer("https://nervous-daughter.info/"),
             Status: shared.AssessmentOrderStatusRejected.ToPointer(),
             TargetURL: unifiedgosdk.Pointer("https://idolized-suv.info"),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-04T10:05:17.593Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-04T16:54:41.763Z"),
             WorkspaceID: "<id>",
         },
         ConnectionID: "<id>",
@@ -1195,7 +1195,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-03-14T11:16:15.147Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("af220e4d-5540-45c4-bb37-aeb092251e06"),
+            ID: unifiedgosdk.Pointer("129e003f-16bb-48f1-a792-47face2e04e3"),
             Lineitems: []shared.PrintingLineitem{
                 shared.PrintingLineitem{
                     Files: []shared.PrintingLineitemFile{
@@ -1245,7 +1245,7 @@ func main() {
             SubtotalAmount: unifiedgosdk.Pointer[float64](62.78),
             TaxAmount: unifiedgosdk.Pointer[float64](5.02),
             TotalAmount: unifiedgosdk.Pointer[float64](72.49),
-            UpdatedAt: types.MustNewTimeFromString("2025-01-23T00:20:58.037Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-23T15:57:51.886Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

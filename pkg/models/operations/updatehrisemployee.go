@@ -63,6 +63,7 @@ const (
 	UpdateHrisEmployeeQueryParamFieldsLeaveEndAt             UpdateHrisEmployeeQueryParamFields = "leave_end_at"
 	UpdateHrisEmployeeQueryParamFieldsEmploymentStatusReason UpdateHrisEmployeeQueryParamFields = "employment_status_reason"
 	UpdateHrisEmployeeQueryParamFieldsRaw                    UpdateHrisEmployeeQueryParamFields = "raw"
+	UpdateHrisEmployeeQueryParamFieldsUnifiedPersonIds       UpdateHrisEmployeeQueryParamFields = "__unified_person_ids"
 )
 
 func (e UpdateHrisEmployeeQueryParamFields) ToPointer() *UpdateHrisEmployeeQueryParamFields {
@@ -175,6 +176,8 @@ func (e *UpdateHrisEmployeeQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "employment_status_reason":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = UpdateHrisEmployeeQueryParamFields(v)
 		return nil
 	default:

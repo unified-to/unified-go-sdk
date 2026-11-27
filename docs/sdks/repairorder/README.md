@@ -39,23 +39,23 @@ func main() {
     res, err := s.Repairorder.CreateDmsRepairorder(ctx, operations.CreateDmsRepairorderRequest{
         DmsRepairorder: shared.DmsRepairorder{
             BalanceAmount: unifiedgosdk.Pointer[float64](3193.86),
-            CompletedAt: types.MustNewTimeFromString("2026-11-12T19:17:42.253Z"),
+            CompletedAt: types.MustNewTimeFromString("2026-11-13T20:43:09.427Z"),
             CreatedAt: types.MustNewTimeFromString("2022-10-25T15:50:48.007Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             EstimateAmount: unifiedgosdk.Pointer[float64](3264.0),
-            ID: unifiedgosdk.Pointer("7fb2dd80-bcfa-4c94-8c60-b2d2b9a4343a"),
+            ID: unifiedgosdk.Pointer("5b68208c-b532-4191-a308-b3aea18b349f"),
             Jobs: []shared.DmsRepairorderJob{
                 shared.DmsRepairorderJob{
                     ActualHours: unifiedgosdk.Pointer[float64](3.6),
                     Cause: unifiedgosdk.Pointer("Scheduled maintenance"),
                     Complaint: unifiedgosdk.Pointer("Due for service"),
                     Correction: unifiedgosdk.Pointer("Aufero cumque vicinus aptus assumenda quis aptus."),
-                    ID: unifiedgosdk.Pointer("a3e10710-eaf3-42c0-a284-3b2bb7a069e7"),
+                    ID: unifiedgosdk.Pointer("61881098-ee1e-4f1e-bb79-518744ec672e"),
                     LaborAmount: unifiedgosdk.Pointer[float64](681.6),
                     Labors: []shared.DmsRepairorderLabor{
                         shared.DmsRepairorderLabor{
-                            ID: unifiedgosdk.Pointer("9dfd5a09-1f6c-421b-b16c-aed61a5c14e6"),
+                            ID: unifiedgosdk.Pointer("6d675122-a8ed-4635-b907-760be1b4d601"),
                             PayType: shared.DmsRepairorderLaborPayTypeWarranty.ToPointer(),
                             RateAmount: unifiedgosdk.Pointer[float64](213.0),
                             SoldHours: unifiedgosdk.Pointer[float64](3.2),
@@ -78,11 +78,11 @@ func main() {
                     Cause: unifiedgosdk.Pointer("Worn brake pads"),
                     Complaint: unifiedgosdk.Pointer("Vibration at highway speed"),
                     Correction: unifiedgosdk.Pointer("Somnus avaritia utroque vulnero ullam ancilla."),
-                    ID: unifiedgosdk.Pointer("45a15ebd-8869-4c49-9e59-c8ab00015b01"),
+                    ID: unifiedgosdk.Pointer("8aa00e52-e835-4147-b63e-f0f101d96411"),
                     LaborAmount: unifiedgosdk.Pointer[float64](446.4),
                     Labors: []shared.DmsRepairorderLabor{
                         shared.DmsRepairorderLabor{
-                            ID: unifiedgosdk.Pointer("d18cb9c4-81bd-4cd5-bf32-eff004254921"),
+                            ID: unifiedgosdk.Pointer("e1d2504c-84ea-4552-a854-300c19edaea6"),
                             PayType: shared.DmsRepairorderLaborPayTypeWarranty.ToPointer(),
                             RateAmount: unifiedgosdk.Pointer[float64](144.0),
                             SoldHours: unifiedgosdk.Pointer[float64](3.1),
@@ -94,7 +94,7 @@ func main() {
                     Number: unifiedgosdk.Pointer("B"),
                     Parts: []shared.DmsPartline{
                         shared.DmsPartline{
-                            ID: unifiedgosdk.Pointer("a9f379cc-9f18-4ac2-9723-7fda4061e45e"),
+                            ID: unifiedgosdk.Pointer("bd071217-0d8d-4a6f-a6af-d7ba827d186e"),
                             PayType: shared.DmsPartlinePayTypeWarranty.ToPointer(),
                             Quantity: unifiedgosdk.Pointer[float64](4.0),
                             QuantityOrdered: unifiedgosdk.Pointer[float64](4.0),
@@ -102,7 +102,7 @@ func main() {
                             UnitPriceAmount: unifiedgosdk.Pointer[float64](222.61),
                         },
                         shared.DmsPartline{
-                            ID: unifiedgosdk.Pointer("884c9571-00e2-402a-9c24-6522d26444c3"),
+                            ID: unifiedgosdk.Pointer("bfa84261-d5a5-4311-a017-130b324efef6"),
                             PayType: shared.DmsPartlinePayTypeWarranty.ToPointer(),
                             Quantity: unifiedgosdk.Pointer[float64](2.0),
                             QuantityOrdered: unifiedgosdk.Pointer[float64](2.0),
@@ -122,11 +122,11 @@ func main() {
                     Cause: unifiedgosdk.Pointer("Scheduled maintenance"),
                     Complaint: unifiedgosdk.Pointer("Noise when braking"),
                     Correction: unifiedgosdk.Pointer("Degero theca natus."),
-                    ID: unifiedgosdk.Pointer("e20d5136-0721-4308-84ca-8e748a8afbe4"),
+                    ID: unifiedgosdk.Pointer("6a2a7fef-cf18-42b3-804a-3ef80fc119c8"),
                     LaborAmount: unifiedgosdk.Pointer[float64](232.4),
                     Labors: []shared.DmsRepairorderLabor{
                         shared.DmsRepairorderLabor{
-                            ID: unifiedgosdk.Pointer("18657ec3-723a-4418-9319-fdb6e7cfd8e9"),
+                            ID: unifiedgosdk.Pointer("13bb1d26-07df-4f63-b39f-42d39e786858"),
                             PayType: shared.DmsRepairorderLaborPayTypeCustomer.ToPointer(),
                             RateAmount: unifiedgosdk.Pointer[float64](166.0),
                             SoldHours: unifiedgosdk.Pointer[float64](1.4),
@@ -138,7 +138,7 @@ func main() {
                     Number: unifiedgosdk.Pointer("C"),
                     Parts: []shared.DmsPartline{
                         shared.DmsPartline{
-                            ID: unifiedgosdk.Pointer("b26e6eaa-eadf-444f-b4be-3438e950d554"),
+                            ID: unifiedgosdk.Pointer("3d2f54ed-394f-47c9-9ffd-8ebc6a9db242"),
                             PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
                             Quantity: unifiedgosdk.Pointer[float64](1.0),
                             QuantityOrdered: unifiedgosdk.Pointer[float64](1.0),
@@ -146,7 +146,7 @@ func main() {
                             UnitPriceAmount: unifiedgosdk.Pointer[float64](216.02),
                         },
                         shared.DmsPartline{
-                            ID: unifiedgosdk.Pointer("775ba6c5-dc39-4dfd-9c5e-f2139c2f652f"),
+                            ID: unifiedgosdk.Pointer("3440a836-55c5-4033-b4af-1c3a9a9cdd6a"),
                             PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
                             Quantity: unifiedgosdk.Pointer[float64](2.0),
                             QuantityOrdered: unifiedgosdk.Pointer[float64](2.0),
@@ -169,10 +169,10 @@ func main() {
             OdometerIn: unifiedgosdk.Pointer[float64](7776.0),
             OdometerOut: unifiedgosdk.Pointer[float64](7776.0),
             OdometerUnit: shared.DmsRepairorderOdometerUnitMiles.ToPointer(),
-            OpenedAt: types.MustNewTimeFromString("2025-02-07T19:13:16.323Z"),
+            OpenedAt: types.MustNewTimeFromString("2025-02-08T09:35:35.439Z"),
             PartsAmount: unifiedgosdk.Pointer[float64](1680.8000000000002),
             PayType: shared.DmsRepairorderPayTypeWarranty.ToPointer(),
-            PromisedAt: types.MustNewTimeFromString("2025-02-09T03:13:16.323Z"),
+            PromisedAt: types.MustNewTimeFromString("2025-02-09T17:35:35.439Z"),
             PurchaseOrderNumber: unifiedgosdk.Pointer("182743"),
             Status: shared.DmsRepairorderStatusCompleted.ToPointer(),
             SubletAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -199,7 +199,7 @@ func main() {
                 },
             },
             TransportType: shared.DmsRepairorderTransportTypeLoaner.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-27T22:05:41.752Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-28T17:30:18.674Z"),
         },
         ConnectionID: "<id>",
     })
@@ -368,23 +368,23 @@ func main() {
     res, err := s.Repairorder.PatchDmsRepairorder(ctx, operations.PatchDmsRepairorderRequest{
         DmsRepairorder: shared.DmsRepairorder{
             BalanceAmount: unifiedgosdk.Pointer[float64](3193.86),
-            CompletedAt: types.MustNewTimeFromString("2026-11-12T19:17:42.307Z"),
+            CompletedAt: types.MustNewTimeFromString("2026-11-13T20:43:09.493Z"),
             CreatedAt: types.MustNewTimeFromString("2022-10-25T15:50:48.007Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             EstimateAmount: unifiedgosdk.Pointer[float64](3264.0),
-            ID: unifiedgosdk.Pointer("205d65d6-f300-436e-a728-71ed9ac8cb5c"),
+            ID: unifiedgosdk.Pointer("0187b8d9-283c-4987-a821-3a99a34b88cf"),
             Jobs: []shared.DmsRepairorderJob{
                 shared.DmsRepairorderJob{
                     ActualHours: unifiedgosdk.Pointer[float64](3.6),
                     Cause: unifiedgosdk.Pointer("Scheduled maintenance"),
                     Complaint: unifiedgosdk.Pointer("Due for service"),
                     Correction: unifiedgosdk.Pointer("Aufero cumque vicinus aptus assumenda quis aptus."),
-                    ID: unifiedgosdk.Pointer("426874d7-2e52-4162-8b6c-8639c58d18b5"),
+                    ID: unifiedgosdk.Pointer("03beb52d-f18e-42ce-a286-39ca1d7d2652"),
                     LaborAmount: unifiedgosdk.Pointer[float64](681.6),
                     Labors: []shared.DmsRepairorderLabor{
                         shared.DmsRepairorderLabor{
-                            ID: unifiedgosdk.Pointer("e1009e6c-2d8d-446c-8269-bcc66c32cd67"),
+                            ID: unifiedgosdk.Pointer("5ebedfb0-e6f8-4d3d-a820-632a6edccb14"),
                             PayType: shared.DmsRepairorderLaborPayTypeWarranty.ToPointer(),
                             RateAmount: unifiedgosdk.Pointer[float64](213.0),
                             SoldHours: unifiedgosdk.Pointer[float64](3.2),
@@ -407,11 +407,11 @@ func main() {
                     Cause: unifiedgosdk.Pointer("Worn brake pads"),
                     Complaint: unifiedgosdk.Pointer("Vibration at highway speed"),
                     Correction: unifiedgosdk.Pointer("Somnus avaritia utroque vulnero ullam ancilla."),
-                    ID: unifiedgosdk.Pointer("7a124d15-1bb6-491d-adc1-579be2c00466"),
+                    ID: unifiedgosdk.Pointer("f2f8379e-6a83-4a06-aa7a-d6b1e9e53763"),
                     LaborAmount: unifiedgosdk.Pointer[float64](446.4),
                     Labors: []shared.DmsRepairorderLabor{
                         shared.DmsRepairorderLabor{
-                            ID: unifiedgosdk.Pointer("bf400c19-1912-4255-b38c-bdc5cb87abf6"),
+                            ID: unifiedgosdk.Pointer("e1c638b6-da08-4e1f-aad7-59db110190fc"),
                             PayType: shared.DmsRepairorderLaborPayTypeWarranty.ToPointer(),
                             RateAmount: unifiedgosdk.Pointer[float64](144.0),
                             SoldHours: unifiedgosdk.Pointer[float64](3.1),
@@ -423,7 +423,7 @@ func main() {
                     Number: unifiedgosdk.Pointer("B"),
                     Parts: []shared.DmsPartline{
                         shared.DmsPartline{
-                            ID: unifiedgosdk.Pointer("5d8d7099-cdda-4146-b08c-46d84fba20a8"),
+                            ID: unifiedgosdk.Pointer("d246b71c-d4a0-443f-bbde-7382f2328ffa"),
                             PayType: shared.DmsPartlinePayTypeWarranty.ToPointer(),
                             Quantity: unifiedgosdk.Pointer[float64](4.0),
                             QuantityOrdered: unifiedgosdk.Pointer[float64](4.0),
@@ -431,7 +431,7 @@ func main() {
                             UnitPriceAmount: unifiedgosdk.Pointer[float64](222.61),
                         },
                         shared.DmsPartline{
-                            ID: unifiedgosdk.Pointer("9a7d805a-b9d9-4663-86e4-0e9b32dba051"),
+                            ID: unifiedgosdk.Pointer("7f781967-2d75-49f8-b0f5-10cc295c186e"),
                             PayType: shared.DmsPartlinePayTypeWarranty.ToPointer(),
                             Quantity: unifiedgosdk.Pointer[float64](2.0),
                             QuantityOrdered: unifiedgosdk.Pointer[float64](2.0),
@@ -451,11 +451,11 @@ func main() {
                     Cause: unifiedgosdk.Pointer("Scheduled maintenance"),
                     Complaint: unifiedgosdk.Pointer("Noise when braking"),
                     Correction: unifiedgosdk.Pointer("Degero theca natus."),
-                    ID: unifiedgosdk.Pointer("8fe8640a-c7a2-4ad5-86ef-a016db57c58a"),
+                    ID: unifiedgosdk.Pointer("d6aa4d3a-4e31-4252-b3fc-144c6b59b698"),
                     LaborAmount: unifiedgosdk.Pointer[float64](232.4),
                     Labors: []shared.DmsRepairorderLabor{
                         shared.DmsRepairorderLabor{
-                            ID: unifiedgosdk.Pointer("1e1d8015-f3f9-4d90-bede-5f2b99783e47"),
+                            ID: unifiedgosdk.Pointer("6d15a307-c8c5-43c6-8b29-6ea8013bee52"),
                             PayType: shared.DmsRepairorderLaborPayTypeCustomer.ToPointer(),
                             RateAmount: unifiedgosdk.Pointer[float64](166.0),
                             SoldHours: unifiedgosdk.Pointer[float64](1.4),
@@ -467,7 +467,7 @@ func main() {
                     Number: unifiedgosdk.Pointer("C"),
                     Parts: []shared.DmsPartline{
                         shared.DmsPartline{
-                            ID: unifiedgosdk.Pointer("9237d282-5b87-4e09-bb1f-363fc2a6296e"),
+                            ID: unifiedgosdk.Pointer("50dc4642-0ca8-474f-9a11-b1e86d34c9c6"),
                             PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
                             Quantity: unifiedgosdk.Pointer[float64](1.0),
                             QuantityOrdered: unifiedgosdk.Pointer[float64](1.0),
@@ -475,7 +475,7 @@ func main() {
                             UnitPriceAmount: unifiedgosdk.Pointer[float64](216.02),
                         },
                         shared.DmsPartline{
-                            ID: unifiedgosdk.Pointer("884766ed-b7f1-4902-9a06-1a0837b87653"),
+                            ID: unifiedgosdk.Pointer("246d6be0-ee9c-47c5-9631-c9d202925390"),
                             PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
                             Quantity: unifiedgosdk.Pointer[float64](2.0),
                             QuantityOrdered: unifiedgosdk.Pointer[float64](2.0),
@@ -498,10 +498,10 @@ func main() {
             OdometerIn: unifiedgosdk.Pointer[float64](7776.0),
             OdometerOut: unifiedgosdk.Pointer[float64](7776.0),
             OdometerUnit: shared.DmsRepairorderOdometerUnitMiles.ToPointer(),
-            OpenedAt: types.MustNewTimeFromString("2025-02-07T19:13:16.353Z"),
+            OpenedAt: types.MustNewTimeFromString("2025-02-08T09:35:35.476Z"),
             PartsAmount: unifiedgosdk.Pointer[float64](1680.8000000000002),
             PayType: shared.DmsRepairorderPayTypeWarranty.ToPointer(),
-            PromisedAt: types.MustNewTimeFromString("2025-02-09T03:13:16.353Z"),
+            PromisedAt: types.MustNewTimeFromString("2025-02-09T17:35:35.476Z"),
             PurchaseOrderNumber: unifiedgosdk.Pointer("182743"),
             Status: shared.DmsRepairorderStatusCompleted.ToPointer(),
             SubletAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -528,7 +528,7 @@ func main() {
                 },
             },
             TransportType: shared.DmsRepairorderTransportTypeLoaner.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-27T22:05:41.793Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-28T17:30:18.724Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -589,23 +589,23 @@ func main() {
     res, err := s.Repairorder.UpdateDmsRepairorder(ctx, operations.UpdateDmsRepairorderRequest{
         DmsRepairorder: shared.DmsRepairorder{
             BalanceAmount: unifiedgosdk.Pointer[float64](3193.86),
-            CompletedAt: types.MustNewTimeFromString("2026-11-12T19:17:42.307Z"),
+            CompletedAt: types.MustNewTimeFromString("2026-11-13T20:43:09.493Z"),
             CreatedAt: types.MustNewTimeFromString("2022-10-25T15:50:48.007Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             EstimateAmount: unifiedgosdk.Pointer[float64](3264.0),
-            ID: unifiedgosdk.Pointer("205d65d6-f300-436e-a728-71ed9ac8cb5c"),
+            ID: unifiedgosdk.Pointer("0187b8d9-283c-4987-a821-3a99a34b88cf"),
             Jobs: []shared.DmsRepairorderJob{
                 shared.DmsRepairorderJob{
                     ActualHours: unifiedgosdk.Pointer[float64](3.6),
                     Cause: unifiedgosdk.Pointer("Scheduled maintenance"),
                     Complaint: unifiedgosdk.Pointer("Due for service"),
                     Correction: unifiedgosdk.Pointer("Aufero cumque vicinus aptus assumenda quis aptus."),
-                    ID: unifiedgosdk.Pointer("426874d7-2e52-4162-8b6c-8639c58d18b5"),
+                    ID: unifiedgosdk.Pointer("03beb52d-f18e-42ce-a286-39ca1d7d2652"),
                     LaborAmount: unifiedgosdk.Pointer[float64](681.6),
                     Labors: []shared.DmsRepairorderLabor{
                         shared.DmsRepairorderLabor{
-                            ID: unifiedgosdk.Pointer("e1009e6c-2d8d-446c-8269-bcc66c32cd67"),
+                            ID: unifiedgosdk.Pointer("5ebedfb0-e6f8-4d3d-a820-632a6edccb14"),
                             PayType: shared.DmsRepairorderLaborPayTypeWarranty.ToPointer(),
                             RateAmount: unifiedgosdk.Pointer[float64](213.0),
                             SoldHours: unifiedgosdk.Pointer[float64](3.2),
@@ -628,11 +628,11 @@ func main() {
                     Cause: unifiedgosdk.Pointer("Worn brake pads"),
                     Complaint: unifiedgosdk.Pointer("Vibration at highway speed"),
                     Correction: unifiedgosdk.Pointer("Somnus avaritia utroque vulnero ullam ancilla."),
-                    ID: unifiedgosdk.Pointer("7a124d15-1bb6-491d-adc1-579be2c00466"),
+                    ID: unifiedgosdk.Pointer("f2f8379e-6a83-4a06-aa7a-d6b1e9e53763"),
                     LaborAmount: unifiedgosdk.Pointer[float64](446.4),
                     Labors: []shared.DmsRepairorderLabor{
                         shared.DmsRepairorderLabor{
-                            ID: unifiedgosdk.Pointer("bf400c19-1912-4255-b38c-bdc5cb87abf6"),
+                            ID: unifiedgosdk.Pointer("e1c638b6-da08-4e1f-aad7-59db110190fc"),
                             PayType: shared.DmsRepairorderLaborPayTypeWarranty.ToPointer(),
                             RateAmount: unifiedgosdk.Pointer[float64](144.0),
                             SoldHours: unifiedgosdk.Pointer[float64](3.1),
@@ -644,7 +644,7 @@ func main() {
                     Number: unifiedgosdk.Pointer("B"),
                     Parts: []shared.DmsPartline{
                         shared.DmsPartline{
-                            ID: unifiedgosdk.Pointer("5d8d7099-cdda-4146-b08c-46d84fba20a8"),
+                            ID: unifiedgosdk.Pointer("d246b71c-d4a0-443f-bbde-7382f2328ffa"),
                             PayType: shared.DmsPartlinePayTypeWarranty.ToPointer(),
                             Quantity: unifiedgosdk.Pointer[float64](4.0),
                             QuantityOrdered: unifiedgosdk.Pointer[float64](4.0),
@@ -652,7 +652,7 @@ func main() {
                             UnitPriceAmount: unifiedgosdk.Pointer[float64](222.61),
                         },
                         shared.DmsPartline{
-                            ID: unifiedgosdk.Pointer("9a7d805a-b9d9-4663-86e4-0e9b32dba051"),
+                            ID: unifiedgosdk.Pointer("7f781967-2d75-49f8-b0f5-10cc295c186e"),
                             PayType: shared.DmsPartlinePayTypeWarranty.ToPointer(),
                             Quantity: unifiedgosdk.Pointer[float64](2.0),
                             QuantityOrdered: unifiedgosdk.Pointer[float64](2.0),
@@ -672,11 +672,11 @@ func main() {
                     Cause: unifiedgosdk.Pointer("Scheduled maintenance"),
                     Complaint: unifiedgosdk.Pointer("Noise when braking"),
                     Correction: unifiedgosdk.Pointer("Degero theca natus."),
-                    ID: unifiedgosdk.Pointer("8fe8640a-c7a2-4ad5-86ef-a016db57c58a"),
+                    ID: unifiedgosdk.Pointer("d6aa4d3a-4e31-4252-b3fc-144c6b59b698"),
                     LaborAmount: unifiedgosdk.Pointer[float64](232.4),
                     Labors: []shared.DmsRepairorderLabor{
                         shared.DmsRepairorderLabor{
-                            ID: unifiedgosdk.Pointer("1e1d8015-f3f9-4d90-bede-5f2b99783e47"),
+                            ID: unifiedgosdk.Pointer("6d15a307-c8c5-43c6-8b29-6ea8013bee52"),
                             PayType: shared.DmsRepairorderLaborPayTypeCustomer.ToPointer(),
                             RateAmount: unifiedgosdk.Pointer[float64](166.0),
                             SoldHours: unifiedgosdk.Pointer[float64](1.4),
@@ -688,7 +688,7 @@ func main() {
                     Number: unifiedgosdk.Pointer("C"),
                     Parts: []shared.DmsPartline{
                         shared.DmsPartline{
-                            ID: unifiedgosdk.Pointer("9237d282-5b87-4e09-bb1f-363fc2a6296e"),
+                            ID: unifiedgosdk.Pointer("50dc4642-0ca8-474f-9a11-b1e86d34c9c6"),
                             PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
                             Quantity: unifiedgosdk.Pointer[float64](1.0),
                             QuantityOrdered: unifiedgosdk.Pointer[float64](1.0),
@@ -696,7 +696,7 @@ func main() {
                             UnitPriceAmount: unifiedgosdk.Pointer[float64](216.02),
                         },
                         shared.DmsPartline{
-                            ID: unifiedgosdk.Pointer("884766ed-b7f1-4902-9a06-1a0837b87653"),
+                            ID: unifiedgosdk.Pointer("246d6be0-ee9c-47c5-9631-c9d202925390"),
                             PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
                             Quantity: unifiedgosdk.Pointer[float64](2.0),
                             QuantityOrdered: unifiedgosdk.Pointer[float64](2.0),
@@ -719,10 +719,10 @@ func main() {
             OdometerIn: unifiedgosdk.Pointer[float64](7776.0),
             OdometerOut: unifiedgosdk.Pointer[float64](7776.0),
             OdometerUnit: shared.DmsRepairorderOdometerUnitMiles.ToPointer(),
-            OpenedAt: types.MustNewTimeFromString("2025-02-07T19:13:16.353Z"),
+            OpenedAt: types.MustNewTimeFromString("2025-02-08T09:35:35.476Z"),
             PartsAmount: unifiedgosdk.Pointer[float64](1680.8000000000002),
             PayType: shared.DmsRepairorderPayTypeWarranty.ToPointer(),
-            PromisedAt: types.MustNewTimeFromString("2025-02-09T03:13:16.353Z"),
+            PromisedAt: types.MustNewTimeFromString("2025-02-09T17:35:35.476Z"),
             PurchaseOrderNumber: unifiedgosdk.Pointer("182743"),
             Status: shared.DmsRepairorderStatusCompleted.ToPointer(),
             SubletAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -749,7 +749,7 @@ func main() {
                 },
             },
             TransportType: shared.DmsRepairorderTransportTypeLoaner.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-27T22:05:41.793Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-28T17:30:18.724Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

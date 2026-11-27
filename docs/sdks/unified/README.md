@@ -14,6 +14,7 @@
 * [GetUnifiedConnection](#getunifiedconnection) - Retrieve connection
 * [GetUnifiedIntegrationAuth](#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [GetUnifiedIssue](#getunifiedissue) - Retrieve support issue
+* [GetUnifiedPerson](#getunifiedperson) - Retrieve a person by ID
 * [GetUnifiedSecretsmanager](#getunifiedsecretsmanager) - Retrieve secrets manager
 * [GetUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
 * [GetUnifiedWorkspaceintegration](#getunifiedworkspaceintegration) - Retrieve workspace integration
@@ -24,6 +25,7 @@
 * [ListUnifiedIntegrations](#listunifiedintegrations) - Returns all integrations
 * [ListUnifiedIssues](#listunifiedissues) - List support issues
 * [ListUnifiedNotifications](#listunifiednotifications) - List event notifications
+* [ListUnifiedPeople](#listunifiedpeople) - Search for persons by email addresses
 * [ListUnifiedSecretsmanagerInstructions](#listunifiedsecretsmanagerinstructions) - List secrets manager setup instructions
 * [ListUnifiedSecretsmanagerSecrets](#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
 * [ListUnifiedSecretsmanagers](#listunifiedsecretsmanagers) - List secrets managers
@@ -37,6 +39,7 @@
 * [PatchUnifiedWorkspaceintegration](#patchunifiedworkspaceintegration) - Update workspace integration
 * [RemoveUnifiedConnection](#removeunifiedconnection) - Remove connection
 * [RemoveUnifiedEnvironment](#removeunifiedenvironment) - Remove an environment
+* [RemoveUnifiedPerson](#removeunifiedperson) - Erase email addresses from the unified persons
 * [RemoveUnifiedSecretsmanager](#removeunifiedsecretsmanager) - Remove secrets manager
 * [RemoveUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
 * [RemoveUnifiedWorkspaceintegration](#removeunifiedworkspaceintegration) - Remove workspace integration
@@ -600,6 +603,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## GetUnifiedPerson
+
+Retrieve a person by ID
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getUnifiedPerson" method="get" path="/unified/person/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Unified.GetUnifiedPerson(ctx, operations.GetUnifiedPersonRequest{
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Person != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.GetUnifiedPersonRequest](../../pkg/models/operations/getunifiedpersonrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.GetUnifiedPersonResponse](../../pkg/models/operations/getunifiedpersonresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## GetUnifiedSecretsmanager
 
 Retrieve secrets manager
@@ -1119,6 +1176,60 @@ func main() {
 ### Response
 
 **[*operations.ListUnifiedNotificationsResponse](../../pkg/models/operations/listunifiednotificationsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListUnifiedPeople
+
+Search for persons by email addresses
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listUnifiedPeople" method="get" path="/unified/person" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Unified.ListUnifiedPeople(ctx, operations.ListUnifiedPeopleRequest{
+        Query: "<value>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.People != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.ListUnifiedPeopleRequest](../../pkg/models/operations/listunifiedpeoplerequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.ListUnifiedPeopleResponse](../../pkg/models/operations/listunifiedpeopleresponse.md), error**
 
 ### Errors
 
@@ -1838,6 +1949,60 @@ func main() {
 ### Response
 
 **[*operations.RemoveUnifiedEnvironmentResponse](../../pkg/models/operations/removeunifiedenvironmentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveUnifiedPerson
+
+Erase email addresses from the unified persons
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeUnifiedPerson" method="delete" path="/unified/person" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Unified.RemoveUnifiedPerson(ctx, operations.RemoveUnifiedPersonRequest{
+        Query: "<value>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.RemoveUnifiedPersonRequest](../../pkg/models/operations/removeunifiedpersonrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.RemoveUnifiedPersonResponse](../../pkg/models/operations/removeunifiedpersonresponse.md), error**
 
 ### Errors
 

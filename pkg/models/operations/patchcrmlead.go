@@ -12,28 +12,29 @@ import (
 type PatchCrmLeadQueryParamFields string
 
 const (
-	PatchCrmLeadQueryParamFieldsID            PatchCrmLeadQueryParamFields = "id"
-	PatchCrmLeadQueryParamFieldsCreatedAt     PatchCrmLeadQueryParamFields = "created_at"
-	PatchCrmLeadQueryParamFieldsUpdatedAt     PatchCrmLeadQueryParamFields = "updated_at"
-	PatchCrmLeadQueryParamFieldsName          PatchCrmLeadQueryParamFields = "name"
-	PatchCrmLeadQueryParamFieldsFirstName     PatchCrmLeadQueryParamFields = "first_name"
-	PatchCrmLeadQueryParamFieldsLastName      PatchCrmLeadQueryParamFields = "last_name"
-	PatchCrmLeadQueryParamFieldsUserID        PatchCrmLeadQueryParamFields = "user_id"
-	PatchCrmLeadQueryParamFieldsCreatorUserID PatchCrmLeadQueryParamFields = "creator_user_id"
-	PatchCrmLeadQueryParamFieldsContactID     PatchCrmLeadQueryParamFields = "contact_id"
-	PatchCrmLeadQueryParamFieldsCompanyID     PatchCrmLeadQueryParamFields = "company_id"
-	PatchCrmLeadQueryParamFieldsCompanyName   PatchCrmLeadQueryParamFields = "company_name"
-	PatchCrmLeadQueryParamFieldsIsActive      PatchCrmLeadQueryParamFields = "is_active"
-	PatchCrmLeadQueryParamFieldsAddress       PatchCrmLeadQueryParamFields = "address"
-	PatchCrmLeadQueryParamFieldsEmails        PatchCrmLeadQueryParamFields = "emails"
-	PatchCrmLeadQueryParamFieldsTelephones    PatchCrmLeadQueryParamFields = "telephones"
-	PatchCrmLeadQueryParamFieldsSource        PatchCrmLeadQueryParamFields = "source"
-	PatchCrmLeadQueryParamFieldsStatus        PatchCrmLeadQueryParamFields = "status"
-	PatchCrmLeadQueryParamFieldsTitle         PatchCrmLeadQueryParamFields = "title"
-	PatchCrmLeadQueryParamFieldsLinkUrls      PatchCrmLeadQueryParamFields = "link_urls"
-	PatchCrmLeadQueryParamFieldsMetadata      PatchCrmLeadQueryParamFields = "metadata"
-	PatchCrmLeadQueryParamFieldsVehicleIds    PatchCrmLeadQueryParamFields = "vehicle_ids"
-	PatchCrmLeadQueryParamFieldsRaw           PatchCrmLeadQueryParamFields = "raw"
+	PatchCrmLeadQueryParamFieldsID               PatchCrmLeadQueryParamFields = "id"
+	PatchCrmLeadQueryParamFieldsCreatedAt        PatchCrmLeadQueryParamFields = "created_at"
+	PatchCrmLeadQueryParamFieldsUpdatedAt        PatchCrmLeadQueryParamFields = "updated_at"
+	PatchCrmLeadQueryParamFieldsName             PatchCrmLeadQueryParamFields = "name"
+	PatchCrmLeadQueryParamFieldsFirstName        PatchCrmLeadQueryParamFields = "first_name"
+	PatchCrmLeadQueryParamFieldsLastName         PatchCrmLeadQueryParamFields = "last_name"
+	PatchCrmLeadQueryParamFieldsUserID           PatchCrmLeadQueryParamFields = "user_id"
+	PatchCrmLeadQueryParamFieldsCreatorUserID    PatchCrmLeadQueryParamFields = "creator_user_id"
+	PatchCrmLeadQueryParamFieldsContactID        PatchCrmLeadQueryParamFields = "contact_id"
+	PatchCrmLeadQueryParamFieldsCompanyID        PatchCrmLeadQueryParamFields = "company_id"
+	PatchCrmLeadQueryParamFieldsCompanyName      PatchCrmLeadQueryParamFields = "company_name"
+	PatchCrmLeadQueryParamFieldsIsActive         PatchCrmLeadQueryParamFields = "is_active"
+	PatchCrmLeadQueryParamFieldsAddress          PatchCrmLeadQueryParamFields = "address"
+	PatchCrmLeadQueryParamFieldsEmails           PatchCrmLeadQueryParamFields = "emails"
+	PatchCrmLeadQueryParamFieldsTelephones       PatchCrmLeadQueryParamFields = "telephones"
+	PatchCrmLeadQueryParamFieldsSource           PatchCrmLeadQueryParamFields = "source"
+	PatchCrmLeadQueryParamFieldsStatus           PatchCrmLeadQueryParamFields = "status"
+	PatchCrmLeadQueryParamFieldsTitle            PatchCrmLeadQueryParamFields = "title"
+	PatchCrmLeadQueryParamFieldsLinkUrls         PatchCrmLeadQueryParamFields = "link_urls"
+	PatchCrmLeadQueryParamFieldsMetadata         PatchCrmLeadQueryParamFields = "metadata"
+	PatchCrmLeadQueryParamFieldsVehicleIds       PatchCrmLeadQueryParamFields = "vehicle_ids"
+	PatchCrmLeadQueryParamFieldsRaw              PatchCrmLeadQueryParamFields = "raw"
+	PatchCrmLeadQueryParamFieldsUnifiedPersonIds PatchCrmLeadQueryParamFields = "__unified_person_ids"
 )
 
 func (e PatchCrmLeadQueryParamFields) ToPointer() *PatchCrmLeadQueryParamFields {
@@ -88,6 +89,8 @@ func (e *PatchCrmLeadQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "vehicle_ids":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = PatchCrmLeadQueryParamFields(v)
 		return nil
 	default:

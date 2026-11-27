@@ -12,25 +12,26 @@ import (
 type CreateCrmContactQueryParamFields string
 
 const (
-	CreateCrmContactQueryParamFieldsID         CreateCrmContactQueryParamFields = "id"
-	CreateCrmContactQueryParamFieldsCreatedAt  CreateCrmContactQueryParamFields = "created_at"
-	CreateCrmContactQueryParamFieldsUpdatedAt  CreateCrmContactQueryParamFields = "updated_at"
-	CreateCrmContactQueryParamFieldsName       CreateCrmContactQueryParamFields = "name"
-	CreateCrmContactQueryParamFieldsFirstName  CreateCrmContactQueryParamFields = "first_name"
-	CreateCrmContactQueryParamFieldsLastName   CreateCrmContactQueryParamFields = "last_name"
-	CreateCrmContactQueryParamFieldsTitle      CreateCrmContactQueryParamFields = "title"
-	CreateCrmContactQueryParamFieldsCompany    CreateCrmContactQueryParamFields = "company"
-	CreateCrmContactQueryParamFieldsEmails     CreateCrmContactQueryParamFields = "emails"
-	CreateCrmContactQueryParamFieldsTelephones CreateCrmContactQueryParamFields = "telephones"
-	CreateCrmContactQueryParamFieldsDealIds    CreateCrmContactQueryParamFields = "deal_ids"
-	CreateCrmContactQueryParamFieldsCompanyIds CreateCrmContactQueryParamFields = "company_ids"
-	CreateCrmContactQueryParamFieldsAddress    CreateCrmContactQueryParamFields = "address"
-	CreateCrmContactQueryParamFieldsUserID     CreateCrmContactQueryParamFields = "user_id"
-	CreateCrmContactQueryParamFieldsLinkUrls   CreateCrmContactQueryParamFields = "link_urls"
-	CreateCrmContactQueryParamFieldsMetadata   CreateCrmContactQueryParamFields = "metadata"
-	CreateCrmContactQueryParamFieldsDepartment CreateCrmContactQueryParamFields = "department"
-	CreateCrmContactQueryParamFieldsImageURL   CreateCrmContactQueryParamFields = "image_url"
-	CreateCrmContactQueryParamFieldsRaw        CreateCrmContactQueryParamFields = "raw"
+	CreateCrmContactQueryParamFieldsID               CreateCrmContactQueryParamFields = "id"
+	CreateCrmContactQueryParamFieldsCreatedAt        CreateCrmContactQueryParamFields = "created_at"
+	CreateCrmContactQueryParamFieldsUpdatedAt        CreateCrmContactQueryParamFields = "updated_at"
+	CreateCrmContactQueryParamFieldsName             CreateCrmContactQueryParamFields = "name"
+	CreateCrmContactQueryParamFieldsFirstName        CreateCrmContactQueryParamFields = "first_name"
+	CreateCrmContactQueryParamFieldsLastName         CreateCrmContactQueryParamFields = "last_name"
+	CreateCrmContactQueryParamFieldsTitle            CreateCrmContactQueryParamFields = "title"
+	CreateCrmContactQueryParamFieldsCompany          CreateCrmContactQueryParamFields = "company"
+	CreateCrmContactQueryParamFieldsEmails           CreateCrmContactQueryParamFields = "emails"
+	CreateCrmContactQueryParamFieldsTelephones       CreateCrmContactQueryParamFields = "telephones"
+	CreateCrmContactQueryParamFieldsDealIds          CreateCrmContactQueryParamFields = "deal_ids"
+	CreateCrmContactQueryParamFieldsCompanyIds       CreateCrmContactQueryParamFields = "company_ids"
+	CreateCrmContactQueryParamFieldsAddress          CreateCrmContactQueryParamFields = "address"
+	CreateCrmContactQueryParamFieldsUserID           CreateCrmContactQueryParamFields = "user_id"
+	CreateCrmContactQueryParamFieldsLinkUrls         CreateCrmContactQueryParamFields = "link_urls"
+	CreateCrmContactQueryParamFieldsMetadata         CreateCrmContactQueryParamFields = "metadata"
+	CreateCrmContactQueryParamFieldsDepartment       CreateCrmContactQueryParamFields = "department"
+	CreateCrmContactQueryParamFieldsImageURL         CreateCrmContactQueryParamFields = "image_url"
+	CreateCrmContactQueryParamFieldsRaw              CreateCrmContactQueryParamFields = "raw"
+	CreateCrmContactQueryParamFieldsUnifiedPersonIds CreateCrmContactQueryParamFields = "__unified_person_ids"
 )
 
 func (e CreateCrmContactQueryParamFields) ToPointer() *CreateCrmContactQueryParamFields {
@@ -79,6 +80,8 @@ func (e *CreateCrmContactQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "image_url":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = CreateCrmContactQueryParamFields(v)
 		return nil
 	default:

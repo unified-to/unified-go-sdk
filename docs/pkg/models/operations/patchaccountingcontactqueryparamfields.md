@@ -44,3 +44,4 @@ value := operations.PatchAccountingContactQueryParamFieldsID
 | `PatchAccountingContactQueryParamFieldsNotes`              | notes                                                      |
 | `PatchAccountingContactQueryParamFieldsMetadata`           | metadata                                                   |
 | `PatchAccountingContactQueryParamFieldsRaw`                | raw                                                        |
+| `PatchAccountingContactQueryParamFieldsUnifiedPersonIds`   | __unified_person_ids                                       |

@@ -66,7 +66,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Comedo vilitas harum cupiditate animus quo iste."),
-			ID:                  unifiedgosdk.Pointer("163a68aa-dffa-47cd-8735-bba178c623d5"),
+			ID:                  unifiedgosdk.Pointer("5d6f3a27-b4b7-4d7f-889d-e977048601c8"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Savings Account"),
@@ -79,7 +79,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-16T00:59:24.548Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-16T07:30:37.194Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -2300,7 +2300,10 @@ func main() {
 
 ### [Person](docs/sdks/person/README.md)
 
+* [GetUnifiedPerson](docs/sdks/person/README.md#getunifiedperson) - Retrieve a person by ID
 * [ListEnrichPeople](docs/sdks/person/README.md#listenrichpeople) - Retrieve enrichment information for a person
+* [ListUnifiedPeople](docs/sdks/person/README.md#listunifiedpeople) - Search for persons by email addresses
+* [RemoveUnifiedPerson](docs/sdks/person/README.md#removeunifiedperson) - Erase email addresses from the unified persons
 
 ### [Pipeline](docs/sdks/pipeline/README.md)
 
@@ -3128,6 +3131,7 @@ func main() {
 * [GetUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
 * [GetUnifiedIntegrationAuth](docs/sdks/unified/README.md#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [GetUnifiedIssue](docs/sdks/unified/README.md#getunifiedissue) - Retrieve support issue
+* [GetUnifiedPerson](docs/sdks/unified/README.md#getunifiedperson) - Retrieve a person by ID
 * [GetUnifiedSecretsmanager](docs/sdks/unified/README.md#getunifiedsecretsmanager) - Retrieve secrets manager
 * [GetUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Retrieve webhook by its ID
 * [GetUnifiedWorkspaceintegration](docs/sdks/unified/README.md#getunifiedworkspaceintegration) - Retrieve workspace integration
@@ -3138,6 +3142,7 @@ func main() {
 * [ListUnifiedIntegrations](docs/sdks/unified/README.md#listunifiedintegrations) - Returns all integrations
 * [ListUnifiedIssues](docs/sdks/unified/README.md#listunifiedissues) - List support issues
 * [ListUnifiedNotifications](docs/sdks/unified/README.md#listunifiednotifications) - List event notifications
+* [ListUnifiedPeople](docs/sdks/unified/README.md#listunifiedpeople) - Search for persons by email addresses
 * [ListUnifiedSecretsmanagerInstructions](docs/sdks/unified/README.md#listunifiedsecretsmanagerinstructions) - List secrets manager setup instructions
 * [ListUnifiedSecretsmanagerSecrets](docs/sdks/unified/README.md#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
 * [ListUnifiedSecretsmanagers](docs/sdks/unified/README.md#listunifiedsecretsmanagers) - List secrets managers
@@ -3151,6 +3156,7 @@ func main() {
 * [PatchUnifiedWorkspaceintegration](docs/sdks/unified/README.md#patchunifiedworkspaceintegration) - Update workspace integration
 * [RemoveUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
 * [RemoveUnifiedEnvironment](docs/sdks/unified/README.md#removeunifiedenvironment) - Remove an environment
+* [RemoveUnifiedPerson](docs/sdks/unified/README.md#removeunifiedperson) - Erase email addresses from the unified persons
 * [RemoveUnifiedSecretsmanager](docs/sdks/unified/README.md#removeunifiedsecretsmanager) - Remove secrets manager
 * [RemoveUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [RemoveUnifiedWorkspaceintegration](docs/sdks/unified/README.md#removeunifiedworkspaceintegration) - Remove workspace integration
@@ -3318,7 +3324,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Comedo vilitas harum cupiditate animus quo iste."),
-			ID:                  unifiedgosdk.Pointer("163a68aa-dffa-47cd-8735-bba178c623d5"),
+			ID:                  unifiedgosdk.Pointer("5d6f3a27-b4b7-4d7f-889d-e977048601c8"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Savings Account"),
@@ -3331,7 +3337,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-16T00:59:24.548Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-16T07:30:37.194Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3392,7 +3398,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Comedo vilitas harum cupiditate animus quo iste."),
-			ID:                  unifiedgosdk.Pointer("163a68aa-dffa-47cd-8735-bba178c623d5"),
+			ID:                  unifiedgosdk.Pointer("5d6f3a27-b4b7-4d7f-889d-e977048601c8"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Savings Account"),
@@ -3405,7 +3411,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-16T00:59:24.548Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-16T07:30:37.194Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3449,7 +3455,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Comedo vilitas harum cupiditate animus quo iste."),
-			ID:                  unifiedgosdk.Pointer("163a68aa-dffa-47cd-8735-bba178c623d5"),
+			ID:                  unifiedgosdk.Pointer("5d6f3a27-b4b7-4d7f-889d-e977048601c8"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Savings Account"),
@@ -3462,7 +3468,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-16T00:59:24.548Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-16T07:30:37.194Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3549,7 +3555,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Comedo vilitas harum cupiditate animus quo iste."),
-			ID:                  unifiedgosdk.Pointer("163a68aa-dffa-47cd-8735-bba178c623d5"),
+			ID:                  unifiedgosdk.Pointer("5d6f3a27-b4b7-4d7f-889d-e977048601c8"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Savings Account"),
@@ -3562,7 +3568,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-16T00:59:24.548Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-16T07:30:37.194Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3611,7 +3617,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Comedo vilitas harum cupiditate animus quo iste."),
-			ID:                  unifiedgosdk.Pointer("163a68aa-dffa-47cd-8735-bba178c623d5"),
+			ID:                  unifiedgosdk.Pointer("5d6f3a27-b4b7-4d7f-889d-e977048601c8"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Savings Account"),
@@ -3624,7 +3630,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-16T00:59:24.548Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-16T07:30:37.194Z"),
 		},
 		ConnectionID: "<id>",
 	}, operations.WithRetries(
@@ -3687,7 +3693,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Comedo vilitas harum cupiditate animus quo iste."),
-			ID:                  unifiedgosdk.Pointer("163a68aa-dffa-47cd-8735-bba178c623d5"),
+			ID:                  unifiedgosdk.Pointer("5d6f3a27-b4b7-4d7f-889d-e977048601c8"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Savings Account"),
@@ -3700,7 +3706,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-16T00:59:24.548Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-16T07:30:37.194Z"),
 		},
 		ConnectionID: "<id>",
 	})

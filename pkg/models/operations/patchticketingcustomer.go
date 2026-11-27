@@ -12,15 +12,16 @@ import (
 type PatchTicketingCustomerQueryParamFields string
 
 const (
-	PatchTicketingCustomerQueryParamFieldsID         PatchTicketingCustomerQueryParamFields = "id"
-	PatchTicketingCustomerQueryParamFieldsCreatedAt  PatchTicketingCustomerQueryParamFields = "created_at"
-	PatchTicketingCustomerQueryParamFieldsUpdatedAt  PatchTicketingCustomerQueryParamFields = "updated_at"
-	PatchTicketingCustomerQueryParamFieldsName       PatchTicketingCustomerQueryParamFields = "name"
-	PatchTicketingCustomerQueryParamFieldsEmails     PatchTicketingCustomerQueryParamFields = "emails"
-	PatchTicketingCustomerQueryParamFieldsTelephones PatchTicketingCustomerQueryParamFields = "telephones"
-	PatchTicketingCustomerQueryParamFieldsTags       PatchTicketingCustomerQueryParamFields = "tags"
-	PatchTicketingCustomerQueryParamFieldsMetadata   PatchTicketingCustomerQueryParamFields = "metadata"
-	PatchTicketingCustomerQueryParamFieldsRaw        PatchTicketingCustomerQueryParamFields = "raw"
+	PatchTicketingCustomerQueryParamFieldsID               PatchTicketingCustomerQueryParamFields = "id"
+	PatchTicketingCustomerQueryParamFieldsCreatedAt        PatchTicketingCustomerQueryParamFields = "created_at"
+	PatchTicketingCustomerQueryParamFieldsUpdatedAt        PatchTicketingCustomerQueryParamFields = "updated_at"
+	PatchTicketingCustomerQueryParamFieldsName             PatchTicketingCustomerQueryParamFields = "name"
+	PatchTicketingCustomerQueryParamFieldsEmails           PatchTicketingCustomerQueryParamFields = "emails"
+	PatchTicketingCustomerQueryParamFieldsTelephones       PatchTicketingCustomerQueryParamFields = "telephones"
+	PatchTicketingCustomerQueryParamFieldsTags             PatchTicketingCustomerQueryParamFields = "tags"
+	PatchTicketingCustomerQueryParamFieldsMetadata         PatchTicketingCustomerQueryParamFields = "metadata"
+	PatchTicketingCustomerQueryParamFieldsRaw              PatchTicketingCustomerQueryParamFields = "raw"
+	PatchTicketingCustomerQueryParamFieldsUnifiedPersonIds PatchTicketingCustomerQueryParamFields = "__unified_person_ids"
 )
 
 func (e PatchTicketingCustomerQueryParamFields) ToPointer() *PatchTicketingCustomerQueryParamFields {
@@ -49,6 +50,8 @@ func (e *PatchTicketingCustomerQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = PatchTicketingCustomerQueryParamFields(v)
 		return nil
 	default:

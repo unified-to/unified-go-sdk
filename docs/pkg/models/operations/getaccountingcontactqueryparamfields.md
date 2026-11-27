@@ -44,3 +44,4 @@ value := operations.GetAccountingContactQueryParamFieldsID
 | `GetAccountingContactQueryParamFieldsNotes`              | notes                                                    |
 | `GetAccountingContactQueryParamFieldsMetadata`           | metadata                                                 |
 | `GetAccountingContactQueryParamFieldsRaw`                | raw                                                      |
+| `GetAccountingContactQueryParamFieldsUnifiedPersonIds`   | __unified_person_ids                                     |

@@ -38,3 +38,4 @@ custom := shared.Event("custom_value")
 | `EventWebhookUnhealthy`        | WEBHOOK_UNHEALTHY              |
 | `EventWebhookPaused`           | WEBHOOK_PAUSED                 |
 | `EventWebhookUnpaused`         | WEBHOOK_UNPAUSED               |
+| `EventUnifiedPersonMerged`     | UNIFIED_PERSON_MERGED          |

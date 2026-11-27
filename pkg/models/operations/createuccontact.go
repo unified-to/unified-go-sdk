@@ -12,18 +12,19 @@ import (
 type CreateUcContactQueryParamFields string
 
 const (
-	CreateUcContactQueryParamFieldsID         CreateUcContactQueryParamFields = "id"
-	CreateUcContactQueryParamFieldsCreatedAt  CreateUcContactQueryParamFields = "created_at"
-	CreateUcContactQueryParamFieldsUpdatedAt  CreateUcContactQueryParamFields = "updated_at"
-	CreateUcContactQueryParamFieldsName       CreateUcContactQueryParamFields = "name"
-	CreateUcContactQueryParamFieldsFirstName  CreateUcContactQueryParamFields = "first_name"
-	CreateUcContactQueryParamFieldsLastName   CreateUcContactQueryParamFields = "last_name"
-	CreateUcContactQueryParamFieldsTitle      CreateUcContactQueryParamFields = "title"
-	CreateUcContactQueryParamFieldsCompany    CreateUcContactQueryParamFields = "company"
-	CreateUcContactQueryParamFieldsEmails     CreateUcContactQueryParamFields = "emails"
-	CreateUcContactQueryParamFieldsTelephones CreateUcContactQueryParamFields = "telephones"
-	CreateUcContactQueryParamFieldsMetadata   CreateUcContactQueryParamFields = "metadata"
-	CreateUcContactQueryParamFieldsRaw        CreateUcContactQueryParamFields = "raw"
+	CreateUcContactQueryParamFieldsID               CreateUcContactQueryParamFields = "id"
+	CreateUcContactQueryParamFieldsCreatedAt        CreateUcContactQueryParamFields = "created_at"
+	CreateUcContactQueryParamFieldsUpdatedAt        CreateUcContactQueryParamFields = "updated_at"
+	CreateUcContactQueryParamFieldsName             CreateUcContactQueryParamFields = "name"
+	CreateUcContactQueryParamFieldsFirstName        CreateUcContactQueryParamFields = "first_name"
+	CreateUcContactQueryParamFieldsLastName         CreateUcContactQueryParamFields = "last_name"
+	CreateUcContactQueryParamFieldsTitle            CreateUcContactQueryParamFields = "title"
+	CreateUcContactQueryParamFieldsCompany          CreateUcContactQueryParamFields = "company"
+	CreateUcContactQueryParamFieldsEmails           CreateUcContactQueryParamFields = "emails"
+	CreateUcContactQueryParamFieldsTelephones       CreateUcContactQueryParamFields = "telephones"
+	CreateUcContactQueryParamFieldsMetadata         CreateUcContactQueryParamFields = "metadata"
+	CreateUcContactQueryParamFieldsRaw              CreateUcContactQueryParamFields = "raw"
+	CreateUcContactQueryParamFieldsUnifiedPersonIds CreateUcContactQueryParamFields = "__unified_person_ids"
 )
 
 func (e CreateUcContactQueryParamFields) ToPointer() *CreateUcContactQueryParamFields {
@@ -58,6 +59,8 @@ func (e *CreateUcContactQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = CreateUcContactQueryParamFields(v)
 		return nil
 	default:

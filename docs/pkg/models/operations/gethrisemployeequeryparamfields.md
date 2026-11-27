@@ -66,3 +66,4 @@ value := operations.GetHrisEmployeeQueryParamFieldsID
 | `GetHrisEmployeeQueryParamFieldsLeaveEndAt`             | leave_end_at                                            |
 | `GetHrisEmployeeQueryParamFieldsEmploymentStatusReason` | employment_status_reason                                |
 | `GetHrisEmployeeQueryParamFieldsRaw`                    | raw                                                     |
+| `GetHrisEmployeeQueryParamFieldsUnifiedPersonIds`       | __unified_person_ids                                    |

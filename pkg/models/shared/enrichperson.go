@@ -32,6 +32,8 @@ func (e *EnrichPersonGender) IsExact() bool {
 
 // EnrichPerson - A person object from an enrichment integration
 type EnrichPerson struct {
+	// Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+	UnifiedPersonIds []string `json:"__unified_person_ids,omitempty"`
 	// The address of the person
 	Address *PropertyEnrichPersonAddress `json:"address,omitempty"`
 	// The biography description of the person
@@ -92,6 +94,13 @@ func (e *EnrichPerson) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (e *EnrichPerson) GetUnifiedPersonIds() []string {
+	if e == nil {
+		return nil
+	}
+	return e.UnifiedPersonIds
 }
 
 func (e *EnrichPerson) GetAddress() *PropertyEnrichPersonAddress {

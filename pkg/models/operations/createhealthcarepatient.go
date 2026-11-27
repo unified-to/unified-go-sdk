@@ -12,29 +12,30 @@ import (
 type CreateHealthcarePatientQueryParamFields string
 
 const (
-	CreateHealthcarePatientQueryParamFieldsID              CreateHealthcarePatientQueryParamFields = "id"
-	CreateHealthcarePatientQueryParamFieldsCreatedAt       CreateHealthcarePatientQueryParamFields = "created_at"
-	CreateHealthcarePatientQueryParamFieldsUpdatedAt       CreateHealthcarePatientQueryParamFields = "updated_at"
-	CreateHealthcarePatientQueryParamFieldsName            CreateHealthcarePatientQueryParamFields = "name"
-	CreateHealthcarePatientQueryParamFieldsFirstName       CreateHealthcarePatientQueryParamFields = "first_name"
-	CreateHealthcarePatientQueryParamFieldsLastName        CreateHealthcarePatientQueryParamFields = "last_name"
-	CreateHealthcarePatientQueryParamFieldsGender          CreateHealthcarePatientQueryParamFields = "gender"
-	CreateHealthcarePatientQueryParamFieldsBirthdate       CreateHealthcarePatientQueryParamFields = "birthdate"
-	CreateHealthcarePatientQueryParamFieldsIsDeceased      CreateHealthcarePatientQueryParamFields = "is_deceased"
-	CreateHealthcarePatientQueryParamFieldsDeceasedAt      CreateHealthcarePatientQueryParamFields = "deceased_at"
-	CreateHealthcarePatientQueryParamFieldsEmails          CreateHealthcarePatientQueryParamFields = "emails"
-	CreateHealthcarePatientQueryParamFieldsTelephones      CreateHealthcarePatientQueryParamFields = "telephones"
-	CreateHealthcarePatientQueryParamFieldsAddress         CreateHealthcarePatientQueryParamFields = "address"
-	CreateHealthcarePatientQueryParamFieldsLanguage        CreateHealthcarePatientQueryParamFields = "language"
-	CreateHealthcarePatientQueryParamFieldsIdentifiers     CreateHealthcarePatientQueryParamFields = "identifiers"
-	CreateHealthcarePatientQueryParamFieldsPractitionerIds CreateHealthcarePatientQueryParamFields = "practitioner_ids"
-	CreateHealthcarePatientQueryParamFieldsIsActive        CreateHealthcarePatientQueryParamFields = "is_active"
-	CreateHealthcarePatientQueryParamFieldsRaces           CreateHealthcarePatientQueryParamFields = "races"
-	CreateHealthcarePatientQueryParamFieldsEthnicities     CreateHealthcarePatientQueryParamFields = "ethnicities"
-	CreateHealthcarePatientQueryParamFieldsMaritalStatus   CreateHealthcarePatientQueryParamFields = "marital_status"
-	CreateHealthcarePatientQueryParamFieldsContacts        CreateHealthcarePatientQueryParamFields = "contacts"
-	CreateHealthcarePatientQueryParamFieldsMetadata        CreateHealthcarePatientQueryParamFields = "metadata"
-	CreateHealthcarePatientQueryParamFieldsRaw             CreateHealthcarePatientQueryParamFields = "raw"
+	CreateHealthcarePatientQueryParamFieldsID               CreateHealthcarePatientQueryParamFields = "id"
+	CreateHealthcarePatientQueryParamFieldsCreatedAt        CreateHealthcarePatientQueryParamFields = "created_at"
+	CreateHealthcarePatientQueryParamFieldsUpdatedAt        CreateHealthcarePatientQueryParamFields = "updated_at"
+	CreateHealthcarePatientQueryParamFieldsName             CreateHealthcarePatientQueryParamFields = "name"
+	CreateHealthcarePatientQueryParamFieldsFirstName        CreateHealthcarePatientQueryParamFields = "first_name"
+	CreateHealthcarePatientQueryParamFieldsLastName         CreateHealthcarePatientQueryParamFields = "last_name"
+	CreateHealthcarePatientQueryParamFieldsGender           CreateHealthcarePatientQueryParamFields = "gender"
+	CreateHealthcarePatientQueryParamFieldsBirthdate        CreateHealthcarePatientQueryParamFields = "birthdate"
+	CreateHealthcarePatientQueryParamFieldsIsDeceased       CreateHealthcarePatientQueryParamFields = "is_deceased"
+	CreateHealthcarePatientQueryParamFieldsDeceasedAt       CreateHealthcarePatientQueryParamFields = "deceased_at"
+	CreateHealthcarePatientQueryParamFieldsEmails           CreateHealthcarePatientQueryParamFields = "emails"
+	CreateHealthcarePatientQueryParamFieldsTelephones       CreateHealthcarePatientQueryParamFields = "telephones"
+	CreateHealthcarePatientQueryParamFieldsAddress          CreateHealthcarePatientQueryParamFields = "address"
+	CreateHealthcarePatientQueryParamFieldsLanguage         CreateHealthcarePatientQueryParamFields = "language"
+	CreateHealthcarePatientQueryParamFieldsIdentifiers      CreateHealthcarePatientQueryParamFields = "identifiers"
+	CreateHealthcarePatientQueryParamFieldsPractitionerIds  CreateHealthcarePatientQueryParamFields = "practitioner_ids"
+	CreateHealthcarePatientQueryParamFieldsIsActive         CreateHealthcarePatientQueryParamFields = "is_active"
+	CreateHealthcarePatientQueryParamFieldsRaces            CreateHealthcarePatientQueryParamFields = "races"
+	CreateHealthcarePatientQueryParamFieldsEthnicities      CreateHealthcarePatientQueryParamFields = "ethnicities"
+	CreateHealthcarePatientQueryParamFieldsMaritalStatus    CreateHealthcarePatientQueryParamFields = "marital_status"
+	CreateHealthcarePatientQueryParamFieldsContacts         CreateHealthcarePatientQueryParamFields = "contacts"
+	CreateHealthcarePatientQueryParamFieldsMetadata         CreateHealthcarePatientQueryParamFields = "metadata"
+	CreateHealthcarePatientQueryParamFieldsRaw              CreateHealthcarePatientQueryParamFields = "raw"
+	CreateHealthcarePatientQueryParamFieldsUnifiedPersonIds CreateHealthcarePatientQueryParamFields = "__unified_person_ids"
 )
 
 func (e CreateHealthcarePatientQueryParamFields) ToPointer() *CreateHealthcarePatientQueryParamFields {
@@ -91,6 +92,8 @@ func (e *CreateHealthcarePatientQueryParamFields) UnmarshalJSON(data []byte) err
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = CreateHealthcarePatientQueryParamFields(v)
 		return nil
 	default:

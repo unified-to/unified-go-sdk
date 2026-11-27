@@ -12,18 +12,19 @@ import (
 type UpdateUcContactQueryParamFields string
 
 const (
-	UpdateUcContactQueryParamFieldsID         UpdateUcContactQueryParamFields = "id"
-	UpdateUcContactQueryParamFieldsCreatedAt  UpdateUcContactQueryParamFields = "created_at"
-	UpdateUcContactQueryParamFieldsUpdatedAt  UpdateUcContactQueryParamFields = "updated_at"
-	UpdateUcContactQueryParamFieldsName       UpdateUcContactQueryParamFields = "name"
-	UpdateUcContactQueryParamFieldsFirstName  UpdateUcContactQueryParamFields = "first_name"
-	UpdateUcContactQueryParamFieldsLastName   UpdateUcContactQueryParamFields = "last_name"
-	UpdateUcContactQueryParamFieldsTitle      UpdateUcContactQueryParamFields = "title"
-	UpdateUcContactQueryParamFieldsCompany    UpdateUcContactQueryParamFields = "company"
-	UpdateUcContactQueryParamFieldsEmails     UpdateUcContactQueryParamFields = "emails"
-	UpdateUcContactQueryParamFieldsTelephones UpdateUcContactQueryParamFields = "telephones"
-	UpdateUcContactQueryParamFieldsMetadata   UpdateUcContactQueryParamFields = "metadata"
-	UpdateUcContactQueryParamFieldsRaw        UpdateUcContactQueryParamFields = "raw"
+	UpdateUcContactQueryParamFieldsID               UpdateUcContactQueryParamFields = "id"
+	UpdateUcContactQueryParamFieldsCreatedAt        UpdateUcContactQueryParamFields = "created_at"
+	UpdateUcContactQueryParamFieldsUpdatedAt        UpdateUcContactQueryParamFields = "updated_at"
+	UpdateUcContactQueryParamFieldsName             UpdateUcContactQueryParamFields = "name"
+	UpdateUcContactQueryParamFieldsFirstName        UpdateUcContactQueryParamFields = "first_name"
+	UpdateUcContactQueryParamFieldsLastName         UpdateUcContactQueryParamFields = "last_name"
+	UpdateUcContactQueryParamFieldsTitle            UpdateUcContactQueryParamFields = "title"
+	UpdateUcContactQueryParamFieldsCompany          UpdateUcContactQueryParamFields = "company"
+	UpdateUcContactQueryParamFieldsEmails           UpdateUcContactQueryParamFields = "emails"
+	UpdateUcContactQueryParamFieldsTelephones       UpdateUcContactQueryParamFields = "telephones"
+	UpdateUcContactQueryParamFieldsMetadata         UpdateUcContactQueryParamFields = "metadata"
+	UpdateUcContactQueryParamFieldsRaw              UpdateUcContactQueryParamFields = "raw"
+	UpdateUcContactQueryParamFieldsUnifiedPersonIds UpdateUcContactQueryParamFields = "__unified_person_ids"
 )
 
 func (e UpdateUcContactQueryParamFields) ToPointer() *UpdateUcContactQueryParamFields {
@@ -58,6 +59,8 @@ func (e *UpdateUcContactQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = UpdateUcContactQueryParamFields(v)
 		return nil
 	default:

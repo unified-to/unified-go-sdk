@@ -12,28 +12,29 @@ import (
 type ListCrmLeadsQueryParamFields string
 
 const (
-	ListCrmLeadsQueryParamFieldsID            ListCrmLeadsQueryParamFields = "id"
-	ListCrmLeadsQueryParamFieldsCreatedAt     ListCrmLeadsQueryParamFields = "created_at"
-	ListCrmLeadsQueryParamFieldsUpdatedAt     ListCrmLeadsQueryParamFields = "updated_at"
-	ListCrmLeadsQueryParamFieldsName          ListCrmLeadsQueryParamFields = "name"
-	ListCrmLeadsQueryParamFieldsFirstName     ListCrmLeadsQueryParamFields = "first_name"
-	ListCrmLeadsQueryParamFieldsLastName      ListCrmLeadsQueryParamFields = "last_name"
-	ListCrmLeadsQueryParamFieldsUserID        ListCrmLeadsQueryParamFields = "user_id"
-	ListCrmLeadsQueryParamFieldsCreatorUserID ListCrmLeadsQueryParamFields = "creator_user_id"
-	ListCrmLeadsQueryParamFieldsContactID     ListCrmLeadsQueryParamFields = "contact_id"
-	ListCrmLeadsQueryParamFieldsCompanyID     ListCrmLeadsQueryParamFields = "company_id"
-	ListCrmLeadsQueryParamFieldsCompanyName   ListCrmLeadsQueryParamFields = "company_name"
-	ListCrmLeadsQueryParamFieldsIsActive      ListCrmLeadsQueryParamFields = "is_active"
-	ListCrmLeadsQueryParamFieldsAddress       ListCrmLeadsQueryParamFields = "address"
-	ListCrmLeadsQueryParamFieldsEmails        ListCrmLeadsQueryParamFields = "emails"
-	ListCrmLeadsQueryParamFieldsTelephones    ListCrmLeadsQueryParamFields = "telephones"
-	ListCrmLeadsQueryParamFieldsSource        ListCrmLeadsQueryParamFields = "source"
-	ListCrmLeadsQueryParamFieldsStatus        ListCrmLeadsQueryParamFields = "status"
-	ListCrmLeadsQueryParamFieldsTitle         ListCrmLeadsQueryParamFields = "title"
-	ListCrmLeadsQueryParamFieldsLinkUrls      ListCrmLeadsQueryParamFields = "link_urls"
-	ListCrmLeadsQueryParamFieldsMetadata      ListCrmLeadsQueryParamFields = "metadata"
-	ListCrmLeadsQueryParamFieldsVehicleIds    ListCrmLeadsQueryParamFields = "vehicle_ids"
-	ListCrmLeadsQueryParamFieldsRaw           ListCrmLeadsQueryParamFields = "raw"
+	ListCrmLeadsQueryParamFieldsID               ListCrmLeadsQueryParamFields = "id"
+	ListCrmLeadsQueryParamFieldsCreatedAt        ListCrmLeadsQueryParamFields = "created_at"
+	ListCrmLeadsQueryParamFieldsUpdatedAt        ListCrmLeadsQueryParamFields = "updated_at"
+	ListCrmLeadsQueryParamFieldsName             ListCrmLeadsQueryParamFields = "name"
+	ListCrmLeadsQueryParamFieldsFirstName        ListCrmLeadsQueryParamFields = "first_name"
+	ListCrmLeadsQueryParamFieldsLastName         ListCrmLeadsQueryParamFields = "last_name"
+	ListCrmLeadsQueryParamFieldsUserID           ListCrmLeadsQueryParamFields = "user_id"
+	ListCrmLeadsQueryParamFieldsCreatorUserID    ListCrmLeadsQueryParamFields = "creator_user_id"
+	ListCrmLeadsQueryParamFieldsContactID        ListCrmLeadsQueryParamFields = "contact_id"
+	ListCrmLeadsQueryParamFieldsCompanyID        ListCrmLeadsQueryParamFields = "company_id"
+	ListCrmLeadsQueryParamFieldsCompanyName      ListCrmLeadsQueryParamFields = "company_name"
+	ListCrmLeadsQueryParamFieldsIsActive         ListCrmLeadsQueryParamFields = "is_active"
+	ListCrmLeadsQueryParamFieldsAddress          ListCrmLeadsQueryParamFields = "address"
+	ListCrmLeadsQueryParamFieldsEmails           ListCrmLeadsQueryParamFields = "emails"
+	ListCrmLeadsQueryParamFieldsTelephones       ListCrmLeadsQueryParamFields = "telephones"
+	ListCrmLeadsQueryParamFieldsSource           ListCrmLeadsQueryParamFields = "source"
+	ListCrmLeadsQueryParamFieldsStatus           ListCrmLeadsQueryParamFields = "status"
+	ListCrmLeadsQueryParamFieldsTitle            ListCrmLeadsQueryParamFields = "title"
+	ListCrmLeadsQueryParamFieldsLinkUrls         ListCrmLeadsQueryParamFields = "link_urls"
+	ListCrmLeadsQueryParamFieldsMetadata         ListCrmLeadsQueryParamFields = "metadata"
+	ListCrmLeadsQueryParamFieldsVehicleIds       ListCrmLeadsQueryParamFields = "vehicle_ids"
+	ListCrmLeadsQueryParamFieldsRaw              ListCrmLeadsQueryParamFields = "raw"
+	ListCrmLeadsQueryParamFieldsUnifiedPersonIds ListCrmLeadsQueryParamFields = "__unified_person_ids"
 )
 
 func (e ListCrmLeadsQueryParamFields) ToPointer() *ListCrmLeadsQueryParamFields {
@@ -88,6 +89,8 @@ func (e *ListCrmLeadsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "vehicle_ids":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = ListCrmLeadsQueryParamFields(v)
 		return nil
 	default:

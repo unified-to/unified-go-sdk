@@ -40,14 +40,14 @@ func main() {
     res, err := s.Commit.CreateRepoCommit(ctx, operations.CreateRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
             CreatedAt: types.MustNewTimeFromString("2020-07-12T16:20:42.520Z"),
-            ID: unifiedgosdk.Pointer("70cc3f32-9bc2-4419-b42d-c7400efb2ae3"),
+            ID: unifiedgosdk.Pointer("87d459cd-c1b9-491b-bc65-64c8803df1c7"),
             LinesAdded: unifiedgosdk.Pointer[float64](313.0),
             LinesChanged: unifiedgosdk.Pointer[float64](659.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](482.0),
             Message: unifiedgosdk.Pointer("input bluetooth circuit"),
             Metadata: []shared.RepoMetadata{},
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2023-06-16T19:11:30.178Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-17T06:58:30.049Z"),
         },
         ConnectionID: "<id>",
     })
@@ -216,14 +216,14 @@ func main() {
     res, err := s.Commit.PatchRepoCommit(ctx, operations.PatchRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
             CreatedAt: types.MustNewTimeFromString("2020-07-12T16:20:42.520Z"),
-            ID: unifiedgosdk.Pointer("f8117609-0d6a-4adb-b2b0-52524c5f8954"),
+            ID: unifiedgosdk.Pointer("8b91b424-bfc3-489f-b084-d2b3ec78a6f1"),
             LinesAdded: unifiedgosdk.Pointer[float64](313.0),
             LinesChanged: unifiedgosdk.Pointer[float64](659.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](482.0),
             Message: unifiedgosdk.Pointer("input bluetooth circuit"),
             Metadata: []shared.RepoMetadata{},
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2023-06-16T19:11:30.185Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-17T06:58:30.054Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -339,14 +339,14 @@ func main() {
     res, err := s.Commit.UpdateRepoCommit(ctx, operations.UpdateRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
             CreatedAt: types.MustNewTimeFromString("2020-07-12T16:20:42.520Z"),
-            ID: unifiedgosdk.Pointer("f8117609-0d6a-4adb-b2b0-52524c5f8954"),
+            ID: unifiedgosdk.Pointer("8b91b424-bfc3-489f-b084-d2b3ec78a6f1"),
             LinesAdded: unifiedgosdk.Pointer[float64](313.0),
             LinesChanged: unifiedgosdk.Pointer[float64](659.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](482.0),
             Message: unifiedgosdk.Pointer("input bluetooth circuit"),
             Metadata: []shared.RepoMetadata{},
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2023-06-16T19:11:30.185Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-17T06:58:30.054Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -12,25 +12,26 @@ import (
 type PatchCrmContactQueryParamFields string
 
 const (
-	PatchCrmContactQueryParamFieldsID         PatchCrmContactQueryParamFields = "id"
-	PatchCrmContactQueryParamFieldsCreatedAt  PatchCrmContactQueryParamFields = "created_at"
-	PatchCrmContactQueryParamFieldsUpdatedAt  PatchCrmContactQueryParamFields = "updated_at"
-	PatchCrmContactQueryParamFieldsName       PatchCrmContactQueryParamFields = "name"
-	PatchCrmContactQueryParamFieldsFirstName  PatchCrmContactQueryParamFields = "first_name"
-	PatchCrmContactQueryParamFieldsLastName   PatchCrmContactQueryParamFields = "last_name"
-	PatchCrmContactQueryParamFieldsTitle      PatchCrmContactQueryParamFields = "title"
-	PatchCrmContactQueryParamFieldsCompany    PatchCrmContactQueryParamFields = "company"
-	PatchCrmContactQueryParamFieldsEmails     PatchCrmContactQueryParamFields = "emails"
-	PatchCrmContactQueryParamFieldsTelephones PatchCrmContactQueryParamFields = "telephones"
-	PatchCrmContactQueryParamFieldsDealIds    PatchCrmContactQueryParamFields = "deal_ids"
-	PatchCrmContactQueryParamFieldsCompanyIds PatchCrmContactQueryParamFields = "company_ids"
-	PatchCrmContactQueryParamFieldsAddress    PatchCrmContactQueryParamFields = "address"
-	PatchCrmContactQueryParamFieldsUserID     PatchCrmContactQueryParamFields = "user_id"
-	PatchCrmContactQueryParamFieldsLinkUrls   PatchCrmContactQueryParamFields = "link_urls"
-	PatchCrmContactQueryParamFieldsMetadata   PatchCrmContactQueryParamFields = "metadata"
-	PatchCrmContactQueryParamFieldsDepartment PatchCrmContactQueryParamFields = "department"
-	PatchCrmContactQueryParamFieldsImageURL   PatchCrmContactQueryParamFields = "image_url"
-	PatchCrmContactQueryParamFieldsRaw        PatchCrmContactQueryParamFields = "raw"
+	PatchCrmContactQueryParamFieldsID               PatchCrmContactQueryParamFields = "id"
+	PatchCrmContactQueryParamFieldsCreatedAt        PatchCrmContactQueryParamFields = "created_at"
+	PatchCrmContactQueryParamFieldsUpdatedAt        PatchCrmContactQueryParamFields = "updated_at"
+	PatchCrmContactQueryParamFieldsName             PatchCrmContactQueryParamFields = "name"
+	PatchCrmContactQueryParamFieldsFirstName        PatchCrmContactQueryParamFields = "first_name"
+	PatchCrmContactQueryParamFieldsLastName         PatchCrmContactQueryParamFields = "last_name"
+	PatchCrmContactQueryParamFieldsTitle            PatchCrmContactQueryParamFields = "title"
+	PatchCrmContactQueryParamFieldsCompany          PatchCrmContactQueryParamFields = "company"
+	PatchCrmContactQueryParamFieldsEmails           PatchCrmContactQueryParamFields = "emails"
+	PatchCrmContactQueryParamFieldsTelephones       PatchCrmContactQueryParamFields = "telephones"
+	PatchCrmContactQueryParamFieldsDealIds          PatchCrmContactQueryParamFields = "deal_ids"
+	PatchCrmContactQueryParamFieldsCompanyIds       PatchCrmContactQueryParamFields = "company_ids"
+	PatchCrmContactQueryParamFieldsAddress          PatchCrmContactQueryParamFields = "address"
+	PatchCrmContactQueryParamFieldsUserID           PatchCrmContactQueryParamFields = "user_id"
+	PatchCrmContactQueryParamFieldsLinkUrls         PatchCrmContactQueryParamFields = "link_urls"
+	PatchCrmContactQueryParamFieldsMetadata         PatchCrmContactQueryParamFields = "metadata"
+	PatchCrmContactQueryParamFieldsDepartment       PatchCrmContactQueryParamFields = "department"
+	PatchCrmContactQueryParamFieldsImageURL         PatchCrmContactQueryParamFields = "image_url"
+	PatchCrmContactQueryParamFieldsRaw              PatchCrmContactQueryParamFields = "raw"
+	PatchCrmContactQueryParamFieldsUnifiedPersonIds PatchCrmContactQueryParamFields = "__unified_person_ids"
 )
 
 func (e PatchCrmContactQueryParamFields) ToPointer() *PatchCrmContactQueryParamFields {
@@ -79,6 +80,8 @@ func (e *PatchCrmContactQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "image_url":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = PatchCrmContactQueryParamFields(v)
 		return nil
 	default:

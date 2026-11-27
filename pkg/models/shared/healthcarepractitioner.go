@@ -33,6 +33,8 @@ func (e *HealthcarePractitionerGender) IsExact() bool {
 }
 
 type HealthcarePractitioner struct {
+	// Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+	UnifiedPersonIds []string `json:"__unified_person_ids,omitempty"`
 	// Work address of the practitioner
 	Address *PropertyHealthcarePractitionerAddress `json:"address,omitempty"`
 	// When the practitioner record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -84,6 +86,13 @@ func (h *HealthcarePractitioner) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (h *HealthcarePractitioner) GetUnifiedPersonIds() []string {
+	if h == nil {
+		return nil
+	}
+	return h.UnifiedPersonIds
 }
 
 func (h *HealthcarePractitioner) GetAddress() *PropertyHealthcarePractitionerAddress {

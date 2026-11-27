@@ -12,29 +12,30 @@ import (
 type PatchHealthcarePatientQueryParamFields string
 
 const (
-	PatchHealthcarePatientQueryParamFieldsID              PatchHealthcarePatientQueryParamFields = "id"
-	PatchHealthcarePatientQueryParamFieldsCreatedAt       PatchHealthcarePatientQueryParamFields = "created_at"
-	PatchHealthcarePatientQueryParamFieldsUpdatedAt       PatchHealthcarePatientQueryParamFields = "updated_at"
-	PatchHealthcarePatientQueryParamFieldsName            PatchHealthcarePatientQueryParamFields = "name"
-	PatchHealthcarePatientQueryParamFieldsFirstName       PatchHealthcarePatientQueryParamFields = "first_name"
-	PatchHealthcarePatientQueryParamFieldsLastName        PatchHealthcarePatientQueryParamFields = "last_name"
-	PatchHealthcarePatientQueryParamFieldsGender          PatchHealthcarePatientQueryParamFields = "gender"
-	PatchHealthcarePatientQueryParamFieldsBirthdate       PatchHealthcarePatientQueryParamFields = "birthdate"
-	PatchHealthcarePatientQueryParamFieldsIsDeceased      PatchHealthcarePatientQueryParamFields = "is_deceased"
-	PatchHealthcarePatientQueryParamFieldsDeceasedAt      PatchHealthcarePatientQueryParamFields = "deceased_at"
-	PatchHealthcarePatientQueryParamFieldsEmails          PatchHealthcarePatientQueryParamFields = "emails"
-	PatchHealthcarePatientQueryParamFieldsTelephones      PatchHealthcarePatientQueryParamFields = "telephones"
-	PatchHealthcarePatientQueryParamFieldsAddress         PatchHealthcarePatientQueryParamFields = "address"
-	PatchHealthcarePatientQueryParamFieldsLanguage        PatchHealthcarePatientQueryParamFields = "language"
-	PatchHealthcarePatientQueryParamFieldsIdentifiers     PatchHealthcarePatientQueryParamFields = "identifiers"
-	PatchHealthcarePatientQueryParamFieldsPractitionerIds PatchHealthcarePatientQueryParamFields = "practitioner_ids"
-	PatchHealthcarePatientQueryParamFieldsIsActive        PatchHealthcarePatientQueryParamFields = "is_active"
-	PatchHealthcarePatientQueryParamFieldsRaces           PatchHealthcarePatientQueryParamFields = "races"
-	PatchHealthcarePatientQueryParamFieldsEthnicities     PatchHealthcarePatientQueryParamFields = "ethnicities"
-	PatchHealthcarePatientQueryParamFieldsMaritalStatus   PatchHealthcarePatientQueryParamFields = "marital_status"
-	PatchHealthcarePatientQueryParamFieldsContacts        PatchHealthcarePatientQueryParamFields = "contacts"
-	PatchHealthcarePatientQueryParamFieldsMetadata        PatchHealthcarePatientQueryParamFields = "metadata"
-	PatchHealthcarePatientQueryParamFieldsRaw             PatchHealthcarePatientQueryParamFields = "raw"
+	PatchHealthcarePatientQueryParamFieldsID               PatchHealthcarePatientQueryParamFields = "id"
+	PatchHealthcarePatientQueryParamFieldsCreatedAt        PatchHealthcarePatientQueryParamFields = "created_at"
+	PatchHealthcarePatientQueryParamFieldsUpdatedAt        PatchHealthcarePatientQueryParamFields = "updated_at"
+	PatchHealthcarePatientQueryParamFieldsName             PatchHealthcarePatientQueryParamFields = "name"
+	PatchHealthcarePatientQueryParamFieldsFirstName        PatchHealthcarePatientQueryParamFields = "first_name"
+	PatchHealthcarePatientQueryParamFieldsLastName         PatchHealthcarePatientQueryParamFields = "last_name"
+	PatchHealthcarePatientQueryParamFieldsGender           PatchHealthcarePatientQueryParamFields = "gender"
+	PatchHealthcarePatientQueryParamFieldsBirthdate        PatchHealthcarePatientQueryParamFields = "birthdate"
+	PatchHealthcarePatientQueryParamFieldsIsDeceased       PatchHealthcarePatientQueryParamFields = "is_deceased"
+	PatchHealthcarePatientQueryParamFieldsDeceasedAt       PatchHealthcarePatientQueryParamFields = "deceased_at"
+	PatchHealthcarePatientQueryParamFieldsEmails           PatchHealthcarePatientQueryParamFields = "emails"
+	PatchHealthcarePatientQueryParamFieldsTelephones       PatchHealthcarePatientQueryParamFields = "telephones"
+	PatchHealthcarePatientQueryParamFieldsAddress          PatchHealthcarePatientQueryParamFields = "address"
+	PatchHealthcarePatientQueryParamFieldsLanguage         PatchHealthcarePatientQueryParamFields = "language"
+	PatchHealthcarePatientQueryParamFieldsIdentifiers      PatchHealthcarePatientQueryParamFields = "identifiers"
+	PatchHealthcarePatientQueryParamFieldsPractitionerIds  PatchHealthcarePatientQueryParamFields = "practitioner_ids"
+	PatchHealthcarePatientQueryParamFieldsIsActive         PatchHealthcarePatientQueryParamFields = "is_active"
+	PatchHealthcarePatientQueryParamFieldsRaces            PatchHealthcarePatientQueryParamFields = "races"
+	PatchHealthcarePatientQueryParamFieldsEthnicities      PatchHealthcarePatientQueryParamFields = "ethnicities"
+	PatchHealthcarePatientQueryParamFieldsMaritalStatus    PatchHealthcarePatientQueryParamFields = "marital_status"
+	PatchHealthcarePatientQueryParamFieldsContacts         PatchHealthcarePatientQueryParamFields = "contacts"
+	PatchHealthcarePatientQueryParamFieldsMetadata         PatchHealthcarePatientQueryParamFields = "metadata"
+	PatchHealthcarePatientQueryParamFieldsRaw              PatchHealthcarePatientQueryParamFields = "raw"
+	PatchHealthcarePatientQueryParamFieldsUnifiedPersonIds PatchHealthcarePatientQueryParamFields = "__unified_person_ids"
 )
 
 func (e PatchHealthcarePatientQueryParamFields) ToPointer() *PatchHealthcarePatientQueryParamFields {
@@ -91,6 +92,8 @@ func (e *PatchHealthcarePatientQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = PatchHealthcarePatientQueryParamFields(v)
 		return nil
 	default:

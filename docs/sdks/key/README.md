@@ -40,11 +40,11 @@ func main() {
     res, err := s.Key.CreateComputeKey(ctx, operations.CreateComputeKeyRequest{
         ComputeKey: shared.ComputeKey{
             CreatedAt: types.MustNewTimeFromString("2023-08-19T14:31:46.492Z"),
-            ID: unifiedgosdk.Pointer("2d1825a2-72ea-414d-834d-17dfab042554"),
+            ID: unifiedgosdk.Pointer("bd9706ff-aa83-4930-8bdc-913e7e76ea9c"),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("huels-secret"),
             Type: shared.ComputeKeyTypeSecret.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-10-19T19:57:27.995Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-20T05:07:58.988Z"),
         },
         ConnectionID: "<id>",
     })
@@ -213,11 +213,11 @@ func main() {
     res, err := s.Key.PatchComputeKey(ctx, operations.PatchComputeKeyRequest{
         ComputeKey: shared.ComputeKey{
             CreatedAt: types.MustNewTimeFromString("2023-08-19T14:31:46.492Z"),
-            ID: unifiedgosdk.Pointer("1495e344-ad38-4a26-b6c9-3f7913db260e"),
+            ID: unifiedgosdk.Pointer("02260c85-2888-4387-aad5-4f6d53998bdf"),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("huels-secret"),
             Type: shared.ComputeKeyTypeSecret.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-10-19T19:57:28.001Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-20T05:07:58.993Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -333,11 +333,11 @@ func main() {
     res, err := s.Key.UpdateComputeKey(ctx, operations.UpdateComputeKeyRequest{
         ComputeKey: shared.ComputeKey{
             CreatedAt: types.MustNewTimeFromString("2023-08-19T14:31:46.492Z"),
-            ID: unifiedgosdk.Pointer("1495e344-ad38-4a26-b6c9-3f7913db260e"),
+            ID: unifiedgosdk.Pointer("02260c85-2888-4387-aad5-4f6d53998bdf"),
             Metadata: []shared.ComputeMetadata{},
             Name: unifiedgosdk.Pointer("huels-secret"),
             Type: shared.ComputeKeyTypeSecret.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-10-19T19:57:28.001Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-20T05:07:58.993Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

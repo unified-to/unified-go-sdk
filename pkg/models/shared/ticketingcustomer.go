@@ -8,6 +8,8 @@ import (
 )
 
 type TicketingCustomer struct {
+	// Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+	UnifiedPersonIds []string `json:"__unified_person_ids,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt  *time.Time           `json:"created_at,omitempty"`
 	Emails     []TicketingEmail     `json:"emails,omitempty"`
@@ -30,6 +32,13 @@ func (t *TicketingCustomer) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (t *TicketingCustomer) GetUnifiedPersonIds() []string {
+	if t == nil {
+		return nil
+	}
+	return t.UnifiedPersonIds
 }
 
 func (t *TicketingCustomer) GetCreatedAt() *time.Time {

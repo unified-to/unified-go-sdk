@@ -12,28 +12,29 @@ import (
 type CreateCrmLeadQueryParamFields string
 
 const (
-	CreateCrmLeadQueryParamFieldsID            CreateCrmLeadQueryParamFields = "id"
-	CreateCrmLeadQueryParamFieldsCreatedAt     CreateCrmLeadQueryParamFields = "created_at"
-	CreateCrmLeadQueryParamFieldsUpdatedAt     CreateCrmLeadQueryParamFields = "updated_at"
-	CreateCrmLeadQueryParamFieldsName          CreateCrmLeadQueryParamFields = "name"
-	CreateCrmLeadQueryParamFieldsFirstName     CreateCrmLeadQueryParamFields = "first_name"
-	CreateCrmLeadQueryParamFieldsLastName      CreateCrmLeadQueryParamFields = "last_name"
-	CreateCrmLeadQueryParamFieldsUserID        CreateCrmLeadQueryParamFields = "user_id"
-	CreateCrmLeadQueryParamFieldsCreatorUserID CreateCrmLeadQueryParamFields = "creator_user_id"
-	CreateCrmLeadQueryParamFieldsContactID     CreateCrmLeadQueryParamFields = "contact_id"
-	CreateCrmLeadQueryParamFieldsCompanyID     CreateCrmLeadQueryParamFields = "company_id"
-	CreateCrmLeadQueryParamFieldsCompanyName   CreateCrmLeadQueryParamFields = "company_name"
-	CreateCrmLeadQueryParamFieldsIsActive      CreateCrmLeadQueryParamFields = "is_active"
-	CreateCrmLeadQueryParamFieldsAddress       CreateCrmLeadQueryParamFields = "address"
-	CreateCrmLeadQueryParamFieldsEmails        CreateCrmLeadQueryParamFields = "emails"
-	CreateCrmLeadQueryParamFieldsTelephones    CreateCrmLeadQueryParamFields = "telephones"
-	CreateCrmLeadQueryParamFieldsSource        CreateCrmLeadQueryParamFields = "source"
-	CreateCrmLeadQueryParamFieldsStatus        CreateCrmLeadQueryParamFields = "status"
-	CreateCrmLeadQueryParamFieldsTitle         CreateCrmLeadQueryParamFields = "title"
-	CreateCrmLeadQueryParamFieldsLinkUrls      CreateCrmLeadQueryParamFields = "link_urls"
-	CreateCrmLeadQueryParamFieldsMetadata      CreateCrmLeadQueryParamFields = "metadata"
-	CreateCrmLeadQueryParamFieldsVehicleIds    CreateCrmLeadQueryParamFields = "vehicle_ids"
-	CreateCrmLeadQueryParamFieldsRaw           CreateCrmLeadQueryParamFields = "raw"
+	CreateCrmLeadQueryParamFieldsID               CreateCrmLeadQueryParamFields = "id"
+	CreateCrmLeadQueryParamFieldsCreatedAt        CreateCrmLeadQueryParamFields = "created_at"
+	CreateCrmLeadQueryParamFieldsUpdatedAt        CreateCrmLeadQueryParamFields = "updated_at"
+	CreateCrmLeadQueryParamFieldsName             CreateCrmLeadQueryParamFields = "name"
+	CreateCrmLeadQueryParamFieldsFirstName        CreateCrmLeadQueryParamFields = "first_name"
+	CreateCrmLeadQueryParamFieldsLastName         CreateCrmLeadQueryParamFields = "last_name"
+	CreateCrmLeadQueryParamFieldsUserID           CreateCrmLeadQueryParamFields = "user_id"
+	CreateCrmLeadQueryParamFieldsCreatorUserID    CreateCrmLeadQueryParamFields = "creator_user_id"
+	CreateCrmLeadQueryParamFieldsContactID        CreateCrmLeadQueryParamFields = "contact_id"
+	CreateCrmLeadQueryParamFieldsCompanyID        CreateCrmLeadQueryParamFields = "company_id"
+	CreateCrmLeadQueryParamFieldsCompanyName      CreateCrmLeadQueryParamFields = "company_name"
+	CreateCrmLeadQueryParamFieldsIsActive         CreateCrmLeadQueryParamFields = "is_active"
+	CreateCrmLeadQueryParamFieldsAddress          CreateCrmLeadQueryParamFields = "address"
+	CreateCrmLeadQueryParamFieldsEmails           CreateCrmLeadQueryParamFields = "emails"
+	CreateCrmLeadQueryParamFieldsTelephones       CreateCrmLeadQueryParamFields = "telephones"
+	CreateCrmLeadQueryParamFieldsSource           CreateCrmLeadQueryParamFields = "source"
+	CreateCrmLeadQueryParamFieldsStatus           CreateCrmLeadQueryParamFields = "status"
+	CreateCrmLeadQueryParamFieldsTitle            CreateCrmLeadQueryParamFields = "title"
+	CreateCrmLeadQueryParamFieldsLinkUrls         CreateCrmLeadQueryParamFields = "link_urls"
+	CreateCrmLeadQueryParamFieldsMetadata         CreateCrmLeadQueryParamFields = "metadata"
+	CreateCrmLeadQueryParamFieldsVehicleIds       CreateCrmLeadQueryParamFields = "vehicle_ids"
+	CreateCrmLeadQueryParamFieldsRaw              CreateCrmLeadQueryParamFields = "raw"
+	CreateCrmLeadQueryParamFieldsUnifiedPersonIds CreateCrmLeadQueryParamFields = "__unified_person_ids"
 )
 
 func (e CreateCrmLeadQueryParamFields) ToPointer() *CreateCrmLeadQueryParamFields {
@@ -88,6 +89,8 @@ func (e *CreateCrmLeadQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "vehicle_ids":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = CreateCrmLeadQueryParamFields(v)
 		return nil
 	default:

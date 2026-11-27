@@ -189,8 +189,10 @@ func (e *PayFrequency) IsExact() bool {
 }
 
 type HrisEmployee struct {
-	Address *PropertyHrisEmployeeAddress `json:"address,omitempty"`
-	Bio     *string                      `json:"bio,omitempty"`
+	// Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+	UnifiedPersonIds []string                     `json:"__unified_person_ids,omitempty"`
+	Address          *PropertyHrisEmployeeAddress `json:"address,omitempty"`
+	Bio              *string                      `json:"bio,omitempty"`
 	// (reference to HrisCompany)
 	CompanyID    *string            `json:"company_id,omitempty"`
 	Compensation []HrisCompensation `json:"compensation,omitempty"`
@@ -278,6 +280,13 @@ func (h *HrisEmployee) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (h *HrisEmployee) GetUnifiedPersonIds() []string {
+	if h == nil {
+		return nil
+	}
+	return h.UnifiedPersonIds
 }
 
 func (h *HrisEmployee) GetAddress() *PropertyHrisEmployeeAddress {

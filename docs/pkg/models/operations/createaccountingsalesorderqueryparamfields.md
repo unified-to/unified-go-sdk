@@ -49,4 +49,5 @@ value := operations.CreateAccountingSalesorderQueryParamFieldsID
 | `CreateAccountingSalesorderQueryParamFieldsPayments`            | payments                                                        |
 | `CreateAccountingSalesorderQueryParamFieldsTableID`             | table_id                                                        |
 | `CreateAccountingSalesorderQueryParamFieldsPaidAmount`          | paid_amount                                                     |
+| `CreateAccountingSalesorderQueryParamFieldsBalanceAmount`       | balance_amount                                                  |
 | `CreateAccountingSalesorderQueryParamFieldsRaw`                 | raw                                                             |

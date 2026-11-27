@@ -12,28 +12,29 @@ import (
 type GetCrmLeadQueryParamFields string
 
 const (
-	GetCrmLeadQueryParamFieldsID            GetCrmLeadQueryParamFields = "id"
-	GetCrmLeadQueryParamFieldsCreatedAt     GetCrmLeadQueryParamFields = "created_at"
-	GetCrmLeadQueryParamFieldsUpdatedAt     GetCrmLeadQueryParamFields = "updated_at"
-	GetCrmLeadQueryParamFieldsName          GetCrmLeadQueryParamFields = "name"
-	GetCrmLeadQueryParamFieldsFirstName     GetCrmLeadQueryParamFields = "first_name"
-	GetCrmLeadQueryParamFieldsLastName      GetCrmLeadQueryParamFields = "last_name"
-	GetCrmLeadQueryParamFieldsUserID        GetCrmLeadQueryParamFields = "user_id"
-	GetCrmLeadQueryParamFieldsCreatorUserID GetCrmLeadQueryParamFields = "creator_user_id"
-	GetCrmLeadQueryParamFieldsContactID     GetCrmLeadQueryParamFields = "contact_id"
-	GetCrmLeadQueryParamFieldsCompanyID     GetCrmLeadQueryParamFields = "company_id"
-	GetCrmLeadQueryParamFieldsCompanyName   GetCrmLeadQueryParamFields = "company_name"
-	GetCrmLeadQueryParamFieldsIsActive      GetCrmLeadQueryParamFields = "is_active"
-	GetCrmLeadQueryParamFieldsAddress       GetCrmLeadQueryParamFields = "address"
-	GetCrmLeadQueryParamFieldsEmails        GetCrmLeadQueryParamFields = "emails"
-	GetCrmLeadQueryParamFieldsTelephones    GetCrmLeadQueryParamFields = "telephones"
-	GetCrmLeadQueryParamFieldsSource        GetCrmLeadQueryParamFields = "source"
-	GetCrmLeadQueryParamFieldsStatus        GetCrmLeadQueryParamFields = "status"
-	GetCrmLeadQueryParamFieldsTitle         GetCrmLeadQueryParamFields = "title"
-	GetCrmLeadQueryParamFieldsLinkUrls      GetCrmLeadQueryParamFields = "link_urls"
-	GetCrmLeadQueryParamFieldsMetadata      GetCrmLeadQueryParamFields = "metadata"
-	GetCrmLeadQueryParamFieldsVehicleIds    GetCrmLeadQueryParamFields = "vehicle_ids"
-	GetCrmLeadQueryParamFieldsRaw           GetCrmLeadQueryParamFields = "raw"
+	GetCrmLeadQueryParamFieldsID               GetCrmLeadQueryParamFields = "id"
+	GetCrmLeadQueryParamFieldsCreatedAt        GetCrmLeadQueryParamFields = "created_at"
+	GetCrmLeadQueryParamFieldsUpdatedAt        GetCrmLeadQueryParamFields = "updated_at"
+	GetCrmLeadQueryParamFieldsName             GetCrmLeadQueryParamFields = "name"
+	GetCrmLeadQueryParamFieldsFirstName        GetCrmLeadQueryParamFields = "first_name"
+	GetCrmLeadQueryParamFieldsLastName         GetCrmLeadQueryParamFields = "last_name"
+	GetCrmLeadQueryParamFieldsUserID           GetCrmLeadQueryParamFields = "user_id"
+	GetCrmLeadQueryParamFieldsCreatorUserID    GetCrmLeadQueryParamFields = "creator_user_id"
+	GetCrmLeadQueryParamFieldsContactID        GetCrmLeadQueryParamFields = "contact_id"
+	GetCrmLeadQueryParamFieldsCompanyID        GetCrmLeadQueryParamFields = "company_id"
+	GetCrmLeadQueryParamFieldsCompanyName      GetCrmLeadQueryParamFields = "company_name"
+	GetCrmLeadQueryParamFieldsIsActive         GetCrmLeadQueryParamFields = "is_active"
+	GetCrmLeadQueryParamFieldsAddress          GetCrmLeadQueryParamFields = "address"
+	GetCrmLeadQueryParamFieldsEmails           GetCrmLeadQueryParamFields = "emails"
+	GetCrmLeadQueryParamFieldsTelephones       GetCrmLeadQueryParamFields = "telephones"
+	GetCrmLeadQueryParamFieldsSource           GetCrmLeadQueryParamFields = "source"
+	GetCrmLeadQueryParamFieldsStatus           GetCrmLeadQueryParamFields = "status"
+	GetCrmLeadQueryParamFieldsTitle            GetCrmLeadQueryParamFields = "title"
+	GetCrmLeadQueryParamFieldsLinkUrls         GetCrmLeadQueryParamFields = "link_urls"
+	GetCrmLeadQueryParamFieldsMetadata         GetCrmLeadQueryParamFields = "metadata"
+	GetCrmLeadQueryParamFieldsVehicleIds       GetCrmLeadQueryParamFields = "vehicle_ids"
+	GetCrmLeadQueryParamFieldsRaw              GetCrmLeadQueryParamFields = "raw"
+	GetCrmLeadQueryParamFieldsUnifiedPersonIds GetCrmLeadQueryParamFields = "__unified_person_ids"
 )
 
 func (e GetCrmLeadQueryParamFields) ToPointer() *GetCrmLeadQueryParamFields {
@@ -88,6 +89,8 @@ func (e *GetCrmLeadQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "vehicle_ids":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = GetCrmLeadQueryParamFields(v)
 		return nil
 	default:

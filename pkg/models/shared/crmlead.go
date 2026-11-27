@@ -8,7 +8,9 @@ import (
 )
 
 type CrmLead struct {
-	Address *PropertyCrmLeadAddress `json:"address,omitempty"`
+	// Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+	UnifiedPersonIds []string                `json:"__unified_person_ids,omitempty"`
+	Address          *PropertyCrmLeadAddress `json:"address,omitempty"`
 	// (reference to CrmCompany)
 	CompanyID *string `json:"company_id,omitempty"`
 	// The name of the company the lead works for
@@ -52,6 +54,13 @@ func (c *CrmLead) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (c *CrmLead) GetUnifiedPersonIds() []string {
+	if c == nil {
+		return nil
+	}
+	return c.UnifiedPersonIds
 }
 
 func (c *CrmLead) GetAddress() *PropertyCrmLeadAddress {

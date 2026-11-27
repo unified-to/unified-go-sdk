@@ -34,6 +34,8 @@ func (e *MarketingMemberStatus) IsExact() bool {
 
 // MarketingMember - A member represents a person
 type MarketingMember struct {
+	// Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+	UnifiedPersonIds []string `json:"__unified_person_ids,omitempty"`
 	// The name of the company/organization the member belongs to
 	Company *string `json:"company,omitempty"`
 	// The date that this member object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -67,6 +69,13 @@ func (m *MarketingMember) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (m *MarketingMember) GetUnifiedPersonIds() []string {
+	if m == nil {
+		return nil
+	}
+	return m.UnifiedPersonIds
 }
 
 func (m *MarketingMember) GetCompany() *string {

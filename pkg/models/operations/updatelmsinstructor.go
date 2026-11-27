@@ -12,18 +12,19 @@ import (
 type UpdateLmsInstructorQueryParamFields string
 
 const (
-	UpdateLmsInstructorQueryParamFieldsID         UpdateLmsInstructorQueryParamFields = "id"
-	UpdateLmsInstructorQueryParamFieldsCreatedAt  UpdateLmsInstructorQueryParamFields = "created_at"
-	UpdateLmsInstructorQueryParamFieldsUpdatedAt  UpdateLmsInstructorQueryParamFields = "updated_at"
-	UpdateLmsInstructorQueryParamFieldsName       UpdateLmsInstructorQueryParamFields = "name"
-	UpdateLmsInstructorQueryParamFieldsFirstName  UpdateLmsInstructorQueryParamFields = "first_name"
-	UpdateLmsInstructorQueryParamFieldsLastName   UpdateLmsInstructorQueryParamFields = "last_name"
-	UpdateLmsInstructorQueryParamFieldsEmails     UpdateLmsInstructorQueryParamFields = "emails"
-	UpdateLmsInstructorQueryParamFieldsTitle      UpdateLmsInstructorQueryParamFields = "title"
-	UpdateLmsInstructorQueryParamFieldsTelephones UpdateLmsInstructorQueryParamFields = "telephones"
-	UpdateLmsInstructorQueryParamFieldsImageURL   UpdateLmsInstructorQueryParamFields = "image_url"
-	UpdateLmsInstructorQueryParamFieldsMetadata   UpdateLmsInstructorQueryParamFields = "metadata"
-	UpdateLmsInstructorQueryParamFieldsRaw        UpdateLmsInstructorQueryParamFields = "raw"
+	UpdateLmsInstructorQueryParamFieldsID               UpdateLmsInstructorQueryParamFields = "id"
+	UpdateLmsInstructorQueryParamFieldsCreatedAt        UpdateLmsInstructorQueryParamFields = "created_at"
+	UpdateLmsInstructorQueryParamFieldsUpdatedAt        UpdateLmsInstructorQueryParamFields = "updated_at"
+	UpdateLmsInstructorQueryParamFieldsName             UpdateLmsInstructorQueryParamFields = "name"
+	UpdateLmsInstructorQueryParamFieldsFirstName        UpdateLmsInstructorQueryParamFields = "first_name"
+	UpdateLmsInstructorQueryParamFieldsLastName         UpdateLmsInstructorQueryParamFields = "last_name"
+	UpdateLmsInstructorQueryParamFieldsEmails           UpdateLmsInstructorQueryParamFields = "emails"
+	UpdateLmsInstructorQueryParamFieldsTitle            UpdateLmsInstructorQueryParamFields = "title"
+	UpdateLmsInstructorQueryParamFieldsTelephones       UpdateLmsInstructorQueryParamFields = "telephones"
+	UpdateLmsInstructorQueryParamFieldsImageURL         UpdateLmsInstructorQueryParamFields = "image_url"
+	UpdateLmsInstructorQueryParamFieldsMetadata         UpdateLmsInstructorQueryParamFields = "metadata"
+	UpdateLmsInstructorQueryParamFieldsRaw              UpdateLmsInstructorQueryParamFields = "raw"
+	UpdateLmsInstructorQueryParamFieldsUnifiedPersonIds UpdateLmsInstructorQueryParamFields = "__unified_person_ids"
 )
 
 func (e UpdateLmsInstructorQueryParamFields) ToPointer() *UpdateLmsInstructorQueryParamFields {
@@ -58,6 +59,8 @@ func (e *UpdateLmsInstructorQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = UpdateLmsInstructorQueryParamFields(v)
 		return nil
 	default:

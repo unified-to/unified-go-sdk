@@ -13,14 +13,15 @@ value := operations.PatchTicketingCustomerQueryParamFieldsID
 
 ## Values
 
-| Name                                               | Value                                              |
-| -------------------------------------------------- | -------------------------------------------------- |
-| `PatchTicketingCustomerQueryParamFieldsID`         | id                                                 |
-| `PatchTicketingCustomerQueryParamFieldsCreatedAt`  | created_at                                         |
-| `PatchTicketingCustomerQueryParamFieldsUpdatedAt`  | updated_at                                         |
-| `PatchTicketingCustomerQueryParamFieldsName`       | name                                               |
-| `PatchTicketingCustomerQueryParamFieldsEmails`     | emails                                             |
-| `PatchTicketingCustomerQueryParamFieldsTelephones` | telephones                                         |
-| `PatchTicketingCustomerQueryParamFieldsTags`       | tags                                               |
-| `PatchTicketingCustomerQueryParamFieldsMetadata`   | metadata                                           |
-| `PatchTicketingCustomerQueryParamFieldsRaw`        | raw                                                |
+| Name                                                     | Value                                                    |
+| -------------------------------------------------------- | -------------------------------------------------------- |
+| `PatchTicketingCustomerQueryParamFieldsID`               | id                                                       |
+| `PatchTicketingCustomerQueryParamFieldsCreatedAt`        | created_at                                               |
+| `PatchTicketingCustomerQueryParamFieldsUpdatedAt`        | updated_at                                               |
+| `PatchTicketingCustomerQueryParamFieldsName`             | name                                                     |
+| `PatchTicketingCustomerQueryParamFieldsEmails`           | emails                                                   |
+| `PatchTicketingCustomerQueryParamFieldsTelephones`       | telephones                                               |
+| `PatchTicketingCustomerQueryParamFieldsTags`             | tags                                                     |
+| `PatchTicketingCustomerQueryParamFieldsMetadata`         | metadata                                                 |
+| `PatchTicketingCustomerQueryParamFieldsRaw`              | raw                                                      |
+| `PatchTicketingCustomerQueryParamFieldsUnifiedPersonIds` | __unified_person_ids                                     |

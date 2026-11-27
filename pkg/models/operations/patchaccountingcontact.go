@@ -41,6 +41,7 @@ const (
 	PatchAccountingContactQueryParamFieldsNotes              PatchAccountingContactQueryParamFields = "notes"
 	PatchAccountingContactQueryParamFieldsMetadata           PatchAccountingContactQueryParamFields = "metadata"
 	PatchAccountingContactQueryParamFieldsRaw                PatchAccountingContactQueryParamFields = "raw"
+	PatchAccountingContactQueryParamFieldsUnifiedPersonIds   PatchAccountingContactQueryParamFields = "__unified_person_ids"
 )
 
 func (e PatchAccountingContactQueryParamFields) ToPointer() *PatchAccountingContactQueryParamFields {
@@ -109,6 +110,8 @@ func (e *PatchAccountingContactQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = PatchAccountingContactQueryParamFields(v)
 		return nil
 	default:

@@ -39,6 +39,7 @@ func main() {
 
     res, err := s.Salesorder.CreateAccountingSalesorder(ctx, operations.CreateAccountingSalesorderRequest{
         AccountingSalesorder: shared.AccountingSalesorder{
+            BalanceAmount: unifiedgosdk.Pointer[float64](0.0),
             BillingAddress: &shared.PropertyAccountingSalesorderBillingAddress{
                 Address1: unifiedgosdk.Pointer("1487 Valley Road"),
                 Address2: unifiedgosdk.Pointer("Apt. 287"),
@@ -49,13 +50,13 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MT"),
             },
             CategoryIds: []string{},
-            ClosedAt: types.MustNewTimeFromString("2023-04-03T11:25:04.300Z"),
+            ClosedAt: types.MustNewTimeFromString("2023-04-03T17:47:38.222Z"),
             CreatedAt: types.MustNewTimeFromString("2022-01-17T16:11:50.310Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             Fees: []shared.AccountingFee{},
             FulfillmentType: shared.FulfillmentTypeOther.ToPointer(),
-            ID: unifiedgosdk.Pointer("a9aa8630-2592-4102-84c1-cb36b590cd60"),
+            ID: unifiedgosdk.Pointer("91b05552-2f0d-41c5-92c5-bb4fd6874c51"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             OrderNumber: unifiedgosdk.Pointer("832663"),
@@ -78,7 +79,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TipAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-03T11:25:04.300Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-03T17:47:38.222Z"),
         },
         ConnectionID: "<id>",
     })
@@ -246,6 +247,7 @@ func main() {
 
     res, err := s.Salesorder.PatchAccountingSalesorder(ctx, operations.PatchAccountingSalesorderRequest{
         AccountingSalesorder: shared.AccountingSalesorder{
+            BalanceAmount: unifiedgosdk.Pointer[float64](0.0),
             BillingAddress: &shared.PropertyAccountingSalesorderBillingAddress{
                 Address1: unifiedgosdk.Pointer("1487 Valley Road"),
                 Address2: unifiedgosdk.Pointer("Apt. 287"),
@@ -256,13 +258,13 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MT"),
             },
             CategoryIds: []string{},
-            ClosedAt: types.MustNewTimeFromString("2023-04-03T11:25:04.312Z"),
+            ClosedAt: types.MustNewTimeFromString("2023-04-03T17:47:38.238Z"),
             CreatedAt: types.MustNewTimeFromString("2022-01-17T16:11:50.310Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             Fees: []shared.AccountingFee{},
             FulfillmentType: shared.FulfillmentTypeOther.ToPointer(),
-            ID: unifiedgosdk.Pointer("2896e6ac-ae6a-42be-bd18-ec65ada6d811"),
+            ID: unifiedgosdk.Pointer("ec6f62ff-332f-4f78-bb59-f7caff403e41"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             OrderNumber: unifiedgosdk.Pointer("832663"),
@@ -285,7 +287,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TipAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-03T11:25:04.312Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-03T17:47:38.238Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -400,6 +402,7 @@ func main() {
 
     res, err := s.Salesorder.UpdateAccountingSalesorder(ctx, operations.UpdateAccountingSalesorderRequest{
         AccountingSalesorder: shared.AccountingSalesorder{
+            BalanceAmount: unifiedgosdk.Pointer[float64](0.0),
             BillingAddress: &shared.PropertyAccountingSalesorderBillingAddress{
                 Address1: unifiedgosdk.Pointer("1487 Valley Road"),
                 Address2: unifiedgosdk.Pointer("Apt. 287"),
@@ -410,13 +413,13 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MT"),
             },
             CategoryIds: []string{},
-            ClosedAt: types.MustNewTimeFromString("2023-04-03T11:25:04.312Z"),
+            ClosedAt: types.MustNewTimeFromString("2023-04-03T17:47:38.238Z"),
             CreatedAt: types.MustNewTimeFromString("2022-01-17T16:11:50.310Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             Fees: []shared.AccountingFee{},
             FulfillmentType: shared.FulfillmentTypeOther.ToPointer(),
-            ID: unifiedgosdk.Pointer("2896e6ac-ae6a-42be-bd18-ec65ada6d811"),
+            ID: unifiedgosdk.Pointer("ec6f62ff-332f-4f78-bb59-f7caff403e41"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             OrderNumber: unifiedgosdk.Pointer("832663"),
@@ -439,7 +442,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TipAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-04-03T11:25:04.312Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-03T17:47:38.238Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

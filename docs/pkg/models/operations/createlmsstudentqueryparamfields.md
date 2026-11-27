@@ -13,17 +13,18 @@ value := operations.CreateLmsStudentQueryParamFieldsID
 
 ## Values
 
-| Name                                         | Value                                        |
-| -------------------------------------------- | -------------------------------------------- |
-| `CreateLmsStudentQueryParamFieldsID`         | id                                           |
-| `CreateLmsStudentQueryParamFieldsCreatedAt`  | created_at                                   |
-| `CreateLmsStudentQueryParamFieldsUpdatedAt`  | updated_at                                   |
-| `CreateLmsStudentQueryParamFieldsName`       | name                                         |
-| `CreateLmsStudentQueryParamFieldsFirstName`  | first_name                                   |
-| `CreateLmsStudentQueryParamFieldsLastName`   | last_name                                    |
-| `CreateLmsStudentQueryParamFieldsEmails`     | emails                                       |
-| `CreateLmsStudentQueryParamFieldsTelephones` | telephones                                   |
-| `CreateLmsStudentQueryParamFieldsAddress`    | address                                      |
-| `CreateLmsStudentQueryParamFieldsImageURL`   | image_url                                    |
-| `CreateLmsStudentQueryParamFieldsMetadata`   | metadata                                     |
-| `CreateLmsStudentQueryParamFieldsRaw`        | raw                                          |
+| Name                                               | Value                                              |
+| -------------------------------------------------- | -------------------------------------------------- |
+| `CreateLmsStudentQueryParamFieldsID`               | id                                                 |
+| `CreateLmsStudentQueryParamFieldsCreatedAt`        | created_at                                         |
+| `CreateLmsStudentQueryParamFieldsUpdatedAt`        | updated_at                                         |
+| `CreateLmsStudentQueryParamFieldsName`             | name                                               |
+| `CreateLmsStudentQueryParamFieldsFirstName`        | first_name                                         |
+| `CreateLmsStudentQueryParamFieldsLastName`         | last_name                                          |
+| `CreateLmsStudentQueryParamFieldsEmails`           | emails                                             |
+| `CreateLmsStudentQueryParamFieldsTelephones`       | telephones                                         |
+| `CreateLmsStudentQueryParamFieldsAddress`          | address                                            |
+| `CreateLmsStudentQueryParamFieldsImageURL`         | image_url                                          |
+| `CreateLmsStudentQueryParamFieldsMetadata`         | metadata                                           |
+| `CreateLmsStudentQueryParamFieldsRaw`              | raw                                                |
+| `CreateLmsStudentQueryParamFieldsUnifiedPersonIds` | __unified_person_ids                               |

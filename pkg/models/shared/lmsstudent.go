@@ -8,7 +8,9 @@ import (
 )
 
 type LmsStudent struct {
-	Address *PropertyLmsStudentAddress `json:"address,omitempty"`
+	// Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+	UnifiedPersonIds []string                   `json:"__unified_person_ids,omitempty"`
+	Address          *PropertyLmsStudentAddress `json:"address,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt  *time.Time     `json:"created_at,omitempty"`
 	Emails     []LmsEmail     `json:"emails,omitempty"`
@@ -33,6 +35,13 @@ func (l *LmsStudent) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (l *LmsStudent) GetUnifiedPersonIds() []string {
+	if l == nil {
+		return nil
+	}
+	return l.UnifiedPersonIds
 }
 
 func (l *LmsStudent) GetAddress() *PropertyLmsStudentAddress {

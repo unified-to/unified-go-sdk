@@ -13,18 +13,19 @@ value := operations.PatchMartechMemberQueryParamFieldsID
 
 ## Values
 
-| Name                                          | Value                                         |
-| --------------------------------------------- | --------------------------------------------- |
-| `PatchMartechMemberQueryParamFieldsID`        | id                                            |
-| `PatchMartechMemberQueryParamFieldsCreatedAt` | created_at                                    |
-| `PatchMartechMemberQueryParamFieldsUpdatedAt` | updated_at                                    |
-| `PatchMartechMemberQueryParamFieldsName`      | name                                          |
-| `PatchMartechMemberQueryParamFieldsFirstName` | first_name                                    |
-| `PatchMartechMemberQueryParamFieldsLastName`  | last_name                                     |
-| `PatchMartechMemberQueryParamFieldsCompany`   | company                                       |
-| `PatchMartechMemberQueryParamFieldsEmails`    | emails                                        |
-| `PatchMartechMemberQueryParamFieldsListIds`   | list_ids                                      |
-| `PatchMartechMemberQueryParamFieldsTags`      | tags                                          |
-| `PatchMartechMemberQueryParamFieldsStatus`    | status                                        |
-| `PatchMartechMemberQueryParamFieldsMetadata`  | metadata                                      |
-| `PatchMartechMemberQueryParamFieldsRaw`       | raw                                           |
+| Name                                                 | Value                                                |
+| ---------------------------------------------------- | ---------------------------------------------------- |
+| `PatchMartechMemberQueryParamFieldsID`               | id                                                   |
+| `PatchMartechMemberQueryParamFieldsCreatedAt`        | created_at                                           |
+| `PatchMartechMemberQueryParamFieldsUpdatedAt`        | updated_at                                           |
+| `PatchMartechMemberQueryParamFieldsName`             | name                                                 |
+| `PatchMartechMemberQueryParamFieldsFirstName`        | first_name                                           |
+| `PatchMartechMemberQueryParamFieldsLastName`         | last_name                                            |
+| `PatchMartechMemberQueryParamFieldsCompany`          | company                                              |
+| `PatchMartechMemberQueryParamFieldsEmails`           | emails                                               |
+| `PatchMartechMemberQueryParamFieldsListIds`          | list_ids                                             |
+| `PatchMartechMemberQueryParamFieldsTags`             | tags                                                 |
+| `PatchMartechMemberQueryParamFieldsStatus`           | status                                               |
+| `PatchMartechMemberQueryParamFieldsMetadata`         | metadata                                             |
+| `PatchMartechMemberQueryParamFieldsRaw`              | raw                                                  |
+| `PatchMartechMemberQueryParamFieldsUnifiedPersonIds` | __unified_person_ids                                 |

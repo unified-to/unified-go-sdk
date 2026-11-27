@@ -41,6 +41,7 @@ const (
 	CreateAccountingContactQueryParamFieldsNotes              CreateAccountingContactQueryParamFields = "notes"
 	CreateAccountingContactQueryParamFieldsMetadata           CreateAccountingContactQueryParamFields = "metadata"
 	CreateAccountingContactQueryParamFieldsRaw                CreateAccountingContactQueryParamFields = "raw"
+	CreateAccountingContactQueryParamFieldsUnifiedPersonIds   CreateAccountingContactQueryParamFields = "__unified_person_ids"
 )
 
 func (e CreateAccountingContactQueryParamFields) ToPointer() *CreateAccountingContactQueryParamFields {
@@ -109,6 +110,8 @@ func (e *CreateAccountingContactQueryParamFields) UnmarshalJSON(data []byte) err
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = CreateAccountingContactQueryParamFields(v)
 		return nil
 	default:

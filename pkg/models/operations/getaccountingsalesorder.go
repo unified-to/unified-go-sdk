@@ -46,6 +46,7 @@ const (
 	GetAccountingSalesorderQueryParamFieldsPayments            GetAccountingSalesorderQueryParamFields = "payments"
 	GetAccountingSalesorderQueryParamFieldsTableID             GetAccountingSalesorderQueryParamFields = "table_id"
 	GetAccountingSalesorderQueryParamFieldsPaidAmount          GetAccountingSalesorderQueryParamFields = "paid_amount"
+	GetAccountingSalesorderQueryParamFieldsBalanceAmount       GetAccountingSalesorderQueryParamFields = "balance_amount"
 	GetAccountingSalesorderQueryParamFieldsRaw                 GetAccountingSalesorderQueryParamFields = "raw"
 )
 
@@ -125,6 +126,8 @@ func (e *GetAccountingSalesorderQueryParamFields) UnmarshalJSON(data []byte) err
 	case "table_id":
 		fallthrough
 	case "paid_amount":
+		fallthrough
+	case "balance_amount":
 		fallthrough
 	case "raw":
 		*e = GetAccountingSalesorderQueryParamFields(v)

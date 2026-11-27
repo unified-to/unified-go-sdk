@@ -12,18 +12,19 @@ import (
 type PatchUcContactQueryParamFields string
 
 const (
-	PatchUcContactQueryParamFieldsID         PatchUcContactQueryParamFields = "id"
-	PatchUcContactQueryParamFieldsCreatedAt  PatchUcContactQueryParamFields = "created_at"
-	PatchUcContactQueryParamFieldsUpdatedAt  PatchUcContactQueryParamFields = "updated_at"
-	PatchUcContactQueryParamFieldsName       PatchUcContactQueryParamFields = "name"
-	PatchUcContactQueryParamFieldsFirstName  PatchUcContactQueryParamFields = "first_name"
-	PatchUcContactQueryParamFieldsLastName   PatchUcContactQueryParamFields = "last_name"
-	PatchUcContactQueryParamFieldsTitle      PatchUcContactQueryParamFields = "title"
-	PatchUcContactQueryParamFieldsCompany    PatchUcContactQueryParamFields = "company"
-	PatchUcContactQueryParamFieldsEmails     PatchUcContactQueryParamFields = "emails"
-	PatchUcContactQueryParamFieldsTelephones PatchUcContactQueryParamFields = "telephones"
-	PatchUcContactQueryParamFieldsMetadata   PatchUcContactQueryParamFields = "metadata"
-	PatchUcContactQueryParamFieldsRaw        PatchUcContactQueryParamFields = "raw"
+	PatchUcContactQueryParamFieldsID               PatchUcContactQueryParamFields = "id"
+	PatchUcContactQueryParamFieldsCreatedAt        PatchUcContactQueryParamFields = "created_at"
+	PatchUcContactQueryParamFieldsUpdatedAt        PatchUcContactQueryParamFields = "updated_at"
+	PatchUcContactQueryParamFieldsName             PatchUcContactQueryParamFields = "name"
+	PatchUcContactQueryParamFieldsFirstName        PatchUcContactQueryParamFields = "first_name"
+	PatchUcContactQueryParamFieldsLastName         PatchUcContactQueryParamFields = "last_name"
+	PatchUcContactQueryParamFieldsTitle            PatchUcContactQueryParamFields = "title"
+	PatchUcContactQueryParamFieldsCompany          PatchUcContactQueryParamFields = "company"
+	PatchUcContactQueryParamFieldsEmails           PatchUcContactQueryParamFields = "emails"
+	PatchUcContactQueryParamFieldsTelephones       PatchUcContactQueryParamFields = "telephones"
+	PatchUcContactQueryParamFieldsMetadata         PatchUcContactQueryParamFields = "metadata"
+	PatchUcContactQueryParamFieldsRaw              PatchUcContactQueryParamFields = "raw"
+	PatchUcContactQueryParamFieldsUnifiedPersonIds PatchUcContactQueryParamFields = "__unified_person_ids"
 )
 
 func (e PatchUcContactQueryParamFields) ToPointer() *PatchUcContactQueryParamFields {
@@ -58,6 +59,8 @@ func (e *PatchUcContactQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = PatchUcContactQueryParamFields(v)
 		return nil
 	default:

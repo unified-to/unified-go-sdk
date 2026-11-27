@@ -12,26 +12,27 @@ import (
 type ListHealthcarePractitionersQueryParamFields string
 
 const (
-	ListHealthcarePractitionersQueryParamFieldsID             ListHealthcarePractitionersQueryParamFields = "id"
-	ListHealthcarePractitionersQueryParamFieldsCreatedAt      ListHealthcarePractitionersQueryParamFields = "created_at"
-	ListHealthcarePractitionersQueryParamFieldsUpdatedAt      ListHealthcarePractitionersQueryParamFields = "updated_at"
-	ListHealthcarePractitionersQueryParamFieldsName           ListHealthcarePractitionersQueryParamFields = "name"
-	ListHealthcarePractitionersQueryParamFieldsFirstName      ListHealthcarePractitionersQueryParamFields = "first_name"
-	ListHealthcarePractitionersQueryParamFieldsLastName       ListHealthcarePractitionersQueryParamFields = "last_name"
-	ListHealthcarePractitionersQueryParamFieldsTitle          ListHealthcarePractitionersQueryParamFields = "title"
-	ListHealthcarePractitionersQueryParamFieldsGender         ListHealthcarePractitionersQueryParamFields = "gender"
-	ListHealthcarePractitionersQueryParamFieldsEmails         ListHealthcarePractitionersQueryParamFields = "emails"
-	ListHealthcarePractitionersQueryParamFieldsTelephones     ListHealthcarePractitionersQueryParamFields = "telephones"
-	ListHealthcarePractitionersQueryParamFieldsAddress        ListHealthcarePractitionersQueryParamFields = "address"
-	ListHealthcarePractitionersQueryParamFieldsImageURL       ListHealthcarePractitionersQueryParamFields = "image_url"
-	ListHealthcarePractitionersQueryParamFieldsIdentifiers    ListHealthcarePractitionersQueryParamFields = "identifiers"
-	ListHealthcarePractitionersQueryParamFieldsSpecialties    ListHealthcarePractitionersQueryParamFields = "specialties"
-	ListHealthcarePractitionersQueryParamFieldsQualifications ListHealthcarePractitionersQueryParamFields = "qualifications"
-	ListHealthcarePractitionersQueryParamFieldsLanguages      ListHealthcarePractitionersQueryParamFields = "languages"
-	ListHealthcarePractitionersQueryParamFieldsLocationIds    ListHealthcarePractitionersQueryParamFields = "location_ids"
-	ListHealthcarePractitionersQueryParamFieldsIsActive       ListHealthcarePractitionersQueryParamFields = "is_active"
-	ListHealthcarePractitionersQueryParamFieldsMetadata       ListHealthcarePractitionersQueryParamFields = "metadata"
-	ListHealthcarePractitionersQueryParamFieldsRaw            ListHealthcarePractitionersQueryParamFields = "raw"
+	ListHealthcarePractitionersQueryParamFieldsID               ListHealthcarePractitionersQueryParamFields = "id"
+	ListHealthcarePractitionersQueryParamFieldsCreatedAt        ListHealthcarePractitionersQueryParamFields = "created_at"
+	ListHealthcarePractitionersQueryParamFieldsUpdatedAt        ListHealthcarePractitionersQueryParamFields = "updated_at"
+	ListHealthcarePractitionersQueryParamFieldsName             ListHealthcarePractitionersQueryParamFields = "name"
+	ListHealthcarePractitionersQueryParamFieldsFirstName        ListHealthcarePractitionersQueryParamFields = "first_name"
+	ListHealthcarePractitionersQueryParamFieldsLastName         ListHealthcarePractitionersQueryParamFields = "last_name"
+	ListHealthcarePractitionersQueryParamFieldsTitle            ListHealthcarePractitionersQueryParamFields = "title"
+	ListHealthcarePractitionersQueryParamFieldsGender           ListHealthcarePractitionersQueryParamFields = "gender"
+	ListHealthcarePractitionersQueryParamFieldsEmails           ListHealthcarePractitionersQueryParamFields = "emails"
+	ListHealthcarePractitionersQueryParamFieldsTelephones       ListHealthcarePractitionersQueryParamFields = "telephones"
+	ListHealthcarePractitionersQueryParamFieldsAddress          ListHealthcarePractitionersQueryParamFields = "address"
+	ListHealthcarePractitionersQueryParamFieldsImageURL         ListHealthcarePractitionersQueryParamFields = "image_url"
+	ListHealthcarePractitionersQueryParamFieldsIdentifiers      ListHealthcarePractitionersQueryParamFields = "identifiers"
+	ListHealthcarePractitionersQueryParamFieldsSpecialties      ListHealthcarePractitionersQueryParamFields = "specialties"
+	ListHealthcarePractitionersQueryParamFieldsQualifications   ListHealthcarePractitionersQueryParamFields = "qualifications"
+	ListHealthcarePractitionersQueryParamFieldsLanguages        ListHealthcarePractitionersQueryParamFields = "languages"
+	ListHealthcarePractitionersQueryParamFieldsLocationIds      ListHealthcarePractitionersQueryParamFields = "location_ids"
+	ListHealthcarePractitionersQueryParamFieldsIsActive         ListHealthcarePractitionersQueryParamFields = "is_active"
+	ListHealthcarePractitionersQueryParamFieldsMetadata         ListHealthcarePractitionersQueryParamFields = "metadata"
+	ListHealthcarePractitionersQueryParamFieldsRaw              ListHealthcarePractitionersQueryParamFields = "raw"
+	ListHealthcarePractitionersQueryParamFieldsUnifiedPersonIds ListHealthcarePractitionersQueryParamFields = "__unified_person_ids"
 )
 
 func (e ListHealthcarePractitionersQueryParamFields) ToPointer() *ListHealthcarePractitionersQueryParamFields {
@@ -82,6 +83,8 @@ func (e *ListHealthcarePractitionersQueryParamFields) UnmarshalJSON(data []byte)
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = ListHealthcarePractitionersQueryParamFields(v)
 		return nil
 	default:

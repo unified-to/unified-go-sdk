@@ -9,7 +9,9 @@ import (
 
 // CrmContact - A contact represents a person that optionally is associated with a deal and/or a company
 type CrmContact struct {
-	Address *PropertyCrmContactAddress `json:"address,omitempty"`
+	// Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+	UnifiedPersonIds []string                   `json:"__unified_person_ids,omitempty"`
+	Address          *PropertyCrmContactAddress `json:"address,omitempty"`
 	// The company/organization name  of the contact
 	Company *string `json:"company,omitempty"`
 	// An array of company IDs associated with this contact
@@ -54,6 +56,13 @@ func (c *CrmContact) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (c *CrmContact) GetUnifiedPersonIds() []string {
+	if c == nil {
+		return nil
+	}
+	return c.UnifiedPersonIds
 }
 
 func (c *CrmContact) GetAddress() *PropertyCrmContactAddress {

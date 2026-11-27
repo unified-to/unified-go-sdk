@@ -49,4 +49,5 @@ value := operations.ListAccountingSalesordersQueryParamFieldsID
 | `ListAccountingSalesordersQueryParamFieldsPayments`            | payments                                                       |
 | `ListAccountingSalesordersQueryParamFieldsTableID`             | table_id                                                       |
 | `ListAccountingSalesordersQueryParamFieldsPaidAmount`          | paid_amount                                                    |
+| `ListAccountingSalesordersQueryParamFieldsBalanceAmount`       | balance_amount                                                 |
 | `ListAccountingSalesordersQueryParamFieldsRaw`                 | raw                                                            |

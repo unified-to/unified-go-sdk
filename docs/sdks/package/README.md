@@ -48,7 +48,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Urbs tergiversatio admitto summa accusator."),
             HasRedirectURL: unifiedgosdk.Pointer(true),
             HasTargetURL: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("239b1510-f7bb-401c-82c4-1b0e08fc34cd"),
+            ID: unifiedgosdk.Pointer("a96a9a9e-6d36-44c9-88ac-8a69436d2b86"),
             InfoURL: unifiedgosdk.Pointer("https://unkempt-habit.net"),
             IntegrationTypes: []string{
                 "tabesco",
@@ -63,7 +63,7 @@ func main() {
                 "eos",
             },
             Type: shared.AssessmentPackageTypeVideoInterview,
-            UpdatedAt: types.MustNewTimeFromString("2023-10-03T04:19:29.437Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-03T09:53:12.704Z"),
         },
         ConnectionID: "<id>",
     })
@@ -347,7 +347,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Urbs tergiversatio admitto summa accusator."),
             HasRedirectURL: unifiedgosdk.Pointer(true),
             HasTargetURL: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("2f03dd0d-97e6-42fe-96c9-ed1f8c316501"),
+            ID: unifiedgosdk.Pointer("ae5a40f1-b3cb-45ee-93f7-7dc432d21c43"),
             InfoURL: unifiedgosdk.Pointer("https://unkempt-habit.net"),
             IntegrationTypes: []string{
                 "tabesco",
@@ -362,7 +362,7 @@ func main() {
                 "eos",
             },
             Type: shared.AssessmentPackageTypeVideoInterview,
-            UpdatedAt: types.MustNewTimeFromString("2023-10-03T04:19:29.441Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-03T09:53:12.709Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -484,7 +484,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Urbs tergiversatio admitto summa accusator."),
             HasRedirectURL: unifiedgosdk.Pointer(true),
             HasTargetURL: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("2f03dd0d-97e6-42fe-96c9-ed1f8c316501"),
+            ID: unifiedgosdk.Pointer("ae5a40f1-b3cb-45ee-93f7-7dc432d21c43"),
             InfoURL: unifiedgosdk.Pointer("https://unkempt-habit.net"),
             IntegrationTypes: []string{
                 "tabesco",
@@ -499,7 +499,7 @@ func main() {
                 "eos",
             },
             Type: shared.AssessmentPackageTypeVideoInterview,
-            UpdatedAt: types.MustNewTimeFromString("2023-10-03T04:19:29.441Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-03T09:53:12.709Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

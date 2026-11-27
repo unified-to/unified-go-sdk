@@ -52,6 +52,8 @@ func main() {
                     Value: unifiedgosdk.Pointer("vilicus"),
                 },
             },
+            HasThread: unifiedgosdk.Pointer(false),
+            ID: unifiedgosdk.Pointer("lGiOgAB6MLc1sMVUZnBJtXQG"),
             MaxTokens: unifiedgosdk.Pointer[float64](0.4677782787475735),
             McpAuthorizationToken: unifiedgosdk.Pointer("45c837a2-ed2d-458f-b4bc-782f4a6b065b"),
             McpDeferredTools: []string{},

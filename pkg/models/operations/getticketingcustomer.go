@@ -12,15 +12,16 @@ import (
 type GetTicketingCustomerQueryParamFields string
 
 const (
-	GetTicketingCustomerQueryParamFieldsID         GetTicketingCustomerQueryParamFields = "id"
-	GetTicketingCustomerQueryParamFieldsCreatedAt  GetTicketingCustomerQueryParamFields = "created_at"
-	GetTicketingCustomerQueryParamFieldsUpdatedAt  GetTicketingCustomerQueryParamFields = "updated_at"
-	GetTicketingCustomerQueryParamFieldsName       GetTicketingCustomerQueryParamFields = "name"
-	GetTicketingCustomerQueryParamFieldsEmails     GetTicketingCustomerQueryParamFields = "emails"
-	GetTicketingCustomerQueryParamFieldsTelephones GetTicketingCustomerQueryParamFields = "telephones"
-	GetTicketingCustomerQueryParamFieldsTags       GetTicketingCustomerQueryParamFields = "tags"
-	GetTicketingCustomerQueryParamFieldsMetadata   GetTicketingCustomerQueryParamFields = "metadata"
-	GetTicketingCustomerQueryParamFieldsRaw        GetTicketingCustomerQueryParamFields = "raw"
+	GetTicketingCustomerQueryParamFieldsID               GetTicketingCustomerQueryParamFields = "id"
+	GetTicketingCustomerQueryParamFieldsCreatedAt        GetTicketingCustomerQueryParamFields = "created_at"
+	GetTicketingCustomerQueryParamFieldsUpdatedAt        GetTicketingCustomerQueryParamFields = "updated_at"
+	GetTicketingCustomerQueryParamFieldsName             GetTicketingCustomerQueryParamFields = "name"
+	GetTicketingCustomerQueryParamFieldsEmails           GetTicketingCustomerQueryParamFields = "emails"
+	GetTicketingCustomerQueryParamFieldsTelephones       GetTicketingCustomerQueryParamFields = "telephones"
+	GetTicketingCustomerQueryParamFieldsTags             GetTicketingCustomerQueryParamFields = "tags"
+	GetTicketingCustomerQueryParamFieldsMetadata         GetTicketingCustomerQueryParamFields = "metadata"
+	GetTicketingCustomerQueryParamFieldsRaw              GetTicketingCustomerQueryParamFields = "raw"
+	GetTicketingCustomerQueryParamFieldsUnifiedPersonIds GetTicketingCustomerQueryParamFields = "__unified_person_ids"
 )
 
 func (e GetTicketingCustomerQueryParamFields) ToPointer() *GetTicketingCustomerQueryParamFields {
@@ -49,6 +50,8 @@ func (e *GetTicketingCustomerQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = GetTicketingCustomerQueryParamFields(v)
 		return nil
 	default:

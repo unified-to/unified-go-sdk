@@ -13,17 +13,18 @@ value := operations.GetLmsInstructorQueryParamFieldsID
 
 ## Values
 
-| Name                                         | Value                                        |
-| -------------------------------------------- | -------------------------------------------- |
-| `GetLmsInstructorQueryParamFieldsID`         | id                                           |
-| `GetLmsInstructorQueryParamFieldsCreatedAt`  | created_at                                   |
-| `GetLmsInstructorQueryParamFieldsUpdatedAt`  | updated_at                                   |
-| `GetLmsInstructorQueryParamFieldsName`       | name                                         |
-| `GetLmsInstructorQueryParamFieldsFirstName`  | first_name                                   |
-| `GetLmsInstructorQueryParamFieldsLastName`   | last_name                                    |
-| `GetLmsInstructorQueryParamFieldsEmails`     | emails                                       |
-| `GetLmsInstructorQueryParamFieldsTitle`      | title                                        |
-| `GetLmsInstructorQueryParamFieldsTelephones` | telephones                                   |
-| `GetLmsInstructorQueryParamFieldsImageURL`   | image_url                                    |
-| `GetLmsInstructorQueryParamFieldsMetadata`   | metadata                                     |
-| `GetLmsInstructorQueryParamFieldsRaw`        | raw                                          |
+| Name                                               | Value                                              |
+| -------------------------------------------------- | -------------------------------------------------- |
+| `GetLmsInstructorQueryParamFieldsID`               | id                                                 |
+| `GetLmsInstructorQueryParamFieldsCreatedAt`        | created_at                                         |
+| `GetLmsInstructorQueryParamFieldsUpdatedAt`        | updated_at                                         |
+| `GetLmsInstructorQueryParamFieldsName`             | name                                               |
+| `GetLmsInstructorQueryParamFieldsFirstName`        | first_name                                         |
+| `GetLmsInstructorQueryParamFieldsLastName`         | last_name                                          |
+| `GetLmsInstructorQueryParamFieldsEmails`           | emails                                             |
+| `GetLmsInstructorQueryParamFieldsTitle`            | title                                              |
+| `GetLmsInstructorQueryParamFieldsTelephones`       | telephones                                         |
+| `GetLmsInstructorQueryParamFieldsImageURL`         | image_url                                          |
+| `GetLmsInstructorQueryParamFieldsMetadata`         | metadata                                           |
+| `GetLmsInstructorQueryParamFieldsRaw`              | raw                                                |
+| `GetLmsInstructorQueryParamFieldsUnifiedPersonIds` | __unified_person_ids                               |

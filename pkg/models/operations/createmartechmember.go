@@ -12,19 +12,20 @@ import (
 type CreateMartechMemberQueryParamFields string
 
 const (
-	CreateMartechMemberQueryParamFieldsID        CreateMartechMemberQueryParamFields = "id"
-	CreateMartechMemberQueryParamFieldsCreatedAt CreateMartechMemberQueryParamFields = "created_at"
-	CreateMartechMemberQueryParamFieldsUpdatedAt CreateMartechMemberQueryParamFields = "updated_at"
-	CreateMartechMemberQueryParamFieldsName      CreateMartechMemberQueryParamFields = "name"
-	CreateMartechMemberQueryParamFieldsFirstName CreateMartechMemberQueryParamFields = "first_name"
-	CreateMartechMemberQueryParamFieldsLastName  CreateMartechMemberQueryParamFields = "last_name"
-	CreateMartechMemberQueryParamFieldsCompany   CreateMartechMemberQueryParamFields = "company"
-	CreateMartechMemberQueryParamFieldsEmails    CreateMartechMemberQueryParamFields = "emails"
-	CreateMartechMemberQueryParamFieldsListIds   CreateMartechMemberQueryParamFields = "list_ids"
-	CreateMartechMemberQueryParamFieldsTags      CreateMartechMemberQueryParamFields = "tags"
-	CreateMartechMemberQueryParamFieldsStatus    CreateMartechMemberQueryParamFields = "status"
-	CreateMartechMemberQueryParamFieldsMetadata  CreateMartechMemberQueryParamFields = "metadata"
-	CreateMartechMemberQueryParamFieldsRaw       CreateMartechMemberQueryParamFields = "raw"
+	CreateMartechMemberQueryParamFieldsID               CreateMartechMemberQueryParamFields = "id"
+	CreateMartechMemberQueryParamFieldsCreatedAt        CreateMartechMemberQueryParamFields = "created_at"
+	CreateMartechMemberQueryParamFieldsUpdatedAt        CreateMartechMemberQueryParamFields = "updated_at"
+	CreateMartechMemberQueryParamFieldsName             CreateMartechMemberQueryParamFields = "name"
+	CreateMartechMemberQueryParamFieldsFirstName        CreateMartechMemberQueryParamFields = "first_name"
+	CreateMartechMemberQueryParamFieldsLastName         CreateMartechMemberQueryParamFields = "last_name"
+	CreateMartechMemberQueryParamFieldsCompany          CreateMartechMemberQueryParamFields = "company"
+	CreateMartechMemberQueryParamFieldsEmails           CreateMartechMemberQueryParamFields = "emails"
+	CreateMartechMemberQueryParamFieldsListIds          CreateMartechMemberQueryParamFields = "list_ids"
+	CreateMartechMemberQueryParamFieldsTags             CreateMartechMemberQueryParamFields = "tags"
+	CreateMartechMemberQueryParamFieldsStatus           CreateMartechMemberQueryParamFields = "status"
+	CreateMartechMemberQueryParamFieldsMetadata         CreateMartechMemberQueryParamFields = "metadata"
+	CreateMartechMemberQueryParamFieldsRaw              CreateMartechMemberQueryParamFields = "raw"
+	CreateMartechMemberQueryParamFieldsUnifiedPersonIds CreateMartechMemberQueryParamFields = "__unified_person_ids"
 )
 
 func (e CreateMartechMemberQueryParamFields) ToPointer() *CreateMartechMemberQueryParamFields {
@@ -61,6 +62,8 @@ func (e *CreateMartechMemberQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "__unified_person_ids":
 		*e = CreateMartechMemberQueryParamFields(v)
 		return nil
 	default:

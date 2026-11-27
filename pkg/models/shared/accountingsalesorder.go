@@ -69,7 +69,9 @@ func (e *AccountingSalesorderStatus) IsExact() bool {
 
 type AccountingSalesorder struct {
 	// (reference to AccountingAccount)
-	AccountID      *string                                     `json:"account_id,omitempty"`
+	AccountID *string `json:"account_id,omitempty"`
+	// amount still owed on the order (total_amount - paid_amount)
+	BalanceAmount  *float64                                    `json:"balance_amount,omitempty"`
 	BillingAddress *PropertyAccountingSalesorderBillingAddress `json:"billing_address,omitempty"`
 	CategoryIds    []string                                    `json:"category_ids,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -136,6 +138,13 @@ func (a *AccountingSalesorder) GetAccountID() *string {
 		return nil
 	}
 	return a.AccountID
+}
+
+func (a *AccountingSalesorder) GetBalanceAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.BalanceAmount
 }
 
 func (a *AccountingSalesorder) GetBillingAddress() *PropertyAccountingSalesorderBillingAddress {

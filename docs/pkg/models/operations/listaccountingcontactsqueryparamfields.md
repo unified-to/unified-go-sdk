@@ -44,3 +44,4 @@ value := operations.ListAccountingContactsQueryParamFieldsID
 | `ListAccountingContactsQueryParamFieldsNotes`              | notes                                                      |
 | `ListAccountingContactsQueryParamFieldsMetadata`           | metadata                                                   |
 | `ListAccountingContactsQueryParamFieldsRaw`                | raw                                                        |
+| `ListAccountingContactsQueryParamFieldsUnifiedPersonIds`   | __unified_person_ids                                       |

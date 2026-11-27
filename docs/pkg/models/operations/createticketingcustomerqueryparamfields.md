@@ -13,14 +13,15 @@ value := operations.CreateTicketingCustomerQueryParamFieldsID
 
 ## Values
 
-| Name                                                | Value                                               |
-| --------------------------------------------------- | --------------------------------------------------- |
-| `CreateTicketingCustomerQueryParamFieldsID`         | id                                                  |
-| `CreateTicketingCustomerQueryParamFieldsCreatedAt`  | created_at                                          |
-| `CreateTicketingCustomerQueryParamFieldsUpdatedAt`  | updated_at                                          |
-| `CreateTicketingCustomerQueryParamFieldsName`       | name                                                |
-| `CreateTicketingCustomerQueryParamFieldsEmails`     | emails                                              |
-| `CreateTicketingCustomerQueryParamFieldsTelephones` | telephones                                          |
-| `CreateTicketingCustomerQueryParamFieldsTags`       | tags                                                |
-| `CreateTicketingCustomerQueryParamFieldsMetadata`   | metadata                                            |
-| `CreateTicketingCustomerQueryParamFieldsRaw`        | raw                                                 |
+| Name                                                      | Value                                                     |
+| --------------------------------------------------------- | --------------------------------------------------------- |
+| `CreateTicketingCustomerQueryParamFieldsID`               | id                                                        |
+| `CreateTicketingCustomerQueryParamFieldsCreatedAt`        | created_at                                                |
+| `CreateTicketingCustomerQueryParamFieldsUpdatedAt`        | updated_at                                                |
+| `CreateTicketingCustomerQueryParamFieldsName`             | name                                                      |
+| `CreateTicketingCustomerQueryParamFieldsEmails`           | emails                                                    |
+| `CreateTicketingCustomerQueryParamFieldsTelephones`       | telephones                                                |
+| `CreateTicketingCustomerQueryParamFieldsTags`             | tags                                                      |
+| `CreateTicketingCustomerQueryParamFieldsMetadata`         | metadata                                                  |
+| `CreateTicketingCustomerQueryParamFieldsRaw`              | raw                                                       |
+| `CreateTicketingCustomerQueryParamFieldsUnifiedPersonIds` | __unified_person_ids                                      |

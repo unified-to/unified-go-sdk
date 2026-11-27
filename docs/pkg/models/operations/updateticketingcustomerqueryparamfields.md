@@ -13,14 +13,15 @@ value := operations.UpdateTicketingCustomerQueryParamFieldsID
 
 ## Values
 
-| Name                                                | Value                                               |
-| --------------------------------------------------- | --------------------------------------------------- |
-| `UpdateTicketingCustomerQueryParamFieldsID`         | id                                                  |
-| `UpdateTicketingCustomerQueryParamFieldsCreatedAt`  | created_at                                          |
-| `UpdateTicketingCustomerQueryParamFieldsUpdatedAt`  | updated_at                                          |
-| `UpdateTicketingCustomerQueryParamFieldsName`       | name                                                |
-| `UpdateTicketingCustomerQueryParamFieldsEmails`     | emails                                              |
-| `UpdateTicketingCustomerQueryParamFieldsTelephones` | telephones                                          |
-| `UpdateTicketingCustomerQueryParamFieldsTags`       | tags                                                |
-| `UpdateTicketingCustomerQueryParamFieldsMetadata`   | metadata                                            |
-| `UpdateTicketingCustomerQueryParamFieldsRaw`        | raw                                                 |
+| Name                                                      | Value                                                     |
+| --------------------------------------------------------- | --------------------------------------------------------- |
+| `UpdateTicketingCustomerQueryParamFieldsID`               | id                                                        |
+| `UpdateTicketingCustomerQueryParamFieldsCreatedAt`        | created_at                                                |
+| `UpdateTicketingCustomerQueryParamFieldsUpdatedAt`        | updated_at                                                |
+| `UpdateTicketingCustomerQueryParamFieldsName`             | name                                                      |
+| `UpdateTicketingCustomerQueryParamFieldsEmails`           | emails                                                    |
+| `UpdateTicketingCustomerQueryParamFieldsTelephones`       | telephones                                                |
+| `UpdateTicketingCustomerQueryParamFieldsTags`             | tags                                                      |
+| `UpdateTicketingCustomerQueryParamFieldsMetadata`         | metadata                                                  |
+| `UpdateTicketingCustomerQueryParamFieldsRaw`              | raw                                                       |
+| `UpdateTicketingCustomerQueryParamFieldsUnifiedPersonIds` | __unified_person_ids                                      |

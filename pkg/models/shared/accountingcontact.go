@@ -70,6 +70,8 @@ func (e *TaxExemption) IsExact() bool {
 }
 
 type AccountingContact struct {
+	// Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+	UnifiedPersonIds   []string                      `json:"__unified_person_ids,omitempty"`
 	AssociatedContacts []AccountingAssociatedContact `json:"associated_contacts,omitempty"`
 	// Outstanding AR/AP balance for this contact
 	BalanceAmount  *float64                                 `json:"balance_amount,omitempty"`
@@ -118,6 +120,13 @@ func (a *AccountingContact) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (a *AccountingContact) GetUnifiedPersonIds() []string {
+	if a == nil {
+		return nil
+	}
+	return a.UnifiedPersonIds
 }
 
 func (a *AccountingContact) GetAssociatedContacts() []AccountingAssociatedContact {
