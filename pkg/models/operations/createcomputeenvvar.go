@@ -27,6 +27,22 @@ const (
 func (e CreateComputeEnvvarQueryParamFields) ToPointer() *CreateComputeEnvvarQueryParamFields {
 	return &e
 }
+
+// CreateComputeEnvvarQueryParamFieldsValues returns every known CreateComputeEnvvarQueryParamFields value in schema order.
+func CreateComputeEnvvarQueryParamFieldsValues() []CreateComputeEnvvarQueryParamFields {
+	return []CreateComputeEnvvarQueryParamFields{
+		CreateComputeEnvvarQueryParamFieldsID,
+		CreateComputeEnvvarQueryParamFieldsCreatedAt,
+		CreateComputeEnvvarQueryParamFieldsUpdatedAt,
+		CreateComputeEnvvarQueryParamFieldsServiceID,
+		CreateComputeEnvvarQueryParamFieldsName,
+		CreateComputeEnvvarQueryParamFieldsValue,
+		CreateComputeEnvvarQueryParamFieldsEnvironments,
+		CreateComputeEnvvarQueryParamFieldsIsSecret,
+		CreateComputeEnvvarQueryParamFieldsMetadata,
+		CreateComputeEnvvarQueryParamFieldsRaw,
+	}
+}
 func (e *CreateComputeEnvvarQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

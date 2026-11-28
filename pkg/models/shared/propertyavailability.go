@@ -20,6 +20,15 @@ func (e PropertyAvailabilityStatus) ToPointer() *PropertyAvailabilityStatus {
 	return &e
 }
 
+// PropertyAvailabilityStatusValues returns every known PropertyAvailabilityStatus value in schema order.
+func PropertyAvailabilityStatusValues() []PropertyAvailabilityStatus {
+	return []PropertyAvailabilityStatus{
+		PropertyAvailabilityStatusAvailable,
+		PropertyAvailabilityStatusUnavailable,
+		PropertyAvailabilityStatusBlocked,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAvailabilityStatus) IsExact() bool {
 	if e != nil {

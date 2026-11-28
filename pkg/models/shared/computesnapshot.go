@@ -22,6 +22,17 @@ func (e ComputeSnapshotStatus) ToPointer() *ComputeSnapshotStatus {
 	return &e
 }
 
+// ComputeSnapshotStatusValues returns every known ComputeSnapshotStatus value in schema order.
+func ComputeSnapshotStatusValues() []ComputeSnapshotStatus {
+	return []ComputeSnapshotStatus{
+		ComputeSnapshotStatusCreating,
+		ComputeSnapshotStatusReady,
+		ComputeSnapshotStatusFailed,
+		ComputeSnapshotStatusDeleting,
+		ComputeSnapshotStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ComputeSnapshotStatus) IsExact() bool {
 	if e != nil {
@@ -44,6 +55,15 @@ const (
 
 func (e ComputeSnapshotType) ToPointer() *ComputeSnapshotType {
 	return &e
+}
+
+// ComputeSnapshotTypeValues returns every known ComputeSnapshotType value in schema order.
+func ComputeSnapshotTypeValues() []ComputeSnapshotType {
+	return []ComputeSnapshotType{
+		ComputeSnapshotTypeMemory,
+		ComputeSnapshotTypeDisk,
+		ComputeSnapshotTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

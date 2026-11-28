@@ -16,6 +16,17 @@ func (e DmsRepairorderLaborPayType) ToPointer() *DmsRepairorderLaborPayType {
 	return &e
 }
 
+// DmsRepairorderLaborPayTypeValues returns every known DmsRepairorderLaborPayType value in schema order.
+func DmsRepairorderLaborPayTypeValues() []DmsRepairorderLaborPayType {
+	return []DmsRepairorderLaborPayType{
+		DmsRepairorderLaborPayTypeCustomer,
+		DmsRepairorderLaborPayTypeWarranty,
+		DmsRepairorderLaborPayTypeInternal,
+		DmsRepairorderLaborPayTypeServiceContract,
+		DmsRepairorderLaborPayTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *DmsRepairorderLaborPayType) IsExact() bool {
 	if e != nil {

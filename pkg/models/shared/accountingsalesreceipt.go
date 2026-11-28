@@ -20,6 +20,16 @@ func (e AccountingSalesreceiptStatus) ToPointer() *AccountingSalesreceiptStatus 
 	return &e
 }
 
+// AccountingSalesreceiptStatusValues returns every known AccountingSalesreceiptStatus value in schema order.
+func AccountingSalesreceiptStatusValues() []AccountingSalesreceiptStatus {
+	return []AccountingSalesreceiptStatus{
+		AccountingSalesreceiptStatusDraft,
+		AccountingSalesreceiptStatusPosted,
+		AccountingSalesreceiptStatusVoid,
+		AccountingSalesreceiptStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingSalesreceiptStatus) IsExact() bool {
 	if e != nil {

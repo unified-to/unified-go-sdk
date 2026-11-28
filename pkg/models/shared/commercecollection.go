@@ -19,6 +19,15 @@ func (e CommerceCollectionType) ToPointer() *CommerceCollectionType {
 	return &e
 }
 
+// CommerceCollectionTypeValues returns every known CommerceCollectionType value in schema order.
+func CommerceCollectionTypeValues() []CommerceCollectionType {
+	return []CommerceCollectionType{
+		CommerceCollectionTypeCollection,
+		CommerceCollectionTypeSavedSearch,
+		CommerceCollectionTypeCategory,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CommerceCollectionType) IsExact() bool {
 	if e != nil {

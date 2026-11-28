@@ -37,6 +37,32 @@ const (
 func (e PatchCdpProfileQueryParamFields) ToPointer() *PatchCdpProfileQueryParamFields {
 	return &e
 }
+
+// PatchCdpProfileQueryParamFieldsValues returns every known PatchCdpProfileQueryParamFields value in schema order.
+func PatchCdpProfileQueryParamFieldsValues() []PatchCdpProfileQueryParamFields {
+	return []PatchCdpProfileQueryParamFields{
+		PatchCdpProfileQueryParamFieldsID,
+		PatchCdpProfileQueryParamFieldsCreatedAt,
+		PatchCdpProfileQueryParamFieldsUpdatedAt,
+		PatchCdpProfileQueryParamFieldsName,
+		PatchCdpProfileQueryParamFieldsFirstName,
+		PatchCdpProfileQueryParamFieldsLastName,
+		PatchCdpProfileQueryParamFieldsEmail,
+		PatchCdpProfileQueryParamFieldsTelephone,
+		PatchCdpProfileQueryParamFieldsGender,
+		PatchCdpProfileQueryParamFieldsBirthdate,
+		PatchCdpProfileQueryParamFieldsTitle,
+		PatchCdpProfileQueryParamFieldsCompany,
+		PatchCdpProfileQueryParamFieldsAddress,
+		PatchCdpProfileQueryParamFieldsIdentifiers,
+		PatchCdpProfileQueryParamFieldsMetadata,
+		PatchCdpProfileQueryParamFieldsSegments,
+		PatchCdpProfileQueryParamFieldsIsAnonymous,
+		PatchCdpProfileQueryParamFieldsConsent,
+		PatchCdpProfileQueryParamFieldsSourceID,
+		PatchCdpProfileQueryParamFieldsRaw,
+	}
+}
 func (e *PatchCdpProfileQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

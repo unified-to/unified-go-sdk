@@ -24,6 +24,19 @@ const (
 func (e GetRepoBranchQueryParamFields) ToPointer() *GetRepoBranchQueryParamFields {
 	return &e
 }
+
+// GetRepoBranchQueryParamFieldsValues returns every known GetRepoBranchQueryParamFields value in schema order.
+func GetRepoBranchQueryParamFieldsValues() []GetRepoBranchQueryParamFields {
+	return []GetRepoBranchQueryParamFields{
+		GetRepoBranchQueryParamFieldsID,
+		GetRepoBranchQueryParamFieldsCreatedAt,
+		GetRepoBranchQueryParamFieldsUpdatedAt,
+		GetRepoBranchQueryParamFieldsName,
+		GetRepoBranchQueryParamFieldsRepoID,
+		GetRepoBranchQueryParamFieldsMetadata,
+		GetRepoBranchQueryParamFieldsRaw,
+	}
+}
 func (e *GetRepoBranchQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

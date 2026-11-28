@@ -17,6 +17,18 @@ func (e VerificationParameterType) ToPointer() *VerificationParameterType {
 	return &e
 }
 
+// VerificationParameterTypeValues returns every known VerificationParameterType value in schema order.
+func VerificationParameterTypeValues() []VerificationParameterType {
+	return []VerificationParameterType{
+		VerificationParameterTypeText,
+		VerificationParameterTypeNumber,
+		VerificationParameterTypeMultipleChoice,
+		VerificationParameterTypeMultipleSelect,
+		VerificationParameterTypeDate,
+		VerificationParameterTypeFile,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VerificationParameterType) IsExact() bool {
 	if e != nil {

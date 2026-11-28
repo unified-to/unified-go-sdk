@@ -297,6 +297,25 @@ func (e MarketingMetadataFormat) ToPointer() *MarketingMetadataFormat {
 	return &e
 }
 
+// MarketingMetadataFormatValues returns every known MarketingMetadataFormat value in schema order.
+func MarketingMetadataFormatValues() []MarketingMetadataFormat {
+	return []MarketingMetadataFormat{
+		MarketingMetadataFormatText,
+		MarketingMetadataFormatNumber,
+		MarketingMetadataFormatDate,
+		MarketingMetadataFormatBoolean,
+		MarketingMetadataFormatFile,
+		MarketingMetadataFormatTextarea,
+		MarketingMetadataFormatSingleSelect,
+		MarketingMetadataFormatMultipleSelect,
+		MarketingMetadataFormatMeasurement,
+		MarketingMetadataFormatPrice,
+		MarketingMetadataFormatYesNo,
+		MarketingMetadataFormatCurrency,
+		MarketingMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *MarketingMetadataFormat) IsExact() bool {
 	if e != nil {

@@ -18,6 +18,14 @@ func (e TicketingTicketStatus) ToPointer() *TicketingTicketStatus {
 	return &e
 }
 
+// TicketingTicketStatusValues returns every known TicketingTicketStatus value in schema order.
+func TicketingTicketStatusValues() []TicketingTicketStatus {
+	return []TicketingTicketStatus{
+		TicketingTicketStatusActive,
+		TicketingTicketStatusClosed,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *TicketingTicketStatus) IsExact() bool {
 	if e != nil {

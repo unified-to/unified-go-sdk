@@ -40,6 +40,35 @@ const (
 func (e PatchUcCallQueryParamFields) ToPointer() *PatchUcCallQueryParamFields {
 	return &e
 }
+
+// PatchUcCallQueryParamFieldsValues returns every known PatchUcCallQueryParamFields value in schema order.
+func PatchUcCallQueryParamFieldsValues() []PatchUcCallQueryParamFields {
+	return []PatchUcCallQueryParamFields{
+		PatchUcCallQueryParamFieldsID,
+		PatchUcCallQueryParamFieldsCreatedAt,
+		PatchUcCallQueryParamFieldsUpdatedAt,
+		PatchUcCallQueryParamFieldsContactID,
+		PatchUcCallQueryParamFieldsTelephone,
+		PatchUcCallQueryParamFieldsStartAt,
+		PatchUcCallQueryParamFieldsEndAt,
+		PatchUcCallQueryParamFieldsUserID,
+		PatchUcCallQueryParamFieldsContacts,
+		PatchUcCallQueryParamFieldsIsPrivate,
+		PatchUcCallQueryParamFieldsUserName,
+		PatchUcCallQueryParamFieldsUserPhone,
+		PatchUcCallQueryParamFieldsType,
+		PatchUcCallQueryParamFieldsMetadata,
+		PatchUcCallQueryParamFieldsRaw,
+		PatchUcCallQueryParamFieldsConversationIdentifier,
+		PatchUcCallQueryParamFieldsStatus,
+		PatchUcCallQueryParamFieldsAnswerAt,
+		PatchUcCallQueryParamFieldsDurationSeconds,
+		PatchUcCallQueryParamFieldsCostAmount,
+		PatchUcCallQueryParamFieldsCurrency,
+		PatchUcCallQueryParamFieldsParentID,
+		PatchUcCallQueryParamFieldsInstructions,
+	}
+}
 func (e *PatchUcCallQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

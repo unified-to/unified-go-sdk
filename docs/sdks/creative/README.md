@@ -40,7 +40,7 @@ func main() {
     res, err := s.Creative.CreateAdsCreative(ctx, operations.CreateAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{
             CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
-            ID: unifiedgosdk.Pointer("706c5dd5-7523-44b1-af8e-e2db14c362a2"),
+            ID: unifiedgosdk.Pointer("b32d6507-9032-4335-80a4-e9aca618a304"),
             Labels: []string{
                 "ventosus",
                 "in",
@@ -49,7 +49,7 @@ func main() {
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Sauer, Stiedemann and Bauch"),
             Status: shared.AdsCreativeStatusPaused.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-07-05T07:10:17.559Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-05T12:01:11.582Z"),
         },
         ConnectionID: "<id>",
     })
@@ -218,7 +218,7 @@ func main() {
     res, err := s.Creative.PatchAdsCreative(ctx, operations.PatchAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{
             CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
-            ID: unifiedgosdk.Pointer("3310538d-e705-4982-bbe9-d807aa35f850"),
+            ID: unifiedgosdk.Pointer("ac174f8d-6d46-4b8f-86e3-8657d083276d"),
             Labels: []string{
                 "ventosus",
                 "in",
@@ -227,7 +227,7 @@ func main() {
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Sauer, Stiedemann and Bauch"),
             Status: shared.AdsCreativeStatusPaused.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-07-05T07:10:17.566Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-05T12:01:11.586Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -343,7 +343,7 @@ func main() {
     res, err := s.Creative.UpdateAdsCreative(ctx, operations.UpdateAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{
             CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
-            ID: unifiedgosdk.Pointer("3310538d-e705-4982-bbe9-d807aa35f850"),
+            ID: unifiedgosdk.Pointer("ac174f8d-6d46-4b8f-86e3-8657d083276d"),
             Labels: []string{
                 "ventosus",
                 "in",
@@ -352,7 +352,7 @@ func main() {
             Metadata: []shared.AdsMetadata{},
             Name: unifiedgosdk.Pointer("Sauer, Stiedemann and Bauch"),
             Status: shared.AdsCreativeStatusPaused.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-07-05T07:10:17.566Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-07-05T12:01:11.586Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

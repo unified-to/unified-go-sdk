@@ -27,6 +27,23 @@ func (e PropertyAdsReportMetricsCreativeCreativeType) ToPointer() *PropertyAdsRe
 	return &e
 }
 
+// PropertyAdsReportMetricsCreativeCreativeTypeValues returns every known PropertyAdsReportMetricsCreativeCreativeType value in schema order.
+func PropertyAdsReportMetricsCreativeCreativeTypeValues() []PropertyAdsReportMetricsCreativeCreativeType {
+	return []PropertyAdsReportMetricsCreativeCreativeType{
+		PropertyAdsReportMetricsCreativeCreativeTypeUnspecified,
+		PropertyAdsReportMetricsCreativeCreativeTypeStandard,
+		PropertyAdsReportMetricsCreativeCreativeTypeExpandable,
+		PropertyAdsReportMetricsCreativeCreativeTypeVideo,
+		PropertyAdsReportMetricsCreativeCreativeTypeNative,
+		PropertyAdsReportMetricsCreativeCreativeTypeAudio,
+		PropertyAdsReportMetricsCreativeCreativeTypePublisherHosted,
+		PropertyAdsReportMetricsCreativeCreativeTypeAssetBased,
+		PropertyAdsReportMetricsCreativeCreativeTypeImage,
+		PropertyAdsReportMetricsCreativeCreativeTypeDocument,
+		PropertyAdsReportMetricsCreativeCreativeTypeShare,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsCreativeCreativeType) IsExact() bool {
 	if e != nil {
@@ -51,6 +68,18 @@ const (
 
 func (e PropertyAdsReportMetricsCreativeHostingSource) ToPointer() *PropertyAdsReportMetricsCreativeHostingSource {
 	return &e
+}
+
+// PropertyAdsReportMetricsCreativeHostingSourceValues returns every known PropertyAdsReportMetricsCreativeHostingSource value in schema order.
+func PropertyAdsReportMetricsCreativeHostingSourceValues() []PropertyAdsReportMetricsCreativeHostingSource {
+	return []PropertyAdsReportMetricsCreativeHostingSource{
+		PropertyAdsReportMetricsCreativeHostingSourceUnspecified,
+		PropertyAdsReportMetricsCreativeHostingSourceCm,
+		PropertyAdsReportMetricsCreativeHostingSourceThirdParty,
+		PropertyAdsReportMetricsCreativeHostingSourceHosted,
+		PropertyAdsReportMetricsCreativeHostingSourceRichMedia,
+		PropertyAdsReportMetricsCreativeHostingSourcePublisherHosted,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -79,6 +108,20 @@ const (
 
 func (e PropertyAdsReportMetricsCreativeStatus) ToPointer() *PropertyAdsReportMetricsCreativeStatus {
 	return &e
+}
+
+// PropertyAdsReportMetricsCreativeStatusValues returns every known PropertyAdsReportMetricsCreativeStatus value in schema order.
+func PropertyAdsReportMetricsCreativeStatusValues() []PropertyAdsReportMetricsCreativeStatus {
+	return []PropertyAdsReportMetricsCreativeStatus{
+		PropertyAdsReportMetricsCreativeStatusUnspecified,
+		PropertyAdsReportMetricsCreativeStatusActive,
+		PropertyAdsReportMetricsCreativeStatusPaused,
+		PropertyAdsReportMetricsCreativeStatusArchived,
+		PropertyAdsReportMetricsCreativeStatusDraft,
+		PropertyAdsReportMetricsCreativeStatusScheduledForDeletion,
+		PropertyAdsReportMetricsCreativeStatusProcessing,
+		PropertyAdsReportMetricsCreativeStatusProcessingFailed,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

@@ -30,6 +30,25 @@ const (
 func (e CreateAtsScorecardQueryParamFields) ToPointer() *CreateAtsScorecardQueryParamFields {
 	return &e
 }
+
+// CreateAtsScorecardQueryParamFieldsValues returns every known CreateAtsScorecardQueryParamFields value in schema order.
+func CreateAtsScorecardQueryParamFieldsValues() []CreateAtsScorecardQueryParamFields {
+	return []CreateAtsScorecardQueryParamFields{
+		CreateAtsScorecardQueryParamFieldsID,
+		CreateAtsScorecardQueryParamFieldsCreatedAt,
+		CreateAtsScorecardQueryParamFieldsUpdatedAt,
+		CreateAtsScorecardQueryParamFieldsApplicationID,
+		CreateAtsScorecardQueryParamFieldsInterviewerID,
+		CreateAtsScorecardQueryParamFieldsInterviewID,
+		CreateAtsScorecardQueryParamFieldsCandidateID,
+		CreateAtsScorecardQueryParamFieldsJobID,
+		CreateAtsScorecardQueryParamFieldsRecommendation,
+		CreateAtsScorecardQueryParamFieldsComment,
+		CreateAtsScorecardQueryParamFieldsQuestions,
+		CreateAtsScorecardQueryParamFieldsMetadata,
+		CreateAtsScorecardQueryParamFieldsRaw,
+	}
+}
 func (e *CreateAtsScorecardQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

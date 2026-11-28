@@ -21,6 +21,17 @@ func (e AdsAssetType) ToPointer() *AdsAssetType {
 	return &e
 }
 
+// AdsAssetTypeValues returns every known AdsAssetType value in schema order.
+func AdsAssetTypeValues() []AdsAssetType {
+	return []AdsAssetType{
+		AdsAssetTypeImage,
+		AdsAssetTypeVideo,
+		AdsAssetTypeYoutubeVideo,
+		AdsAssetTypeMediaBundle,
+		AdsAssetTypeText,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AdsAssetType) IsExact() bool {
 	if e != nil {

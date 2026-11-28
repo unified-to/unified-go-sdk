@@ -42,6 +42,37 @@ const (
 func (e PatchGenaiTaskQueryParamFields) ToPointer() *PatchGenaiTaskQueryParamFields {
 	return &e
 }
+
+// PatchGenaiTaskQueryParamFieldsValues returns every known PatchGenaiTaskQueryParamFields value in schema order.
+func PatchGenaiTaskQueryParamFieldsValues() []PatchGenaiTaskQueryParamFields {
+	return []PatchGenaiTaskQueryParamFields{
+		PatchGenaiTaskQueryParamFieldsID,
+		PatchGenaiTaskQueryParamFieldsCreatedAt,
+		PatchGenaiTaskQueryParamFieldsUpdatedAt,
+		PatchGenaiTaskQueryParamFieldsName,
+		PatchGenaiTaskQueryParamFieldsInstructions,
+		PatchGenaiTaskQueryParamFieldsStatus,
+		PatchGenaiTaskQueryParamFieldsModelID,
+		PatchGenaiTaskQueryParamFieldsUserID,
+		PatchGenaiTaskQueryParamFieldsRepoURL,
+		PatchGenaiTaskQueryParamFieldsSourceBranchIdentifier,
+		PatchGenaiTaskQueryParamFieldsTargetBranchIdentifier,
+		PatchGenaiTaskQueryParamFieldsPullrequestURL,
+		PatchGenaiTaskQueryParamFieldsWebURL,
+		PatchGenaiTaskQueryParamFieldsMessages,
+		PatchGenaiTaskQueryParamFieldsSummary,
+		PatchGenaiTaskQueryParamFieldsError,
+		PatchGenaiTaskQueryParamFieldsFilesChanged,
+		PatchGenaiTaskQueryParamFieldsLinesAdded,
+		PatchGenaiTaskQueryParamFieldsLinesDeleted,
+		PatchGenaiTaskQueryParamFieldsTokensUsed,
+		PatchGenaiTaskQueryParamFieldsStartedAt,
+		PatchGenaiTaskQueryParamFieldsCompletedAt,
+		PatchGenaiTaskQueryParamFieldsAgentID,
+		PatchGenaiTaskQueryParamFieldsOrganizationID,
+		PatchGenaiTaskQueryParamFieldsRaw,
+	}
+}
 func (e *PatchGenaiTaskQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

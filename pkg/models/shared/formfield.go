@@ -34,6 +34,30 @@ func (e FormFieldType) ToPointer() *FormFieldType {
 	return &e
 }
 
+// FormFieldTypeValues returns every known FormFieldType value in schema order.
+func FormFieldTypeValues() []FormFieldType {
+	return []FormFieldType{
+		FormFieldTypeText,
+		FormFieldTypeTextarea,
+		FormFieldTypeNumber,
+		FormFieldTypeEmail,
+		FormFieldTypeURL,
+		FormFieldTypeDate,
+		FormFieldTypeTime,
+		FormFieldTypeDatetime,
+		FormFieldTypePhone,
+		FormFieldTypeBoolean,
+		FormFieldTypeSingleSelect,
+		FormFieldTypeMultipleSelect,
+		FormFieldTypeFileUpload,
+		FormFieldTypeRating,
+		FormFieldTypeScale,
+		FormFieldTypeMatrix,
+		FormFieldTypeSectionHeader,
+		FormFieldTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *FormFieldType) IsExact() bool {
 	if e != nil {

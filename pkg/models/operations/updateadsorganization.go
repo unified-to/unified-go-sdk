@@ -29,6 +29,24 @@ const (
 func (e UpdateAdsOrganizationQueryParamFields) ToPointer() *UpdateAdsOrganizationQueryParamFields {
 	return &e
 }
+
+// UpdateAdsOrganizationQueryParamFieldsValues returns every known UpdateAdsOrganizationQueryParamFields value in schema order.
+func UpdateAdsOrganizationQueryParamFieldsValues() []UpdateAdsOrganizationQueryParamFields {
+	return []UpdateAdsOrganizationQueryParamFields{
+		UpdateAdsOrganizationQueryParamFieldsID,
+		UpdateAdsOrganizationQueryParamFieldsCreatedAt,
+		UpdateAdsOrganizationQueryParamFieldsUpdatedAt,
+		UpdateAdsOrganizationQueryParamFieldsName,
+		UpdateAdsOrganizationQueryParamFieldsCurrency,
+		UpdateAdsOrganizationQueryParamFieldsTimezone,
+		UpdateAdsOrganizationQueryParamFieldsParentID,
+		UpdateAdsOrganizationQueryParamFieldsStatus,
+		UpdateAdsOrganizationQueryParamFieldsAccountNumber,
+		UpdateAdsOrganizationQueryParamFieldsManagers,
+		UpdateAdsOrganizationQueryParamFieldsMetadata,
+		UpdateAdsOrganizationQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateAdsOrganizationQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -31,6 +31,26 @@ const (
 func (e GetPropertyConversationQueryParamFields) ToPointer() *GetPropertyConversationQueryParamFields {
 	return &e
 }
+
+// GetPropertyConversationQueryParamFieldsValues returns every known GetPropertyConversationQueryParamFields value in schema order.
+func GetPropertyConversationQueryParamFieldsValues() []GetPropertyConversationQueryParamFields {
+	return []GetPropertyConversationQueryParamFields{
+		GetPropertyConversationQueryParamFieldsID,
+		GetPropertyConversationQueryParamFieldsCreatedAt,
+		GetPropertyConversationQueryParamFieldsUpdatedAt,
+		GetPropertyConversationQueryParamFieldsListingID,
+		GetPropertyConversationQueryParamFieldsReservationID,
+		GetPropertyConversationQueryParamFieldsGuestID,
+		GetPropertyConversationQueryParamFieldsGuestName,
+		GetPropertyConversationQueryParamFieldsGuestEmail,
+		GetPropertyConversationQueryParamFieldsGuestPhone,
+		GetPropertyConversationQueryParamFieldsSource,
+		GetPropertyConversationQueryParamFieldsIsUnread,
+		GetPropertyConversationQueryParamFieldsMessages,
+		GetPropertyConversationQueryParamFieldsMetadata,
+		GetPropertyConversationQueryParamFieldsRaw,
+	}
+}
 func (e *GetPropertyConversationQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -40,6 +40,35 @@ const (
 func (e GetCrmLeadQueryParamFields) ToPointer() *GetCrmLeadQueryParamFields {
 	return &e
 }
+
+// GetCrmLeadQueryParamFieldsValues returns every known GetCrmLeadQueryParamFields value in schema order.
+func GetCrmLeadQueryParamFieldsValues() []GetCrmLeadQueryParamFields {
+	return []GetCrmLeadQueryParamFields{
+		GetCrmLeadQueryParamFieldsID,
+		GetCrmLeadQueryParamFieldsCreatedAt,
+		GetCrmLeadQueryParamFieldsUpdatedAt,
+		GetCrmLeadQueryParamFieldsName,
+		GetCrmLeadQueryParamFieldsFirstName,
+		GetCrmLeadQueryParamFieldsLastName,
+		GetCrmLeadQueryParamFieldsUserID,
+		GetCrmLeadQueryParamFieldsCreatorUserID,
+		GetCrmLeadQueryParamFieldsContactID,
+		GetCrmLeadQueryParamFieldsCompanyID,
+		GetCrmLeadQueryParamFieldsCompanyName,
+		GetCrmLeadQueryParamFieldsIsActive,
+		GetCrmLeadQueryParamFieldsAddress,
+		GetCrmLeadQueryParamFieldsEmails,
+		GetCrmLeadQueryParamFieldsTelephones,
+		GetCrmLeadQueryParamFieldsSource,
+		GetCrmLeadQueryParamFieldsStatus,
+		GetCrmLeadQueryParamFieldsTitle,
+		GetCrmLeadQueryParamFieldsLinkUrls,
+		GetCrmLeadQueryParamFieldsMetadata,
+		GetCrmLeadQueryParamFieldsVehicleIds,
+		GetCrmLeadQueryParamFieldsRaw,
+		GetCrmLeadQueryParamFieldsUnifiedPersonIds,
+	}
+}
 func (e *GetCrmLeadQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

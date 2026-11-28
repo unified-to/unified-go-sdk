@@ -19,6 +19,15 @@ func (e RepoPullrequestStatus) ToPointer() *RepoPullrequestStatus {
 	return &e
 }
 
+// RepoPullrequestStatusValues returns every known RepoPullrequestStatus value in schema order.
+func RepoPullrequestStatusValues() []RepoPullrequestStatus {
+	return []RepoPullrequestStatus{
+		RepoPullrequestStatusPending,
+		RepoPullrequestStatusApproved,
+		RepoPullrequestStatusRejected,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *RepoPullrequestStatus) IsExact() bool {
 	if e != nil {

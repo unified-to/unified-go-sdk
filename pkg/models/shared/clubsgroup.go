@@ -22,6 +22,17 @@ func (e GroupType) ToPointer() *GroupType {
 	return &e
 }
 
+// GroupTypeValues returns every known GroupType value in schema order.
+func GroupTypeValues() []GroupType {
+	return []GroupType{
+		GroupTypeCasualClub,
+		GroupTypeRacingTeam,
+		GroupTypeShop,
+		GroupTypeCompany,
+		GroupTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *GroupType) IsExact() bool {
 	if e != nil {
@@ -44,6 +55,15 @@ const (
 
 func (e MembershipStatus) ToPointer() *MembershipStatus {
 	return &e
+}
+
+// MembershipStatusValues returns every known MembershipStatus value in schema order.
+func MembershipStatusValues() []MembershipStatus {
+	return []MembershipStatus{
+		MembershipStatusMember,
+		MembershipStatusPending,
+		MembershipStatusNone,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -72,6 +92,19 @@ const (
 
 func (e SportType) ToPointer() *SportType {
 	return &e
+}
+
+// SportTypeValues returns every known SportType value in schema order.
+func SportTypeValues() []SportType {
+	return []SportType{
+		SportTypeRunning,
+		SportTypeCycling,
+		SportTypeSwimming,
+		SportTypeTriathlon,
+		SportTypeWalking,
+		SportTypeHiking,
+		SportTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

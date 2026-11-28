@@ -19,6 +19,14 @@ func (e ComputeMode) ToPointer() *ComputeMode {
 	return &e
 }
 
+// ComputeModeValues returns every known ComputeMode value in schema order.
+func ComputeModeValues() []ComputeMode {
+	return []ComputeMode{
+		ComputeModeRealtime,
+		ComputeModeBatch,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ComputeMode) IsExact() bool {
 	if e != nil {
@@ -41,6 +49,15 @@ const (
 
 func (e CdpSegmentType) ToPointer() *CdpSegmentType {
 	return &e
+}
+
+// CdpSegmentTypeValues returns every known CdpSegmentType value in schema order.
+func CdpSegmentTypeValues() []CdpSegmentType {
+	return []CdpSegmentType{
+		CdpSegmentTypeUsers,
+		CdpSegmentTypeAccounts,
+		CdpSegmentTypeLinked,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

@@ -21,6 +21,16 @@ func (e ClubsEventStatus) ToPointer() *ClubsEventStatus {
 	return &e
 }
 
+// ClubsEventStatusValues returns every known ClubsEventStatus value in schema order.
+func ClubsEventStatusValues() []ClubsEventStatus {
+	return []ClubsEventStatus{
+		ClubsEventStatusScheduled,
+		ClubsEventStatusCanceled,
+		ClubsEventStatusTbd,
+		ClubsEventStatusFinal,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ClubsEventStatus) IsExact() bool {
 	if e != nil {
@@ -43,6 +53,15 @@ const (
 
 func (e ClubsEventType) ToPointer() *ClubsEventType {
 	return &e
+}
+
+// ClubsEventTypeValues returns every known ClubsEventType value in schema order.
+func ClubsEventTypeValues() []ClubsEventType {
+	return []ClubsEventType{
+		ClubsEventTypeGame,
+		ClubsEventTypePractice,
+		ClubsEventTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

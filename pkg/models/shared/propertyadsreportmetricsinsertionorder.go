@@ -19,6 +19,15 @@ func (e PropertyAdsReportMetricsInsertionorderBudgetUnit) ToPointer() *PropertyA
 	return &e
 }
 
+// PropertyAdsReportMetricsInsertionorderBudgetUnitValues returns every known PropertyAdsReportMetricsInsertionorderBudgetUnit value in schema order.
+func PropertyAdsReportMetricsInsertionorderBudgetUnitValues() []PropertyAdsReportMetricsInsertionorderBudgetUnit {
+	return []PropertyAdsReportMetricsInsertionorderBudgetUnit{
+		PropertyAdsReportMetricsInsertionorderBudgetUnitUnspecified,
+		PropertyAdsReportMetricsInsertionorderBudgetUnitCurrency,
+		PropertyAdsReportMetricsInsertionorderBudgetUnitImpressions,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsInsertionorderBudgetUnit) IsExact() bool {
 	if e != nil {
@@ -45,6 +54,20 @@ const (
 
 func (e PropertyAdsReportMetricsInsertionorderStatus) ToPointer() *PropertyAdsReportMetricsInsertionorderStatus {
 	return &e
+}
+
+// PropertyAdsReportMetricsInsertionorderStatusValues returns every known PropertyAdsReportMetricsInsertionorderStatus value in schema order.
+func PropertyAdsReportMetricsInsertionorderStatusValues() []PropertyAdsReportMetricsInsertionorderStatus {
+	return []PropertyAdsReportMetricsInsertionorderStatus{
+		PropertyAdsReportMetricsInsertionorderStatusUnspecified,
+		PropertyAdsReportMetricsInsertionorderStatusActive,
+		PropertyAdsReportMetricsInsertionorderStatusPaused,
+		PropertyAdsReportMetricsInsertionorderStatusArchived,
+		PropertyAdsReportMetricsInsertionorderStatusDraft,
+		PropertyAdsReportMetricsInsertionorderStatusScheduledForDeletion,
+		PropertyAdsReportMetricsInsertionorderStatusProcessing,
+		PropertyAdsReportMetricsInsertionorderStatusProcessingFailed,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

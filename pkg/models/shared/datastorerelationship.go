@@ -13,6 +13,14 @@ func (e DatastoreRelationshipType) ToPointer() *DatastoreRelationshipType {
 	return &e
 }
 
+// DatastoreRelationshipTypeValues returns every known DatastoreRelationshipType value in schema order.
+func DatastoreRelationshipTypeValues() []DatastoreRelationshipType {
+	return []DatastoreRelationshipType{
+		DatastoreRelationshipTypeOne,
+		DatastoreRelationshipTypeMany,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *DatastoreRelationshipType) IsExact() bool {
 	if e != nil {

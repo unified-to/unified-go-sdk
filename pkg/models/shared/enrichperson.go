@@ -19,6 +19,14 @@ func (e EnrichPersonGender) ToPointer() *EnrichPersonGender {
 	return &e
 }
 
+// EnrichPersonGenderValues returns every known EnrichPersonGender value in schema order.
+func EnrichPersonGenderValues() []EnrichPersonGender {
+	return []EnrichPersonGender{
+		EnrichPersonGenderMale,
+		EnrichPersonGenderFemale,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *EnrichPersonGender) IsExact() bool {
 	if e != nil {

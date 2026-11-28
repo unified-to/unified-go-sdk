@@ -33,6 +33,28 @@ const (
 func (e CreateFormsFormQueryParamFields) ToPointer() *CreateFormsFormQueryParamFields {
 	return &e
 }
+
+// CreateFormsFormQueryParamFieldsValues returns every known CreateFormsFormQueryParamFields value in schema order.
+func CreateFormsFormQueryParamFieldsValues() []CreateFormsFormQueryParamFields {
+	return []CreateFormsFormQueryParamFields{
+		CreateFormsFormQueryParamFieldsID,
+		CreateFormsFormQueryParamFieldsCreatedAt,
+		CreateFormsFormQueryParamFieldsUpdatedAt,
+		CreateFormsFormQueryParamFieldsName,
+		CreateFormsFormQueryParamFieldsDescription,
+		CreateFormsFormQueryParamFieldsFields,
+		CreateFormsFormQueryParamFieldsIsActive,
+		CreateFormsFormQueryParamFieldsPublishedURL,
+		CreateFormsFormQueryParamFieldsResponseCount,
+		CreateFormsFormQueryParamFieldsHasMultipleSubmissions,
+		CreateFormsFormQueryParamFieldsHasProgressBar,
+		CreateFormsFormQueryParamFieldsHasShuffleQuestions,
+		CreateFormsFormQueryParamFieldsConfirmationMessage,
+		CreateFormsFormQueryParamFieldsConfirmationRedirectURL,
+		CreateFormsFormQueryParamFieldsMetadata,
+		CreateFormsFormQueryParamFieldsRaw,
+	}
+}
 func (e *CreateFormsFormQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

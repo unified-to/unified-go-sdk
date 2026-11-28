@@ -14,6 +14,15 @@ func (e PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes) ToPoin
 	return &e
 }
 
+// PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypesValues returns every known PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes value in schema order.
+func PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypesValues() []PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes {
+	return []PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes{
+		PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypesHome,
+		PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypesRecent,
+		PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypesTravel,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes) IsExact() bool {
 	if e != nil {

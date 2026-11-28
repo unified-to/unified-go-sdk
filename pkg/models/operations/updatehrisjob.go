@@ -33,6 +33,28 @@ const (
 func (e UpdateHrisJobQueryParamFields) ToPointer() *UpdateHrisJobQueryParamFields {
 	return &e
 }
+
+// UpdateHrisJobQueryParamFieldsValues returns every known UpdateHrisJobQueryParamFields value in schema order.
+func UpdateHrisJobQueryParamFieldsValues() []UpdateHrisJobQueryParamFields {
+	return []UpdateHrisJobQueryParamFields{
+		UpdateHrisJobQueryParamFieldsID,
+		UpdateHrisJobQueryParamFieldsCreatedAt,
+		UpdateHrisJobQueryParamFieldsUpdatedAt,
+		UpdateHrisJobQueryParamFieldsName,
+		UpdateHrisJobQueryParamFieldsDescription,
+		UpdateHrisJobQueryParamFieldsCode,
+		UpdateHrisJobQueryParamFieldsIsActive,
+		UpdateHrisJobQueryParamFieldsEmploymentType,
+		UpdateHrisJobQueryParamFieldsCompanyID,
+		UpdateHrisJobQueryParamFieldsGroups,
+		UpdateHrisJobQueryParamFieldsLocations,
+		UpdateHrisJobQueryParamFieldsParentID,
+		UpdateHrisJobQueryParamFieldsUsers,
+		UpdateHrisJobQueryParamFieldsCompensation,
+		UpdateHrisJobQueryParamFieldsMetadata,
+		UpdateHrisJobQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateHrisJobQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

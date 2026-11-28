@@ -21,6 +21,17 @@ func (e QmsAuditStatus) ToPointer() *QmsAuditStatus {
 	return &e
 }
 
+// QmsAuditStatusValues returns every known QmsAuditStatus value in schema order.
+func QmsAuditStatusValues() []QmsAuditStatus {
+	return []QmsAuditStatus{
+		QmsAuditStatusOpen,
+		QmsAuditStatusInProgress,
+		QmsAuditStatusInReview,
+		QmsAuditStatusClosed,
+		QmsAuditStatusCancelled,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *QmsAuditStatus) IsExact() bool {
 	if e != nil {
@@ -44,6 +55,17 @@ const (
 
 func (e QmsAuditType) ToPointer() *QmsAuditType {
 	return &e
+}
+
+// QmsAuditTypeValues returns every known QmsAuditType value in schema order.
+func QmsAuditTypeValues() []QmsAuditType {
+	return []QmsAuditType{
+		QmsAuditTypeInternal,
+		QmsAuditTypeSupplier,
+		QmsAuditTypeCustomer,
+		QmsAuditTypeCertification,
+		QmsAuditTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

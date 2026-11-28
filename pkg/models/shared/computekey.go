@@ -21,6 +21,16 @@ func (e ComputeKeyType) ToPointer() *ComputeKeyType {
 	return &e
 }
 
+// ComputeKeyTypeValues returns every known ComputeKeyType value in schema order.
+func ComputeKeyTypeValues() []ComputeKeyType {
+	return []ComputeKeyType{
+		ComputeKeyTypeSSH,
+		ComputeKeyTypeRegistry,
+		ComputeKeyTypeSecret,
+		ComputeKeyTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ComputeKeyType) IsExact() bool {
 	if e != nil {

@@ -21,6 +21,17 @@ func (e DmsPartsalePayType) ToPointer() *DmsPartsalePayType {
 	return &e
 }
 
+// DmsPartsalePayTypeValues returns every known DmsPartsalePayType value in schema order.
+func DmsPartsalePayTypeValues() []DmsPartsalePayType {
+	return []DmsPartsalePayType{
+		DmsPartsalePayTypeCustomer,
+		DmsPartsalePayTypeWarranty,
+		DmsPartsalePayTypeInternal,
+		DmsPartsalePayTypeServiceContract,
+		DmsPartsalePayTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *DmsPartsalePayType) IsExact() bool {
 	if e != nil {
@@ -48,6 +59,19 @@ func (e DmsPartsaleStatus) ToPointer() *DmsPartsaleStatus {
 	return &e
 }
 
+// DmsPartsaleStatusValues returns every known DmsPartsaleStatus value in schema order.
+func DmsPartsaleStatusValues() []DmsPartsaleStatus {
+	return []DmsPartsaleStatus{
+		DmsPartsaleStatusDraft,
+		DmsPartsaleStatusOpen,
+		DmsPartsaleStatusInvoiced,
+		DmsPartsaleStatusShipped,
+		DmsPartsaleStatusClosed,
+		DmsPartsaleStatusVoided,
+		DmsPartsaleStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *DmsPartsaleStatus) IsExact() bool {
 	if e != nil {
@@ -70,6 +94,16 @@ const (
 
 func (e DmsPartsaleType) ToPointer() *DmsPartsaleType {
 	return &e
+}
+
+// DmsPartsaleTypeValues returns every known DmsPartsaleType value in schema order.
+func DmsPartsaleTypeValues() []DmsPartsaleType {
+	return []DmsPartsaleType{
+		DmsPartsaleTypeSale,
+		DmsPartsaleTypeQuote,
+		DmsPartsaleTypeReturn,
+		DmsPartsaleTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

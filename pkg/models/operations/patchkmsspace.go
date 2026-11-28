@@ -28,6 +28,23 @@ const (
 func (e PatchKmsSpaceQueryParamFields) ToPointer() *PatchKmsSpaceQueryParamFields {
 	return &e
 }
+
+// PatchKmsSpaceQueryParamFieldsValues returns every known PatchKmsSpaceQueryParamFields value in schema order.
+func PatchKmsSpaceQueryParamFieldsValues() []PatchKmsSpaceQueryParamFields {
+	return []PatchKmsSpaceQueryParamFields{
+		PatchKmsSpaceQueryParamFieldsID,
+		PatchKmsSpaceQueryParamFieldsCreatedAt,
+		PatchKmsSpaceQueryParamFieldsUpdatedAt,
+		PatchKmsSpaceQueryParamFieldsName,
+		PatchKmsSpaceQueryParamFieldsDescription,
+		PatchKmsSpaceQueryParamFieldsParentID,
+		PatchKmsSpaceQueryParamFieldsIsActive,
+		PatchKmsSpaceQueryParamFieldsUserID,
+		PatchKmsSpaceQueryParamFieldsParentPageID,
+		PatchKmsSpaceQueryParamFieldsMetadata,
+		PatchKmsSpaceQueryParamFieldsRaw,
+	}
+}
 func (e *PatchKmsSpaceQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

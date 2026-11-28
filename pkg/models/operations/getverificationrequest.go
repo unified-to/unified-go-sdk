@@ -43,6 +43,38 @@ const (
 func (e GetVerificationRequestQueryParamFields) ToPointer() *GetVerificationRequestQueryParamFields {
 	return &e
 }
+
+// GetVerificationRequestQueryParamFieldsValues returns every known GetVerificationRequestQueryParamFields value in schema order.
+func GetVerificationRequestQueryParamFieldsValues() []GetVerificationRequestQueryParamFields {
+	return []GetVerificationRequestQueryParamFields{
+		GetVerificationRequestQueryParamFieldsID,
+		GetVerificationRequestQueryParamFieldsCreatedAt,
+		GetVerificationRequestQueryParamFieldsUpdatedAt,
+		GetVerificationRequestQueryParamFieldsPackageID,
+		GetVerificationRequestQueryParamFieldsParameters,
+		GetVerificationRequestQueryParamFieldsTargetURL,
+		GetVerificationRequestQueryParamFieldsCandidateID,
+		GetVerificationRequestQueryParamFieldsProfileIPAddress,
+		GetVerificationRequestQueryParamFieldsProfileName,
+		GetVerificationRequestQueryParamFieldsProfileDateOfBirth,
+		GetVerificationRequestQueryParamFieldsProfileAddresses,
+		GetVerificationRequestQueryParamFieldsProfileGender,
+		GetVerificationRequestQueryParamFieldsProfileEmails,
+		GetVerificationRequestQueryParamFieldsProfileTelephones,
+		GetVerificationRequestQueryParamFieldsProfileNationalIdentifier,
+		GetVerificationRequestQueryParamFieldsResponseCompletedAt,
+		GetVerificationRequestQueryParamFieldsResponseExpiresAt,
+		GetVerificationRequestQueryParamFieldsResponseIssuedAt,
+		GetVerificationRequestQueryParamFieldsResponseStatus,
+		GetVerificationRequestQueryParamFieldsResponseScore,
+		GetVerificationRequestQueryParamFieldsResponseRedirectURL,
+		GetVerificationRequestQueryParamFieldsResponseDownloadUrls,
+		GetVerificationRequestQueryParamFieldsResponseDetails,
+		GetVerificationRequestQueryParamFieldsResponseSource,
+		GetVerificationRequestQueryParamFieldsMetadata,
+		GetVerificationRequestQueryParamFieldsRaw,
+	}
+}
 func (e *GetVerificationRequestQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

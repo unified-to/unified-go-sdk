@@ -297,6 +297,25 @@ func (e ClubsMetadataFormat) ToPointer() *ClubsMetadataFormat {
 	return &e
 }
 
+// ClubsMetadataFormatValues returns every known ClubsMetadataFormat value in schema order.
+func ClubsMetadataFormatValues() []ClubsMetadataFormat {
+	return []ClubsMetadataFormat{
+		ClubsMetadataFormatText,
+		ClubsMetadataFormatNumber,
+		ClubsMetadataFormatDate,
+		ClubsMetadataFormatBoolean,
+		ClubsMetadataFormatFile,
+		ClubsMetadataFormatTextarea,
+		ClubsMetadataFormatSingleSelect,
+		ClubsMetadataFormatMultipleSelect,
+		ClubsMetadataFormatMeasurement,
+		ClubsMetadataFormatPrice,
+		ClubsMetadataFormatYesNo,
+		ClubsMetadataFormatCurrency,
+		ClubsMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ClubsMetadataFormat) IsExact() bool {
 	if e != nil {

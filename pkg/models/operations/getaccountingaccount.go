@@ -33,6 +33,28 @@ const (
 func (e QueryParamFields) ToPointer() *QueryParamFields {
 	return &e
 }
+
+// QueryParamFieldsValues returns every known QueryParamFields value in schema order.
+func QueryParamFieldsValues() []QueryParamFields {
+	return []QueryParamFields{
+		QueryParamFieldsID,
+		QueryParamFieldsCreatedAt,
+		QueryParamFieldsUpdatedAt,
+		QueryParamFieldsName,
+		QueryParamFieldsDescription,
+		QueryParamFieldsType,
+		QueryParamFieldsStatus,
+		QueryParamFieldsBalance,
+		QueryParamFieldsCurrency,
+		QueryParamFieldsCustomerDefinedCode,
+		QueryParamFieldsIsPayable,
+		QueryParamFieldsParentID,
+		QueryParamFieldsTaxonomy,
+		QueryParamFieldsOrganizationID,
+		QueryParamFieldsMetadata,
+		QueryParamFieldsRaw,
+	}
+}
 func (e *QueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

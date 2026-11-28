@@ -38,6 +38,33 @@ const (
 func (e ListCrmCompaniesQueryParamFields) ToPointer() *ListCrmCompaniesQueryParamFields {
 	return &e
 }
+
+// ListCrmCompaniesQueryParamFieldsValues returns every known ListCrmCompaniesQueryParamFields value in schema order.
+func ListCrmCompaniesQueryParamFieldsValues() []ListCrmCompaniesQueryParamFields {
+	return []ListCrmCompaniesQueryParamFields{
+		ListCrmCompaniesQueryParamFieldsID,
+		ListCrmCompaniesQueryParamFieldsCreatedAt,
+		ListCrmCompaniesQueryParamFieldsUpdatedAt,
+		ListCrmCompaniesQueryParamFieldsName,
+		ListCrmCompaniesQueryParamFieldsDealIds,
+		ListCrmCompaniesQueryParamFieldsContactIds,
+		ListCrmCompaniesQueryParamFieldsEmails,
+		ListCrmCompaniesQueryParamFieldsTelephones,
+		ListCrmCompaniesQueryParamFieldsWebsites,
+		ListCrmCompaniesQueryParamFieldsAddress,
+		ListCrmCompaniesQueryParamFieldsIsActive,
+		ListCrmCompaniesQueryParamFieldsTags,
+		ListCrmCompaniesQueryParamFieldsDescription,
+		ListCrmCompaniesQueryParamFieldsIndustry,
+		ListCrmCompaniesQueryParamFieldsLinkUrls,
+		ListCrmCompaniesQueryParamFieldsEmployees,
+		ListCrmCompaniesQueryParamFieldsTimezone,
+		ListCrmCompaniesQueryParamFieldsUserID,
+		ListCrmCompaniesQueryParamFieldsMetadata,
+		ListCrmCompaniesQueryParamFieldsDomains,
+		ListCrmCompaniesQueryParamFieldsRaw,
+	}
+}
 func (e *ListCrmCompaniesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -56,6 +56,51 @@ const (
 func (e CreateAdsGroupQueryParamFields) ToPointer() *CreateAdsGroupQueryParamFields {
 	return &e
 }
+
+// CreateAdsGroupQueryParamFieldsValues returns every known CreateAdsGroupQueryParamFields value in schema order.
+func CreateAdsGroupQueryParamFieldsValues() []CreateAdsGroupQueryParamFields {
+	return []CreateAdsGroupQueryParamFields{
+		CreateAdsGroupQueryParamFieldsID,
+		CreateAdsGroupQueryParamFieldsCreatedAt,
+		CreateAdsGroupQueryParamFieldsUpdatedAt,
+		CreateAdsGroupQueryParamFieldsName,
+		CreateAdsGroupQueryParamFieldsParentID,
+		CreateAdsGroupQueryParamFieldsCampaignID,
+		CreateAdsGroupQueryParamFieldsOrganizationID,
+		CreateAdsGroupQueryParamFieldsInsertionorderID,
+		CreateAdsGroupQueryParamFieldsStatus,
+		CreateAdsGroupQueryParamFieldsEffectiveStatus,
+		CreateAdsGroupQueryParamFieldsTargeting,
+		CreateAdsGroupQueryParamFieldsBidAmount,
+		CreateAdsGroupQueryParamFieldsBidStrategy,
+		CreateAdsGroupQueryParamFieldsBudgetAmount,
+		CreateAdsGroupQueryParamFieldsBudgetPeriod,
+		CreateAdsGroupQueryParamFieldsBudgetAllocationType,
+		CreateAdsGroupQueryParamFieldsStartAt,
+		CreateAdsGroupQueryParamFieldsEndAt,
+		CreateAdsGroupQueryParamFieldsBudgetUnit,
+		CreateAdsGroupQueryParamFieldsBudgetMaxAmount,
+		CreateAdsGroupQueryParamFieldsType,
+		CreateAdsGroupQueryParamFieldsHasEuPoliticalAds,
+		CreateAdsGroupQueryParamFieldsPacing,
+		CreateAdsGroupQueryParamFieldsFrequencyCap,
+		CreateAdsGroupQueryParamFieldsCreativeIds,
+		CreateAdsGroupQueryParamFieldsOptimizationGoal,
+		CreateAdsGroupQueryParamFieldsBillingEvent,
+		CreateAdsGroupQueryParamFieldsCurrency,
+		CreateAdsGroupQueryParamFieldsPromoted,
+		CreateAdsGroupQueryParamFieldsLanguageLocale,
+		CreateAdsGroupQueryParamFieldsCreativeSelection,
+		CreateAdsGroupQueryParamFieldsMetadata,
+		CreateAdsGroupQueryParamFieldsRaw,
+		CreateAdsGroupQueryParamFieldsDeliveryType,
+		CreateAdsGroupQueryParamFieldsPriority,
+		CreateAdsGroupQueryParamFieldsCostType,
+		CreateAdsGroupQueryParamFieldsDeliveryGoal,
+		CreateAdsGroupQueryParamFieldsCreativeSizes,
+		CreateAdsGroupQueryParamFieldsConversionTracking,
+	}
+}
 func (e *CreateAdsGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -47,6 +47,42 @@ const (
 func (e PatchAccountingExpenseQueryParamFields) ToPointer() *PatchAccountingExpenseQueryParamFields {
 	return &e
 }
+
+// PatchAccountingExpenseQueryParamFieldsValues returns every known PatchAccountingExpenseQueryParamFields value in schema order.
+func PatchAccountingExpenseQueryParamFieldsValues() []PatchAccountingExpenseQueryParamFields {
+	return []PatchAccountingExpenseQueryParamFields{
+		PatchAccountingExpenseQueryParamFieldsID,
+		PatchAccountingExpenseQueryParamFieldsCreatedAt,
+		PatchAccountingExpenseQueryParamFieldsUpdatedAt,
+		PatchAccountingExpenseQueryParamFieldsUserID,
+		PatchAccountingExpenseQueryParamFieldsContactID,
+		PatchAccountingExpenseQueryParamFieldsAccountID,
+		PatchAccountingExpenseQueryParamFieldsName,
+		PatchAccountingExpenseQueryParamFieldsPaymentMethod,
+		PatchAccountingExpenseQueryParamFieldsPostedAt,
+		PatchAccountingExpenseQueryParamFieldsTotalAmount,
+		PatchAccountingExpenseQueryParamFieldsCurrency,
+		PatchAccountingExpenseQueryParamFieldsTaxAmount,
+		PatchAccountingExpenseQueryParamFieldsReimbursedAmount,
+		PatchAccountingExpenseQueryParamFieldsReimbursedAt,
+		PatchAccountingExpenseQueryParamFieldsApprovedAt,
+		PatchAccountingExpenseQueryParamFieldsApproverUserID,
+		PatchAccountingExpenseQueryParamFieldsLineitems,
+		PatchAccountingExpenseQueryParamFieldsAttachments,
+		PatchAccountingExpenseQueryParamFieldsOrganizationID,
+		PatchAccountingExpenseQueryParamFieldsUsers,
+		PatchAccountingExpenseQueryParamFieldsApproverUsers,
+		PatchAccountingExpenseQueryParamFieldsStatus,
+		PatchAccountingExpenseQueryParamFieldsExternalNumber,
+		PatchAccountingExpenseQueryParamFieldsCategoryIds,
+		PatchAccountingExpenseQueryParamFieldsProjectID,
+		PatchAccountingExpenseQueryParamFieldsMetadata,
+		PatchAccountingExpenseQueryParamFieldsTaxrateID,
+		PatchAccountingExpenseQueryParamFieldsExchangeRate,
+		PatchAccountingExpenseQueryParamFieldsType,
+		PatchAccountingExpenseQueryParamFieldsRaw,
+	}
+}
 func (e *PatchAccountingExpenseQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

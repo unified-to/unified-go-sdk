@@ -23,6 +23,19 @@ func (e HrisEmployeerelationshipType) ToPointer() *HrisEmployeerelationshipType 
 	return &e
 }
 
+// HrisEmployeerelationshipTypeValues returns every known HrisEmployeerelationshipType value in schema order.
+func HrisEmployeerelationshipTypeValues() []HrisEmployeerelationshipType {
+	return []HrisEmployeerelationshipType{
+		HrisEmployeerelationshipTypeEmergency,
+		HrisEmployeerelationshipTypeSpouse,
+		HrisEmployeerelationshipTypeChild,
+		HrisEmployeerelationshipTypeParent,
+		HrisEmployeerelationshipTypeSibling,
+		HrisEmployeerelationshipTypeFriend,
+		HrisEmployeerelationshipTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HrisEmployeerelationshipType) IsExact() bool {
 	if e != nil {

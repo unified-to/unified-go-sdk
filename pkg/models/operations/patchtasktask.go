@@ -45,6 +45,40 @@ const (
 func (e PatchTaskTaskQueryParamFields) ToPointer() *PatchTaskTaskQueryParamFields {
 	return &e
 }
+
+// PatchTaskTaskQueryParamFieldsValues returns every known PatchTaskTaskQueryParamFields value in schema order.
+func PatchTaskTaskQueryParamFieldsValues() []PatchTaskTaskQueryParamFields {
+	return []PatchTaskTaskQueryParamFields{
+		PatchTaskTaskQueryParamFieldsID,
+		PatchTaskTaskQueryParamFieldsCreatedAt,
+		PatchTaskTaskQueryParamFieldsUpdatedAt,
+		PatchTaskTaskQueryParamFieldsName,
+		PatchTaskTaskQueryParamFieldsProjectID,
+		PatchTaskTaskQueryParamFieldsParentID,
+		PatchTaskTaskQueryParamFieldsCompletedAt,
+		PatchTaskTaskQueryParamFieldsStatus,
+		PatchTaskTaskQueryParamFieldsNotes,
+		PatchTaskTaskQueryParamFieldsDueAt,
+		PatchTaskTaskQueryParamFieldsStartAt,
+		PatchTaskTaskQueryParamFieldsEndAt,
+		PatchTaskTaskQueryParamFieldsPriority,
+		PatchTaskTaskQueryParamFieldsAssignedUserIds,
+		PatchTaskTaskQueryParamFieldsCreatorUserID,
+		PatchTaskTaskQueryParamFieldsFollowerUserIds,
+		PatchTaskTaskQueryParamFieldsGroupIds,
+		PatchTaskTaskQueryParamFieldsTags,
+		PatchTaskTaskQueryParamFieldsURL,
+		PatchTaskTaskQueryParamFieldsAttachmentIds,
+		PatchTaskTaskQueryParamFieldsMetadata,
+		PatchTaskTaskQueryParamFieldsHasChildren,
+		PatchTaskTaskQueryParamFieldsType,
+		PatchTaskTaskQueryParamFieldsTimeSpent,
+		PatchTaskTaskQueryParamFieldsTimeSpentUnit,
+		PatchTaskTaskQueryParamFieldsProgress,
+		PatchTaskTaskQueryParamFieldsStoryPoints,
+		PatchTaskTaskQueryParamFieldsRaw,
+	}
+}
 func (e *PatchTaskTaskQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

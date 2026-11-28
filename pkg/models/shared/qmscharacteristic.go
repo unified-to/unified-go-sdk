@@ -14,6 +14,15 @@ func (e Result) ToPointer() *Result {
 	return &e
 }
 
+// ResultValues returns every known Result value in schema order.
+func ResultValues() []Result {
+	return []Result{
+		ResultPass,
+		ResultFail,
+		ResultConditional,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Result) IsExact() bool {
 	if e != nil {

@@ -24,6 +24,19 @@ const (
 func (e ListCalendarBusiesQueryParamFields) ToPointer() *ListCalendarBusiesQueryParamFields {
 	return &e
 }
+
+// ListCalendarBusiesQueryParamFieldsValues returns every known ListCalendarBusiesQueryParamFields value in schema order.
+func ListCalendarBusiesQueryParamFieldsValues() []ListCalendarBusiesQueryParamFields {
+	return []ListCalendarBusiesQueryParamFields{
+		ListCalendarBusiesQueryParamFieldsID,
+		ListCalendarBusiesQueryParamFieldsStartAt,
+		ListCalendarBusiesQueryParamFieldsEndAt,
+		ListCalendarBusiesQueryParamFieldsTimezone,
+		ListCalendarBusiesQueryParamFieldsDescription,
+		ListCalendarBusiesQueryParamFieldsMetadata,
+		ListCalendarBusiesQueryParamFieldsRaw,
+	}
+}
 func (e *ListCalendarBusiesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -20,6 +20,16 @@ func (e CommerceReviewCommentStatus) ToPointer() *CommerceReviewCommentStatus {
 	return &e
 }
 
+// CommerceReviewCommentStatusValues returns every known CommerceReviewCommentStatus value in schema order.
+func CommerceReviewCommentStatusValues() []CommerceReviewCommentStatus {
+	return []CommerceReviewCommentStatus{
+		CommerceReviewCommentStatusPending,
+		CommerceReviewCommentStatusApproved,
+		CommerceReviewCommentStatusRejected,
+		CommerceReviewCommentStatusSpam,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CommerceReviewCommentStatus) IsExact() bool {
 	if e != nil {

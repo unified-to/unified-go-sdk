@@ -47,7 +47,7 @@ func main() {
         CommerceCollection: shared.CommerceCollection{
             CreatedAt: types.MustNewTimeFromString("2023-07-14T00:42:54.742Z"),
             Description: unifiedgosdk.Pointer("Ward - Hudson's most advanced Computer technology increases graceful capabilities"),
-            ID: unifiedgosdk.Pointer("dfa2bada-8e30-46be-8b0f-7ec0e1b1fc2c"),
+            ID: unifiedgosdk.Pointer("7b6d55fb-230e-49c3-ba00-59f4b64c101b"),
             IsActive: unifiedgosdk.Pointer(true),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsVisible: unifiedgosdk.Pointer(false),
@@ -56,10 +56,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Armarium amiculum amet defendo."),
                     Height: unifiedgosdk.Pointer[float64](759.0),
-                    ID: unifiedgosdk.Pointer("e8fcbeb8-2fa9-4333-8066-6c5ed687e40e"),
+                    ID: unifiedgosdk.Pointer("90dce3d5-c245-458a-927e-7e6bee8692b2"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("4c1fb057-0751-467e-94ee-9cc8a460f384"),
+                            ID: unifiedgosdk.Pointer("dec0b586-2675-45ba-a9e2-d41656cf4270"),
                             Slug: unifiedgosdk.Pointer("cernuus"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "torrens",
@@ -74,7 +74,7 @@ func main() {
             },
             Metadata: []shared.CommerceMetadata{
                 shared.CommerceMetadata{
-                    ID: unifiedgosdk.Pointer("a12ce604-4055-4d59-aaaa-e9f97d2f8a44"),
+                    ID: unifiedgosdk.Pointer("ef588586-625d-409c-b054-471232c68496"),
                     Slug: unifiedgosdk.Pointer("velit"),
                     Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                         "aureus",
@@ -90,7 +90,7 @@ func main() {
                 "comparo",
             },
             Type: shared.CommerceCollectionTypeCollection.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-04-02T22:49:38.663Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-03T10:59:01.696Z"),
         },
         ConnectionID: "<id>",
     })
@@ -151,7 +151,7 @@ func main() {
         LmsCollection: shared.LmsCollection{
             CreatedAt: types.MustNewTimeFromString("2019-08-19T14:40:29.227Z"),
             Description: unifiedgosdk.Pointer("Defluo."),
-            ID: unifiedgosdk.Pointer("0ca114c0-38e2-4f6e-baa2-d6d956a8421b"),
+            ID: unifiedgosdk.Pointer("439785fe-6475-4a32-9d13-d51268ed7f41"),
             IsActive: unifiedgosdk.Pointer(true),
             Media: []shared.LmsMedia{
                 shared.LmsMedia{
@@ -168,7 +168,7 @@ func main() {
             },
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("spargo"),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-04T03:25:30.325Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-05T02:29:09.029Z"),
         },
         ConnectionID: "<id>",
     })
@@ -447,7 +447,7 @@ func main() {
         CommerceCollection: shared.CommerceCollection{
             CreatedAt: types.MustNewTimeFromString("2023-07-14T00:42:54.742Z"),
             Description: unifiedgosdk.Pointer("Ward - Hudson's most advanced Computer technology increases graceful capabilities"),
-            ID: unifiedgosdk.Pointer("aa0ce92f-e8f9-4be7-b172-f83e0ef7a6f5"),
+            ID: unifiedgosdk.Pointer("fb5292ee-8caa-40c3-9046-bbf0609a17f9"),
             IsActive: unifiedgosdk.Pointer(true),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsVisible: unifiedgosdk.Pointer(false),
@@ -456,10 +456,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Armarium amiculum amet defendo."),
                     Height: unifiedgosdk.Pointer[float64](759.0),
-                    ID: unifiedgosdk.Pointer("c73c4e68-9d89-439f-b270-045607cda9ec"),
+                    ID: unifiedgosdk.Pointer("52c62c32-90ba-4fee-b995-868f116cdbe5"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("8b50d45b-af30-4de7-bf2a-8b54f5f0ccb2"),
+                            ID: unifiedgosdk.Pointer("14591a24-0310-46c6-bb5b-6b6cd21b5efd"),
                             Slug: unifiedgosdk.Pointer("cernuus"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "torrens",
@@ -474,7 +474,7 @@ func main() {
             },
             Metadata: []shared.CommerceMetadata{
                 shared.CommerceMetadata{
-                    ID: unifiedgosdk.Pointer("034fbbc9-3859-4957-b1d3-742cdc8d4cb4"),
+                    ID: unifiedgosdk.Pointer("df094aa0-048a-4e25-b625-895340b670b8"),
                     Slug: unifiedgosdk.Pointer("velit"),
                     Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                         "aureus",
@@ -490,7 +490,7 @@ func main() {
                 "comparo",
             },
             Type: shared.CommerceCollectionTypeCollection.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-04-02T22:49:38.678Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-03T10:59:01.704Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -552,7 +552,7 @@ func main() {
         LmsCollection: shared.LmsCollection{
             CreatedAt: types.MustNewTimeFromString("2019-08-19T14:40:29.227Z"),
             Description: unifiedgosdk.Pointer("Defluo."),
-            ID: unifiedgosdk.Pointer("c6604aa4-719b-48df-befa-d7fd5c5bc248"),
+            ID: unifiedgosdk.Pointer("b3ba5ccf-3f87-4ae8-86a4-6adb7d2b652a"),
             IsActive: unifiedgosdk.Pointer(true),
             Media: []shared.LmsMedia{
                 shared.LmsMedia{
@@ -569,7 +569,7 @@ func main() {
             },
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("spargo"),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-04T03:25:30.341Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-05T02:29:09.038Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -741,7 +741,7 @@ func main() {
         CommerceCollection: shared.CommerceCollection{
             CreatedAt: types.MustNewTimeFromString("2023-07-14T00:42:54.742Z"),
             Description: unifiedgosdk.Pointer("Ward - Hudson's most advanced Computer technology increases graceful capabilities"),
-            ID: unifiedgosdk.Pointer("aa0ce92f-e8f9-4be7-b172-f83e0ef7a6f5"),
+            ID: unifiedgosdk.Pointer("fb5292ee-8caa-40c3-9046-bbf0609a17f9"),
             IsActive: unifiedgosdk.Pointer(true),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsVisible: unifiedgosdk.Pointer(false),
@@ -750,10 +750,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Armarium amiculum amet defendo."),
                     Height: unifiedgosdk.Pointer[float64](759.0),
-                    ID: unifiedgosdk.Pointer("c73c4e68-9d89-439f-b270-045607cda9ec"),
+                    ID: unifiedgosdk.Pointer("52c62c32-90ba-4fee-b995-868f116cdbe5"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("8b50d45b-af30-4de7-bf2a-8b54f5f0ccb2"),
+                            ID: unifiedgosdk.Pointer("14591a24-0310-46c6-bb5b-6b6cd21b5efd"),
                             Slug: unifiedgosdk.Pointer("cernuus"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "torrens",
@@ -768,7 +768,7 @@ func main() {
             },
             Metadata: []shared.CommerceMetadata{
                 shared.CommerceMetadata{
-                    ID: unifiedgosdk.Pointer("034fbbc9-3859-4957-b1d3-742cdc8d4cb4"),
+                    ID: unifiedgosdk.Pointer("df094aa0-048a-4e25-b625-895340b670b8"),
                     Slug: unifiedgosdk.Pointer("velit"),
                     Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                         "aureus",
@@ -784,7 +784,7 @@ func main() {
                 "comparo",
             },
             Type: shared.CommerceCollectionTypeCollection.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-04-02T22:49:38.678Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-03T10:59:01.704Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -846,7 +846,7 @@ func main() {
         LmsCollection: shared.LmsCollection{
             CreatedAt: types.MustNewTimeFromString("2019-08-19T14:40:29.227Z"),
             Description: unifiedgosdk.Pointer("Defluo."),
-            ID: unifiedgosdk.Pointer("c6604aa4-719b-48df-befa-d7fd5c5bc248"),
+            ID: unifiedgosdk.Pointer("b3ba5ccf-3f87-4ae8-86a4-6adb7d2b652a"),
             IsActive: unifiedgosdk.Pointer(true),
             Media: []shared.LmsMedia{
                 shared.LmsMedia{
@@ -863,7 +863,7 @@ func main() {
             },
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("spargo"),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-04T03:25:30.341Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-05T02:29:09.038Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

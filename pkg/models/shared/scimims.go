@@ -19,6 +19,20 @@ func (e ScimImsType) ToPointer() *ScimImsType {
 	return &e
 }
 
+// ScimImsTypeValues returns every known ScimImsType value in schema order.
+func ScimImsTypeValues() []ScimImsType {
+	return []ScimImsType{
+		ScimImsTypeAim,
+		ScimImsTypeQtalk,
+		ScimImsTypeIcq,
+		ScimImsTypeXMPP,
+		ScimImsTypeMsn,
+		ScimImsTypeSkype,
+		ScimImsTypeQq,
+		ScimImsTypeYahoo,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ScimImsType) IsExact() bool {
 	if e != nil {

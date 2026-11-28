@@ -33,6 +33,28 @@ const (
 func (e PatchAccountingOrderQueryParamFields) ToPointer() *PatchAccountingOrderQueryParamFields {
 	return &e
 }
+
+// PatchAccountingOrderQueryParamFieldsValues returns every known PatchAccountingOrderQueryParamFields value in schema order.
+func PatchAccountingOrderQueryParamFieldsValues() []PatchAccountingOrderQueryParamFields {
+	return []PatchAccountingOrderQueryParamFields{
+		PatchAccountingOrderQueryParamFieldsID,
+		PatchAccountingOrderQueryParamFieldsCreatedAt,
+		PatchAccountingOrderQueryParamFieldsUpdatedAt,
+		PatchAccountingOrderQueryParamFieldsPostedAt,
+		PatchAccountingOrderQueryParamFieldsContactID,
+		PatchAccountingOrderQueryParamFieldsAccountID,
+		PatchAccountingOrderQueryParamFieldsType,
+		PatchAccountingOrderQueryParamFieldsCurrency,
+		PatchAccountingOrderQueryParamFieldsTotalAmount,
+		PatchAccountingOrderQueryParamFieldsShippingAddress,
+		PatchAccountingOrderQueryParamFieldsBillingAddress,
+		PatchAccountingOrderQueryParamFieldsStatus,
+		PatchAccountingOrderQueryParamFieldsLineitems,
+		PatchAccountingOrderQueryParamFieldsOrganizationID,
+		PatchAccountingOrderQueryParamFieldsMetadata,
+		PatchAccountingOrderQueryParamFieldsRaw,
+	}
+}
 func (e *PatchAccountingOrderQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

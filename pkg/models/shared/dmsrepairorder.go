@@ -20,6 +20,16 @@ func (e DmsRepairorderOdometerUnit) ToPointer() *DmsRepairorderOdometerUnit {
 	return &e
 }
 
+// DmsRepairorderOdometerUnitValues returns every known DmsRepairorderOdometerUnit value in schema order.
+func DmsRepairorderOdometerUnitValues() []DmsRepairorderOdometerUnit {
+	return []DmsRepairorderOdometerUnit{
+		DmsRepairorderOdometerUnitMiles,
+		DmsRepairorderOdometerUnitKilometers,
+		DmsRepairorderOdometerUnitHours,
+		DmsRepairorderOdometerUnitOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *DmsRepairorderOdometerUnit) IsExact() bool {
 	if e != nil {
@@ -44,6 +54,17 @@ const (
 
 func (e DmsRepairorderPayType) ToPointer() *DmsRepairorderPayType {
 	return &e
+}
+
+// DmsRepairorderPayTypeValues returns every known DmsRepairorderPayType value in schema order.
+func DmsRepairorderPayTypeValues() []DmsRepairorderPayType {
+	return []DmsRepairorderPayType{
+		DmsRepairorderPayTypeCustomer,
+		DmsRepairorderPayTypeWarranty,
+		DmsRepairorderPayTypeInternal,
+		DmsRepairorderPayTypeServiceContract,
+		DmsRepairorderPayTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -74,6 +95,20 @@ func (e DmsRepairorderStatus) ToPointer() *DmsRepairorderStatus {
 	return &e
 }
 
+// DmsRepairorderStatusValues returns every known DmsRepairorderStatus value in schema order.
+func DmsRepairorderStatusValues() []DmsRepairorderStatus {
+	return []DmsRepairorderStatus{
+		DmsRepairorderStatusEstimate,
+		DmsRepairorderStatusOpen,
+		DmsRepairorderStatusInProgress,
+		DmsRepairorderStatusOnHold,
+		DmsRepairorderStatusCompleted,
+		DmsRepairorderStatusClosed,
+		DmsRepairorderStatusCancelled,
+		DmsRepairorderStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *DmsRepairorderStatus) IsExact() bool {
 	if e != nil {
@@ -101,6 +136,20 @@ const (
 
 func (e DmsRepairorderTransportType) ToPointer() *DmsRepairorderTransportType {
 	return &e
+}
+
+// DmsRepairorderTransportTypeValues returns every known DmsRepairorderTransportType value in schema order.
+func DmsRepairorderTransportTypeValues() []DmsRepairorderTransportType {
+	return []DmsRepairorderTransportType{
+		DmsRepairorderTransportTypeWaiter,
+		DmsRepairorderTransportTypeDropOff,
+		DmsRepairorderTransportTypeShuttle,
+		DmsRepairorderTransportTypeLoaner,
+		DmsRepairorderTransportTypeRental,
+		DmsRepairorderTransportTypePickupDelivery,
+		DmsRepairorderTransportTypeTaxi,
+		DmsRepairorderTransportTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

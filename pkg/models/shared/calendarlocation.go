@@ -23,6 +23,19 @@ func (e CalendarLocationType) ToPointer() *CalendarLocationType {
 	return &e
 }
 
+// CalendarLocationTypeValues returns every known CalendarLocationType value in schema order.
+func CalendarLocationTypeValues() []CalendarLocationType {
+	return []CalendarLocationType{
+		CalendarLocationTypeBuilding,
+		CalendarLocationTypeFloor,
+		CalendarLocationTypeCampus,
+		CalendarLocationTypeCity,
+		CalendarLocationTypeRegion,
+		CalendarLocationTypeCountry,
+		CalendarLocationTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CalendarLocationType) IsExact() bool {
 	if e != nil {

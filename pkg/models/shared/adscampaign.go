@@ -33,6 +33,29 @@ func (e AdvertisingChannelType) ToPointer() *AdvertisingChannelType {
 	return &e
 }
 
+// AdvertisingChannelTypeValues returns every known AdvertisingChannelType value in schema order.
+func AdvertisingChannelTypeValues() []AdvertisingChannelType {
+	return []AdvertisingChannelType{
+		AdvertisingChannelTypeText,
+		AdvertisingChannelTypeImage,
+		AdvertisingChannelTypeVideo,
+		AdvertisingChannelTypeResponsive,
+		AdvertisingChannelTypeShopping,
+		AdvertisingChannelTypeApp,
+		AdvertisingChannelTypeCall,
+		AdvertisingChannelTypeCarousel,
+		AdvertisingChannelTypeSocial,
+		AdvertisingChannelTypeDisplay,
+		AdvertisingChannelTypeSearch,
+		AdvertisingChannelTypeAudio,
+		AdvertisingChannelTypeYoutube,
+		AdvertisingChannelTypeNative,
+		AdvertisingChannelTypeCtv,
+		AdvertisingChannelTypeDooh,
+		AdvertisingChannelTypePerformanceMax,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AdvertisingChannelType) IsExact() bool {
 	if e != nil {
@@ -57,6 +80,16 @@ func (e BudgetPeriod) ToPointer() *BudgetPeriod {
 	return &e
 }
 
+// BudgetPeriodValues returns every known BudgetPeriod value in schema order.
+func BudgetPeriodValues() []BudgetPeriod {
+	return []BudgetPeriod{
+		BudgetPeriodDaily,
+		BudgetPeriodMonthly,
+		BudgetPeriodTotal,
+		BudgetPeriodLifetime,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *BudgetPeriod) IsExact() bool {
 	if e != nil {
@@ -78,6 +111,15 @@ const (
 
 func (e BudgetUnit) ToPointer() *BudgetUnit {
 	return &e
+}
+
+// BudgetUnitValues returns every known BudgetUnit value in schema order.
+func BudgetUnitValues() []BudgetUnit {
+	return []BudgetUnit{
+		BudgetUnitUnspecified,
+		BudgetUnitCurrency,
+		BudgetUnitImpressions,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -112,6 +154,23 @@ func (e EffectiveStatus) ToPointer() *EffectiveStatus {
 	return &e
 }
 
+// EffectiveStatusValues returns every known EffectiveStatus value in schema order.
+func EffectiveStatusValues() []EffectiveStatus {
+	return []EffectiveStatus{
+		EffectiveStatusUnspecified,
+		EffectiveStatusServing,
+		EffectiveStatusLimited,
+		EffectiveStatusLearning,
+		EffectiveStatusPaused,
+		EffectiveStatusPending,
+		EffectiveStatusEnded,
+		EffectiveStatusMisconfigured,
+		EffectiveStatusNotEligible,
+		EffectiveStatusArchived,
+		EffectiveStatusRemoved,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *EffectiveStatus) IsExact() bool {
 	if e != nil {
@@ -140,6 +199,20 @@ func (e Goal) ToPointer() *Goal {
 	return &e
 }
 
+// GoalValues returns every known Goal value in schema order.
+func GoalValues() []Goal {
+	return []Goal{
+		GoalUnspecified,
+		GoalBrandAwareness,
+		GoalEngagement,
+		GoalReach,
+		GoalWebsiteTraffic,
+		GoalLeads,
+		GoalSales,
+		GoalAppPromotion,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Goal) IsExact() bool {
 	if e != nil {
@@ -166,6 +239,20 @@ const (
 
 func (e AdsCampaignStatus) ToPointer() *AdsCampaignStatus {
 	return &e
+}
+
+// AdsCampaignStatusValues returns every known AdsCampaignStatus value in schema order.
+func AdsCampaignStatusValues() []AdsCampaignStatus {
+	return []AdsCampaignStatus{
+		AdsCampaignStatusUnspecified,
+		AdsCampaignStatusActive,
+		AdsCampaignStatusPaused,
+		AdsCampaignStatusArchived,
+		AdsCampaignStatusDraft,
+		AdsCampaignStatusScheduledForDeletion,
+		AdsCampaignStatusProcessing,
+		AdsCampaignStatusProcessingFailed,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

@@ -20,6 +20,15 @@ func (e ComputeInstanceArchitecture) ToPointer() *ComputeInstanceArchitecture {
 	return &e
 }
 
+// ComputeInstanceArchitectureValues returns every known ComputeInstanceArchitecture value in schema order.
+func ComputeInstanceArchitectureValues() []ComputeInstanceArchitecture {
+	return []ComputeInstanceArchitecture{
+		ComputeInstanceArchitectureX8664,
+		ComputeInstanceArchitectureArm64,
+		ComputeInstanceArchitectureOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ComputeInstanceArchitecture) IsExact() bool {
 	if e != nil {
@@ -73,6 +82,44 @@ func (e ComputeInstanceGpuModel) ToPointer() *ComputeInstanceGpuModel {
 	return &e
 }
 
+// ComputeInstanceGpuModelValues returns every known ComputeInstanceGpuModel value in schema order.
+func ComputeInstanceGpuModelValues() []ComputeInstanceGpuModel {
+	return []ComputeInstanceGpuModel{
+		ComputeInstanceGpuModelNvidiaGb300,
+		ComputeInstanceGpuModelNvidiaB300,
+		ComputeInstanceGpuModelNvidiaGb200,
+		ComputeInstanceGpuModelNvidiaB200,
+		ComputeInstanceGpuModelNvidiaGh200,
+		ComputeInstanceGpuModelNvidiaH200,
+		ComputeInstanceGpuModelNvidiaH100Sxm,
+		ComputeInstanceGpuModelNvidiaH100Pcie,
+		ComputeInstanceGpuModelNvidiaH100Nvl,
+		ComputeInstanceGpuModelNvidiaA100Sxm80Gb,
+		ComputeInstanceGpuModelNvidiaA100Pcie80Gb,
+		ComputeInstanceGpuModelNvidiaA10040Gb,
+		ComputeInstanceGpuModelNvidiaL40S,
+		ComputeInstanceGpuModelNvidiaL40,
+		ComputeInstanceGpuModelNvidiaL4,
+		ComputeInstanceGpuModelNvidiaA40,
+		ComputeInstanceGpuModelNvidiaA10,
+		ComputeInstanceGpuModelNvidiaRtxPro6000,
+		ComputeInstanceGpuModelNvidiaRtx6000Ada,
+		ComputeInstanceGpuModelNvidiaRtxA6000,
+		ComputeInstanceGpuModelNvidiaRtxA5000,
+		ComputeInstanceGpuModelNvidiaRtxA4000,
+		ComputeInstanceGpuModelNvidiaRtx5090,
+		ComputeInstanceGpuModelNvidiaRtx4090,
+		ComputeInstanceGpuModelNvidiaRtx3090,
+		ComputeInstanceGpuModelNvidiaV100,
+		ComputeInstanceGpuModelNvidiaT4,
+		ComputeInstanceGpuModelAmdMi355X,
+		ComputeInstanceGpuModelAmdMi325X,
+		ComputeInstanceGpuModelAmdMi300X,
+		ComputeInstanceGpuModelAmdMi250,
+		ComputeInstanceGpuModelOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ComputeInstanceGpuModel) IsExact() bool {
 	if e != nil {
@@ -97,6 +144,17 @@ const (
 
 func (e Market) ToPointer() *Market {
 	return &e
+}
+
+// MarketValues returns every known Market value in schema order.
+func MarketValues() []Market {
+	return []Market{
+		MarketOnDemand,
+		MarketSpot,
+		MarketReserved,
+		MarketCommunity,
+		MarketOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -124,6 +182,16 @@ func (e OnExpire) ToPointer() *OnExpire {
 	return &e
 }
 
+// OnExpireValues returns every known OnExpire value in schema order.
+func OnExpireValues() []OnExpire {
+	return []OnExpire{
+		OnExpireTerminate,
+		OnExpirePause,
+		OnExpireStop,
+		OnExpireOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *OnExpire) IsExact() bool {
 	if e != nil {
@@ -149,6 +217,16 @@ func (e OnIdle) ToPointer() *OnIdle {
 	return &e
 }
 
+// OnIdleValues returns every known OnIdle value in schema order.
+func OnIdleValues() []OnIdle {
+	return []OnIdle{
+		OnIdleTerminate,
+		OnIdlePause,
+		OnIdleStop,
+		OnIdleOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *OnIdle) IsExact() bool {
 	if e != nil {
@@ -171,6 +249,15 @@ const (
 
 func (e PriceUnit) ToPointer() *PriceUnit {
 	return &e
+}
+
+// PriceUnitValues returns every known PriceUnit value in schema order.
+func PriceUnitValues() []PriceUnit {
+	return []PriceUnit{
+		PriceUnitPerGpuHour,
+		PriceUnitPerInstanceHour,
+		PriceUnitOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -208,6 +295,26 @@ func (e ComputeInstanceStatus) ToPointer() *ComputeInstanceStatus {
 	return &e
 }
 
+// ComputeInstanceStatusValues returns every known ComputeInstanceStatus value in schema order.
+func ComputeInstanceStatusValues() []ComputeInstanceStatus {
+	return []ComputeInstanceStatus{
+		ComputeInstanceStatusProvisioning,
+		ComputeInstanceStatusStarting,
+		ComputeInstanceStatusRunning,
+		ComputeInstanceStatusStopping,
+		ComputeInstanceStatusStopped,
+		ComputeInstanceStatusPausing,
+		ComputeInstanceStatusPaused,
+		ComputeInstanceStatusResuming,
+		ComputeInstanceStatusRestarting,
+		ComputeInstanceStatusTerminating,
+		ComputeInstanceStatusTerminated,
+		ComputeInstanceStatusPreempted,
+		ComputeInstanceStatusError,
+		ComputeInstanceStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ComputeInstanceStatus) IsExact() bool {
 	if e != nil {
@@ -232,6 +339,17 @@ const (
 
 func (e ComputeInstanceType) ToPointer() *ComputeInstanceType {
 	return &e
+}
+
+// ComputeInstanceTypeValues returns every known ComputeInstanceType value in schema order.
+func ComputeInstanceTypeValues() []ComputeInstanceType {
+	return []ComputeInstanceType{
+		ComputeInstanceTypeContainer,
+		ComputeInstanceTypeVM,
+		ComputeInstanceTypeBaremetal,
+		ComputeInstanceTypeSandbox,
+		ComputeInstanceTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

@@ -32,6 +32,27 @@ const (
 func (e CreatePropertyQuoteQueryParamFields) ToPointer() *CreatePropertyQuoteQueryParamFields {
 	return &e
 }
+
+// CreatePropertyQuoteQueryParamFieldsValues returns every known CreatePropertyQuoteQueryParamFields value in schema order.
+func CreatePropertyQuoteQueryParamFieldsValues() []CreatePropertyQuoteQueryParamFields {
+	return []CreatePropertyQuoteQueryParamFields{
+		CreatePropertyQuoteQueryParamFieldsID,
+		CreatePropertyQuoteQueryParamFieldsCreatedAt,
+		CreatePropertyQuoteQueryParamFieldsListingID,
+		CreatePropertyQuoteQueryParamFieldsUnittypeID,
+		CreatePropertyQuoteQueryParamFieldsStartAt,
+		CreatePropertyQuoteQueryParamFieldsEndAt,
+		CreatePropertyQuoteQueryParamFieldsGuests,
+		CreatePropertyQuoteQueryParamFieldsAdults,
+		CreatePropertyQuoteQueryParamFieldsChildren,
+		CreatePropertyQuoteQueryParamFieldsPromotionCode,
+		CreatePropertyQuoteQueryParamFieldsCurrency,
+		CreatePropertyQuoteQueryParamFieldsTotalAmount,
+		CreatePropertyQuoteQueryParamFieldsDepositAmount,
+		CreatePropertyQuoteQueryParamFieldsLineItems,
+		CreatePropertyQuoteQueryParamFieldsRaw,
+	}
+}
 func (e *CreatePropertyQuoteQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -15,6 +15,16 @@ func (e AdsConversionTrackingType) ToPointer() *AdsConversionTrackingType {
 	return &e
 }
 
+// AdsConversionTrackingTypeValues returns every known AdsConversionTrackingType value in schema order.
+func AdsConversionTrackingTypeValues() []AdsConversionTrackingType {
+	return []AdsConversionTrackingType{
+		AdsConversionTrackingTypeFloodlightActivity,
+		AdsConversionTrackingTypeConversionTag,
+		AdsConversionTrackingTypePixel,
+		AdsConversionTrackingTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AdsConversionTrackingType) IsExact() bool {
 	if e != nil {

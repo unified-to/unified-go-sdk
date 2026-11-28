@@ -58,6 +58,53 @@ const (
 func (e GetComputeInstanceQueryParamFields) ToPointer() *GetComputeInstanceQueryParamFields {
 	return &e
 }
+
+// GetComputeInstanceQueryParamFieldsValues returns every known GetComputeInstanceQueryParamFields value in schema order.
+func GetComputeInstanceQueryParamFieldsValues() []GetComputeInstanceQueryParamFields {
+	return []GetComputeInstanceQueryParamFields{
+		GetComputeInstanceQueryParamFieldsID,
+		GetComputeInstanceQueryParamFieldsCreatedAt,
+		GetComputeInstanceQueryParamFieldsUpdatedAt,
+		GetComputeInstanceQueryParamFieldsName,
+		GetComputeInstanceQueryParamFieldsType,
+		GetComputeInstanceQueryParamFieldsStatus,
+		GetComputeInstanceQueryParamFieldsStatusReason,
+		GetComputeInstanceQueryParamFieldsAllowedActions,
+		GetComputeInstanceQueryParamFieldsMarket,
+		GetComputeInstanceQueryParamFieldsRegionID,
+		GetComputeInstanceQueryParamFieldsTemplateID,
+		GetComputeInstanceQueryParamFieldsImage,
+		GetComputeInstanceQueryParamFieldsSourceSnapshotID,
+		GetComputeInstanceQueryParamFieldsParentInstanceID,
+		GetComputeInstanceQueryParamFieldsGputypeID,
+		GetComputeInstanceQueryParamFieldsGpuModel,
+		GetComputeInstanceQueryParamFieldsGpuCount,
+		GetComputeInstanceQueryParamFieldsSku,
+		GetComputeInstanceQueryParamFieldsCPUCount,
+		GetComputeInstanceQueryParamFieldsMemoryMb,
+		GetComputeInstanceQueryParamFieldsDiskMb,
+		GetComputeInstanceQueryParamFieldsArchitecture,
+		GetComputeInstanceQueryParamFieldsPriceAmount,
+		GetComputeInstanceQueryParamFieldsPriceUnit,
+		GetComputeInstanceQueryParamFieldsCurrency,
+		GetComputeInstanceQueryParamFieldsVolumeIds,
+		GetComputeInstanceQueryParamFieldsEndpoints,
+		GetComputeInstanceQueryParamFieldsSSH,
+		GetComputeInstanceQueryParamFieldsHasInternetAccess,
+		GetComputeInstanceQueryParamFieldsTimeoutSeconds,
+		GetComputeInstanceQueryParamFieldsExpiresAt,
+		GetComputeInstanceQueryParamFieldsOnExpire,
+		GetComputeInstanceQueryParamFieldsIdleTimeoutSeconds,
+		GetComputeInstanceQueryParamFieldsOnIdle,
+		GetComputeInstanceQueryParamFieldsProjectIdentifier,
+		GetComputeInstanceQueryParamFieldsServiceID,
+		GetComputeInstanceQueryParamFieldsEnv,
+		GetComputeInstanceQueryParamFieldsStartedAt,
+		GetComputeInstanceQueryParamFieldsTerminatedAt,
+		GetComputeInstanceQueryParamFieldsMetadata,
+		GetComputeInstanceQueryParamFieldsRaw,
+	}
+}
 func (e *GetComputeInstanceQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

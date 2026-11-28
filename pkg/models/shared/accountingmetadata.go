@@ -295,6 +295,25 @@ func (e Format) ToPointer() *Format {
 	return &e
 }
 
+// FormatValues returns every known Format value in schema order.
+func FormatValues() []Format {
+	return []Format{
+		FormatText,
+		FormatNumber,
+		FormatDate,
+		FormatBoolean,
+		FormatFile,
+		FormatTextarea,
+		FormatSingleSelect,
+		FormatMultipleSelect,
+		FormatMeasurement,
+		FormatPrice,
+		FormatYesNo,
+		FormatCurrency,
+		FormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Format) IsExact() bool {
 	if e != nil {

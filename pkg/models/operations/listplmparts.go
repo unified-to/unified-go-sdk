@@ -39,6 +39,34 @@ const (
 func (e ListPlmPartsQueryParamFields) ToPointer() *ListPlmPartsQueryParamFields {
 	return &e
 }
+
+// ListPlmPartsQueryParamFieldsValues returns every known ListPlmPartsQueryParamFields value in schema order.
+func ListPlmPartsQueryParamFieldsValues() []ListPlmPartsQueryParamFields {
+	return []ListPlmPartsQueryParamFields{
+		ListPlmPartsQueryParamFieldsID,
+		ListPlmPartsQueryParamFieldsCreatedAt,
+		ListPlmPartsQueryParamFieldsUpdatedAt,
+		ListPlmPartsQueryParamFieldsMasterIdentifier,
+		ListPlmPartsQueryParamFieldsNumber,
+		ListPlmPartsQueryParamFieldsName,
+		ListPlmPartsQueryParamFieldsDescription,
+		ListPlmPartsQueryParamFieldsRevision,
+		ListPlmPartsQueryParamFieldsStatus,
+		ListPlmPartsQueryParamFieldsLifecycleState,
+		ListPlmPartsQueryParamFieldsType,
+		ListPlmPartsQueryParamFieldsOriginalType,
+		ListPlmPartsQueryParamFieldsCategoryID,
+		ListPlmPartsQueryParamFieldsSource,
+		ListPlmPartsQueryParamFieldsUnitOfMeasure,
+		ListPlmPartsQueryParamFieldsIsAssembly,
+		ListPlmPartsQueryParamFieldsUserID,
+		ListPlmPartsQueryParamFieldsDocumentIds,
+		ListPlmPartsQueryParamFieldsFileIds,
+		ListPlmPartsQueryParamFieldsURL,
+		ListPlmPartsQueryParamFieldsMetadata,
+		ListPlmPartsQueryParamFieldsRaw,
+	}
+}
 func (e *ListPlmPartsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

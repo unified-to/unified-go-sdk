@@ -25,6 +25,20 @@ func (e PropertyReservationStatus) ToPointer() *PropertyReservationStatus {
 	return &e
 }
 
+// PropertyReservationStatusValues returns every known PropertyReservationStatus value in schema order.
+func PropertyReservationStatusValues() []PropertyReservationStatus {
+	return []PropertyReservationStatus{
+		PropertyReservationStatusInquiry,
+		PropertyReservationStatusPending,
+		PropertyReservationStatusConfirmed,
+		PropertyReservationStatusCancelled,
+		PropertyReservationStatusCheckedIn,
+		PropertyReservationStatusCheckedOut,
+		PropertyReservationStatusNoShow,
+		PropertyReservationStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyReservationStatus) IsExact() bool {
 	if e != nil {

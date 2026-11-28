@@ -21,6 +21,16 @@ func (e HealthcareDocumentStatus) ToPointer() *HealthcareDocumentStatus {
 	return &e
 }
 
+// HealthcareDocumentStatusValues returns every known HealthcareDocumentStatus value in schema order.
+func HealthcareDocumentStatusValues() []HealthcareDocumentStatus {
+	return []HealthcareDocumentStatus{
+		HealthcareDocumentStatusCurrent,
+		HealthcareDocumentStatusSuperseded,
+		HealthcareDocumentStatusEnteredInError,
+		HealthcareDocumentStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HealthcareDocumentStatus) IsExact() bool {
 	if e != nil {
@@ -51,6 +61,23 @@ const (
 
 func (e HealthcareDocumentType) ToPointer() *HealthcareDocumentType {
 	return &e
+}
+
+// HealthcareDocumentTypeValues returns every known HealthcareDocumentType value in schema order.
+func HealthcareDocumentTypeValues() []HealthcareDocumentType {
+	return []HealthcareDocumentType{
+		HealthcareDocumentTypeProgressNote,
+		HealthcareDocumentTypeConsultationNote,
+		HealthcareDocumentTypeHistoryAndPhysical,
+		HealthcareDocumentTypeDischargeSummary,
+		HealthcareDocumentTypeProcedureNote,
+		HealthcareDocumentTypeReferralNote,
+		HealthcareDocumentTypeSummary,
+		HealthcareDocumentTypeLaboratoryReport,
+		HealthcareDocumentTypeImagingReport,
+		HealthcareDocumentTypeConsent,
+		HealthcareDocumentTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

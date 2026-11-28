@@ -43,6 +43,44 @@ func (e PropertyComputeRegionGpuModels) ToPointer() *PropertyComputeRegionGpuMod
 	return &e
 }
 
+// PropertyComputeRegionGpuModelsValues returns every known PropertyComputeRegionGpuModels value in schema order.
+func PropertyComputeRegionGpuModelsValues() []PropertyComputeRegionGpuModels {
+	return []PropertyComputeRegionGpuModels{
+		PropertyComputeRegionGpuModelsNvidiaGb300,
+		PropertyComputeRegionGpuModelsNvidiaB300,
+		PropertyComputeRegionGpuModelsNvidiaGb200,
+		PropertyComputeRegionGpuModelsNvidiaB200,
+		PropertyComputeRegionGpuModelsNvidiaGh200,
+		PropertyComputeRegionGpuModelsNvidiaH200,
+		PropertyComputeRegionGpuModelsNvidiaH100Sxm,
+		PropertyComputeRegionGpuModelsNvidiaH100Pcie,
+		PropertyComputeRegionGpuModelsNvidiaH100Nvl,
+		PropertyComputeRegionGpuModelsNvidiaA100Sxm80Gb,
+		PropertyComputeRegionGpuModelsNvidiaA100Pcie80Gb,
+		PropertyComputeRegionGpuModelsNvidiaA10040Gb,
+		PropertyComputeRegionGpuModelsNvidiaL40S,
+		PropertyComputeRegionGpuModelsNvidiaL40,
+		PropertyComputeRegionGpuModelsNvidiaL4,
+		PropertyComputeRegionGpuModelsNvidiaA40,
+		PropertyComputeRegionGpuModelsNvidiaA10,
+		PropertyComputeRegionGpuModelsNvidiaRtxPro6000,
+		PropertyComputeRegionGpuModelsNvidiaRtx6000Ada,
+		PropertyComputeRegionGpuModelsNvidiaRtxA6000,
+		PropertyComputeRegionGpuModelsNvidiaRtxA5000,
+		PropertyComputeRegionGpuModelsNvidiaRtxA4000,
+		PropertyComputeRegionGpuModelsNvidiaRtx5090,
+		PropertyComputeRegionGpuModelsNvidiaRtx4090,
+		PropertyComputeRegionGpuModelsNvidiaRtx3090,
+		PropertyComputeRegionGpuModelsNvidiaV100,
+		PropertyComputeRegionGpuModelsNvidiaT4,
+		PropertyComputeRegionGpuModelsAmdMi355X,
+		PropertyComputeRegionGpuModelsAmdMi325X,
+		PropertyComputeRegionGpuModelsAmdMi300X,
+		PropertyComputeRegionGpuModelsAmdMi250,
+		PropertyComputeRegionGpuModelsOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyComputeRegionGpuModels) IsExact() bool {
 	if e != nil {

@@ -20,6 +20,16 @@ func (e Condition) ToPointer() *Condition {
 	return &e
 }
 
+// ConditionValues returns every known Condition value in schema order.
+func ConditionValues() []Condition {
+	return []Condition{
+		ConditionNew,
+		ConditionUsed,
+		ConditionDemo,
+		ConditionOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Condition) IsExact() bool {
 	if e != nil {
@@ -48,6 +58,20 @@ func (e FuelType) ToPointer() *FuelType {
 	return &e
 }
 
+// FuelTypeValues returns every known FuelType value in schema order.
+func FuelTypeValues() []FuelType {
+	return []FuelType{
+		FuelTypeGasoline,
+		FuelTypeDiesel,
+		FuelTypeElectric,
+		FuelTypeHybrid,
+		FuelTypeHydrogen,
+		FuelTypeLpg,
+		FuelTypeNaturalGas,
+		FuelTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *FuelType) IsExact() bool {
 	if e != nil {
@@ -70,6 +94,16 @@ const (
 
 func (e DmsVehicleOdometerUnit) ToPointer() *DmsVehicleOdometerUnit {
 	return &e
+}
+
+// DmsVehicleOdometerUnitValues returns every known DmsVehicleOdometerUnit value in schema order.
+func DmsVehicleOdometerUnitValues() []DmsVehicleOdometerUnit {
+	return []DmsVehicleOdometerUnit{
+		DmsVehicleOdometerUnitMiles,
+		DmsVehicleOdometerUnitKilometers,
+		DmsVehicleOdometerUnitHours,
+		DmsVehicleOdometerUnitOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -98,6 +132,19 @@ const (
 
 func (e DmsVehicleStatus) ToPointer() *DmsVehicleStatus {
 	return &e
+}
+
+// DmsVehicleStatusValues returns every known DmsVehicleStatus value in schema order.
+func DmsVehicleStatusValues() []DmsVehicleStatus {
+	return []DmsVehicleStatus{
+		DmsVehicleStatusAvailable,
+		DmsVehicleStatusOnOrder,
+		DmsVehicleStatusInTransit,
+		DmsVehicleStatusReserved,
+		DmsVehicleStatusSold,
+		DmsVehicleStatusUnavailable,
+		DmsVehicleStatusOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -129,6 +176,23 @@ const (
 
 func (e DmsVehicleType) ToPointer() *DmsVehicleType {
 	return &e
+}
+
+// DmsVehicleTypeValues returns every known DmsVehicleType value in schema order.
+func DmsVehicleTypeValues() []DmsVehicleType {
+	return []DmsVehicleType{
+		DmsVehicleTypeCar,
+		DmsVehicleTypeTruck,
+		DmsVehicleTypeVan,
+		DmsVehicleTypeSuv,
+		DmsVehicleTypeMotorcycle,
+		DmsVehicleTypeBus,
+		DmsVehicleTypeRv,
+		DmsVehicleTypeBoat,
+		DmsVehicleTypeTrailer,
+		DmsVehicleTypeEquipment,
+		DmsVehicleTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

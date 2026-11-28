@@ -33,6 +33,28 @@ const (
 func (e CreateHrisTimeshiftQueryParamFields) ToPointer() *CreateHrisTimeshiftQueryParamFields {
 	return &e
 }
+
+// CreateHrisTimeshiftQueryParamFieldsValues returns every known CreateHrisTimeshiftQueryParamFields value in schema order.
+func CreateHrisTimeshiftQueryParamFieldsValues() []CreateHrisTimeshiftQueryParamFields {
+	return []CreateHrisTimeshiftQueryParamFields{
+		CreateHrisTimeshiftQueryParamFieldsID,
+		CreateHrisTimeshiftQueryParamFieldsCreatedAt,
+		CreateHrisTimeshiftQueryParamFieldsUpdatedAt,
+		CreateHrisTimeshiftQueryParamFieldsEmployeeUserID,
+		CreateHrisTimeshiftQueryParamFieldsStartAt,
+		CreateHrisTimeshiftQueryParamFieldsEndAt,
+		CreateHrisTimeshiftQueryParamFieldsLocationID,
+		CreateHrisTimeshiftQueryParamFieldsCompanyID,
+		CreateHrisTimeshiftQueryParamFieldsGroupID,
+		CreateHrisTimeshiftQueryParamFieldsCompensation,
+		CreateHrisTimeshiftQueryParamFieldsApproverUserID,
+		CreateHrisTimeshiftQueryParamFieldsApprovedAt,
+		CreateHrisTimeshiftQueryParamFieldsHours,
+		CreateHrisTimeshiftQueryParamFieldsIsApproved,
+		CreateHrisTimeshiftQueryParamFieldsMetadata,
+		CreateHrisTimeshiftQueryParamFieldsRaw,
+	}
+}
 func (e *CreateHrisTimeshiftQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

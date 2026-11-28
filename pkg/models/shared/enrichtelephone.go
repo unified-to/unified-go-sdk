@@ -16,6 +16,17 @@ func (e EnrichTelephoneType) ToPointer() *EnrichTelephoneType {
 	return &e
 }
 
+// EnrichTelephoneTypeValues returns every known EnrichTelephoneType value in schema order.
+func EnrichTelephoneTypeValues() []EnrichTelephoneType {
+	return []EnrichTelephoneType{
+		EnrichTelephoneTypeWork,
+		EnrichTelephoneTypeHome,
+		EnrichTelephoneTypeOther,
+		EnrichTelephoneTypeFax,
+		EnrichTelephoneTypeMobile,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *EnrichTelephoneType) IsExact() bool {
 	if e != nil {

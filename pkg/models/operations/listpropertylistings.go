@@ -53,6 +53,48 @@ const (
 func (e ListPropertyListingsQueryParamFields) ToPointer() *ListPropertyListingsQueryParamFields {
 	return &e
 }
+
+// ListPropertyListingsQueryParamFieldsValues returns every known ListPropertyListingsQueryParamFields value in schema order.
+func ListPropertyListingsQueryParamFieldsValues() []ListPropertyListingsQueryParamFields {
+	return []ListPropertyListingsQueryParamFields{
+		ListPropertyListingsQueryParamFieldsID,
+		ListPropertyListingsQueryParamFieldsCreatedAt,
+		ListPropertyListingsQueryParamFieldsUpdatedAt,
+		ListPropertyListingsQueryParamFieldsName,
+		ListPropertyListingsQueryParamFieldsInternalName,
+		ListPropertyListingsQueryParamFieldsDescription,
+		ListPropertyListingsQueryParamFieldsType,
+		ListPropertyListingsQueryParamFieldsIsActive,
+		ListPropertyListingsQueryParamFieldsImageUrls,
+		ListPropertyListingsQueryParamFieldsAddress,
+		ListPropertyListingsQueryParamFieldsLatitude,
+		ListPropertyListingsQueryParamFieldsLongitude,
+		ListPropertyListingsQueryParamFieldsTimezone,
+		ListPropertyListingsQueryParamFieldsCurrency,
+		ListPropertyListingsQueryParamFieldsStartPriceAmount,
+		ListPropertyListingsQueryParamFieldsCleaningFeeAmount,
+		ListPropertyListingsQueryParamFieldsMaxOccupancy,
+		ListPropertyListingsQueryParamFieldsBedrooms,
+		ListPropertyListingsQueryParamFieldsBeds,
+		ListPropertyListingsQueryParamFieldsBathrooms,
+		ListPropertyListingsQueryParamFieldsMinNights,
+		ListPropertyListingsQueryParamFieldsMaxNights,
+		ListPropertyListingsQueryParamFieldsCheckInStartTime,
+		ListPropertyListingsQueryParamFieldsCheckInEndTime,
+		ListPropertyListingsQueryParamFieldsCheckOutTime,
+		ListPropertyListingsQueryParamFieldsAmenities,
+		ListPropertyListingsQueryParamFieldsHouseRules,
+		ListPropertyListingsQueryParamFieldsCancellationPolicy,
+		ListPropertyListingsQueryParamFieldsRating,
+		ListPropertyListingsQueryParamFieldsReviewCount,
+		ListPropertyListingsQueryParamFieldsChannels,
+		ListPropertyListingsQueryParamFieldsUnittypeIds,
+		ListPropertyListingsQueryParamFieldsOwnerUserIds,
+		ListPropertyListingsQueryParamFieldsWebURL,
+		ListPropertyListingsQueryParamFieldsMetadata,
+		ListPropertyListingsQueryParamFieldsRaw,
+	}
+}
 func (e *ListPropertyListingsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

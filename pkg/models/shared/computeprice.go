@@ -17,6 +17,17 @@ func (e ComputePriceMarket) ToPointer() *ComputePriceMarket {
 	return &e
 }
 
+// ComputePriceMarketValues returns every known ComputePriceMarket value in schema order.
+func ComputePriceMarketValues() []ComputePriceMarket {
+	return []ComputePriceMarket{
+		ComputePriceMarketOnDemand,
+		ComputePriceMarketSpot,
+		ComputePriceMarketReserved,
+		ComputePriceMarketCommunity,
+		ComputePriceMarketOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ComputePriceMarket) IsExact() bool {
 	if e != nil {
@@ -39,6 +50,15 @@ const (
 
 func (e ComputePricePriceUnit) ToPointer() *ComputePricePriceUnit {
 	return &e
+}
+
+// ComputePricePriceUnitValues returns every known ComputePricePriceUnit value in schema order.
+func ComputePricePriceUnitValues() []ComputePricePriceUnit {
+	return []ComputePricePriceUnit{
+		ComputePricePriceUnitPerGpuHour,
+		ComputePricePriceUnitPerInstanceHour,
+		ComputePricePriceUnitOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

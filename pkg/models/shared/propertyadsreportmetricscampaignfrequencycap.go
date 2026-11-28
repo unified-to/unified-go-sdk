@@ -18,6 +18,19 @@ func (e PropertyAdsReportMetricsCampaignFrequencyCapTimeUnit) ToPointer() *Prope
 	return &e
 }
 
+// PropertyAdsReportMetricsCampaignFrequencyCapTimeUnitValues returns every known PropertyAdsReportMetricsCampaignFrequencyCapTimeUnit value in schema order.
+func PropertyAdsReportMetricsCampaignFrequencyCapTimeUnitValues() []PropertyAdsReportMetricsCampaignFrequencyCapTimeUnit {
+	return []PropertyAdsReportMetricsCampaignFrequencyCapTimeUnit{
+		PropertyAdsReportMetricsCampaignFrequencyCapTimeUnitUnspecified,
+		PropertyAdsReportMetricsCampaignFrequencyCapTimeUnitLifetime,
+		PropertyAdsReportMetricsCampaignFrequencyCapTimeUnitMonths,
+		PropertyAdsReportMetricsCampaignFrequencyCapTimeUnitWeeks,
+		PropertyAdsReportMetricsCampaignFrequencyCapTimeUnitDays,
+		PropertyAdsReportMetricsCampaignFrequencyCapTimeUnitHours,
+		PropertyAdsReportMetricsCampaignFrequencyCapTimeUnitMinutes,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsCampaignFrequencyCapTimeUnit) IsExact() bool {
 	if e != nil {

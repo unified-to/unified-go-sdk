@@ -39,9 +39,9 @@ func main() {
 
     res, err := s.Pullrequest.CreateRepoPullrequest(ctx, operations.CreateRepoPullrequestRequest{
         RepoPullrequest: shared.RepoPullrequest{
-            ClosedAt: types.MustNewTimeFromString("2025-05-23T15:43:49.016Z"),
+            ClosedAt: types.MustNewTimeFromString("2025-05-24T05:55:56.645Z"),
             CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
-            ID: unifiedgosdk.Pointer("b8a66be7-6163-499a-8ed2-637317866c62"),
+            ID: unifiedgosdk.Pointer("e9a27134-1f30-4ffe-9094-4fcf8c3a68b0"),
             Labels: []string{
                 "crudelis",
                 "uxor",
@@ -50,7 +50,7 @@ func main() {
             Notes: unifiedgosdk.Pointer("Amet asporto defero coadunatio. Curtus ceno consuasor aggero veritatis suggero adeo creptio tutamen. Aqua delicate adopto derelinquo caritas bibo maiores vulgivagus succurro temporibus."),
             Status: shared.RepoPullrequestStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("compress redundant application"),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-15T14:53:26.842Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-16T09:45:18.960Z"),
         },
         ConnectionID: "<id>",
     })
@@ -218,9 +218,9 @@ func main() {
 
     res, err := s.Pullrequest.PatchRepoPullrequest(ctx, operations.PatchRepoPullrequestRequest{
         RepoPullrequest: shared.RepoPullrequest{
-            ClosedAt: types.MustNewTimeFromString("2025-05-23T15:43:49.026Z"),
+            ClosedAt: types.MustNewTimeFromString("2025-05-24T05:55:56.649Z"),
             CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
-            ID: unifiedgosdk.Pointer("09b2b5fe-ddea-4d42-b9e4-0ee1ac4b0925"),
+            ID: unifiedgosdk.Pointer("50a949f1-fe37-4f61-a78d-dc97858b00f5"),
             Labels: []string{
                 "crudelis",
                 "uxor",
@@ -229,7 +229,7 @@ func main() {
             Notes: unifiedgosdk.Pointer("Amet asporto defero coadunatio. Curtus ceno consuasor aggero veritatis suggero adeo creptio tutamen. Aqua delicate adopto derelinquo caritas bibo maiores vulgivagus succurro temporibus."),
             Status: shared.RepoPullrequestStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("compress redundant application"),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-15T14:53:26.855Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-16T09:45:18.965Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -344,9 +344,9 @@ func main() {
 
     res, err := s.Pullrequest.UpdateRepoPullrequest(ctx, operations.UpdateRepoPullrequestRequest{
         RepoPullrequest: shared.RepoPullrequest{
-            ClosedAt: types.MustNewTimeFromString("2025-05-23T15:43:49.026Z"),
+            ClosedAt: types.MustNewTimeFromString("2025-05-24T05:55:56.649Z"),
             CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
-            ID: unifiedgosdk.Pointer("09b2b5fe-ddea-4d42-b9e4-0ee1ac4b0925"),
+            ID: unifiedgosdk.Pointer("50a949f1-fe37-4f61-a78d-dc97858b00f5"),
             Labels: []string{
                 "crudelis",
                 "uxor",
@@ -355,7 +355,7 @@ func main() {
             Notes: unifiedgosdk.Pointer("Amet asporto defero coadunatio. Curtus ceno consuasor aggero veritatis suggero adeo creptio tutamen. Aqua delicate adopto derelinquo caritas bibo maiores vulgivagus succurro temporibus."),
             Status: shared.RepoPullrequestStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("compress redundant application"),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-15T14:53:26.855Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-16T09:45:18.965Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -59,6 +59,54 @@ const (
 func (e CreateAssessmentOrderQueryParamFields) ToPointer() *CreateAssessmentOrderQueryParamFields {
 	return &e
 }
+
+// CreateAssessmentOrderQueryParamFieldsValues returns every known CreateAssessmentOrderQueryParamFields value in schema order.
+func CreateAssessmentOrderQueryParamFieldsValues() []CreateAssessmentOrderQueryParamFields {
+	return []CreateAssessmentOrderQueryParamFields{
+		CreateAssessmentOrderQueryParamFieldsID,
+		CreateAssessmentOrderQueryParamFieldsCreatedAt,
+		CreateAssessmentOrderQueryParamFieldsUpdatedAt,
+		CreateAssessmentOrderQueryParamFieldsWorkspaceID,
+		CreateAssessmentOrderQueryParamFieldsConnectionID,
+		CreateAssessmentOrderQueryParamFieldsWebhookID,
+		CreateAssessmentOrderQueryParamFieldsPackageID,
+		CreateAssessmentOrderQueryParamFieldsParameters,
+		CreateAssessmentOrderQueryParamFieldsTargetURL,
+		CreateAssessmentOrderQueryParamFieldsStatus,
+		CreateAssessmentOrderQueryParamFieldsReference,
+		CreateAssessmentOrderQueryParamFieldsApplicationID,
+		CreateAssessmentOrderQueryParamFieldsJobID,
+		CreateAssessmentOrderQueryParamFieldsCompanyID,
+		CreateAssessmentOrderQueryParamFieldsCandidateID,
+		CreateAssessmentOrderQueryParamFieldsEmployeeID,
+		CreateAssessmentOrderQueryParamFieldsProfileName,
+		CreateAssessmentOrderQueryParamFieldsProfileFirstName,
+		CreateAssessmentOrderQueryParamFieldsProfileLastName,
+		CreateAssessmentOrderQueryParamFieldsProfileResumeURL,
+		CreateAssessmentOrderQueryParamFieldsProfileIPAddress,
+		CreateAssessmentOrderQueryParamFieldsProfileDateOfBirth,
+		CreateAssessmentOrderQueryParamFieldsProfileAddresses,
+		CreateAssessmentOrderQueryParamFieldsProfileGender,
+		CreateAssessmentOrderQueryParamFieldsProfileEmails,
+		CreateAssessmentOrderQueryParamFieldsProfileTelephones,
+		CreateAssessmentOrderQueryParamFieldsProfileNationalIdentifier,
+		CreateAssessmentOrderQueryParamFieldsProfileSocialMediaUrls,
+		CreateAssessmentOrderQueryParamFieldsResponseCompletedAt,
+		CreateAssessmentOrderQueryParamFieldsResponseExpiresAt,
+		CreateAssessmentOrderQueryParamFieldsResponseIssuedAt,
+		CreateAssessmentOrderQueryParamFieldsResponseStatus,
+		CreateAssessmentOrderQueryParamFieldsResponseScore,
+		CreateAssessmentOrderQueryParamFieldsResponseMaxScore,
+		CreateAssessmentOrderQueryParamFieldsResponseURL,
+		CreateAssessmentOrderQueryParamFieldsResponseRedirectURL,
+		CreateAssessmentOrderQueryParamFieldsResponseDownloadUrls,
+		CreateAssessmentOrderQueryParamFieldsResponseDetails,
+		CreateAssessmentOrderQueryParamFieldsResponseSource,
+		CreateAssessmentOrderQueryParamFieldsResponseAttributes,
+		CreateAssessmentOrderQueryParamFieldsMetadata,
+		CreateAssessmentOrderQueryParamFieldsRaw,
+	}
+}
 func (e *CreateAssessmentOrderQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

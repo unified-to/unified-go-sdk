@@ -32,6 +32,27 @@ const (
 func (e GetAtsInterviewQueryParamFields) ToPointer() *GetAtsInterviewQueryParamFields {
 	return &e
 }
+
+// GetAtsInterviewQueryParamFieldsValues returns every known GetAtsInterviewQueryParamFields value in schema order.
+func GetAtsInterviewQueryParamFieldsValues() []GetAtsInterviewQueryParamFields {
+	return []GetAtsInterviewQueryParamFields{
+		GetAtsInterviewQueryParamFieldsID,
+		GetAtsInterviewQueryParamFieldsCreatedAt,
+		GetAtsInterviewQueryParamFieldsUpdatedAt,
+		GetAtsInterviewQueryParamFieldsCandidateID,
+		GetAtsInterviewQueryParamFieldsJobID,
+		GetAtsInterviewQueryParamFieldsApplicationID,
+		GetAtsInterviewQueryParamFieldsUserIds,
+		GetAtsInterviewQueryParamFieldsStatus,
+		GetAtsInterviewQueryParamFieldsStartAt,
+		GetAtsInterviewQueryParamFieldsEndAt,
+		GetAtsInterviewQueryParamFieldsLocation,
+		GetAtsInterviewQueryParamFieldsMeetingURL,
+		GetAtsInterviewQueryParamFieldsExternalEventXref,
+		GetAtsInterviewQueryParamFieldsMetadata,
+		GetAtsInterviewQueryParamFieldsRaw,
+	}
+}
 func (e *GetAtsInterviewQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

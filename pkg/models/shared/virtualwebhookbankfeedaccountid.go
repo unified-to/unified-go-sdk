@@ -14,6 +14,15 @@ func (e FromWebhook) ToPointer() *FromWebhook {
 	return &e
 }
 
+// FromWebhookValues returns every known FromWebhook value in schema order.
+func FromWebhookValues() []FromWebhook {
+	return []FromWebhook{
+		FromWebhookSupportedRequired,
+		FromWebhookSupported,
+		FromWebhookNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *FromWebhook) IsExact() bool {
 	if e != nil {
@@ -35,6 +44,15 @@ const (
 
 func (e ListAccountID) ToPointer() *ListAccountID {
 	return &e
+}
+
+// ListAccountIDValues returns every known ListAccountID value in schema order.
+func ListAccountIDValues() []ListAccountID {
+	return []ListAccountID{
+		ListAccountIDSupportedRequired,
+		ListAccountIDSupported,
+		ListAccountIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -60,6 +78,15 @@ func (e ListAdID) ToPointer() *ListAdID {
 	return &e
 }
 
+// ListAdIDValues returns every known ListAdID value in schema order.
+func ListAdIDValues() []ListAdID {
+	return []ListAdID{
+		ListAdIDSupportedRequired,
+		ListAdIDSupported,
+		ListAdIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListAdID) IsExact() bool {
 	if e != nil {
@@ -81,6 +108,15 @@ const (
 
 func (e ListAgentID) ToPointer() *ListAgentID {
 	return &e
+}
+
+// ListAgentIDValues returns every known ListAgentID value in schema order.
+func ListAgentIDValues() []ListAgentID {
+	return []ListAgentID{
+		ListAgentIDSupportedRequired,
+		ListAgentIDSupported,
+		ListAgentIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -106,6 +142,15 @@ func (e ListApplicationID) ToPointer() *ListApplicationID {
 	return &e
 }
 
+// ListApplicationIDValues returns every known ListApplicationID value in schema order.
+func ListApplicationIDValues() []ListApplicationID {
+	return []ListApplicationID{
+		ListApplicationIDSupportedRequired,
+		ListApplicationIDSupported,
+		ListApplicationIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListApplicationID) IsExact() bool {
 	if e != nil {
@@ -127,6 +172,15 @@ const (
 
 func (e ListApproverUserID) ToPointer() *ListApproverUserID {
 	return &e
+}
+
+// ListApproverUserIDValues returns every known ListApproverUserID value in schema order.
+func ListApproverUserIDValues() []ListApproverUserID {
+	return []ListApproverUserID{
+		ListApproverUserIDSupportedRequired,
+		ListApproverUserIDSupported,
+		ListApproverUserIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -152,6 +206,15 @@ func (e ListAssignedUserID) ToPointer() *ListAssignedUserID {
 	return &e
 }
 
+// ListAssignedUserIDValues returns every known ListAssignedUserID value in schema order.
+func ListAssignedUserIDValues() []ListAssignedUserID {
+	return []ListAssignedUserID{
+		ListAssignedUserIDSupportedRequired,
+		ListAssignedUserIDSupported,
+		ListAssignedUserIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListAssignedUserID) IsExact() bool {
 	if e != nil {
@@ -173,6 +236,15 @@ const (
 
 func (e ListBankfeedaccountID) ToPointer() *ListBankfeedaccountID {
 	return &e
+}
+
+// ListBankfeedaccountIDValues returns every known ListBankfeedaccountID value in schema order.
+func ListBankfeedaccountIDValues() []ListBankfeedaccountID {
+	return []ListBankfeedaccountID{
+		ListBankfeedaccountIDSupportedRequired,
+		ListBankfeedaccountIDSupported,
+		ListBankfeedaccountIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -198,6 +270,15 @@ func (e ListBenefitID) ToPointer() *ListBenefitID {
 	return &e
 }
 
+// ListBenefitIDValues returns every known ListBenefitID value in schema order.
+func ListBenefitIDValues() []ListBenefitID {
+	return []ListBenefitID{
+		ListBenefitIDSupportedRequired,
+		ListBenefitIDSupported,
+		ListBenefitIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListBenefitID) IsExact() bool {
 	if e != nil {
@@ -219,6 +300,15 @@ const (
 
 func (e ListBillID) ToPointer() *ListBillID {
 	return &e
+}
+
+// ListBillIDValues returns every known ListBillID value in schema order.
+func ListBillIDValues() []ListBillID {
+	return []ListBillID{
+		ListBillIDSupportedRequired,
+		ListBillIDSupported,
+		ListBillIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -244,6 +334,15 @@ func (e ListBranchID) ToPointer() *ListBranchID {
 	return &e
 }
 
+// ListBranchIDValues returns every known ListBranchID value in schema order.
+func ListBranchIDValues() []ListBranchID {
+	return []ListBranchID{
+		ListBranchIDSupportedRequired,
+		ListBranchIDSupported,
+		ListBranchIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListBranchID) IsExact() bool {
 	if e != nil {
@@ -265,6 +364,15 @@ const (
 
 func (e ListCalendarID) ToPointer() *ListCalendarID {
 	return &e
+}
+
+// ListCalendarIDValues returns every known ListCalendarID value in schema order.
+func ListCalendarIDValues() []ListCalendarID {
+	return []ListCalendarID{
+		ListCalendarIDSupportedRequired,
+		ListCalendarIDSupported,
+		ListCalendarIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -290,6 +398,15 @@ func (e ListCallID) ToPointer() *ListCallID {
 	return &e
 }
 
+// ListCallIDValues returns every known ListCallID value in schema order.
+func ListCallIDValues() []ListCallID {
+	return []ListCallID{
+		ListCallIDSupportedRequired,
+		ListCallIDSupported,
+		ListCallIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListCallID) IsExact() bool {
 	if e != nil {
@@ -311,6 +428,15 @@ const (
 
 func (e ListCampaignID) ToPointer() *ListCampaignID {
 	return &e
+}
+
+// ListCampaignIDValues returns every known ListCampaignID value in schema order.
+func ListCampaignIDValues() []ListCampaignID {
+	return []ListCampaignID{
+		ListCampaignIDSupportedRequired,
+		ListCampaignIDSupported,
+		ListCampaignIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -336,6 +462,15 @@ func (e ListCandidateID) ToPointer() *ListCandidateID {
 	return &e
 }
 
+// ListCandidateIDValues returns every known ListCandidateID value in schema order.
+func ListCandidateIDValues() []ListCandidateID {
+	return []ListCandidateID{
+		ListCandidateIDSupportedRequired,
+		ListCandidateIDSupported,
+		ListCandidateIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListCandidateID) IsExact() bool {
 	if e != nil {
@@ -357,6 +492,15 @@ const (
 
 func (e ListCarrierID) ToPointer() *ListCarrierID {
 	return &e
+}
+
+// ListCarrierIDValues returns every known ListCarrierID value in schema order.
+func ListCarrierIDValues() []ListCarrierID {
+	return []ListCarrierID{
+		ListCarrierIDSupportedRequired,
+		ListCarrierIDSupported,
+		ListCarrierIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -382,6 +526,15 @@ func (e ListCategoryID) ToPointer() *ListCategoryID {
 	return &e
 }
 
+// ListCategoryIDValues returns every known ListCategoryID value in schema order.
+func ListCategoryIDValues() []ListCategoryID {
+	return []ListCategoryID{
+		ListCategoryIDSupportedRequired,
+		ListCategoryIDSupported,
+		ListCategoryIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListCategoryID) IsExact() bool {
 	if e != nil {
@@ -403,6 +556,15 @@ const (
 
 func (e ListChannelID) ToPointer() *ListChannelID {
 	return &e
+}
+
+// ListChannelIDValues returns every known ListChannelID value in schema order.
+func ListChannelIDValues() []ListChannelID {
+	return []ListChannelID{
+		ListChannelIDSupportedRequired,
+		ListChannelIDSupported,
+		ListChannelIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -428,6 +590,15 @@ func (e ListClassID) ToPointer() *ListClassID {
 	return &e
 }
 
+// ListClassIDValues returns every known ListClassID value in schema order.
+func ListClassIDValues() []ListClassID {
+	return []ListClassID{
+		ListClassIDSupportedRequired,
+		ListClassIDSupported,
+		ListClassIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListClassID) IsExact() bool {
 	if e != nil {
@@ -449,6 +620,15 @@ const (
 
 func (e ListCollectionID) ToPointer() *ListCollectionID {
 	return &e
+}
+
+// ListCollectionIDValues returns every known ListCollectionID value in schema order.
+func ListCollectionIDValues() []ListCollectionID {
+	return []ListCollectionID{
+		ListCollectionIDSupportedRequired,
+		ListCollectionIDSupported,
+		ListCollectionIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -474,6 +654,15 @@ func (e ListCompanyID) ToPointer() *ListCompanyID {
 	return &e
 }
 
+// ListCompanyIDValues returns every known ListCompanyID value in schema order.
+func ListCompanyIDValues() []ListCompanyID {
+	return []ListCompanyID{
+		ListCompanyIDSupportedRequired,
+		ListCompanyIDSupported,
+		ListCompanyIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListCompanyID) IsExact() bool {
 	if e != nil {
@@ -495,6 +684,15 @@ const (
 
 func (e ListContactID) ToPointer() *ListContactID {
 	return &e
+}
+
+// ListContactIDValues returns every known ListContactID value in schema order.
+func ListContactIDValues() []ListContactID {
+	return []ListContactID{
+		ListContactIDSupportedRequired,
+		ListContactIDSupported,
+		ListContactIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -520,6 +718,15 @@ func (e ListContentID) ToPointer() *ListContentID {
 	return &e
 }
 
+// ListContentIDValues returns every known ListContentID value in schema order.
+func ListContentIDValues() []ListContentID {
+	return []ListContentID{
+		ListContentIDSupportedRequired,
+		ListContentIDSupported,
+		ListContentIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListContentID) IsExact() bool {
 	if e != nil {
@@ -541,6 +748,15 @@ const (
 
 func (e ListCourseID) ToPointer() *ListCourseID {
 	return &e
+}
+
+// ListCourseIDValues returns every known ListCourseID value in schema order.
+func ListCourseIDValues() []ListCourseID {
+	return []ListCourseID{
+		ListCourseIDSupportedRequired,
+		ListCourseIDSupported,
+		ListCourseIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -566,6 +782,15 @@ func (e ListCustomerID) ToPointer() *ListCustomerID {
 	return &e
 }
 
+// ListCustomerIDValues returns every known ListCustomerID value in schema order.
+func ListCustomerIDValues() []ListCustomerID {
+	return []ListCustomerID{
+		ListCustomerIDSupportedRequired,
+		ListCustomerIDSupported,
+		ListCustomerIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListCustomerID) IsExact() bool {
 	if e != nil {
@@ -587,6 +812,15 @@ const (
 
 func (e ListCycleID) ToPointer() *ListCycleID {
 	return &e
+}
+
+// ListCycleIDValues returns every known ListCycleID value in schema order.
+func ListCycleIDValues() []ListCycleID {
+	return []ListCycleID{
+		ListCycleIDSupportedRequired,
+		ListCycleIDSupported,
+		ListCycleIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -612,6 +846,15 @@ func (e ListDatabaseID) ToPointer() *ListDatabaseID {
 	return &e
 }
 
+// ListDatabaseIDValues returns every known ListDatabaseID value in schema order.
+func ListDatabaseIDValues() []ListDatabaseID {
+	return []ListDatabaseID{
+		ListDatabaseIDSupportedRequired,
+		ListDatabaseIDSupported,
+		ListDatabaseIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListDatabaseID) IsExact() bool {
 	if e != nil {
@@ -633,6 +876,15 @@ const (
 
 func (e ListDealID) ToPointer() *ListDealID {
 	return &e
+}
+
+// ListDealIDValues returns every known ListDealID value in schema order.
+func ListDealIDValues() []ListDealID {
+	return []ListDealID{
+		ListDealIDSupportedRequired,
+		ListDealIDSupported,
+		ListDealIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -658,6 +910,15 @@ func (e ListDestinationID) ToPointer() *ListDestinationID {
 	return &e
 }
 
+// ListDestinationIDValues returns every known ListDestinationID value in schema order.
+func ListDestinationIDValues() []ListDestinationID {
+	return []ListDestinationID{
+		ListDestinationIDSupportedRequired,
+		ListDestinationIDSupported,
+		ListDestinationIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListDestinationID) IsExact() bool {
 	if e != nil {
@@ -679,6 +940,15 @@ const (
 
 func (e ListDimension) ToPointer() *ListDimension {
 	return &e
+}
+
+// ListDimensionValues returns every known ListDimension value in schema order.
+func ListDimensionValues() []ListDimension {
+	return []ListDimension{
+		ListDimensionSupportedRequired,
+		ListDimensionSupported,
+		ListDimensionNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -704,6 +974,15 @@ func (e ListDocumentID) ToPointer() *ListDocumentID {
 	return &e
 }
 
+// ListDocumentIDValues returns every known ListDocumentID value in schema order.
+func ListDocumentIDValues() []ListDocumentID {
+	return []ListDocumentID{
+		ListDocumentIDSupportedRequired,
+		ListDocumentIDSupported,
+		ListDocumentIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListDocumentID) IsExact() bool {
 	if e != nil {
@@ -725,6 +1004,15 @@ const (
 
 func (e ListEffectiveStatus) ToPointer() *ListEffectiveStatus {
 	return &e
+}
+
+// ListEffectiveStatusValues returns every known ListEffectiveStatus value in schema order.
+func ListEffectiveStatusValues() []ListEffectiveStatus {
+	return []ListEffectiveStatus{
+		ListEffectiveStatusSupportedRequired,
+		ListEffectiveStatusSupported,
+		ListEffectiveStatusNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -750,6 +1038,15 @@ func (e ListEmail) ToPointer() *ListEmail {
 	return &e
 }
 
+// ListEmailValues returns every known ListEmail value in schema order.
+func ListEmailValues() []ListEmail {
+	return []ListEmail{
+		ListEmailSupportedRequired,
+		ListEmailSupported,
+		ListEmailNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListEmail) IsExact() bool {
 	if e != nil {
@@ -771,6 +1068,15 @@ const (
 
 func (e ListEndLt) ToPointer() *ListEndLt {
 	return &e
+}
+
+// ListEndLtValues returns every known ListEndLt value in schema order.
+func ListEndLtValues() []ListEndLt {
+	return []ListEndLt{
+		ListEndLtSupportedRequired,
+		ListEndLtSupported,
+		ListEndLtNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -796,6 +1102,15 @@ func (e ListEventID) ToPointer() *ListEventID {
 	return &e
 }
 
+// ListEventIDValues returns every known ListEventID value in schema order.
+func ListEventIDValues() []ListEventID {
+	return []ListEventID{
+		ListEventIDSupportedRequired,
+		ListEventIDSupported,
+		ListEventIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListEventID) IsExact() bool {
 	if e != nil {
@@ -817,6 +1132,15 @@ const (
 
 func (e ListExpand) ToPointer() *ListExpand {
 	return &e
+}
+
+// ListExpandValues returns every known ListExpand value in schema order.
+func ListExpandValues() []ListExpand {
+	return []ListExpand{
+		ListExpandSupportedRequired,
+		ListExpandSupported,
+		ListExpandNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -842,6 +1166,15 @@ func (e ListFormID) ToPointer() *ListFormID {
 	return &e
 }
 
+// ListFormIDValues returns every known ListFormID value in schema order.
+func ListFormIDValues() []ListFormID {
+	return []ListFormID{
+		ListFormIDSupportedRequired,
+		ListFormIDSupported,
+		ListFormIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListFormID) IsExact() bool {
 	if e != nil {
@@ -863,6 +1196,15 @@ const (
 
 func (e ListFulltext) ToPointer() *ListFulltext {
 	return &e
+}
+
+// ListFulltextValues returns every known ListFulltext value in schema order.
+func ListFulltextValues() []ListFulltext {
+	return []ListFulltext{
+		ListFulltextSupportedRequired,
+		ListFulltextSupported,
+		ListFulltextNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -888,6 +1230,15 @@ func (e ListGoal) ToPointer() *ListGoal {
 	return &e
 }
 
+// ListGoalValues returns every known ListGoal value in schema order.
+func ListGoalValues() []ListGoal {
+	return []ListGoal{
+		ListGoalSupportedRequired,
+		ListGoalSupported,
+		ListGoalNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListGoal) IsExact() bool {
 	if e != nil {
@@ -909,6 +1260,15 @@ const (
 
 func (e ListGroupID) ToPointer() *ListGroupID {
 	return &e
+}
+
+// ListGroupIDValues returns every known ListGroupID value in schema order.
+func ListGroupIDValues() []ListGroupID {
+	return []ListGroupID{
+		ListGroupIDSupportedRequired,
+		ListGroupIDSupported,
+		ListGroupIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -934,6 +1294,15 @@ func (e ListGuestID) ToPointer() *ListGuestID {
 	return &e
 }
 
+// ListGuestIDValues returns every known ListGuestID value in schema order.
+func ListGuestIDValues() []ListGuestID {
+	return []ListGuestID{
+		ListGuestIDSupportedRequired,
+		ListGuestIDSupported,
+		ListGuestIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListGuestID) IsExact() bool {
 	if e != nil {
@@ -955,6 +1324,15 @@ const (
 
 func (e ListInstanceID) ToPointer() *ListInstanceID {
 	return &e
+}
+
+// ListInstanceIDValues returns every known ListInstanceID value in schema order.
+func ListInstanceIDValues() []ListInstanceID {
+	return []ListInstanceID{
+		ListInstanceIDSupportedRequired,
+		ListInstanceIDSupported,
+		ListInstanceIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -980,6 +1358,15 @@ func (e ListInstructorID) ToPointer() *ListInstructorID {
 	return &e
 }
 
+// ListInstructorIDValues returns every known ListInstructorID value in schema order.
+func ListInstructorIDValues() []ListInstructorID {
+	return []ListInstructorID{
+		ListInstructorIDSupportedRequired,
+		ListInstructorIDSupported,
+		ListInstructorIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListInstructorID) IsExact() bool {
 	if e != nil {
@@ -1001,6 +1388,15 @@ const (
 
 func (e ListInterviewID) ToPointer() *ListInterviewID {
 	return &e
+}
+
+// ListInterviewIDValues returns every known ListInterviewID value in schema order.
+func ListInterviewIDValues() []ListInterviewID {
+	return []ListInterviewID{
+		ListInterviewIDSupportedRequired,
+		ListInterviewIDSupported,
+		ListInterviewIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1026,6 +1422,15 @@ func (e ListInvoiceID) ToPointer() *ListInvoiceID {
 	return &e
 }
 
+// ListInvoiceIDValues returns every known ListInvoiceID value in schema order.
+func ListInvoiceIDValues() []ListInvoiceID {
+	return []ListInvoiceID{
+		ListInvoiceIDSupportedRequired,
+		ListInvoiceIDSupported,
+		ListInvoiceIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListInvoiceID) IsExact() bool {
 	if e != nil {
@@ -1047,6 +1452,15 @@ const (
 
 func (e ListIoID) ToPointer() *ListIoID {
 	return &e
+}
+
+// ListIoIDValues returns every known ListIoID value in schema order.
+func ListIoIDValues() []ListIoID {
+	return []ListIoID{
+		ListIoIDSupportedRequired,
+		ListIoIDSupported,
+		ListIoIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1072,6 +1486,15 @@ func (e ListIssueID) ToPointer() *ListIssueID {
 	return &e
 }
 
+// ListIssueIDValues returns every known ListIssueID value in schema order.
+func ListIssueIDValues() []ListIssueID {
+	return []ListIssueID{
+		ListIssueIDSupportedRequired,
+		ListIssueIDSupported,
+		ListIssueIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListIssueID) IsExact() bool {
 	if e != nil {
@@ -1093,6 +1516,15 @@ const (
 
 func (e ListItemID) ToPointer() *ListItemID {
 	return &e
+}
+
+// ListItemIDValues returns every known ListItemID value in schema order.
+func ListItemIDValues() []ListItemID {
+	return []ListItemID{
+		ListItemIDSupportedRequired,
+		ListItemIDSupported,
+		ListItemIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1118,6 +1550,15 @@ func (e ListItemVariantID) ToPointer() *ListItemVariantID {
 	return &e
 }
 
+// ListItemVariantIDValues returns every known ListItemVariantID value in schema order.
+func ListItemVariantIDValues() []ListItemVariantID {
+	return []ListItemVariantID{
+		ListItemVariantIDSupportedRequired,
+		ListItemVariantIDSupported,
+		ListItemVariantIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListItemVariantID) IsExact() bool {
 	if e != nil {
@@ -1139,6 +1580,15 @@ const (
 
 func (e ListJobID) ToPointer() *ListJobID {
 	return &e
+}
+
+// ListJobIDValues returns every known ListJobID value in schema order.
+func ListJobIDValues() []ListJobID {
+	return []ListJobID{
+		ListJobIDSupportedRequired,
+		ListJobIDSupported,
+		ListJobIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1164,6 +1614,15 @@ func (e ListLabelID) ToPointer() *ListLabelID {
 	return &e
 }
 
+// ListLabelIDValues returns every known ListLabelID value in schema order.
+func ListLabelIDValues() []ListLabelID {
+	return []ListLabelID{
+		ListLabelIDSupportedRequired,
+		ListLabelIDSupported,
+		ListLabelIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListLabelID) IsExact() bool {
 	if e != nil {
@@ -1185,6 +1644,15 @@ const (
 
 func (e ListLeadID) ToPointer() *ListLeadID {
 	return &e
+}
+
+// ListLeadIDValues returns every known ListLeadID value in schema order.
+func ListLeadIDValues() []ListLeadID {
+	return []ListLeadID{
+		ListLeadIDSupportedRequired,
+		ListLeadIDSupported,
+		ListLeadIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1210,6 +1678,15 @@ func (e ListLimit) ToPointer() *ListLimit {
 	return &e
 }
 
+// ListLimitValues returns every known ListLimit value in schema order.
+func ListLimitValues() []ListLimit {
+	return []ListLimit{
+		ListLimitSupportedRequired,
+		ListLimitSupported,
+		ListLimitNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListLimit) IsExact() bool {
 	if e != nil {
@@ -1231,6 +1708,15 @@ const (
 
 func (e ListLinkID) ToPointer() *ListLinkID {
 	return &e
+}
+
+// ListLinkIDValues returns every known ListLinkID value in schema order.
+func ListLinkIDValues() []ListLinkID {
+	return []ListLinkID{
+		ListLinkIDSupportedRequired,
+		ListLinkIDSupported,
+		ListLinkIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1256,6 +1742,15 @@ func (e ListListID) ToPointer() *ListListID {
 	return &e
 }
 
+// ListListIDValues returns every known ListListID value in schema order.
+func ListListIDValues() []ListListID {
+	return []ListListID{
+		ListListIDSupportedRequired,
+		ListListIDSupported,
+		ListListIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListListID) IsExact() bool {
 	if e != nil {
@@ -1277,6 +1772,15 @@ const (
 
 func (e ListListingID) ToPointer() *ListListingID {
 	return &e
+}
+
+// ListListingIDValues returns every known ListListingID value in schema order.
+func ListListingIDValues() []ListListingID {
+	return []ListListingID{
+		ListListingIDSupportedRequired,
+		ListListingIDSupported,
+		ListListingIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1302,6 +1806,15 @@ func (e ListLocationID) ToPointer() *ListLocationID {
 	return &e
 }
 
+// ListLocationIDValues returns every known ListLocationID value in schema order.
+func ListLocationIDValues() []ListLocationID {
+	return []ListLocationID{
+		ListLocationIDSupportedRequired,
+		ListLocationIDSupported,
+		ListLocationIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListLocationID) IsExact() bool {
 	if e != nil {
@@ -1323,6 +1836,15 @@ const (
 
 func (e ListMatterID) ToPointer() *ListMatterID {
 	return &e
+}
+
+// ListMatterIDValues returns every known ListMatterID value in schema order.
+func ListMatterIDValues() []ListMatterID {
+	return []ListMatterID{
+		ListMatterIDSupportedRequired,
+		ListMatterIDSupported,
+		ListMatterIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1348,6 +1870,15 @@ func (e ListMedium) ToPointer() *ListMedium {
 	return &e
 }
 
+// ListMediumValues returns every known ListMedium value in schema order.
+func ListMediumValues() []ListMedium {
+	return []ListMedium{
+		ListMediumSupportedRequired,
+		ListMediumSupported,
+		ListMediumNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListMedium) IsExact() bool {
 	if e != nil {
@@ -1369,6 +1900,15 @@ const (
 
 func (e ListMeetingURL) ToPointer() *ListMeetingURL {
 	return &e
+}
+
+// ListMeetingURLValues returns every known ListMeetingURL value in schema order.
+func ListMeetingURLValues() []ListMeetingURL {
+	return []ListMeetingURL{
+		ListMeetingURLSupportedRequired,
+		ListMeetingURLSupported,
+		ListMeetingURLNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1394,6 +1934,15 @@ func (e ListMemberID) ToPointer() *ListMemberID {
 	return &e
 }
 
+// ListMemberIDValues returns every known ListMemberID value in schema order.
+func ListMemberIDValues() []ListMemberID {
+	return []ListMemberID{
+		ListMemberIDSupportedRequired,
+		ListMemberIDSupported,
+		ListMemberIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListMemberID) IsExact() bool {
 	if e != nil {
@@ -1415,6 +1964,15 @@ const (
 
 func (e ListOffset) ToPointer() *ListOffset {
 	return &e
+}
+
+// ListOffsetValues returns every known ListOffset value in schema order.
+func ListOffsetValues() []ListOffset {
+	return []ListOffset{
+		ListOffsetSupportedRequired,
+		ListOffsetSupported,
+		ListOffsetNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1440,6 +1998,15 @@ func (e ListOrder) ToPointer() *ListOrder {
 	return &e
 }
 
+// ListOrderValues returns every known ListOrder value in schema order.
+func ListOrderValues() []ListOrder {
+	return []ListOrder{
+		ListOrderSupportedRequired,
+		ListOrderSupported,
+		ListOrderNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListOrder) IsExact() bool {
 	if e != nil {
@@ -1461,6 +2028,15 @@ const (
 
 func (e ListOrderID) ToPointer() *ListOrderID {
 	return &e
+}
+
+// ListOrderIDValues returns every known ListOrderID value in schema order.
+func ListOrderIDValues() []ListOrderID {
+	return []ListOrderID{
+		ListOrderIDSupportedRequired,
+		ListOrderIDSupported,
+		ListOrderIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1486,6 +2062,15 @@ func (e ListOrgID) ToPointer() *ListOrgID {
 	return &e
 }
 
+// ListOrgIDValues returns every known ListOrgID value in schema order.
+func ListOrgIDValues() []ListOrgID {
+	return []ListOrgID{
+		ListOrgIDSupportedRequired,
+		ListOrgIDSupported,
+		ListOrgIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListOrgID) IsExact() bool {
 	if e != nil {
@@ -1507,6 +2092,15 @@ const (
 
 func (e ListPackageID) ToPointer() *ListPackageID {
 	return &e
+}
+
+// ListPackageIDValues returns every known ListPackageID value in schema order.
+func ListPackageIDValues() []ListPackageID {
+	return []ListPackageID{
+		ListPackageIDSupportedRequired,
+		ListPackageIDSupported,
+		ListPackageIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1532,6 +2126,15 @@ func (e ListPageID) ToPointer() *ListPageID {
 	return &e
 }
 
+// ListPageIDValues returns every known ListPageID value in schema order.
+func ListPageIDValues() []ListPageID {
+	return []ListPageID{
+		ListPageIDSupportedRequired,
+		ListPageIDSupported,
+		ListPageIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListPageID) IsExact() bool {
 	if e != nil {
@@ -1553,6 +2156,15 @@ const (
 
 func (e ListParentID) ToPointer() *ListParentID {
 	return &e
+}
+
+// ListParentIDValues returns every known ListParentID value in schema order.
+func ListParentIDValues() []ListParentID {
+	return []ListParentID{
+		ListParentIDSupportedRequired,
+		ListParentIDSupported,
+		ListParentIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1578,6 +2190,15 @@ func (e ListPartID) ToPointer() *ListPartID {
 	return &e
 }
 
+// ListPartIDValues returns every known ListPartID value in schema order.
+func ListPartIDValues() []ListPartID {
+	return []ListPartID{
+		ListPartIDSupportedRequired,
+		ListPartIDSupported,
+		ListPartIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListPartID) IsExact() bool {
 	if e != nil {
@@ -1599,6 +2220,15 @@ const (
 
 func (e ListPatientID) ToPointer() *ListPatientID {
 	return &e
+}
+
+// ListPatientIDValues returns every known ListPatientID value in schema order.
+func ListPatientIDValues() []ListPatientID {
+	return []ListPatientID{
+		ListPatientIDSupportedRequired,
+		ListPatientIDSupported,
+		ListPatientIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1624,6 +2254,15 @@ func (e ListPaymentID) ToPointer() *ListPaymentID {
 	return &e
 }
 
+// ListPaymentIDValues returns every known ListPaymentID value in schema order.
+func ListPaymentIDValues() []ListPaymentID {
+	return []ListPaymentID{
+		ListPaymentIDSupportedRequired,
+		ListPaymentIDSupported,
+		ListPaymentIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListPaymentID) IsExact() bool {
 	if e != nil {
@@ -1645,6 +2284,15 @@ const (
 
 func (e ListPayslipID) ToPointer() *ListPayslipID {
 	return &e
+}
+
+// ListPayslipIDValues returns every known ListPayslipID value in schema order.
+func ListPayslipIDValues() []ListPayslipID {
+	return []ListPayslipID{
+		ListPayslipIDSupportedRequired,
+		ListPayslipIDSupported,
+		ListPayslipIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1670,6 +2318,15 @@ func (e ListPipelineID) ToPointer() *ListPipelineID {
 	return &e
 }
 
+// ListPipelineIDValues returns every known ListPipelineID value in schema order.
+func ListPipelineIDValues() []ListPipelineID {
+	return []ListPipelineID{
+		ListPipelineIDSupportedRequired,
+		ListPipelineIDSupported,
+		ListPipelineIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListPipelineID) IsExact() bool {
 	if e != nil {
@@ -1691,6 +2348,15 @@ const (
 
 func (e ListPostID) ToPointer() *ListPostID {
 	return &e
+}
+
+// ListPostIDValues returns every known ListPostID value in schema order.
+func ListPostIDValues() []ListPostID {
+	return []ListPostID{
+		ListPostIDSupportedRequired,
+		ListPostIDSupported,
+		ListPostIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1716,6 +2382,15 @@ func (e ListPracticeareaID) ToPointer() *ListPracticeareaID {
 	return &e
 }
 
+// ListPracticeareaIDValues returns every known ListPracticeareaID value in schema order.
+func ListPracticeareaIDValues() []ListPracticeareaID {
+	return []ListPracticeareaID{
+		ListPracticeareaIDSupportedRequired,
+		ListPracticeareaIDSupported,
+		ListPracticeareaIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListPracticeareaID) IsExact() bool {
 	if e != nil {
@@ -1737,6 +2412,15 @@ const (
 
 func (e ListPractitionerID) ToPointer() *ListPractitionerID {
 	return &e
+}
+
+// ListPractitionerIDValues returns every known ListPractitionerID value in schema order.
+func ListPractitionerIDValues() []ListPractitionerID {
+	return []ListPractitionerID{
+		ListPractitionerIDSupportedRequired,
+		ListPractitionerIDSupported,
+		ListPractitionerIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1762,6 +2446,15 @@ func (e ListProfileID) ToPointer() *ListProfileID {
 	return &e
 }
 
+// ListProfileIDValues returns every known ListProfileID value in schema order.
+func ListProfileIDValues() []ListProfileID {
+	return []ListProfileID{
+		ListProfileIDSupportedRequired,
+		ListProfileIDSupported,
+		ListProfileIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListProfileID) IsExact() bool {
 	if e != nil {
@@ -1783,6 +2476,15 @@ const (
 
 func (e ListProjectID) ToPointer() *ListProjectID {
 	return &e
+}
+
+// ListProjectIDValues returns every known ListProjectID value in schema order.
+func ListProjectIDValues() []ListProjectID {
+	return []ListProjectID{
+		ListProjectIDSupportedRequired,
+		ListProjectIDSupported,
+		ListProjectIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1808,6 +2510,15 @@ func (e ListPropertyID) ToPointer() *ListPropertyID {
 	return &e
 }
 
+// ListPropertyIDValues returns every known ListPropertyID value in schema order.
+func ListPropertyIDValues() []ListPropertyID {
+	return []ListPropertyID{
+		ListPropertyIDSupportedRequired,
+		ListPropertyIDSupported,
+		ListPropertyIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListPropertyID) IsExact() bool {
 	if e != nil {
@@ -1829,6 +2540,15 @@ const (
 
 func (e ListQuery) ToPointer() *ListQuery {
 	return &e
+}
+
+// ListQueryValues returns every known ListQuery value in schema order.
+func ListQueryValues() []ListQuery {
+	return []ListQuery{
+		ListQuerySupportedRequired,
+		ListQuerySupported,
+		ListQueryNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1854,6 +2574,15 @@ func (e ListRawFields) ToPointer() *ListRawFields {
 	return &e
 }
 
+// ListRawFieldsValues returns every known ListRawFields value in schema order.
+func ListRawFieldsValues() []ListRawFields {
+	return []ListRawFields{
+		ListRawFieldsSupportedRequired,
+		ListRawFieldsSupported,
+		ListRawFieldsNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListRawFields) IsExact() bool {
 	if e != nil {
@@ -1875,6 +2604,15 @@ const (
 
 func (e ListReference) ToPointer() *ListReference {
 	return &e
+}
+
+// ListReferenceValues returns every known ListReference value in schema order.
+func ListReferenceValues() []ListReference {
+	return []ListReference{
+		ListReferenceSupportedRequired,
+		ListReferenceSupported,
+		ListReferenceNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1900,6 +2638,15 @@ func (e ListRegionID) ToPointer() *ListRegionID {
 	return &e
 }
 
+// ListRegionIDValues returns every known ListRegionID value in schema order.
+func ListRegionIDValues() []ListRegionID {
+	return []ListRegionID{
+		ListRegionIDSupportedRequired,
+		ListRegionIDSupported,
+		ListRegionIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListRegionID) IsExact() bool {
 	if e != nil {
@@ -1921,6 +2668,15 @@ const (
 
 func (e ListRepoID) ToPointer() *ListRepoID {
 	return &e
+}
+
+// ListRepoIDValues returns every known ListRepoID value in schema order.
+func ListRepoIDValues() []ListRepoID {
+	return []ListRepoID{
+		ListRepoIDSupportedRequired,
+		ListRepoIDSupported,
+		ListRepoIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1946,6 +2702,15 @@ func (e ListReservationID) ToPointer() *ListReservationID {
 	return &e
 }
 
+// ListReservationIDValues returns every known ListReservationID value in schema order.
+func ListReservationIDValues() []ListReservationID {
+	return []ListReservationID{
+		ListReservationIDSupportedRequired,
+		ListReservationIDSupported,
+		ListReservationIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListReservationID) IsExact() bool {
 	if e != nil {
@@ -1967,6 +2732,15 @@ const (
 
 func (e ListRoleID) ToPointer() *ListRoleID {
 	return &e
+}
+
+// ListRoleIDValues returns every known ListRoleID value in schema order.
+func ListRoleIDValues() []ListRoleID {
+	return []ListRoleID{
+		ListRoleIDSupportedRequired,
+		ListRoleIDSupported,
+		ListRoleIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1992,6 +2766,15 @@ func (e ListRoomID) ToPointer() *ListRoomID {
 	return &e
 }
 
+// ListRoomIDValues returns every known ListRoomID value in schema order.
+func ListRoomIDValues() []ListRoomID {
+	return []ListRoomID{
+		ListRoomIDSupportedRequired,
+		ListRoomIDSupported,
+		ListRoomIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListRoomID) IsExact() bool {
 	if e != nil {
@@ -2013,6 +2796,15 @@ const (
 
 func (e ListRootID) ToPointer() *ListRootID {
 	return &e
+}
+
+// ListRootIDValues returns every known ListRootID value in schema order.
+func ListRootIDValues() []ListRootID {
+	return []ListRootID{
+		ListRootIDSupportedRequired,
+		ListRootIDSupported,
+		ListRootIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2038,6 +2830,15 @@ func (e ListSaleschannelID) ToPointer() *ListSaleschannelID {
 	return &e
 }
 
+// ListSaleschannelIDValues returns every known ListSaleschannelID value in schema order.
+func ListSaleschannelIDValues() []ListSaleschannelID {
+	return []ListSaleschannelID{
+		ListSaleschannelIDSupportedRequired,
+		ListSaleschannelIDSupported,
+		ListSaleschannelIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListSaleschannelID) IsExact() bool {
 	if e != nil {
@@ -2059,6 +2860,15 @@ const (
 
 func (e ListSegmentID) ToPointer() *ListSegmentID {
 	return &e
+}
+
+// ListSegmentIDValues returns every known ListSegmentID value in schema order.
+func ListSegmentIDValues() []ListSegmentID {
+	return []ListSegmentID{
+		ListSegmentIDSupportedRequired,
+		ListSegmentIDSupported,
+		ListSegmentIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2084,6 +2894,15 @@ func (e ListServiceID) ToPointer() *ListServiceID {
 	return &e
 }
 
+// ListServiceIDValues returns every known ListServiceID value in schema order.
+func ListServiceIDValues() []ListServiceID {
+	return []ListServiceID{
+		ListServiceIDSupportedRequired,
+		ListServiceIDSupported,
+		ListServiceIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListServiceID) IsExact() bool {
 	if e != nil {
@@ -2105,6 +2924,15 @@ const (
 
 func (e ListSessionID) ToPointer() *ListSessionID {
 	return &e
+}
+
+// ListSessionIDValues returns every known ListSessionID value in schema order.
+func ListSessionIDValues() []ListSessionID {
+	return []ListSessionID{
+		ListSessionIDSupportedRequired,
+		ListSessionIDSupported,
+		ListSessionIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2130,6 +2958,15 @@ func (e ListShipmentID) ToPointer() *ListShipmentID {
 	return &e
 }
 
+// ListShipmentIDValues returns every known ListShipmentID value in schema order.
+func ListShipmentIDValues() []ListShipmentID {
+	return []ListShipmentID{
+		ListShipmentIDSupportedRequired,
+		ListShipmentIDSupported,
+		ListShipmentIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListShipmentID) IsExact() bool {
 	if e != nil {
@@ -2151,6 +2988,15 @@ const (
 
 func (e ListSize) ToPointer() *ListSize {
 	return &e
+}
+
+// ListSizeValues returns every known ListSize value in schema order.
+func ListSizeValues() []ListSize {
+	return []ListSize{
+		ListSizeSupportedRequired,
+		ListSizeSupported,
+		ListSizeNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2176,6 +3022,15 @@ func (e ListSortByCreatedAt) ToPointer() *ListSortByCreatedAt {
 	return &e
 }
 
+// ListSortByCreatedAtValues returns every known ListSortByCreatedAt value in schema order.
+func ListSortByCreatedAtValues() []ListSortByCreatedAt {
+	return []ListSortByCreatedAt{
+		ListSortByCreatedAtSupportedRequired,
+		ListSortByCreatedAtSupported,
+		ListSortByCreatedAtNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListSortByCreatedAt) IsExact() bool {
 	if e != nil {
@@ -2197,6 +3052,15 @@ const (
 
 func (e ListSortByName) ToPointer() *ListSortByName {
 	return &e
+}
+
+// ListSortByNameValues returns every known ListSortByName value in schema order.
+func ListSortByNameValues() []ListSortByName {
+	return []ListSortByName{
+		ListSortByNameSupportedRequired,
+		ListSortByNameSupported,
+		ListSortByNameNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2222,6 +3086,15 @@ func (e ListSortByUpdatedAt) ToPointer() *ListSortByUpdatedAt {
 	return &e
 }
 
+// ListSortByUpdatedAtValues returns every known ListSortByUpdatedAt value in schema order.
+func ListSortByUpdatedAtValues() []ListSortByUpdatedAt {
+	return []ListSortByUpdatedAt{
+		ListSortByUpdatedAtSupportedRequired,
+		ListSortByUpdatedAtSupported,
+		ListSortByUpdatedAtNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListSortByUpdatedAt) IsExact() bool {
 	if e != nil {
@@ -2243,6 +3116,15 @@ const (
 
 func (e ListSource) ToPointer() *ListSource {
 	return &e
+}
+
+// ListSourceValues returns every known ListSource value in schema order.
+func ListSourceValues() []ListSource {
+	return []ListSource{
+		ListSourceSupportedRequired,
+		ListSourceSupported,
+		ListSourceNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2268,6 +3150,15 @@ func (e ListSpaceID) ToPointer() *ListSpaceID {
 	return &e
 }
 
+// ListSpaceIDValues returns every known ListSpaceID value in schema order.
+func ListSpaceIDValues() []ListSpaceID {
+	return []ListSpaceID{
+		ListSpaceIDSupportedRequired,
+		ListSpaceIDSupported,
+		ListSpaceIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListSpaceID) IsExact() bool {
 	if e != nil {
@@ -2289,6 +3180,15 @@ const (
 
 func (e ListStartGte) ToPointer() *ListStartGte {
 	return &e
+}
+
+// ListStartGteValues returns every known ListStartGte value in schema order.
+func ListStartGteValues() []ListStartGte {
+	return []ListStartGte{
+		ListStartGteSupportedRequired,
+		ListStartGteSupported,
+		ListStartGteNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2314,6 +3214,15 @@ func (e ListStatus) ToPointer() *ListStatus {
 	return &e
 }
 
+// ListStatusValues returns every known ListStatus value in schema order.
+func ListStatusValues() []ListStatus {
+	return []ListStatus{
+		ListStatusSupportedRequired,
+		ListStatusSupported,
+		ListStatusNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListStatus) IsExact() bool {
 	if e != nil {
@@ -2335,6 +3244,15 @@ const (
 
 func (e ListStudentID) ToPointer() *ListStudentID {
 	return &e
+}
+
+// ListStudentIDValues returns every known ListStudentID value in schema order.
+func ListStudentIDValues() []ListStudentID {
+	return []ListStudentID{
+		ListStudentIDSupportedRequired,
+		ListStudentIDSupported,
+		ListStudentIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2360,6 +3278,15 @@ func (e ListTableID) ToPointer() *ListTableID {
 	return &e
 }
 
+// ListTableIDValues returns every known ListTableID value in schema order.
+func ListTableIDValues() []ListTableID {
+	return []ListTableID{
+		ListTableIDSupportedRequired,
+		ListTableIDSupported,
+		ListTableIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListTableID) IsExact() bool {
 	if e != nil {
@@ -2381,6 +3308,15 @@ const (
 
 func (e ListTaskID) ToPointer() *ListTaskID {
 	return &e
+}
+
+// ListTaskIDValues returns every known ListTaskID value in schema order.
+func ListTaskIDValues() []ListTaskID {
+	return []ListTaskID{
+		ListTaskIDSupportedRequired,
+		ListTaskIDSupported,
+		ListTaskIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2406,6 +3342,15 @@ func (e ListTeacherID) ToPointer() *ListTeacherID {
 	return &e
 }
 
+// ListTeacherIDValues returns every known ListTeacherID value in schema order.
+func ListTeacherIDValues() []ListTeacherID {
+	return []ListTeacherID{
+		ListTeacherIDSupportedRequired,
+		ListTeacherIDSupported,
+		ListTeacherIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListTeacherID) IsExact() bool {
 	if e != nil {
@@ -2427,6 +3372,15 @@ const (
 
 func (e ListTemplateID) ToPointer() *ListTemplateID {
 	return &e
+}
+
+// ListTemplateIDValues returns every known ListTemplateID value in schema order.
+func ListTemplateIDValues() []ListTemplateID {
+	return []ListTemplateID{
+		ListTemplateIDSupportedRequired,
+		ListTemplateIDSupported,
+		ListTemplateIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2452,6 +3406,15 @@ func (e ListTicketID) ToPointer() *ListTicketID {
 	return &e
 }
 
+// ListTicketIDValues returns every known ListTicketID value in schema order.
+func ListTicketIDValues() []ListTicketID {
+	return []ListTicketID{
+		ListTicketIDSupportedRequired,
+		ListTicketIDSupported,
+		ListTicketIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListTicketID) IsExact() bool {
 	if e != nil {
@@ -2473,6 +3436,15 @@ const (
 
 func (e ListType) ToPointer() *ListType {
 	return &e
+}
+
+// ListTypeValues returns every known ListType value in schema order.
+func ListTypeValues() []ListType {
+	return []ListType{
+		ListTypeSupportedRequired,
+		ListTypeSupported,
+		ListTypeNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2498,6 +3470,15 @@ func (e ListUnittypeID) ToPointer() *ListUnittypeID {
 	return &e
 }
 
+// ListUnittypeIDValues returns every known ListUnittypeID value in schema order.
+func ListUnittypeIDValues() []ListUnittypeID {
+	return []ListUnittypeID{
+		ListUnittypeIDSupportedRequired,
+		ListUnittypeIDSupported,
+		ListUnittypeIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListUnittypeID) IsExact() bool {
 	if e != nil {
@@ -2519,6 +3500,15 @@ const (
 
 func (e ListUpdatedGte) ToPointer() *ListUpdatedGte {
 	return &e
+}
+
+// ListUpdatedGteValues returns every known ListUpdatedGte value in schema order.
+func ListUpdatedGteValues() []ListUpdatedGte {
+	return []ListUpdatedGte{
+		ListUpdatedGteSupportedRequired,
+		ListUpdatedGteSupported,
+		ListUpdatedGteNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2544,6 +3534,15 @@ func (e ListUserID) ToPointer() *ListUserID {
 	return &e
 }
 
+// ListUserIDValues returns every known ListUserID value in schema order.
+func ListUserIDValues() []ListUserID {
+	return []ListUserID{
+		ListUserIDSupportedRequired,
+		ListUserIDSupported,
+		ListUserIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListUserID) IsExact() bool {
 	if e != nil {
@@ -2565,6 +3564,15 @@ const (
 
 func (e ListUserMentionedID) ToPointer() *ListUserMentionedID {
 	return &e
+}
+
+// ListUserMentionedIDValues returns every known ListUserMentionedID value in schema order.
+func ListUserMentionedIDValues() []ListUserMentionedID {
+	return []ListUserMentionedID{
+		ListUserMentionedIDSupportedRequired,
+		ListUserMentionedIDSupported,
+		ListUserMentionedIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2590,6 +3598,15 @@ func (e ListVehicleID) ToPointer() *ListVehicleID {
 	return &e
 }
 
+// ListVehicleIDValues returns every known ListVehicleID value in schema order.
+func ListVehicleIDValues() []ListVehicleID {
+	return []ListVehicleID{
+		ListVehicleIDSupportedRequired,
+		ListVehicleIDSupported,
+		ListVehicleIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListVehicleID) IsExact() bool {
 	if e != nil {
@@ -2611,6 +3628,15 @@ const (
 
 func (e ListVisitorID) ToPointer() *ListVisitorID {
 	return &e
+}
+
+// ListVisitorIDValues returns every known ListVisitorID value in schema order.
+func ListVisitorIDValues() []ListVisitorID {
+	return []ListVisitorID{
+		ListVisitorIDSupportedRequired,
+		ListVisitorIDSupported,
+		ListVisitorIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2636,6 +3662,15 @@ func (e NativeWebhookCalendarID) ToPointer() *NativeWebhookCalendarID {
 	return &e
 }
 
+// NativeWebhookCalendarIDValues returns every known NativeWebhookCalendarID value in schema order.
+func NativeWebhookCalendarIDValues() []NativeWebhookCalendarID {
+	return []NativeWebhookCalendarID{
+		NativeWebhookCalendarIDSupportedRequired,
+		NativeWebhookCalendarIDSupported,
+		NativeWebhookCalendarIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *NativeWebhookCalendarID) IsExact() bool {
 	if e != nil {
@@ -2657,6 +3692,15 @@ const (
 
 func (e NativeWebhookCarrierID) ToPointer() *NativeWebhookCarrierID {
 	return &e
+}
+
+// NativeWebhookCarrierIDValues returns every known NativeWebhookCarrierID value in schema order.
+func NativeWebhookCarrierIDValues() []NativeWebhookCarrierID {
+	return []NativeWebhookCarrierID{
+		NativeWebhookCarrierIDSupportedRequired,
+		NativeWebhookCarrierIDSupported,
+		NativeWebhookCarrierIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2682,6 +3726,15 @@ func (e NativeWebhookChannelID) ToPointer() *NativeWebhookChannelID {
 	return &e
 }
 
+// NativeWebhookChannelIDValues returns every known NativeWebhookChannelID value in schema order.
+func NativeWebhookChannelIDValues() []NativeWebhookChannelID {
+	return []NativeWebhookChannelID{
+		NativeWebhookChannelIDSupportedRequired,
+		NativeWebhookChannelIDSupported,
+		NativeWebhookChannelIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *NativeWebhookChannelID) IsExact() bool {
 	if e != nil {
@@ -2703,6 +3756,15 @@ const (
 
 func (e NativeWebhookCompanyID) ToPointer() *NativeWebhookCompanyID {
 	return &e
+}
+
+// NativeWebhookCompanyIDValues returns every known NativeWebhookCompanyID value in schema order.
+func NativeWebhookCompanyIDValues() []NativeWebhookCompanyID {
+	return []NativeWebhookCompanyID{
+		NativeWebhookCompanyIDSupportedRequired,
+		NativeWebhookCompanyIDSupported,
+		NativeWebhookCompanyIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2728,6 +3790,15 @@ func (e NativeWebhookCourseID) ToPointer() *NativeWebhookCourseID {
 	return &e
 }
 
+// NativeWebhookCourseIDValues returns every known NativeWebhookCourseID value in schema order.
+func NativeWebhookCourseIDValues() []NativeWebhookCourseID {
+	return []NativeWebhookCourseID{
+		NativeWebhookCourseIDSupportedRequired,
+		NativeWebhookCourseIDSupported,
+		NativeWebhookCourseIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *NativeWebhookCourseID) IsExact() bool {
 	if e != nil {
@@ -2749,6 +3820,15 @@ const (
 
 func (e NativeWebhookDatabaseID) ToPointer() *NativeWebhookDatabaseID {
 	return &e
+}
+
+// NativeWebhookDatabaseIDValues returns every known NativeWebhookDatabaseID value in schema order.
+func NativeWebhookDatabaseIDValues() []NativeWebhookDatabaseID {
+	return []NativeWebhookDatabaseID{
+		NativeWebhookDatabaseIDSupportedRequired,
+		NativeWebhookDatabaseIDSupported,
+		NativeWebhookDatabaseIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2774,6 +3854,15 @@ func (e NativeWebhookEventID) ToPointer() *NativeWebhookEventID {
 	return &e
 }
 
+// NativeWebhookEventIDValues returns every known NativeWebhookEventID value in schema order.
+func NativeWebhookEventIDValues() []NativeWebhookEventID {
+	return []NativeWebhookEventID{
+		NativeWebhookEventIDSupportedRequired,
+		NativeWebhookEventIDSupported,
+		NativeWebhookEventIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *NativeWebhookEventID) IsExact() bool {
 	if e != nil {
@@ -2795,6 +3884,15 @@ const (
 
 func (e NativeWebhookFormID) ToPointer() *NativeWebhookFormID {
 	return &e
+}
+
+// NativeWebhookFormIDValues returns every known NativeWebhookFormID value in schema order.
+func NativeWebhookFormIDValues() []NativeWebhookFormID {
+	return []NativeWebhookFormID{
+		NativeWebhookFormIDSupportedRequired,
+		NativeWebhookFormIDSupported,
+		NativeWebhookFormIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2820,6 +3918,15 @@ func (e NativeWebhookIoID) ToPointer() *NativeWebhookIoID {
 	return &e
 }
 
+// NativeWebhookIoIDValues returns every known NativeWebhookIoID value in schema order.
+func NativeWebhookIoIDValues() []NativeWebhookIoID {
+	return []NativeWebhookIoID{
+		NativeWebhookIoIDSupportedRequired,
+		NativeWebhookIoIDSupported,
+		NativeWebhookIoIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *NativeWebhookIoID) IsExact() bool {
 	if e != nil {
@@ -2841,6 +3948,15 @@ const (
 
 func (e NativeWebhookLabelID) ToPointer() *NativeWebhookLabelID {
 	return &e
+}
+
+// NativeWebhookLabelIDValues returns every known NativeWebhookLabelID value in schema order.
+func NativeWebhookLabelIDValues() []NativeWebhookLabelID {
+	return []NativeWebhookLabelID{
+		NativeWebhookLabelIDSupportedRequired,
+		NativeWebhookLabelIDSupported,
+		NativeWebhookLabelIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2866,6 +3982,15 @@ func (e NativeWebhookListID) ToPointer() *NativeWebhookListID {
 	return &e
 }
 
+// NativeWebhookListIDValues returns every known NativeWebhookListID value in schema order.
+func NativeWebhookListIDValues() []NativeWebhookListID {
+	return []NativeWebhookListID{
+		NativeWebhookListIDSupportedRequired,
+		NativeWebhookListIDSupported,
+		NativeWebhookListIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *NativeWebhookListID) IsExact() bool {
 	if e != nil {
@@ -2887,6 +4012,15 @@ const (
 
 func (e NativeWebhookMemberID) ToPointer() *NativeWebhookMemberID {
 	return &e
+}
+
+// NativeWebhookMemberIDValues returns every known NativeWebhookMemberID value in schema order.
+func NativeWebhookMemberIDValues() []NativeWebhookMemberID {
+	return []NativeWebhookMemberID{
+		NativeWebhookMemberIDSupportedRequired,
+		NativeWebhookMemberIDSupported,
+		NativeWebhookMemberIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2912,6 +4046,15 @@ func (e NativeWebhookOrderID) ToPointer() *NativeWebhookOrderID {
 	return &e
 }
 
+// NativeWebhookOrderIDValues returns every known NativeWebhookOrderID value in schema order.
+func NativeWebhookOrderIDValues() []NativeWebhookOrderID {
+	return []NativeWebhookOrderID{
+		NativeWebhookOrderIDSupportedRequired,
+		NativeWebhookOrderIDSupported,
+		NativeWebhookOrderIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *NativeWebhookOrderID) IsExact() bool {
 	if e != nil {
@@ -2933,6 +4076,15 @@ const (
 
 func (e NativeWebhookParentID) ToPointer() *NativeWebhookParentID {
 	return &e
+}
+
+// NativeWebhookParentIDValues returns every known NativeWebhookParentID value in schema order.
+func NativeWebhookParentIDValues() []NativeWebhookParentID {
+	return []NativeWebhookParentID{
+		NativeWebhookParentIDSupportedRequired,
+		NativeWebhookParentIDSupported,
+		NativeWebhookParentIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -2958,6 +4110,15 @@ func (e NativeWebhookProjectID) ToPointer() *NativeWebhookProjectID {
 	return &e
 }
 
+// NativeWebhookProjectIDValues returns every known NativeWebhookProjectID value in schema order.
+func NativeWebhookProjectIDValues() []NativeWebhookProjectID {
+	return []NativeWebhookProjectID{
+		NativeWebhookProjectIDSupportedRequired,
+		NativeWebhookProjectIDSupported,
+		NativeWebhookProjectIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *NativeWebhookProjectID) IsExact() bool {
 	if e != nil {
@@ -2979,6 +4140,15 @@ const (
 
 func (e NativeWebhookPropertyID) ToPointer() *NativeWebhookPropertyID {
 	return &e
+}
+
+// NativeWebhookPropertyIDValues returns every known NativeWebhookPropertyID value in schema order.
+func NativeWebhookPropertyIDValues() []NativeWebhookPropertyID {
+	return []NativeWebhookPropertyID{
+		NativeWebhookPropertyIDSupportedRequired,
+		NativeWebhookPropertyIDSupported,
+		NativeWebhookPropertyIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -3004,6 +4174,15 @@ func (e NativeWebhookSessionID) ToPointer() *NativeWebhookSessionID {
 	return &e
 }
 
+// NativeWebhookSessionIDValues returns every known NativeWebhookSessionID value in schema order.
+func NativeWebhookSessionIDValues() []NativeWebhookSessionID {
+	return []NativeWebhookSessionID{
+		NativeWebhookSessionIDSupportedRequired,
+		NativeWebhookSessionIDSupported,
+		NativeWebhookSessionIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *NativeWebhookSessionID) IsExact() bool {
 	if e != nil {
@@ -3025,6 +4204,15 @@ const (
 
 func (e NativeWebhookShipmentID) ToPointer() *NativeWebhookShipmentID {
 	return &e
+}
+
+// NativeWebhookShipmentIDValues returns every known NativeWebhookShipmentID value in schema order.
+func NativeWebhookShipmentIDValues() []NativeWebhookShipmentID {
+	return []NativeWebhookShipmentID{
+		NativeWebhookShipmentIDSupportedRequired,
+		NativeWebhookShipmentIDSupported,
+		NativeWebhookShipmentIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -3050,6 +4238,15 @@ func (e NativeWebhookStudentID) ToPointer() *NativeWebhookStudentID {
 	return &e
 }
 
+// NativeWebhookStudentIDValues returns every known NativeWebhookStudentID value in schema order.
+func NativeWebhookStudentIDValues() []NativeWebhookStudentID {
+	return []NativeWebhookStudentID{
+		NativeWebhookStudentIDSupportedRequired,
+		NativeWebhookStudentIDSupported,
+		NativeWebhookStudentIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *NativeWebhookStudentID) IsExact() bool {
 	if e != nil {
@@ -3071,6 +4268,15 @@ const (
 
 func (e NativeWebhookTableID) ToPointer() *NativeWebhookTableID {
 	return &e
+}
+
+// NativeWebhookTableIDValues returns every known NativeWebhookTableID value in schema order.
+func NativeWebhookTableIDValues() []NativeWebhookTableID {
+	return []NativeWebhookTableID{
+		NativeWebhookTableIDSupportedRequired,
+		NativeWebhookTableIDSupported,
+		NativeWebhookTableIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -3096,6 +4302,15 @@ func (e NativeWebhookTaskID) ToPointer() *NativeWebhookTaskID {
 	return &e
 }
 
+// NativeWebhookTaskIDValues returns every known NativeWebhookTaskID value in schema order.
+func NativeWebhookTaskIDValues() []NativeWebhookTaskID {
+	return []NativeWebhookTaskID{
+		NativeWebhookTaskIDSupportedRequired,
+		NativeWebhookTaskIDSupported,
+		NativeWebhookTaskIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *NativeWebhookTaskID) IsExact() bool {
 	if e != nil {
@@ -3117,6 +4332,15 @@ const (
 
 func (e NativeWebhookTemplateID) ToPointer() *NativeWebhookTemplateID {
 	return &e
+}
+
+// NativeWebhookTemplateIDValues returns every known NativeWebhookTemplateID value in schema order.
+func NativeWebhookTemplateIDValues() []NativeWebhookTemplateID {
+	return []NativeWebhookTemplateID{
+		NativeWebhookTemplateIDSupportedRequired,
+		NativeWebhookTemplateIDSupported,
+		NativeWebhookTemplateIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -3142,6 +4366,15 @@ func (e NativeWebhookType) ToPointer() *NativeWebhookType {
 	return &e
 }
 
+// NativeWebhookTypeValues returns every known NativeWebhookType value in schema order.
+func NativeWebhookTypeValues() []NativeWebhookType {
+	return []NativeWebhookType{
+		NativeWebhookTypeSupportedRequired,
+		NativeWebhookTypeSupported,
+		NativeWebhookTypeNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *NativeWebhookType) IsExact() bool {
 	if e != nil {
@@ -3163,6 +4396,15 @@ const (
 
 func (e NativeWebhookUpdatedGte) ToPointer() *NativeWebhookUpdatedGte {
 	return &e
+}
+
+// NativeWebhookUpdatedGteValues returns every known NativeWebhookUpdatedGte value in schema order.
+func NativeWebhookUpdatedGteValues() []NativeWebhookUpdatedGte {
+	return []NativeWebhookUpdatedGte{
+		NativeWebhookUpdatedGteSupportedRequired,
+		NativeWebhookUpdatedGteSupported,
+		NativeWebhookUpdatedGteNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -3188,6 +4430,15 @@ func (e NativeWebhookVisitorID) ToPointer() *NativeWebhookVisitorID {
 	return &e
 }
 
+// NativeWebhookVisitorIDValues returns every known NativeWebhookVisitorID value in schema order.
+func NativeWebhookVisitorIDValues() []NativeWebhookVisitorID {
+	return []NativeWebhookVisitorID{
+		NativeWebhookVisitorIDSupportedRequired,
+		NativeWebhookVisitorIDSupported,
+		NativeWebhookVisitorIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *NativeWebhookVisitorID) IsExact() bool {
 	if e != nil {
@@ -3209,6 +4460,15 @@ const (
 
 func (e SearchDomain) ToPointer() *SearchDomain {
 	return &e
+}
+
+// SearchDomainValues returns every known SearchDomain value in schema order.
+func SearchDomainValues() []SearchDomain {
+	return []SearchDomain{
+		SearchDomainSupportedRequired,
+		SearchDomainSupported,
+		SearchDomainNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -3234,6 +4494,15 @@ func (e SearchEmail) ToPointer() *SearchEmail {
 	return &e
 }
 
+// SearchEmailValues returns every known SearchEmail value in schema order.
+func SearchEmailValues() []SearchEmail {
+	return []SearchEmail{
+		SearchEmailSupportedRequired,
+		SearchEmailSupported,
+		SearchEmailNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *SearchEmail) IsExact() bool {
 	if e != nil {
@@ -3255,6 +4524,15 @@ const (
 
 func (e SearchLinkedinurl) ToPointer() *SearchLinkedinurl {
 	return &e
+}
+
+// SearchLinkedinurlValues returns every known SearchLinkedinurl value in schema order.
+func SearchLinkedinurlValues() []SearchLinkedinurl {
+	return []SearchLinkedinurl{
+		SearchLinkedinurlSupportedRequired,
+		SearchLinkedinurlSupported,
+		SearchLinkedinurlNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -3280,6 +4558,15 @@ func (e SearchName) ToPointer() *SearchName {
 	return &e
 }
 
+// SearchNameValues returns every known SearchName value in schema order.
+func SearchNameValues() []SearchName {
+	return []SearchName{
+		SearchNameSupportedRequired,
+		SearchNameSupported,
+		SearchNameNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *SearchName) IsExact() bool {
 	if e != nil {
@@ -3301,6 +4588,15 @@ const (
 
 func (e SearchTwitter) ToPointer() *SearchTwitter {
 	return &e
+}
+
+// SearchTwitterValues returns every known SearchTwitter value in schema order.
+func SearchTwitterValues() []SearchTwitter {
+	return []SearchTwitter{
+		SearchTwitterSupportedRequired,
+		SearchTwitterSupported,
+		SearchTwitterNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -3326,6 +4622,15 @@ func (e VirtualWebhookAccountID) ToPointer() *VirtualWebhookAccountID {
 	return &e
 }
 
+// VirtualWebhookAccountIDValues returns every known VirtualWebhookAccountID value in schema order.
+func VirtualWebhookAccountIDValues() []VirtualWebhookAccountID {
+	return []VirtualWebhookAccountID{
+		VirtualWebhookAccountIDSupportedRequired,
+		VirtualWebhookAccountIDSupported,
+		VirtualWebhookAccountIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookAccountID) IsExact() bool {
 	if e != nil {
@@ -3347,6 +4652,15 @@ const (
 
 func (e VirtualWebhookAdID) ToPointer() *VirtualWebhookAdID {
 	return &e
+}
+
+// VirtualWebhookAdIDValues returns every known VirtualWebhookAdID value in schema order.
+func VirtualWebhookAdIDValues() []VirtualWebhookAdID {
+	return []VirtualWebhookAdID{
+		VirtualWebhookAdIDSupportedRequired,
+		VirtualWebhookAdIDSupported,
+		VirtualWebhookAdIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -3372,6 +4686,15 @@ func (e VirtualWebhookApplicationID) ToPointer() *VirtualWebhookApplicationID {
 	return &e
 }
 
+// VirtualWebhookApplicationIDValues returns every known VirtualWebhookApplicationID value in schema order.
+func VirtualWebhookApplicationIDValues() []VirtualWebhookApplicationID {
+	return []VirtualWebhookApplicationID{
+		VirtualWebhookApplicationIDSupportedRequired,
+		VirtualWebhookApplicationIDSupported,
+		VirtualWebhookApplicationIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookApplicationID) IsExact() bool {
 	if e != nil {
@@ -3393,6 +4716,15 @@ const (
 
 func (e VirtualWebhookApproverUserID) ToPointer() *VirtualWebhookApproverUserID {
 	return &e
+}
+
+// VirtualWebhookApproverUserIDValues returns every known VirtualWebhookApproverUserID value in schema order.
+func VirtualWebhookApproverUserIDValues() []VirtualWebhookApproverUserID {
+	return []VirtualWebhookApproverUserID{
+		VirtualWebhookApproverUserIDSupportedRequired,
+		VirtualWebhookApproverUserIDSupported,
+		VirtualWebhookApproverUserIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -3418,6 +4750,15 @@ func (e VirtualWebhookAssignedUserID) ToPointer() *VirtualWebhookAssignedUserID 
 	return &e
 }
 
+// VirtualWebhookAssignedUserIDValues returns every known VirtualWebhookAssignedUserID value in schema order.
+func VirtualWebhookAssignedUserIDValues() []VirtualWebhookAssignedUserID {
+	return []VirtualWebhookAssignedUserID{
+		VirtualWebhookAssignedUserIDSupportedRequired,
+		VirtualWebhookAssignedUserIDSupported,
+		VirtualWebhookAssignedUserIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookAssignedUserID) IsExact() bool {
 	if e != nil {
@@ -3439,6 +4780,15 @@ const (
 
 func (e VirtualWebhookBankfeedaccountID) ToPointer() *VirtualWebhookBankfeedaccountID {
 	return &e
+}
+
+// VirtualWebhookBankfeedaccountIDValues returns every known VirtualWebhookBankfeedaccountID value in schema order.
+func VirtualWebhookBankfeedaccountIDValues() []VirtualWebhookBankfeedaccountID {
+	return []VirtualWebhookBankfeedaccountID{
+		VirtualWebhookBankfeedaccountIDSupportedRequired,
+		VirtualWebhookBankfeedaccountIDSupported,
+		VirtualWebhookBankfeedaccountIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

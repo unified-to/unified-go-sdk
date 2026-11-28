@@ -31,6 +31,26 @@ const (
 func (e GetLmsActivityQueryParamFields) ToPointer() *GetLmsActivityQueryParamFields {
 	return &e
 }
+
+// GetLmsActivityQueryParamFieldsValues returns every known GetLmsActivityQueryParamFields value in schema order.
+func GetLmsActivityQueryParamFieldsValues() []GetLmsActivityQueryParamFields {
+	return []GetLmsActivityQueryParamFields{
+		GetLmsActivityQueryParamFieldsID,
+		GetLmsActivityQueryParamFieldsCreatedAt,
+		GetLmsActivityQueryParamFieldsUpdatedAt,
+		GetLmsActivityQueryParamFieldsContentID,
+		GetLmsActivityQueryParamFieldsCourseID,
+		GetLmsActivityQueryParamFieldsStudentID,
+		GetLmsActivityQueryParamFieldsDurationMinutes,
+		GetLmsActivityQueryParamFieldsAssignedGrade,
+		GetLmsActivityQueryParamFieldsIsCompleted,
+		GetLmsActivityQueryParamFieldsProgressPercentage,
+		GetLmsActivityQueryParamFieldsStartedAt,
+		GetLmsActivityQueryParamFieldsCompletedAt,
+		GetLmsActivityQueryParamFieldsMetadata,
+		GetLmsActivityQueryParamFieldsRaw,
+	}
+}
 func (e *GetLmsActivityQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

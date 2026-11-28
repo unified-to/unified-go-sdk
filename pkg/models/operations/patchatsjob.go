@@ -48,6 +48,43 @@ const (
 func (e PatchAtsJobQueryParamFields) ToPointer() *PatchAtsJobQueryParamFields {
 	return &e
 }
+
+// PatchAtsJobQueryParamFieldsValues returns every known PatchAtsJobQueryParamFields value in schema order.
+func PatchAtsJobQueryParamFieldsValues() []PatchAtsJobQueryParamFields {
+	return []PatchAtsJobQueryParamFields{
+		PatchAtsJobQueryParamFieldsID,
+		PatchAtsJobQueryParamFieldsCreatedAt,
+		PatchAtsJobQueryParamFieldsUpdatedAt,
+		PatchAtsJobQueryParamFieldsName,
+		PatchAtsJobQueryParamFieldsDescription,
+		PatchAtsJobQueryParamFieldsRecruiterIds,
+		PatchAtsJobQueryParamFieldsHiringManagerIds,
+		PatchAtsJobQueryParamFieldsHiringManagers,
+		PatchAtsJobQueryParamFieldsStatus,
+		PatchAtsJobQueryParamFieldsClosedAt,
+		PatchAtsJobQueryParamFieldsAddresses,
+		PatchAtsJobQueryParamFieldsCompensation,
+		PatchAtsJobQueryParamFieldsEmploymentType,
+		PatchAtsJobQueryParamFieldsRemote,
+		PatchAtsJobQueryParamFieldsLanguageLocale,
+		PatchAtsJobQueryParamFieldsPublicJobUrls,
+		PatchAtsJobQueryParamFieldsNumberOfOpenings,
+		PatchAtsJobQueryParamFieldsCompanyID,
+		PatchAtsJobQueryParamFieldsQuestions,
+		PatchAtsJobQueryParamFieldsPostings,
+		PatchAtsJobQueryParamFieldsGroups,
+		PatchAtsJobQueryParamFieldsOpenings,
+		PatchAtsJobQueryParamFieldsMinimumExperienceYears,
+		PatchAtsJobQueryParamFieldsMinimumDegree,
+		PatchAtsJobQueryParamFieldsSkills,
+		PatchAtsJobQueryParamFieldsMetadata,
+		PatchAtsJobQueryParamFieldsUserID,
+		PatchAtsJobQueryParamFieldsIndustry,
+		PatchAtsJobQueryParamFieldsSummary,
+		PatchAtsJobQueryParamFieldsFees,
+		PatchAtsJobQueryParamFieldsRaw,
+	}
+}
 func (e *PatchAtsJobQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

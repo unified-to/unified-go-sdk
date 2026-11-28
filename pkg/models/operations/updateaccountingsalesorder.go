@@ -53,6 +53,48 @@ const (
 func (e UpdateAccountingSalesorderQueryParamFields) ToPointer() *UpdateAccountingSalesorderQueryParamFields {
 	return &e
 }
+
+// UpdateAccountingSalesorderQueryParamFieldsValues returns every known UpdateAccountingSalesorderQueryParamFields value in schema order.
+func UpdateAccountingSalesorderQueryParamFieldsValues() []UpdateAccountingSalesorderQueryParamFields {
+	return []UpdateAccountingSalesorderQueryParamFields{
+		UpdateAccountingSalesorderQueryParamFieldsID,
+		UpdateAccountingSalesorderQueryParamFieldsCreatedAt,
+		UpdateAccountingSalesorderQueryParamFieldsUpdatedAt,
+		UpdateAccountingSalesorderQueryParamFieldsPostedAt,
+		UpdateAccountingSalesorderQueryParamFieldsContactID,
+		UpdateAccountingSalesorderQueryParamFieldsAccountID,
+		UpdateAccountingSalesorderQueryParamFieldsCurrency,
+		UpdateAccountingSalesorderQueryParamFieldsTotalAmount,
+		UpdateAccountingSalesorderQueryParamFieldsShippingAddress,
+		UpdateAccountingSalesorderQueryParamFieldsBillingAddress,
+		UpdateAccountingSalesorderQueryParamFieldsStatus,
+		UpdateAccountingSalesorderQueryParamFieldsLineitems,
+		UpdateAccountingSalesorderQueryParamFieldsSalesChannel,
+		UpdateAccountingSalesorderQueryParamFieldsOrganizationID,
+		UpdateAccountingSalesorderQueryParamFieldsFees,
+		UpdateAccountingSalesorderQueryParamFieldsCategoryIds,
+		UpdateAccountingSalesorderQueryParamFieldsMetadata,
+		UpdateAccountingSalesorderQueryParamFieldsOrderNumber,
+		UpdateAccountingSalesorderQueryParamFieldsLocationID,
+		UpdateAccountingSalesorderQueryParamFieldsEmployeeUserID,
+		UpdateAccountingSalesorderQueryParamFieldsDeviceID,
+		UpdateAccountingSalesorderQueryParamFieldsFulfillmentType,
+		UpdateAccountingSalesorderQueryParamFieldsGuestCount,
+		UpdateAccountingSalesorderQueryParamFieldsSubtotalAmount,
+		UpdateAccountingSalesorderQueryParamFieldsTaxAmount,
+		UpdateAccountingSalesorderQueryParamFieldsDiscountAmount,
+		UpdateAccountingSalesorderQueryParamFieldsTipAmount,
+		UpdateAccountingSalesorderQueryParamFieldsServiceChargeAmount,
+		UpdateAccountingSalesorderQueryParamFieldsRefundedAmount,
+		UpdateAccountingSalesorderQueryParamFieldsClosedAt,
+		UpdateAccountingSalesorderQueryParamFieldsSubscriptionID,
+		UpdateAccountingSalesorderQueryParamFieldsPayments,
+		UpdateAccountingSalesorderQueryParamFieldsTableID,
+		UpdateAccountingSalesorderQueryParamFieldsPaidAmount,
+		UpdateAccountingSalesorderQueryParamFieldsBalanceAmount,
+		UpdateAccountingSalesorderQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateAccountingSalesorderQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

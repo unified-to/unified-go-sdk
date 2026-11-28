@@ -42,6 +42,37 @@ const (
 func (e PatchAccountingTransactionQueryParamFields) ToPointer() *PatchAccountingTransactionQueryParamFields {
 	return &e
 }
+
+// PatchAccountingTransactionQueryParamFieldsValues returns every known PatchAccountingTransactionQueryParamFields value in schema order.
+func PatchAccountingTransactionQueryParamFieldsValues() []PatchAccountingTransactionQueryParamFields {
+	return []PatchAccountingTransactionQueryParamFields{
+		PatchAccountingTransactionQueryParamFieldsID,
+		PatchAccountingTransactionQueryParamFieldsCreatedAt,
+		PatchAccountingTransactionQueryParamFieldsUpdatedAt,
+		PatchAccountingTransactionQueryParamFieldsMemo,
+		PatchAccountingTransactionQueryParamFieldsTotalAmount,
+		PatchAccountingTransactionQueryParamFieldsTaxAmount,
+		PatchAccountingTransactionQueryParamFieldsAccountID,
+		PatchAccountingTransactionQueryParamFieldsReference,
+		PatchAccountingTransactionQueryParamFieldsSubTotalAmount,
+		PatchAccountingTransactionQueryParamFieldsSplitAccountID,
+		PatchAccountingTransactionQueryParamFieldsPaymentMethod,
+		PatchAccountingTransactionQueryParamFieldsPaymentTerms,
+		PatchAccountingTransactionQueryParamFieldsCustomerMessage,
+		PatchAccountingTransactionQueryParamFieldsType,
+		PatchAccountingTransactionQueryParamFieldsLineitems,
+		PatchAccountingTransactionQueryParamFieldsCurrency,
+		PatchAccountingTransactionQueryParamFieldsContacts,
+		PatchAccountingTransactionQueryParamFieldsOrganizationID,
+		PatchAccountingTransactionQueryParamFieldsCategoryIds,
+		PatchAccountingTransactionQueryParamFieldsProjectID,
+		PatchAccountingTransactionQueryParamFieldsTransactionAt,
+		PatchAccountingTransactionQueryParamFieldsExchangeRate,
+		PatchAccountingTransactionQueryParamFieldsStatus,
+		PatchAccountingTransactionQueryParamFieldsMetadata,
+		PatchAccountingTransactionQueryParamFieldsRaw,
+	}
+}
 func (e *PatchAccountingTransactionQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

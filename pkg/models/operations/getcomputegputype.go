@@ -34,6 +34,29 @@ const (
 func (e GetComputeGputypeQueryParamFields) ToPointer() *GetComputeGputypeQueryParamFields {
 	return &e
 }
+
+// GetComputeGputypeQueryParamFieldsValues returns every known GetComputeGputypeQueryParamFields value in schema order.
+func GetComputeGputypeQueryParamFieldsValues() []GetComputeGputypeQueryParamFields {
+	return []GetComputeGputypeQueryParamFields{
+		GetComputeGputypeQueryParamFieldsID,
+		GetComputeGputypeQueryParamFieldsCreatedAt,
+		GetComputeGputypeQueryParamFieldsUpdatedAt,
+		GetComputeGputypeQueryParamFieldsName,
+		GetComputeGputypeQueryParamFieldsGpuModel,
+		GetComputeGputypeQueryParamFieldsGpuManufacturer,
+		GetComputeGputypeQueryParamFieldsSku,
+		GetComputeGputypeQueryParamFieldsGpuCount,
+		GetComputeGputypeQueryParamFieldsGpuMemoryMb,
+		GetComputeGputypeQueryParamFieldsCPUCount,
+		GetComputeGputypeQueryParamFieldsMemoryMb,
+		GetComputeGputypeQueryParamFieldsDiskMb,
+		GetComputeGputypeQueryParamFieldsArchitecture,
+		GetComputeGputypeQueryParamFieldsPrices,
+		GetComputeGputypeQueryParamFieldsAvailability,
+		GetComputeGputypeQueryParamFieldsMetadata,
+		GetComputeGputypeQueryParamFieldsRaw,
+	}
+}
 func (e *GetComputeGputypeQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

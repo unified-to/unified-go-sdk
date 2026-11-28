@@ -14,6 +14,15 @@ func (e EnrichEmailType) ToPointer() *EnrichEmailType {
 	return &e
 }
 
+// EnrichEmailTypeValues returns every known EnrichEmailType value in schema order.
+func EnrichEmailTypeValues() []EnrichEmailType {
+	return []EnrichEmailType{
+		EnrichEmailTypeWork,
+		EnrichEmailTypeHome,
+		EnrichEmailTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *EnrichEmailType) IsExact() bool {
 	if e != nil {

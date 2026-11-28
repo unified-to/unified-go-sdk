@@ -18,6 +18,19 @@ func (e PropertyCalendarEventRecurrenceOnDays) ToPointer() *PropertyCalendarEven
 	return &e
 }
 
+// PropertyCalendarEventRecurrenceOnDaysValues returns every known PropertyCalendarEventRecurrenceOnDays value in schema order.
+func PropertyCalendarEventRecurrenceOnDaysValues() []PropertyCalendarEventRecurrenceOnDays {
+	return []PropertyCalendarEventRecurrenceOnDays{
+		PropertyCalendarEventRecurrenceOnDaysSu,
+		PropertyCalendarEventRecurrenceOnDaysMo,
+		PropertyCalendarEventRecurrenceOnDaysTu,
+		PropertyCalendarEventRecurrenceOnDaysWe,
+		PropertyCalendarEventRecurrenceOnDaysTh,
+		PropertyCalendarEventRecurrenceOnDaysFr,
+		PropertyCalendarEventRecurrenceOnDaysSa,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyCalendarEventRecurrenceOnDays) IsExact() bool {
 	if e != nil {

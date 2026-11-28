@@ -13,6 +13,13 @@ func (e Mode) ToPointer() *Mode {
 	return &e
 }
 
+// ModeValues returns every known Mode value in schema order.
+func ModeValues() []Mode {
+	return []Mode{
+		ModeServer,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Mode) IsExact() bool {
 	if e != nil {

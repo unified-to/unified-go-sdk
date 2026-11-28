@@ -14,6 +14,15 @@ func (e CoverageType) ToPointer() *CoverageType {
 	return &e
 }
 
+// CoverageTypeValues returns every known CoverageType value in schema order.
+func CoverageTypeValues() []CoverageType {
+	return []CoverageType{
+		CoverageTypeStandard,
+		CoverageTypePremium,
+		CoverageTypeCustom,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CoverageType) IsExact() bool {
 	if e != nil {

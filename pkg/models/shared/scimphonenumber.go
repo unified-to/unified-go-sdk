@@ -17,6 +17,18 @@ func (e ScimPhoneNumberType) ToPointer() *ScimPhoneNumberType {
 	return &e
 }
 
+// ScimPhoneNumberTypeValues returns every known ScimPhoneNumberType value in schema order.
+func ScimPhoneNumberTypeValues() []ScimPhoneNumberType {
+	return []ScimPhoneNumberType{
+		ScimPhoneNumberTypeWork,
+		ScimPhoneNumberTypeHome,
+		ScimPhoneNumberTypeOther,
+		ScimPhoneNumberTypeMobile,
+		ScimPhoneNumberTypeFax,
+		ScimPhoneNumberTypePager,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ScimPhoneNumberType) IsExact() bool {
 	if e != nil {

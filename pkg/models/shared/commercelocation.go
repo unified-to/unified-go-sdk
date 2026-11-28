@@ -21,6 +21,17 @@ func (e LocationType) ToPointer() *LocationType {
 	return &e
 }
 
+// LocationTypeValues returns every known LocationType value in schema order.
+func LocationTypeValues() []LocationType {
+	return []LocationType{
+		LocationTypeRestaurant,
+		LocationTypeSalon,
+		LocationTypeWarehouse,
+		LocationTypeStore,
+		LocationTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *LocationType) IsExact() bool {
 	if e != nil {

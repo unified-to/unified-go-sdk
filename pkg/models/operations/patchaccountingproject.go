@@ -51,6 +51,46 @@ const (
 func (e PatchAccountingProjectQueryParamFields) ToPointer() *PatchAccountingProjectQueryParamFields {
 	return &e
 }
+
+// PatchAccountingProjectQueryParamFieldsValues returns every known PatchAccountingProjectQueryParamFields value in schema order.
+func PatchAccountingProjectQueryParamFieldsValues() []PatchAccountingProjectQueryParamFields {
+	return []PatchAccountingProjectQueryParamFields{
+		PatchAccountingProjectQueryParamFieldsID,
+		PatchAccountingProjectQueryParamFieldsCreatedAt,
+		PatchAccountingProjectQueryParamFieldsUpdatedAt,
+		PatchAccountingProjectQueryParamFieldsName,
+		PatchAccountingProjectQueryParamFieldsCode,
+		PatchAccountingProjectQueryParamFieldsDescription,
+		PatchAccountingProjectQueryParamFieldsStatus,
+		PatchAccountingProjectQueryParamFieldsIsActive,
+		PatchAccountingProjectQueryParamFieldsIsBillable,
+		PatchAccountingProjectQueryParamFieldsContactID,
+		PatchAccountingProjectQueryParamFieldsParentID,
+		PatchAccountingProjectQueryParamFieldsManagerUserID,
+		PatchAccountingProjectQueryParamFieldsStartedAt,
+		PatchAccountingProjectQueryParamFieldsDueAt,
+		PatchAccountingProjectQueryParamFieldsEndedAt,
+		PatchAccountingProjectQueryParamFieldsCurrency,
+		PatchAccountingProjectQueryParamFieldsEstimateAmount,
+		PatchAccountingProjectQueryParamFieldsEstimatedCostAmount,
+		PatchAccountingProjectQueryParamFieldsActualCostAmount,
+		PatchAccountingProjectQueryParamFieldsInvoicedAmount,
+		PatchAccountingProjectQueryParamFieldsToBeInvoicedAmount,
+		PatchAccountingProjectQueryParamFieldsExpenseAmount,
+		PatchAccountingProjectQueryParamFieldsDepositAmount,
+		PatchAccountingProjectQueryParamFieldsDepositAppliedAmount,
+		PatchAccountingProjectQueryParamFieldsCreditNoteAmount,
+		PatchAccountingProjectQueryParamFieldsMinutesLogged,
+		PatchAccountingProjectQueryParamFieldsMinutesToBeInvoiced,
+		PatchAccountingProjectQueryParamFieldsPercentComplete,
+		PatchAccountingProjectQueryParamFieldsBillingType,
+		PatchAccountingProjectQueryParamFieldsCategoryIds,
+		PatchAccountingProjectQueryParamFieldsLocationID,
+		PatchAccountingProjectQueryParamFieldsOrganizationID,
+		PatchAccountingProjectQueryParamFieldsMetadata,
+		PatchAccountingProjectQueryParamFieldsRaw,
+	}
+}
 func (e *PatchAccountingProjectQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -22,6 +22,18 @@ func (e FilingStatus) ToPointer() *FilingStatus {
 	return &e
 }
 
+// FilingStatusValues returns every known FilingStatus value in schema order.
+func FilingStatusValues() []FilingStatus {
+	return []FilingStatus{
+		FilingStatusSingle,
+		FilingStatusMarriedJointly,
+		FilingStatusMarriedSeparately,
+		FilingStatusHeadOfHousehold,
+		FilingStatusQualifyingSurvivor,
+		FilingStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *FilingStatus) IsExact() bool {
 	if e != nil {
@@ -48,6 +60,17 @@ func (e Form) ToPointer() *Form {
 	return &e
 }
 
+// FormValues returns every known Form value in schema order.
+func FormValues() []Form {
+	return []Form{
+		FormW42020,
+		FormW4Legacy,
+		FormStateForm,
+		FormTd1,
+		FormOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Form) IsExact() bool {
 	if e != nil {
@@ -69,6 +92,15 @@ const (
 
 func (e JurisdictionType) ToPointer() *JurisdictionType {
 	return &e
+}
+
+// JurisdictionTypeValues returns every known JurisdictionType value in schema order.
+func JurisdictionTypeValues() []JurisdictionType {
+	return []JurisdictionType{
+		JurisdictionTypeFederal,
+		JurisdictionTypeState,
+		JurisdictionTypeLocal,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -93,6 +125,15 @@ const (
 
 func (e OverrideType) ToPointer() *OverrideType {
 	return &e
+}
+
+// OverrideTypeValues returns every known OverrideType value in schema order.
+func OverrideTypeValues() []OverrideType {
+	return []OverrideType{
+		OverrideTypeNone,
+		OverrideTypeFixedAmount,
+		OverrideTypePercent,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

@@ -43,6 +43,38 @@ const (
 func (e PatchHrisTaxwithholdingQueryParamFields) ToPointer() *PatchHrisTaxwithholdingQueryParamFields {
 	return &e
 }
+
+// PatchHrisTaxwithholdingQueryParamFieldsValues returns every known PatchHrisTaxwithholdingQueryParamFields value in schema order.
+func PatchHrisTaxwithholdingQueryParamFieldsValues() []PatchHrisTaxwithholdingQueryParamFields {
+	return []PatchHrisTaxwithholdingQueryParamFields{
+		PatchHrisTaxwithholdingQueryParamFieldsID,
+		PatchHrisTaxwithholdingQueryParamFieldsCreatedAt,
+		PatchHrisTaxwithholdingQueryParamFieldsUpdatedAt,
+		PatchHrisTaxwithholdingQueryParamFieldsUserID,
+		PatchHrisTaxwithholdingQueryParamFieldsCompanyID,
+		PatchHrisTaxwithholdingQueryParamFieldsCountry,
+		PatchHrisTaxwithholdingQueryParamFieldsJurisdictionType,
+		PatchHrisTaxwithholdingQueryParamFieldsJurisdiction,
+		PatchHrisTaxwithholdingQueryParamFieldsIsResident,
+		PatchHrisTaxwithholdingQueryParamFieldsForm,
+		PatchHrisTaxwithholdingQueryParamFieldsFilingStatus,
+		PatchHrisTaxwithholdingQueryParamFieldsTaxCode,
+		PatchHrisTaxwithholdingQueryParamFieldsAllowances,
+		PatchHrisTaxwithholdingQueryParamFieldsClaimAmount,
+		PatchHrisTaxwithholdingQueryParamFieldsHasMultipleJobs,
+		PatchHrisTaxwithholdingQueryParamFieldsDependentsAmount,
+		PatchHrisTaxwithholdingQueryParamFieldsOtherIncomeAmount,
+		PatchHrisTaxwithholdingQueryParamFieldsOtherDeductionsAmount,
+		PatchHrisTaxwithholdingQueryParamFieldsExtraWithholdingAmount,
+		PatchHrisTaxwithholdingQueryParamFieldsExtraWithholdingPercent,
+		PatchHrisTaxwithholdingQueryParamFieldsOverrideType,
+		PatchHrisTaxwithholdingQueryParamFieldsOverrideAmount,
+		PatchHrisTaxwithholdingQueryParamFieldsIsExempt,
+		PatchHrisTaxwithholdingQueryParamFieldsEffectiveAt,
+		PatchHrisTaxwithholdingQueryParamFieldsMetadata,
+		PatchHrisTaxwithholdingQueryParamFieldsRaw,
+	}
+}
 func (e *PatchHrisTaxwithholdingQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

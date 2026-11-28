@@ -38,6 +38,33 @@ const (
 func (e CreateAccountingJournalQueryParamFields) ToPointer() *CreateAccountingJournalQueryParamFields {
 	return &e
 }
+
+// CreateAccountingJournalQueryParamFieldsValues returns every known CreateAccountingJournalQueryParamFields value in schema order.
+func CreateAccountingJournalQueryParamFieldsValues() []CreateAccountingJournalQueryParamFields {
+	return []CreateAccountingJournalQueryParamFields{
+		CreateAccountingJournalQueryParamFieldsID,
+		CreateAccountingJournalQueryParamFieldsCreatedAt,
+		CreateAccountingJournalQueryParamFieldsUpdatedAt,
+		CreateAccountingJournalQueryParamFieldsReference,
+		CreateAccountingJournalQueryParamFieldsTaxAmount,
+		CreateAccountingJournalQueryParamFieldsCurrency,
+		CreateAccountingJournalQueryParamFieldsLineitems,
+		CreateAccountingJournalQueryParamFieldsTaxrateID,
+		CreateAccountingJournalQueryParamFieldsDescription,
+		CreateAccountingJournalQueryParamFieldsPostedAt,
+		CreateAccountingJournalQueryParamFieldsSource,
+		CreateAccountingJournalQueryParamFieldsOrganizationID,
+		CreateAccountingJournalQueryParamFieldsCategoryIds,
+		CreateAccountingJournalQueryParamFieldsProjectID,
+		CreateAccountingJournalQueryParamFieldsAttachments,
+		CreateAccountingJournalQueryParamFieldsTotalAmount,
+		CreateAccountingJournalQueryParamFieldsExchangeRate,
+		CreateAccountingJournalQueryParamFieldsStatus,
+		CreateAccountingJournalQueryParamFieldsIsInclusiveOfTax,
+		CreateAccountingJournalQueryParamFieldsMetadata,
+		CreateAccountingJournalQueryParamFieldsRaw,
+	}
+}
 func (e *CreateAccountingJournalQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

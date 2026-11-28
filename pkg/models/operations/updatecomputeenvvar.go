@@ -27,6 +27,22 @@ const (
 func (e UpdateComputeEnvvarQueryParamFields) ToPointer() *UpdateComputeEnvvarQueryParamFields {
 	return &e
 }
+
+// UpdateComputeEnvvarQueryParamFieldsValues returns every known UpdateComputeEnvvarQueryParamFields value in schema order.
+func UpdateComputeEnvvarQueryParamFieldsValues() []UpdateComputeEnvvarQueryParamFields {
+	return []UpdateComputeEnvvarQueryParamFields{
+		UpdateComputeEnvvarQueryParamFieldsID,
+		UpdateComputeEnvvarQueryParamFieldsCreatedAt,
+		UpdateComputeEnvvarQueryParamFieldsUpdatedAt,
+		UpdateComputeEnvvarQueryParamFieldsServiceID,
+		UpdateComputeEnvvarQueryParamFieldsName,
+		UpdateComputeEnvvarQueryParamFieldsValue,
+		UpdateComputeEnvvarQueryParamFieldsEnvironments,
+		UpdateComputeEnvvarQueryParamFieldsIsSecret,
+		UpdateComputeEnvvarQueryParamFieldsMetadata,
+		UpdateComputeEnvvarQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateComputeEnvvarQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

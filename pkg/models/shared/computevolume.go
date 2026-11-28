@@ -23,6 +23,18 @@ func (e ComputeVolumeStatus) ToPointer() *ComputeVolumeStatus {
 	return &e
 }
 
+// ComputeVolumeStatusValues returns every known ComputeVolumeStatus value in schema order.
+func ComputeVolumeStatusValues() []ComputeVolumeStatus {
+	return []ComputeVolumeStatus{
+		ComputeVolumeStatusCreating,
+		ComputeVolumeStatusAvailable,
+		ComputeVolumeStatusInUse,
+		ComputeVolumeStatusDeleting,
+		ComputeVolumeStatusError,
+		ComputeVolumeStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ComputeVolumeStatus) IsExact() bool {
 	if e != nil {
@@ -47,6 +59,17 @@ const (
 
 func (e ComputeVolumeType) ToPointer() *ComputeVolumeType {
 	return &e
+}
+
+// ComputeVolumeTypeValues returns every known ComputeVolumeType value in schema order.
+func ComputeVolumeTypeValues() []ComputeVolumeType {
+	return []ComputeVolumeType{
+		ComputeVolumeTypeStandard,
+		ComputeVolumeTypeHighPerformance,
+		ComputeVolumeTypeShared,
+		ComputeVolumeTypeLocal,
+		ComputeVolumeTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

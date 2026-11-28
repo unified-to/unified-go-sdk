@@ -23,6 +23,18 @@ func (e CdpEventType) ToPointer() *CdpEventType {
 	return &e
 }
 
+// CdpEventTypeValues returns every known CdpEventType value in schema order.
+func CdpEventTypeValues() []CdpEventType {
+	return []CdpEventType{
+		CdpEventTypeTrack,
+		CdpEventTypePage,
+		CdpEventTypeScreen,
+		CdpEventTypeIdentify,
+		CdpEventTypeGroup,
+		CdpEventTypeAlias,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CdpEventType) IsExact() bool {
 	if e != nil {

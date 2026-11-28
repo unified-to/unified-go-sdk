@@ -297,6 +297,25 @@ func (e GenaiMetadataFormat) ToPointer() *GenaiMetadataFormat {
 	return &e
 }
 
+// GenaiMetadataFormatValues returns every known GenaiMetadataFormat value in schema order.
+func GenaiMetadataFormatValues() []GenaiMetadataFormat {
+	return []GenaiMetadataFormat{
+		GenaiMetadataFormatText,
+		GenaiMetadataFormatNumber,
+		GenaiMetadataFormatDate,
+		GenaiMetadataFormatBoolean,
+		GenaiMetadataFormatFile,
+		GenaiMetadataFormatTextarea,
+		GenaiMetadataFormatSingleSelect,
+		GenaiMetadataFormatMultipleSelect,
+		GenaiMetadataFormatMeasurement,
+		GenaiMetadataFormatPrice,
+		GenaiMetadataFormatYesNo,
+		GenaiMetadataFormatCurrency,
+		GenaiMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *GenaiMetadataFormat) IsExact() bool {
 	if e != nil {

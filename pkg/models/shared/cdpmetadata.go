@@ -291,6 +291,18 @@ func (e CdpMetadataFormat) ToPointer() *CdpMetadataFormat {
 	return &e
 }
 
+// CdpMetadataFormatValues returns every known CdpMetadataFormat value in schema order.
+func CdpMetadataFormatValues() []CdpMetadataFormat {
+	return []CdpMetadataFormat{
+		CdpMetadataFormatText,
+		CdpMetadataFormatNumber,
+		CdpMetadataFormatDate,
+		CdpMetadataFormatBoolean,
+		CdpMetadataFormatArray,
+		CdpMetadataFormatObject,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CdpMetadataFormat) IsExact() bool {
 	if e != nil {

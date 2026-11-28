@@ -55,6 +55,56 @@ func (e PropertyIntegrationCategories) ToPointer() *PropertyIntegrationCategorie
 	return &e
 }
 
+// PropertyIntegrationCategoriesValues returns every known PropertyIntegrationCategories value in schema order.
+func PropertyIntegrationCategoriesValues() []PropertyIntegrationCategories {
+	return []PropertyIntegrationCategories{
+		PropertyIntegrationCategoriesPassthrough,
+		PropertyIntegrationCategoriesHris,
+		PropertyIntegrationCategoriesAts,
+		PropertyIntegrationCategoriesAuth,
+		PropertyIntegrationCategoriesSaml,
+		PropertyIntegrationCategoriesCrm,
+		PropertyIntegrationCategoriesEnrich,
+		PropertyIntegrationCategoriesMartech,
+		PropertyIntegrationCategoriesTicketing,
+		PropertyIntegrationCategoriesUc,
+		PropertyIntegrationCategoriesAccounting,
+		PropertyIntegrationCategoriesStorage,
+		PropertyIntegrationCategoriesCommerce,
+		PropertyIntegrationCategoriesPayment,
+		PropertyIntegrationCategoriesGenai,
+		PropertyIntegrationCategoriesMessaging,
+		PropertyIntegrationCategoriesKms,
+		PropertyIntegrationCategoriesTask,
+		PropertyIntegrationCategoriesScim,
+		PropertyIntegrationCategoriesLms,
+		PropertyIntegrationCategoriesRepo,
+		PropertyIntegrationCategoriesMetadata,
+		PropertyIntegrationCategoriesCalendar,
+		PropertyIntegrationCategoriesVerification,
+		PropertyIntegrationCategoriesAds,
+		PropertyIntegrationCategoriesAnalytics,
+		PropertyIntegrationCategoriesForms,
+		PropertyIntegrationCategoriesShipping,
+		PropertyIntegrationCategoriesAssessment,
+		PropertyIntegrationCategoriesSigning,
+		PropertyIntegrationCategoriesClubs,
+		PropertyIntegrationCategoriesDatastore,
+		PropertyIntegrationCategoriesCdp,
+		PropertyIntegrationCategoriesPerformance,
+		PropertyIntegrationCategoriesSocial,
+		PropertyIntegrationCategoriesLegal,
+		PropertyIntegrationCategoriesCompute,
+		PropertyIntegrationCategoriesHealthcare,
+		PropertyIntegrationCategoriesProperty,
+		PropertyIntegrationCategoriesPlm,
+		PropertyIntegrationCategoriesQms,
+		PropertyIntegrationCategoriesDms,
+		PropertyIntegrationCategoriesFhir,
+		PropertyIntegrationCategoriesPrinting,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyIntegrationCategories) IsExact() bool {
 	if e != nil {

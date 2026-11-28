@@ -46,7 +46,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Adflicto despecto suppellex socius cresco."),
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("a782415e-f468-435f-8205-27cc2c980857"),
+            ID: unifiedgosdk.Pointer("c04dc5d6-355d-45bf-b1e1-3965e5ba2747"),
             Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             Languages: []string{
@@ -106,7 +106,7 @@ func main() {
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("laboriosam"),
             ProviderName: unifiedgosdk.Pointer("Mraz - Keeling"),
-            PublishedAt: types.MustNewTimeFromString("2022-09-14T18:24:28.167Z"),
+            PublishedAt: types.MustNewTimeFromString("2022-09-15T01:48:30.262Z"),
             ShortDescription: unifiedgosdk.Pointer("Videlicet pauci."),
             Skills: []string{
                 "soleo",
@@ -121,7 +121,7 @@ func main() {
             Tags: []string{
                 "audio",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-10-16T05:13:53.055Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-16T12:58:06.317Z"),
         },
         ConnectionID: "<id>",
     })
@@ -296,7 +296,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Adflicto despecto suppellex socius cresco."),
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("24424297-71fd-4051-880a-d90346131054"),
+            ID: unifiedgosdk.Pointer("3f7fe3ef-01ea-41f6-9e1a-99302ff334e5"),
             Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             Languages: []string{
@@ -356,7 +356,7 @@ func main() {
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("laboriosam"),
             ProviderName: unifiedgosdk.Pointer("Mraz - Keeling"),
-            PublishedAt: types.MustNewTimeFromString("2022-09-14T18:24:28.176Z"),
+            PublishedAt: types.MustNewTimeFromString("2022-09-15T01:48:30.270Z"),
             ShortDescription: unifiedgosdk.Pointer("Videlicet pauci."),
             Skills: []string{
                 "soleo",
@@ -371,7 +371,7 @@ func main() {
             Tags: []string{
                 "audio",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-10-16T05:13:53.064Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-16T12:58:06.325Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -493,7 +493,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Adflicto despecto suppellex socius cresco."),
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("24424297-71fd-4051-880a-d90346131054"),
+            ID: unifiedgosdk.Pointer("3f7fe3ef-01ea-41f6-9e1a-99302ff334e5"),
             Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             Languages: []string{
@@ -553,7 +553,7 @@ func main() {
             Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("laboriosam"),
             ProviderName: unifiedgosdk.Pointer("Mraz - Keeling"),
-            PublishedAt: types.MustNewTimeFromString("2022-09-14T18:24:28.176Z"),
+            PublishedAt: types.MustNewTimeFromString("2022-09-15T01:48:30.270Z"),
             ShortDescription: unifiedgosdk.Pointer("Videlicet pauci."),
             Skills: []string{
                 "soleo",
@@ -568,7 +568,7 @@ func main() {
             Tags: []string{
                 "audio",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-10-16T05:13:53.064Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-16T12:58:06.325Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

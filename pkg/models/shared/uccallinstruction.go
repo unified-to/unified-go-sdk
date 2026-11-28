@@ -16,6 +16,17 @@ func (e UcCallInstructionType) ToPointer() *UcCallInstructionType {
 	return &e
 }
 
+// UcCallInstructionTypeValues returns every known UcCallInstructionType value in schema order.
+func UcCallInstructionTypeValues() []UcCallInstructionType {
+	return []UcCallInstructionType{
+		UcCallInstructionTypeSay,
+		UcCallInstructionTypePlay,
+		UcCallInstructionTypePause,
+		UcCallInstructionTypeDial,
+		UcCallInstructionTypeHangup,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *UcCallInstructionType) IsExact() bool {
 	if e != nil {

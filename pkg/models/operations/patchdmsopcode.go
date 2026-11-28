@@ -37,6 +37,32 @@ const (
 func (e PatchDmsOpcodeQueryParamFields) ToPointer() *PatchDmsOpcodeQueryParamFields {
 	return &e
 }
+
+// PatchDmsOpcodeQueryParamFieldsValues returns every known PatchDmsOpcodeQueryParamFields value in schema order.
+func PatchDmsOpcodeQueryParamFieldsValues() []PatchDmsOpcodeQueryParamFields {
+	return []PatchDmsOpcodeQueryParamFields{
+		PatchDmsOpcodeQueryParamFieldsID,
+		PatchDmsOpcodeQueryParamFieldsCreatedAt,
+		PatchDmsOpcodeQueryParamFieldsUpdatedAt,
+		PatchDmsOpcodeQueryParamFieldsCode,
+		PatchDmsOpcodeQueryParamFieldsDescription,
+		PatchDmsOpcodeQueryParamFieldsType,
+		PatchDmsOpcodeQueryParamFieldsCategory,
+		PatchDmsOpcodeQueryParamFieldsPayType,
+		PatchDmsOpcodeQueryParamFieldsFlatRateHours,
+		PatchDmsOpcodeQueryParamFieldsEstimatedHours,
+		PatchDmsOpcodeQueryParamFieldsCurrency,
+		PatchDmsOpcodeQueryParamFieldsPriceAmount,
+		PatchDmsOpcodeQueryParamFieldsLaborRateAmount,
+		PatchDmsOpcodeQueryParamFieldsSkillCode,
+		PatchDmsOpcodeQueryParamFieldsMake,
+		PatchDmsOpcodeQueryParamFieldsOemCode,
+		PatchDmsOpcodeQueryParamFieldsIsActive,
+		PatchDmsOpcodeQueryParamFieldsParts,
+		PatchDmsOpcodeQueryParamFieldsMetadata,
+		PatchDmsOpcodeQueryParamFieldsRaw,
+	}
+}
 func (e *PatchDmsOpcodeQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

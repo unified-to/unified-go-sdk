@@ -14,6 +14,14 @@ func (e Code) ToPointer() *Code {
 	return &e
 }
 
+// CodeValues returns every known Code value in schema order.
+func CodeValues() []Code {
+	return []Code{
+		CodeRead,
+		CodeSearchType,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Code) IsExact() bool {
 	if e != nil {

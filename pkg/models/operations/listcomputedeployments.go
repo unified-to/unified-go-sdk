@@ -34,6 +34,29 @@ const (
 func (e ListComputeDeploymentsQueryParamFields) ToPointer() *ListComputeDeploymentsQueryParamFields {
 	return &e
 }
+
+// ListComputeDeploymentsQueryParamFieldsValues returns every known ListComputeDeploymentsQueryParamFields value in schema order.
+func ListComputeDeploymentsQueryParamFieldsValues() []ListComputeDeploymentsQueryParamFields {
+	return []ListComputeDeploymentsQueryParamFields{
+		ListComputeDeploymentsQueryParamFieldsID,
+		ListComputeDeploymentsQueryParamFieldsCreatedAt,
+		ListComputeDeploymentsQueryParamFieldsUpdatedAt,
+		ListComputeDeploymentsQueryParamFieldsServiceID,
+		ListComputeDeploymentsQueryParamFieldsStatus,
+		ListComputeDeploymentsQueryParamFieldsTrigger,
+		ListComputeDeploymentsQueryParamFieldsEnvironment,
+		ListComputeDeploymentsQueryParamFieldsCommitIdentifier,
+		ListComputeDeploymentsQueryParamFieldsCommitMessage,
+		ListComputeDeploymentsQueryParamFieldsBranch,
+		ListComputeDeploymentsQueryParamFieldsImage,
+		ListComputeDeploymentsQueryParamFieldsURL,
+		ListComputeDeploymentsQueryParamFieldsStartedAt,
+		ListComputeDeploymentsQueryParamFieldsFinishedAt,
+		ListComputeDeploymentsQueryParamFieldsError,
+		ListComputeDeploymentsQueryParamFieldsMetadata,
+		ListComputeDeploymentsQueryParamFieldsRaw,
+	}
+}
 func (e *ListComputeDeploymentsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

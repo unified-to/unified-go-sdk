@@ -56,6 +56,51 @@ const (
 func (e ListAdsGroupsQueryParamFields) ToPointer() *ListAdsGroupsQueryParamFields {
 	return &e
 }
+
+// ListAdsGroupsQueryParamFieldsValues returns every known ListAdsGroupsQueryParamFields value in schema order.
+func ListAdsGroupsQueryParamFieldsValues() []ListAdsGroupsQueryParamFields {
+	return []ListAdsGroupsQueryParamFields{
+		ListAdsGroupsQueryParamFieldsID,
+		ListAdsGroupsQueryParamFieldsCreatedAt,
+		ListAdsGroupsQueryParamFieldsUpdatedAt,
+		ListAdsGroupsQueryParamFieldsName,
+		ListAdsGroupsQueryParamFieldsParentID,
+		ListAdsGroupsQueryParamFieldsCampaignID,
+		ListAdsGroupsQueryParamFieldsOrganizationID,
+		ListAdsGroupsQueryParamFieldsInsertionorderID,
+		ListAdsGroupsQueryParamFieldsStatus,
+		ListAdsGroupsQueryParamFieldsEffectiveStatus,
+		ListAdsGroupsQueryParamFieldsTargeting,
+		ListAdsGroupsQueryParamFieldsBidAmount,
+		ListAdsGroupsQueryParamFieldsBidStrategy,
+		ListAdsGroupsQueryParamFieldsBudgetAmount,
+		ListAdsGroupsQueryParamFieldsBudgetPeriod,
+		ListAdsGroupsQueryParamFieldsBudgetAllocationType,
+		ListAdsGroupsQueryParamFieldsStartAt,
+		ListAdsGroupsQueryParamFieldsEndAt,
+		ListAdsGroupsQueryParamFieldsBudgetUnit,
+		ListAdsGroupsQueryParamFieldsBudgetMaxAmount,
+		ListAdsGroupsQueryParamFieldsType,
+		ListAdsGroupsQueryParamFieldsHasEuPoliticalAds,
+		ListAdsGroupsQueryParamFieldsPacing,
+		ListAdsGroupsQueryParamFieldsFrequencyCap,
+		ListAdsGroupsQueryParamFieldsCreativeIds,
+		ListAdsGroupsQueryParamFieldsOptimizationGoal,
+		ListAdsGroupsQueryParamFieldsBillingEvent,
+		ListAdsGroupsQueryParamFieldsCurrency,
+		ListAdsGroupsQueryParamFieldsPromoted,
+		ListAdsGroupsQueryParamFieldsLanguageLocale,
+		ListAdsGroupsQueryParamFieldsCreativeSelection,
+		ListAdsGroupsQueryParamFieldsMetadata,
+		ListAdsGroupsQueryParamFieldsRaw,
+		ListAdsGroupsQueryParamFieldsDeliveryType,
+		ListAdsGroupsQueryParamFieldsPriority,
+		ListAdsGroupsQueryParamFieldsCostType,
+		ListAdsGroupsQueryParamFieldsDeliveryGoal,
+		ListAdsGroupsQueryParamFieldsCreativeSizes,
+		ListAdsGroupsQueryParamFieldsConversionTracking,
+	}
+}
 func (e *ListAdsGroupsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

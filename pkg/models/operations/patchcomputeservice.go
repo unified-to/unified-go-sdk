@@ -40,6 +40,35 @@ const (
 func (e PatchComputeServiceQueryParamFields) ToPointer() *PatchComputeServiceQueryParamFields {
 	return &e
 }
+
+// PatchComputeServiceQueryParamFieldsValues returns every known PatchComputeServiceQueryParamFields value in schema order.
+func PatchComputeServiceQueryParamFieldsValues() []PatchComputeServiceQueryParamFields {
+	return []PatchComputeServiceQueryParamFields{
+		PatchComputeServiceQueryParamFieldsID,
+		PatchComputeServiceQueryParamFieldsCreatedAt,
+		PatchComputeServiceQueryParamFieldsUpdatedAt,
+		PatchComputeServiceQueryParamFieldsName,
+		PatchComputeServiceQueryParamFieldsType,
+		PatchComputeServiceQueryParamFieldsStatus,
+		PatchComputeServiceQueryParamFieldsRuntime,
+		PatchComputeServiceQueryParamFieldsRegionID,
+		PatchComputeServiceQueryParamFieldsGputypeID,
+		PatchComputeServiceQueryParamFieldsSku,
+		PatchComputeServiceQueryParamFieldsInstanceCount,
+		PatchComputeServiceQueryParamFieldsMinInstanceCount,
+		PatchComputeServiceQueryParamFieldsMaxInstanceCount,
+		PatchComputeServiceQueryParamFieldsRepoURL,
+		PatchComputeServiceQueryParamFieldsBranch,
+		PatchComputeServiceQueryParamFieldsImage,
+		PatchComputeServiceQueryParamFieldsBuildCommand,
+		PatchComputeServiceQueryParamFieldsStartCommand,
+		PatchComputeServiceQueryParamFieldsURL,
+		PatchComputeServiceQueryParamFieldsProjectIdentifier,
+		PatchComputeServiceQueryParamFieldsEnv,
+		PatchComputeServiceQueryParamFieldsMetadata,
+		PatchComputeServiceQueryParamFieldsRaw,
+	}
+}
 func (e *PatchComputeServiceQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

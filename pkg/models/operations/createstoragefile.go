@@ -37,6 +37,32 @@ const (
 func (e CreateStorageFileQueryParamFields) ToPointer() *CreateStorageFileQueryParamFields {
 	return &e
 }
+
+// CreateStorageFileQueryParamFieldsValues returns every known CreateStorageFileQueryParamFields value in schema order.
+func CreateStorageFileQueryParamFieldsValues() []CreateStorageFileQueryParamFields {
+	return []CreateStorageFileQueryParamFields{
+		CreateStorageFileQueryParamFieldsID,
+		CreateStorageFileQueryParamFieldsCreatedAt,
+		CreateStorageFileQueryParamFieldsUpdatedAt,
+		CreateStorageFileQueryParamFieldsName,
+		CreateStorageFileQueryParamFieldsDescription,
+		CreateStorageFileQueryParamFieldsParentID,
+		CreateStorageFileQueryParamFieldsUserID,
+		CreateStorageFileQueryParamFieldsSize,
+		CreateStorageFileQueryParamFieldsType,
+		CreateStorageFileQueryParamFieldsMimeType,
+		CreateStorageFileQueryParamFieldsPermissions,
+		CreateStorageFileQueryParamFieldsDownloadURL,
+		CreateStorageFileQueryParamFieldsHash,
+		CreateStorageFileQueryParamFieldsData,
+		CreateStorageFileQueryParamFieldsVersion,
+		CreateStorageFileQueryParamFieldsWebURL,
+		CreateStorageFileQueryParamFieldsReferences,
+		CreateStorageFileQueryParamFieldsTags,
+		CreateStorageFileQueryParamFieldsMetadata,
+		CreateStorageFileQueryParamFieldsRaw,
+	}
+}
 func (e *CreateStorageFileQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

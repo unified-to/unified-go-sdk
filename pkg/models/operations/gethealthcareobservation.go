@@ -38,6 +38,33 @@ const (
 func (e GetHealthcareObservationQueryParamFields) ToPointer() *GetHealthcareObservationQueryParamFields {
 	return &e
 }
+
+// GetHealthcareObservationQueryParamFieldsValues returns every known GetHealthcareObservationQueryParamFields value in schema order.
+func GetHealthcareObservationQueryParamFieldsValues() []GetHealthcareObservationQueryParamFields {
+	return []GetHealthcareObservationQueryParamFields{
+		GetHealthcareObservationQueryParamFieldsID,
+		GetHealthcareObservationQueryParamFieldsCreatedAt,
+		GetHealthcareObservationQueryParamFieldsUpdatedAt,
+		GetHealthcareObservationQueryParamFieldsPatientID,
+		GetHealthcareObservationQueryParamFieldsEncounterID,
+		GetHealthcareObservationQueryParamFieldsPractitionerID,
+		GetHealthcareObservationQueryParamFieldsName,
+		GetHealthcareObservationQueryParamFieldsCodes,
+		GetHealthcareObservationQueryParamFieldsStatus,
+		GetHealthcareObservationQueryParamFieldsType,
+		GetHealthcareObservationQueryParamFieldsValueNumber,
+		GetHealthcareObservationQueryParamFieldsValueUnit,
+		GetHealthcareObservationQueryParamFieldsValueText,
+		GetHealthcareObservationQueryParamFieldsInterpretation,
+		GetHealthcareObservationQueryParamFieldsReferenceRange,
+		GetHealthcareObservationQueryParamFieldsComponents,
+		GetHealthcareObservationQueryParamFieldsObservedAt,
+		GetHealthcareObservationQueryParamFieldsIssuedAt,
+		GetHealthcareObservationQueryParamFieldsNotes,
+		GetHealthcareObservationQueryParamFieldsMetadata,
+		GetHealthcareObservationQueryParamFieldsRaw,
+	}
+}
 func (e *GetHealthcareObservationQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

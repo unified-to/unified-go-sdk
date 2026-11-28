@@ -24,6 +24,20 @@ func (e AdsOrganizationStatus) ToPointer() *AdsOrganizationStatus {
 	return &e
 }
 
+// AdsOrganizationStatusValues returns every known AdsOrganizationStatus value in schema order.
+func AdsOrganizationStatusValues() []AdsOrganizationStatus {
+	return []AdsOrganizationStatus{
+		AdsOrganizationStatusUnspecified,
+		AdsOrganizationStatusActive,
+		AdsOrganizationStatusPaused,
+		AdsOrganizationStatusArchived,
+		AdsOrganizationStatusDraft,
+		AdsOrganizationStatusScheduledForDeletion,
+		AdsOrganizationStatusProcessing,
+		AdsOrganizationStatusProcessingFailed,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AdsOrganizationStatus) IsExact() bool {
 	if e != nil {

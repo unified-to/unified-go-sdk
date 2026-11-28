@@ -24,6 +24,19 @@ func (e HrisDeductionCoverageLevel) ToPointer() *HrisDeductionCoverageLevel {
 	return &e
 }
 
+// HrisDeductionCoverageLevelValues returns every known HrisDeductionCoverageLevel value in schema order.
+func HrisDeductionCoverageLevelValues() []HrisDeductionCoverageLevel {
+	return []HrisDeductionCoverageLevel{
+		HrisDeductionCoverageLevelEmployeeOnly,
+		HrisDeductionCoverageLevelEmployeeSpouse,
+		HrisDeductionCoverageLevelEmployeeChild,
+		HrisDeductionCoverageLevelEmployeeChildren,
+		HrisDeductionCoverageLevelEmployeeFamily,
+		HrisDeductionCoverageLevelFamily,
+		HrisDeductionCoverageLevelOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HrisDeductionCoverageLevel) IsExact() bool {
 	if e != nil {
@@ -44,6 +57,14 @@ const (
 
 func (e EmployerType) ToPointer() *EmployerType {
 	return &e
+}
+
+// EmployerTypeValues returns every known EmployerType value in schema order.
+func EmployerTypeValues() []EmployerType {
+	return []EmployerType{
+		EmployerTypePercentage,
+		EmployerTypeFixed,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -76,6 +97,21 @@ func (e HrisDeductionFrequency) ToPointer() *HrisDeductionFrequency {
 	return &e
 }
 
+// HrisDeductionFrequencyValues returns every known HrisDeductionFrequency value in schema order.
+func HrisDeductionFrequencyValues() []HrisDeductionFrequency {
+	return []HrisDeductionFrequency{
+		HrisDeductionFrequencyOneTime,
+		HrisDeductionFrequencyDay,
+		HrisDeductionFrequencyQuarter,
+		HrisDeductionFrequencyYear,
+		HrisDeductionFrequencyHour,
+		HrisDeductionFrequencyMonth,
+		HrisDeductionFrequencyWeek,
+		HrisDeductionFrequencyBiweekly,
+		HrisDeductionFrequencySemimonthly,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HrisDeductionFrequency) IsExact() bool {
 	if e != nil {
@@ -103,6 +139,18 @@ func (e GarnishmentType) ToPointer() *GarnishmentType {
 	return &e
 }
 
+// GarnishmentTypeValues returns every known GarnishmentType value in schema order.
+func GarnishmentTypeValues() []GarnishmentType {
+	return []GarnishmentType{
+		GarnishmentTypeChildSupport,
+		GarnishmentTypeTaxLevy,
+		GarnishmentTypeStudentLoan,
+		GarnishmentTypeCreditor,
+		GarnishmentTypeBankruptcy,
+		GarnishmentTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *GarnishmentType) IsExact() bool {
 	if e != nil {
@@ -123,6 +171,14 @@ const (
 
 func (e HrisDeductionType) ToPointer() *HrisDeductionType {
 	return &e
+}
+
+// HrisDeductionTypeValues returns every known HrisDeductionType value in schema order.
+func HrisDeductionTypeValues() []HrisDeductionType {
+	return []HrisDeductionType{
+		HrisDeductionTypeFixed,
+		HrisDeductionTypePercentage,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

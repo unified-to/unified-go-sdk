@@ -29,6 +29,24 @@ const (
 func (e GetClubsMemberQueryParamFields) ToPointer() *GetClubsMemberQueryParamFields {
 	return &e
 }
+
+// GetClubsMemberQueryParamFieldsValues returns every known GetClubsMemberQueryParamFields value in schema order.
+func GetClubsMemberQueryParamFieldsValues() []GetClubsMemberQueryParamFields {
+	return []GetClubsMemberQueryParamFields{
+		GetClubsMemberQueryParamFieldsID,
+		GetClubsMemberQueryParamFieldsCreatedAt,
+		GetClubsMemberQueryParamFieldsUpdatedAt,
+		GetClubsMemberQueryParamFieldsName,
+		GetClubsMemberQueryParamFieldsFirstName,
+		GetClubsMemberQueryParamFieldsLastName,
+		GetClubsMemberQueryParamFieldsGroupID,
+		GetClubsMemberQueryParamFieldsIsAdmin,
+		GetClubsMemberQueryParamFieldsIsOwner,
+		GetClubsMemberQueryParamFieldsMembershipStatus,
+		GetClubsMemberQueryParamFieldsMetadata,
+		GetClubsMemberQueryParamFieldsRaw,
+	}
+}
 func (e *GetClubsMemberQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

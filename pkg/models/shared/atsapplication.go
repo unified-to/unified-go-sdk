@@ -30,6 +30,26 @@ func (e AtsApplicationStatus) ToPointer() *AtsApplicationStatus {
 	return &e
 }
 
+// AtsApplicationStatusValues returns every known AtsApplicationStatus value in schema order.
+func AtsApplicationStatusValues() []AtsApplicationStatus {
+	return []AtsApplicationStatus{
+		AtsApplicationStatusNew,
+		AtsApplicationStatusReviewing,
+		AtsApplicationStatusScreening,
+		AtsApplicationStatusSubmitted,
+		AtsApplicationStatusFirstInterview,
+		AtsApplicationStatusSecondInterview,
+		AtsApplicationStatusThirdInterview,
+		AtsApplicationStatusBackgroundCheck,
+		AtsApplicationStatusOffered,
+		AtsApplicationStatusAccepted,
+		AtsApplicationStatusHired,
+		AtsApplicationStatusRejected,
+		AtsApplicationStatusDeclined,
+		AtsApplicationStatusWithdrawn,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AtsApplicationStatus) IsExact() bool {
 	if e != nil {

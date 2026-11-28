@@ -20,6 +20,16 @@ func (e ContentType) ToPointer() *ContentType {
 	return &e
 }
 
+// ContentTypeValues returns every known ContentType value in schema order.
+func ContentTypeValues() []ContentType {
+	return []ContentType{
+		ContentTypeHTML,
+		ContentTypeMarkdown,
+		ContentTypeText,
+		ContentTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ContentType) IsExact() bool {
 	if e != nil {
@@ -40,6 +50,14 @@ const (
 
 func (e KmsCommentType) ToPointer() *KmsCommentType {
 	return &e
+}
+
+// KmsCommentTypeValues returns every known KmsCommentType value in schema order.
+func KmsCommentTypeValues() []KmsCommentType {
+	return []KmsCommentType{
+		KmsCommentTypePageInline,
+		KmsCommentTypePage,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

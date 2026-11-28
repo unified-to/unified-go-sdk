@@ -24,6 +24,24 @@ func (e FhirBundleResourceType) ToPointer() *FhirBundleResourceType {
 	return &e
 }
 
+// FhirBundleResourceTypeValues returns every known FhirBundleResourceType value in schema order.
+func FhirBundleResourceTypeValues() []FhirBundleResourceType {
+	return []FhirBundleResourceType{
+		FhirBundleResourceTypePatient,
+		FhirBundleResourceTypePractitioner,
+		FhirBundleResourceTypeEncounter,
+		FhirBundleResourceTypeObservation,
+		FhirBundleResourceTypeCondition,
+		FhirBundleResourceTypeAllergyIntolerance,
+		FhirBundleResourceTypeMedicationRequest,
+		FhirBundleResourceTypeImmunization,
+		FhirBundleResourceTypeBundle,
+		FhirBundleResourceTypeOperationOutcome,
+		FhirBundleResourceTypeCapabilityStatement,
+		FhirBundleResourceTypeDiagnosticReport,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *FhirBundleResourceType) IsExact() bool {
 	if e != nil {
@@ -44,6 +62,13 @@ const (
 
 func (e FhirBundleType) ToPointer() *FhirBundleType {
 	return &e
+}
+
+// FhirBundleTypeValues returns every known FhirBundleType value in schema order.
+func FhirBundleTypeValues() []FhirBundleType {
+	return []FhirBundleType{
+		FhirBundleTypeSearchset,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

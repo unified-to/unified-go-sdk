@@ -14,6 +14,15 @@ func (e CrmEmailType) ToPointer() *CrmEmailType {
 	return &e
 }
 
+// CrmEmailTypeValues returns every known CrmEmailType value in schema order.
+func CrmEmailTypeValues() []CrmEmailType {
+	return []CrmEmailType{
+		CrmEmailTypeWork,
+		CrmEmailTypeHome,
+		CrmEmailTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CrmEmailType) IsExact() bool {
 	if e != nil {

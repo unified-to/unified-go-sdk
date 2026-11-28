@@ -67,6 +67,62 @@ func (e DetailType) ToPointer() *DetailType {
 	return &e
 }
 
+// DetailTypeValues returns every known DetailType value in schema order.
+func DetailTypeValues() []DetailType {
+	return []DetailType{
+		DetailTypeEarningSalary,
+		DetailTypeEarningOvertime,
+		DetailTypeEarningTip,
+		DetailTypeEarningBonus,
+		DetailTypeEarningCommission,
+		DetailTypeEarningAdjustment,
+		DetailTypeEarning,
+		DetailTypePretaxDeduction,
+		DetailTypePretaxDeductionHealthInsurance,
+		DetailTypePretaxDeductionRetirement,
+		DetailTypePretaxDeductionHra,
+		DetailTypeTaxFederal,
+		DetailTypeTaxRegion,
+		DetailTypeTaxLocal,
+		DetailTypePosttaxBenefit,
+		DetailTypePosttaxGarnishment,
+		DetailTypeReimbursement,
+		DetailTypeEarningRegular,
+		DetailTypeEarningDoubleOvertime,
+		DetailTypeEarningPto,
+		DetailTypeEarningSick,
+		DetailTypeEarningHoliday,
+		DetailTypeEarningSeverance,
+		DetailTypeEarningReimbursement,
+		DetailTypeTaxSocialSecurity,
+		DetailTypeTaxMedicare,
+		DetailTypeTaxUnemployment,
+		DetailTypeTaxEmployer,
+		DetailTypePretaxDeductionHsa,
+		DetailTypePretaxDeductionFsa,
+		DetailTypePretaxDeductionDependentCare,
+		DetailTypePretaxDeductionCommuter,
+		DetailTypePretaxDeductionDental,
+		DetailTypePretaxDeductionVision,
+		DetailTypePosttaxDeduction,
+		DetailTypePosttaxRetirementRoth,
+		DetailTypePosttaxLoanRepayment,
+		DetailTypeEmployerContribution,
+		DetailTypePension,
+		DetailTypeEarningCashInLieu,
+		DetailTypePretaxDeductionRetirementCatchup,
+		DetailTypePosttaxRetirementRothCatchup,
+		DetailTypePosttaxRetirementAfterTax,
+		DetailTypeEmployerContributionRetirement,
+		DetailTypeEmployerContributionHsa,
+		DetailTypeEmployerContributionFsa,
+		DetailTypePosttaxDeductionCollegeSavings,
+		DetailTypePosttaxDeductionUnionDues,
+		DetailTypePosttaxDeductionEwaRepayment,
+		DetailTypeEarningTaxableBenefit,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *DetailType) IsExact() bool {
 	if e != nil {
@@ -90,6 +146,17 @@ const (
 
 func (e HrisPaycodeType) ToPointer() *HrisPaycodeType {
 	return &e
+}
+
+// HrisPaycodeTypeValues returns every known HrisPaycodeType value in schema order.
+func HrisPaycodeTypeValues() []HrisPaycodeType {
+	return []HrisPaycodeType{
+		HrisPaycodeTypeEarning,
+		HrisPaycodeTypeDeduction,
+		HrisPaycodeTypeTax,
+		HrisPaycodeTypeContribution,
+		HrisPaycodeTypeReimbursement,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

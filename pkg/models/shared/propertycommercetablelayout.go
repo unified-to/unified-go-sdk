@@ -16,6 +16,17 @@ func (e Shape) ToPointer() *Shape {
 	return &e
 }
 
+// ShapeValues returns every known Shape value in schema order.
+func ShapeValues() []Shape {
+	return []Shape{
+		ShapeRound,
+		ShapeSquare,
+		ShapeRectangle,
+		ShapeOval,
+		ShapeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Shape) IsExact() bool {
 	if e != nil {

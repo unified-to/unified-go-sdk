@@ -18,6 +18,19 @@ func (e Frequency) ToPointer() *Frequency {
 	return &e
 }
 
+// FrequencyValues returns every known Frequency value in schema order.
+func FrequencyValues() []Frequency {
+	return []Frequency{
+		FrequencyOneTime,
+		FrequencyDay,
+		FrequencyQuarter,
+		FrequencyYear,
+		FrequencyHour,
+		FrequencyMonth,
+		FrequencyWeek,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Frequency) IsExact() bool {
 	if e != nil {
@@ -41,6 +54,17 @@ const (
 
 func (e AtsCompensationType) ToPointer() *AtsCompensationType {
 	return &e
+}
+
+// AtsCompensationTypeValues returns every known AtsCompensationType value in schema order.
+func AtsCompensationTypeValues() []AtsCompensationType {
+	return []AtsCompensationType{
+		AtsCompensationTypeSalary,
+		AtsCompensationTypeBonus,
+		AtsCompensationTypeStockOptions,
+		AtsCompensationTypeEquity,
+		AtsCompensationTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

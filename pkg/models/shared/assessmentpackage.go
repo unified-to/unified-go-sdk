@@ -22,6 +22,18 @@ func (e AssessmentPackageType) ToPointer() *AssessmentPackageType {
 	return &e
 }
 
+// AssessmentPackageTypeValues returns every known AssessmentPackageType value in schema order.
+func AssessmentPackageTypeValues() []AssessmentPackageType {
+	return []AssessmentPackageType{
+		AssessmentPackageTypeSkillsTest,
+		AssessmentPackageTypeBehavioralAssessment,
+		AssessmentPackageTypeVideoInterview,
+		AssessmentPackageTypeBackgroundCheck,
+		AssessmentPackageTypeReferenceCheck,
+		AssessmentPackageTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AssessmentPackageType) IsExact() bool {
 	if e != nil {

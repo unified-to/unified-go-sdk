@@ -41,9 +41,9 @@ func main() {
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
             Description: unifiedgosdk.Pointer("Vitiosus recusandae tristis."),
-            ID: unifiedgosdk.Pointer("1152ac0e-b3e4-4508-a30e-eb394dd41447"),
+            ID: unifiedgosdk.Pointer("fc34d15c-b1a9-40f6-90e7-692292b62e71"),
             Metadata: []shared.TicketingMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2024-10-25T18:45:39.381Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-26T11:48:35.658Z"),
         },
         ConnectionID: "<id>",
     })
@@ -213,9 +213,9 @@ func main() {
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
             Description: unifiedgosdk.Pointer("Vitiosus recusandae tristis."),
-            ID: unifiedgosdk.Pointer("bcb0222d-1057-4ab3-8d04-806e874e2513"),
+            ID: unifiedgosdk.Pointer("2a590542-8183-4788-9025-1641ea9401cb"),
             Metadata: []shared.TicketingMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2024-10-25T18:45:39.387Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-26T11:48:35.662Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -332,9 +332,9 @@ func main() {
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
             Description: unifiedgosdk.Pointer("Vitiosus recusandae tristis."),
-            ID: unifiedgosdk.Pointer("bcb0222d-1057-4ab3-8d04-806e874e2513"),
+            ID: unifiedgosdk.Pointer("2a590542-8183-4788-9025-1641ea9401cb"),
             Metadata: []shared.TicketingMetadata{},
-            UpdatedAt: types.MustNewTimeFromString("2024-10-25T18:45:39.387Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-26T11:48:35.662Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

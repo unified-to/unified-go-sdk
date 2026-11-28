@@ -21,6 +21,16 @@ func (e HealthcareAllergyCriticality) ToPointer() *HealthcareAllergyCriticality 
 	return &e
 }
 
+// HealthcareAllergyCriticalityValues returns every known HealthcareAllergyCriticality value in schema order.
+func HealthcareAllergyCriticalityValues() []HealthcareAllergyCriticality {
+	return []HealthcareAllergyCriticality{
+		HealthcareAllergyCriticalityLow,
+		HealthcareAllergyCriticalityHigh,
+		HealthcareAllergyCriticalityUnableToAssess,
+		HealthcareAllergyCriticalityOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HealthcareAllergyCriticality) IsExact() bool {
 	if e != nil {
@@ -44,6 +54,16 @@ const (
 
 func (e HealthcareAllergyStatus) ToPointer() *HealthcareAllergyStatus {
 	return &e
+}
+
+// HealthcareAllergyStatusValues returns every known HealthcareAllergyStatus value in schema order.
+func HealthcareAllergyStatusValues() []HealthcareAllergyStatus {
+	return []HealthcareAllergyStatus{
+		HealthcareAllergyStatusActive,
+		HealthcareAllergyStatusInactive,
+		HealthcareAllergyStatusResolved,
+		HealthcareAllergyStatusOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -70,6 +90,17 @@ const (
 
 func (e HealthcareAllergyType) ToPointer() *HealthcareAllergyType {
 	return &e
+}
+
+// HealthcareAllergyTypeValues returns every known HealthcareAllergyType value in schema order.
+func HealthcareAllergyTypeValues() []HealthcareAllergyType {
+	return []HealthcareAllergyType{
+		HealthcareAllergyTypeFood,
+		HealthcareAllergyTypeMedication,
+		HealthcareAllergyTypeEnvironment,
+		HealthcareAllergyTypeBiologic,
+		HealthcareAllergyTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

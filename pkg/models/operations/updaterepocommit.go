@@ -30,6 +30,25 @@ const (
 func (e UpdateRepoCommitQueryParamFields) ToPointer() *UpdateRepoCommitQueryParamFields {
 	return &e
 }
+
+// UpdateRepoCommitQueryParamFieldsValues returns every known UpdateRepoCommitQueryParamFields value in schema order.
+func UpdateRepoCommitQueryParamFieldsValues() []UpdateRepoCommitQueryParamFields {
+	return []UpdateRepoCommitQueryParamFields{
+		UpdateRepoCommitQueryParamFieldsID,
+		UpdateRepoCommitQueryParamFieldsCreatedAt,
+		UpdateRepoCommitQueryParamFieldsUpdatedAt,
+		UpdateRepoCommitQueryParamFieldsUserID,
+		UpdateRepoCommitQueryParamFieldsRepoID,
+		UpdateRepoCommitQueryParamFieldsMessage,
+		UpdateRepoCommitQueryParamFieldsBranchID,
+		UpdateRepoCommitQueryParamFieldsPullrequestIds,
+		UpdateRepoCommitQueryParamFieldsLinesAdded,
+		UpdateRepoCommitQueryParamFieldsLinesDeleted,
+		UpdateRepoCommitQueryParamFieldsLinesChanged,
+		UpdateRepoCommitQueryParamFieldsMetadata,
+		UpdateRepoCommitQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateRepoCommitQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

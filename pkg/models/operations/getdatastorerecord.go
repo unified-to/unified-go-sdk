@@ -26,6 +26,21 @@ const (
 func (e GetDatastoreRecordQueryParamFields) ToPointer() *GetDatastoreRecordQueryParamFields {
 	return &e
 }
+
+// GetDatastoreRecordQueryParamFieldsValues returns every known GetDatastoreRecordQueryParamFields value in schema order.
+func GetDatastoreRecordQueryParamFieldsValues() []GetDatastoreRecordQueryParamFields {
+	return []GetDatastoreRecordQueryParamFields{
+		GetDatastoreRecordQueryParamFieldsID,
+		GetDatastoreRecordQueryParamFieldsCreatedAt,
+		GetDatastoreRecordQueryParamFieldsUpdatedAt,
+		GetDatastoreRecordQueryParamFieldsDatabaseID,
+		GetDatastoreRecordQueryParamFieldsTableID,
+		GetDatastoreRecordQueryParamFieldsFields,
+		GetDatastoreRecordQueryParamFieldsRowNumber,
+		GetDatastoreRecordQueryParamFieldsMetadata,
+		GetDatastoreRecordQueryParamFieldsRaw,
+	}
+}
 func (e *GetDatastoreRecordQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

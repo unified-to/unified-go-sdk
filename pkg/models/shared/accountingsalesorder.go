@@ -24,6 +24,20 @@ func (e FulfillmentType) ToPointer() *FulfillmentType {
 	return &e
 }
 
+// FulfillmentTypeValues returns every known FulfillmentType value in schema order.
+func FulfillmentTypeValues() []FulfillmentType {
+	return []FulfillmentType{
+		FulfillmentTypeDineIn,
+		FulfillmentTypeTakeout,
+		FulfillmentTypeDelivery,
+		FulfillmentTypePickup,
+		FulfillmentTypeCurbside,
+		FulfillmentTypeShipping,
+		FulfillmentTypeDigital,
+		FulfillmentTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *FulfillmentType) IsExact() bool {
 	if e != nil {
@@ -54,6 +68,24 @@ const (
 
 func (e AccountingSalesorderStatus) ToPointer() *AccountingSalesorderStatus {
 	return &e
+}
+
+// AccountingSalesorderStatusValues returns every known AccountingSalesorderStatus value in schema order.
+func AccountingSalesorderStatusValues() []AccountingSalesorderStatus {
+	return []AccountingSalesorderStatus{
+		AccountingSalesorderStatusDraft,
+		AccountingSalesorderStatusVoided,
+		AccountingSalesorderStatusAuthorized,
+		AccountingSalesorderStatusPaid,
+		AccountingSalesorderStatusPartiallyPaid,
+		AccountingSalesorderStatusPartiallyRefunded,
+		AccountingSalesorderStatusRefunded,
+		AccountingSalesorderStatusSubmitted,
+		AccountingSalesorderStatusDeleted,
+		AccountingSalesorderStatusOpen,
+		AccountingSalesorderStatusCompleted,
+		AccountingSalesorderStatusCanceled,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

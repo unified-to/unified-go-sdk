@@ -14,6 +14,14 @@ func (e PropertyAdsReportMetricsGroupTargetingOptimizationMode) ToPointer() *Pro
 	return &e
 }
 
+// PropertyAdsReportMetricsGroupTargetingOptimizationModeValues returns every known PropertyAdsReportMetricsGroupTargetingOptimizationMode value in schema order.
+func PropertyAdsReportMetricsGroupTargetingOptimizationModeValues() []PropertyAdsReportMetricsGroupTargetingOptimizationMode {
+	return []PropertyAdsReportMetricsGroupTargetingOptimizationMode{
+		PropertyAdsReportMetricsGroupTargetingOptimizationModeTargeting,
+		PropertyAdsReportMetricsGroupTargetingOptimizationModeObservation,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsGroupTargetingOptimizationMode) IsExact() bool {
 	if e != nil {

@@ -34,6 +34,29 @@ const (
 func (e GetUnifiedConnectionQueryParamFields) ToPointer() *GetUnifiedConnectionQueryParamFields {
 	return &e
 }
+
+// GetUnifiedConnectionQueryParamFieldsValues returns every known GetUnifiedConnectionQueryParamFields value in schema order.
+func GetUnifiedConnectionQueryParamFieldsValues() []GetUnifiedConnectionQueryParamFields {
+	return []GetUnifiedConnectionQueryParamFields{
+		GetUnifiedConnectionQueryParamFieldsID,
+		GetUnifiedConnectionQueryParamFieldsCreatedAt,
+		GetUnifiedConnectionQueryParamFieldsUpdatedAt,
+		GetUnifiedConnectionQueryParamFieldsWorkspaceID,
+		GetUnifiedConnectionQueryParamFieldsIntegrationType,
+		GetUnifiedConnectionQueryParamFieldsIntegrationName,
+		GetUnifiedConnectionQueryParamFieldsExternalXref,
+		GetUnifiedConnectionQueryParamFieldsPermissions,
+		GetUnifiedConnectionQueryParamFieldsCategories,
+		GetUnifiedConnectionQueryParamFieldsAuth,
+		GetUnifiedConnectionQueryParamFieldsIsPaused,
+		GetUnifiedConnectionQueryParamFieldsEnvironment,
+		GetUnifiedConnectionQueryParamFieldsLastHealthyAt,
+		GetUnifiedConnectionQueryParamFieldsLastUnhealthyAt,
+		GetUnifiedConnectionQueryParamFieldsLastUnhealthyCode,
+		GetUnifiedConnectionQueryParamFieldsSecretsmanagerID,
+		GetUnifiedConnectionQueryParamFieldsSecretsmanagerKey,
+	}
+}
 func (e *GetUnifiedConnectionQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

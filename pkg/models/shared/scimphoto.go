@@ -13,6 +13,14 @@ func (e ScimPhotoType) ToPointer() *ScimPhotoType {
 	return &e
 }
 
+// ScimPhotoTypeValues returns every known ScimPhotoType value in schema order.
+func ScimPhotoTypeValues() []ScimPhotoType {
+	return []ScimPhotoType{
+		ScimPhotoTypePhoto,
+		ScimPhotoTypeThumbnail,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ScimPhotoType) IsExact() bool {
 	if e != nil {

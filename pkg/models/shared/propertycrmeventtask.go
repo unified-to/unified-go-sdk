@@ -19,6 +19,15 @@ func (e Priority) ToPointer() *Priority {
 	return &e
 }
 
+// PriorityValues returns every known Priority value in schema order.
+func PriorityValues() []Priority {
+	return []Priority{
+		PriorityHigh,
+		PriorityMedium,
+		PriorityLow,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Priority) IsExact() bool {
 	if e != nil {
@@ -42,6 +51,16 @@ const (
 
 func (e PropertyCrmEventTaskStatus) ToPointer() *PropertyCrmEventTaskStatus {
 	return &e
+}
+
+// PropertyCrmEventTaskStatusValues returns every known PropertyCrmEventTaskStatus value in schema order.
+func PropertyCrmEventTaskStatusValues() []PropertyCrmEventTaskStatus {
+	return []PropertyCrmEventTaskStatus{
+		PropertyCrmEventTaskStatusCompleted,
+		PropertyCrmEventTaskStatusNotStarted,
+		PropertyCrmEventTaskStatusWorkInProgress,
+		PropertyCrmEventTaskStatusDeferred,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

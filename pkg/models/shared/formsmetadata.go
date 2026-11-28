@@ -297,6 +297,25 @@ func (e FormsMetadataFormat) ToPointer() *FormsMetadataFormat {
 	return &e
 }
 
+// FormsMetadataFormatValues returns every known FormsMetadataFormat value in schema order.
+func FormsMetadataFormatValues() []FormsMetadataFormat {
+	return []FormsMetadataFormat{
+		FormsMetadataFormatText,
+		FormsMetadataFormatNumber,
+		FormsMetadataFormatDate,
+		FormsMetadataFormatBoolean,
+		FormsMetadataFormatFile,
+		FormsMetadataFormatTextarea,
+		FormsMetadataFormatSingleSelect,
+		FormsMetadataFormatMultipleSelect,
+		FormsMetadataFormatMeasurement,
+		FormsMetadataFormatPrice,
+		FormsMetadataFormatYesNo,
+		FormsMetadataFormatCurrency,
+		FormsMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *FormsMetadataFormat) IsExact() bool {
 	if e != nil {

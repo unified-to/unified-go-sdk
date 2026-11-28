@@ -31,6 +31,26 @@ func (e HrisDocumentType) ToPointer() *HrisDocumentType {
 	return &e
 }
 
+// HrisDocumentTypeValues returns every known HrisDocumentType value in schema order.
+func HrisDocumentTypeValues() []HrisDocumentType {
+	return []HrisDocumentType{
+		HrisDocumentTypeContract,
+		HrisDocumentTypeOfferLetter,
+		HrisDocumentTypePolicy,
+		HrisDocumentTypeTax,
+		HrisDocumentTypeID,
+		HrisDocumentTypeVisa,
+		HrisDocumentTypePayslip,
+		HrisDocumentTypeBenefits,
+		HrisDocumentTypeCertification,
+		HrisDocumentTypePerformanceReview,
+		HrisDocumentTypeOnboarding,
+		HrisDocumentTypeTermination,
+		HrisDocumentTypeMedical,
+		HrisDocumentTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HrisDocumentType) IsExact() bool {
 	if e != nil {

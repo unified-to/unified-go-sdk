@@ -42,6 +42,37 @@ const (
 func (e GetDmsPartsaleQueryParamFields) ToPointer() *GetDmsPartsaleQueryParamFields {
 	return &e
 }
+
+// GetDmsPartsaleQueryParamFieldsValues returns every known GetDmsPartsaleQueryParamFields value in schema order.
+func GetDmsPartsaleQueryParamFieldsValues() []GetDmsPartsaleQueryParamFields {
+	return []GetDmsPartsaleQueryParamFields{
+		GetDmsPartsaleQueryParamFieldsID,
+		GetDmsPartsaleQueryParamFieldsCreatedAt,
+		GetDmsPartsaleQueryParamFieldsUpdatedAt,
+		GetDmsPartsaleQueryParamFieldsNumber,
+		GetDmsPartsaleQueryParamFieldsType,
+		GetDmsPartsaleQueryParamFieldsStatus,
+		GetDmsPartsaleQueryParamFieldsContactID,
+		GetDmsPartsaleQueryParamFieldsSalespersonUserID,
+		GetDmsPartsaleQueryParamFieldsVehicleID,
+		GetDmsPartsaleQueryParamFieldsPayType,
+		GetDmsPartsaleQueryParamFieldsPurchaseOrderNumber,
+		GetDmsPartsaleQueryParamFieldsClosedAt,
+		GetDmsPartsaleQueryParamFieldsShippedAt,
+		GetDmsPartsaleQueryParamFieldsCurrency,
+		GetDmsPartsaleQueryParamFieldsSubtotalAmount,
+		GetDmsPartsaleQueryParamFieldsDiscountAmount,
+		GetDmsPartsaleQueryParamFieldsFreightAmount,
+		GetDmsPartsaleQueryParamFieldsTaxAmount,
+		GetDmsPartsaleQueryParamFieldsTotalAmount,
+		GetDmsPartsaleQueryParamFieldsCostAmount,
+		GetDmsPartsaleQueryParamFieldsNotes,
+		GetDmsPartsaleQueryParamFieldsShippingAddress,
+		GetDmsPartsaleQueryParamFieldsLines,
+		GetDmsPartsaleQueryParamFieldsMetadata,
+		GetDmsPartsaleQueryParamFieldsRaw,
+	}
+}
 func (e *GetDmsPartsaleQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

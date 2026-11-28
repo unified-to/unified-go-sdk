@@ -303,6 +303,30 @@ func (e KmsPageMetadataFormat) ToPointer() *KmsPageMetadataFormat {
 	return &e
 }
 
+// KmsPageMetadataFormatValues returns every known KmsPageMetadataFormat value in schema order.
+func KmsPageMetadataFormatValues() []KmsPageMetadataFormat {
+	return []KmsPageMetadataFormat{
+		KmsPageMetadataFormatText,
+		KmsPageMetadataFormatNumber,
+		KmsPageMetadataFormatDate,
+		KmsPageMetadataFormatBoolean,
+		KmsPageMetadataFormatFile,
+		KmsPageMetadataFormatTextarea,
+		KmsPageMetadataFormatSingleSelect,
+		KmsPageMetadataFormatMultipleSelect,
+		KmsPageMetadataFormatMeasurement,
+		KmsPageMetadataFormatPrice,
+		KmsPageMetadataFormatYesNo,
+		KmsPageMetadataFormatCurrency,
+		KmsPageMetadataFormatURL,
+		KmsPageMetadataFormatPercent,
+		KmsPageMetadataFormatEmail,
+		KmsPageMetadataFormatPhone,
+		KmsPageMetadataFormatReference,
+		KmsPageMetadataFormatTime,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *KmsPageMetadataFormat) IsExact() bool {
 	if e != nil {

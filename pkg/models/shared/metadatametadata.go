@@ -30,6 +30,25 @@ func (e MetadataMetadataFormat) ToPointer() *MetadataMetadataFormat {
 	return &e
 }
 
+// MetadataMetadataFormatValues returns every known MetadataMetadataFormat value in schema order.
+func MetadataMetadataFormatValues() []MetadataMetadataFormat {
+	return []MetadataMetadataFormat{
+		MetadataMetadataFormatText,
+		MetadataMetadataFormatNumber,
+		MetadataMetadataFormatDate,
+		MetadataMetadataFormatBoolean,
+		MetadataMetadataFormatFile,
+		MetadataMetadataFormatTextarea,
+		MetadataMetadataFormatSingleSelect,
+		MetadataMetadataFormatMultipleSelect,
+		MetadataMetadataFormatMeasurement,
+		MetadataMetadataFormatPrice,
+		MetadataMetadataFormatYesNo,
+		MetadataMetadataFormatCurrency,
+		MetadataMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *MetadataMetadataFormat) IsExact() bool {
 	if e != nil {

@@ -19,6 +19,14 @@ func (e ObjectType) ToPointer() *ObjectType {
 	return &e
 }
 
+// ObjectTypeValues returns every known ObjectType value in schema order.
+func ObjectTypeValues() []ObjectType {
+	return []ObjectType{
+		ObjectTypeInvoice,
+		ObjectTypeBill,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ObjectType) IsExact() bool {
 	if e != nil {

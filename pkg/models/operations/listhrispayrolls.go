@@ -40,6 +40,35 @@ const (
 func (e ListHrisPayrollsQueryParamFields) ToPointer() *ListHrisPayrollsQueryParamFields {
 	return &e
 }
+
+// ListHrisPayrollsQueryParamFieldsValues returns every known ListHrisPayrollsQueryParamFields value in schema order.
+func ListHrisPayrollsQueryParamFieldsValues() []ListHrisPayrollsQueryParamFields {
+	return []ListHrisPayrollsQueryParamFields{
+		ListHrisPayrollsQueryParamFieldsID,
+		ListHrisPayrollsQueryParamFieldsCreatedAt,
+		ListHrisPayrollsQueryParamFieldsUpdatedAt,
+		ListHrisPayrollsQueryParamFieldsCompanyID,
+		ListHrisPayrollsQueryParamFieldsGroupID,
+		ListHrisPayrollsQueryParamFieldsStatus,
+		ListHrisPayrollsQueryParamFieldsType,
+		ListHrisPayrollsQueryParamFieldsStartAt,
+		ListHrisPayrollsQueryParamFieldsEndAt,
+		ListHrisPayrollsQueryParamFieldsPaidAt,
+		ListHrisPayrollsQueryParamFieldsApprovedAt,
+		ListHrisPayrollsQueryParamFieldsCurrency,
+		ListHrisPayrollsQueryParamFieldsGrossAmount,
+		ListHrisPayrollsQueryParamFieldsNetAmount,
+		ListHrisPayrollsQueryParamFieldsEmployeeTaxAmount,
+		ListHrisPayrollsQueryParamFieldsEmployerTaxAmount,
+		ListHrisPayrollsQueryParamFieldsDeductionAmount,
+		ListHrisPayrollsQueryParamFieldsEmployerContributionAmount,
+		ListHrisPayrollsQueryParamFieldsTotalCostAmount,
+		ListHrisPayrollsQueryParamFieldsUserIds,
+		ListHrisPayrollsQueryParamFieldsPayslipIds,
+		ListHrisPayrollsQueryParamFieldsMetadata,
+		ListHrisPayrollsQueryParamFieldsRaw,
+	}
+}
 func (e *ListHrisPayrollsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

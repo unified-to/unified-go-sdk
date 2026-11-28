@@ -14,6 +14,15 @@ func (e MarketingEmailType) ToPointer() *MarketingEmailType {
 	return &e
 }
 
+// MarketingEmailTypeValues returns every known MarketingEmailType value in schema order.
+func MarketingEmailTypeValues() []MarketingEmailType {
+	return []MarketingEmailType{
+		MarketingEmailTypeWork,
+		MarketingEmailTypeHome,
+		MarketingEmailTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *MarketingEmailType) IsExact() bool {
 	if e != nil {

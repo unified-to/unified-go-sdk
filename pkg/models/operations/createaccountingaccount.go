@@ -33,6 +33,28 @@ const (
 func (e Fields) ToPointer() *Fields {
 	return &e
 }
+
+// FieldsValues returns every known Fields value in schema order.
+func FieldsValues() []Fields {
+	return []Fields{
+		FieldsID,
+		FieldsCreatedAt,
+		FieldsUpdatedAt,
+		FieldsName,
+		FieldsDescription,
+		FieldsType,
+		FieldsStatus,
+		FieldsBalance,
+		FieldsCurrency,
+		FieldsCustomerDefinedCode,
+		FieldsIsPayable,
+		FieldsParentID,
+		FieldsTaxonomy,
+		FieldsOrganizationID,
+		FieldsMetadata,
+		FieldsRaw,
+	}
+}
 func (e *Fields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

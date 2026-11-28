@@ -48,6 +48,43 @@ const (
 func (e PatchAtsCandidateQueryParamFields) ToPointer() *PatchAtsCandidateQueryParamFields {
 	return &e
 }
+
+// PatchAtsCandidateQueryParamFieldsValues returns every known PatchAtsCandidateQueryParamFields value in schema order.
+func PatchAtsCandidateQueryParamFieldsValues() []PatchAtsCandidateQueryParamFields {
+	return []PatchAtsCandidateQueryParamFields{
+		PatchAtsCandidateQueryParamFieldsID,
+		PatchAtsCandidateQueryParamFieldsCreatedAt,
+		PatchAtsCandidateQueryParamFieldsUpdatedAt,
+		PatchAtsCandidateQueryParamFieldsName,
+		PatchAtsCandidateQueryParamFieldsFirstName,
+		PatchAtsCandidateQueryParamFieldsLastName,
+		PatchAtsCandidateQueryParamFieldsEmails,
+		PatchAtsCandidateQueryParamFieldsTitle,
+		PatchAtsCandidateQueryParamFieldsTelephones,
+		PatchAtsCandidateQueryParamFieldsCompanyName,
+		PatchAtsCandidateQueryParamFieldsImageURL,
+		PatchAtsCandidateQueryParamFieldsTags,
+		PatchAtsCandidateQueryParamFieldsAddress,
+		PatchAtsCandidateQueryParamFieldsExternalIdentifier,
+		PatchAtsCandidateQueryParamFieldsLinkUrls,
+		PatchAtsCandidateQueryParamFieldsOrigin,
+		PatchAtsCandidateQueryParamFieldsCompanyID,
+		PatchAtsCandidateQueryParamFieldsSources,
+		PatchAtsCandidateQueryParamFieldsDateOfBirth,
+		PatchAtsCandidateQueryParamFieldsUserID,
+		PatchAtsCandidateQueryParamFieldsUserIds,
+		PatchAtsCandidateQueryParamFieldsWebURL,
+		PatchAtsCandidateQueryParamFieldsExperiences,
+		PatchAtsCandidateQueryParamFieldsEducation,
+		PatchAtsCandidateQueryParamFieldsSkills,
+		PatchAtsCandidateQueryParamFieldsJobIds,
+		PatchAtsCandidateQueryParamFieldsMetadata,
+		PatchAtsCandidateQueryParamFieldsSummary,
+		PatchAtsCandidateQueryParamFieldsIsPrivate,
+		PatchAtsCandidateQueryParamFieldsHasDoNotContact,
+		PatchAtsCandidateQueryParamFieldsRaw,
+	}
+}
 func (e *PatchAtsCandidateQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -24,6 +24,24 @@ func (e FhirImmunizationResourceType) ToPointer() *FhirImmunizationResourceType 
 	return &e
 }
 
+// FhirImmunizationResourceTypeValues returns every known FhirImmunizationResourceType value in schema order.
+func FhirImmunizationResourceTypeValues() []FhirImmunizationResourceType {
+	return []FhirImmunizationResourceType{
+		FhirImmunizationResourceTypePatient,
+		FhirImmunizationResourceTypePractitioner,
+		FhirImmunizationResourceTypeEncounter,
+		FhirImmunizationResourceTypeObservation,
+		FhirImmunizationResourceTypeCondition,
+		FhirImmunizationResourceTypeAllergyIntolerance,
+		FhirImmunizationResourceTypeMedicationRequest,
+		FhirImmunizationResourceTypeImmunization,
+		FhirImmunizationResourceTypeBundle,
+		FhirImmunizationResourceTypeOperationOutcome,
+		FhirImmunizationResourceTypeCapabilityStatement,
+		FhirImmunizationResourceTypeDiagnosticReport,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *FhirImmunizationResourceType) IsExact() bool {
 	if e != nil {
@@ -46,6 +64,15 @@ const (
 
 func (e FhirImmunizationStatus) ToPointer() *FhirImmunizationStatus {
 	return &e
+}
+
+// FhirImmunizationStatusValues returns every known FhirImmunizationStatus value in schema order.
+func FhirImmunizationStatusValues() []FhirImmunizationStatus {
+	return []FhirImmunizationStatus{
+		FhirImmunizationStatusCompleted,
+		FhirImmunizationStatusEnteredInError,
+		FhirImmunizationStatusNotDone,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

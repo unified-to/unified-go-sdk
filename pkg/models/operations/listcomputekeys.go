@@ -32,6 +32,27 @@ const (
 func (e ListComputeKeysQueryParamFields) ToPointer() *ListComputeKeysQueryParamFields {
 	return &e
 }
+
+// ListComputeKeysQueryParamFieldsValues returns every known ListComputeKeysQueryParamFields value in schema order.
+func ListComputeKeysQueryParamFieldsValues() []ListComputeKeysQueryParamFields {
+	return []ListComputeKeysQueryParamFields{
+		ListComputeKeysQueryParamFieldsID,
+		ListComputeKeysQueryParamFieldsCreatedAt,
+		ListComputeKeysQueryParamFieldsUpdatedAt,
+		ListComputeKeysQueryParamFieldsName,
+		ListComputeKeysQueryParamFieldsType,
+		ListComputeKeysQueryParamFieldsPublicKey,
+		ListComputeKeysQueryParamFieldsPrivateKey,
+		ListComputeKeysQueryParamFieldsFingerprint,
+		ListComputeKeysQueryParamFieldsRegistryURL,
+		ListComputeKeysQueryParamFieldsUsername,
+		ListComputeKeysQueryParamFieldsSecret,
+		ListComputeKeysQueryParamFieldsInstanceID,
+		ListComputeKeysQueryParamFieldsExpiresAt,
+		ListComputeKeysQueryParamFieldsMetadata,
+		ListComputeKeysQueryParamFieldsRaw,
+	}
+}
 func (e *ListComputeKeysQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

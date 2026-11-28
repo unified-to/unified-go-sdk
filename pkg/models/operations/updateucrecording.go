@@ -34,6 +34,29 @@ const (
 func (e UpdateUcRecordingQueryParamFields) ToPointer() *UpdateUcRecordingQueryParamFields {
 	return &e
 }
+
+// UpdateUcRecordingQueryParamFieldsValues returns every known UpdateUcRecordingQueryParamFields value in schema order.
+func UpdateUcRecordingQueryParamFieldsValues() []UpdateUcRecordingQueryParamFields {
+	return []UpdateUcRecordingQueryParamFields{
+		UpdateUcRecordingQueryParamFieldsID,
+		UpdateUcRecordingQueryParamFieldsCreatedAt,
+		UpdateUcRecordingQueryParamFieldsUpdatedAt,
+		UpdateUcRecordingQueryParamFieldsStartAt,
+		UpdateUcRecordingQueryParamFieldsEndAt,
+		UpdateUcRecordingQueryParamFieldsExpiresAt,
+		UpdateUcRecordingQueryParamFieldsCallID,
+		UpdateUcRecordingQueryParamFieldsWebURL,
+		UpdateUcRecordingQueryParamFieldsContacts,
+		UpdateUcRecordingQueryParamFieldsUserID,
+		UpdateUcRecordingQueryParamFieldsMedia,
+		UpdateUcRecordingQueryParamFieldsUserName,
+		UpdateUcRecordingQueryParamFieldsUserPhone,
+		UpdateUcRecordingQueryParamFieldsType,
+		UpdateUcRecordingQueryParamFieldsConversationIdentifier,
+		UpdateUcRecordingQueryParamFieldsMetadata,
+		UpdateUcRecordingQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateUcRecordingQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -49,6 +49,44 @@ const (
 func (e GetPropertyReservationQueryParamFields) ToPointer() *GetPropertyReservationQueryParamFields {
 	return &e
 }
+
+// GetPropertyReservationQueryParamFieldsValues returns every known GetPropertyReservationQueryParamFields value in schema order.
+func GetPropertyReservationQueryParamFieldsValues() []GetPropertyReservationQueryParamFields {
+	return []GetPropertyReservationQueryParamFields{
+		GetPropertyReservationQueryParamFieldsID,
+		GetPropertyReservationQueryParamFieldsCreatedAt,
+		GetPropertyReservationQueryParamFieldsUpdatedAt,
+		GetPropertyReservationQueryParamFieldsListingID,
+		GetPropertyReservationQueryParamFieldsUnittypeIds,
+		GetPropertyReservationQueryParamFieldsGuestID,
+		GetPropertyReservationQueryParamFieldsGuestName,
+		GetPropertyReservationQueryParamFieldsGuestEmail,
+		GetPropertyReservationQueryParamFieldsGuestPhone,
+		GetPropertyReservationQueryParamFieldsStatus,
+		GetPropertyReservationQueryParamFieldsSource,
+		GetPropertyReservationQueryParamFieldsConfirmationCode,
+		GetPropertyReservationQueryParamFieldsStartAt,
+		GetPropertyReservationQueryParamFieldsEndAt,
+		GetPropertyReservationQueryParamFieldsEstimatedArrivalTime,
+		GetPropertyReservationQueryParamFieldsEstimatedDepartureTime,
+		GetPropertyReservationQueryParamFieldsNights,
+		GetPropertyReservationQueryParamFieldsGuests,
+		GetPropertyReservationQueryParamFieldsAdults,
+		GetPropertyReservationQueryParamFieldsChildren,
+		GetPropertyReservationQueryParamFieldsInfants,
+		GetPropertyReservationQueryParamFieldsPets,
+		GetPropertyReservationQueryParamFieldsCurrency,
+		GetPropertyReservationQueryParamFieldsTotalAmount,
+		GetPropertyReservationQueryParamFieldsPaidAmount,
+		GetPropertyReservationQueryParamFieldsBalanceAmount,
+		GetPropertyReservationQueryParamFieldsLineItems,
+		GetPropertyReservationQueryParamFieldsNotes,
+		GetPropertyReservationQueryParamFieldsCancelledAt,
+		GetPropertyReservationQueryParamFieldsWebURL,
+		GetPropertyReservationQueryParamFieldsMetadata,
+		GetPropertyReservationQueryParamFieldsRaw,
+	}
+}
 func (e *GetPropertyReservationQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

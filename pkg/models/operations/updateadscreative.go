@@ -49,6 +49,44 @@ const (
 func (e UpdateAdsCreativeQueryParamFields) ToPointer() *UpdateAdsCreativeQueryParamFields {
 	return &e
 }
+
+// UpdateAdsCreativeQueryParamFieldsValues returns every known UpdateAdsCreativeQueryParamFields value in schema order.
+func UpdateAdsCreativeQueryParamFieldsValues() []UpdateAdsCreativeQueryParamFields {
+	return []UpdateAdsCreativeQueryParamFields{
+		UpdateAdsCreativeQueryParamFieldsID,
+		UpdateAdsCreativeQueryParamFieldsCreatedAt,
+		UpdateAdsCreativeQueryParamFieldsUpdatedAt,
+		UpdateAdsCreativeQueryParamFieldsName,
+		UpdateAdsCreativeQueryParamFieldsCampaignID,
+		UpdateAdsCreativeQueryParamFieldsGroupID,
+		UpdateAdsCreativeQueryParamFieldsItemID,
+		UpdateAdsCreativeQueryParamFieldsOrganizationID,
+		UpdateAdsCreativeQueryParamFieldsStatus,
+		UpdateAdsCreativeQueryParamFieldsCreativeType,
+		UpdateAdsCreativeQueryParamFieldsHostingSource,
+		UpdateAdsCreativeQueryParamFieldsWidth,
+		UpdateAdsCreativeQueryParamFieldsHeight,
+		UpdateAdsCreativeQueryParamFieldsAssetUrls,
+		UpdateAdsCreativeQueryParamFieldsCards,
+		UpdateAdsCreativeQueryParamFieldsLinkURL,
+		UpdateAdsCreativeQueryParamFieldsURLTags,
+		UpdateAdsCreativeQueryParamFieldsBody,
+		UpdateAdsCreativeQueryParamFieldsTitle,
+		UpdateAdsCreativeQueryParamFieldsCta,
+		UpdateAdsCreativeQueryParamFieldsThirdPartyTag,
+		UpdateAdsCreativeQueryParamFieldsVastTagURL,
+		UpdateAdsCreativeQueryParamFieldsExternalCreativeReference,
+		UpdateAdsCreativeQueryParamFieldsExternalPlacementReference,
+		UpdateAdsCreativeQueryParamFieldsExternalAdReference,
+		UpdateAdsCreativeQueryParamFieldsPromoted,
+		UpdateAdsCreativeQueryParamFieldsPath1,
+		UpdateAdsCreativeQueryParamFieldsPath2,
+		UpdateAdsCreativeQueryParamFieldsData,
+		UpdateAdsCreativeQueryParamFieldsLabels,
+		UpdateAdsCreativeQueryParamFieldsMetadata,
+		UpdateAdsCreativeQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateAdsCreativeQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -42,6 +42,37 @@ const (
 func (e GetLmsContentQueryParamFields) ToPointer() *GetLmsContentQueryParamFields {
 	return &e
 }
+
+// GetLmsContentQueryParamFieldsValues returns every known GetLmsContentQueryParamFields value in schema order.
+func GetLmsContentQueryParamFieldsValues() []GetLmsContentQueryParamFields {
+	return []GetLmsContentQueryParamFields{
+		GetLmsContentQueryParamFieldsID,
+		GetLmsContentQueryParamFieldsCreatedAt,
+		GetLmsContentQueryParamFieldsUpdatedAt,
+		GetLmsContentQueryParamFieldsExternalReference,
+		GetLmsContentQueryParamFieldsCourseIds,
+		GetLmsContentQueryParamFieldsName,
+		GetLmsContentQueryParamFieldsDescription,
+		GetLmsContentQueryParamFieldsLanguages,
+		GetLmsContentQueryParamFieldsMedia,
+		GetLmsContentQueryParamFieldsIsActive,
+		GetLmsContentQueryParamFieldsDurationMinutes,
+		GetLmsContentQueryParamFieldsCategories,
+		GetLmsContentQueryParamFieldsSubjects,
+		GetLmsContentQueryParamFieldsSkills,
+		GetLmsContentQueryParamFieldsTags,
+		GetLmsContentQueryParamFieldsDifficulty,
+		GetLmsContentQueryParamFieldsSortOrder,
+		GetLmsContentQueryParamFieldsProviderName,
+		GetLmsContentQueryParamFieldsShortDescription,
+		GetLmsContentQueryParamFieldsLocalizations,
+		GetLmsContentQueryParamFieldsCollectionIds,
+		GetLmsContentQueryParamFieldsInstructors,
+		GetLmsContentQueryParamFieldsPublishedAt,
+		GetLmsContentQueryParamFieldsMetadata,
+		GetLmsContentQueryParamFieldsRaw,
+	}
+}
 func (e *GetLmsContentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

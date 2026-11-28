@@ -36,6 +36,31 @@ const (
 func (e GetCommerceReservationQueryParamFields) ToPointer() *GetCommerceReservationQueryParamFields {
 	return &e
 }
+
+// GetCommerceReservationQueryParamFieldsValues returns every known GetCommerceReservationQueryParamFields value in schema order.
+func GetCommerceReservationQueryParamFieldsValues() []GetCommerceReservationQueryParamFields {
+	return []GetCommerceReservationQueryParamFields{
+		GetCommerceReservationQueryParamFieldsID,
+		GetCommerceReservationQueryParamFieldsLocationID,
+		GetCommerceReservationQueryParamFieldsStartAt,
+		GetCommerceReservationQueryParamFieldsEndAt,
+		GetCommerceReservationQueryParamFieldsSize,
+		GetCommerceReservationQueryParamFieldsStatus,
+		GetCommerceReservationQueryParamFieldsGuestName,
+		GetCommerceReservationQueryParamFieldsGuestPhone,
+		GetCommerceReservationQueryParamFieldsGuestEmail,
+		GetCommerceReservationQueryParamFieldsNotes,
+		GetCommerceReservationQueryParamFieldsItemID,
+		GetCommerceReservationQueryParamFieldsItemName,
+		GetCommerceReservationQueryParamFieldsStaffUserID,
+		GetCommerceReservationQueryParamFieldsStaffName,
+		GetCommerceReservationQueryParamFieldsCreatedAt,
+		GetCommerceReservationQueryParamFieldsUpdatedAt,
+		GetCommerceReservationQueryParamFieldsURL,
+		GetCommerceReservationQueryParamFieldsMetadata,
+		GetCommerceReservationQueryParamFieldsRaw,
+	}
+}
 func (e *GetCommerceReservationQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

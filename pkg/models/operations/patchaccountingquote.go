@@ -51,6 +51,46 @@ const (
 func (e PatchAccountingQuoteQueryParamFields) ToPointer() *PatchAccountingQuoteQueryParamFields {
 	return &e
 }
+
+// PatchAccountingQuoteQueryParamFieldsValues returns every known PatchAccountingQuoteQueryParamFields value in schema order.
+func PatchAccountingQuoteQueryParamFieldsValues() []PatchAccountingQuoteQueryParamFields {
+	return []PatchAccountingQuoteQueryParamFields{
+		PatchAccountingQuoteQueryParamFieldsID,
+		PatchAccountingQuoteQueryParamFieldsCreatedAt,
+		PatchAccountingQuoteQueryParamFieldsUpdatedAt,
+		PatchAccountingQuoteQueryParamFieldsQuoteNumber,
+		PatchAccountingQuoteQueryParamFieldsReference,
+		PatchAccountingQuoteQueryParamFieldsTitle,
+		PatchAccountingQuoteQueryParamFieldsSummary,
+		PatchAccountingQuoteQueryParamFieldsPaymentTerms,
+		PatchAccountingQuoteQueryParamFieldsCustomerMessage,
+		PatchAccountingQuoteQueryParamFieldsMemo,
+		PatchAccountingQuoteQueryParamFieldsContactID,
+		PatchAccountingQuoteQueryParamFieldsContacts,
+		PatchAccountingQuoteQueryParamFieldsIssuedAt,
+		PatchAccountingQuoteQueryParamFieldsExpiresAt,
+		PatchAccountingQuoteQueryParamFieldsSentAt,
+		PatchAccountingQuoteQueryParamFieldsAcceptedAt,
+		PatchAccountingQuoteQueryParamFieldsDeclinedAt,
+		PatchAccountingQuoteQueryParamFieldsStatus,
+		PatchAccountingQuoteQueryParamFieldsCurrency,
+		PatchAccountingQuoteQueryParamFieldsCurrencyRate,
+		PatchAccountingQuoteQueryParamFieldsSubTotalAmount,
+		PatchAccountingQuoteQueryParamFieldsTaxAmount,
+		PatchAccountingQuoteQueryParamFieldsDiscountAmount,
+		PatchAccountingQuoteQueryParamFieldsTotalAmount,
+		PatchAccountingQuoteQueryParamFieldsTaxMode,
+		PatchAccountingQuoteQueryParamFieldsLineitems,
+		PatchAccountingQuoteQueryParamFieldsInvoiceID,
+		PatchAccountingQuoteQueryParamFieldsProjectID,
+		PatchAccountingQuoteQueryParamFieldsGroupID,
+		PatchAccountingQuoteQueryParamFieldsCategoryIds,
+		PatchAccountingQuoteQueryParamFieldsURL,
+		PatchAccountingQuoteQueryParamFieldsOrganizationID,
+		PatchAccountingQuoteQueryParamFieldsMetadata,
+		PatchAccountingQuoteQueryParamFieldsRaw,
+	}
+}
 func (e *PatchAccountingQuoteQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

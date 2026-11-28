@@ -15,6 +15,15 @@ func (e Criticality) ToPointer() *Criticality {
 	return &e
 }
 
+// CriticalityValues returns every known Criticality value in schema order.
+func CriticalityValues() []Criticality {
+	return []Criticality{
+		CriticalityLow,
+		CriticalityHigh,
+		CriticalityUnableToAssess,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Criticality) IsExact() bool {
 	if e != nil {
@@ -46,6 +55,24 @@ const (
 
 func (e ResourceType) ToPointer() *ResourceType {
 	return &e
+}
+
+// ResourceTypeValues returns every known ResourceType value in schema order.
+func ResourceTypeValues() []ResourceType {
+	return []ResourceType{
+		ResourceTypePatient,
+		ResourceTypePractitioner,
+		ResourceTypeEncounter,
+		ResourceTypeObservation,
+		ResourceTypeCondition,
+		ResourceTypeAllergyIntolerance,
+		ResourceTypeMedicationRequest,
+		ResourceTypeImmunization,
+		ResourceTypeBundle,
+		ResourceTypeOperationOutcome,
+		ResourceTypeCapabilityStatement,
+		ResourceTypeDiagnosticReport,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

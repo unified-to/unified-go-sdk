@@ -19,6 +19,15 @@ func (e TaskTaskStatus) ToPointer() *TaskTaskStatus {
 	return &e
 }
 
+// TaskTaskStatusValues returns every known TaskTaskStatus value in schema order.
+func TaskTaskStatusValues() []TaskTaskStatus {
+	return []TaskTaskStatus{
+		TaskTaskStatusOpened,
+		TaskTaskStatusInProgress,
+		TaskTaskStatusCompleted,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *TaskTaskStatus) IsExact() bool {
 	if e != nil {

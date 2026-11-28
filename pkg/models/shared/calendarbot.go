@@ -26,6 +26,22 @@ func (e CalendarBotStatus) ToPointer() *CalendarBotStatus {
 	return &e
 }
 
+// CalendarBotStatusValues returns every known CalendarBotStatus value in schema order.
+func CalendarBotStatusValues() []CalendarBotStatus {
+	return []CalendarBotStatus{
+		CalendarBotStatusReady,
+		CalendarBotStatusJoiningCall,
+		CalendarBotStatusInWaitingRoom,
+		CalendarBotStatusInCallNotRecording,
+		CalendarBotStatusRecordingPermissionAllowed,
+		CalendarBotStatusRecordingPermissionDenied,
+		CalendarBotStatusInCallRecording,
+		CalendarBotStatusCallEnded,
+		CalendarBotStatusDone,
+		CalendarBotStatusFatal,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CalendarBotStatus) IsExact() bool {
 	if e != nil {

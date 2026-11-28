@@ -14,6 +14,14 @@ func (e Operation) ToPointer() *Operation {
 	return &e
 }
 
+// OperationValues returns every known Operation value in schema order.
+func OperationValues() []Operation {
+	return []Operation{
+		OperationAdd,
+		OperationDelete,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Operation) IsExact() bool {
 	if e != nil {
@@ -35,6 +43,14 @@ const (
 
 func (e ScimGroupMemberType) ToPointer() *ScimGroupMemberType {
 	return &e
+}
+
+// ScimGroupMemberTypeValues returns every known ScimGroupMemberType value in schema order.
+func ScimGroupMemberTypeValues() []ScimGroupMemberType {
+	return []ScimGroupMemberType{
+		ScimGroupMemberTypeUser,
+		ScimGroupMemberTypeGroup,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

@@ -43,6 +43,38 @@ const (
 func (e PatchDmsPartQueryParamFields) ToPointer() *PatchDmsPartQueryParamFields {
 	return &e
 }
+
+// PatchDmsPartQueryParamFieldsValues returns every known PatchDmsPartQueryParamFields value in schema order.
+func PatchDmsPartQueryParamFieldsValues() []PatchDmsPartQueryParamFields {
+	return []PatchDmsPartQueryParamFields{
+		PatchDmsPartQueryParamFieldsID,
+		PatchDmsPartQueryParamFieldsCreatedAt,
+		PatchDmsPartQueryParamFieldsUpdatedAt,
+		PatchDmsPartQueryParamFieldsPartNumber,
+		PatchDmsPartQueryParamFieldsDescription,
+		PatchDmsPartQueryParamFieldsManufacturerCode,
+		PatchDmsPartQueryParamFieldsSourceCode,
+		PatchDmsPartQueryParamFieldsSupplierCode,
+		PatchDmsPartQueryParamFieldsCategory,
+		PatchDmsPartQueryParamFieldsBinLocations,
+		PatchDmsPartQueryParamFieldsQuantityOnHand,
+		PatchDmsPartQueryParamFieldsQuantityAvailable,
+		PatchDmsPartQueryParamFieldsQuantityOnOrder,
+		PatchDmsPartQueryParamFieldsMinStockQuantity,
+		PatchDmsPartQueryParamFieldsMaxStockQuantity,
+		PatchDmsPartQueryParamFieldsPackQuantity,
+		PatchDmsPartQueryParamFieldsCurrency,
+		PatchDmsPartQueryParamFieldsCostAmount,
+		PatchDmsPartQueryParamFieldsListPriceAmount,
+		PatchDmsPartQueryParamFieldsTradePriceAmount,
+		PatchDmsPartQueryParamFieldsSupersededByPartNumber,
+		PatchDmsPartQueryParamFieldsLastSoldAt,
+		PatchDmsPartQueryParamFieldsLastReceivedAt,
+		PatchDmsPartQueryParamFieldsIsActive,
+		PatchDmsPartQueryParamFieldsMetadata,
+		PatchDmsPartQueryParamFieldsRaw,
+	}
+}
 func (e *PatchDmsPartQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

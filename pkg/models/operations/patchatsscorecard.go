@@ -30,6 +30,25 @@ const (
 func (e PatchAtsScorecardQueryParamFields) ToPointer() *PatchAtsScorecardQueryParamFields {
 	return &e
 }
+
+// PatchAtsScorecardQueryParamFieldsValues returns every known PatchAtsScorecardQueryParamFields value in schema order.
+func PatchAtsScorecardQueryParamFieldsValues() []PatchAtsScorecardQueryParamFields {
+	return []PatchAtsScorecardQueryParamFields{
+		PatchAtsScorecardQueryParamFieldsID,
+		PatchAtsScorecardQueryParamFieldsCreatedAt,
+		PatchAtsScorecardQueryParamFieldsUpdatedAt,
+		PatchAtsScorecardQueryParamFieldsApplicationID,
+		PatchAtsScorecardQueryParamFieldsInterviewerID,
+		PatchAtsScorecardQueryParamFieldsInterviewID,
+		PatchAtsScorecardQueryParamFieldsCandidateID,
+		PatchAtsScorecardQueryParamFieldsJobID,
+		PatchAtsScorecardQueryParamFieldsRecommendation,
+		PatchAtsScorecardQueryParamFieldsComment,
+		PatchAtsScorecardQueryParamFieldsQuestions,
+		PatchAtsScorecardQueryParamFieldsMetadata,
+		PatchAtsScorecardQueryParamFieldsRaw,
+	}
+}
 func (e *PatchAtsScorecardQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

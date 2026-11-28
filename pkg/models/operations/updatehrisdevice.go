@@ -38,6 +38,33 @@ const (
 func (e UpdateHrisDeviceQueryParamFields) ToPointer() *UpdateHrisDeviceQueryParamFields {
 	return &e
 }
+
+// UpdateHrisDeviceQueryParamFieldsValues returns every known UpdateHrisDeviceQueryParamFields value in schema order.
+func UpdateHrisDeviceQueryParamFieldsValues() []UpdateHrisDeviceQueryParamFields {
+	return []UpdateHrisDeviceQueryParamFields{
+		UpdateHrisDeviceQueryParamFieldsID,
+		UpdateHrisDeviceQueryParamFieldsCreatedAt,
+		UpdateHrisDeviceQueryParamFieldsUpdatedAt,
+		UpdateHrisDeviceQueryParamFieldsName,
+		UpdateHrisDeviceQueryParamFieldsAssetTag,
+		UpdateHrisDeviceQueryParamFieldsVersion,
+		UpdateHrisDeviceQueryParamFieldsManufacturer,
+		UpdateHrisDeviceQueryParamFieldsModel,
+		UpdateHrisDeviceQueryParamFieldsOs,
+		UpdateHrisDeviceQueryParamFieldsOsVersion,
+		UpdateHrisDeviceQueryParamFieldsUserIds,
+		UpdateHrisDeviceQueryParamFieldsAdminUserIds,
+		UpdateHrisDeviceQueryParamFieldsLocationID,
+		UpdateHrisDeviceQueryParamFieldsHasAntivirus,
+		UpdateHrisDeviceQueryParamFieldsHasPasswordManager,
+		UpdateHrisDeviceQueryParamFieldsHasFirewall,
+		UpdateHrisDeviceQueryParamFieldsHasHdEncrypted,
+		UpdateHrisDeviceQueryParamFieldsHasScreenlock,
+		UpdateHrisDeviceQueryParamFieldsIsMissing,
+		UpdateHrisDeviceQueryParamFieldsMetadata,
+		UpdateHrisDeviceQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateHrisDeviceQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

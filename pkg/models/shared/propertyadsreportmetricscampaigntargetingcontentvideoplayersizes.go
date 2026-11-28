@@ -14,6 +14,15 @@ func (e PropertyAdsReportMetricsCampaignTargetingContentVideoPlayerSizes) ToPoin
 	return &e
 }
 
+// PropertyAdsReportMetricsCampaignTargetingContentVideoPlayerSizesValues returns every known PropertyAdsReportMetricsCampaignTargetingContentVideoPlayerSizes value in schema order.
+func PropertyAdsReportMetricsCampaignTargetingContentVideoPlayerSizesValues() []PropertyAdsReportMetricsCampaignTargetingContentVideoPlayerSizes {
+	return []PropertyAdsReportMetricsCampaignTargetingContentVideoPlayerSizes{
+		PropertyAdsReportMetricsCampaignTargetingContentVideoPlayerSizesSmall,
+		PropertyAdsReportMetricsCampaignTargetingContentVideoPlayerSizesLarge,
+		PropertyAdsReportMetricsCampaignTargetingContentVideoPlayerSizesHd,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsCampaignTargetingContentVideoPlayerSizes) IsExact() bool {
 	if e != nil {

@@ -37,6 +37,32 @@ const (
 func (e ListCrmContactsQueryParamFields) ToPointer() *ListCrmContactsQueryParamFields {
 	return &e
 }
+
+// ListCrmContactsQueryParamFieldsValues returns every known ListCrmContactsQueryParamFields value in schema order.
+func ListCrmContactsQueryParamFieldsValues() []ListCrmContactsQueryParamFields {
+	return []ListCrmContactsQueryParamFields{
+		ListCrmContactsQueryParamFieldsID,
+		ListCrmContactsQueryParamFieldsCreatedAt,
+		ListCrmContactsQueryParamFieldsUpdatedAt,
+		ListCrmContactsQueryParamFieldsName,
+		ListCrmContactsQueryParamFieldsFirstName,
+		ListCrmContactsQueryParamFieldsLastName,
+		ListCrmContactsQueryParamFieldsTitle,
+		ListCrmContactsQueryParamFieldsCompany,
+		ListCrmContactsQueryParamFieldsEmails,
+		ListCrmContactsQueryParamFieldsTelephones,
+		ListCrmContactsQueryParamFieldsDealIds,
+		ListCrmContactsQueryParamFieldsCompanyIds,
+		ListCrmContactsQueryParamFieldsAddress,
+		ListCrmContactsQueryParamFieldsUserID,
+		ListCrmContactsQueryParamFieldsLinkUrls,
+		ListCrmContactsQueryParamFieldsMetadata,
+		ListCrmContactsQueryParamFieldsDepartment,
+		ListCrmContactsQueryParamFieldsImageURL,
+		ListCrmContactsQueryParamFieldsRaw,
+		ListCrmContactsQueryParamFieldsUnifiedPersonIds,
+	}
+}
 func (e *ListCrmContactsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

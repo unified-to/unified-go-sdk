@@ -33,6 +33,28 @@ const (
 func (e PatchHrisTaxonomyQueryParamFields) ToPointer() *PatchHrisTaxonomyQueryParamFields {
 	return &e
 }
+
+// PatchHrisTaxonomyQueryParamFieldsValues returns every known PatchHrisTaxonomyQueryParamFields value in schema order.
+func PatchHrisTaxonomyQueryParamFieldsValues() []PatchHrisTaxonomyQueryParamFields {
+	return []PatchHrisTaxonomyQueryParamFields{
+		PatchHrisTaxonomyQueryParamFieldsID,
+		PatchHrisTaxonomyQueryParamFieldsCreatedAt,
+		PatchHrisTaxonomyQueryParamFieldsUpdatedAt,
+		PatchHrisTaxonomyQueryParamFieldsType,
+		PatchHrisTaxonomyQueryParamFieldsName,
+		PatchHrisTaxonomyQueryParamFieldsDescription,
+		PatchHrisTaxonomyQueryParamFieldsDomain,
+		PatchHrisTaxonomyQueryParamFieldsCategory,
+		PatchHrisTaxonomyQueryParamFieldsSubcategory,
+		PatchHrisTaxonomyQueryParamFieldsParentID,
+		PatchHrisTaxonomyQueryParamFieldsAlternativeNames,
+		PatchHrisTaxonomyQueryParamFieldsURL,
+		PatchHrisTaxonomyQueryParamFieldsRoleIds,
+		PatchHrisTaxonomyQueryParamFieldsIsActive,
+		PatchHrisTaxonomyQueryParamFieldsMetadata,
+		PatchHrisTaxonomyQueryParamFieldsRaw,
+	}
+}
 func (e *PatchHrisTaxonomyQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

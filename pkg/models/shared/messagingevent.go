@@ -29,6 +29,25 @@ func (e MessagingEventType) ToPointer() *MessagingEventType {
 	return &e
 }
 
+// MessagingEventTypeValues returns every known MessagingEventType value in schema order.
+func MessagingEventTypeValues() []MessagingEventType {
+	return []MessagingEventType{
+		MessagingEventTypeMessageReceived,
+		MessagingEventTypeReactionAdded,
+		MessagingEventTypeReactionRemoved,
+		MessagingEventTypeButtonClick,
+		MessagingEventTypeAppMention,
+		MessagingEventTypeChannelJoined,
+		MessagingEventTypeChannelLeft,
+		MessagingEventTypeChannelCreated,
+		MessagingEventTypeChannelDeleted,
+		MessagingEventTypeChannelRenamed,
+		MessagingEventTypeUserCreated,
+		MessagingEventTypeUserDeleted,
+		MessagingEventTypeUserUpdated,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *MessagingEventType) IsExact() bool {
 	if e != nil {

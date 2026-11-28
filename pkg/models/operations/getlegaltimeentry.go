@@ -36,6 +36,31 @@ const (
 func (e GetLegalTimeentryQueryParamFields) ToPointer() *GetLegalTimeentryQueryParamFields {
 	return &e
 }
+
+// GetLegalTimeentryQueryParamFieldsValues returns every known GetLegalTimeentryQueryParamFields value in schema order.
+func GetLegalTimeentryQueryParamFieldsValues() []GetLegalTimeentryQueryParamFields {
+	return []GetLegalTimeentryQueryParamFields{
+		GetLegalTimeentryQueryParamFieldsID,
+		GetLegalTimeentryQueryParamFieldsCreatedAt,
+		GetLegalTimeentryQueryParamFieldsUpdatedAt,
+		GetLegalTimeentryQueryParamFieldsMatterID,
+		GetLegalTimeentryQueryParamFieldsUserID,
+		GetLegalTimeentryQueryParamFieldsDescription,
+		GetLegalTimeentryQueryParamFieldsWorkedAt,
+		GetLegalTimeentryQueryParamFieldsMinutes,
+		GetLegalTimeentryQueryParamFieldsBillableMinutes,
+		GetLegalTimeentryQueryParamFieldsRateAmount,
+		GetLegalTimeentryQueryParamFieldsTotalAmount,
+		GetLegalTimeentryQueryParamFieldsCurrency,
+		GetLegalTimeentryQueryParamFieldsIsBillable,
+		GetLegalTimeentryQueryParamFieldsIsBilled,
+		GetLegalTimeentryQueryParamFieldsInvoiceID,
+		GetLegalTimeentryQueryParamFieldsActivityCode,
+		GetLegalTimeentryQueryParamFieldsTaskCode,
+		GetLegalTimeentryQueryParamFieldsMetadata,
+		GetLegalTimeentryQueryParamFieldsRaw,
+	}
+}
 func (e *GetLegalTimeentryQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

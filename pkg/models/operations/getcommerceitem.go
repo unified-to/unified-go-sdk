@@ -47,6 +47,42 @@ const (
 func (e GetCommerceItemQueryParamFields) ToPointer() *GetCommerceItemQueryParamFields {
 	return &e
 }
+
+// GetCommerceItemQueryParamFieldsValues returns every known GetCommerceItemQueryParamFields value in schema order.
+func GetCommerceItemQueryParamFieldsValues() []GetCommerceItemQueryParamFields {
+	return []GetCommerceItemQueryParamFields{
+		GetCommerceItemQueryParamFieldsID,
+		GetCommerceItemQueryParamFieldsCreatedAt,
+		GetCommerceItemQueryParamFieldsUpdatedAt,
+		GetCommerceItemQueryParamFieldsName,
+		GetCommerceItemQueryParamFieldsPublicName,
+		GetCommerceItemQueryParamFieldsSlug,
+		GetCommerceItemQueryParamFieldsDescription,
+		GetCommerceItemQueryParamFieldsGlobalCode,
+		GetCommerceItemQueryParamFieldsPublicDescription,
+		GetCommerceItemQueryParamFieldsIsActive,
+		GetCommerceItemQueryParamFieldsIsTaxable,
+		GetCommerceItemQueryParamFieldsVendorName,
+		GetCommerceItemQueryParamFieldsType,
+		GetCommerceItemQueryParamFieldsIsVisible,
+		GetCommerceItemQueryParamFieldsIsFeatured,
+		GetCommerceItemQueryParamFieldsWeight,
+		GetCommerceItemQueryParamFieldsWeightUnit,
+		GetCommerceItemQueryParamFieldsRequiresShipping,
+		GetCommerceItemQueryParamFieldsPrices,
+		GetCommerceItemQueryParamFieldsInventoryID,
+		GetCommerceItemQueryParamFieldsTotalStock,
+		GetCommerceItemQueryParamFieldsTags,
+		GetCommerceItemQueryParamFieldsMedia,
+		GetCommerceItemQueryParamFieldsAccountID,
+		GetCommerceItemQueryParamFieldsMetadata,
+		GetCommerceItemQueryParamFieldsCollections,
+		GetCommerceItemQueryParamFieldsTaxrateID,
+		GetCommerceItemQueryParamFieldsLocationID,
+		GetCommerceItemQueryParamFieldsDuration,
+		GetCommerceItemQueryParamFieldsRaw,
+	}
+}
 func (e *GetCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

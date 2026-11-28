@@ -13,6 +13,14 @@ func (e PropertyScimGroupMetaResourceType) ToPointer() *PropertyScimGroupMetaRes
 	return &e
 }
 
+// PropertyScimGroupMetaResourceTypeValues returns every known PropertyScimGroupMetaResourceType value in schema order.
+func PropertyScimGroupMetaResourceTypeValues() []PropertyScimGroupMetaResourceType {
+	return []PropertyScimGroupMetaResourceType{
+		PropertyScimGroupMetaResourceTypeUser,
+		PropertyScimGroupMetaResourceTypeGroup,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyScimGroupMetaResourceType) IsExact() bool {
 	if e != nil {

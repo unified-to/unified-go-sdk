@@ -21,6 +21,16 @@ func (e HealthcarePatientGender) ToPointer() *HealthcarePatientGender {
 	return &e
 }
 
+// HealthcarePatientGenderValues returns every known HealthcarePatientGender value in schema order.
+func HealthcarePatientGenderValues() []HealthcarePatientGender {
+	return []HealthcarePatientGender{
+		HealthcarePatientGenderMale,
+		HealthcarePatientGenderFemale,
+		HealthcarePatientGenderOther,
+		HealthcarePatientGenderUnknown,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HealthcarePatientGender) IsExact() bool {
 	if e != nil {
@@ -49,6 +59,21 @@ const (
 
 func (e MaritalStatus) ToPointer() *MaritalStatus {
 	return &e
+}
+
+// MaritalStatusValues returns every known MaritalStatus value in schema order.
+func MaritalStatusValues() []MaritalStatus {
+	return []MaritalStatus{
+		MaritalStatusMarried,
+		MaritalStatusSingle,
+		MaritalStatusDomesticPartner,
+		MaritalStatusSeparated,
+		MaritalStatusDivorced,
+		MaritalStatusWidowed,
+		MaritalStatusAnnulled,
+		MaritalStatusUnknown,
+		MaritalStatusOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

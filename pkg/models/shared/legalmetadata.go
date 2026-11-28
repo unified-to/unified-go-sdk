@@ -299,6 +299,25 @@ func (e LegalMetadataFormat) ToPointer() *LegalMetadataFormat {
 	return &e
 }
 
+// LegalMetadataFormatValues returns every known LegalMetadataFormat value in schema order.
+func LegalMetadataFormatValues() []LegalMetadataFormat {
+	return []LegalMetadataFormat{
+		LegalMetadataFormatText,
+		LegalMetadataFormatNumber,
+		LegalMetadataFormatDate,
+		LegalMetadataFormatBoolean,
+		LegalMetadataFormatFile,
+		LegalMetadataFormatTextarea,
+		LegalMetadataFormatSingleSelect,
+		LegalMetadataFormatMultipleSelect,
+		LegalMetadataFormatMeasurement,
+		LegalMetadataFormatPrice,
+		LegalMetadataFormatYesNo,
+		LegalMetadataFormatCurrency,
+		LegalMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *LegalMetadataFormat) IsExact() bool {
 	if e != nil {

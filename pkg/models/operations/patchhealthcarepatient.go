@@ -41,6 +41,36 @@ const (
 func (e PatchHealthcarePatientQueryParamFields) ToPointer() *PatchHealthcarePatientQueryParamFields {
 	return &e
 }
+
+// PatchHealthcarePatientQueryParamFieldsValues returns every known PatchHealthcarePatientQueryParamFields value in schema order.
+func PatchHealthcarePatientQueryParamFieldsValues() []PatchHealthcarePatientQueryParamFields {
+	return []PatchHealthcarePatientQueryParamFields{
+		PatchHealthcarePatientQueryParamFieldsID,
+		PatchHealthcarePatientQueryParamFieldsCreatedAt,
+		PatchHealthcarePatientQueryParamFieldsUpdatedAt,
+		PatchHealthcarePatientQueryParamFieldsName,
+		PatchHealthcarePatientQueryParamFieldsFirstName,
+		PatchHealthcarePatientQueryParamFieldsLastName,
+		PatchHealthcarePatientQueryParamFieldsGender,
+		PatchHealthcarePatientQueryParamFieldsBirthdate,
+		PatchHealthcarePatientQueryParamFieldsIsDeceased,
+		PatchHealthcarePatientQueryParamFieldsDeceasedAt,
+		PatchHealthcarePatientQueryParamFieldsEmails,
+		PatchHealthcarePatientQueryParamFieldsTelephones,
+		PatchHealthcarePatientQueryParamFieldsAddress,
+		PatchHealthcarePatientQueryParamFieldsLanguage,
+		PatchHealthcarePatientQueryParamFieldsIdentifiers,
+		PatchHealthcarePatientQueryParamFieldsPractitionerIds,
+		PatchHealthcarePatientQueryParamFieldsIsActive,
+		PatchHealthcarePatientQueryParamFieldsRaces,
+		PatchHealthcarePatientQueryParamFieldsEthnicities,
+		PatchHealthcarePatientQueryParamFieldsMaritalStatus,
+		PatchHealthcarePatientQueryParamFieldsContacts,
+		PatchHealthcarePatientQueryParamFieldsMetadata,
+		PatchHealthcarePatientQueryParamFieldsRaw,
+		PatchHealthcarePatientQueryParamFieldsUnifiedPersonIds,
+	}
+}
 func (e *PatchHealthcarePatientQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

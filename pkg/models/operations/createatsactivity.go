@@ -38,6 +38,33 @@ const (
 func (e CreateAtsActivityQueryParamFields) ToPointer() *CreateAtsActivityQueryParamFields {
 	return &e
 }
+
+// CreateAtsActivityQueryParamFieldsValues returns every known CreateAtsActivityQueryParamFields value in schema order.
+func CreateAtsActivityQueryParamFieldsValues() []CreateAtsActivityQueryParamFields {
+	return []CreateAtsActivityQueryParamFields{
+		CreateAtsActivityQueryParamFieldsID,
+		CreateAtsActivityQueryParamFieldsCreatedAt,
+		CreateAtsActivityQueryParamFieldsUpdatedAt,
+		CreateAtsActivityQueryParamFieldsCandidateID,
+		CreateAtsActivityQueryParamFieldsApplicationID,
+		CreateAtsActivityQueryParamFieldsJobID,
+		CreateAtsActivityQueryParamFieldsInterviewID,
+		CreateAtsActivityQueryParamFieldsDocumentIds,
+		CreateAtsActivityQueryParamFieldsTitle,
+		CreateAtsActivityQueryParamFieldsDescription,
+		CreateAtsActivityQueryParamFieldsIsPrivate,
+		CreateAtsActivityQueryParamFieldsUserIds,
+		CreateAtsActivityQueryParamFieldsType,
+		CreateAtsActivityQueryParamFieldsFrom,
+		CreateAtsActivityQueryParamFieldsTo,
+		CreateAtsActivityQueryParamFieldsCc,
+		CreateAtsActivityQueryParamFieldsBcc,
+		CreateAtsActivityQueryParamFieldsSubType,
+		CreateAtsActivityQueryParamFieldsCompanyID,
+		CreateAtsActivityQueryParamFieldsMetadata,
+		CreateAtsActivityQueryParamFieldsRaw,
+	}
+}
 func (e *CreateAtsActivityQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -47,6 +47,42 @@ const (
 func (e GetAccountingExpenseQueryParamFields) ToPointer() *GetAccountingExpenseQueryParamFields {
 	return &e
 }
+
+// GetAccountingExpenseQueryParamFieldsValues returns every known GetAccountingExpenseQueryParamFields value in schema order.
+func GetAccountingExpenseQueryParamFieldsValues() []GetAccountingExpenseQueryParamFields {
+	return []GetAccountingExpenseQueryParamFields{
+		GetAccountingExpenseQueryParamFieldsID,
+		GetAccountingExpenseQueryParamFieldsCreatedAt,
+		GetAccountingExpenseQueryParamFieldsUpdatedAt,
+		GetAccountingExpenseQueryParamFieldsUserID,
+		GetAccountingExpenseQueryParamFieldsContactID,
+		GetAccountingExpenseQueryParamFieldsAccountID,
+		GetAccountingExpenseQueryParamFieldsName,
+		GetAccountingExpenseQueryParamFieldsPaymentMethod,
+		GetAccountingExpenseQueryParamFieldsPostedAt,
+		GetAccountingExpenseQueryParamFieldsTotalAmount,
+		GetAccountingExpenseQueryParamFieldsCurrency,
+		GetAccountingExpenseQueryParamFieldsTaxAmount,
+		GetAccountingExpenseQueryParamFieldsReimbursedAmount,
+		GetAccountingExpenseQueryParamFieldsReimbursedAt,
+		GetAccountingExpenseQueryParamFieldsApprovedAt,
+		GetAccountingExpenseQueryParamFieldsApproverUserID,
+		GetAccountingExpenseQueryParamFieldsLineitems,
+		GetAccountingExpenseQueryParamFieldsAttachments,
+		GetAccountingExpenseQueryParamFieldsOrganizationID,
+		GetAccountingExpenseQueryParamFieldsUsers,
+		GetAccountingExpenseQueryParamFieldsApproverUsers,
+		GetAccountingExpenseQueryParamFieldsStatus,
+		GetAccountingExpenseQueryParamFieldsExternalNumber,
+		GetAccountingExpenseQueryParamFieldsCategoryIds,
+		GetAccountingExpenseQueryParamFieldsProjectID,
+		GetAccountingExpenseQueryParamFieldsMetadata,
+		GetAccountingExpenseQueryParamFieldsTaxrateID,
+		GetAccountingExpenseQueryParamFieldsExchangeRate,
+		GetAccountingExpenseQueryParamFieldsType,
+		GetAccountingExpenseQueryParamFieldsRaw,
+	}
+}
 func (e *GetAccountingExpenseQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

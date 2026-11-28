@@ -45,6 +45,40 @@ const (
 func (e UpdateQmsInspectionQueryParamFields) ToPointer() *UpdateQmsInspectionQueryParamFields {
 	return &e
 }
+
+// UpdateQmsInspectionQueryParamFieldsValues returns every known UpdateQmsInspectionQueryParamFields value in schema order.
+func UpdateQmsInspectionQueryParamFieldsValues() []UpdateQmsInspectionQueryParamFields {
+	return []UpdateQmsInspectionQueryParamFields{
+		UpdateQmsInspectionQueryParamFieldsID,
+		UpdateQmsInspectionQueryParamFieldsCreatedAt,
+		UpdateQmsInspectionQueryParamFieldsUpdatedAt,
+		UpdateQmsInspectionQueryParamFieldsNumber,
+		UpdateQmsInspectionQueryParamFieldsName,
+		UpdateQmsInspectionQueryParamFieldsType,
+		UpdateQmsInspectionQueryParamFieldsOriginalType,
+		UpdateQmsInspectionQueryParamFieldsStatus,
+		UpdateQmsInspectionQueryParamFieldsLifecycleState,
+		UpdateQmsInspectionQueryParamFieldsResult,
+		UpdateQmsInspectionQueryParamFieldsPlanName,
+		UpdateQmsInspectionQueryParamFieldsPartID,
+		UpdateQmsInspectionQueryParamFieldsPartNumber,
+		UpdateQmsInspectionQueryParamFieldsRevision,
+		UpdateQmsInspectionQueryParamFieldsLotNumber,
+		UpdateQmsInspectionQueryParamFieldsSerialNumber,
+		UpdateQmsInspectionQueryParamFieldsQuantityInspected,
+		UpdateQmsInspectionQueryParamFieldsQuantityAccepted,
+		UpdateQmsInspectionQueryParamFieldsQuantityRejected,
+		UpdateQmsInspectionQueryParamFieldsSupplierName,
+		UpdateQmsInspectionQueryParamFieldsCharacteristics,
+		UpdateQmsInspectionQueryParamFieldsIssueIds,
+		UpdateQmsInspectionQueryParamFieldsUserID,
+		UpdateQmsInspectionQueryParamFieldsInspectedAt,
+		UpdateQmsInspectionQueryParamFieldsFileIds,
+		UpdateQmsInspectionQueryParamFieldsURL,
+		UpdateQmsInspectionQueryParamFieldsMetadata,
+		UpdateQmsInspectionQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateQmsInspectionQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

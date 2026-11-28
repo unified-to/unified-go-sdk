@@ -40,6 +40,35 @@ const (
 func (e UpdateComputeServiceQueryParamFields) ToPointer() *UpdateComputeServiceQueryParamFields {
 	return &e
 }
+
+// UpdateComputeServiceQueryParamFieldsValues returns every known UpdateComputeServiceQueryParamFields value in schema order.
+func UpdateComputeServiceQueryParamFieldsValues() []UpdateComputeServiceQueryParamFields {
+	return []UpdateComputeServiceQueryParamFields{
+		UpdateComputeServiceQueryParamFieldsID,
+		UpdateComputeServiceQueryParamFieldsCreatedAt,
+		UpdateComputeServiceQueryParamFieldsUpdatedAt,
+		UpdateComputeServiceQueryParamFieldsName,
+		UpdateComputeServiceQueryParamFieldsType,
+		UpdateComputeServiceQueryParamFieldsStatus,
+		UpdateComputeServiceQueryParamFieldsRuntime,
+		UpdateComputeServiceQueryParamFieldsRegionID,
+		UpdateComputeServiceQueryParamFieldsGputypeID,
+		UpdateComputeServiceQueryParamFieldsSku,
+		UpdateComputeServiceQueryParamFieldsInstanceCount,
+		UpdateComputeServiceQueryParamFieldsMinInstanceCount,
+		UpdateComputeServiceQueryParamFieldsMaxInstanceCount,
+		UpdateComputeServiceQueryParamFieldsRepoURL,
+		UpdateComputeServiceQueryParamFieldsBranch,
+		UpdateComputeServiceQueryParamFieldsImage,
+		UpdateComputeServiceQueryParamFieldsBuildCommand,
+		UpdateComputeServiceQueryParamFieldsStartCommand,
+		UpdateComputeServiceQueryParamFieldsURL,
+		UpdateComputeServiceQueryParamFieldsProjectIdentifier,
+		UpdateComputeServiceQueryParamFieldsEnv,
+		UpdateComputeServiceQueryParamFieldsMetadata,
+		UpdateComputeServiceQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateComputeServiceQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

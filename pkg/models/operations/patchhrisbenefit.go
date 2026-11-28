@@ -37,6 +37,32 @@ const (
 func (e PatchHrisBenefitQueryParamFields) ToPointer() *PatchHrisBenefitQueryParamFields {
 	return &e
 }
+
+// PatchHrisBenefitQueryParamFieldsValues returns every known PatchHrisBenefitQueryParamFields value in schema order.
+func PatchHrisBenefitQueryParamFieldsValues() []PatchHrisBenefitQueryParamFields {
+	return []PatchHrisBenefitQueryParamFields{
+		PatchHrisBenefitQueryParamFieldsID,
+		PatchHrisBenefitQueryParamFieldsCreatedAt,
+		PatchHrisBenefitQueryParamFieldsUpdatedAt,
+		PatchHrisBenefitQueryParamFieldsName,
+		PatchHrisBenefitQueryParamFieldsDescription,
+		PatchHrisBenefitQueryParamFieldsCompanyID,
+		PatchHrisBenefitQueryParamFieldsType,
+		PatchHrisBenefitQueryParamFieldsTax,
+		PatchHrisBenefitQueryParamFieldsFrequency,
+		PatchHrisBenefitQueryParamFieldsIsActive,
+		PatchHrisBenefitQueryParamFieldsEmployerContributionType,
+		PatchHrisBenefitQueryParamFieldsEmployerContributionAmount,
+		PatchHrisBenefitQueryParamFieldsEmployerContributionMaxAmount,
+		PatchHrisBenefitQueryParamFieldsCoverageLevel,
+		PatchHrisBenefitQueryParamFieldsCurrency,
+		PatchHrisBenefitQueryParamFieldsCode,
+		PatchHrisBenefitQueryParamFieldsRetirementPlanType,
+		PatchHrisBenefitQueryParamFieldsEmployerContributionCategory,
+		PatchHrisBenefitQueryParamFieldsMetadata,
+		PatchHrisBenefitQueryParamFieldsRaw,
+	}
+}
 func (e *PatchHrisBenefitQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

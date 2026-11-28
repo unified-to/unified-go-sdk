@@ -37,6 +37,32 @@ const (
 func (e ListDmsOpcodesQueryParamFields) ToPointer() *ListDmsOpcodesQueryParamFields {
 	return &e
 }
+
+// ListDmsOpcodesQueryParamFieldsValues returns every known ListDmsOpcodesQueryParamFields value in schema order.
+func ListDmsOpcodesQueryParamFieldsValues() []ListDmsOpcodesQueryParamFields {
+	return []ListDmsOpcodesQueryParamFields{
+		ListDmsOpcodesQueryParamFieldsID,
+		ListDmsOpcodesQueryParamFieldsCreatedAt,
+		ListDmsOpcodesQueryParamFieldsUpdatedAt,
+		ListDmsOpcodesQueryParamFieldsCode,
+		ListDmsOpcodesQueryParamFieldsDescription,
+		ListDmsOpcodesQueryParamFieldsType,
+		ListDmsOpcodesQueryParamFieldsCategory,
+		ListDmsOpcodesQueryParamFieldsPayType,
+		ListDmsOpcodesQueryParamFieldsFlatRateHours,
+		ListDmsOpcodesQueryParamFieldsEstimatedHours,
+		ListDmsOpcodesQueryParamFieldsCurrency,
+		ListDmsOpcodesQueryParamFieldsPriceAmount,
+		ListDmsOpcodesQueryParamFieldsLaborRateAmount,
+		ListDmsOpcodesQueryParamFieldsSkillCode,
+		ListDmsOpcodesQueryParamFieldsMake,
+		ListDmsOpcodesQueryParamFieldsOemCode,
+		ListDmsOpcodesQueryParamFieldsIsActive,
+		ListDmsOpcodesQueryParamFieldsParts,
+		ListDmsOpcodesQueryParamFieldsMetadata,
+		ListDmsOpcodesQueryParamFieldsRaw,
+	}
+}
 func (e *ListDmsOpcodesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

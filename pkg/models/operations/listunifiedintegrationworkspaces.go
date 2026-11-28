@@ -61,6 +61,56 @@ const (
 func (e QueryParamCategories) ToPointer() *QueryParamCategories {
 	return &e
 }
+
+// QueryParamCategoriesValues returns every known QueryParamCategories value in schema order.
+func QueryParamCategoriesValues() []QueryParamCategories {
+	return []QueryParamCategories{
+		QueryParamCategoriesPassthrough,
+		QueryParamCategoriesHris,
+		QueryParamCategoriesAts,
+		QueryParamCategoriesAuth,
+		QueryParamCategoriesSaml,
+		QueryParamCategoriesCrm,
+		QueryParamCategoriesEnrich,
+		QueryParamCategoriesMartech,
+		QueryParamCategoriesTicketing,
+		QueryParamCategoriesUc,
+		QueryParamCategoriesAccounting,
+		QueryParamCategoriesStorage,
+		QueryParamCategoriesCommerce,
+		QueryParamCategoriesPayment,
+		QueryParamCategoriesGenai,
+		QueryParamCategoriesMessaging,
+		QueryParamCategoriesKms,
+		QueryParamCategoriesTask,
+		QueryParamCategoriesScim,
+		QueryParamCategoriesLms,
+		QueryParamCategoriesRepo,
+		QueryParamCategoriesMetadata,
+		QueryParamCategoriesCalendar,
+		QueryParamCategoriesVerification,
+		QueryParamCategoriesAds,
+		QueryParamCategoriesAnalytics,
+		QueryParamCategoriesForms,
+		QueryParamCategoriesShipping,
+		QueryParamCategoriesAssessment,
+		QueryParamCategoriesSigning,
+		QueryParamCategoriesClubs,
+		QueryParamCategoriesDatastore,
+		QueryParamCategoriesCdp,
+		QueryParamCategoriesPerformance,
+		QueryParamCategoriesSocial,
+		QueryParamCategoriesLegal,
+		QueryParamCategoriesCompute,
+		QueryParamCategoriesHealthcare,
+		QueryParamCategoriesProperty,
+		QueryParamCategoriesPlm,
+		QueryParamCategoriesQms,
+		QueryParamCategoriesDms,
+		QueryParamCategoriesFhir,
+		QueryParamCategoriesPrinting,
+	}
+}
 func (e *QueryParamCategories) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

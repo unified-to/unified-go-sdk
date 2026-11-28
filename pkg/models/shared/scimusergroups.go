@@ -13,6 +13,14 @@ func (e ScimUserGroupsType) ToPointer() *ScimUserGroupsType {
 	return &e
 }
 
+// ScimUserGroupsTypeValues returns every known ScimUserGroupsType value in schema order.
+func ScimUserGroupsTypeValues() []ScimUserGroupsType {
+	return []ScimUserGroupsType{
+		ScimUserGroupsTypeDirect,
+		ScimUserGroupsTypeIndirect,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ScimUserGroupsType) IsExact() bool {
 	if e != nil {

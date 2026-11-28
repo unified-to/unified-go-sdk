@@ -36,6 +36,31 @@ const (
 func (e CreatePlmChangeQueryParamFields) ToPointer() *CreatePlmChangeQueryParamFields {
 	return &e
 }
+
+// CreatePlmChangeQueryParamFieldsValues returns every known CreatePlmChangeQueryParamFields value in schema order.
+func CreatePlmChangeQueryParamFieldsValues() []CreatePlmChangeQueryParamFields {
+	return []CreatePlmChangeQueryParamFields{
+		CreatePlmChangeQueryParamFieldsID,
+		CreatePlmChangeQueryParamFieldsCreatedAt,
+		CreatePlmChangeQueryParamFieldsUpdatedAt,
+		CreatePlmChangeQueryParamFieldsNumber,
+		CreatePlmChangeQueryParamFieldsName,
+		CreatePlmChangeQueryParamFieldsDescription,
+		CreatePlmChangeQueryParamFieldsType,
+		CreatePlmChangeQueryParamFieldsCategoryID,
+		CreatePlmChangeQueryParamFieldsStatus,
+		CreatePlmChangeQueryParamFieldsPriority,
+		CreatePlmChangeQueryParamFieldsAffectedItems,
+		CreatePlmChangeQueryParamFieldsEffectiveAt,
+		CreatePlmChangeQueryParamFieldsExpiresAt,
+		CreatePlmChangeQueryParamFieldsUserID,
+		CreatePlmChangeQueryParamFieldsApprovedAt,
+		CreatePlmChangeQueryParamFieldsImplementedAt,
+		CreatePlmChangeQueryParamFieldsURL,
+		CreatePlmChangeQueryParamFieldsMetadata,
+		CreatePlmChangeQueryParamFieldsRaw,
+	}
+}
 func (e *CreatePlmChangeQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

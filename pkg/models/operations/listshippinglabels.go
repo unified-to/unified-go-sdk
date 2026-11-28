@@ -32,6 +32,27 @@ const (
 func (e ListShippingLabelsQueryParamFields) ToPointer() *ListShippingLabelsQueryParamFields {
 	return &e
 }
+
+// ListShippingLabelsQueryParamFieldsValues returns every known ListShippingLabelsQueryParamFields value in schema order.
+func ListShippingLabelsQueryParamFieldsValues() []ListShippingLabelsQueryParamFields {
+	return []ListShippingLabelsQueryParamFields{
+		ListShippingLabelsQueryParamFieldsID,
+		ListShippingLabelsQueryParamFieldsCreatedAt,
+		ListShippingLabelsQueryParamFieldsUpdatedAt,
+		ListShippingLabelsQueryParamFieldsShipmentID,
+		ListShippingLabelsQueryParamFieldsTrackingNumber,
+		ListShippingLabelsQueryParamFieldsLabelURL,
+		ListShippingLabelsQueryParamFieldsLabelFormat,
+		ListShippingLabelsQueryParamFieldsStatus,
+		ListShippingLabelsQueryParamFieldsIsVoided,
+		ListShippingLabelsQueryParamFieldsLabelCost,
+		ListShippingLabelsQueryParamFieldsLabelCostCurrency,
+		ListShippingLabelsQueryParamFieldsRateID,
+		ListShippingLabelsQueryParamFieldsServiceCode,
+		ListShippingLabelsQueryParamFieldsMetadata,
+		ListShippingLabelsQueryParamFieldsRaw,
+	}
+}
 func (e *ListShippingLabelsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

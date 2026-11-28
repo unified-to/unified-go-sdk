@@ -15,6 +15,16 @@ func (e PropertyAdsGroupDeliveryGoalPeriod) ToPointer() *PropertyAdsGroupDeliver
 	return &e
 }
 
+// PropertyAdsGroupDeliveryGoalPeriodValues returns every known PropertyAdsGroupDeliveryGoalPeriod value in schema order.
+func PropertyAdsGroupDeliveryGoalPeriodValues() []PropertyAdsGroupDeliveryGoalPeriod {
+	return []PropertyAdsGroupDeliveryGoalPeriod{
+		PropertyAdsGroupDeliveryGoalPeriodDaily,
+		PropertyAdsGroupDeliveryGoalPeriodMonthly,
+		PropertyAdsGroupDeliveryGoalPeriodTotal,
+		PropertyAdsGroupDeliveryGoalPeriodLifetime,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsGroupDeliveryGoalPeriod) IsExact() bool {
 	if e != nil {
@@ -38,6 +48,17 @@ const (
 
 func (e PropertyAdsGroupDeliveryGoalUnit) ToPointer() *PropertyAdsGroupDeliveryGoalUnit {
 	return &e
+}
+
+// PropertyAdsGroupDeliveryGoalUnitValues returns every known PropertyAdsGroupDeliveryGoalUnit value in schema order.
+func PropertyAdsGroupDeliveryGoalUnitValues() []PropertyAdsGroupDeliveryGoalUnit {
+	return []PropertyAdsGroupDeliveryGoalUnit{
+		PropertyAdsGroupDeliveryGoalUnitImpressions,
+		PropertyAdsGroupDeliveryGoalUnitViewableImpressions,
+		PropertyAdsGroupDeliveryGoalUnitClicks,
+		PropertyAdsGroupDeliveryGoalUnitConversions,
+		PropertyAdsGroupDeliveryGoalUnitCompletedViews,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

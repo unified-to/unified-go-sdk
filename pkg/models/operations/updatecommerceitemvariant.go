@@ -45,6 +45,40 @@ const (
 func (e UpdateCommerceItemvariantQueryParamFields) ToPointer() *UpdateCommerceItemvariantQueryParamFields {
 	return &e
 }
+
+// UpdateCommerceItemvariantQueryParamFieldsValues returns every known UpdateCommerceItemvariantQueryParamFields value in schema order.
+func UpdateCommerceItemvariantQueryParamFieldsValues() []UpdateCommerceItemvariantQueryParamFields {
+	return []UpdateCommerceItemvariantQueryParamFields{
+		UpdateCommerceItemvariantQueryParamFieldsID,
+		UpdateCommerceItemvariantQueryParamFieldsCreatedAt,
+		UpdateCommerceItemvariantQueryParamFieldsUpdatedAt,
+		UpdateCommerceItemvariantQueryParamFieldsName,
+		UpdateCommerceItemvariantQueryParamFieldsPublicName,
+		UpdateCommerceItemvariantQueryParamFieldsDescription,
+		UpdateCommerceItemvariantQueryParamFieldsPublicDescription,
+		UpdateCommerceItemvariantQueryParamFieldsSku,
+		UpdateCommerceItemvariantQueryParamFieldsIsActive,
+		UpdateCommerceItemvariantQueryParamFieldsIsVisible,
+		UpdateCommerceItemvariantQueryParamFieldsIsFeatured,
+		UpdateCommerceItemvariantQueryParamFieldsMedia,
+		UpdateCommerceItemvariantQueryParamFieldsAvailableAt,
+		UpdateCommerceItemvariantQueryParamFieldsTags,
+		UpdateCommerceItemvariantQueryParamFieldsWidth,
+		UpdateCommerceItemvariantQueryParamFieldsHeight,
+		UpdateCommerceItemvariantQueryParamFieldsLength,
+		UpdateCommerceItemvariantQueryParamFieldsWeight,
+		UpdateCommerceItemvariantQueryParamFieldsSizeUnit,
+		UpdateCommerceItemvariantQueryParamFieldsWeightUnit,
+		UpdateCommerceItemvariantQueryParamFieldsTotalStock,
+		UpdateCommerceItemvariantQueryParamFieldsPrices,
+		UpdateCommerceItemvariantQueryParamFieldsOptions,
+		UpdateCommerceItemvariantQueryParamFieldsInventoryID,
+		UpdateCommerceItemvariantQueryParamFieldsRequiresShipping,
+		UpdateCommerceItemvariantQueryParamFieldsMetadata,
+		UpdateCommerceItemvariantQueryParamFieldsItems,
+		UpdateCommerceItemvariantQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateCommerceItemvariantQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

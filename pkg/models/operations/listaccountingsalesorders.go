@@ -53,6 +53,48 @@ const (
 func (e ListAccountingSalesordersQueryParamFields) ToPointer() *ListAccountingSalesordersQueryParamFields {
 	return &e
 }
+
+// ListAccountingSalesordersQueryParamFieldsValues returns every known ListAccountingSalesordersQueryParamFields value in schema order.
+func ListAccountingSalesordersQueryParamFieldsValues() []ListAccountingSalesordersQueryParamFields {
+	return []ListAccountingSalesordersQueryParamFields{
+		ListAccountingSalesordersQueryParamFieldsID,
+		ListAccountingSalesordersQueryParamFieldsCreatedAt,
+		ListAccountingSalesordersQueryParamFieldsUpdatedAt,
+		ListAccountingSalesordersQueryParamFieldsPostedAt,
+		ListAccountingSalesordersQueryParamFieldsContactID,
+		ListAccountingSalesordersQueryParamFieldsAccountID,
+		ListAccountingSalesordersQueryParamFieldsCurrency,
+		ListAccountingSalesordersQueryParamFieldsTotalAmount,
+		ListAccountingSalesordersQueryParamFieldsShippingAddress,
+		ListAccountingSalesordersQueryParamFieldsBillingAddress,
+		ListAccountingSalesordersQueryParamFieldsStatus,
+		ListAccountingSalesordersQueryParamFieldsLineitems,
+		ListAccountingSalesordersQueryParamFieldsSalesChannel,
+		ListAccountingSalesordersQueryParamFieldsOrganizationID,
+		ListAccountingSalesordersQueryParamFieldsFees,
+		ListAccountingSalesordersQueryParamFieldsCategoryIds,
+		ListAccountingSalesordersQueryParamFieldsMetadata,
+		ListAccountingSalesordersQueryParamFieldsOrderNumber,
+		ListAccountingSalesordersQueryParamFieldsLocationID,
+		ListAccountingSalesordersQueryParamFieldsEmployeeUserID,
+		ListAccountingSalesordersQueryParamFieldsDeviceID,
+		ListAccountingSalesordersQueryParamFieldsFulfillmentType,
+		ListAccountingSalesordersQueryParamFieldsGuestCount,
+		ListAccountingSalesordersQueryParamFieldsSubtotalAmount,
+		ListAccountingSalesordersQueryParamFieldsTaxAmount,
+		ListAccountingSalesordersQueryParamFieldsDiscountAmount,
+		ListAccountingSalesordersQueryParamFieldsTipAmount,
+		ListAccountingSalesordersQueryParamFieldsServiceChargeAmount,
+		ListAccountingSalesordersQueryParamFieldsRefundedAmount,
+		ListAccountingSalesordersQueryParamFieldsClosedAt,
+		ListAccountingSalesordersQueryParamFieldsSubscriptionID,
+		ListAccountingSalesordersQueryParamFieldsPayments,
+		ListAccountingSalesordersQueryParamFieldsTableID,
+		ListAccountingSalesordersQueryParamFieldsPaidAmount,
+		ListAccountingSalesordersQueryParamFieldsBalanceAmount,
+		ListAccountingSalesordersQueryParamFieldsRaw,
+	}
+}
 func (e *ListAccountingSalesordersQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

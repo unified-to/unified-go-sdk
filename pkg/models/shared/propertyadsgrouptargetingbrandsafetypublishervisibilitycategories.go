@@ -14,6 +14,15 @@ func (e PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategories) ToPoi
 	return &e
 }
 
+// PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategoriesValues returns every known PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategories value in schema order.
+func PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategoriesValues() []PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategories {
+	return []PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategories{
+		PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategoriesLimited,
+		PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategoriesStandard,
+		PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategoriesExpanded,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategories) IsExact() bool {
 	if e != nil {

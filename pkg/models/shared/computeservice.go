@@ -23,6 +23,18 @@ func (e ComputeServiceStatus) ToPointer() *ComputeServiceStatus {
 	return &e
 }
 
+// ComputeServiceStatusValues returns every known ComputeServiceStatus value in schema order.
+func ComputeServiceStatusValues() []ComputeServiceStatus {
+	return []ComputeServiceStatus{
+		ComputeServiceStatusCreating,
+		ComputeServiceStatusDeploying,
+		ComputeServiceStatusLive,
+		ComputeServiceStatusSuspended,
+		ComputeServiceStatusFailed,
+		ComputeServiceStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ComputeServiceStatus) IsExact() bool {
 	if e != nil {
@@ -48,6 +60,18 @@ const (
 
 func (e ComputeServiceType) ToPointer() *ComputeServiceType {
 	return &e
+}
+
+// ComputeServiceTypeValues returns every known ComputeServiceType value in schema order.
+func ComputeServiceTypeValues() []ComputeServiceType {
+	return []ComputeServiceType{
+		ComputeServiceTypeWeb,
+		ComputeServiceTypeWorker,
+		ComputeServiceTypeCron,
+		ComputeServiceTypeStatic,
+		ComputeServiceTypePrivate,
+		ComputeServiceTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

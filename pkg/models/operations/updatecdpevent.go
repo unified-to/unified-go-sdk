@@ -28,6 +28,23 @@ const (
 func (e UpdateCdpEventQueryParamFields) ToPointer() *UpdateCdpEventQueryParamFields {
 	return &e
 }
+
+// UpdateCdpEventQueryParamFieldsValues returns every known UpdateCdpEventQueryParamFields value in schema order.
+func UpdateCdpEventQueryParamFieldsValues() []UpdateCdpEventQueryParamFields {
+	return []UpdateCdpEventQueryParamFields{
+		UpdateCdpEventQueryParamFieldsID,
+		UpdateCdpEventQueryParamFieldsCreatedAt,
+		UpdateCdpEventQueryParamFieldsName,
+		UpdateCdpEventQueryParamFieldsType,
+		UpdateCdpEventQueryParamFieldsOccurredAt,
+		UpdateCdpEventQueryParamFieldsProfileID,
+		UpdateCdpEventQueryParamFieldsIdentifiers,
+		UpdateCdpEventQueryParamFieldsMetadata,
+		UpdateCdpEventQueryParamFieldsSource,
+		UpdateCdpEventQueryParamFieldsSourceID,
+		UpdateCdpEventQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateCdpEventQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

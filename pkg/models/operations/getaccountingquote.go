@@ -51,6 +51,46 @@ const (
 func (e GetAccountingQuoteQueryParamFields) ToPointer() *GetAccountingQuoteQueryParamFields {
 	return &e
 }
+
+// GetAccountingQuoteQueryParamFieldsValues returns every known GetAccountingQuoteQueryParamFields value in schema order.
+func GetAccountingQuoteQueryParamFieldsValues() []GetAccountingQuoteQueryParamFields {
+	return []GetAccountingQuoteQueryParamFields{
+		GetAccountingQuoteQueryParamFieldsID,
+		GetAccountingQuoteQueryParamFieldsCreatedAt,
+		GetAccountingQuoteQueryParamFieldsUpdatedAt,
+		GetAccountingQuoteQueryParamFieldsQuoteNumber,
+		GetAccountingQuoteQueryParamFieldsReference,
+		GetAccountingQuoteQueryParamFieldsTitle,
+		GetAccountingQuoteQueryParamFieldsSummary,
+		GetAccountingQuoteQueryParamFieldsPaymentTerms,
+		GetAccountingQuoteQueryParamFieldsCustomerMessage,
+		GetAccountingQuoteQueryParamFieldsMemo,
+		GetAccountingQuoteQueryParamFieldsContactID,
+		GetAccountingQuoteQueryParamFieldsContacts,
+		GetAccountingQuoteQueryParamFieldsIssuedAt,
+		GetAccountingQuoteQueryParamFieldsExpiresAt,
+		GetAccountingQuoteQueryParamFieldsSentAt,
+		GetAccountingQuoteQueryParamFieldsAcceptedAt,
+		GetAccountingQuoteQueryParamFieldsDeclinedAt,
+		GetAccountingQuoteQueryParamFieldsStatus,
+		GetAccountingQuoteQueryParamFieldsCurrency,
+		GetAccountingQuoteQueryParamFieldsCurrencyRate,
+		GetAccountingQuoteQueryParamFieldsSubTotalAmount,
+		GetAccountingQuoteQueryParamFieldsTaxAmount,
+		GetAccountingQuoteQueryParamFieldsDiscountAmount,
+		GetAccountingQuoteQueryParamFieldsTotalAmount,
+		GetAccountingQuoteQueryParamFieldsTaxMode,
+		GetAccountingQuoteQueryParamFieldsLineitems,
+		GetAccountingQuoteQueryParamFieldsInvoiceID,
+		GetAccountingQuoteQueryParamFieldsProjectID,
+		GetAccountingQuoteQueryParamFieldsGroupID,
+		GetAccountingQuoteQueryParamFieldsCategoryIds,
+		GetAccountingQuoteQueryParamFieldsURL,
+		GetAccountingQuoteQueryParamFieldsOrganizationID,
+		GetAccountingQuoteQueryParamFieldsMetadata,
+		GetAccountingQuoteQueryParamFieldsRaw,
+	}
+}
 func (e *GetAccountingQuoteQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

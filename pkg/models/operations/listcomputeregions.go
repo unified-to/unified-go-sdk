@@ -26,6 +26,21 @@ const (
 func (e ListComputeRegionsQueryParamFields) ToPointer() *ListComputeRegionsQueryParamFields {
 	return &e
 }
+
+// ListComputeRegionsQueryParamFieldsValues returns every known ListComputeRegionsQueryParamFields value in schema order.
+func ListComputeRegionsQueryParamFieldsValues() []ListComputeRegionsQueryParamFields {
+	return []ListComputeRegionsQueryParamFields{
+		ListComputeRegionsQueryParamFieldsID,
+		ListComputeRegionsQueryParamFieldsCreatedAt,
+		ListComputeRegionsQueryParamFieldsUpdatedAt,
+		ListComputeRegionsQueryParamFieldsName,
+		ListComputeRegionsQueryParamFieldsLocation,
+		ListComputeRegionsQueryParamFieldsCountry,
+		ListComputeRegionsQueryParamFieldsGpuModels,
+		ListComputeRegionsQueryParamFieldsMetadata,
+		ListComputeRegionsQueryParamFieldsRaw,
+	}
+}
 func (e *ListComputeRegionsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

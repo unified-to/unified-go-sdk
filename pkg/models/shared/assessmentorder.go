@@ -21,6 +21,17 @@ func (e ProfileGender) ToPointer() *ProfileGender {
 	return &e
 }
 
+// ProfileGenderValues returns every known ProfileGender value in schema order.
+func ProfileGenderValues() []ProfileGender {
+	return []ProfileGender{
+		ProfileGenderMale,
+		ProfileGenderFemale,
+		ProfileGenderIntersex,
+		ProfileGenderTrans,
+		ProfileGenderNonBinary,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ProfileGender) IsExact() bool {
 	if e != nil {
@@ -44,6 +55,17 @@ const (
 
 func (e ResponseStatus) ToPointer() *ResponseStatus {
 	return &e
+}
+
+// ResponseStatusValues returns every known ResponseStatus value in schema order.
+func ResponseStatusValues() []ResponseStatus {
+	return []ResponseStatus{
+		ResponseStatusOpen,
+		ResponseStatusInProgress,
+		ResponseStatusCompleted,
+		ResponseStatusFailed,
+		ResponseStatusRejected,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -70,6 +92,17 @@ const (
 
 func (e AssessmentOrderStatus) ToPointer() *AssessmentOrderStatus {
 	return &e
+}
+
+// AssessmentOrderStatusValues returns every known AssessmentOrderStatus value in schema order.
+func AssessmentOrderStatusValues() []AssessmentOrderStatus {
+	return []AssessmentOrderStatus{
+		AssessmentOrderStatusOpen,
+		AssessmentOrderStatusInProgress,
+		AssessmentOrderStatusCompleted,
+		AssessmentOrderStatusFailed,
+		AssessmentOrderStatusRejected,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

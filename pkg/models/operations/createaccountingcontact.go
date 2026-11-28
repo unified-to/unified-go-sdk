@@ -47,6 +47,42 @@ const (
 func (e CreateAccountingContactQueryParamFields) ToPointer() *CreateAccountingContactQueryParamFields {
 	return &e
 }
+
+// CreateAccountingContactQueryParamFieldsValues returns every known CreateAccountingContactQueryParamFields value in schema order.
+func CreateAccountingContactQueryParamFieldsValues() []CreateAccountingContactQueryParamFields {
+	return []CreateAccountingContactQueryParamFields{
+		CreateAccountingContactQueryParamFieldsID,
+		CreateAccountingContactQueryParamFieldsCreatedAt,
+		CreateAccountingContactQueryParamFieldsUpdatedAt,
+		CreateAccountingContactQueryParamFieldsName,
+		CreateAccountingContactQueryParamFieldsFirstName,
+		CreateAccountingContactQueryParamFieldsLastName,
+		CreateAccountingContactQueryParamFieldsEmails,
+		CreateAccountingContactQueryParamFieldsTelephones,
+		CreateAccountingContactQueryParamFieldsCurrency,
+		CreateAccountingContactQueryParamFieldsBillingAddress,
+		CreateAccountingContactQueryParamFieldsShippingAddress,
+		CreateAccountingContactQueryParamFieldsIsActive,
+		CreateAccountingContactQueryParamFieldsTaxExemption,
+		CreateAccountingContactQueryParamFieldsTaxNumber,
+		CreateAccountingContactQueryParamFieldsIsCustomer,
+		CreateAccountingContactQueryParamFieldsIsSupplier,
+		CreateAccountingContactQueryParamFieldsPortalURL,
+		CreateAccountingContactQueryParamFieldsPaymentMethods,
+		CreateAccountingContactQueryParamFieldsCompanyName,
+		CreateAccountingContactQueryParamFieldsIdentification,
+		CreateAccountingContactQueryParamFieldsAssociatedContacts,
+		CreateAccountingContactQueryParamFieldsOrganizationID,
+		CreateAccountingContactQueryParamFieldsPaymentTerms,
+		CreateAccountingContactQueryParamFieldsPaymenttermID,
+		CreateAccountingContactQueryParamFieldsBalanceAmount,
+		CreateAccountingContactQueryParamFieldsWebsite,
+		CreateAccountingContactQueryParamFieldsNotes,
+		CreateAccountingContactQueryParamFieldsMetadata,
+		CreateAccountingContactQueryParamFieldsRaw,
+		CreateAccountingContactQueryParamFieldsUnifiedPersonIds,
+	}
+}
 func (e *CreateAccountingContactQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

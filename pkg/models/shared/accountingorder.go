@@ -28,6 +28,24 @@ func (e AccountingOrderStatus) ToPointer() *AccountingOrderStatus {
 	return &e
 }
 
+// AccountingOrderStatusValues returns every known AccountingOrderStatus value in schema order.
+func AccountingOrderStatusValues() []AccountingOrderStatus {
+	return []AccountingOrderStatus{
+		AccountingOrderStatusDraft,
+		AccountingOrderStatusVoided,
+		AccountingOrderStatusAuthorized,
+		AccountingOrderStatusPaid,
+		AccountingOrderStatusPartiallyPaid,
+		AccountingOrderStatusPartiallyRefunded,
+		AccountingOrderStatusRefunded,
+		AccountingOrderStatusSubmitted,
+		AccountingOrderStatusDeleted,
+		AccountingOrderStatusOpen,
+		AccountingOrderStatusCompleted,
+		AccountingOrderStatusCanceled,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingOrderStatus) IsExact() bool {
 	if e != nil {
@@ -48,6 +66,14 @@ const (
 
 func (e AccountingOrderType) ToPointer() *AccountingOrderType {
 	return &e
+}
+
+// AccountingOrderTypeValues returns every known AccountingOrderType value in schema order.
+func AccountingOrderTypeValues() []AccountingOrderType {
+	return []AccountingOrderType{
+		AccountingOrderTypeSales,
+		AccountingOrderTypePurchase,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

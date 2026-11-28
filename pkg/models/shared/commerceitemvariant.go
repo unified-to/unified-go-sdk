@@ -18,6 +18,14 @@ func (e SizeUnit) ToPointer() *SizeUnit {
 	return &e
 }
 
+// SizeUnitValues returns every known SizeUnit value in schema order.
+func SizeUnitValues() []SizeUnit {
+	return []SizeUnit{
+		SizeUnitCm,
+		SizeUnitInch,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *SizeUnit) IsExact() bool {
 	if e != nil {
@@ -40,6 +48,16 @@ const (
 
 func (e CommerceItemvariantWeightUnit) ToPointer() *CommerceItemvariantWeightUnit {
 	return &e
+}
+
+// CommerceItemvariantWeightUnitValues returns every known CommerceItemvariantWeightUnit value in schema order.
+func CommerceItemvariantWeightUnitValues() []CommerceItemvariantWeightUnit {
+	return []CommerceItemvariantWeightUnit{
+		CommerceItemvariantWeightUnitG,
+		CommerceItemvariantWeightUnitKg,
+		CommerceItemvariantWeightUnitOz,
+		CommerceItemvariantWeightUnitLb,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

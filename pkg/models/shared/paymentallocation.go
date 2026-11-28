@@ -23,6 +23,18 @@ func (e PaymentAllocationObjectType) ToPointer() *PaymentAllocationObjectType {
 	return &e
 }
 
+// PaymentAllocationObjectTypeValues returns every known PaymentAllocationObjectType value in schema order.
+func PaymentAllocationObjectTypeValues() []PaymentAllocationObjectType {
+	return []PaymentAllocationObjectType{
+		PaymentAllocationObjectTypeInvoice,
+		PaymentAllocationObjectTypeBill,
+		PaymentAllocationObjectTypeCreditmemo,
+		PaymentAllocationObjectTypeVendorcredit,
+		PaymentAllocationObjectTypeSalesorder,
+		PaymentAllocationObjectTypePurchaseorder,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PaymentAllocationObjectType) IsExact() bool {
 	if e != nil {

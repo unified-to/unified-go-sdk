@@ -49,6 +49,44 @@ const (
 func (e PatchAdsCreativeQueryParamFields) ToPointer() *PatchAdsCreativeQueryParamFields {
 	return &e
 }
+
+// PatchAdsCreativeQueryParamFieldsValues returns every known PatchAdsCreativeQueryParamFields value in schema order.
+func PatchAdsCreativeQueryParamFieldsValues() []PatchAdsCreativeQueryParamFields {
+	return []PatchAdsCreativeQueryParamFields{
+		PatchAdsCreativeQueryParamFieldsID,
+		PatchAdsCreativeQueryParamFieldsCreatedAt,
+		PatchAdsCreativeQueryParamFieldsUpdatedAt,
+		PatchAdsCreativeQueryParamFieldsName,
+		PatchAdsCreativeQueryParamFieldsCampaignID,
+		PatchAdsCreativeQueryParamFieldsGroupID,
+		PatchAdsCreativeQueryParamFieldsItemID,
+		PatchAdsCreativeQueryParamFieldsOrganizationID,
+		PatchAdsCreativeQueryParamFieldsStatus,
+		PatchAdsCreativeQueryParamFieldsCreativeType,
+		PatchAdsCreativeQueryParamFieldsHostingSource,
+		PatchAdsCreativeQueryParamFieldsWidth,
+		PatchAdsCreativeQueryParamFieldsHeight,
+		PatchAdsCreativeQueryParamFieldsAssetUrls,
+		PatchAdsCreativeQueryParamFieldsCards,
+		PatchAdsCreativeQueryParamFieldsLinkURL,
+		PatchAdsCreativeQueryParamFieldsURLTags,
+		PatchAdsCreativeQueryParamFieldsBody,
+		PatchAdsCreativeQueryParamFieldsTitle,
+		PatchAdsCreativeQueryParamFieldsCta,
+		PatchAdsCreativeQueryParamFieldsThirdPartyTag,
+		PatchAdsCreativeQueryParamFieldsVastTagURL,
+		PatchAdsCreativeQueryParamFieldsExternalCreativeReference,
+		PatchAdsCreativeQueryParamFieldsExternalPlacementReference,
+		PatchAdsCreativeQueryParamFieldsExternalAdReference,
+		PatchAdsCreativeQueryParamFieldsPromoted,
+		PatchAdsCreativeQueryParamFieldsPath1,
+		PatchAdsCreativeQueryParamFieldsPath2,
+		PatchAdsCreativeQueryParamFieldsData,
+		PatchAdsCreativeQueryParamFieldsLabels,
+		PatchAdsCreativeQueryParamFieldsMetadata,
+		PatchAdsCreativeQueryParamFieldsRaw,
+	}
+}
 func (e *PatchAdsCreativeQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

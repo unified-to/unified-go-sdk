@@ -21,6 +21,16 @@ func (e AccountingTransactionStatus) ToPointer() *AccountingTransactionStatus {
 	return &e
 }
 
+// AccountingTransactionStatusValues returns every known AccountingTransactionStatus value in schema order.
+func AccountingTransactionStatusValues() []AccountingTransactionStatus {
+	return []AccountingTransactionStatus{
+		AccountingTransactionStatusPending,
+		AccountingTransactionStatusPosted,
+		AccountingTransactionStatusVoid,
+		AccountingTransactionStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingTransactionStatus) IsExact() bool {
 	if e != nil {

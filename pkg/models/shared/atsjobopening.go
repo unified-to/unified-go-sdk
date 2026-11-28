@@ -18,6 +18,14 @@ func (e AtsJobOpeningStatus) ToPointer() *AtsJobOpeningStatus {
 	return &e
 }
 
+// AtsJobOpeningStatusValues returns every known AtsJobOpeningStatus value in schema order.
+func AtsJobOpeningStatusValues() []AtsJobOpeningStatus {
+	return []AtsJobOpeningStatus{
+		AtsJobOpeningStatusOpen,
+		AtsJobOpeningStatusClosed,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AtsJobOpeningStatus) IsExact() bool {
 	if e != nil {

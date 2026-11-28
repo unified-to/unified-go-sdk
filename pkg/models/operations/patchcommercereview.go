@@ -42,6 +42,37 @@ const (
 func (e PatchCommerceReviewQueryParamFields) ToPointer() *PatchCommerceReviewQueryParamFields {
 	return &e
 }
+
+// PatchCommerceReviewQueryParamFieldsValues returns every known PatchCommerceReviewQueryParamFields value in schema order.
+func PatchCommerceReviewQueryParamFieldsValues() []PatchCommerceReviewQueryParamFields {
+	return []PatchCommerceReviewQueryParamFields{
+		PatchCommerceReviewQueryParamFieldsID,
+		PatchCommerceReviewQueryParamFieldsCreatedAt,
+		PatchCommerceReviewQueryParamFieldsUpdatedAt,
+		PatchCommerceReviewQueryParamFieldsItemID,
+		PatchCommerceReviewQueryParamFieldsItemVariantID,
+		PatchCommerceReviewQueryParamFieldsLocationID,
+		PatchCommerceReviewQueryParamFieldsRating,
+		PatchCommerceReviewQueryParamFieldsTitle,
+		PatchCommerceReviewQueryParamFieldsContent,
+		PatchCommerceReviewQueryParamFieldsAuthorName,
+		PatchCommerceReviewQueryParamFieldsAuthorEmail,
+		PatchCommerceReviewQueryParamFieldsAuthorAvatarURL,
+		PatchCommerceReviewQueryParamFieldsAuthorLocation,
+		PatchCommerceReviewQueryParamFieldsVerifiedPurchase,
+		PatchCommerceReviewQueryParamFieldsHelpfulVotes,
+		PatchCommerceReviewQueryParamFieldsUnhelpfulVotes,
+		PatchCommerceReviewQueryParamFieldsMedia,
+		PatchCommerceReviewQueryParamFieldsStatus,
+		PatchCommerceReviewQueryParamFieldsIsVerified,
+		PatchCommerceReviewQueryParamFieldsIsFeatured,
+		PatchCommerceReviewQueryParamFieldsIsPublic,
+		PatchCommerceReviewQueryParamFieldsComments,
+		PatchCommerceReviewQueryParamFieldsMetadata,
+		PatchCommerceReviewQueryParamFieldsURL,
+		PatchCommerceReviewQueryParamFieldsRaw,
+	}
+}
 func (e *PatchCommerceReviewQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

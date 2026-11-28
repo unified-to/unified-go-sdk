@@ -21,6 +21,16 @@ func (e ComputeDomainStatus) ToPointer() *ComputeDomainStatus {
 	return &e
 }
 
+// ComputeDomainStatusValues returns every known ComputeDomainStatus value in schema order.
+func ComputeDomainStatusValues() []ComputeDomainStatus {
+	return []ComputeDomainStatus{
+		ComputeDomainStatusPending,
+		ComputeDomainStatusVerified,
+		ComputeDomainStatusFailed,
+		ComputeDomainStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ComputeDomainStatus) IsExact() bool {
 	if e != nil {

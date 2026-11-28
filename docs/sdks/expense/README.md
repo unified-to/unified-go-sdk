@@ -48,13 +48,13 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://avaricious-larva.biz"),
-                    ID: unifiedgosdk.Pointer("aae567bb-4651-46a9-befd-90d3ee90897a"),
+                    ID: unifiedgosdk.Pointer("55038a04-fde3-4f65-b8f8-2855f1a6ad42"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("receipt-9696.pdf"),
                 },
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://precious-comparison.net/"),
-                    ID: unifiedgosdk.Pointer("478b63f8-6e7d-4653-9139-4896bdc5e58d"),
+                    ID: unifiedgosdk.Pointer("2b13f154-3d75-4405-bccd-eaf618b33444"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("receipt-9696-1.pdf"),
                 },
@@ -63,10 +63,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-06-11T03:39:37.305Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
             ExternalNumber: unifiedgosdk.Pointer("EXP-38303"),
-            ID: unifiedgosdk.Pointer("aa33e4e0-1bbc-4b2e-a6df-2efb3ec17878"),
+            ID: unifiedgosdk.Pointer("04bbc2ab-59b9-4bfc-ab7f-5c597957ee46"),
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("92d5a6d8-37d1-4a10-9550-4a5a31df1645"),
+                    ID: unifiedgosdk.Pointer("1da5890b-1655-4864-a413-5e91408ebfbf"),
                     ItemName: unifiedgosdk.Pointer("Client dinner"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](364.74),
@@ -74,7 +74,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("efa96262-a202-456a-81a4-ab5c4a6ddb5d"),
+                    ID: unifiedgosdk.Pointer("f4d14458-5c89-4706-ae44-db2852572a05"),
                     ItemName: unifiedgosdk.Pointer("Client dinner"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](258.35),
@@ -82,7 +82,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("8117f94d-1246-44be-a111-2da737b73cf0"),
+                    ID: unifiedgosdk.Pointer("7cb674f7-d307-4a1a-8e37-d70228b24c5a"),
                     ItemName: unifiedgosdk.Pointer("Conference ticket"),
                     Notes: unifiedgosdk.Pointer("Sint spiculum carcer ago charisma."),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -91,7 +91,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("f4a7116e-86c0-4768-a1aa-8209a732eafb"),
+                    ID: unifiedgosdk.Pointer("b3c79058-04ae-42d7-a181-c2688098fb8e"),
                     ItemName: unifiedgosdk.Pointer("Hotel"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](157.04),
@@ -99,7 +99,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("f61a01f9-16a8-413f-95f3-4666a23fa0dd"),
+                    ID: unifiedgosdk.Pointer("a82cac61-00eb-4208-9a89-1f8cf00636e8"),
                     ItemName: unifiedgosdk.Pointer("Hotel"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](164.02),
@@ -115,7 +115,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](972.29),
             Type: shared.AccountingExpenseTypeCompany.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-09-03T15:05:18.801Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-09-03T15:56:27.561Z"),
         },
         ConnectionID: "<id>",
     })
@@ -178,7 +178,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-11-08T00:41:42.356Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
             Description: unifiedgosdk.Pointer("Nihil sono villa voluptate cohibeo quas volo succurro."),
-            ID: unifiedgosdk.Pointer("4efb6add-1e94-4d16-8540-101fc2177b5f"),
+            ID: unifiedgosdk.Pointer("2eb58e14-d97f-4ad2-80b7-12e2d50f7f0a"),
             IncurredAt: types.MustNewTimeFromString("2020-11-08T00:41:42.356Z"),
             IsBilled: unifiedgosdk.Pointer(false),
             Metadata: []shared.LegalMetadata{},
@@ -186,7 +186,7 @@ func main() {
             Quantity: unifiedgosdk.Pointer[float64](3.0),
             TotalAmount: unifiedgosdk.Pointer[float64](300.0),
             Type: shared.LegalExpenseTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-21T01:52:52.384Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-21T15:27:29.359Z"),
         },
         ConnectionID: "<id>",
     })
@@ -466,13 +466,13 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://avaricious-larva.biz"),
-                    ID: unifiedgosdk.Pointer("8db790d1-6549-41a3-8027-86ca477ed1ea"),
+                    ID: unifiedgosdk.Pointer("f72003ff-78ea-4ba1-bdb5-9daaf272418a"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("receipt-9696.pdf"),
                 },
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://precious-comparison.net/"),
-                    ID: unifiedgosdk.Pointer("a8233b4f-ce05-4f9b-9f4c-d36f7531d4d9"),
+                    ID: unifiedgosdk.Pointer("07541a79-6e6b-49ec-b064-d8028f7f48e6"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("receipt-9696-1.pdf"),
                 },
@@ -481,10 +481,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-06-11T03:39:37.305Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
             ExternalNumber: unifiedgosdk.Pointer("EXP-38303"),
-            ID: unifiedgosdk.Pointer("1dc07e6a-001d-4741-a966-ca0d3e14cbec"),
+            ID: unifiedgosdk.Pointer("a4c4815d-c6fb-4d3b-927f-7432fd7bb725"),
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("cef9117b-0a99-4232-a338-ab19cabc46fd"),
+                    ID: unifiedgosdk.Pointer("b64c8944-91b0-4787-9717-7a803851446c"),
                     ItemName: unifiedgosdk.Pointer("Client dinner"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](364.74),
@@ -492,7 +492,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("b0248872-f10c-4b4a-933b-94e5936726b6"),
+                    ID: unifiedgosdk.Pointer("28b5c01d-2d1f-4f9a-81dd-91cf7a077f20"),
                     ItemName: unifiedgosdk.Pointer("Client dinner"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](258.35),
@@ -500,7 +500,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("dae87d72-2b7e-4fdb-9256-3e4b85df289a"),
+                    ID: unifiedgosdk.Pointer("838ccf27-0a3e-4dc9-8112-6b89fa28642e"),
                     ItemName: unifiedgosdk.Pointer("Conference ticket"),
                     Notes: unifiedgosdk.Pointer("Sint spiculum carcer ago charisma."),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -509,7 +509,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("f062d7ae-1fe0-4136-94c0-710cc14d56cc"),
+                    ID: unifiedgosdk.Pointer("fb91833b-bb52-494a-88f4-17ab2bcaa424"),
                     ItemName: unifiedgosdk.Pointer("Hotel"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](157.04),
@@ -517,7 +517,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("df549aca-b118-4196-9ed5-b8083323f745"),
+                    ID: unifiedgosdk.Pointer("574c2723-d479-464c-a544-315fee231441"),
                     ItemName: unifiedgosdk.Pointer("Hotel"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](164.02),
@@ -533,7 +533,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](972.29),
             Type: shared.AccountingExpenseTypeCompany.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-09-03T15:05:18.802Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-09-03T15:56:27.561Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -597,7 +597,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-11-08T00:41:42.356Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
             Description: unifiedgosdk.Pointer("Nihil sono villa voluptate cohibeo quas volo succurro."),
-            ID: unifiedgosdk.Pointer("94ad75f6-af50-4d13-b430-f07500eda8f9"),
+            ID: unifiedgosdk.Pointer("9de4d041-46a2-49a1-9d14-63d586d355e4"),
             IncurredAt: types.MustNewTimeFromString("2020-11-08T00:41:42.356Z"),
             IsBilled: unifiedgosdk.Pointer(false),
             Metadata: []shared.LegalMetadata{},
@@ -605,7 +605,7 @@ func main() {
             Quantity: unifiedgosdk.Pointer[float64](3.0),
             TotalAmount: unifiedgosdk.Pointer[float64](300.0),
             Type: shared.LegalExpenseTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-21T01:52:52.392Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-21T15:27:29.363Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -778,13 +778,13 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://avaricious-larva.biz"),
-                    ID: unifiedgosdk.Pointer("8db790d1-6549-41a3-8027-86ca477ed1ea"),
+                    ID: unifiedgosdk.Pointer("f72003ff-78ea-4ba1-bdb5-9daaf272418a"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("receipt-9696.pdf"),
                 },
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://precious-comparison.net/"),
-                    ID: unifiedgosdk.Pointer("a8233b4f-ce05-4f9b-9f4c-d36f7531d4d9"),
+                    ID: unifiedgosdk.Pointer("07541a79-6e6b-49ec-b064-d8028f7f48e6"),
                     MimeType: unifiedgosdk.Pointer("application/pdf"),
                     Name: unifiedgosdk.Pointer("receipt-9696-1.pdf"),
                 },
@@ -793,10 +793,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-06-11T03:39:37.305Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
             ExternalNumber: unifiedgosdk.Pointer("EXP-38303"),
-            ID: unifiedgosdk.Pointer("1dc07e6a-001d-4741-a966-ca0d3e14cbec"),
+            ID: unifiedgosdk.Pointer("a4c4815d-c6fb-4d3b-927f-7432fd7bb725"),
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("cef9117b-0a99-4232-a338-ab19cabc46fd"),
+                    ID: unifiedgosdk.Pointer("b64c8944-91b0-4787-9717-7a803851446c"),
                     ItemName: unifiedgosdk.Pointer("Client dinner"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](364.74),
@@ -804,7 +804,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("b0248872-f10c-4b4a-933b-94e5936726b6"),
+                    ID: unifiedgosdk.Pointer("28b5c01d-2d1f-4f9a-81dd-91cf7a077f20"),
                     ItemName: unifiedgosdk.Pointer("Client dinner"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](258.35),
@@ -812,7 +812,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("dae87d72-2b7e-4fdb-9256-3e4b85df289a"),
+                    ID: unifiedgosdk.Pointer("838ccf27-0a3e-4dc9-8112-6b89fa28642e"),
                     ItemName: unifiedgosdk.Pointer("Conference ticket"),
                     Notes: unifiedgosdk.Pointer("Sint spiculum carcer ago charisma."),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -821,7 +821,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("f062d7ae-1fe0-4136-94c0-710cc14d56cc"),
+                    ID: unifiedgosdk.Pointer("fb91833b-bb52-494a-88f4-17ab2bcaa424"),
                     ItemName: unifiedgosdk.Pointer("Hotel"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](157.04),
@@ -829,7 +829,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("df549aca-b118-4196-9ed5-b8083323f745"),
+                    ID: unifiedgosdk.Pointer("574c2723-d479-464c-a544-315fee231441"),
                     ItemName: unifiedgosdk.Pointer("Hotel"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](164.02),
@@ -845,7 +845,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](972.29),
             Type: shared.AccountingExpenseTypeCompany.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2020-09-03T15:05:18.802Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-09-03T15:56:27.561Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -909,7 +909,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-11-08T00:41:42.356Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
             Description: unifiedgosdk.Pointer("Nihil sono villa voluptate cohibeo quas volo succurro."),
-            ID: unifiedgosdk.Pointer("94ad75f6-af50-4d13-b430-f07500eda8f9"),
+            ID: unifiedgosdk.Pointer("9de4d041-46a2-49a1-9d14-63d586d355e4"),
             IncurredAt: types.MustNewTimeFromString("2020-11-08T00:41:42.356Z"),
             IsBilled: unifiedgosdk.Pointer(false),
             Metadata: []shared.LegalMetadata{},
@@ -917,7 +917,7 @@ func main() {
             Quantity: unifiedgosdk.Pointer[float64](3.0),
             TotalAmount: unifiedgosdk.Pointer[float64](300.0),
             Type: shared.LegalExpenseTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-21T01:52:52.392Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-21T15:27:29.363Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

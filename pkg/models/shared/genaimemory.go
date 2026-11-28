@@ -19,6 +19,14 @@ func (e GenaiMemoryType) ToPointer() *GenaiMemoryType {
 	return &e
 }
 
+// GenaiMemoryTypeValues returns every known GenaiMemoryType value in schema order.
+func GenaiMemoryTypeValues() []GenaiMemoryType {
+	return []GenaiMemoryType{
+		GenaiMemoryTypeFolder,
+		GenaiMemoryTypeMemory,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *GenaiMemoryType) IsExact() bool {
 	if e != nil {

@@ -27,6 +27,23 @@ func (e CreativeType) ToPointer() *CreativeType {
 	return &e
 }
 
+// CreativeTypeValues returns every known CreativeType value in schema order.
+func CreativeTypeValues() []CreativeType {
+	return []CreativeType{
+		CreativeTypeUnspecified,
+		CreativeTypeStandard,
+		CreativeTypeExpandable,
+		CreativeTypeVideo,
+		CreativeTypeNative,
+		CreativeTypeAudio,
+		CreativeTypePublisherHosted,
+		CreativeTypeAssetBased,
+		CreativeTypeImage,
+		CreativeTypeDocument,
+		CreativeTypeShare,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CreativeType) IsExact() bool {
 	if e != nil {
@@ -51,6 +68,18 @@ const (
 
 func (e HostingSource) ToPointer() *HostingSource {
 	return &e
+}
+
+// HostingSourceValues returns every known HostingSource value in schema order.
+func HostingSourceValues() []HostingSource {
+	return []HostingSource{
+		HostingSourceUnspecified,
+		HostingSourceCm,
+		HostingSourceThirdParty,
+		HostingSourceHosted,
+		HostingSourceRichMedia,
+		HostingSourcePublisherHosted,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -79,6 +108,20 @@ const (
 
 func (e AdsCreativeStatus) ToPointer() *AdsCreativeStatus {
 	return &e
+}
+
+// AdsCreativeStatusValues returns every known AdsCreativeStatus value in schema order.
+func AdsCreativeStatusValues() []AdsCreativeStatus {
+	return []AdsCreativeStatus{
+		AdsCreativeStatusUnspecified,
+		AdsCreativeStatusActive,
+		AdsCreativeStatusPaused,
+		AdsCreativeStatusArchived,
+		AdsCreativeStatusDraft,
+		AdsCreativeStatusScheduledForDeletion,
+		AdsCreativeStatusProcessing,
+		AdsCreativeStatusProcessingFailed,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

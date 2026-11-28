@@ -13,6 +13,14 @@ func (e ScimManagerType) ToPointer() *ScimManagerType {
 	return &e
 }
 
+// ScimManagerTypeValues returns every known ScimManagerType value in schema order.
+func ScimManagerTypeValues() []ScimManagerType {
+	return []ScimManagerType{
+		ScimManagerTypeDirect,
+		ScimManagerTypeIndirect,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ScimManagerType) IsExact() bool {
 	if e != nil {

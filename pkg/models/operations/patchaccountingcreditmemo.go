@@ -48,6 +48,43 @@ const (
 func (e PatchAccountingCreditmemoQueryParamFields) ToPointer() *PatchAccountingCreditmemoQueryParamFields {
 	return &e
 }
+
+// PatchAccountingCreditmemoQueryParamFieldsValues returns every known PatchAccountingCreditmemoQueryParamFields value in schema order.
+func PatchAccountingCreditmemoQueryParamFieldsValues() []PatchAccountingCreditmemoQueryParamFields {
+	return []PatchAccountingCreditmemoQueryParamFields{
+		PatchAccountingCreditmemoQueryParamFieldsID,
+		PatchAccountingCreditmemoQueryParamFieldsCreatedAt,
+		PatchAccountingCreditmemoQueryParamFieldsUpdatedAt,
+		PatchAccountingCreditmemoQueryParamFieldsDueAt,
+		PatchAccountingCreditmemoQueryParamFieldsPaidAt,
+		PatchAccountingCreditmemoQueryParamFieldsRefundedAt,
+		PatchAccountingCreditmemoQueryParamFieldsCancelledAt,
+		PatchAccountingCreditmemoQueryParamFieldsPostedAt,
+		PatchAccountingCreditmemoQueryParamFieldsTotalAmount,
+		PatchAccountingCreditmemoQueryParamFieldsPaidAmount,
+		PatchAccountingCreditmemoQueryParamFieldsRefundAmount,
+		PatchAccountingCreditmemoQueryParamFieldsTaxAmount,
+		PatchAccountingCreditmemoQueryParamFieldsDiscountAmount,
+		PatchAccountingCreditmemoQueryParamFieldsBalanceAmount,
+		PatchAccountingCreditmemoQueryParamFieldsCreditmemoNumber,
+		PatchAccountingCreditmemoQueryParamFieldsContactID,
+		PatchAccountingCreditmemoQueryParamFieldsInvoiceID,
+		PatchAccountingCreditmemoQueryParamFieldsCurrency,
+		PatchAccountingCreditmemoQueryParamFieldsNotes,
+		PatchAccountingCreditmemoQueryParamFieldsRefundReason,
+		PatchAccountingCreditmemoQueryParamFieldsLineitems,
+		PatchAccountingCreditmemoQueryParamFieldsStatus,
+		PatchAccountingCreditmemoQueryParamFieldsURL,
+		PatchAccountingCreditmemoQueryParamFieldsPaymentCollectionMethod,
+		PatchAccountingCreditmemoQueryParamFieldsAttachments,
+		PatchAccountingCreditmemoQueryParamFieldsSend,
+		PatchAccountingCreditmemoQueryParamFieldsOrganizationID,
+		PatchAccountingCreditmemoQueryParamFieldsApplyAmount,
+		PatchAccountingCreditmemoQueryParamFieldsApplications,
+		PatchAccountingCreditmemoQueryParamFieldsMetadata,
+		PatchAccountingCreditmemoQueryParamFieldsRaw,
+	}
+}
 func (e *PatchAccountingCreditmemoQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

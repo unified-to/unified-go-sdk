@@ -28,6 +28,23 @@ const (
 func (e UpdateHrisDocumentQueryParamFields) ToPointer() *UpdateHrisDocumentQueryParamFields {
 	return &e
 }
+
+// UpdateHrisDocumentQueryParamFieldsValues returns every known UpdateHrisDocumentQueryParamFields value in schema order.
+func UpdateHrisDocumentQueryParamFieldsValues() []UpdateHrisDocumentQueryParamFields {
+	return []UpdateHrisDocumentQueryParamFields{
+		UpdateHrisDocumentQueryParamFieldsID,
+		UpdateHrisDocumentQueryParamFieldsCreatedAt,
+		UpdateHrisDocumentQueryParamFieldsUpdatedAt,
+		UpdateHrisDocumentQueryParamFieldsDocumentURL,
+		UpdateHrisDocumentQueryParamFieldsDocumentData,
+		UpdateHrisDocumentQueryParamFieldsFilename,
+		UpdateHrisDocumentQueryParamFieldsType,
+		UpdateHrisDocumentQueryParamFieldsUserID,
+		UpdateHrisDocumentQueryParamFieldsCompanyID,
+		UpdateHrisDocumentQueryParamFieldsMetadata,
+		UpdateHrisDocumentQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateHrisDocumentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

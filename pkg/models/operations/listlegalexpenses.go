@@ -36,6 +36,31 @@ const (
 func (e ListLegalExpensesQueryParamFields) ToPointer() *ListLegalExpensesQueryParamFields {
 	return &e
 }
+
+// ListLegalExpensesQueryParamFieldsValues returns every known ListLegalExpensesQueryParamFields value in schema order.
+func ListLegalExpensesQueryParamFieldsValues() []ListLegalExpensesQueryParamFields {
+	return []ListLegalExpensesQueryParamFields{
+		ListLegalExpensesQueryParamFieldsID,
+		ListLegalExpensesQueryParamFieldsCreatedAt,
+		ListLegalExpensesQueryParamFieldsUpdatedAt,
+		ListLegalExpensesQueryParamFieldsMatterID,
+		ListLegalExpensesQueryParamFieldsUserID,
+		ListLegalExpensesQueryParamFieldsDescription,
+		ListLegalExpensesQueryParamFieldsIncurredAt,
+		ListLegalExpensesQueryParamFieldsQuantity,
+		ListLegalExpensesQueryParamFieldsPriceAmount,
+		ListLegalExpensesQueryParamFieldsTotalAmount,
+		ListLegalExpensesQueryParamFieldsCurrency,
+		ListLegalExpensesQueryParamFieldsType,
+		ListLegalExpensesQueryParamFieldsCategory,
+		ListLegalExpensesQueryParamFieldsIsBillable,
+		ListLegalExpensesQueryParamFieldsIsBilled,
+		ListLegalExpensesQueryParamFieldsInvoiceID,
+		ListLegalExpensesQueryParamFieldsExpenseCode,
+		ListLegalExpensesQueryParamFieldsMetadata,
+		ListLegalExpensesQueryParamFieldsRaw,
+	}
+}
 func (e *ListLegalExpensesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

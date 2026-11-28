@@ -34,6 +34,29 @@ const (
 func (e GetAccountingTaxrateQueryParamFields) ToPointer() *GetAccountingTaxrateQueryParamFields {
 	return &e
 }
+
+// GetAccountingTaxrateQueryParamFieldsValues returns every known GetAccountingTaxrateQueryParamFields value in schema order.
+func GetAccountingTaxrateQueryParamFieldsValues() []GetAccountingTaxrateQueryParamFields {
+	return []GetAccountingTaxrateQueryParamFields{
+		GetAccountingTaxrateQueryParamFieldsID,
+		GetAccountingTaxrateQueryParamFieldsCreatedAt,
+		GetAccountingTaxrateQueryParamFieldsUpdatedAt,
+		GetAccountingTaxrateQueryParamFieldsName,
+		GetAccountingTaxrateQueryParamFieldsDescription,
+		GetAccountingTaxrateQueryParamFieldsRate,
+		GetAccountingTaxrateQueryParamFieldsIsActive,
+		GetAccountingTaxrateQueryParamFieldsOrganizationID,
+		GetAccountingTaxrateQueryParamFieldsMetadata,
+		GetAccountingTaxrateQueryParamFieldsEffectiveRate,
+		GetAccountingTaxrateQueryParamFieldsTotalRate,
+		GetAccountingTaxrateQueryParamFieldsComponents,
+		GetAccountingTaxrateQueryParamFieldsType,
+		GetAccountingTaxrateQueryParamFieldsIsCompound,
+		GetAccountingTaxrateQueryParamFieldsCountry,
+		GetAccountingTaxrateQueryParamFieldsRegion,
+		GetAccountingTaxrateQueryParamFieldsRaw,
+	}
+}
 func (e *GetAccountingTaxrateQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

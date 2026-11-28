@@ -34,6 +34,29 @@ const (
 func (e PatchAccountingPaymenttermQueryParamFields) ToPointer() *PatchAccountingPaymenttermQueryParamFields {
 	return &e
 }
+
+// PatchAccountingPaymenttermQueryParamFieldsValues returns every known PatchAccountingPaymenttermQueryParamFields value in schema order.
+func PatchAccountingPaymenttermQueryParamFieldsValues() []PatchAccountingPaymenttermQueryParamFields {
+	return []PatchAccountingPaymenttermQueryParamFields{
+		PatchAccountingPaymenttermQueryParamFieldsID,
+		PatchAccountingPaymenttermQueryParamFieldsCreatedAt,
+		PatchAccountingPaymenttermQueryParamFieldsUpdatedAt,
+		PatchAccountingPaymenttermQueryParamFieldsName,
+		PatchAccountingPaymenttermQueryParamFieldsDescription,
+		PatchAccountingPaymenttermQueryParamFieldsType,
+		PatchAccountingPaymenttermQueryParamFieldsCategory,
+		PatchAccountingPaymenttermQueryParamFieldsIsActive,
+		PatchAccountingPaymenttermQueryParamFieldsDueDays,
+		PatchAccountingPaymenttermQueryParamFieldsDiscountDays,
+		PatchAccountingPaymenttermQueryParamFieldsDiscountPercent,
+		PatchAccountingPaymenttermQueryParamFieldsDayOfMonthDue,
+		PatchAccountingPaymenttermQueryParamFieldsDiscountDayOfMonth,
+		PatchAccountingPaymenttermQueryParamFieldsDueNextMonthDays,
+		PatchAccountingPaymenttermQueryParamFieldsOrganizationID,
+		PatchAccountingPaymenttermQueryParamFieldsMetadata,
+		PatchAccountingPaymenttermQueryParamFieldsRaw,
+	}
+}
 func (e *PatchAccountingPaymenttermQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

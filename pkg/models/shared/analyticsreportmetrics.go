@@ -32,6 +32,32 @@ func (e AnalyticsReportMetricsDimension) ToPointer() *AnalyticsReportMetricsDime
 	return &e
 }
 
+// AnalyticsReportMetricsDimensionValues returns every known AnalyticsReportMetricsDimension value in schema order.
+func AnalyticsReportMetricsDimensionValues() []AnalyticsReportMetricsDimension {
+	return []AnalyticsReportMetricsDimension{
+		AnalyticsReportMetricsDimensionDate,
+		AnalyticsReportMetricsDimensionHour,
+		AnalyticsReportMetricsDimensionDayOfWeek,
+		AnalyticsReportMetricsDimensionWeek,
+		AnalyticsReportMetricsDimensionMonth,
+		AnalyticsReportMetricsDimensionYear,
+		AnalyticsReportMetricsDimensionPage,
+		AnalyticsReportMetricsDimensionPageTitle,
+		AnalyticsReportMetricsDimensionEventName,
+		AnalyticsReportMetricsDimensionSource,
+		AnalyticsReportMetricsDimensionMedium,
+		AnalyticsReportMetricsDimensionCampaign,
+		AnalyticsReportMetricsDimensionCountry,
+		AnalyticsReportMetricsDimensionCity,
+		AnalyticsReportMetricsDimensionDeviceType,
+		AnalyticsReportMetricsDimensionBrowser,
+		AnalyticsReportMetricsDimensionOs,
+		AnalyticsReportMetricsDimensionUserType,
+		AnalyticsReportMetricsDimensionLandingPage,
+		AnalyticsReportMetricsDimensionVideo,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AnalyticsReportMetricsDimension) IsExact() bool {
 	if e != nil {
@@ -84,6 +110,45 @@ const (
 
 func (e AnalyticsReportMetricsType) ToPointer() *AnalyticsReportMetricsType {
 	return &e
+}
+
+// AnalyticsReportMetricsTypeValues returns every known AnalyticsReportMetricsType value in schema order.
+func AnalyticsReportMetricsTypeValues() []AnalyticsReportMetricsType {
+	return []AnalyticsReportMetricsType{
+		AnalyticsReportMetricsTypeUsers,
+		AnalyticsReportMetricsTypeNewUsers,
+		AnalyticsReportMetricsTypeSessions,
+		AnalyticsReportMetricsTypePageViews,
+		AnalyticsReportMetricsTypeUniquePageViews,
+		AnalyticsReportMetricsTypeScreens,
+		AnalyticsReportMetricsTypeEvents,
+		AnalyticsReportMetricsTypeAverageSessionDuration,
+		AnalyticsReportMetricsTypePagesPerSession,
+		AnalyticsReportMetricsTypeBounceRate,
+		AnalyticsReportMetricsTypeEngagementRate,
+		AnalyticsReportMetricsTypeEventsPerSession,
+		AnalyticsReportMetricsTypeConversions,
+		AnalyticsReportMetricsTypeConversionRate,
+		AnalyticsReportMetricsTypeGoalCompletions,
+		AnalyticsReportMetricsTypeGoalValue,
+		AnalyticsReportMetricsTypeTransactions,
+		AnalyticsReportMetricsTypeRevenue,
+		AnalyticsReportMetricsTypeAverageOrderValue,
+		AnalyticsReportMetricsTypeEcommerceConversionRate,
+		AnalyticsReportMetricsTypeSessionsBySource,
+		AnalyticsReportMetricsTypeUsersBySource,
+		AnalyticsReportMetricsTypeConversionsBySource,
+		AnalyticsReportMetricsTypeVideoViews,
+		AnalyticsReportMetricsTypeWatchTime,
+		AnalyticsReportMetricsTypeAverageViewDuration,
+		AnalyticsReportMetricsTypeAverageViewPercentage,
+		AnalyticsReportMetricsTypeLikes,
+		AnalyticsReportMetricsTypeDislikes,
+		AnalyticsReportMetricsTypeComments,
+		AnalyticsReportMetricsTypeShares,
+		AnalyticsReportMetricsTypeSubscribersGained,
+		AnalyticsReportMetricsTypeSubscribersLost,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

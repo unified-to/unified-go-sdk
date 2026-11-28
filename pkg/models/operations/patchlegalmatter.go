@@ -42,6 +42,37 @@ const (
 func (e PatchLegalMatterQueryParamFields) ToPointer() *PatchLegalMatterQueryParamFields {
 	return &e
 }
+
+// PatchLegalMatterQueryParamFieldsValues returns every known PatchLegalMatterQueryParamFields value in schema order.
+func PatchLegalMatterQueryParamFieldsValues() []PatchLegalMatterQueryParamFields {
+	return []PatchLegalMatterQueryParamFields{
+		PatchLegalMatterQueryParamFieldsID,
+		PatchLegalMatterQueryParamFieldsCreatedAt,
+		PatchLegalMatterQueryParamFieldsUpdatedAt,
+		PatchLegalMatterQueryParamFieldsName,
+		PatchLegalMatterQueryParamFieldsNumber,
+		PatchLegalMatterQueryParamFieldsDescription,
+		PatchLegalMatterQueryParamFieldsStatus,
+		PatchLegalMatterQueryParamFieldsBillingMethod,
+		PatchLegalMatterQueryParamFieldsPracticeareaID,
+		PatchLegalMatterQueryParamFieldsStage,
+		PatchLegalMatterQueryParamFieldsContactIds,
+		PatchLegalMatterQueryParamFieldsCompanyIds,
+		PatchLegalMatterQueryParamFieldsParties,
+		PatchLegalMatterQueryParamFieldsUserID,
+		PatchLegalMatterQueryParamFieldsOriginatingUserID,
+		PatchLegalMatterQueryParamFieldsUserIds,
+		PatchLegalMatterQueryParamFieldsClientReference,
+		PatchLegalMatterQueryParamFieldsCurrency,
+		PatchLegalMatterQueryParamFieldsIsBillable,
+		PatchLegalMatterQueryParamFieldsOpenedAt,
+		PatchLegalMatterQueryParamFieldsClosedAt,
+		PatchLegalMatterQueryParamFieldsPendingAt,
+		PatchLegalMatterQueryParamFieldsStatuteOfLimitationsAt,
+		PatchLegalMatterQueryParamFieldsMetadata,
+		PatchLegalMatterQueryParamFieldsRaw,
+	}
+}
 func (e *PatchLegalMatterQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

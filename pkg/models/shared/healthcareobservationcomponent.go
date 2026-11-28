@@ -19,6 +19,19 @@ func (e HealthcareObservationComponentInterpretation) ToPointer() *HealthcareObs
 	return &e
 }
 
+// HealthcareObservationComponentInterpretationValues returns every known HealthcareObservationComponentInterpretation value in schema order.
+func HealthcareObservationComponentInterpretationValues() []HealthcareObservationComponentInterpretation {
+	return []HealthcareObservationComponentInterpretation{
+		HealthcareObservationComponentInterpretationNormal,
+		HealthcareObservationComponentInterpretationAbnormal,
+		HealthcareObservationComponentInterpretationLow,
+		HealthcareObservationComponentInterpretationHigh,
+		HealthcareObservationComponentInterpretationCriticalLow,
+		HealthcareObservationComponentInterpretationCriticalHigh,
+		HealthcareObservationComponentInterpretationOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HealthcareObservationComponentInterpretation) IsExact() bool {
 	if e != nil {

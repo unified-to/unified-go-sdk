@@ -28,6 +28,24 @@ func (e AtsJobQuestionType) ToPointer() *AtsJobQuestionType {
 	return &e
 }
 
+// AtsJobQuestionTypeValues returns every known AtsJobQuestionType value in schema order.
+func AtsJobQuestionTypeValues() []AtsJobQuestionType {
+	return []AtsJobQuestionType{
+		AtsJobQuestionTypeText,
+		AtsJobQuestionTypeNumber,
+		AtsJobQuestionTypeDate,
+		AtsJobQuestionTypeBoolean,
+		AtsJobQuestionTypeMultipleChoice,
+		AtsJobQuestionTypeFile,
+		AtsJobQuestionTypeTextarea,
+		AtsJobQuestionTypeMultipleSelect,
+		AtsJobQuestionTypeUniversity,
+		AtsJobQuestionTypeYesNo,
+		AtsJobQuestionTypeCurrency,
+		AtsJobQuestionTypeURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AtsJobQuestionType) IsExact() bool {
 	if e != nil {

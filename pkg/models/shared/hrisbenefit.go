@@ -23,6 +23,19 @@ func (e CoverageLevel) ToPointer() *CoverageLevel {
 	return &e
 }
 
+// CoverageLevelValues returns every known CoverageLevel value in schema order.
+func CoverageLevelValues() []CoverageLevel {
+	return []CoverageLevel{
+		CoverageLevelEmployeeOnly,
+		CoverageLevelEmployeeSpouse,
+		CoverageLevelEmployeeChild,
+		CoverageLevelEmployeeChildren,
+		CoverageLevelEmployeeFamily,
+		CoverageLevelFamily,
+		CoverageLevelOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CoverageLevel) IsExact() bool {
 	if e != nil {
@@ -51,6 +64,19 @@ func (e EmployerContributionCategory) ToPointer() *EmployerContributionCategory 
 	return &e
 }
 
+// EmployerContributionCategoryValues returns every known EmployerContributionCategory value in schema order.
+func EmployerContributionCategoryValues() []EmployerContributionCategory {
+	return []EmployerContributionCategory{
+		EmployerContributionCategoryMatch,
+		EmployerContributionCategorySafeHarborMatch,
+		EmployerContributionCategorySafeHarborNonelective,
+		EmployerContributionCategoryQacaMatch,
+		EmployerContributionCategoryNonelective,
+		EmployerContributionCategoryProfitSharing,
+		EmployerContributionCategoryOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *EmployerContributionCategory) IsExact() bool {
 	if e != nil {
@@ -71,6 +97,14 @@ const (
 
 func (e EmployerContributionType) ToPointer() *EmployerContributionType {
 	return &e
+}
+
+// EmployerContributionTypeValues returns every known EmployerContributionType value in schema order.
+func EmployerContributionTypeValues() []EmployerContributionType {
+	return []EmployerContributionType{
+		EmployerContributionTypePercentage,
+		EmployerContributionTypeFixed,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -103,6 +137,21 @@ func (e HrisBenefitFrequency) ToPointer() *HrisBenefitFrequency {
 	return &e
 }
 
+// HrisBenefitFrequencyValues returns every known HrisBenefitFrequency value in schema order.
+func HrisBenefitFrequencyValues() []HrisBenefitFrequency {
+	return []HrisBenefitFrequency{
+		HrisBenefitFrequencyOneTime,
+		HrisBenefitFrequencyDay,
+		HrisBenefitFrequencyQuarter,
+		HrisBenefitFrequencyYear,
+		HrisBenefitFrequencyHour,
+		HrisBenefitFrequencyMonth,
+		HrisBenefitFrequencyWeek,
+		HrisBenefitFrequencyBiweekly,
+		HrisBenefitFrequencySemimonthly,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HrisBenefitFrequency) IsExact() bool {
 	if e != nil {
@@ -132,6 +181,20 @@ func (e RetirementPlanType) ToPointer() *RetirementPlanType {
 	return &e
 }
 
+// RetirementPlanTypeValues returns every known RetirementPlanType value in schema order.
+func RetirementPlanTypeValues() []RetirementPlanType {
+	return []RetirementPlanType{
+		RetirementPlanTypePlan401K,
+		RetirementPlanTypePlan403B,
+		RetirementPlanTypePlan457B,
+		RetirementPlanTypeSimpleIra,
+		RetirementPlanTypeSepIra,
+		RetirementPlanTypeNqdc,
+		RetirementPlanTypePension,
+		RetirementPlanTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *RetirementPlanType) IsExact() bool {
 	if e != nil {
@@ -156,6 +219,17 @@ const (
 
 func (e Tax) ToPointer() *Tax {
 	return &e
+}
+
+// TaxValues returns every known Tax value in schema order.
+func TaxValues() []Tax {
+	return []Tax{
+		TaxPreTax,
+		TaxPostTax,
+		TaxTaxable,
+		TaxNonTaxable,
+		TaxTax,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -202,6 +276,38 @@ const (
 
 func (e HrisBenefitType) ToPointer() *HrisBenefitType {
 	return &e
+}
+
+// HrisBenefitTypeValues returns every known HrisBenefitType value in schema order.
+func HrisBenefitTypeValues() []HrisBenefitType {
+	return []HrisBenefitType{
+		HrisBenefitTypeRetirement,
+		HrisBenefitTypeHealth,
+		HrisBenefitTypeDental,
+		HrisBenefitTypeVision,
+		HrisBenefitTypeLife,
+		HrisBenefitTypeHsa,
+		HrisBenefitTypeFsa,
+		HrisBenefitTypeShortTermDisability,
+		HrisBenefitTypeLongTermDisability,
+		HrisBenefitTypeWorkersComp,
+		HrisBenefitTypeHousingStipend,
+		HrisBenefitTypeEmployerTaxContribution,
+		HrisBenefitTypeGarnishment,
+		HrisBenefitTypeLoanRepayment,
+		HrisBenefitTypeCharitableContribution,
+		HrisBenefitTypeOther,
+		HrisBenefitTypeRetirementRoth,
+		HrisBenefitTypeCommuter,
+		HrisBenefitTypeDependentCare,
+		HrisBenefitTypePension,
+		HrisBenefitTypeRetirementCatchup,
+		HrisBenefitTypeRetirementRothCatchup,
+		HrisBenefitTypeRetirementAfterTax,
+		HrisBenefitTypeCollegeSavings,
+		HrisBenefitTypeEarnedWageAccess,
+		HrisBenefitTypeUnionDues,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

@@ -34,6 +34,29 @@ const (
 func (e ListAccountingPurchaseordersQueryParamFields) ToPointer() *ListAccountingPurchaseordersQueryParamFields {
 	return &e
 }
+
+// ListAccountingPurchaseordersQueryParamFieldsValues returns every known ListAccountingPurchaseordersQueryParamFields value in schema order.
+func ListAccountingPurchaseordersQueryParamFieldsValues() []ListAccountingPurchaseordersQueryParamFields {
+	return []ListAccountingPurchaseordersQueryParamFields{
+		ListAccountingPurchaseordersQueryParamFieldsID,
+		ListAccountingPurchaseordersQueryParamFieldsCreatedAt,
+		ListAccountingPurchaseordersQueryParamFieldsUpdatedAt,
+		ListAccountingPurchaseordersQueryParamFieldsPostedAt,
+		ListAccountingPurchaseordersQueryParamFieldsContactID,
+		ListAccountingPurchaseordersQueryParamFieldsAccountID,
+		ListAccountingPurchaseordersQueryParamFieldsCurrency,
+		ListAccountingPurchaseordersQueryParamFieldsTotalAmount,
+		ListAccountingPurchaseordersQueryParamFieldsShippingAddress,
+		ListAccountingPurchaseordersQueryParamFieldsBillingAddress,
+		ListAccountingPurchaseordersQueryParamFieldsStatus,
+		ListAccountingPurchaseordersQueryParamFieldsLineitems,
+		ListAccountingPurchaseordersQueryParamFieldsOrganizationID,
+		ListAccountingPurchaseordersQueryParamFieldsCategoryIds,
+		ListAccountingPurchaseordersQueryParamFieldsMetadata,
+		ListAccountingPurchaseordersQueryParamFieldsAttachments,
+		ListAccountingPurchaseordersQueryParamFieldsRaw,
+	}
+}
 func (e *ListAccountingPurchaseordersQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

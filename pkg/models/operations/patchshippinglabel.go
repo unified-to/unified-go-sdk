@@ -32,6 +32,27 @@ const (
 func (e PatchShippingLabelQueryParamFields) ToPointer() *PatchShippingLabelQueryParamFields {
 	return &e
 }
+
+// PatchShippingLabelQueryParamFieldsValues returns every known PatchShippingLabelQueryParamFields value in schema order.
+func PatchShippingLabelQueryParamFieldsValues() []PatchShippingLabelQueryParamFields {
+	return []PatchShippingLabelQueryParamFields{
+		PatchShippingLabelQueryParamFieldsID,
+		PatchShippingLabelQueryParamFieldsCreatedAt,
+		PatchShippingLabelQueryParamFieldsUpdatedAt,
+		PatchShippingLabelQueryParamFieldsShipmentID,
+		PatchShippingLabelQueryParamFieldsTrackingNumber,
+		PatchShippingLabelQueryParamFieldsLabelURL,
+		PatchShippingLabelQueryParamFieldsLabelFormat,
+		PatchShippingLabelQueryParamFieldsStatus,
+		PatchShippingLabelQueryParamFieldsIsVoided,
+		PatchShippingLabelQueryParamFieldsLabelCost,
+		PatchShippingLabelQueryParamFieldsLabelCostCurrency,
+		PatchShippingLabelQueryParamFieldsRateID,
+		PatchShippingLabelQueryParamFieldsServiceCode,
+		PatchShippingLabelQueryParamFieldsMetadata,
+		PatchShippingLabelQueryParamFieldsRaw,
+	}
+}
 func (e *PatchShippingLabelQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -25,6 +25,20 @@ func (e LabelFormat) ToPointer() *LabelFormat {
 	return &e
 }
 
+// LabelFormatValues returns every known LabelFormat value in schema order.
+func LabelFormatValues() []LabelFormat {
+	return []LabelFormat{
+		LabelFormatPdf,
+		LabelFormatPng,
+		LabelFormatZpl,
+		LabelFormatEpl2,
+		LabelFormatPdf4X6,
+		LabelFormatPdf4X8,
+		LabelFormatPng4X6,
+		LabelFormatPng4X8,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *LabelFormat) IsExact() bool {
 	if e != nil {
@@ -58,6 +72,26 @@ const (
 
 func (e ShippingLabelStatus) ToPointer() *ShippingLabelStatus {
 	return &e
+}
+
+// ShippingLabelStatusValues returns every known ShippingLabelStatus value in schema order.
+func ShippingLabelStatusValues() []ShippingLabelStatus {
+	return []ShippingLabelStatus{
+		ShippingLabelStatusPending,
+		ShippingLabelStatusProcessing,
+		ShippingLabelStatusInTransit,
+		ShippingLabelStatusDelivered,
+		ShippingLabelStatusException,
+		ShippingLabelStatusCancelled,
+		ShippingLabelStatusLabelCreated,
+		ShippingLabelStatusPickedUp,
+		ShippingLabelStatusOutForDelivery,
+		ShippingLabelStatusDeliveryAttempted,
+		ShippingLabelStatusReturnedToSender,
+		ShippingLabelStatusHeldAtLocation,
+		ShippingLabelStatusCustomsClearance,
+		ShippingLabelStatusExceptionResolved,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

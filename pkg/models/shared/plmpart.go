@@ -20,6 +20,15 @@ func (e Source) ToPointer() *Source {
 	return &e
 }
 
+// SourceValues returns every known Source value in schema order.
+func SourceValues() []Source {
+	return []Source{
+		SourceMake,
+		SourceBuy,
+		SourceOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Source) IsExact() bool {
 	if e != nil {
@@ -44,6 +53,17 @@ const (
 
 func (e PlmPartStatus) ToPointer() *PlmPartStatus {
 	return &e
+}
+
+// PlmPartStatusValues returns every known PlmPartStatus value in schema order.
+func PlmPartStatusValues() []PlmPartStatus {
+	return []PlmPartStatus{
+		PlmPartStatusInWork,
+		PlmPartStatusInReview,
+		PlmPartStatusReleased,
+		PlmPartStatusObsolete,
+		PlmPartStatusOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -71,6 +91,18 @@ const (
 
 func (e PlmPartType) ToPointer() *PlmPartType {
 	return &e
+}
+
+// PlmPartTypeValues returns every known PlmPartType value in schema order.
+func PlmPartTypeValues() []PlmPartType {
+	return []PlmPartType{
+		PlmPartTypeComponent,
+		PlmPartTypeAssembly,
+		PlmPartTypeRawMaterial,
+		PlmPartTypeSoftware,
+		PlmPartTypeDocumentOnly,
+		PlmPartTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

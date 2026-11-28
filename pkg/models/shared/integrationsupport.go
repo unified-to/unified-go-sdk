@@ -14,6 +14,15 @@ func (e VirtualWebhookBenefitID) ToPointer() *VirtualWebhookBenefitID {
 	return &e
 }
 
+// VirtualWebhookBenefitIDValues returns every known VirtualWebhookBenefitID value in schema order.
+func VirtualWebhookBenefitIDValues() []VirtualWebhookBenefitID {
+	return []VirtualWebhookBenefitID{
+		VirtualWebhookBenefitIDSupportedRequired,
+		VirtualWebhookBenefitIDSupported,
+		VirtualWebhookBenefitIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookBenefitID) IsExact() bool {
 	if e != nil {
@@ -35,6 +44,15 @@ const (
 
 func (e VirtualWebhookBillID) ToPointer() *VirtualWebhookBillID {
 	return &e
+}
+
+// VirtualWebhookBillIDValues returns every known VirtualWebhookBillID value in schema order.
+func VirtualWebhookBillIDValues() []VirtualWebhookBillID {
+	return []VirtualWebhookBillID{
+		VirtualWebhookBillIDSupportedRequired,
+		VirtualWebhookBillIDSupported,
+		VirtualWebhookBillIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -60,6 +78,15 @@ func (e VirtualWebhookBranchID) ToPointer() *VirtualWebhookBranchID {
 	return &e
 }
 
+// VirtualWebhookBranchIDValues returns every known VirtualWebhookBranchID value in schema order.
+func VirtualWebhookBranchIDValues() []VirtualWebhookBranchID {
+	return []VirtualWebhookBranchID{
+		VirtualWebhookBranchIDSupportedRequired,
+		VirtualWebhookBranchIDSupported,
+		VirtualWebhookBranchIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookBranchID) IsExact() bool {
 	if e != nil {
@@ -81,6 +108,15 @@ const (
 
 func (e VirtualWebhookCalendarID) ToPointer() *VirtualWebhookCalendarID {
 	return &e
+}
+
+// VirtualWebhookCalendarIDValues returns every known VirtualWebhookCalendarID value in schema order.
+func VirtualWebhookCalendarIDValues() []VirtualWebhookCalendarID {
+	return []VirtualWebhookCalendarID{
+		VirtualWebhookCalendarIDSupportedRequired,
+		VirtualWebhookCalendarIDSupported,
+		VirtualWebhookCalendarIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -106,6 +142,15 @@ func (e VirtualWebhookCallID) ToPointer() *VirtualWebhookCallID {
 	return &e
 }
 
+// VirtualWebhookCallIDValues returns every known VirtualWebhookCallID value in schema order.
+func VirtualWebhookCallIDValues() []VirtualWebhookCallID {
+	return []VirtualWebhookCallID{
+		VirtualWebhookCallIDSupportedRequired,
+		VirtualWebhookCallIDSupported,
+		VirtualWebhookCallIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookCallID) IsExact() bool {
 	if e != nil {
@@ -127,6 +172,15 @@ const (
 
 func (e VirtualWebhookCampaignID) ToPointer() *VirtualWebhookCampaignID {
 	return &e
+}
+
+// VirtualWebhookCampaignIDValues returns every known VirtualWebhookCampaignID value in schema order.
+func VirtualWebhookCampaignIDValues() []VirtualWebhookCampaignID {
+	return []VirtualWebhookCampaignID{
+		VirtualWebhookCampaignIDSupportedRequired,
+		VirtualWebhookCampaignIDSupported,
+		VirtualWebhookCampaignIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -152,6 +206,15 @@ func (e VirtualWebhookCandidateID) ToPointer() *VirtualWebhookCandidateID {
 	return &e
 }
 
+// VirtualWebhookCandidateIDValues returns every known VirtualWebhookCandidateID value in schema order.
+func VirtualWebhookCandidateIDValues() []VirtualWebhookCandidateID {
+	return []VirtualWebhookCandidateID{
+		VirtualWebhookCandidateIDSupportedRequired,
+		VirtualWebhookCandidateIDSupported,
+		VirtualWebhookCandidateIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookCandidateID) IsExact() bool {
 	if e != nil {
@@ -173,6 +236,15 @@ const (
 
 func (e VirtualWebhookCarrierID) ToPointer() *VirtualWebhookCarrierID {
 	return &e
+}
+
+// VirtualWebhookCarrierIDValues returns every known VirtualWebhookCarrierID value in schema order.
+func VirtualWebhookCarrierIDValues() []VirtualWebhookCarrierID {
+	return []VirtualWebhookCarrierID{
+		VirtualWebhookCarrierIDSupportedRequired,
+		VirtualWebhookCarrierIDSupported,
+		VirtualWebhookCarrierIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -198,6 +270,15 @@ func (e VirtualWebhookChannelID) ToPointer() *VirtualWebhookChannelID {
 	return &e
 }
 
+// VirtualWebhookChannelIDValues returns every known VirtualWebhookChannelID value in schema order.
+func VirtualWebhookChannelIDValues() []VirtualWebhookChannelID {
+	return []VirtualWebhookChannelID{
+		VirtualWebhookChannelIDSupportedRequired,
+		VirtualWebhookChannelIDSupported,
+		VirtualWebhookChannelIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookChannelID) IsExact() bool {
 	if e != nil {
@@ -219,6 +300,15 @@ const (
 
 func (e VirtualWebhookCollectionID) ToPointer() *VirtualWebhookCollectionID {
 	return &e
+}
+
+// VirtualWebhookCollectionIDValues returns every known VirtualWebhookCollectionID value in schema order.
+func VirtualWebhookCollectionIDValues() []VirtualWebhookCollectionID {
+	return []VirtualWebhookCollectionID{
+		VirtualWebhookCollectionIDSupportedRequired,
+		VirtualWebhookCollectionIDSupported,
+		VirtualWebhookCollectionIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -244,6 +334,15 @@ func (e VirtualWebhookCompanyID) ToPointer() *VirtualWebhookCompanyID {
 	return &e
 }
 
+// VirtualWebhookCompanyIDValues returns every known VirtualWebhookCompanyID value in schema order.
+func VirtualWebhookCompanyIDValues() []VirtualWebhookCompanyID {
+	return []VirtualWebhookCompanyID{
+		VirtualWebhookCompanyIDSupportedRequired,
+		VirtualWebhookCompanyIDSupported,
+		VirtualWebhookCompanyIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookCompanyID) IsExact() bool {
 	if e != nil {
@@ -265,6 +364,15 @@ const (
 
 func (e VirtualWebhookContactID) ToPointer() *VirtualWebhookContactID {
 	return &e
+}
+
+// VirtualWebhookContactIDValues returns every known VirtualWebhookContactID value in schema order.
+func VirtualWebhookContactIDValues() []VirtualWebhookContactID {
+	return []VirtualWebhookContactID{
+		VirtualWebhookContactIDSupportedRequired,
+		VirtualWebhookContactIDSupported,
+		VirtualWebhookContactIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -290,6 +398,15 @@ func (e VirtualWebhookCourseID) ToPointer() *VirtualWebhookCourseID {
 	return &e
 }
 
+// VirtualWebhookCourseIDValues returns every known VirtualWebhookCourseID value in schema order.
+func VirtualWebhookCourseIDValues() []VirtualWebhookCourseID {
+	return []VirtualWebhookCourseID{
+		VirtualWebhookCourseIDSupportedRequired,
+		VirtualWebhookCourseIDSupported,
+		VirtualWebhookCourseIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookCourseID) IsExact() bool {
 	if e != nil {
@@ -311,6 +428,15 @@ const (
 
 func (e VirtualWebhookCustomerID) ToPointer() *VirtualWebhookCustomerID {
 	return &e
+}
+
+// VirtualWebhookCustomerIDValues returns every known VirtualWebhookCustomerID value in schema order.
+func VirtualWebhookCustomerIDValues() []VirtualWebhookCustomerID {
+	return []VirtualWebhookCustomerID{
+		VirtualWebhookCustomerIDSupportedRequired,
+		VirtualWebhookCustomerIDSupported,
+		VirtualWebhookCustomerIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -336,6 +462,15 @@ func (e VirtualWebhookCycleID) ToPointer() *VirtualWebhookCycleID {
 	return &e
 }
 
+// VirtualWebhookCycleIDValues returns every known VirtualWebhookCycleID value in schema order.
+func VirtualWebhookCycleIDValues() []VirtualWebhookCycleID {
+	return []VirtualWebhookCycleID{
+		VirtualWebhookCycleIDSupportedRequired,
+		VirtualWebhookCycleIDSupported,
+		VirtualWebhookCycleIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookCycleID) IsExact() bool {
 	if e != nil {
@@ -357,6 +492,15 @@ const (
 
 func (e VirtualWebhookDatabaseID) ToPointer() *VirtualWebhookDatabaseID {
 	return &e
+}
+
+// VirtualWebhookDatabaseIDValues returns every known VirtualWebhookDatabaseID value in schema order.
+func VirtualWebhookDatabaseIDValues() []VirtualWebhookDatabaseID {
+	return []VirtualWebhookDatabaseID{
+		VirtualWebhookDatabaseIDSupportedRequired,
+		VirtualWebhookDatabaseIDSupported,
+		VirtualWebhookDatabaseIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -382,6 +526,15 @@ func (e VirtualWebhookDealID) ToPointer() *VirtualWebhookDealID {
 	return &e
 }
 
+// VirtualWebhookDealIDValues returns every known VirtualWebhookDealID value in schema order.
+func VirtualWebhookDealIDValues() []VirtualWebhookDealID {
+	return []VirtualWebhookDealID{
+		VirtualWebhookDealIDSupportedRequired,
+		VirtualWebhookDealIDSupported,
+		VirtualWebhookDealIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookDealID) IsExact() bool {
 	if e != nil {
@@ -403,6 +556,15 @@ const (
 
 func (e VirtualWebhookEffectiveStatus) ToPointer() *VirtualWebhookEffectiveStatus {
 	return &e
+}
+
+// VirtualWebhookEffectiveStatusValues returns every known VirtualWebhookEffectiveStatus value in schema order.
+func VirtualWebhookEffectiveStatusValues() []VirtualWebhookEffectiveStatus {
+	return []VirtualWebhookEffectiveStatus{
+		VirtualWebhookEffectiveStatusSupportedRequired,
+		VirtualWebhookEffectiveStatusSupported,
+		VirtualWebhookEffectiveStatusNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -428,6 +590,15 @@ func (e VirtualWebhookEndLt) ToPointer() *VirtualWebhookEndLt {
 	return &e
 }
 
+// VirtualWebhookEndLtValues returns every known VirtualWebhookEndLt value in schema order.
+func VirtualWebhookEndLtValues() []VirtualWebhookEndLt {
+	return []VirtualWebhookEndLt{
+		VirtualWebhookEndLtSupportedRequired,
+		VirtualWebhookEndLtSupported,
+		VirtualWebhookEndLtNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookEndLt) IsExact() bool {
 	if e != nil {
@@ -449,6 +620,15 @@ const (
 
 func (e VirtualWebhookEventID) ToPointer() *VirtualWebhookEventID {
 	return &e
+}
+
+// VirtualWebhookEventIDValues returns every known VirtualWebhookEventID value in schema order.
+func VirtualWebhookEventIDValues() []VirtualWebhookEventID {
+	return []VirtualWebhookEventID{
+		VirtualWebhookEventIDSupportedRequired,
+		VirtualWebhookEventIDSupported,
+		VirtualWebhookEventIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -474,6 +654,15 @@ func (e VirtualWebhookExpand) ToPointer() *VirtualWebhookExpand {
 	return &e
 }
 
+// VirtualWebhookExpandValues returns every known VirtualWebhookExpand value in schema order.
+func VirtualWebhookExpandValues() []VirtualWebhookExpand {
+	return []VirtualWebhookExpand{
+		VirtualWebhookExpandSupportedRequired,
+		VirtualWebhookExpandSupported,
+		VirtualWebhookExpandNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookExpand) IsExact() bool {
 	if e != nil {
@@ -495,6 +684,15 @@ const (
 
 func (e VirtualWebhookFields) ToPointer() *VirtualWebhookFields {
 	return &e
+}
+
+// VirtualWebhookFieldsValues returns every known VirtualWebhookFields value in schema order.
+func VirtualWebhookFieldsValues() []VirtualWebhookFields {
+	return []VirtualWebhookFields{
+		VirtualWebhookFieldsSupportedRequired,
+		VirtualWebhookFieldsSupported,
+		VirtualWebhookFieldsNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -520,6 +718,15 @@ func (e VirtualWebhookFormID) ToPointer() *VirtualWebhookFormID {
 	return &e
 }
 
+// VirtualWebhookFormIDValues returns every known VirtualWebhookFormID value in schema order.
+func VirtualWebhookFormIDValues() []VirtualWebhookFormID {
+	return []VirtualWebhookFormID{
+		VirtualWebhookFormIDSupportedRequired,
+		VirtualWebhookFormIDSupported,
+		VirtualWebhookFormIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookFormID) IsExact() bool {
 	if e != nil {
@@ -541,6 +748,15 @@ const (
 
 func (e VirtualWebhookGroupID) ToPointer() *VirtualWebhookGroupID {
 	return &e
+}
+
+// VirtualWebhookGroupIDValues returns every known VirtualWebhookGroupID value in schema order.
+func VirtualWebhookGroupIDValues() []VirtualWebhookGroupID {
+	return []VirtualWebhookGroupID{
+		VirtualWebhookGroupIDSupportedRequired,
+		VirtualWebhookGroupIDSupported,
+		VirtualWebhookGroupIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -566,6 +782,15 @@ func (e VirtualWebhookGuestID) ToPointer() *VirtualWebhookGuestID {
 	return &e
 }
 
+// VirtualWebhookGuestIDValues returns every known VirtualWebhookGuestID value in schema order.
+func VirtualWebhookGuestIDValues() []VirtualWebhookGuestID {
+	return []VirtualWebhookGuestID{
+		VirtualWebhookGuestIDSupportedRequired,
+		VirtualWebhookGuestIDSupported,
+		VirtualWebhookGuestIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookGuestID) IsExact() bool {
 	if e != nil {
@@ -587,6 +812,15 @@ const (
 
 func (e VirtualWebhookInvoiceID) ToPointer() *VirtualWebhookInvoiceID {
 	return &e
+}
+
+// VirtualWebhookInvoiceIDValues returns every known VirtualWebhookInvoiceID value in schema order.
+func VirtualWebhookInvoiceIDValues() []VirtualWebhookInvoiceID {
+	return []VirtualWebhookInvoiceID{
+		VirtualWebhookInvoiceIDSupportedRequired,
+		VirtualWebhookInvoiceIDSupported,
+		VirtualWebhookInvoiceIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -612,6 +846,15 @@ func (e VirtualWebhookIoID) ToPointer() *VirtualWebhookIoID {
 	return &e
 }
 
+// VirtualWebhookIoIDValues returns every known VirtualWebhookIoID value in schema order.
+func VirtualWebhookIoIDValues() []VirtualWebhookIoID {
+	return []VirtualWebhookIoID{
+		VirtualWebhookIoIDSupportedRequired,
+		VirtualWebhookIoIDSupported,
+		VirtualWebhookIoIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookIoID) IsExact() bool {
 	if e != nil {
@@ -633,6 +876,15 @@ const (
 
 func (e VirtualWebhookIssueID) ToPointer() *VirtualWebhookIssueID {
 	return &e
+}
+
+// VirtualWebhookIssueIDValues returns every known VirtualWebhookIssueID value in schema order.
+func VirtualWebhookIssueIDValues() []VirtualWebhookIssueID {
+	return []VirtualWebhookIssueID{
+		VirtualWebhookIssueIDSupportedRequired,
+		VirtualWebhookIssueIDSupported,
+		VirtualWebhookIssueIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -658,6 +910,15 @@ func (e VirtualWebhookItemID) ToPointer() *VirtualWebhookItemID {
 	return &e
 }
 
+// VirtualWebhookItemIDValues returns every known VirtualWebhookItemID value in schema order.
+func VirtualWebhookItemIDValues() []VirtualWebhookItemID {
+	return []VirtualWebhookItemID{
+		VirtualWebhookItemIDSupportedRequired,
+		VirtualWebhookItemIDSupported,
+		VirtualWebhookItemIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookItemID) IsExact() bool {
 	if e != nil {
@@ -679,6 +940,15 @@ const (
 
 func (e VirtualWebhookItemVariantID) ToPointer() *VirtualWebhookItemVariantID {
 	return &e
+}
+
+// VirtualWebhookItemVariantIDValues returns every known VirtualWebhookItemVariantID value in schema order.
+func VirtualWebhookItemVariantIDValues() []VirtualWebhookItemVariantID {
+	return []VirtualWebhookItemVariantID{
+		VirtualWebhookItemVariantIDSupportedRequired,
+		VirtualWebhookItemVariantIDSupported,
+		VirtualWebhookItemVariantIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -704,6 +974,15 @@ func (e VirtualWebhookJobID) ToPointer() *VirtualWebhookJobID {
 	return &e
 }
 
+// VirtualWebhookJobIDValues returns every known VirtualWebhookJobID value in schema order.
+func VirtualWebhookJobIDValues() []VirtualWebhookJobID {
+	return []VirtualWebhookJobID{
+		VirtualWebhookJobIDSupportedRequired,
+		VirtualWebhookJobIDSupported,
+		VirtualWebhookJobIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookJobID) IsExact() bool {
 	if e != nil {
@@ -725,6 +1004,15 @@ const (
 
 func (e VirtualWebhookLabelID) ToPointer() *VirtualWebhookLabelID {
 	return &e
+}
+
+// VirtualWebhookLabelIDValues returns every known VirtualWebhookLabelID value in schema order.
+func VirtualWebhookLabelIDValues() []VirtualWebhookLabelID {
+	return []VirtualWebhookLabelID{
+		VirtualWebhookLabelIDSupportedRequired,
+		VirtualWebhookLabelIDSupported,
+		VirtualWebhookLabelIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -750,6 +1038,15 @@ func (e VirtualWebhookLeadID) ToPointer() *VirtualWebhookLeadID {
 	return &e
 }
 
+// VirtualWebhookLeadIDValues returns every known VirtualWebhookLeadID value in schema order.
+func VirtualWebhookLeadIDValues() []VirtualWebhookLeadID {
+	return []VirtualWebhookLeadID{
+		VirtualWebhookLeadIDSupportedRequired,
+		VirtualWebhookLeadIDSupported,
+		VirtualWebhookLeadIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookLeadID) IsExact() bool {
 	if e != nil {
@@ -771,6 +1068,15 @@ const (
 
 func (e VirtualWebhookLimit) ToPointer() *VirtualWebhookLimit {
 	return &e
+}
+
+// VirtualWebhookLimitValues returns every known VirtualWebhookLimit value in schema order.
+func VirtualWebhookLimitValues() []VirtualWebhookLimit {
+	return []VirtualWebhookLimit{
+		VirtualWebhookLimitSupportedRequired,
+		VirtualWebhookLimitSupported,
+		VirtualWebhookLimitNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -796,6 +1102,15 @@ func (e VirtualWebhookLinkID) ToPointer() *VirtualWebhookLinkID {
 	return &e
 }
 
+// VirtualWebhookLinkIDValues returns every known VirtualWebhookLinkID value in schema order.
+func VirtualWebhookLinkIDValues() []VirtualWebhookLinkID {
+	return []VirtualWebhookLinkID{
+		VirtualWebhookLinkIDSupportedRequired,
+		VirtualWebhookLinkIDSupported,
+		VirtualWebhookLinkIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookLinkID) IsExact() bool {
 	if e != nil {
@@ -817,6 +1132,15 @@ const (
 
 func (e VirtualWebhookListID) ToPointer() *VirtualWebhookListID {
 	return &e
+}
+
+// VirtualWebhookListIDValues returns every known VirtualWebhookListID value in schema order.
+func VirtualWebhookListIDValues() []VirtualWebhookListID {
+	return []VirtualWebhookListID{
+		VirtualWebhookListIDSupportedRequired,
+		VirtualWebhookListIDSupported,
+		VirtualWebhookListIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -842,6 +1166,15 @@ func (e VirtualWebhookListingID) ToPointer() *VirtualWebhookListingID {
 	return &e
 }
 
+// VirtualWebhookListingIDValues returns every known VirtualWebhookListingID value in schema order.
+func VirtualWebhookListingIDValues() []VirtualWebhookListingID {
+	return []VirtualWebhookListingID{
+		VirtualWebhookListingIDSupportedRequired,
+		VirtualWebhookListingIDSupported,
+		VirtualWebhookListingIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookListingID) IsExact() bool {
 	if e != nil {
@@ -863,6 +1196,15 @@ const (
 
 func (e VirtualWebhookLocationID) ToPointer() *VirtualWebhookLocationID {
 	return &e
+}
+
+// VirtualWebhookLocationIDValues returns every known VirtualWebhookLocationID value in schema order.
+func VirtualWebhookLocationIDValues() []VirtualWebhookLocationID {
+	return []VirtualWebhookLocationID{
+		VirtualWebhookLocationIDSupportedRequired,
+		VirtualWebhookLocationIDSupported,
+		VirtualWebhookLocationIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -888,6 +1230,15 @@ func (e VirtualWebhookMatterID) ToPointer() *VirtualWebhookMatterID {
 	return &e
 }
 
+// VirtualWebhookMatterIDValues returns every known VirtualWebhookMatterID value in schema order.
+func VirtualWebhookMatterIDValues() []VirtualWebhookMatterID {
+	return []VirtualWebhookMatterID{
+		VirtualWebhookMatterIDSupportedRequired,
+		VirtualWebhookMatterIDSupported,
+		VirtualWebhookMatterIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookMatterID) IsExact() bool {
 	if e != nil {
@@ -909,6 +1260,15 @@ const (
 
 func (e VirtualWebhookMemberID) ToPointer() *VirtualWebhookMemberID {
 	return &e
+}
+
+// VirtualWebhookMemberIDValues returns every known VirtualWebhookMemberID value in schema order.
+func VirtualWebhookMemberIDValues() []VirtualWebhookMemberID {
+	return []VirtualWebhookMemberID{
+		VirtualWebhookMemberIDSupportedRequired,
+		VirtualWebhookMemberIDSupported,
+		VirtualWebhookMemberIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -934,6 +1294,15 @@ func (e VirtualWebhookOrderID) ToPointer() *VirtualWebhookOrderID {
 	return &e
 }
 
+// VirtualWebhookOrderIDValues returns every known VirtualWebhookOrderID value in schema order.
+func VirtualWebhookOrderIDValues() []VirtualWebhookOrderID {
+	return []VirtualWebhookOrderID{
+		VirtualWebhookOrderIDSupportedRequired,
+		VirtualWebhookOrderIDSupported,
+		VirtualWebhookOrderIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookOrderID) IsExact() bool {
 	if e != nil {
@@ -955,6 +1324,15 @@ const (
 
 func (e VirtualWebhookOrgID) ToPointer() *VirtualWebhookOrgID {
 	return &e
+}
+
+// VirtualWebhookOrgIDValues returns every known VirtualWebhookOrgID value in schema order.
+func VirtualWebhookOrgIDValues() []VirtualWebhookOrgID {
+	return []VirtualWebhookOrgID{
+		VirtualWebhookOrgIDSupportedRequired,
+		VirtualWebhookOrgIDSupported,
+		VirtualWebhookOrgIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -980,6 +1358,15 @@ func (e VirtualWebhookPageID) ToPointer() *VirtualWebhookPageID {
 	return &e
 }
 
+// VirtualWebhookPageIDValues returns every known VirtualWebhookPageID value in schema order.
+func VirtualWebhookPageIDValues() []VirtualWebhookPageID {
+	return []VirtualWebhookPageID{
+		VirtualWebhookPageIDSupportedRequired,
+		VirtualWebhookPageIDSupported,
+		VirtualWebhookPageIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookPageID) IsExact() bool {
 	if e != nil {
@@ -1001,6 +1388,15 @@ const (
 
 func (e VirtualWebhookParentID) ToPointer() *VirtualWebhookParentID {
 	return &e
+}
+
+// VirtualWebhookParentIDValues returns every known VirtualWebhookParentID value in schema order.
+func VirtualWebhookParentIDValues() []VirtualWebhookParentID {
+	return []VirtualWebhookParentID{
+		VirtualWebhookParentIDSupportedRequired,
+		VirtualWebhookParentIDSupported,
+		VirtualWebhookParentIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1026,6 +1422,15 @@ func (e VirtualWebhookPartID) ToPointer() *VirtualWebhookPartID {
 	return &e
 }
 
+// VirtualWebhookPartIDValues returns every known VirtualWebhookPartID value in schema order.
+func VirtualWebhookPartIDValues() []VirtualWebhookPartID {
+	return []VirtualWebhookPartID{
+		VirtualWebhookPartIDSupportedRequired,
+		VirtualWebhookPartIDSupported,
+		VirtualWebhookPartIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookPartID) IsExact() bool {
 	if e != nil {
@@ -1047,6 +1452,15 @@ const (
 
 func (e VirtualWebhookPatientID) ToPointer() *VirtualWebhookPatientID {
 	return &e
+}
+
+// VirtualWebhookPatientIDValues returns every known VirtualWebhookPatientID value in schema order.
+func VirtualWebhookPatientIDValues() []VirtualWebhookPatientID {
+	return []VirtualWebhookPatientID{
+		VirtualWebhookPatientIDSupportedRequired,
+		VirtualWebhookPatientIDSupported,
+		VirtualWebhookPatientIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1072,6 +1486,15 @@ func (e VirtualWebhookPaymentID) ToPointer() *VirtualWebhookPaymentID {
 	return &e
 }
 
+// VirtualWebhookPaymentIDValues returns every known VirtualWebhookPaymentID value in schema order.
+func VirtualWebhookPaymentIDValues() []VirtualWebhookPaymentID {
+	return []VirtualWebhookPaymentID{
+		VirtualWebhookPaymentIDSupportedRequired,
+		VirtualWebhookPaymentIDSupported,
+		VirtualWebhookPaymentIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookPaymentID) IsExact() bool {
 	if e != nil {
@@ -1093,6 +1516,15 @@ const (
 
 func (e VirtualWebhookPipelineID) ToPointer() *VirtualWebhookPipelineID {
 	return &e
+}
+
+// VirtualWebhookPipelineIDValues returns every known VirtualWebhookPipelineID value in schema order.
+func VirtualWebhookPipelineIDValues() []VirtualWebhookPipelineID {
+	return []VirtualWebhookPipelineID{
+		VirtualWebhookPipelineIDSupportedRequired,
+		VirtualWebhookPipelineIDSupported,
+		VirtualWebhookPipelineIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1118,6 +1550,15 @@ func (e VirtualWebhookPostID) ToPointer() *VirtualWebhookPostID {
 	return &e
 }
 
+// VirtualWebhookPostIDValues returns every known VirtualWebhookPostID value in schema order.
+func VirtualWebhookPostIDValues() []VirtualWebhookPostID {
+	return []VirtualWebhookPostID{
+		VirtualWebhookPostIDSupportedRequired,
+		VirtualWebhookPostIDSupported,
+		VirtualWebhookPostIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookPostID) IsExact() bool {
 	if e != nil {
@@ -1139,6 +1580,15 @@ const (
 
 func (e VirtualWebhookPracticeareaID) ToPointer() *VirtualWebhookPracticeareaID {
 	return &e
+}
+
+// VirtualWebhookPracticeareaIDValues returns every known VirtualWebhookPracticeareaID value in schema order.
+func VirtualWebhookPracticeareaIDValues() []VirtualWebhookPracticeareaID {
+	return []VirtualWebhookPracticeareaID{
+		VirtualWebhookPracticeareaIDSupportedRequired,
+		VirtualWebhookPracticeareaIDSupported,
+		VirtualWebhookPracticeareaIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1164,6 +1614,15 @@ func (e VirtualWebhookPractitionerID) ToPointer() *VirtualWebhookPractitionerID 
 	return &e
 }
 
+// VirtualWebhookPractitionerIDValues returns every known VirtualWebhookPractitionerID value in schema order.
+func VirtualWebhookPractitionerIDValues() []VirtualWebhookPractitionerID {
+	return []VirtualWebhookPractitionerID{
+		VirtualWebhookPractitionerIDSupportedRequired,
+		VirtualWebhookPractitionerIDSupported,
+		VirtualWebhookPractitionerIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookPractitionerID) IsExact() bool {
 	if e != nil {
@@ -1185,6 +1644,15 @@ const (
 
 func (e VirtualWebhookProfileID) ToPointer() *VirtualWebhookProfileID {
 	return &e
+}
+
+// VirtualWebhookProfileIDValues returns every known VirtualWebhookProfileID value in schema order.
+func VirtualWebhookProfileIDValues() []VirtualWebhookProfileID {
+	return []VirtualWebhookProfileID{
+		VirtualWebhookProfileIDSupportedRequired,
+		VirtualWebhookProfileIDSupported,
+		VirtualWebhookProfileIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1210,6 +1678,15 @@ func (e VirtualWebhookProjectID) ToPointer() *VirtualWebhookProjectID {
 	return &e
 }
 
+// VirtualWebhookProjectIDValues returns every known VirtualWebhookProjectID value in schema order.
+func VirtualWebhookProjectIDValues() []VirtualWebhookProjectID {
+	return []VirtualWebhookProjectID{
+		VirtualWebhookProjectIDSupportedRequired,
+		VirtualWebhookProjectIDSupported,
+		VirtualWebhookProjectIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookProjectID) IsExact() bool {
 	if e != nil {
@@ -1231,6 +1708,15 @@ const (
 
 func (e VirtualWebhookPropertyID) ToPointer() *VirtualWebhookPropertyID {
 	return &e
+}
+
+// VirtualWebhookPropertyIDValues returns every known VirtualWebhookPropertyID value in schema order.
+func VirtualWebhookPropertyIDValues() []VirtualWebhookPropertyID {
+	return []VirtualWebhookPropertyID{
+		VirtualWebhookPropertyIDSupportedRequired,
+		VirtualWebhookPropertyIDSupported,
+		VirtualWebhookPropertyIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1256,6 +1742,15 @@ func (e VirtualWebhookReference) ToPointer() *VirtualWebhookReference {
 	return &e
 }
 
+// VirtualWebhookReferenceValues returns every known VirtualWebhookReference value in schema order.
+func VirtualWebhookReferenceValues() []VirtualWebhookReference {
+	return []VirtualWebhookReference{
+		VirtualWebhookReferenceSupportedRequired,
+		VirtualWebhookReferenceSupported,
+		VirtualWebhookReferenceNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookReference) IsExact() bool {
 	if e != nil {
@@ -1277,6 +1772,15 @@ const (
 
 func (e VirtualWebhookRepoID) ToPointer() *VirtualWebhookRepoID {
 	return &e
+}
+
+// VirtualWebhookRepoIDValues returns every known VirtualWebhookRepoID value in schema order.
+func VirtualWebhookRepoIDValues() []VirtualWebhookRepoID {
+	return []VirtualWebhookRepoID{
+		VirtualWebhookRepoIDSupportedRequired,
+		VirtualWebhookRepoIDSupported,
+		VirtualWebhookRepoIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1302,6 +1806,15 @@ func (e VirtualWebhookReservationID) ToPointer() *VirtualWebhookReservationID {
 	return &e
 }
 
+// VirtualWebhookReservationIDValues returns every known VirtualWebhookReservationID value in schema order.
+func VirtualWebhookReservationIDValues() []VirtualWebhookReservationID {
+	return []VirtualWebhookReservationID{
+		VirtualWebhookReservationIDSupportedRequired,
+		VirtualWebhookReservationIDSupported,
+		VirtualWebhookReservationIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookReservationID) IsExact() bool {
 	if e != nil {
@@ -1323,6 +1836,15 @@ const (
 
 func (e VirtualWebhookSaleschannelID) ToPointer() *VirtualWebhookSaleschannelID {
 	return &e
+}
+
+// VirtualWebhookSaleschannelIDValues returns every known VirtualWebhookSaleschannelID value in schema order.
+func VirtualWebhookSaleschannelIDValues() []VirtualWebhookSaleschannelID {
+	return []VirtualWebhookSaleschannelID{
+		VirtualWebhookSaleschannelIDSupportedRequired,
+		VirtualWebhookSaleschannelIDSupported,
+		VirtualWebhookSaleschannelIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1348,6 +1870,15 @@ func (e VirtualWebhookSessionID) ToPointer() *VirtualWebhookSessionID {
 	return &e
 }
 
+// VirtualWebhookSessionIDValues returns every known VirtualWebhookSessionID value in schema order.
+func VirtualWebhookSessionIDValues() []VirtualWebhookSessionID {
+	return []VirtualWebhookSessionID{
+		VirtualWebhookSessionIDSupportedRequired,
+		VirtualWebhookSessionIDSupported,
+		VirtualWebhookSessionIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookSessionID) IsExact() bool {
 	if e != nil {
@@ -1369,6 +1900,15 @@ const (
 
 func (e VirtualWebhookShipmentID) ToPointer() *VirtualWebhookShipmentID {
 	return &e
+}
+
+// VirtualWebhookShipmentIDValues returns every known VirtualWebhookShipmentID value in schema order.
+func VirtualWebhookShipmentIDValues() []VirtualWebhookShipmentID {
+	return []VirtualWebhookShipmentID{
+		VirtualWebhookShipmentIDSupportedRequired,
+		VirtualWebhookShipmentIDSupported,
+		VirtualWebhookShipmentIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1394,6 +1934,15 @@ func (e VirtualWebhookSpaceID) ToPointer() *VirtualWebhookSpaceID {
 	return &e
 }
 
+// VirtualWebhookSpaceIDValues returns every known VirtualWebhookSpaceID value in schema order.
+func VirtualWebhookSpaceIDValues() []VirtualWebhookSpaceID {
+	return []VirtualWebhookSpaceID{
+		VirtualWebhookSpaceIDSupportedRequired,
+		VirtualWebhookSpaceIDSupported,
+		VirtualWebhookSpaceIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookSpaceID) IsExact() bool {
 	if e != nil {
@@ -1415,6 +1964,15 @@ const (
 
 func (e VirtualWebhookStartGte) ToPointer() *VirtualWebhookStartGte {
 	return &e
+}
+
+// VirtualWebhookStartGteValues returns every known VirtualWebhookStartGte value in schema order.
+func VirtualWebhookStartGteValues() []VirtualWebhookStartGte {
+	return []VirtualWebhookStartGte{
+		VirtualWebhookStartGteSupportedRequired,
+		VirtualWebhookStartGteSupported,
+		VirtualWebhookStartGteNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1440,6 +1998,15 @@ func (e VirtualWebhookStatus) ToPointer() *VirtualWebhookStatus {
 	return &e
 }
 
+// VirtualWebhookStatusValues returns every known VirtualWebhookStatus value in schema order.
+func VirtualWebhookStatusValues() []VirtualWebhookStatus {
+	return []VirtualWebhookStatus{
+		VirtualWebhookStatusSupportedRequired,
+		VirtualWebhookStatusSupported,
+		VirtualWebhookStatusNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookStatus) IsExact() bool {
 	if e != nil {
@@ -1461,6 +2028,15 @@ const (
 
 func (e VirtualWebhookStudentID) ToPointer() *VirtualWebhookStudentID {
 	return &e
+}
+
+// VirtualWebhookStudentIDValues returns every known VirtualWebhookStudentID value in schema order.
+func VirtualWebhookStudentIDValues() []VirtualWebhookStudentID {
+	return []VirtualWebhookStudentID{
+		VirtualWebhookStudentIDSupportedRequired,
+		VirtualWebhookStudentIDSupported,
+		VirtualWebhookStudentIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1486,6 +2062,15 @@ func (e VirtualWebhookTableID) ToPointer() *VirtualWebhookTableID {
 	return &e
 }
 
+// VirtualWebhookTableIDValues returns every known VirtualWebhookTableID value in schema order.
+func VirtualWebhookTableIDValues() []VirtualWebhookTableID {
+	return []VirtualWebhookTableID{
+		VirtualWebhookTableIDSupportedRequired,
+		VirtualWebhookTableIDSupported,
+		VirtualWebhookTableIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookTableID) IsExact() bool {
 	if e != nil {
@@ -1507,6 +2092,15 @@ const (
 
 func (e VirtualWebhookTaskID) ToPointer() *VirtualWebhookTaskID {
 	return &e
+}
+
+// VirtualWebhookTaskIDValues returns every known VirtualWebhookTaskID value in schema order.
+func VirtualWebhookTaskIDValues() []VirtualWebhookTaskID {
+	return []VirtualWebhookTaskID{
+		VirtualWebhookTaskIDSupportedRequired,
+		VirtualWebhookTaskIDSupported,
+		VirtualWebhookTaskIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1532,6 +2126,15 @@ func (e VirtualWebhookTemplateID) ToPointer() *VirtualWebhookTemplateID {
 	return &e
 }
 
+// VirtualWebhookTemplateIDValues returns every known VirtualWebhookTemplateID value in schema order.
+func VirtualWebhookTemplateIDValues() []VirtualWebhookTemplateID {
+	return []VirtualWebhookTemplateID{
+		VirtualWebhookTemplateIDSupportedRequired,
+		VirtualWebhookTemplateIDSupported,
+		VirtualWebhookTemplateIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookTemplateID) IsExact() bool {
 	if e != nil {
@@ -1553,6 +2156,15 @@ const (
 
 func (e VirtualWebhookTicketID) ToPointer() *VirtualWebhookTicketID {
 	return &e
+}
+
+// VirtualWebhookTicketIDValues returns every known VirtualWebhookTicketID value in schema order.
+func VirtualWebhookTicketIDValues() []VirtualWebhookTicketID {
+	return []VirtualWebhookTicketID{
+		VirtualWebhookTicketIDSupportedRequired,
+		VirtualWebhookTicketIDSupported,
+		VirtualWebhookTicketIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1578,6 +2190,15 @@ func (e VirtualWebhookType) ToPointer() *VirtualWebhookType {
 	return &e
 }
 
+// VirtualWebhookTypeValues returns every known VirtualWebhookType value in schema order.
+func VirtualWebhookTypeValues() []VirtualWebhookType {
+	return []VirtualWebhookType{
+		VirtualWebhookTypeSupportedRequired,
+		VirtualWebhookTypeSupported,
+		VirtualWebhookTypeNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookType) IsExact() bool {
 	if e != nil {
@@ -1599,6 +2220,15 @@ const (
 
 func (e VirtualWebhookUpdatedGte) ToPointer() *VirtualWebhookUpdatedGte {
 	return &e
+}
+
+// VirtualWebhookUpdatedGteValues returns every known VirtualWebhookUpdatedGte value in schema order.
+func VirtualWebhookUpdatedGteValues() []VirtualWebhookUpdatedGte {
+	return []VirtualWebhookUpdatedGte{
+		VirtualWebhookUpdatedGteSupportedRequired,
+		VirtualWebhookUpdatedGteSupported,
+		VirtualWebhookUpdatedGteNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1624,6 +2254,15 @@ func (e VirtualWebhookUserID) ToPointer() *VirtualWebhookUserID {
 	return &e
 }
 
+// VirtualWebhookUserIDValues returns every known VirtualWebhookUserID value in schema order.
+func VirtualWebhookUserIDValues() []VirtualWebhookUserID {
+	return []VirtualWebhookUserID{
+		VirtualWebhookUserIDSupportedRequired,
+		VirtualWebhookUserIDSupported,
+		VirtualWebhookUserIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookUserID) IsExact() bool {
 	if e != nil {
@@ -1645,6 +2284,15 @@ const (
 
 func (e VirtualWebhookUserMentionedID) ToPointer() *VirtualWebhookUserMentionedID {
 	return &e
+}
+
+// VirtualWebhookUserMentionedIDValues returns every known VirtualWebhookUserMentionedID value in schema order.
+func VirtualWebhookUserMentionedIDValues() []VirtualWebhookUserMentionedID {
+	return []VirtualWebhookUserMentionedID{
+		VirtualWebhookUserMentionedIDSupportedRequired,
+		VirtualWebhookUserMentionedIDSupported,
+		VirtualWebhookUserMentionedIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -1670,6 +2318,15 @@ func (e VirtualWebhookVehicleID) ToPointer() *VirtualWebhookVehicleID {
 	return &e
 }
 
+// VirtualWebhookVehicleIDValues returns every known VirtualWebhookVehicleID value in schema order.
+func VirtualWebhookVehicleIDValues() []VirtualWebhookVehicleID {
+	return []VirtualWebhookVehicleID{
+		VirtualWebhookVehicleIDSupportedRequired,
+		VirtualWebhookVehicleIDSupported,
+		VirtualWebhookVehicleIDNotSupported,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookVehicleID) IsExact() bool {
 	if e != nil {
@@ -1691,6 +2348,15 @@ const (
 
 func (e VirtualWebhookVisitorID) ToPointer() *VirtualWebhookVisitorID {
 	return &e
+}
+
+// VirtualWebhookVisitorIDValues returns every known VirtualWebhookVisitorID value in schema order.
+func VirtualWebhookVisitorIDValues() []VirtualWebhookVisitorID {
+	return []VirtualWebhookVisitorID{
+		VirtualWebhookVisitorIDSupportedRequired,
+		VirtualWebhookVisitorIDSupported,
+		VirtualWebhookVisitorIDNotSupported,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

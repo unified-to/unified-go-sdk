@@ -22,6 +22,17 @@ func (e CdpProfileGender) ToPointer() *CdpProfileGender {
 	return &e
 }
 
+// CdpProfileGenderValues returns every known CdpProfileGender value in schema order.
+func CdpProfileGenderValues() []CdpProfileGender {
+	return []CdpProfileGender{
+		CdpProfileGenderMale,
+		CdpProfileGenderFemale,
+		CdpProfileGenderIntersex,
+		CdpProfileGenderTrans,
+		CdpProfileGenderNonBinary,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CdpProfileGender) IsExact() bool {
 	if e != nil {

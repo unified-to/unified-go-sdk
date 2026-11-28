@@ -20,6 +20,21 @@ func (e PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalType) To
 	return &e
 }
 
+// PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalTypeValues returns every known PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalType value in schema order.
+func PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalTypeValues() []PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalType {
+	return []PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalType{
+		PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalTypeUnspecified,
+		PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalTypeCpa,
+		PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalTypeCpc,
+		PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalTypeViewableCpm,
+		PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalTypeCustomAlgo,
+		PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalTypeCiva,
+		PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalTypeIvoTen,
+		PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalTypeAvViewed,
+		PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalTypeReach,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalType) IsExact() bool {
 	if e != nil {
@@ -42,6 +57,16 @@ const (
 
 func (e PropertyAdsReportMetricsInsertionorderBidStrategyType) ToPointer() *PropertyAdsReportMetricsInsertionorderBidStrategyType {
 	return &e
+}
+
+// PropertyAdsReportMetricsInsertionorderBidStrategyTypeValues returns every known PropertyAdsReportMetricsInsertionorderBidStrategyType value in schema order.
+func PropertyAdsReportMetricsInsertionorderBidStrategyTypeValues() []PropertyAdsReportMetricsInsertionorderBidStrategyType {
+	return []PropertyAdsReportMetricsInsertionorderBidStrategyType{
+		PropertyAdsReportMetricsInsertionorderBidStrategyTypeFixedBid,
+		PropertyAdsReportMetricsInsertionorderBidStrategyTypeMaximizeSpend,
+		PropertyAdsReportMetricsInsertionorderBidStrategyTypePerformanceGoal,
+		PropertyAdsReportMetricsInsertionorderBidStrategyTypeYoutubeAndPartners,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -73,6 +98,23 @@ const (
 
 func (e PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersType) ToPointer() *PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersType {
 	return &e
+}
+
+// PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersTypeValues returns every known PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersType value in schema order.
+func PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersTypeValues() []PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersType {
+	return []PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersType{
+		PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersTypeUnspecified,
+		PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersTypeManualCpv,
+		PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersTypeManualCpm,
+		PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersTypeTargetCpa,
+		PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersTypeTargetCpm,
+		PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersTypeReserveCpm,
+		PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersTypeMaximizeLift,
+		PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersTypeMaximizeConversions,
+		PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersTypeTargetCpv,
+		PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersTypeTargetRoas,
+		PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersTypeMaximizeConversionValue,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

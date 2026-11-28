@@ -13,6 +13,13 @@ func (e Kind) ToPointer() *Kind {
 	return &e
 }
 
+// KindValues returns every known Kind value in schema order.
+func KindValues() []Kind {
+	return []Kind{
+		KindInstance,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Kind) IsExact() bool {
 	if e != nil {
@@ -46,6 +53,24 @@ func (e FhirCapabilityStatementResourceType) ToPointer() *FhirCapabilityStatemen
 	return &e
 }
 
+// FhirCapabilityStatementResourceTypeValues returns every known FhirCapabilityStatementResourceType value in schema order.
+func FhirCapabilityStatementResourceTypeValues() []FhirCapabilityStatementResourceType {
+	return []FhirCapabilityStatementResourceType{
+		FhirCapabilityStatementResourceTypePatient,
+		FhirCapabilityStatementResourceTypePractitioner,
+		FhirCapabilityStatementResourceTypeEncounter,
+		FhirCapabilityStatementResourceTypeObservation,
+		FhirCapabilityStatementResourceTypeCondition,
+		FhirCapabilityStatementResourceTypeAllergyIntolerance,
+		FhirCapabilityStatementResourceTypeMedicationRequest,
+		FhirCapabilityStatementResourceTypeImmunization,
+		FhirCapabilityStatementResourceTypeBundle,
+		FhirCapabilityStatementResourceTypeOperationOutcome,
+		FhirCapabilityStatementResourceTypeCapabilityStatement,
+		FhirCapabilityStatementResourceTypeDiagnosticReport,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *FhirCapabilityStatementResourceType) IsExact() bool {
 	if e != nil {
@@ -66,6 +91,13 @@ const (
 
 func (e FhirCapabilityStatementStatus) ToPointer() *FhirCapabilityStatementStatus {
 	return &e
+}
+
+// FhirCapabilityStatementStatusValues returns every known FhirCapabilityStatementStatus value in schema order.
+func FhirCapabilityStatementStatusValues() []FhirCapabilityStatementStatus {
+	return []FhirCapabilityStatementStatus{
+		FhirCapabilityStatementStatusActive,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

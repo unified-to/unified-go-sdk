@@ -20,6 +20,15 @@ func (e Architecture) ToPointer() *Architecture {
 	return &e
 }
 
+// ArchitectureValues returns every known Architecture value in schema order.
+func ArchitectureValues() []Architecture {
+	return []Architecture{
+		ArchitectureX8664,
+		ArchitectureArm64,
+		ArchitectureOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Architecture) IsExact() bool {
 	if e != nil {
@@ -43,6 +52,16 @@ const (
 
 func (e GpuManufacturer) ToPointer() *GpuManufacturer {
 	return &e
+}
+
+// GpuManufacturerValues returns every known GpuManufacturer value in schema order.
+func GpuManufacturerValues() []GpuManufacturer {
+	return []GpuManufacturer{
+		GpuManufacturerNvidia,
+		GpuManufacturerAmd,
+		GpuManufacturerIntel,
+		GpuManufacturerOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -96,6 +115,44 @@ const (
 
 func (e GpuModel) ToPointer() *GpuModel {
 	return &e
+}
+
+// GpuModelValues returns every known GpuModel value in schema order.
+func GpuModelValues() []GpuModel {
+	return []GpuModel{
+		GpuModelNvidiaGb300,
+		GpuModelNvidiaB300,
+		GpuModelNvidiaGb200,
+		GpuModelNvidiaB200,
+		GpuModelNvidiaGh200,
+		GpuModelNvidiaH200,
+		GpuModelNvidiaH100Sxm,
+		GpuModelNvidiaH100Pcie,
+		GpuModelNvidiaH100Nvl,
+		GpuModelNvidiaA100Sxm80Gb,
+		GpuModelNvidiaA100Pcie80Gb,
+		GpuModelNvidiaA10040Gb,
+		GpuModelNvidiaL40S,
+		GpuModelNvidiaL40,
+		GpuModelNvidiaL4,
+		GpuModelNvidiaA40,
+		GpuModelNvidiaA10,
+		GpuModelNvidiaRtxPro6000,
+		GpuModelNvidiaRtx6000Ada,
+		GpuModelNvidiaRtxA6000,
+		GpuModelNvidiaRtxA5000,
+		GpuModelNvidiaRtxA4000,
+		GpuModelNvidiaRtx5090,
+		GpuModelNvidiaRtx4090,
+		GpuModelNvidiaRtx3090,
+		GpuModelNvidiaV100,
+		GpuModelNvidiaT4,
+		GpuModelAmdMi355X,
+		GpuModelAmdMi325X,
+		GpuModelAmdMi300X,
+		GpuModelAmdMi250,
+		GpuModelOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

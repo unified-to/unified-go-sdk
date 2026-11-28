@@ -39,6 +39,34 @@ const (
 func (e PatchPaymentSubscriptionQueryParamFields) ToPointer() *PatchPaymentSubscriptionQueryParamFields {
 	return &e
 }
+
+// PatchPaymentSubscriptionQueryParamFieldsValues returns every known PatchPaymentSubscriptionQueryParamFields value in schema order.
+func PatchPaymentSubscriptionQueryParamFieldsValues() []PatchPaymentSubscriptionQueryParamFields {
+	return []PatchPaymentSubscriptionQueryParamFields{
+		PatchPaymentSubscriptionQueryParamFieldsID,
+		PatchPaymentSubscriptionQueryParamFieldsCreatedAt,
+		PatchPaymentSubscriptionQueryParamFieldsUpdatedAt,
+		PatchPaymentSubscriptionQueryParamFieldsDescription,
+		PatchPaymentSubscriptionQueryParamFieldsContactID,
+		PatchPaymentSubscriptionQueryParamFieldsInvoiceID,
+		PatchPaymentSubscriptionQueryParamFieldsCurrentPeriodEndAt,
+		PatchPaymentSubscriptionQueryParamFieldsCurrentPeriodStartAt,
+		PatchPaymentSubscriptionQueryParamFieldsCanceledAt,
+		PatchPaymentSubscriptionQueryParamFieldsCurrency,
+		PatchPaymentSubscriptionQueryParamFieldsTotalAmount,
+		PatchPaymentSubscriptionQueryParamFieldsStartAt,
+		PatchPaymentSubscriptionQueryParamFieldsEndAt,
+		PatchPaymentSubscriptionQueryParamFieldsStatus,
+		PatchPaymentSubscriptionQueryParamFieldsMonth,
+		PatchPaymentSubscriptionQueryParamFieldsIntervalUnit,
+		PatchPaymentSubscriptionQueryParamFieldsDayOfMonth,
+		PatchPaymentSubscriptionQueryParamFieldsDayOfWeek,
+		PatchPaymentSubscriptionQueryParamFieldsInterval,
+		PatchPaymentSubscriptionQueryParamFieldsLineitems,
+		PatchPaymentSubscriptionQueryParamFieldsMetadata,
+		PatchPaymentSubscriptionQueryParamFieldsRaw,
+	}
+}
 func (e *PatchPaymentSubscriptionQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

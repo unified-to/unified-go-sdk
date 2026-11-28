@@ -17,6 +17,17 @@ func (e DmsPartlinePayType) ToPointer() *DmsPartlinePayType {
 	return &e
 }
 
+// DmsPartlinePayTypeValues returns every known DmsPartlinePayType value in schema order.
+func DmsPartlinePayTypeValues() []DmsPartlinePayType {
+	return []DmsPartlinePayType{
+		DmsPartlinePayTypeCustomer,
+		DmsPartlinePayTypeWarranty,
+		DmsPartlinePayTypeInternal,
+		DmsPartlinePayTypeServiceContract,
+		DmsPartlinePayTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *DmsPartlinePayType) IsExact() bool {
 	if e != nil {

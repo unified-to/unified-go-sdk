@@ -16,6 +16,16 @@ func (e SocialMediaType) ToPointer() *SocialMediaType {
 	return &e
 }
 
+// SocialMediaTypeValues returns every known SocialMediaType value in schema order.
+func SocialMediaTypeValues() []SocialMediaType {
+	return []SocialMediaType{
+		SocialMediaTypePhoto,
+		SocialMediaTypeVideo,
+		SocialMediaTypeGif,
+		SocialMediaTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *SocialMediaType) IsExact() bool {
 	if e != nil {

@@ -50,6 +50,45 @@ const (
 func (e GetDmsVehiclesaleQueryParamFields) ToPointer() *GetDmsVehiclesaleQueryParamFields {
 	return &e
 }
+
+// GetDmsVehiclesaleQueryParamFieldsValues returns every known GetDmsVehiclesaleQueryParamFields value in schema order.
+func GetDmsVehiclesaleQueryParamFieldsValues() []GetDmsVehiclesaleQueryParamFields {
+	return []GetDmsVehiclesaleQueryParamFields{
+		GetDmsVehiclesaleQueryParamFieldsID,
+		GetDmsVehiclesaleQueryParamFieldsCreatedAt,
+		GetDmsVehiclesaleQueryParamFieldsUpdatedAt,
+		GetDmsVehiclesaleQueryParamFieldsNumber,
+		GetDmsVehiclesaleQueryParamFieldsStatus,
+		GetDmsVehiclesaleQueryParamFieldsType,
+		GetDmsVehiclesaleQueryParamFieldsFinanceType,
+		GetDmsVehiclesaleQueryParamFieldsContactIds,
+		GetDmsVehiclesaleQueryParamFieldsCompanyIds,
+		GetDmsVehiclesaleQueryParamFieldsLeadID,
+		GetDmsVehiclesaleQueryParamFieldsSalespersonUserIds,
+		GetDmsVehiclesaleQueryParamFieldsSalesManagerUserID,
+		GetDmsVehiclesaleQueryParamFieldsFinanceManagerUserIds,
+		GetDmsVehiclesaleQueryParamFieldsVehicles,
+		GetDmsVehiclesaleQueryParamFieldsTradeIns,
+		GetDmsVehiclesaleQueryParamFieldsFees,
+		GetDmsVehiclesaleQueryParamFieldsProducts,
+		GetDmsVehiclesaleQueryParamFieldsTaxes,
+		GetDmsVehiclesaleQueryParamFieldsFinance,
+		GetDmsVehiclesaleQueryParamFieldsCurrency,
+		GetDmsVehiclesaleQueryParamFieldsRebateAmount,
+		GetDmsVehiclesaleQueryParamFieldsDownPaymentAmount,
+		GetDmsVehiclesaleQueryParamFieldsTaxAmount,
+		GetDmsVehiclesaleQueryParamFieldsTotalAmount,
+		GetDmsVehiclesaleQueryParamFieldsFrontGrossAmount,
+		GetDmsVehiclesaleQueryParamFieldsBackGrossAmount,
+		GetDmsVehiclesaleQueryParamFieldsSoldAt,
+		GetDmsVehiclesaleQueryParamFieldsDeliveredAt,
+		GetDmsVehiclesaleQueryParamFieldsPostedAt,
+		GetDmsVehiclesaleQueryParamFieldsSource,
+		GetDmsVehiclesaleQueryParamFieldsNotes,
+		GetDmsVehiclesaleQueryParamFieldsMetadata,
+		GetDmsVehiclesaleQueryParamFieldsRaw,
+	}
+}
 func (e *GetDmsVehiclesaleQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

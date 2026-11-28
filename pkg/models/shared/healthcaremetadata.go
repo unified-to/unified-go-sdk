@@ -292,6 +292,18 @@ func (e HealthcareMetadataFormat) ToPointer() *HealthcareMetadataFormat {
 	return &e
 }
 
+// HealthcareMetadataFormatValues returns every known HealthcareMetadataFormat value in schema order.
+func HealthcareMetadataFormatValues() []HealthcareMetadataFormat {
+	return []HealthcareMetadataFormat{
+		HealthcareMetadataFormatText,
+		HealthcareMetadataFormatNumber,
+		HealthcareMetadataFormatDate,
+		HealthcareMetadataFormatBoolean,
+		HealthcareMetadataFormatArray,
+		HealthcareMetadataFormatObject,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HealthcareMetadataFormat) IsExact() bool {
 	if e != nil {

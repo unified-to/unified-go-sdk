@@ -19,6 +19,14 @@ func (e StorageFileType) ToPointer() *StorageFileType {
 	return &e
 }
 
+// StorageFileTypeValues returns every known StorageFileType value in schema order.
+func StorageFileTypeValues() []StorageFileType {
+	return []StorageFileType{
+		StorageFileTypeFile,
+		StorageFileTypeFolder,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *StorageFileType) IsExact() bool {
 	if e != nil {

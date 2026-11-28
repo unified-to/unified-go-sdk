@@ -47,6 +47,42 @@ const (
 func (e ListAccountingExpensesQueryParamFields) ToPointer() *ListAccountingExpensesQueryParamFields {
 	return &e
 }
+
+// ListAccountingExpensesQueryParamFieldsValues returns every known ListAccountingExpensesQueryParamFields value in schema order.
+func ListAccountingExpensesQueryParamFieldsValues() []ListAccountingExpensesQueryParamFields {
+	return []ListAccountingExpensesQueryParamFields{
+		ListAccountingExpensesQueryParamFieldsID,
+		ListAccountingExpensesQueryParamFieldsCreatedAt,
+		ListAccountingExpensesQueryParamFieldsUpdatedAt,
+		ListAccountingExpensesQueryParamFieldsUserID,
+		ListAccountingExpensesQueryParamFieldsContactID,
+		ListAccountingExpensesQueryParamFieldsAccountID,
+		ListAccountingExpensesQueryParamFieldsName,
+		ListAccountingExpensesQueryParamFieldsPaymentMethod,
+		ListAccountingExpensesQueryParamFieldsPostedAt,
+		ListAccountingExpensesQueryParamFieldsTotalAmount,
+		ListAccountingExpensesQueryParamFieldsCurrency,
+		ListAccountingExpensesQueryParamFieldsTaxAmount,
+		ListAccountingExpensesQueryParamFieldsReimbursedAmount,
+		ListAccountingExpensesQueryParamFieldsReimbursedAt,
+		ListAccountingExpensesQueryParamFieldsApprovedAt,
+		ListAccountingExpensesQueryParamFieldsApproverUserID,
+		ListAccountingExpensesQueryParamFieldsLineitems,
+		ListAccountingExpensesQueryParamFieldsAttachments,
+		ListAccountingExpensesQueryParamFieldsOrganizationID,
+		ListAccountingExpensesQueryParamFieldsUsers,
+		ListAccountingExpensesQueryParamFieldsApproverUsers,
+		ListAccountingExpensesQueryParamFieldsStatus,
+		ListAccountingExpensesQueryParamFieldsExternalNumber,
+		ListAccountingExpensesQueryParamFieldsCategoryIds,
+		ListAccountingExpensesQueryParamFieldsProjectID,
+		ListAccountingExpensesQueryParamFieldsMetadata,
+		ListAccountingExpensesQueryParamFieldsTaxrateID,
+		ListAccountingExpensesQueryParamFieldsExchangeRate,
+		ListAccountingExpensesQueryParamFieldsType,
+		ListAccountingExpensesQueryParamFieldsRaw,
+	}
+}
 func (e *ListAccountingExpensesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

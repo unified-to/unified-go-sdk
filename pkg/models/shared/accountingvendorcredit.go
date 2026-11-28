@@ -26,6 +26,22 @@ func (e AccountingVendorcreditStatus) ToPointer() *AccountingVendorcreditStatus 
 	return &e
 }
 
+// AccountingVendorcreditStatusValues returns every known AccountingVendorcreditStatus value in schema order.
+func AccountingVendorcreditStatusValues() []AccountingVendorcreditStatus {
+	return []AccountingVendorcreditStatus{
+		AccountingVendorcreditStatusDraft,
+		AccountingVendorcreditStatusVoided,
+		AccountingVendorcreditStatusAuthorized,
+		AccountingVendorcreditStatusPaid,
+		AccountingVendorcreditStatusPartiallyPaid,
+		AccountingVendorcreditStatusPartiallyRefunded,
+		AccountingVendorcreditStatusRefunded,
+		AccountingVendorcreditStatusSubmitted,
+		AccountingVendorcreditStatusDeleted,
+		AccountingVendorcreditStatusOverdue,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingVendorcreditStatus) IsExact() bool {
 	if e != nil {

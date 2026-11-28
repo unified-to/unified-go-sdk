@@ -42,6 +42,37 @@ const (
 func (e PatchLmsContentQueryParamFields) ToPointer() *PatchLmsContentQueryParamFields {
 	return &e
 }
+
+// PatchLmsContentQueryParamFieldsValues returns every known PatchLmsContentQueryParamFields value in schema order.
+func PatchLmsContentQueryParamFieldsValues() []PatchLmsContentQueryParamFields {
+	return []PatchLmsContentQueryParamFields{
+		PatchLmsContentQueryParamFieldsID,
+		PatchLmsContentQueryParamFieldsCreatedAt,
+		PatchLmsContentQueryParamFieldsUpdatedAt,
+		PatchLmsContentQueryParamFieldsExternalReference,
+		PatchLmsContentQueryParamFieldsCourseIds,
+		PatchLmsContentQueryParamFieldsName,
+		PatchLmsContentQueryParamFieldsDescription,
+		PatchLmsContentQueryParamFieldsLanguages,
+		PatchLmsContentQueryParamFieldsMedia,
+		PatchLmsContentQueryParamFieldsIsActive,
+		PatchLmsContentQueryParamFieldsDurationMinutes,
+		PatchLmsContentQueryParamFieldsCategories,
+		PatchLmsContentQueryParamFieldsSubjects,
+		PatchLmsContentQueryParamFieldsSkills,
+		PatchLmsContentQueryParamFieldsTags,
+		PatchLmsContentQueryParamFieldsDifficulty,
+		PatchLmsContentQueryParamFieldsSortOrder,
+		PatchLmsContentQueryParamFieldsProviderName,
+		PatchLmsContentQueryParamFieldsShortDescription,
+		PatchLmsContentQueryParamFieldsLocalizations,
+		PatchLmsContentQueryParamFieldsCollectionIds,
+		PatchLmsContentQueryParamFieldsInstructors,
+		PatchLmsContentQueryParamFieldsPublishedAt,
+		PatchLmsContentQueryParamFieldsMetadata,
+		PatchLmsContentQueryParamFieldsRaw,
+	}
+}
 func (e *PatchLmsContentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -55,6 +55,56 @@ func (e PropertyWorkspaceIntegrationPatchCategories) ToPointer() *PropertyWorksp
 	return &e
 }
 
+// PropertyWorkspaceIntegrationPatchCategoriesValues returns every known PropertyWorkspaceIntegrationPatchCategories value in schema order.
+func PropertyWorkspaceIntegrationPatchCategoriesValues() []PropertyWorkspaceIntegrationPatchCategories {
+	return []PropertyWorkspaceIntegrationPatchCategories{
+		PropertyWorkspaceIntegrationPatchCategoriesPassthrough,
+		PropertyWorkspaceIntegrationPatchCategoriesHris,
+		PropertyWorkspaceIntegrationPatchCategoriesAts,
+		PropertyWorkspaceIntegrationPatchCategoriesAuth,
+		PropertyWorkspaceIntegrationPatchCategoriesSaml,
+		PropertyWorkspaceIntegrationPatchCategoriesCrm,
+		PropertyWorkspaceIntegrationPatchCategoriesEnrich,
+		PropertyWorkspaceIntegrationPatchCategoriesMartech,
+		PropertyWorkspaceIntegrationPatchCategoriesTicketing,
+		PropertyWorkspaceIntegrationPatchCategoriesUc,
+		PropertyWorkspaceIntegrationPatchCategoriesAccounting,
+		PropertyWorkspaceIntegrationPatchCategoriesStorage,
+		PropertyWorkspaceIntegrationPatchCategoriesCommerce,
+		PropertyWorkspaceIntegrationPatchCategoriesPayment,
+		PropertyWorkspaceIntegrationPatchCategoriesGenai,
+		PropertyWorkspaceIntegrationPatchCategoriesMessaging,
+		PropertyWorkspaceIntegrationPatchCategoriesKms,
+		PropertyWorkspaceIntegrationPatchCategoriesTask,
+		PropertyWorkspaceIntegrationPatchCategoriesScim,
+		PropertyWorkspaceIntegrationPatchCategoriesLms,
+		PropertyWorkspaceIntegrationPatchCategoriesRepo,
+		PropertyWorkspaceIntegrationPatchCategoriesMetadata,
+		PropertyWorkspaceIntegrationPatchCategoriesCalendar,
+		PropertyWorkspaceIntegrationPatchCategoriesVerification,
+		PropertyWorkspaceIntegrationPatchCategoriesAds,
+		PropertyWorkspaceIntegrationPatchCategoriesAnalytics,
+		PropertyWorkspaceIntegrationPatchCategoriesForms,
+		PropertyWorkspaceIntegrationPatchCategoriesShipping,
+		PropertyWorkspaceIntegrationPatchCategoriesAssessment,
+		PropertyWorkspaceIntegrationPatchCategoriesSigning,
+		PropertyWorkspaceIntegrationPatchCategoriesClubs,
+		PropertyWorkspaceIntegrationPatchCategoriesDatastore,
+		PropertyWorkspaceIntegrationPatchCategoriesCdp,
+		PropertyWorkspaceIntegrationPatchCategoriesPerformance,
+		PropertyWorkspaceIntegrationPatchCategoriesSocial,
+		PropertyWorkspaceIntegrationPatchCategoriesLegal,
+		PropertyWorkspaceIntegrationPatchCategoriesCompute,
+		PropertyWorkspaceIntegrationPatchCategoriesHealthcare,
+		PropertyWorkspaceIntegrationPatchCategoriesProperty,
+		PropertyWorkspaceIntegrationPatchCategoriesPlm,
+		PropertyWorkspaceIntegrationPatchCategoriesQms,
+		PropertyWorkspaceIntegrationPatchCategoriesDms,
+		PropertyWorkspaceIntegrationPatchCategoriesFhir,
+		PropertyWorkspaceIntegrationPatchCategoriesPrinting,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyWorkspaceIntegrationPatchCategories) IsExact() bool {
 	if e != nil {

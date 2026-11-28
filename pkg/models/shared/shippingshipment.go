@@ -22,6 +22,17 @@ func (e ReturnType) ToPointer() *ReturnType {
 	return &e
 }
 
+// ReturnTypeValues returns every known ReturnType value in schema order.
+func ReturnTypeValues() []ReturnType {
+	return []ReturnType{
+		ReturnTypeCustomer,
+		ReturnTypeVendor,
+		ReturnTypeWarranty,
+		ReturnTypeDefective,
+		ReturnTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ReturnType) IsExact() bool {
 	if e != nil {
@@ -55,6 +66,26 @@ const (
 
 func (e ShippingShipmentStatus) ToPointer() *ShippingShipmentStatus {
 	return &e
+}
+
+// ShippingShipmentStatusValues returns every known ShippingShipmentStatus value in schema order.
+func ShippingShipmentStatusValues() []ShippingShipmentStatus {
+	return []ShippingShipmentStatus{
+		ShippingShipmentStatusPending,
+		ShippingShipmentStatusProcessing,
+		ShippingShipmentStatusInTransit,
+		ShippingShipmentStatusDelivered,
+		ShippingShipmentStatusException,
+		ShippingShipmentStatusCancelled,
+		ShippingShipmentStatusLabelCreated,
+		ShippingShipmentStatusPickedUp,
+		ShippingShipmentStatusOutForDelivery,
+		ShippingShipmentStatusDeliveryAttempted,
+		ShippingShipmentStatusReturnedToSender,
+		ShippingShipmentStatusHeldAtLocation,
+		ShippingShipmentStatusCustomsClearance,
+		ShippingShipmentStatusExceptionResolved,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

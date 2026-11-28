@@ -44,6 +44,39 @@ const (
 func (e ListAccountingSalesreceiptsQueryParamFields) ToPointer() *ListAccountingSalesreceiptsQueryParamFields {
 	return &e
 }
+
+// ListAccountingSalesreceiptsQueryParamFieldsValues returns every known ListAccountingSalesreceiptsQueryParamFields value in schema order.
+func ListAccountingSalesreceiptsQueryParamFieldsValues() []ListAccountingSalesreceiptsQueryParamFields {
+	return []ListAccountingSalesreceiptsQueryParamFields{
+		ListAccountingSalesreceiptsQueryParamFieldsID,
+		ListAccountingSalesreceiptsQueryParamFieldsCreatedAt,
+		ListAccountingSalesreceiptsQueryParamFieldsUpdatedAt,
+		ListAccountingSalesreceiptsQueryParamFieldsOrganizationID,
+		ListAccountingSalesreceiptsQueryParamFieldsMetadata,
+		ListAccountingSalesreceiptsQueryParamFieldsRaw,
+		ListAccountingSalesreceiptsQueryParamFieldsReceiptNumber,
+		ListAccountingSalesreceiptsQueryParamFieldsReference,
+		ListAccountingSalesreceiptsQueryParamFieldsContactID,
+		ListAccountingSalesreceiptsQueryParamFieldsAccountID,
+		ListAccountingSalesreceiptsQueryParamFieldsPostedAt,
+		ListAccountingSalesreceiptsQueryParamFieldsCurrency,
+		ListAccountingSalesreceiptsQueryParamFieldsExchangeRate,
+		ListAccountingSalesreceiptsQueryParamFieldsSubTotalAmount,
+		ListAccountingSalesreceiptsQueryParamFieldsTaxAmount,
+		ListAccountingSalesreceiptsQueryParamFieldsDiscountAmount,
+		ListAccountingSalesreceiptsQueryParamFieldsTotalAmount,
+		ListAccountingSalesreceiptsQueryParamFieldsIsInclusiveOfTax,
+		ListAccountingSalesreceiptsQueryParamFieldsPaymentMethod,
+		ListAccountingSalesreceiptsQueryParamFieldsNotes,
+		ListAccountingSalesreceiptsQueryParamFieldsLineitems,
+		ListAccountingSalesreceiptsQueryParamFieldsBillingAddress,
+		ListAccountingSalesreceiptsQueryParamFieldsShippingAddress,
+		ListAccountingSalesreceiptsQueryParamFieldsCategoryIds,
+		ListAccountingSalesreceiptsQueryParamFieldsProjectID,
+		ListAccountingSalesreceiptsQueryParamFieldsAttachments,
+		ListAccountingSalesreceiptsQueryParamFieldsStatus,
+	}
+}
 func (e *ListAccountingSalesreceiptsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -30,6 +30,25 @@ const (
 func (e UpdateSigningSignatoryQueryParamFields) ToPointer() *UpdateSigningSignatoryQueryParamFields {
 	return &e
 }
+
+// UpdateSigningSignatoryQueryParamFieldsValues returns every known UpdateSigningSignatoryQueryParamFields value in schema order.
+func UpdateSigningSignatoryQueryParamFieldsValues() []UpdateSigningSignatoryQueryParamFields {
+	return []UpdateSigningSignatoryQueryParamFields{
+		UpdateSigningSignatoryQueryParamFieldsID,
+		UpdateSigningSignatoryQueryParamFieldsCreatedAt,
+		UpdateSigningSignatoryQueryParamFieldsUpdatedAt,
+		UpdateSigningSignatoryQueryParamFieldsDocumentID,
+		UpdateSigningSignatoryQueryParamFieldsName,
+		UpdateSigningSignatoryQueryParamFieldsEmail,
+		UpdateSigningSignatoryQueryParamFieldsRole,
+		UpdateSigningSignatoryQueryParamFieldsStatus,
+		UpdateSigningSignatoryQueryParamFieldsOrder,
+		UpdateSigningSignatoryQueryParamFieldsSignedAt,
+		UpdateSigningSignatoryQueryParamFieldsDeclineReason,
+		UpdateSigningSignatoryQueryParamFieldsRaw,
+		UpdateSigningSignatoryQueryParamFieldsMetadata,
+	}
+}
 func (e *UpdateSigningSignatoryQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -61,6 +61,62 @@ func (e HrisPayslipDetailType) ToPointer() *HrisPayslipDetailType {
 	return &e
 }
 
+// HrisPayslipDetailTypeValues returns every known HrisPayslipDetailType value in schema order.
+func HrisPayslipDetailTypeValues() []HrisPayslipDetailType {
+	return []HrisPayslipDetailType{
+		HrisPayslipDetailTypeEarningSalary,
+		HrisPayslipDetailTypeEarningOvertime,
+		HrisPayslipDetailTypeEarningTip,
+		HrisPayslipDetailTypeEarningBonus,
+		HrisPayslipDetailTypeEarningCommission,
+		HrisPayslipDetailTypeEarningAdjustment,
+		HrisPayslipDetailTypeEarning,
+		HrisPayslipDetailTypePretaxDeduction,
+		HrisPayslipDetailTypePretaxDeductionHealthInsurance,
+		HrisPayslipDetailTypePretaxDeductionRetirement,
+		HrisPayslipDetailTypePretaxDeductionHra,
+		HrisPayslipDetailTypeTaxFederal,
+		HrisPayslipDetailTypeTaxRegion,
+		HrisPayslipDetailTypeTaxLocal,
+		HrisPayslipDetailTypePosttaxBenefit,
+		HrisPayslipDetailTypePosttaxGarnishment,
+		HrisPayslipDetailTypeReimbursement,
+		HrisPayslipDetailTypeEarningRegular,
+		HrisPayslipDetailTypeEarningDoubleOvertime,
+		HrisPayslipDetailTypeEarningPto,
+		HrisPayslipDetailTypeEarningSick,
+		HrisPayslipDetailTypeEarningHoliday,
+		HrisPayslipDetailTypeEarningSeverance,
+		HrisPayslipDetailTypeEarningReimbursement,
+		HrisPayslipDetailTypeTaxSocialSecurity,
+		HrisPayslipDetailTypeTaxMedicare,
+		HrisPayslipDetailTypeTaxUnemployment,
+		HrisPayslipDetailTypeTaxEmployer,
+		HrisPayslipDetailTypePretaxDeductionHsa,
+		HrisPayslipDetailTypePretaxDeductionFsa,
+		HrisPayslipDetailTypePretaxDeductionDependentCare,
+		HrisPayslipDetailTypePretaxDeductionCommuter,
+		HrisPayslipDetailTypePretaxDeductionDental,
+		HrisPayslipDetailTypePretaxDeductionVision,
+		HrisPayslipDetailTypePosttaxDeduction,
+		HrisPayslipDetailTypePosttaxRetirementRoth,
+		HrisPayslipDetailTypePosttaxLoanRepayment,
+		HrisPayslipDetailTypeEmployerContribution,
+		HrisPayslipDetailTypePension,
+		HrisPayslipDetailTypeEarningCashInLieu,
+		HrisPayslipDetailTypePretaxDeductionRetirementCatchup,
+		HrisPayslipDetailTypePosttaxRetirementRothCatchup,
+		HrisPayslipDetailTypePosttaxRetirementAfterTax,
+		HrisPayslipDetailTypeEmployerContributionRetirement,
+		HrisPayslipDetailTypeEmployerContributionHsa,
+		HrisPayslipDetailTypeEmployerContributionFsa,
+		HrisPayslipDetailTypePosttaxDeductionCollegeSavings,
+		HrisPayslipDetailTypePosttaxDeductionUnionDues,
+		HrisPayslipDetailTypePosttaxDeductionEwaRepayment,
+		HrisPayslipDetailTypeEarningTaxableBenefit,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HrisPayslipDetailType) IsExact() bool {
 	if e != nil {

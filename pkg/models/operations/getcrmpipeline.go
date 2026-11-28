@@ -27,6 +27,22 @@ const (
 func (e GetCrmPipelineQueryParamFields) ToPointer() *GetCrmPipelineQueryParamFields {
 	return &e
 }
+
+// GetCrmPipelineQueryParamFieldsValues returns every known GetCrmPipelineQueryParamFields value in schema order.
+func GetCrmPipelineQueryParamFieldsValues() []GetCrmPipelineQueryParamFields {
+	return []GetCrmPipelineQueryParamFields{
+		GetCrmPipelineQueryParamFieldsID,
+		GetCrmPipelineQueryParamFieldsCreatedAt,
+		GetCrmPipelineQueryParamFieldsUpdatedAt,
+		GetCrmPipelineQueryParamFieldsName,
+		GetCrmPipelineQueryParamFieldsIsActive,
+		GetCrmPipelineQueryParamFieldsDealProbability,
+		GetCrmPipelineQueryParamFieldsDisplayOrder,
+		GetCrmPipelineQueryParamFieldsStages,
+		GetCrmPipelineQueryParamFieldsMetadata,
+		GetCrmPipelineQueryParamFieldsRaw,
+	}
+}
 func (e *GetCrmPipelineQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

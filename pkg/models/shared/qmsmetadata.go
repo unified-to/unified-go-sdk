@@ -298,6 +298,25 @@ func (e QmsMetadataFormat) ToPointer() *QmsMetadataFormat {
 	return &e
 }
 
+// QmsMetadataFormatValues returns every known QmsMetadataFormat value in schema order.
+func QmsMetadataFormatValues() []QmsMetadataFormat {
+	return []QmsMetadataFormat{
+		QmsMetadataFormatText,
+		QmsMetadataFormatNumber,
+		QmsMetadataFormatDate,
+		QmsMetadataFormatBoolean,
+		QmsMetadataFormatFile,
+		QmsMetadataFormatTextarea,
+		QmsMetadataFormatSingleSelect,
+		QmsMetadataFormatMultipleSelect,
+		QmsMetadataFormatMeasurement,
+		QmsMetadataFormatPrice,
+		QmsMetadataFormatYesNo,
+		QmsMetadataFormatCurrency,
+		QmsMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *QmsMetadataFormat) IsExact() bool {
 	if e != nil {

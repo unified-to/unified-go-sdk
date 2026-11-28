@@ -24,6 +24,19 @@ func (e PropertyHrisPayslipDeductionCoverageLevel) ToPointer() *PropertyHrisPays
 	return &e
 }
 
+// PropertyHrisPayslipDeductionCoverageLevelValues returns every known PropertyHrisPayslipDeductionCoverageLevel value in schema order.
+func PropertyHrisPayslipDeductionCoverageLevelValues() []PropertyHrisPayslipDeductionCoverageLevel {
+	return []PropertyHrisPayslipDeductionCoverageLevel{
+		PropertyHrisPayslipDeductionCoverageLevelEmployeeOnly,
+		PropertyHrisPayslipDeductionCoverageLevelEmployeeSpouse,
+		PropertyHrisPayslipDeductionCoverageLevelEmployeeChild,
+		PropertyHrisPayslipDeductionCoverageLevelEmployeeChildren,
+		PropertyHrisPayslipDeductionCoverageLevelEmployeeFamily,
+		PropertyHrisPayslipDeductionCoverageLevelFamily,
+		PropertyHrisPayslipDeductionCoverageLevelOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyHrisPayslipDeductionCoverageLevel) IsExact() bool {
 	if e != nil {
@@ -44,6 +57,14 @@ const (
 
 func (e PropertyHrisPayslipDeductionEmployerType) ToPointer() *PropertyHrisPayslipDeductionEmployerType {
 	return &e
+}
+
+// PropertyHrisPayslipDeductionEmployerTypeValues returns every known PropertyHrisPayslipDeductionEmployerType value in schema order.
+func PropertyHrisPayslipDeductionEmployerTypeValues() []PropertyHrisPayslipDeductionEmployerType {
+	return []PropertyHrisPayslipDeductionEmployerType{
+		PropertyHrisPayslipDeductionEmployerTypePercentage,
+		PropertyHrisPayslipDeductionEmployerTypeFixed,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -76,6 +97,21 @@ func (e PropertyHrisPayslipDeductionFrequency) ToPointer() *PropertyHrisPayslipD
 	return &e
 }
 
+// PropertyHrisPayslipDeductionFrequencyValues returns every known PropertyHrisPayslipDeductionFrequency value in schema order.
+func PropertyHrisPayslipDeductionFrequencyValues() []PropertyHrisPayslipDeductionFrequency {
+	return []PropertyHrisPayslipDeductionFrequency{
+		PropertyHrisPayslipDeductionFrequencyOneTime,
+		PropertyHrisPayslipDeductionFrequencyDay,
+		PropertyHrisPayslipDeductionFrequencyQuarter,
+		PropertyHrisPayslipDeductionFrequencyYear,
+		PropertyHrisPayslipDeductionFrequencyHour,
+		PropertyHrisPayslipDeductionFrequencyMonth,
+		PropertyHrisPayslipDeductionFrequencyWeek,
+		PropertyHrisPayslipDeductionFrequencyBiweekly,
+		PropertyHrisPayslipDeductionFrequencySemimonthly,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyHrisPayslipDeductionFrequency) IsExact() bool {
 	if e != nil {
@@ -103,6 +139,18 @@ func (e PropertyHrisPayslipDeductionGarnishmentType) ToPointer() *PropertyHrisPa
 	return &e
 }
 
+// PropertyHrisPayslipDeductionGarnishmentTypeValues returns every known PropertyHrisPayslipDeductionGarnishmentType value in schema order.
+func PropertyHrisPayslipDeductionGarnishmentTypeValues() []PropertyHrisPayslipDeductionGarnishmentType {
+	return []PropertyHrisPayslipDeductionGarnishmentType{
+		PropertyHrisPayslipDeductionGarnishmentTypeChildSupport,
+		PropertyHrisPayslipDeductionGarnishmentTypeTaxLevy,
+		PropertyHrisPayslipDeductionGarnishmentTypeStudentLoan,
+		PropertyHrisPayslipDeductionGarnishmentTypeCreditor,
+		PropertyHrisPayslipDeductionGarnishmentTypeBankruptcy,
+		PropertyHrisPayslipDeductionGarnishmentTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyHrisPayslipDeductionGarnishmentType) IsExact() bool {
 	if e != nil {
@@ -123,6 +171,14 @@ const (
 
 func (e PropertyHrisPayslipDeductionType) ToPointer() *PropertyHrisPayslipDeductionType {
 	return &e
+}
+
+// PropertyHrisPayslipDeductionTypeValues returns every known PropertyHrisPayslipDeductionType value in schema order.
+func PropertyHrisPayslipDeductionTypeValues() []PropertyHrisPayslipDeductionType {
+	return []PropertyHrisPayslipDeductionType{
+		PropertyHrisPayslipDeductionTypeFixed,
+		PropertyHrisPayslipDeductionTypePercentage,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

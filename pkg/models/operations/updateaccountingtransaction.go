@@ -42,6 +42,37 @@ const (
 func (e UpdateAccountingTransactionQueryParamFields) ToPointer() *UpdateAccountingTransactionQueryParamFields {
 	return &e
 }
+
+// UpdateAccountingTransactionQueryParamFieldsValues returns every known UpdateAccountingTransactionQueryParamFields value in schema order.
+func UpdateAccountingTransactionQueryParamFieldsValues() []UpdateAccountingTransactionQueryParamFields {
+	return []UpdateAccountingTransactionQueryParamFields{
+		UpdateAccountingTransactionQueryParamFieldsID,
+		UpdateAccountingTransactionQueryParamFieldsCreatedAt,
+		UpdateAccountingTransactionQueryParamFieldsUpdatedAt,
+		UpdateAccountingTransactionQueryParamFieldsMemo,
+		UpdateAccountingTransactionQueryParamFieldsTotalAmount,
+		UpdateAccountingTransactionQueryParamFieldsTaxAmount,
+		UpdateAccountingTransactionQueryParamFieldsAccountID,
+		UpdateAccountingTransactionQueryParamFieldsReference,
+		UpdateAccountingTransactionQueryParamFieldsSubTotalAmount,
+		UpdateAccountingTransactionQueryParamFieldsSplitAccountID,
+		UpdateAccountingTransactionQueryParamFieldsPaymentMethod,
+		UpdateAccountingTransactionQueryParamFieldsPaymentTerms,
+		UpdateAccountingTransactionQueryParamFieldsCustomerMessage,
+		UpdateAccountingTransactionQueryParamFieldsType,
+		UpdateAccountingTransactionQueryParamFieldsLineitems,
+		UpdateAccountingTransactionQueryParamFieldsCurrency,
+		UpdateAccountingTransactionQueryParamFieldsContacts,
+		UpdateAccountingTransactionQueryParamFieldsOrganizationID,
+		UpdateAccountingTransactionQueryParamFieldsCategoryIds,
+		UpdateAccountingTransactionQueryParamFieldsProjectID,
+		UpdateAccountingTransactionQueryParamFieldsTransactionAt,
+		UpdateAccountingTransactionQueryParamFieldsExchangeRate,
+		UpdateAccountingTransactionQueryParamFieldsStatus,
+		UpdateAccountingTransactionQueryParamFieldsMetadata,
+		UpdateAccountingTransactionQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateAccountingTransactionQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

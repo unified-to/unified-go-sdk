@@ -25,6 +25,20 @@ func (e HrisTaxonomyType) ToPointer() *HrisTaxonomyType {
 	return &e
 }
 
+// HrisTaxonomyTypeValues returns every known HrisTaxonomyType value in schema order.
+func HrisTaxonomyTypeValues() []HrisTaxonomyType {
+	return []HrisTaxonomyType{
+		HrisTaxonomyTypeSkill,
+		HrisTaxonomyTypeKnowledge,
+		HrisTaxonomyTypeCompetence,
+		HrisTaxonomyTypeAbility,
+		HrisTaxonomyTypeCertification,
+		HrisTaxonomyTypeRole,
+		HrisTaxonomyTypeHoliday,
+		HrisTaxonomyTypeLeave,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HrisTaxonomyType) IsExact() bool {
 	if e != nil {

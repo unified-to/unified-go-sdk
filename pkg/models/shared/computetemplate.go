@@ -49,6 +49,44 @@ func (e ComputeTemplateGpuModel) ToPointer() *ComputeTemplateGpuModel {
 	return &e
 }
 
+// ComputeTemplateGpuModelValues returns every known ComputeTemplateGpuModel value in schema order.
+func ComputeTemplateGpuModelValues() []ComputeTemplateGpuModel {
+	return []ComputeTemplateGpuModel{
+		ComputeTemplateGpuModelNvidiaGb300,
+		ComputeTemplateGpuModelNvidiaB300,
+		ComputeTemplateGpuModelNvidiaGb200,
+		ComputeTemplateGpuModelNvidiaB200,
+		ComputeTemplateGpuModelNvidiaGh200,
+		ComputeTemplateGpuModelNvidiaH200,
+		ComputeTemplateGpuModelNvidiaH100Sxm,
+		ComputeTemplateGpuModelNvidiaH100Pcie,
+		ComputeTemplateGpuModelNvidiaH100Nvl,
+		ComputeTemplateGpuModelNvidiaA100Sxm80Gb,
+		ComputeTemplateGpuModelNvidiaA100Pcie80Gb,
+		ComputeTemplateGpuModelNvidiaA10040Gb,
+		ComputeTemplateGpuModelNvidiaL40S,
+		ComputeTemplateGpuModelNvidiaL40,
+		ComputeTemplateGpuModelNvidiaL4,
+		ComputeTemplateGpuModelNvidiaA40,
+		ComputeTemplateGpuModelNvidiaA10,
+		ComputeTemplateGpuModelNvidiaRtxPro6000,
+		ComputeTemplateGpuModelNvidiaRtx6000Ada,
+		ComputeTemplateGpuModelNvidiaRtxA6000,
+		ComputeTemplateGpuModelNvidiaRtxA5000,
+		ComputeTemplateGpuModelNvidiaRtxA4000,
+		ComputeTemplateGpuModelNvidiaRtx5090,
+		ComputeTemplateGpuModelNvidiaRtx4090,
+		ComputeTemplateGpuModelNvidiaRtx3090,
+		ComputeTemplateGpuModelNvidiaV100,
+		ComputeTemplateGpuModelNvidiaT4,
+		ComputeTemplateGpuModelAmdMi355X,
+		ComputeTemplateGpuModelAmdMi325X,
+		ComputeTemplateGpuModelAmdMi300X,
+		ComputeTemplateGpuModelAmdMi250,
+		ComputeTemplateGpuModelOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ComputeTemplateGpuModel) IsExact() bool {
 	if e != nil {
@@ -73,6 +111,17 @@ const (
 
 func (e ComputeTemplateStatus) ToPointer() *ComputeTemplateStatus {
 	return &e
+}
+
+// ComputeTemplateStatusValues returns every known ComputeTemplateStatus value in schema order.
+func ComputeTemplateStatusValues() []ComputeTemplateStatus {
+	return []ComputeTemplateStatus{
+		ComputeTemplateStatusPending,
+		ComputeTemplateStatusBuilding,
+		ComputeTemplateStatusReady,
+		ComputeTemplateStatusFailed,
+		ComputeTemplateStatusOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

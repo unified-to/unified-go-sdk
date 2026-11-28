@@ -26,6 +26,21 @@ const (
 func (e ListSigningTemplatesQueryParamFields) ToPointer() *ListSigningTemplatesQueryParamFields {
 	return &e
 }
+
+// ListSigningTemplatesQueryParamFieldsValues returns every known ListSigningTemplatesQueryParamFields value in schema order.
+func ListSigningTemplatesQueryParamFieldsValues() []ListSigningTemplatesQueryParamFields {
+	return []ListSigningTemplatesQueryParamFields{
+		ListSigningTemplatesQueryParamFieldsID,
+		ListSigningTemplatesQueryParamFieldsCreatedAt,
+		ListSigningTemplatesQueryParamFieldsUpdatedAt,
+		ListSigningTemplatesQueryParamFieldsName,
+		ListSigningTemplatesQueryParamFieldsDescription,
+		ListSigningTemplatesQueryParamFieldsIsActive,
+		ListSigningTemplatesQueryParamFieldsCreatorID,
+		ListSigningTemplatesQueryParamFieldsRaw,
+		ListSigningTemplatesQueryParamFieldsMetadata,
+	}
+}
 func (e *ListSigningTemplatesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -36,6 +36,31 @@ const (
 func (e CreateCrmEventQueryParamFields) ToPointer() *CreateCrmEventQueryParamFields {
 	return &e
 }
+
+// CreateCrmEventQueryParamFieldsValues returns every known CreateCrmEventQueryParamFields value in schema order.
+func CreateCrmEventQueryParamFieldsValues() []CreateCrmEventQueryParamFields {
+	return []CreateCrmEventQueryParamFields{
+		CreateCrmEventQueryParamFieldsID,
+		CreateCrmEventQueryParamFieldsCreatedAt,
+		CreateCrmEventQueryParamFieldsUpdatedAt,
+		CreateCrmEventQueryParamFieldsType,
+		CreateCrmEventQueryParamFieldsNote,
+		CreateCrmEventQueryParamFieldsMeeting,
+		CreateCrmEventQueryParamFieldsEmail,
+		CreateCrmEventQueryParamFieldsCall,
+		CreateCrmEventQueryParamFieldsTask,
+		CreateCrmEventQueryParamFieldsMarketingEmail,
+		CreateCrmEventQueryParamFieldsForm,
+		CreateCrmEventQueryParamFieldsPageView,
+		CreateCrmEventQueryParamFieldsDealIds,
+		CreateCrmEventQueryParamFieldsCompanyIds,
+		CreateCrmEventQueryParamFieldsContactIds,
+		CreateCrmEventQueryParamFieldsLeadIds,
+		CreateCrmEventQueryParamFieldsUserID,
+		CreateCrmEventQueryParamFieldsMetadata,
+		CreateCrmEventQueryParamFieldsRaw,
+	}
+}
 func (e *CreateCrmEventQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

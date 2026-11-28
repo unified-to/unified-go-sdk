@@ -34,6 +34,29 @@ const (
 func (e PatchUcRecordingQueryParamFields) ToPointer() *PatchUcRecordingQueryParamFields {
 	return &e
 }
+
+// PatchUcRecordingQueryParamFieldsValues returns every known PatchUcRecordingQueryParamFields value in schema order.
+func PatchUcRecordingQueryParamFieldsValues() []PatchUcRecordingQueryParamFields {
+	return []PatchUcRecordingQueryParamFields{
+		PatchUcRecordingQueryParamFieldsID,
+		PatchUcRecordingQueryParamFieldsCreatedAt,
+		PatchUcRecordingQueryParamFieldsUpdatedAt,
+		PatchUcRecordingQueryParamFieldsStartAt,
+		PatchUcRecordingQueryParamFieldsEndAt,
+		PatchUcRecordingQueryParamFieldsExpiresAt,
+		PatchUcRecordingQueryParamFieldsCallID,
+		PatchUcRecordingQueryParamFieldsWebURL,
+		PatchUcRecordingQueryParamFieldsContacts,
+		PatchUcRecordingQueryParamFieldsUserID,
+		PatchUcRecordingQueryParamFieldsMedia,
+		PatchUcRecordingQueryParamFieldsUserName,
+		PatchUcRecordingQueryParamFieldsUserPhone,
+		PatchUcRecordingQueryParamFieldsType,
+		PatchUcRecordingQueryParamFieldsConversationIdentifier,
+		PatchUcRecordingQueryParamFieldsMetadata,
+		PatchUcRecordingQueryParamFieldsRaw,
+	}
+}
 func (e *PatchUcRecordingQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

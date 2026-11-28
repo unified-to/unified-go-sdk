@@ -15,6 +15,15 @@ func (e FhirCapabilityStatementSearchParamType) ToPointer() *FhirCapabilityState
 	return &e
 }
 
+// FhirCapabilityStatementSearchParamTypeValues returns every known FhirCapabilityStatementSearchParamType value in schema order.
+func FhirCapabilityStatementSearchParamTypeValues() []FhirCapabilityStatementSearchParamType {
+	return []FhirCapabilityStatementSearchParamType{
+		FhirCapabilityStatementSearchParamTypeToken,
+		FhirCapabilityStatementSearchParamTypeDate,
+		FhirCapabilityStatementSearchParamTypeReference,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *FhirCapabilityStatementSearchParamType) IsExact() bool {
 	if e != nil {

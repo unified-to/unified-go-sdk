@@ -25,6 +25,21 @@ func (e HrisCompensationFrequency) ToPointer() *HrisCompensationFrequency {
 	return &e
 }
 
+// HrisCompensationFrequencyValues returns every known HrisCompensationFrequency value in schema order.
+func HrisCompensationFrequencyValues() []HrisCompensationFrequency {
+	return []HrisCompensationFrequency{
+		HrisCompensationFrequencyOneTime,
+		HrisCompensationFrequencyDay,
+		HrisCompensationFrequencyQuarter,
+		HrisCompensationFrequencyYear,
+		HrisCompensationFrequencyHour,
+		HrisCompensationFrequencyMonth,
+		HrisCompensationFrequencyWeek,
+		HrisCompensationFrequencyBiweekly,
+		HrisCompensationFrequencySemimonthly,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HrisCompensationFrequency) IsExact() bool {
 	if e != nil {
@@ -50,6 +65,19 @@ const (
 
 func (e HrisCompensationType) ToPointer() *HrisCompensationType {
 	return &e
+}
+
+// HrisCompensationTypeValues returns every known HrisCompensationType value in schema order.
+func HrisCompensationTypeValues() []HrisCompensationType {
+	return []HrisCompensationType{
+		HrisCompensationTypeSalary,
+		HrisCompensationTypeBonus,
+		HrisCompensationTypeStockOptions,
+		HrisCompensationTypeEquity,
+		HrisCompensationTypeOther,
+		HrisCompensationTypeHourly,
+		HrisCompensationTypeCommission,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

@@ -16,6 +16,17 @@ func (e AtsTelephoneType) ToPointer() *AtsTelephoneType {
 	return &e
 }
 
+// AtsTelephoneTypeValues returns every known AtsTelephoneType value in schema order.
+func AtsTelephoneTypeValues() []AtsTelephoneType {
+	return []AtsTelephoneType{
+		AtsTelephoneTypeWork,
+		AtsTelephoneTypeHome,
+		AtsTelephoneTypeOther,
+		AtsTelephoneTypeFax,
+		AtsTelephoneTypeMobile,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AtsTelephoneType) IsExact() bool {
 	if e != nil {

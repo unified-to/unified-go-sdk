@@ -25,6 +25,20 @@ const (
 func (e CreateHrisCompanyQueryParamFields) ToPointer() *CreateHrisCompanyQueryParamFields {
 	return &e
 }
+
+// CreateHrisCompanyQueryParamFieldsValues returns every known CreateHrisCompanyQueryParamFields value in schema order.
+func CreateHrisCompanyQueryParamFieldsValues() []CreateHrisCompanyQueryParamFields {
+	return []CreateHrisCompanyQueryParamFields{
+		CreateHrisCompanyQueryParamFieldsID,
+		CreateHrisCompanyQueryParamFieldsCreatedAt,
+		CreateHrisCompanyQueryParamFieldsUpdatedAt,
+		CreateHrisCompanyQueryParamFieldsName,
+		CreateHrisCompanyQueryParamFieldsLegalName,
+		CreateHrisCompanyQueryParamFieldsAddress,
+		CreateHrisCompanyQueryParamFieldsMetadata,
+		CreateHrisCompanyQueryParamFieldsRaw,
+	}
+}
 func (e *CreateHrisCompanyQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

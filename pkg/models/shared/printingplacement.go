@@ -17,6 +17,17 @@ func (e PrintingPlacementUnit) ToPointer() *PrintingPlacementUnit {
 	return &e
 }
 
+// PrintingPlacementUnitValues returns every known PrintingPlacementUnit value in schema order.
+func PrintingPlacementUnitValues() []PrintingPlacementUnit {
+	return []PrintingPlacementUnit{
+		PrintingPlacementUnitPixel,
+		PrintingPlacementUnitMillimeter,
+		PrintingPlacementUnitCentimeter,
+		PrintingPlacementUnitInch,
+		PrintingPlacementUnitOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PrintingPlacementUnit) IsExact() bool {
 	if e != nil {

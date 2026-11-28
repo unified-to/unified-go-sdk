@@ -33,6 +33,29 @@ func (e PropertyAdsReportMetricsAdAdType) ToPointer() *PropertyAdsReportMetricsA
 	return &e
 }
 
+// PropertyAdsReportMetricsAdAdTypeValues returns every known PropertyAdsReportMetricsAdAdType value in schema order.
+func PropertyAdsReportMetricsAdAdTypeValues() []PropertyAdsReportMetricsAdAdType {
+	return []PropertyAdsReportMetricsAdAdType{
+		PropertyAdsReportMetricsAdAdTypeText,
+		PropertyAdsReportMetricsAdAdTypeImage,
+		PropertyAdsReportMetricsAdAdTypeVideo,
+		PropertyAdsReportMetricsAdAdTypeResponsive,
+		PropertyAdsReportMetricsAdAdTypeShopping,
+		PropertyAdsReportMetricsAdAdTypeApp,
+		PropertyAdsReportMetricsAdAdTypeCall,
+		PropertyAdsReportMetricsAdAdTypeCarousel,
+		PropertyAdsReportMetricsAdAdTypeSocial,
+		PropertyAdsReportMetricsAdAdTypeDisplay,
+		PropertyAdsReportMetricsAdAdTypeSearch,
+		PropertyAdsReportMetricsAdAdTypeAudio,
+		PropertyAdsReportMetricsAdAdTypeYoutube,
+		PropertyAdsReportMetricsAdAdTypeNative,
+		PropertyAdsReportMetricsAdAdTypeCtv,
+		PropertyAdsReportMetricsAdAdTypeDooh,
+		PropertyAdsReportMetricsAdAdTypePerformanceMax,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsAdAdType) IsExact() bool {
 	if e != nil {
@@ -59,6 +82,20 @@ const (
 
 func (e PropertyAdsReportMetricsAdStatus) ToPointer() *PropertyAdsReportMetricsAdStatus {
 	return &e
+}
+
+// PropertyAdsReportMetricsAdStatusValues returns every known PropertyAdsReportMetricsAdStatus value in schema order.
+func PropertyAdsReportMetricsAdStatusValues() []PropertyAdsReportMetricsAdStatus {
+	return []PropertyAdsReportMetricsAdStatus{
+		PropertyAdsReportMetricsAdStatusUnspecified,
+		PropertyAdsReportMetricsAdStatusActive,
+		PropertyAdsReportMetricsAdStatusPaused,
+		PropertyAdsReportMetricsAdStatusArchived,
+		PropertyAdsReportMetricsAdStatusDraft,
+		PropertyAdsReportMetricsAdStatusScheduledForDeletion,
+		PropertyAdsReportMetricsAdStatusProcessing,
+		PropertyAdsReportMetricsAdStatusProcessingFailed,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

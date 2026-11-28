@@ -17,6 +17,18 @@ func (e AssessmentParameterType) ToPointer() *AssessmentParameterType {
 	return &e
 }
 
+// AssessmentParameterTypeValues returns every known AssessmentParameterType value in schema order.
+func AssessmentParameterTypeValues() []AssessmentParameterType {
+	return []AssessmentParameterType{
+		AssessmentParameterTypeText,
+		AssessmentParameterTypeNumber,
+		AssessmentParameterTypeMultipleChoice,
+		AssessmentParameterTypeMultipleSelect,
+		AssessmentParameterTypeDate,
+		AssessmentParameterTypeFile,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AssessmentParameterType) IsExact() bool {
 	if e != nil {

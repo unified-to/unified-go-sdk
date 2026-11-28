@@ -13,6 +13,14 @@ func (e CommerceItemMediaType) ToPointer() *CommerceItemMediaType {
 	return &e
 }
 
+// CommerceItemMediaTypeValues returns every known CommerceItemMediaType value in schema order.
+func CommerceItemMediaTypeValues() []CommerceItemMediaType {
+	return []CommerceItemMediaType{
+		CommerceItemMediaTypeImage,
+		CommerceItemMediaTypeVideo,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CommerceItemMediaType) IsExact() bool {
 	if e != nil {

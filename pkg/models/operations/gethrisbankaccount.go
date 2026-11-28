@@ -38,6 +38,33 @@ const (
 func (e GetHrisBankaccountQueryParamFields) ToPointer() *GetHrisBankaccountQueryParamFields {
 	return &e
 }
+
+// GetHrisBankaccountQueryParamFieldsValues returns every known GetHrisBankaccountQueryParamFields value in schema order.
+func GetHrisBankaccountQueryParamFieldsValues() []GetHrisBankaccountQueryParamFields {
+	return []GetHrisBankaccountQueryParamFields{
+		GetHrisBankaccountQueryParamFieldsID,
+		GetHrisBankaccountQueryParamFieldsCreatedAt,
+		GetHrisBankaccountQueryParamFieldsUpdatedAt,
+		GetHrisBankaccountQueryParamFieldsUserID,
+		GetHrisBankaccountQueryParamFieldsCompanyID,
+		GetHrisBankaccountQueryParamFieldsAccountType,
+		GetHrisBankaccountQueryParamFieldsBankName,
+		GetHrisBankaccountQueryParamFieldsRoutingNumber,
+		GetHrisBankaccountQueryParamFieldsAccountNumber,
+		GetHrisBankaccountQueryParamFieldsAccountNumberLast4,
+		GetHrisBankaccountQueryParamFieldsName,
+		GetHrisBankaccountQueryParamFieldsIsPrimary,
+		GetHrisBankaccountQueryParamFieldsIban,
+		GetHrisBankaccountQueryParamFieldsBic,
+		GetHrisBankaccountQueryParamFieldsCountryCode,
+		GetHrisBankaccountQueryParamFieldsCurrency,
+		GetHrisBankaccountQueryParamFieldsSplitType,
+		GetHrisBankaccountQueryParamFieldsSplitAmount,
+		GetHrisBankaccountQueryParamFieldsPriority,
+		GetHrisBankaccountQueryParamFieldsMetadata,
+		GetHrisBankaccountQueryParamFieldsRaw,
+	}
+}
 func (e *GetHrisBankaccountQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

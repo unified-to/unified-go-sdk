@@ -18,6 +18,19 @@ func (e DayOfWeek) ToPointer() *DayOfWeek {
 	return &e
 }
 
+// DayOfWeekValues returns every known DayOfWeek value in schema order.
+func DayOfWeekValues() []DayOfWeek {
+	return []DayOfWeek{
+		DayOfWeekMonday,
+		DayOfWeekTuesday,
+		DayOfWeekWednesday,
+		DayOfWeekThursday,
+		DayOfWeekFriday,
+		DayOfWeekSaturday,
+		DayOfWeekSunday,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *DayOfWeek) IsExact() bool {
 	if e != nil {

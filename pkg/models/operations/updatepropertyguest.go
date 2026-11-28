@@ -33,6 +33,28 @@ const (
 func (e UpdatePropertyGuestQueryParamFields) ToPointer() *UpdatePropertyGuestQueryParamFields {
 	return &e
 }
+
+// UpdatePropertyGuestQueryParamFieldsValues returns every known UpdatePropertyGuestQueryParamFields value in schema order.
+func UpdatePropertyGuestQueryParamFieldsValues() []UpdatePropertyGuestQueryParamFields {
+	return []UpdatePropertyGuestQueryParamFields{
+		UpdatePropertyGuestQueryParamFieldsID,
+		UpdatePropertyGuestQueryParamFieldsCreatedAt,
+		UpdatePropertyGuestQueryParamFieldsUpdatedAt,
+		UpdatePropertyGuestQueryParamFieldsName,
+		UpdatePropertyGuestQueryParamFieldsFirstName,
+		UpdatePropertyGuestQueryParamFieldsLastName,
+		UpdatePropertyGuestQueryParamFieldsEmails,
+		UpdatePropertyGuestQueryParamFieldsTelephones,
+		UpdatePropertyGuestQueryParamFieldsAddress,
+		UpdatePropertyGuestQueryParamFieldsLanguage,
+		UpdatePropertyGuestQueryParamFieldsNationality,
+		UpdatePropertyGuestQueryParamFieldsCompanyName,
+		UpdatePropertyGuestQueryParamFieldsImageURL,
+		UpdatePropertyGuestQueryParamFieldsNotes,
+		UpdatePropertyGuestQueryParamFieldsMetadata,
+		UpdatePropertyGuestQueryParamFieldsRaw,
+	}
+}
 func (e *UpdatePropertyGuestQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

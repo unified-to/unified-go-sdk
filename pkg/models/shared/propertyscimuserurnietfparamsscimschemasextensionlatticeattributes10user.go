@@ -26,6 +26,22 @@ func (e Ethnicity) ToPointer() *Ethnicity {
 	return &e
 }
 
+// EthnicityValues returns every known Ethnicity value in schema order.
+func EthnicityValues() []Ethnicity {
+	return []Ethnicity{
+		EthnicityCaucasian,
+		EthnicityEastAsian,
+		EthnicityMiddleEastern,
+		EthnicityBlack,
+		EthnicityBiracialSouthAsianAndCaucasian,
+		EthnicityFilipino,
+		EthnicitySouthAsian,
+		EthnicityIndian,
+		EthnicityWhite,
+		EthnicityAsian,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Ethnicity) IsExact() bool {
 	if e != nil {
@@ -46,6 +62,14 @@ const (
 
 func (e PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender) ToPointer() *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender {
 	return &e
+}
+
+// PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGenderValues returns every known PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender value in schema order.
+func PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGenderValues() []PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender {
+	return []PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender{
+		PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGenderMale,
+		PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGenderFemale,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -69,6 +93,15 @@ const (
 
 func (e SexualOrientation) ToPointer() *SexualOrientation {
 	return &e
+}
+
+// SexualOrientationValues returns every known SexualOrientation value in schema order.
+func SexualOrientationValues() []SexualOrientation {
+	return []SexualOrientation{
+		SexualOrientationQueer,
+		SexualOrientationHeterosexual,
+		SexualOrientationStraight,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

@@ -25,6 +25,20 @@ func (e MarketingCampaignStatus) ToPointer() *MarketingCampaignStatus {
 	return &e
 }
 
+// MarketingCampaignStatusValues returns every known MarketingCampaignStatus value in schema order.
+func MarketingCampaignStatusValues() []MarketingCampaignStatus {
+	return []MarketingCampaignStatus{
+		MarketingCampaignStatusDraft,
+		MarketingCampaignStatusScheduled,
+		MarketingCampaignStatusSending,
+		MarketingCampaignStatusSent,
+		MarketingCampaignStatusCancelled,
+		MarketingCampaignStatusPaused,
+		MarketingCampaignStatusArchived,
+		MarketingCampaignStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *MarketingCampaignStatus) IsExact() bool {
 	if e != nil {

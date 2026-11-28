@@ -22,6 +22,17 @@ func (e SigningSignatoryRole) ToPointer() *SigningSignatoryRole {
 	return &e
 }
 
+// SigningSignatoryRoleValues returns every known SigningSignatoryRole value in schema order.
+func SigningSignatoryRoleValues() []SigningSignatoryRole {
+	return []SigningSignatoryRole{
+		SigningSignatoryRoleSigner,
+		SigningSignatoryRoleCc,
+		SigningSignatoryRoleApprover,
+		SigningSignatoryRoleInPersonSigner,
+		SigningSignatoryRoleViewer,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *SigningSignatoryRole) IsExact() bool {
 	if e != nil {
@@ -47,6 +58,18 @@ const (
 
 func (e SigningSignatoryStatus) ToPointer() *SigningSignatoryStatus {
 	return &e
+}
+
+// SigningSignatoryStatusValues returns every known SigningSignatoryStatus value in schema order.
+func SigningSignatoryStatusValues() []SigningSignatoryStatus {
+	return []SigningSignatoryStatus{
+		SigningSignatoryStatusPending,
+		SigningSignatoryStatusSent,
+		SigningSignatoryStatusDelivered,
+		SigningSignatoryStatusSigned,
+		SigningSignatoryStatusDeclined,
+		SigningSignatoryStatusError,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

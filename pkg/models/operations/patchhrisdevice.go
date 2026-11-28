@@ -38,6 +38,33 @@ const (
 func (e PatchHrisDeviceQueryParamFields) ToPointer() *PatchHrisDeviceQueryParamFields {
 	return &e
 }
+
+// PatchHrisDeviceQueryParamFieldsValues returns every known PatchHrisDeviceQueryParamFields value in schema order.
+func PatchHrisDeviceQueryParamFieldsValues() []PatchHrisDeviceQueryParamFields {
+	return []PatchHrisDeviceQueryParamFields{
+		PatchHrisDeviceQueryParamFieldsID,
+		PatchHrisDeviceQueryParamFieldsCreatedAt,
+		PatchHrisDeviceQueryParamFieldsUpdatedAt,
+		PatchHrisDeviceQueryParamFieldsName,
+		PatchHrisDeviceQueryParamFieldsAssetTag,
+		PatchHrisDeviceQueryParamFieldsVersion,
+		PatchHrisDeviceQueryParamFieldsManufacturer,
+		PatchHrisDeviceQueryParamFieldsModel,
+		PatchHrisDeviceQueryParamFieldsOs,
+		PatchHrisDeviceQueryParamFieldsOsVersion,
+		PatchHrisDeviceQueryParamFieldsUserIds,
+		PatchHrisDeviceQueryParamFieldsAdminUserIds,
+		PatchHrisDeviceQueryParamFieldsLocationID,
+		PatchHrisDeviceQueryParamFieldsHasAntivirus,
+		PatchHrisDeviceQueryParamFieldsHasPasswordManager,
+		PatchHrisDeviceQueryParamFieldsHasFirewall,
+		PatchHrisDeviceQueryParamFieldsHasHdEncrypted,
+		PatchHrisDeviceQueryParamFieldsHasScreenlock,
+		PatchHrisDeviceQueryParamFieldsIsMissing,
+		PatchHrisDeviceQueryParamFieldsMetadata,
+		PatchHrisDeviceQueryParamFieldsRaw,
+	}
+}
 func (e *PatchHrisDeviceQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -48,6 +48,43 @@ const (
 func (e CreateAtsJobQueryParamFields) ToPointer() *CreateAtsJobQueryParamFields {
 	return &e
 }
+
+// CreateAtsJobQueryParamFieldsValues returns every known CreateAtsJobQueryParamFields value in schema order.
+func CreateAtsJobQueryParamFieldsValues() []CreateAtsJobQueryParamFields {
+	return []CreateAtsJobQueryParamFields{
+		CreateAtsJobQueryParamFieldsID,
+		CreateAtsJobQueryParamFieldsCreatedAt,
+		CreateAtsJobQueryParamFieldsUpdatedAt,
+		CreateAtsJobQueryParamFieldsName,
+		CreateAtsJobQueryParamFieldsDescription,
+		CreateAtsJobQueryParamFieldsRecruiterIds,
+		CreateAtsJobQueryParamFieldsHiringManagerIds,
+		CreateAtsJobQueryParamFieldsHiringManagers,
+		CreateAtsJobQueryParamFieldsStatus,
+		CreateAtsJobQueryParamFieldsClosedAt,
+		CreateAtsJobQueryParamFieldsAddresses,
+		CreateAtsJobQueryParamFieldsCompensation,
+		CreateAtsJobQueryParamFieldsEmploymentType,
+		CreateAtsJobQueryParamFieldsRemote,
+		CreateAtsJobQueryParamFieldsLanguageLocale,
+		CreateAtsJobQueryParamFieldsPublicJobUrls,
+		CreateAtsJobQueryParamFieldsNumberOfOpenings,
+		CreateAtsJobQueryParamFieldsCompanyID,
+		CreateAtsJobQueryParamFieldsQuestions,
+		CreateAtsJobQueryParamFieldsPostings,
+		CreateAtsJobQueryParamFieldsGroups,
+		CreateAtsJobQueryParamFieldsOpenings,
+		CreateAtsJobQueryParamFieldsMinimumExperienceYears,
+		CreateAtsJobQueryParamFieldsMinimumDegree,
+		CreateAtsJobQueryParamFieldsSkills,
+		CreateAtsJobQueryParamFieldsMetadata,
+		CreateAtsJobQueryParamFieldsUserID,
+		CreateAtsJobQueryParamFieldsIndustry,
+		CreateAtsJobQueryParamFieldsSummary,
+		CreateAtsJobQueryParamFieldsFees,
+		CreateAtsJobQueryParamFieldsRaw,
+	}
+}
 func (e *CreateAtsJobQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

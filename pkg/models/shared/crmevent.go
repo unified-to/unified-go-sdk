@@ -25,6 +25,20 @@ func (e CrmEventType) ToPointer() *CrmEventType {
 	return &e
 }
 
+// CrmEventTypeValues returns every known CrmEventType value in schema order.
+func CrmEventTypeValues() []CrmEventType {
+	return []CrmEventType{
+		CrmEventTypeNote,
+		CrmEventTypeEmail,
+		CrmEventTypeTask,
+		CrmEventTypeMeeting,
+		CrmEventTypeCall,
+		CrmEventTypeMarketingEmail,
+		CrmEventTypeForm,
+		CrmEventTypePageView,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CrmEventType) IsExact() bool {
 	if e != nil {

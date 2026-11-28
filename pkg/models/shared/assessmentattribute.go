@@ -17,6 +17,17 @@ func (e AssessmentAttributeStatus) ToPointer() *AssessmentAttributeStatus {
 	return &e
 }
 
+// AssessmentAttributeStatusValues returns every known AssessmentAttributeStatus value in schema order.
+func AssessmentAttributeStatusValues() []AssessmentAttributeStatus {
+	return []AssessmentAttributeStatus{
+		AssessmentAttributeStatusOpen,
+		AssessmentAttributeStatusInProgress,
+		AssessmentAttributeStatusCompleted,
+		AssessmentAttributeStatusFailed,
+		AssessmentAttributeStatusRejected,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AssessmentAttributeStatus) IsExact() bool {
 	if e != nil {
@@ -38,6 +49,15 @@ const (
 
 func (e AssessmentAttributeType) ToPointer() *AssessmentAttributeType {
 	return &e
+}
+
+// AssessmentAttributeTypeValues returns every known AssessmentAttributeType value in schema order.
+func AssessmentAttributeTypeValues() []AssessmentAttributeType {
+	return []AssessmentAttributeType{
+		AssessmentAttributeTypeText,
+		AssessmentAttributeTypeNumber,
+		AssessmentAttributeTypeSubResult,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

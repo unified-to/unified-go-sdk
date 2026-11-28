@@ -22,6 +22,17 @@ func (e CommerceTableStatus) ToPointer() *CommerceTableStatus {
 	return &e
 }
 
+// CommerceTableStatusValues returns every known CommerceTableStatus value in schema order.
+func CommerceTableStatusValues() []CommerceTableStatus {
+	return []CommerceTableStatus{
+		CommerceTableStatusAvailable,
+		CommerceTableStatusOccupied,
+		CommerceTableStatusReserved,
+		CommerceTableStatusInactive,
+		CommerceTableStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CommerceTableStatus) IsExact() bool {
 	if e != nil {

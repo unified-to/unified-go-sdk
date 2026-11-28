@@ -58,6 +58,53 @@ const (
 func (e GetShippingShipmentQueryParamFields) ToPointer() *GetShippingShipmentQueryParamFields {
 	return &e
 }
+
+// GetShippingShipmentQueryParamFieldsValues returns every known GetShippingShipmentQueryParamFields value in schema order.
+func GetShippingShipmentQueryParamFieldsValues() []GetShippingShipmentQueryParamFields {
+	return []GetShippingShipmentQueryParamFields{
+		GetShippingShipmentQueryParamFieldsID,
+		GetShippingShipmentQueryParamFieldsCreatedAt,
+		GetShippingShipmentQueryParamFieldsUpdatedAt,
+		GetShippingShipmentQueryParamFieldsOrderID,
+		GetShippingShipmentQueryParamFieldsOrganizationID,
+		GetShippingShipmentQueryParamFieldsFromAddress,
+		GetShippingShipmentQueryParamFieldsToAddress,
+		GetShippingShipmentQueryParamFieldsPackages,
+		GetShippingShipmentQueryParamFieldsCarrierID,
+		GetShippingShipmentQueryParamFieldsServiceCode,
+		GetShippingShipmentQueryParamFieldsStatus,
+		GetShippingShipmentQueryParamFieldsRateID,
+		GetShippingShipmentQueryParamFieldsLabelID,
+		GetShippingShipmentQueryParamFieldsTrackingID,
+		GetShippingShipmentQueryParamFieldsShippedAt,
+		GetShippingShipmentQueryParamFieldsRateAmount,
+		GetShippingShipmentQueryParamFieldsRateCurrency,
+		GetShippingShipmentQueryParamFieldsRateServiceName,
+		GetShippingShipmentQueryParamFieldsRateEstimatedDays,
+		GetShippingShipmentQueryParamFieldsRateEstimatedDeliveryAt,
+		GetShippingShipmentQueryParamFieldsIsRateGuaranteed,
+		GetShippingShipmentQueryParamFieldsReturnAddress,
+		GetShippingShipmentQueryParamFieldsReturnAuthorizationNumber,
+		GetShippingShipmentQueryParamFieldsWarehouseLocationID,
+		GetShippingShipmentQueryParamFieldsWarehouseLocationName,
+		GetShippingShipmentQueryParamFieldsCustoms,
+		GetShippingShipmentQueryParamFieldsIsInternational,
+		GetShippingShipmentQueryParamFieldsInsurance,
+		GetShippingShipmentQueryParamFieldsSpecialInstructions,
+		GetShippingShipmentQueryParamFieldsIsSignatureRequired,
+		GetShippingShipmentQueryParamFieldsIsAdultSignatureRequired,
+		GetShippingShipmentQueryParamFieldsReferenceNumber,
+		GetShippingShipmentQueryParamFieldsIsReturn,
+		GetShippingShipmentQueryParamFieldsOriginalShipmentID,
+		GetShippingShipmentQueryParamFieldsReturnReason,
+		GetShippingShipmentQueryParamFieldsReturnType,
+		GetShippingShipmentQueryParamFieldsCarrierName,
+		GetShippingShipmentQueryParamFieldsTrackingURL,
+		GetShippingShipmentQueryParamFieldsLineitems,
+		GetShippingShipmentQueryParamFieldsMetadata,
+		GetShippingShipmentQueryParamFieldsRaw,
+	}
+}
 func (e *GetShippingShipmentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -29,6 +29,24 @@ const (
 func (e UpdateAccountingCategoryQueryParamFields) ToPointer() *UpdateAccountingCategoryQueryParamFields {
 	return &e
 }
+
+// UpdateAccountingCategoryQueryParamFieldsValues returns every known UpdateAccountingCategoryQueryParamFields value in schema order.
+func UpdateAccountingCategoryQueryParamFieldsValues() []UpdateAccountingCategoryQueryParamFields {
+	return []UpdateAccountingCategoryQueryParamFields{
+		UpdateAccountingCategoryQueryParamFieldsID,
+		UpdateAccountingCategoryQueryParamFieldsCreatedAt,
+		UpdateAccountingCategoryQueryParamFieldsUpdatedAt,
+		UpdateAccountingCategoryQueryParamFieldsName,
+		UpdateAccountingCategoryQueryParamFieldsDescription,
+		UpdateAccountingCategoryQueryParamFieldsIsActive,
+		UpdateAccountingCategoryQueryParamFieldsParentID,
+		UpdateAccountingCategoryQueryParamFieldsType,
+		UpdateAccountingCategoryQueryParamFieldsCode,
+		UpdateAccountingCategoryQueryParamFieldsOrganizationID,
+		UpdateAccountingCategoryQueryParamFieldsMetadata,
+		UpdateAccountingCategoryQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateAccountingCategoryQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

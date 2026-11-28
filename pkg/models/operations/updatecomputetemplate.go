@@ -37,6 +37,32 @@ const (
 func (e UpdateComputeTemplateQueryParamFields) ToPointer() *UpdateComputeTemplateQueryParamFields {
 	return &e
 }
+
+// UpdateComputeTemplateQueryParamFieldsValues returns every known UpdateComputeTemplateQueryParamFields value in schema order.
+func UpdateComputeTemplateQueryParamFieldsValues() []UpdateComputeTemplateQueryParamFields {
+	return []UpdateComputeTemplateQueryParamFields{
+		UpdateComputeTemplateQueryParamFieldsID,
+		UpdateComputeTemplateQueryParamFieldsCreatedAt,
+		UpdateComputeTemplateQueryParamFieldsUpdatedAt,
+		UpdateComputeTemplateQueryParamFieldsName,
+		UpdateComputeTemplateQueryParamFieldsAliases,
+		UpdateComputeTemplateQueryParamFieldsImage,
+		UpdateComputeTemplateQueryParamFieldsDockerfile,
+		UpdateComputeTemplateQueryParamFieldsStartCommand,
+		UpdateComputeTemplateQueryParamFieldsStatus,
+		UpdateComputeTemplateQueryParamFieldsGpuModel,
+		UpdateComputeTemplateQueryParamFieldsGpuCount,
+		UpdateComputeTemplateQueryParamFieldsCPUCount,
+		UpdateComputeTemplateQueryParamFieldsMemoryMb,
+		UpdateComputeTemplateQueryParamFieldsDiskMb,
+		UpdateComputeTemplateQueryParamFieldsPorts,
+		UpdateComputeTemplateQueryParamFieldsEnv,
+		UpdateComputeTemplateQueryParamFieldsIsPublic,
+		UpdateComputeTemplateQueryParamFieldsLastUsedAt,
+		UpdateComputeTemplateQueryParamFieldsMetadata,
+		UpdateComputeTemplateQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateComputeTemplateQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

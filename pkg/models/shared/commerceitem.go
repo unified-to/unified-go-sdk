@@ -20,6 +20,16 @@ func (e WeightUnit) ToPointer() *WeightUnit {
 	return &e
 }
 
+// WeightUnitValues returns every known WeightUnit value in schema order.
+func WeightUnitValues() []WeightUnit {
+	return []WeightUnit{
+		WeightUnitG,
+		WeightUnitKg,
+		WeightUnitOz,
+		WeightUnitLb,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *WeightUnit) IsExact() bool {
 	if e != nil {

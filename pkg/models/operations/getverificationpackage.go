@@ -37,6 +37,32 @@ const (
 func (e GetVerificationPackageQueryParamFields) ToPointer() *GetVerificationPackageQueryParamFields {
 	return &e
 }
+
+// GetVerificationPackageQueryParamFieldsValues returns every known GetVerificationPackageQueryParamFields value in schema order.
+func GetVerificationPackageQueryParamFieldsValues() []GetVerificationPackageQueryParamFields {
+	return []GetVerificationPackageQueryParamFields{
+		GetVerificationPackageQueryParamFieldsID,
+		GetVerificationPackageQueryParamFieldsCreatedAt,
+		GetVerificationPackageQueryParamFieldsUpdatedAt,
+		GetVerificationPackageQueryParamFieldsName,
+		GetVerificationPackageQueryParamFieldsType,
+		GetVerificationPackageQueryParamFieldsAliases,
+		GetVerificationPackageQueryParamFieldsTags,
+		GetVerificationPackageQueryParamFieldsDescription,
+		GetVerificationPackageQueryParamFieldsParameters,
+		GetVerificationPackageQueryParamFieldsAverageProcessingTimes,
+		GetVerificationPackageQueryParamFieldsHasRedirectURL,
+		GetVerificationPackageQueryParamFieldsHasTargetURL,
+		GetVerificationPackageQueryParamFieldsNeedsIPAddress,
+		GetVerificationPackageQueryParamFieldsCostAmount,
+		GetVerificationPackageQueryParamFieldsCurrency,
+		GetVerificationPackageQueryParamFieldsMaxScore,
+		GetVerificationPackageQueryParamFieldsInfoURL,
+		GetVerificationPackageQueryParamFieldsValidRegions,
+		GetVerificationPackageQueryParamFieldsMetadata,
+		GetVerificationPackageQueryParamFieldsRaw,
+	}
+}
 func (e *GetVerificationPackageQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

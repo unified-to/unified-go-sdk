@@ -34,6 +34,29 @@ const (
 func (e CreateCommerceCollectionQueryParamFields) ToPointer() *CreateCommerceCollectionQueryParamFields {
 	return &e
 }
+
+// CreateCommerceCollectionQueryParamFieldsValues returns every known CreateCommerceCollectionQueryParamFields value in schema order.
+func CreateCommerceCollectionQueryParamFieldsValues() []CreateCommerceCollectionQueryParamFields {
+	return []CreateCommerceCollectionQueryParamFields{
+		CreateCommerceCollectionQueryParamFieldsID,
+		CreateCommerceCollectionQueryParamFieldsCreatedAt,
+		CreateCommerceCollectionQueryParamFieldsUpdatedAt,
+		CreateCommerceCollectionQueryParamFieldsName,
+		CreateCommerceCollectionQueryParamFieldsPublicName,
+		CreateCommerceCollectionQueryParamFieldsDescription,
+		CreateCommerceCollectionQueryParamFieldsPublicDescription,
+		CreateCommerceCollectionQueryParamFieldsMedia,
+		CreateCommerceCollectionQueryParamFieldsIsVisible,
+		CreateCommerceCollectionQueryParamFieldsIsActive,
+		CreateCommerceCollectionQueryParamFieldsIsFeatured,
+		CreateCommerceCollectionQueryParamFieldsTags,
+		CreateCommerceCollectionQueryParamFieldsType,
+		CreateCommerceCollectionQueryParamFieldsParentID,
+		CreateCommerceCollectionQueryParamFieldsMetadata,
+		CreateCommerceCollectionQueryParamFieldsItemMetadata,
+		CreateCommerceCollectionQueryParamFieldsRaw,
+	}
+}
 func (e *CreateCommerceCollectionQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

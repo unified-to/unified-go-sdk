@@ -44,6 +44,39 @@ const (
 func (e ListQmsIssuesQueryParamFields) ToPointer() *ListQmsIssuesQueryParamFields {
 	return &e
 }
+
+// ListQmsIssuesQueryParamFieldsValues returns every known ListQmsIssuesQueryParamFields value in schema order.
+func ListQmsIssuesQueryParamFieldsValues() []ListQmsIssuesQueryParamFields {
+	return []ListQmsIssuesQueryParamFields{
+		ListQmsIssuesQueryParamFieldsID,
+		ListQmsIssuesQueryParamFieldsCreatedAt,
+		ListQmsIssuesQueryParamFieldsUpdatedAt,
+		ListQmsIssuesQueryParamFieldsNumber,
+		ListQmsIssuesQueryParamFieldsName,
+		ListQmsIssuesQueryParamFieldsDescription,
+		ListQmsIssuesQueryParamFieldsType,
+		ListQmsIssuesQueryParamFieldsOriginalType,
+		ListQmsIssuesQueryParamFieldsStatus,
+		ListQmsIssuesQueryParamFieldsLifecycleState,
+		ListQmsIssuesQueryParamFieldsSeverity,
+		ListQmsIssuesQueryParamFieldsSource,
+		ListQmsIssuesQueryParamFieldsDisposition,
+		ListQmsIssuesQueryParamFieldsOriginalDisposition,
+		ListQmsIssuesQueryParamFieldsAffectedItems,
+		ListQmsIssuesQueryParamFieldsSupplierName,
+		ListQmsIssuesQueryParamFieldsUserID,
+		ListQmsIssuesQueryParamFieldsReporterUserID,
+		ListQmsIssuesQueryParamFieldsActionIds,
+		ListQmsIssuesQueryParamFieldsChangeIds,
+		ListQmsIssuesQueryParamFieldsOpenedAt,
+		ListQmsIssuesQueryParamFieldsDueAt,
+		ListQmsIssuesQueryParamFieldsClosedAt,
+		ListQmsIssuesQueryParamFieldsFileIds,
+		ListQmsIssuesQueryParamFieldsURL,
+		ListQmsIssuesQueryParamFieldsMetadata,
+		ListQmsIssuesQueryParamFieldsRaw,
+	}
+}
 func (e *ListQmsIssuesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

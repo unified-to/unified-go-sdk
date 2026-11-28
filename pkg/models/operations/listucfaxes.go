@@ -32,6 +32,27 @@ const (
 func (e ListUcFaxesQueryParamFields) ToPointer() *ListUcFaxesQueryParamFields {
 	return &e
 }
+
+// ListUcFaxesQueryParamFieldsValues returns every known ListUcFaxesQueryParamFields value in schema order.
+func ListUcFaxesQueryParamFieldsValues() []ListUcFaxesQueryParamFields {
+	return []ListUcFaxesQueryParamFields{
+		ListUcFaxesQueryParamFieldsID,
+		ListUcFaxesQueryParamFieldsCreatedAt,
+		ListUcFaxesQueryParamFieldsUpdatedAt,
+		ListUcFaxesQueryParamFieldsType,
+		ListUcFaxesQueryParamFieldsStatus,
+		ListUcFaxesQueryParamFieldsFromTelephone,
+		ListUcFaxesQueryParamFieldsToTelephone,
+		ListUcFaxesQueryParamFieldsPages,
+		ListUcFaxesQueryParamFieldsMediaURL,
+		ListUcFaxesQueryParamFieldsUserID,
+		ListUcFaxesQueryParamFieldsCostAmount,
+		ListUcFaxesQueryParamFieldsCurrency,
+		ListUcFaxesQueryParamFieldsErrorMessage,
+		ListUcFaxesQueryParamFieldsMetadata,
+		ListUcFaxesQueryParamFieldsRaw,
+	}
+}
 func (e *ListUcFaxesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

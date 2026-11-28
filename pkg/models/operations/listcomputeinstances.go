@@ -58,6 +58,53 @@ const (
 func (e ListComputeInstancesQueryParamFields) ToPointer() *ListComputeInstancesQueryParamFields {
 	return &e
 }
+
+// ListComputeInstancesQueryParamFieldsValues returns every known ListComputeInstancesQueryParamFields value in schema order.
+func ListComputeInstancesQueryParamFieldsValues() []ListComputeInstancesQueryParamFields {
+	return []ListComputeInstancesQueryParamFields{
+		ListComputeInstancesQueryParamFieldsID,
+		ListComputeInstancesQueryParamFieldsCreatedAt,
+		ListComputeInstancesQueryParamFieldsUpdatedAt,
+		ListComputeInstancesQueryParamFieldsName,
+		ListComputeInstancesQueryParamFieldsType,
+		ListComputeInstancesQueryParamFieldsStatus,
+		ListComputeInstancesQueryParamFieldsStatusReason,
+		ListComputeInstancesQueryParamFieldsAllowedActions,
+		ListComputeInstancesQueryParamFieldsMarket,
+		ListComputeInstancesQueryParamFieldsRegionID,
+		ListComputeInstancesQueryParamFieldsTemplateID,
+		ListComputeInstancesQueryParamFieldsImage,
+		ListComputeInstancesQueryParamFieldsSourceSnapshotID,
+		ListComputeInstancesQueryParamFieldsParentInstanceID,
+		ListComputeInstancesQueryParamFieldsGputypeID,
+		ListComputeInstancesQueryParamFieldsGpuModel,
+		ListComputeInstancesQueryParamFieldsGpuCount,
+		ListComputeInstancesQueryParamFieldsSku,
+		ListComputeInstancesQueryParamFieldsCPUCount,
+		ListComputeInstancesQueryParamFieldsMemoryMb,
+		ListComputeInstancesQueryParamFieldsDiskMb,
+		ListComputeInstancesQueryParamFieldsArchitecture,
+		ListComputeInstancesQueryParamFieldsPriceAmount,
+		ListComputeInstancesQueryParamFieldsPriceUnit,
+		ListComputeInstancesQueryParamFieldsCurrency,
+		ListComputeInstancesQueryParamFieldsVolumeIds,
+		ListComputeInstancesQueryParamFieldsEndpoints,
+		ListComputeInstancesQueryParamFieldsSSH,
+		ListComputeInstancesQueryParamFieldsHasInternetAccess,
+		ListComputeInstancesQueryParamFieldsTimeoutSeconds,
+		ListComputeInstancesQueryParamFieldsExpiresAt,
+		ListComputeInstancesQueryParamFieldsOnExpire,
+		ListComputeInstancesQueryParamFieldsIdleTimeoutSeconds,
+		ListComputeInstancesQueryParamFieldsOnIdle,
+		ListComputeInstancesQueryParamFieldsProjectIdentifier,
+		ListComputeInstancesQueryParamFieldsServiceID,
+		ListComputeInstancesQueryParamFieldsEnv,
+		ListComputeInstancesQueryParamFieldsStartedAt,
+		ListComputeInstancesQueryParamFieldsTerminatedAt,
+		ListComputeInstancesQueryParamFieldsMetadata,
+		ListComputeInstancesQueryParamFieldsRaw,
+	}
+}
 func (e *ListComputeInstancesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

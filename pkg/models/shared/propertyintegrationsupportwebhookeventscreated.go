@@ -13,6 +13,14 @@ func (e PropertyIntegrationSupportWebhookEventsCreated) ToPointer() *PropertyInt
 	return &e
 }
 
+// PropertyIntegrationSupportWebhookEventsCreatedValues returns every known PropertyIntegrationSupportWebhookEventsCreated value in schema order.
+func PropertyIntegrationSupportWebhookEventsCreatedValues() []PropertyIntegrationSupportWebhookEventsCreated {
+	return []PropertyIntegrationSupportWebhookEventsCreated{
+		PropertyIntegrationSupportWebhookEventsCreatedVirtual,
+		PropertyIntegrationSupportWebhookEventsCreatedNative,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyIntegrationSupportWebhookEventsCreated) IsExact() bool {
 	if e != nil {

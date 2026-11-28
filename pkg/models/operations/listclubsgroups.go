@@ -40,6 +40,35 @@ const (
 func (e ListClubsGroupsQueryParamFields) ToPointer() *ListClubsGroupsQueryParamFields {
 	return &e
 }
+
+// ListClubsGroupsQueryParamFieldsValues returns every known ListClubsGroupsQueryParamFields value in schema order.
+func ListClubsGroupsQueryParamFieldsValues() []ListClubsGroupsQueryParamFields {
+	return []ListClubsGroupsQueryParamFields{
+		ListClubsGroupsQueryParamFieldsID,
+		ListClubsGroupsQueryParamFieldsCreatedAt,
+		ListClubsGroupsQueryParamFieldsUpdatedAt,
+		ListClubsGroupsQueryParamFieldsName,
+		ListClubsGroupsQueryParamFieldsDescription,
+		ListClubsGroupsQueryParamFieldsSportType,
+		ListClubsGroupsQueryParamFieldsGroupType,
+		ListClubsGroupsQueryParamFieldsAddress,
+		ListClubsGroupsQueryParamFieldsMemberCount,
+		ListClubsGroupsQueryParamFieldsFollowingCount,
+		ListClubsGroupsQueryParamFieldsPostCount,
+		ListClubsGroupsQueryParamFieldsIsPrivate,
+		ListClubsGroupsQueryParamFieldsIsVerified,
+		ListClubsGroupsQueryParamFieldsIsFeatured,
+		ListClubsGroupsQueryParamFieldsIsAdmin,
+		ListClubsGroupsQueryParamFieldsIsOwner,
+		ListClubsGroupsQueryParamFieldsMembershipStatus,
+		ListClubsGroupsQueryParamFieldsURL,
+		ListClubsGroupsQueryParamFieldsProfileImageURL,
+		ListClubsGroupsQueryParamFieldsCoverImageURL,
+		ListClubsGroupsQueryParamFieldsActivityTypes,
+		ListClubsGroupsQueryParamFieldsMetadata,
+		ListClubsGroupsQueryParamFieldsRaw,
+	}
+}
 func (e *ListClubsGroupsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

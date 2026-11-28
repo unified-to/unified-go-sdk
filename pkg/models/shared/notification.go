@@ -37,6 +37,33 @@ func (e Event) ToPointer() *Event {
 	return &e
 }
 
+// EventValues returns every known Event value in schema order.
+func EventValues() []Event {
+	return []Event{
+		EventUserCreated,
+		EventUserDeleted,
+		EventConnectionHealthy,
+		EventConnectionUnhealthy,
+		EventConnectionCreated,
+		EventConnectionUpdated,
+		EventConnectionDeleted,
+		EventConnectionPaused,
+		EventConnectionUnpaused,
+		EventIntegrationActivated,
+		EventIntegrationDeactivated,
+		EventIntegrationUpdated,
+		EventWorkspaceUpdated,
+		EventWorkspaceOverLimit,
+		EventWorkspace80PercentLimit,
+		EventWebhookCreated,
+		EventWebhookDeleted,
+		EventWebhookUnhealthy,
+		EventWebhookPaused,
+		EventWebhookUnpaused,
+		EventUnifiedPersonMerged,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Event) IsExact() bool {
 	if e != nil {

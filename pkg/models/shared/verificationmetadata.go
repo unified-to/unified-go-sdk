@@ -297,6 +297,25 @@ func (e VerificationMetadataFormat) ToPointer() *VerificationMetadataFormat {
 	return &e
 }
 
+// VerificationMetadataFormatValues returns every known VerificationMetadataFormat value in schema order.
+func VerificationMetadataFormatValues() []VerificationMetadataFormat {
+	return []VerificationMetadataFormat{
+		VerificationMetadataFormatText,
+		VerificationMetadataFormatNumber,
+		VerificationMetadataFormatDate,
+		VerificationMetadataFormatBoolean,
+		VerificationMetadataFormatFile,
+		VerificationMetadataFormatTextarea,
+		VerificationMetadataFormatSingleSelect,
+		VerificationMetadataFormatMultipleSelect,
+		VerificationMetadataFormatMeasurement,
+		VerificationMetadataFormatPrice,
+		VerificationMetadataFormatYesNo,
+		VerificationMetadataFormatCurrency,
+		VerificationMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VerificationMetadataFormat) IsExact() bool {
 	if e != nil {

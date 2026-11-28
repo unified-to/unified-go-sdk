@@ -32,6 +32,27 @@ const (
 func (e CreateMartechCampaignQueryParamFields) ToPointer() *CreateMartechCampaignQueryParamFields {
 	return &e
 }
+
+// CreateMartechCampaignQueryParamFieldsValues returns every known CreateMartechCampaignQueryParamFields value in schema order.
+func CreateMartechCampaignQueryParamFieldsValues() []CreateMartechCampaignQueryParamFields {
+	return []CreateMartechCampaignQueryParamFields{
+		CreateMartechCampaignQueryParamFieldsID,
+		CreateMartechCampaignQueryParamFieldsCreatedAt,
+		CreateMartechCampaignQueryParamFieldsUpdatedAt,
+		CreateMartechCampaignQueryParamFieldsName,
+		CreateMartechCampaignQueryParamFieldsType,
+		CreateMartechCampaignQueryParamFieldsStatus,
+		CreateMartechCampaignQueryParamFieldsListIds,
+		CreateMartechCampaignQueryParamFieldsSubjectLine,
+		CreateMartechCampaignQueryParamFieldsPreviewText,
+		CreateMartechCampaignQueryParamFieldsFromName,
+		CreateMartechCampaignQueryParamFieldsFromEmail,
+		CreateMartechCampaignQueryParamFieldsReplyToEmail,
+		CreateMartechCampaignQueryParamFieldsSendAt,
+		CreateMartechCampaignQueryParamFieldsMetadata,
+		CreateMartechCampaignQueryParamFieldsRaw,
+	}
+}
 func (e *CreateMartechCampaignQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

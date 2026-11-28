@@ -19,6 +19,15 @@ func (e AdsInsertionorderBudgetUnit) ToPointer() *AdsInsertionorderBudgetUnit {
 	return &e
 }
 
+// AdsInsertionorderBudgetUnitValues returns every known AdsInsertionorderBudgetUnit value in schema order.
+func AdsInsertionorderBudgetUnitValues() []AdsInsertionorderBudgetUnit {
+	return []AdsInsertionorderBudgetUnit{
+		AdsInsertionorderBudgetUnitUnspecified,
+		AdsInsertionorderBudgetUnitCurrency,
+		AdsInsertionorderBudgetUnitImpressions,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AdsInsertionorderBudgetUnit) IsExact() bool {
 	if e != nil {
@@ -45,6 +54,20 @@ const (
 
 func (e AdsInsertionorderStatus) ToPointer() *AdsInsertionorderStatus {
 	return &e
+}
+
+// AdsInsertionorderStatusValues returns every known AdsInsertionorderStatus value in schema order.
+func AdsInsertionorderStatusValues() []AdsInsertionorderStatus {
+	return []AdsInsertionorderStatus{
+		AdsInsertionorderStatusUnspecified,
+		AdsInsertionorderStatusActive,
+		AdsInsertionorderStatusPaused,
+		AdsInsertionorderStatusArchived,
+		AdsInsertionorderStatusDraft,
+		AdsInsertionorderStatusScheduledForDeletion,
+		AdsInsertionorderStatusProcessing,
+		AdsInsertionorderStatusProcessingFailed,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

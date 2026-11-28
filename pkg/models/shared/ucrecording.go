@@ -18,6 +18,14 @@ func (e UcRecordingType) ToPointer() *UcRecordingType {
 	return &e
 }
 
+// UcRecordingTypeValues returns every known UcRecordingType value in schema order.
+func UcRecordingTypeValues() []UcRecordingType {
+	return []UcRecordingType{
+		UcRecordingTypeInbound,
+		UcRecordingTypeOutbound,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *UcRecordingType) IsExact() bool {
 	if e != nil {

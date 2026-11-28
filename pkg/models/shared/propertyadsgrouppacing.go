@@ -14,6 +14,15 @@ func (e PropertyAdsGroupPacingPeriod) ToPointer() *PropertyAdsGroupPacingPeriod 
 	return &e
 }
 
+// PropertyAdsGroupPacingPeriodValues returns every known PropertyAdsGroupPacingPeriod value in schema order.
+func PropertyAdsGroupPacingPeriodValues() []PropertyAdsGroupPacingPeriod {
+	return []PropertyAdsGroupPacingPeriod{
+		PropertyAdsGroupPacingPeriodUnspecified,
+		PropertyAdsGroupPacingPeriodDaily,
+		PropertyAdsGroupPacingPeriodFlight,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsGroupPacingPeriod) IsExact() bool {
 	if e != nil {

@@ -36,6 +36,31 @@ const (
 func (e CreatePerformanceGoalQueryParamFields) ToPointer() *CreatePerformanceGoalQueryParamFields {
 	return &e
 }
+
+// CreatePerformanceGoalQueryParamFieldsValues returns every known CreatePerformanceGoalQueryParamFields value in schema order.
+func CreatePerformanceGoalQueryParamFieldsValues() []CreatePerformanceGoalQueryParamFields {
+	return []CreatePerformanceGoalQueryParamFields{
+		CreatePerformanceGoalQueryParamFieldsID,
+		CreatePerformanceGoalQueryParamFieldsCreatedAt,
+		CreatePerformanceGoalQueryParamFieldsUpdatedAt,
+		CreatePerformanceGoalQueryParamFieldsName,
+		CreatePerformanceGoalQueryParamFieldsDescription,
+		CreatePerformanceGoalQueryParamFieldsUserIds,
+		CreatePerformanceGoalQueryParamFieldsCompanyID,
+		CreatePerformanceGoalQueryParamFieldsParentID,
+		CreatePerformanceGoalQueryParamFieldsCycleID,
+		CreatePerformanceGoalQueryParamFieldsType,
+		CreatePerformanceGoalQueryParamFieldsStatus,
+		CreatePerformanceGoalQueryParamFieldsProgress,
+		CreatePerformanceGoalQueryParamFieldsWeight,
+		CreatePerformanceGoalQueryParamFieldsStartAt,
+		CreatePerformanceGoalQueryParamFieldsDueAt,
+		CreatePerformanceGoalQueryParamFieldsCompletedAt,
+		CreatePerformanceGoalQueryParamFieldsMilestones,
+		CreatePerformanceGoalQueryParamFieldsMetadata,
+		CreatePerformanceGoalQueryParamFieldsRaw,
+	}
+}
 func (e *CreatePerformanceGoalQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

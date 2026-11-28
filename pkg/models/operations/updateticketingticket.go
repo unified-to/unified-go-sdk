@@ -36,6 +36,31 @@ const (
 func (e UpdateTicketingTicketQueryParamFields) ToPointer() *UpdateTicketingTicketQueryParamFields {
 	return &e
 }
+
+// UpdateTicketingTicketQueryParamFieldsValues returns every known UpdateTicketingTicketQueryParamFields value in schema order.
+func UpdateTicketingTicketQueryParamFieldsValues() []UpdateTicketingTicketQueryParamFields {
+	return []UpdateTicketingTicketQueryParamFields{
+		UpdateTicketingTicketQueryParamFieldsID,
+		UpdateTicketingTicketQueryParamFieldsCreatedAt,
+		UpdateTicketingTicketQueryParamFieldsUpdatedAt,
+		UpdateTicketingTicketQueryParamFieldsCustomerID,
+		UpdateTicketingTicketQueryParamFieldsSubject,
+		UpdateTicketingTicketQueryParamFieldsDescription,
+		UpdateTicketingTicketQueryParamFieldsStatus,
+		UpdateTicketingTicketQueryParamFieldsClosedAt,
+		UpdateTicketingTicketQueryParamFieldsPriority,
+		UpdateTicketingTicketQueryParamFieldsCategoryID,
+		UpdateTicketingTicketQueryParamFieldsSource,
+		UpdateTicketingTicketQueryParamFieldsSourceRef,
+		UpdateTicketingTicketQueryParamFieldsTags,
+		UpdateTicketingTicketQueryParamFieldsUserID,
+		UpdateTicketingTicketQueryParamFieldsURL,
+		UpdateTicketingTicketQueryParamFieldsAttachmentIds,
+		UpdateTicketingTicketQueryParamFieldsDueAt,
+		UpdateTicketingTicketQueryParamFieldsMetadata,
+		UpdateTicketingTicketQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateTicketingTicketQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

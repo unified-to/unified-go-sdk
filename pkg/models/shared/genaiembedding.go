@@ -17,6 +17,18 @@ func (e EncodingFormat) ToPointer() *EncodingFormat {
 	return &e
 }
 
+// EncodingFormatValues returns every known EncodingFormat value in schema order.
+func EncodingFormatValues() []EncodingFormat {
+	return []EncodingFormat{
+		EncodingFormatFloat,
+		EncodingFormatUint8,
+		EncodingFormatInt8,
+		EncodingFormatBinary,
+		EncodingFormatUbinary,
+		EncodingFormatBase64,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *EncodingFormat) IsExact() bool {
 	if e != nil {

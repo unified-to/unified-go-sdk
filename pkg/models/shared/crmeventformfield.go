@@ -25,6 +25,26 @@ func (e CrmEventFormFieldType) ToPointer() *CrmEventFormFieldType {
 	return &e
 }
 
+// CrmEventFormFieldTypeValues returns every known CrmEventFormFieldType value in schema order.
+func CrmEventFormFieldTypeValues() []CrmEventFormFieldType {
+	return []CrmEventFormFieldType{
+		CrmEventFormFieldTypeText,
+		CrmEventFormFieldTypeNumber,
+		CrmEventFormFieldTypeDate,
+		CrmEventFormFieldTypeBoolean,
+		CrmEventFormFieldTypeMultipleChoice,
+		CrmEventFormFieldTypeFile,
+		CrmEventFormFieldTypeTextarea,
+		CrmEventFormFieldTypeSingleSelect,
+		CrmEventFormFieldTypeMultipleSelect,
+		CrmEventFormFieldTypeEmail,
+		CrmEventFormFieldTypePhone,
+		CrmEventFormFieldTypeYesNo,
+		CrmEventFormFieldTypeCurrency,
+		CrmEventFormFieldTypeURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CrmEventFormFieldType) IsExact() bool {
 	if e != nil {

@@ -27,6 +27,22 @@ func (e BillingEvent) ToPointer() *BillingEvent {
 	return &e
 }
 
+// BillingEventValues returns every known BillingEvent value in schema order.
+func BillingEventValues() []BillingEvent {
+	return []BillingEvent{
+		BillingEventImpressions,
+		BillingEventLinkClicks,
+		BillingEventVideoViews,
+		BillingEventAppInstalls,
+		BillingEventEngagement,
+		BillingEventPageLikes,
+		BillingEventMessages,
+		BillingEventPostEngagement,
+		BillingEventPurchase,
+		BillingEventNone,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *BillingEvent) IsExact() bool {
 	if e != nil {
@@ -49,6 +65,16 @@ const (
 
 func (e BudgetAllocationType) ToPointer() *BudgetAllocationType {
 	return &e
+}
+
+// BudgetAllocationTypeValues returns every known BudgetAllocationType value in schema order.
+func BudgetAllocationTypeValues() []BudgetAllocationType {
+	return []BudgetAllocationType{
+		BudgetAllocationTypeUnspecified,
+		BudgetAllocationTypeAutomatic,
+		BudgetAllocationTypeFixed,
+		BudgetAllocationTypeUnlimited,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -75,6 +101,16 @@ func (e AdsGroupBudgetPeriod) ToPointer() *AdsGroupBudgetPeriod {
 	return &e
 }
 
+// AdsGroupBudgetPeriodValues returns every known AdsGroupBudgetPeriod value in schema order.
+func AdsGroupBudgetPeriodValues() []AdsGroupBudgetPeriod {
+	return []AdsGroupBudgetPeriod{
+		AdsGroupBudgetPeriodDaily,
+		AdsGroupBudgetPeriodMonthly,
+		AdsGroupBudgetPeriodTotal,
+		AdsGroupBudgetPeriodLifetime,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AdsGroupBudgetPeriod) IsExact() bool {
 	if e != nil {
@@ -96,6 +132,15 @@ const (
 
 func (e AdsGroupBudgetUnit) ToPointer() *AdsGroupBudgetUnit {
 	return &e
+}
+
+// AdsGroupBudgetUnitValues returns every known AdsGroupBudgetUnit value in schema order.
+func AdsGroupBudgetUnitValues() []AdsGroupBudgetUnit {
+	return []AdsGroupBudgetUnit{
+		AdsGroupBudgetUnitUnspecified,
+		AdsGroupBudgetUnitCurrency,
+		AdsGroupBudgetUnitImpressions,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -126,6 +171,19 @@ func (e CostType) ToPointer() *CostType {
 	return &e
 }
 
+// CostTypeValues returns every known CostType value in schema order.
+func CostTypeValues() []CostType {
+	return []CostType{
+		CostTypeCpm,
+		CostTypeViewableCpm,
+		CostTypeCpc,
+		CostTypeCpd,
+		CostTypeCpa,
+		CostTypeCpcv,
+		CostTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CostType) IsExact() bool {
 	if e != nil {
@@ -149,6 +207,16 @@ const (
 
 func (e CreativeSelection) ToPointer() *CreativeSelection {
 	return &e
+}
+
+// CreativeSelectionValues returns every known CreativeSelection value in schema order.
+func CreativeSelectionValues() []CreativeSelection {
+	return []CreativeSelection{
+		CreativeSelectionOptimized,
+		CreativeSelectionRoundRobin,
+		CreativeSelectionWeighted,
+		CreativeSelectionSequential,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -182,6 +250,22 @@ func (e DeliveryType) ToPointer() *DeliveryType {
 	return &e
 }
 
+// DeliveryTypeValues returns every known DeliveryType value in schema order.
+func DeliveryTypeValues() []DeliveryType {
+	return []DeliveryType{
+		DeliveryTypeStandard,
+		DeliveryTypeSponsorship,
+		DeliveryTypeNetwork,
+		DeliveryTypeBulk,
+		DeliveryTypePricePriority,
+		DeliveryTypeHouse,
+		DeliveryTypePreferredDeal,
+		DeliveryTypeAdExchange,
+		DeliveryTypeClickTracking,
+		DeliveryTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *DeliveryType) IsExact() bool {
 	if e != nil {
@@ -211,6 +295,23 @@ const (
 
 func (e AdsGroupEffectiveStatus) ToPointer() *AdsGroupEffectiveStatus {
 	return &e
+}
+
+// AdsGroupEffectiveStatusValues returns every known AdsGroupEffectiveStatus value in schema order.
+func AdsGroupEffectiveStatusValues() []AdsGroupEffectiveStatus {
+	return []AdsGroupEffectiveStatus{
+		AdsGroupEffectiveStatusUnspecified,
+		AdsGroupEffectiveStatusServing,
+		AdsGroupEffectiveStatusLimited,
+		AdsGroupEffectiveStatusLearning,
+		AdsGroupEffectiveStatusPaused,
+		AdsGroupEffectiveStatusPending,
+		AdsGroupEffectiveStatusEnded,
+		AdsGroupEffectiveStatusMisconfigured,
+		AdsGroupEffectiveStatusNotEligible,
+		AdsGroupEffectiveStatusArchived,
+		AdsGroupEffectiveStatusRemoved,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -246,6 +347,24 @@ func (e OptimizationGoal) ToPointer() *OptimizationGoal {
 	return &e
 }
 
+// OptimizationGoalValues returns every known OptimizationGoal value in schema order.
+func OptimizationGoalValues() []OptimizationGoal {
+	return []OptimizationGoal{
+		OptimizationGoalReach,
+		OptimizationGoalImpressions,
+		OptimizationGoalLinkClicks,
+		OptimizationGoalLandingPageViews,
+		OptimizationGoalConversions,
+		OptimizationGoalLeadGeneration,
+		OptimizationGoalAppInstalls,
+		OptimizationGoalAppEngagement,
+		OptimizationGoalVideoViews,
+		OptimizationGoalEngagement,
+		OptimizationGoalPageLikes,
+		OptimizationGoalMessages,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *OptimizationGoal) IsExact() bool {
 	if e != nil {
@@ -272,6 +391,20 @@ const (
 
 func (e AdsGroupStatus) ToPointer() *AdsGroupStatus {
 	return &e
+}
+
+// AdsGroupStatusValues returns every known AdsGroupStatus value in schema order.
+func AdsGroupStatusValues() []AdsGroupStatus {
+	return []AdsGroupStatus{
+		AdsGroupStatusUnspecified,
+		AdsGroupStatusActive,
+		AdsGroupStatusPaused,
+		AdsGroupStatusArchived,
+		AdsGroupStatusDraft,
+		AdsGroupStatusScheduledForDeletion,
+		AdsGroupStatusProcessing,
+		AdsGroupStatusProcessingFailed,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -309,6 +442,29 @@ const (
 
 func (e AdsGroupType) ToPointer() *AdsGroupType {
 	return &e
+}
+
+// AdsGroupTypeValues returns every known AdsGroupType value in schema order.
+func AdsGroupTypeValues() []AdsGroupType {
+	return []AdsGroupType{
+		AdsGroupTypeText,
+		AdsGroupTypeImage,
+		AdsGroupTypeVideo,
+		AdsGroupTypeResponsive,
+		AdsGroupTypeShopping,
+		AdsGroupTypeApp,
+		AdsGroupTypeCall,
+		AdsGroupTypeCarousel,
+		AdsGroupTypeSocial,
+		AdsGroupTypeDisplay,
+		AdsGroupTypeSearch,
+		AdsGroupTypeAudio,
+		AdsGroupTypeYoutube,
+		AdsGroupTypeNative,
+		AdsGroupTypeCtv,
+		AdsGroupTypeDooh,
+		AdsGroupTypePerformanceMax,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

@@ -20,6 +20,16 @@ func (e RegistrationStatus) ToPointer() *RegistrationStatus {
 	return &e
 }
 
+// RegistrationStatusValues returns every known RegistrationStatus value in schema order.
+func RegistrationStatusValues() []RegistrationStatus {
+	return []RegistrationStatus{
+		RegistrationStatusPending,
+		RegistrationStatusApproved,
+		RegistrationStatusRejected,
+		RegistrationStatusCancelled,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *RegistrationStatus) IsExact() bool {
 	if e != nil {

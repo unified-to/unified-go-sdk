@@ -35,6 +35,30 @@ const (
 func (e GetPropertyReviewQueryParamFields) ToPointer() *GetPropertyReviewQueryParamFields {
 	return &e
 }
+
+// GetPropertyReviewQueryParamFieldsValues returns every known GetPropertyReviewQueryParamFields value in schema order.
+func GetPropertyReviewQueryParamFieldsValues() []GetPropertyReviewQueryParamFields {
+	return []GetPropertyReviewQueryParamFields{
+		GetPropertyReviewQueryParamFieldsID,
+		GetPropertyReviewQueryParamFieldsCreatedAt,
+		GetPropertyReviewQueryParamFieldsUpdatedAt,
+		GetPropertyReviewQueryParamFieldsListingID,
+		GetPropertyReviewQueryParamFieldsReservationID,
+		GetPropertyReviewQueryParamFieldsGuestID,
+		GetPropertyReviewQueryParamFieldsAuthorName,
+		GetPropertyReviewQueryParamFieldsSource,
+		GetPropertyReviewQueryParamFieldsTitle,
+		GetPropertyReviewQueryParamFieldsContent,
+		GetPropertyReviewQueryParamFieldsRating,
+		GetPropertyReviewQueryParamFieldsCategoryRatings,
+		GetPropertyReviewQueryParamFieldsPrivateFeedback,
+		GetPropertyReviewQueryParamFieldsResponse,
+		GetPropertyReviewQueryParamFieldsRespondedAt,
+		GetPropertyReviewQueryParamFieldsIsPublic,
+		GetPropertyReviewQueryParamFieldsMetadata,
+		GetPropertyReviewQueryParamFieldsRaw,
+	}
+}
 func (e *GetPropertyReviewQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

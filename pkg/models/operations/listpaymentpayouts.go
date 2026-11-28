@@ -31,6 +31,26 @@ const (
 func (e ListPaymentPayoutsQueryParamFields) ToPointer() *ListPaymentPayoutsQueryParamFields {
 	return &e
 }
+
+// ListPaymentPayoutsQueryParamFieldsValues returns every known ListPaymentPayoutsQueryParamFields value in schema order.
+func ListPaymentPayoutsQueryParamFieldsValues() []ListPaymentPayoutsQueryParamFields {
+	return []ListPaymentPayoutsQueryParamFields{
+		ListPaymentPayoutsQueryParamFieldsID,
+		ListPaymentPayoutsQueryParamFieldsCreatedAt,
+		ListPaymentPayoutsQueryParamFieldsUpdatedAt,
+		ListPaymentPayoutsQueryParamFieldsTotalAmount,
+		ListPaymentPayoutsQueryParamFieldsCurrency,
+		ListPaymentPayoutsQueryParamFieldsNotes,
+		ListPaymentPayoutsQueryParamFieldsStatus,
+		ListPaymentPayoutsQueryParamFieldsArrivalAt,
+		ListPaymentPayoutsQueryParamFieldsFeeAmount,
+		ListPaymentPayoutsQueryParamFieldsNetAmount,
+		ListPaymentPayoutsQueryParamFieldsAccountID,
+		ListPaymentPayoutsQueryParamFieldsLineitems,
+		ListPaymentPayoutsQueryParamFieldsMetadata,
+		ListPaymentPayoutsQueryParamFieldsRaw,
+	}
+}
 func (e *ListPaymentPayoutsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

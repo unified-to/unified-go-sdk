@@ -17,6 +17,17 @@ func (e Level) ToPointer() *Level {
 	return &e
 }
 
+// LevelValues returns every known Level value in schema order.
+func LevelValues() []Level {
+	return []Level{
+		LevelNone,
+		LevelLow,
+		LevelMedium,
+		LevelHigh,
+		LevelOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Level) IsExact() bool {
 	if e != nil {

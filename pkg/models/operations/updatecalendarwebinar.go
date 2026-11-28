@@ -52,6 +52,47 @@ const (
 func (e UpdateCalendarWebinarQueryParamFields) ToPointer() *UpdateCalendarWebinarQueryParamFields {
 	return &e
 }
+
+// UpdateCalendarWebinarQueryParamFieldsValues returns every known UpdateCalendarWebinarQueryParamFields value in schema order.
+func UpdateCalendarWebinarQueryParamFieldsValues() []UpdateCalendarWebinarQueryParamFields {
+	return []UpdateCalendarWebinarQueryParamFields{
+		UpdateCalendarWebinarQueryParamFieldsID,
+		UpdateCalendarWebinarQueryParamFieldsCreatedAt,
+		UpdateCalendarWebinarQueryParamFieldsUpdatedAt,
+		UpdateCalendarWebinarQueryParamFieldsCalendarID,
+		UpdateCalendarWebinarQueryParamFieldsSubject,
+		UpdateCalendarWebinarQueryParamFieldsStartAt,
+		UpdateCalendarWebinarQueryParamFieldsEndAt,
+		UpdateCalendarWebinarQueryParamFieldsTimezone,
+		UpdateCalendarWebinarQueryParamFieldsNotes,
+		UpdateCalendarWebinarQueryParamFieldsStatus,
+		UpdateCalendarWebinarQueryParamFieldsOrganizer,
+		UpdateCalendarWebinarQueryParamFieldsJoinURL,
+		UpdateCalendarWebinarQueryParamFieldsWebURL,
+		UpdateCalendarWebinarQueryParamFieldsPanelists,
+		UpdateCalendarWebinarQueryParamFieldsRegistrants,
+		UpdateCalendarWebinarQueryParamFieldsPanelistPassword,
+		UpdateCalendarWebinarQueryParamFieldsRegistrantPassword,
+		UpdateCalendarWebinarQueryParamFieldsConference,
+		UpdateCalendarWebinarQueryParamFieldsRecurrence,
+		UpdateCalendarWebinarQueryParamFieldsCapacity,
+		UpdateCalendarWebinarQueryParamFieldsIsWebcast,
+		UpdateCalendarWebinarQueryParamFieldsIsEnabled,
+		UpdateCalendarWebinarQueryParamFieldsIsAutoApprove,
+		UpdateCalendarWebinarQueryParamFieldsRequireFirstName,
+		UpdateCalendarWebinarQueryParamFieldsRequireLastName,
+		UpdateCalendarWebinarQueryParamFieldsRequireEmail,
+		UpdateCalendarWebinarQueryParamFieldsRequireCompany,
+		UpdateCalendarWebinarQueryParamFieldsRequireJobTitle,
+		UpdateCalendarWebinarQueryParamFieldsRequireAddress,
+		UpdateCalendarWebinarQueryParamFieldsRequirePhone,
+		UpdateCalendarWebinarQueryParamFieldsHasQa,
+		UpdateCalendarWebinarQueryParamFieldsHasPolls,
+		UpdateCalendarWebinarQueryParamFieldsHasRecording,
+		UpdateCalendarWebinarQueryParamFieldsMetadata,
+		UpdateCalendarWebinarQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateCalendarWebinarQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

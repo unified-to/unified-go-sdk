@@ -48,6 +48,43 @@ const (
 func (e GetPaymentPaymentQueryParamFields) ToPointer() *GetPaymentPaymentQueryParamFields {
 	return &e
 }
+
+// GetPaymentPaymentQueryParamFieldsValues returns every known GetPaymentPaymentQueryParamFields value in schema order.
+func GetPaymentPaymentQueryParamFieldsValues() []GetPaymentPaymentQueryParamFields {
+	return []GetPaymentPaymentQueryParamFields{
+		GetPaymentPaymentQueryParamFieldsID,
+		GetPaymentPaymentQueryParamFieldsCreatedAt,
+		GetPaymentPaymentQueryParamFieldsUpdatedAt,
+		GetPaymentPaymentQueryParamFieldsTotalAmount,
+		GetPaymentPaymentQueryParamFieldsContactID,
+		GetPaymentPaymentQueryParamFieldsPaymentMethod,
+		GetPaymentPaymentQueryParamFieldsType,
+		GetPaymentPaymentQueryParamFieldsCurrency,
+		GetPaymentPaymentQueryParamFieldsNotes,
+		GetPaymentPaymentQueryParamFieldsInvoiceID,
+		GetPaymentPaymentQueryParamFieldsBillID,
+		GetPaymentPaymentQueryParamFieldsLinkID,
+		GetPaymentPaymentQueryParamFieldsAccountID,
+		GetPaymentPaymentQueryParamFieldsReference,
+		GetPaymentPaymentQueryParamFieldsOrganizationID,
+		GetPaymentPaymentQueryParamFieldsAllocations,
+		GetPaymentPaymentQueryParamFieldsStatus,
+		GetPaymentPaymentQueryParamFieldsSalesorderID,
+		GetPaymentPaymentQueryParamFieldsTenderType,
+		GetPaymentPaymentQueryParamFieldsTipAmount,
+		GetPaymentPaymentQueryParamFieldsFeeAmount,
+		GetPaymentPaymentQueryParamFieldsLocationID,
+		GetPaymentPaymentQueryParamFieldsDeviceID,
+		GetPaymentPaymentQueryParamFieldsCardBrand,
+		GetPaymentPaymentQueryParamFieldsCardLast4,
+		GetPaymentPaymentQueryParamFieldsPaidAt,
+		GetPaymentPaymentQueryParamFieldsExchangeRate,
+		GetPaymentPaymentQueryParamFieldsCategoryIds,
+		GetPaymentPaymentQueryParamFieldsNetAmount,
+		GetPaymentPaymentQueryParamFieldsMetadata,
+		GetPaymentPaymentQueryParamFieldsRaw,
+	}
+}
 func (e *GetPaymentPaymentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

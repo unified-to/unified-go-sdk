@@ -27,6 +27,23 @@ func (e AccountingContactPaymentTerms) ToPointer() *AccountingContactPaymentTerm
 	return &e
 }
 
+// AccountingContactPaymentTermsValues returns every known AccountingContactPaymentTerms value in schema order.
+func AccountingContactPaymentTermsValues() []AccountingContactPaymentTerms {
+	return []AccountingContactPaymentTerms{
+		AccountingContactPaymentTermsOnReceipt,
+		AccountingContactPaymentTermsNet7,
+		AccountingContactPaymentTermsNet10,
+		AccountingContactPaymentTermsNet15,
+		AccountingContactPaymentTermsNet20,
+		AccountingContactPaymentTermsNet25,
+		AccountingContactPaymentTermsNet30,
+		AccountingContactPaymentTermsNet45,
+		AccountingContactPaymentTermsNet60,
+		AccountingContactPaymentTermsNet90,
+		AccountingContactPaymentTermsOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingContactPaymentTerms) IsExact() bool {
 	if e != nil {
@@ -56,6 +73,23 @@ const (
 
 func (e TaxExemption) ToPointer() *TaxExemption {
 	return &e
+}
+
+// TaxExemptionValues returns every known TaxExemption value in schema order.
+func TaxExemptionValues() []TaxExemption {
+	return []TaxExemption{
+		TaxExemptionFederalGov,
+		TaxExemptionRegionGov,
+		TaxExemptionLocalGov,
+		TaxExemptionTribalGov,
+		TaxExemptionCharitableOrg,
+		TaxExemptionReligiousOrg,
+		TaxExemptionEducationalOrg,
+		TaxExemptionMedicalOrg,
+		TaxExemptionResale,
+		TaxExemptionForeign,
+		TaxExemptionOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

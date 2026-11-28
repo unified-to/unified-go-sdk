@@ -297,6 +297,25 @@ func (e AdsMetadataFormat) ToPointer() *AdsMetadataFormat {
 	return &e
 }
 
+// AdsMetadataFormatValues returns every known AdsMetadataFormat value in schema order.
+func AdsMetadataFormatValues() []AdsMetadataFormat {
+	return []AdsMetadataFormat{
+		AdsMetadataFormatText,
+		AdsMetadataFormatNumber,
+		AdsMetadataFormatDate,
+		AdsMetadataFormatBoolean,
+		AdsMetadataFormatFile,
+		AdsMetadataFormatTextarea,
+		AdsMetadataFormatSingleSelect,
+		AdsMetadataFormatMultipleSelect,
+		AdsMetadataFormatMeasurement,
+		AdsMetadataFormatPrice,
+		AdsMetadataFormatYesNo,
+		AdsMetadataFormatCurrency,
+		AdsMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AdsMetadataFormat) IsExact() bool {
 	if e != nil {

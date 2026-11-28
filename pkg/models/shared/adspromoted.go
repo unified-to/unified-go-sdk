@@ -27,6 +27,27 @@ func (e AdsPromotedType) ToPointer() *AdsPromotedType {
 	return &e
 }
 
+// AdsPromotedTypeValues returns every known AdsPromotedType value in schema order.
+func AdsPromotedTypeValues() []AdsPromotedType {
+	return []AdsPromotedType{
+		AdsPromotedTypePageID,
+		AdsPromotedTypeAppID,
+		AdsPromotedTypeStoreURL,
+		AdsPromotedTypePixelID,
+		AdsPromotedTypeCustomConversionID,
+		AdsPromotedTypeCatalogID,
+		AdsPromotedTypeProductSetID,
+		AdsPromotedTypePrioritizedSetID,
+		AdsPromotedTypeEventID,
+		AdsPromotedTypeOfferID,
+		AdsPromotedTypeLeadFormID,
+		AdsPromotedTypeMessagingChannelID,
+		AdsPromotedTypeProductID,
+		AdsPromotedTypeTweetID,
+		AdsPromotedTypeAdGroupType,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AdsPromotedType) IsExact() bool {
 	if e != nil {

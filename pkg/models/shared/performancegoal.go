@@ -21,6 +21,17 @@ func (e PerformanceGoalStatus) ToPointer() *PerformanceGoalStatus {
 	return &e
 }
 
+// PerformanceGoalStatusValues returns every known PerformanceGoalStatus value in schema order.
+func PerformanceGoalStatusValues() []PerformanceGoalStatus {
+	return []PerformanceGoalStatus{
+		PerformanceGoalStatusNotStarted,
+		PerformanceGoalStatusInProgress,
+		PerformanceGoalStatusCompleted,
+		PerformanceGoalStatusClosed,
+		PerformanceGoalStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PerformanceGoalStatus) IsExact() bool {
 	if e != nil {
@@ -44,6 +55,17 @@ const (
 
 func (e PerformanceGoalSchemasType) ToPointer() *PerformanceGoalSchemasType {
 	return &e
+}
+
+// PerformanceGoalSchemasTypeValues returns every known PerformanceGoalSchemasType value in schema order.
+func PerformanceGoalSchemasTypeValues() []PerformanceGoalSchemasType {
+	return []PerformanceGoalSchemasType{
+		PerformanceGoalSchemasTypeIndividual,
+		PerformanceGoalSchemasTypeTeam,
+		PerformanceGoalSchemasTypeDepartment,
+		PerformanceGoalSchemasTypeCompany,
+		PerformanceGoalSchemasTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

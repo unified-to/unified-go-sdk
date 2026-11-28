@@ -297,6 +297,25 @@ func (e PaymentMetadataFormat) ToPointer() *PaymentMetadataFormat {
 	return &e
 }
 
+// PaymentMetadataFormatValues returns every known PaymentMetadataFormat value in schema order.
+func PaymentMetadataFormatValues() []PaymentMetadataFormat {
+	return []PaymentMetadataFormat{
+		PaymentMetadataFormatText,
+		PaymentMetadataFormatNumber,
+		PaymentMetadataFormatDate,
+		PaymentMetadataFormatBoolean,
+		PaymentMetadataFormatFile,
+		PaymentMetadataFormatTextarea,
+		PaymentMetadataFormatSingleSelect,
+		PaymentMetadataFormatMultipleSelect,
+		PaymentMetadataFormatMeasurement,
+		PaymentMetadataFormatPrice,
+		PaymentMetadataFormatYesNo,
+		PaymentMetadataFormatCurrency,
+		PaymentMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PaymentMetadataFormat) IsExact() bool {
 	if e != nil {

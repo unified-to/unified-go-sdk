@@ -26,6 +26,21 @@ const (
 func (e GetTicketingCategoryQueryParamFields) ToPointer() *GetTicketingCategoryQueryParamFields {
 	return &e
 }
+
+// GetTicketingCategoryQueryParamFieldsValues returns every known GetTicketingCategoryQueryParamFields value in schema order.
+func GetTicketingCategoryQueryParamFieldsValues() []GetTicketingCategoryQueryParamFields {
+	return []GetTicketingCategoryQueryParamFields{
+		GetTicketingCategoryQueryParamFieldsID,
+		GetTicketingCategoryQueryParamFieldsCreatedAt,
+		GetTicketingCategoryQueryParamFieldsUpdatedAt,
+		GetTicketingCategoryQueryParamFieldsName,
+		GetTicketingCategoryQueryParamFieldsDescription,
+		GetTicketingCategoryQueryParamFieldsIsActive,
+		GetTicketingCategoryQueryParamFieldsParentID,
+		GetTicketingCategoryQueryParamFieldsMetadata,
+		GetTicketingCategoryQueryParamFieldsRaw,
+	}
+}
 func (e *GetTicketingCategoryQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

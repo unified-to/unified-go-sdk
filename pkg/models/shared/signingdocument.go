@@ -25,6 +25,20 @@ func (e SigningDocumentStatus) ToPointer() *SigningDocumentStatus {
 	return &e
 }
 
+// SigningDocumentStatusValues returns every known SigningDocumentStatus value in schema order.
+func SigningDocumentStatusValues() []SigningDocumentStatus {
+	return []SigningDocumentStatus{
+		SigningDocumentStatusDraft,
+		SigningDocumentStatusSent,
+		SigningDocumentStatusDelivered,
+		SigningDocumentStatusInProgress,
+		SigningDocumentStatusCompleted,
+		SigningDocumentStatusDeclined,
+		SigningDocumentStatusVoided,
+		SigningDocumentStatusExpired,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *SigningDocumentStatus) IsExact() bool {
 	if e != nil {

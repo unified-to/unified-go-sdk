@@ -14,6 +14,15 @@ func (e GenaiAnswerType) ToPointer() *GenaiAnswerType {
 	return &e
 }
 
+// GenaiAnswerTypeValues returns every known GenaiAnswerType value in schema order.
+func GenaiAnswerTypeValues() []GenaiAnswerType {
+	return []GenaiAnswerType{
+		GenaiAnswerTypeBoolean,
+		GenaiAnswerTypeChoice,
+		GenaiAnswerTypeScore,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *GenaiAnswerType) IsExact() bool {
 	if e != nil {

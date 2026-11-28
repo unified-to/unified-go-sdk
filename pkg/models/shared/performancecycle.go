@@ -21,6 +21,17 @@ func (e PerformanceCycleStatus) ToPointer() *PerformanceCycleStatus {
 	return &e
 }
 
+// PerformanceCycleStatusValues returns every known PerformanceCycleStatus value in schema order.
+func PerformanceCycleStatusValues() []PerformanceCycleStatus {
+	return []PerformanceCycleStatus{
+		PerformanceCycleStatusDraft,
+		PerformanceCycleStatusScheduled,
+		PerformanceCycleStatusActive,
+		PerformanceCycleStatusClosed,
+		PerformanceCycleStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PerformanceCycleStatus) IsExact() bool {
 	if e != nil {
@@ -43,6 +54,15 @@ const (
 
 func (e PerformanceCycleType) ToPointer() *PerformanceCycleType {
 	return &e
+}
+
+// PerformanceCycleTypeValues returns every known PerformanceCycleType value in schema order.
+func PerformanceCycleTypeValues() []PerformanceCycleType {
+	return []PerformanceCycleType{
+		PerformanceCycleTypeReview,
+		PerformanceCycleTypeGoal,
+		PerformanceCycleTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

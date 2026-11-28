@@ -297,6 +297,25 @@ func (e StorageMetadataFormat) ToPointer() *StorageMetadataFormat {
 	return &e
 }
 
+// StorageMetadataFormatValues returns every known StorageMetadataFormat value in schema order.
+func StorageMetadataFormatValues() []StorageMetadataFormat {
+	return []StorageMetadataFormat{
+		StorageMetadataFormatText,
+		StorageMetadataFormatNumber,
+		StorageMetadataFormatDate,
+		StorageMetadataFormatBoolean,
+		StorageMetadataFormatFile,
+		StorageMetadataFormatTextarea,
+		StorageMetadataFormatSingleSelect,
+		StorageMetadataFormatMultipleSelect,
+		StorageMetadataFormatMeasurement,
+		StorageMetadataFormatPrice,
+		StorageMetadataFormatYesNo,
+		StorageMetadataFormatCurrency,
+		StorageMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *StorageMetadataFormat) IsExact() bool {
 	if e != nil {

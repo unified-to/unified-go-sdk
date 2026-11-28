@@ -21,6 +21,17 @@ func (e QmsActionStatus) ToPointer() *QmsActionStatus {
 	return &e
 }
 
+// QmsActionStatusValues returns every known QmsActionStatus value in schema order.
+func QmsActionStatusValues() []QmsActionStatus {
+	return []QmsActionStatus{
+		QmsActionStatusOpen,
+		QmsActionStatusInProgress,
+		QmsActionStatusInReview,
+		QmsActionStatusClosed,
+		QmsActionStatusCancelled,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *QmsActionStatus) IsExact() bool {
 	if e != nil {
@@ -43,6 +54,16 @@ const (
 
 func (e QmsActionType) ToPointer() *QmsActionType {
 	return &e
+}
+
+// QmsActionTypeValues returns every known QmsActionType value in schema order.
+func QmsActionTypeValues() []QmsActionType {
+	return []QmsActionType{
+		QmsActionTypeCorrective,
+		QmsActionTypePreventive,
+		QmsActionTypeSupplierCorrective,
+		QmsActionTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

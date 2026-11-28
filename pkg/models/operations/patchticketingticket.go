@@ -36,6 +36,31 @@ const (
 func (e PatchTicketingTicketQueryParamFields) ToPointer() *PatchTicketingTicketQueryParamFields {
 	return &e
 }
+
+// PatchTicketingTicketQueryParamFieldsValues returns every known PatchTicketingTicketQueryParamFields value in schema order.
+func PatchTicketingTicketQueryParamFieldsValues() []PatchTicketingTicketQueryParamFields {
+	return []PatchTicketingTicketQueryParamFields{
+		PatchTicketingTicketQueryParamFieldsID,
+		PatchTicketingTicketQueryParamFieldsCreatedAt,
+		PatchTicketingTicketQueryParamFieldsUpdatedAt,
+		PatchTicketingTicketQueryParamFieldsCustomerID,
+		PatchTicketingTicketQueryParamFieldsSubject,
+		PatchTicketingTicketQueryParamFieldsDescription,
+		PatchTicketingTicketQueryParamFieldsStatus,
+		PatchTicketingTicketQueryParamFieldsClosedAt,
+		PatchTicketingTicketQueryParamFieldsPriority,
+		PatchTicketingTicketQueryParamFieldsCategoryID,
+		PatchTicketingTicketQueryParamFieldsSource,
+		PatchTicketingTicketQueryParamFieldsSourceRef,
+		PatchTicketingTicketQueryParamFieldsTags,
+		PatchTicketingTicketQueryParamFieldsUserID,
+		PatchTicketingTicketQueryParamFieldsURL,
+		PatchTicketingTicketQueryParamFieldsAttachmentIds,
+		PatchTicketingTicketQueryParamFieldsDueAt,
+		PatchTicketingTicketQueryParamFieldsMetadata,
+		PatchTicketingTicketQueryParamFieldsRaw,
+	}
+}
 func (e *PatchTicketingTicketQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

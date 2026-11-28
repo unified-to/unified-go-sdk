@@ -27,6 +27,22 @@ const (
 func (e UpdateComputeDomainQueryParamFields) ToPointer() *UpdateComputeDomainQueryParamFields {
 	return &e
 }
+
+// UpdateComputeDomainQueryParamFieldsValues returns every known UpdateComputeDomainQueryParamFields value in schema order.
+func UpdateComputeDomainQueryParamFieldsValues() []UpdateComputeDomainQueryParamFields {
+	return []UpdateComputeDomainQueryParamFields{
+		UpdateComputeDomainQueryParamFieldsID,
+		UpdateComputeDomainQueryParamFieldsCreatedAt,
+		UpdateComputeDomainQueryParamFieldsUpdatedAt,
+		UpdateComputeDomainQueryParamFieldsServiceID,
+		UpdateComputeDomainQueryParamFieldsName,
+		UpdateComputeDomainQueryParamFieldsStatus,
+		UpdateComputeDomainQueryParamFieldsIsPrimary,
+		UpdateComputeDomainQueryParamFieldsRedirectURL,
+		UpdateComputeDomainQueryParamFieldsMetadata,
+		UpdateComputeDomainQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateComputeDomainQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

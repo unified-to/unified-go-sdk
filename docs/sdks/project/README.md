@@ -105,7 +105,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Curiositas."),
             HasChildren: unifiedgosdk.Pointer(false),
             HasTasks: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("692574ee-13a5-4363-a272-c51b332390fd"),
+            ID: unifiedgosdk.Pointer("b5e42608-3fe1-483d-a7c9-288bf379d08f"),
             Metadata: []shared.TaskMetadata{
                 shared.TaskMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
@@ -114,7 +114,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("4cf2a620-1de6-4b04-81e9-61226f547714"),
+                    ID: unifiedgosdk.Pointer("471ec536-f494-4f48-80a9-a868a59becdb"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("vox"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -128,7 +128,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("ea98152b-6225-472f-a208-befe49f7e403"),
+                    ID: unifiedgosdk.Pointer("3530dbfb-e2df-490e-a41b-2addc2f0a618"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("uterque"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -137,7 +137,7 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("Baby"),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-14T22:51:16.224Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-15T01:00:29.201Z"),
         },
         ConnectionID: "<id>",
     })
@@ -475,7 +475,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Curiositas."),
             HasChildren: unifiedgosdk.Pointer(false),
             HasTasks: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("fddb176b-33e5-4905-9b60-1f6cedc84a34"),
+            ID: unifiedgosdk.Pointer("c1639876-4e6a-43ef-99bf-3a09a69f1c04"),
             Metadata: []shared.TaskMetadata{
                 shared.TaskMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
@@ -484,7 +484,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("b5f2aede-1351-4016-9af8-25fa7b4e5422"),
+                    ID: unifiedgosdk.Pointer("775977de-1552-4294-84cf-d4e8ab13af51"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("vox"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -498,7 +498,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("722cb922-0fb9-4519-b15b-ca5ce801279d"),
+                    ID: unifiedgosdk.Pointer("c2e6dd6c-4961-42e3-9b98-774b8b049b66"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("uterque"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -507,7 +507,7 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("Baby"),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-14T22:51:16.226Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-15T01:00:29.202Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -738,7 +738,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Curiositas."),
             HasChildren: unifiedgosdk.Pointer(false),
             HasTasks: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("fddb176b-33e5-4905-9b60-1f6cedc84a34"),
+            ID: unifiedgosdk.Pointer("c1639876-4e6a-43ef-99bf-3a09a69f1c04"),
             Metadata: []shared.TaskMetadata{
                 shared.TaskMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
@@ -747,7 +747,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("b5f2aede-1351-4016-9af8-25fa7b4e5422"),
+                    ID: unifiedgosdk.Pointer("775977de-1552-4294-84cf-d4e8ab13af51"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("vox"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -761,7 +761,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("722cb922-0fb9-4519-b15b-ca5ce801279d"),
+                    ID: unifiedgosdk.Pointer("c2e6dd6c-4961-42e3-9b98-774b8b049b66"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("uterque"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -770,7 +770,7 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("Baby"),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-14T22:51:16.226Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-15T01:00:29.202Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

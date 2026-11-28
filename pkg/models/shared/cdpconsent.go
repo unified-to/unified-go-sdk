@@ -20,6 +20,15 @@ func (e CdpConsentStatus) ToPointer() *CdpConsentStatus {
 	return &e
 }
 
+// CdpConsentStatusValues returns every known CdpConsentStatus value in schema order.
+func CdpConsentStatusValues() []CdpConsentStatus {
+	return []CdpConsentStatus{
+		CdpConsentStatusGranted,
+		CdpConsentStatusDenied,
+		CdpConsentStatusPending,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CdpConsentStatus) IsExact() bool {
 	if e != nil {

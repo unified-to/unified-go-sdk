@@ -17,6 +17,17 @@ func (e HealthcareTelephoneType) ToPointer() *HealthcareTelephoneType {
 	return &e
 }
 
+// HealthcareTelephoneTypeValues returns every known HealthcareTelephoneType value in schema order.
+func HealthcareTelephoneTypeValues() []HealthcareTelephoneType {
+	return []HealthcareTelephoneType{
+		HealthcareTelephoneTypeWork,
+		HealthcareTelephoneTypeHome,
+		HealthcareTelephoneTypeMobile,
+		HealthcareTelephoneTypeFax,
+		HealthcareTelephoneTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HealthcareTelephoneType) IsExact() bool {
 	if e != nil {

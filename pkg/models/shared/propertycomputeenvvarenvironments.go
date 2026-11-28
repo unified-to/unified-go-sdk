@@ -15,6 +15,16 @@ func (e PropertyComputeEnvvarEnvironments) ToPointer() *PropertyComputeEnvvarEnv
 	return &e
 }
 
+// PropertyComputeEnvvarEnvironmentsValues returns every known PropertyComputeEnvvarEnvironments value in schema order.
+func PropertyComputeEnvvarEnvironmentsValues() []PropertyComputeEnvvarEnvironments {
+	return []PropertyComputeEnvvarEnvironments{
+		PropertyComputeEnvvarEnvironmentsProduction,
+		PropertyComputeEnvvarEnvironmentsPreview,
+		PropertyComputeEnvvarEnvironmentsDevelopment,
+		PropertyComputeEnvvarEnvironmentsOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyComputeEnvvarEnvironments) IsExact() bool {
 	if e != nil {

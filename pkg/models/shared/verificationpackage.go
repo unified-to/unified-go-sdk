@@ -24,6 +24,20 @@ func (e VerificationPackageType) ToPointer() *VerificationPackageType {
 	return &e
 }
 
+// VerificationPackageTypeValues returns every known VerificationPackageType value in schema order.
+func VerificationPackageTypeValues() []VerificationPackageType {
+	return []VerificationPackageType{
+		VerificationPackageTypeIdentityVerification,
+		VerificationPackageTypeScreening,
+		VerificationPackageTypeBackgroundCheck,
+		VerificationPackageTypeEmploymentVerification,
+		VerificationPackageTypeEducationVerification,
+		VerificationPackageTypeCreditCheck,
+		VerificationPackageTypeFraudPrevention,
+		VerificationPackageTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VerificationPackageType) IsExact() bool {
 	if e != nil {

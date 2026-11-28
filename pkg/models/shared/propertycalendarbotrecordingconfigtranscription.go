@@ -13,6 +13,14 @@ func (e PropertyCalendarBotRecordingConfigTranscriptionMode) ToPointer() *Proper
 	return &e
 }
 
+// PropertyCalendarBotRecordingConfigTranscriptionModeValues returns every known PropertyCalendarBotRecordingConfigTranscriptionMode value in schema order.
+func PropertyCalendarBotRecordingConfigTranscriptionModeValues() []PropertyCalendarBotRecordingConfigTranscriptionMode {
+	return []PropertyCalendarBotRecordingConfigTranscriptionMode{
+		PropertyCalendarBotRecordingConfigTranscriptionModePrioritizeAccuracy,
+		PropertyCalendarBotRecordingConfigTranscriptionModePrioritizeLowLatency,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyCalendarBotRecordingConfigTranscriptionMode) IsExact() bool {
 	if e != nil {
@@ -32,6 +40,13 @@ const (
 
 func (e Provider) ToPointer() *Provider {
 	return &e
+}
+
+// ProviderValues returns every known Provider value in schema order.
+func ProviderValues() []Provider {
+	return []Provider{
+		ProviderMeetingCaptions,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

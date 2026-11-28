@@ -20,6 +20,15 @@ func (e LegalExpenseType) ToPointer() *LegalExpenseType {
 	return &e
 }
 
+// LegalExpenseTypeValues returns every known LegalExpenseType value in schema order.
+func LegalExpenseTypeValues() []LegalExpenseType {
+	return []LegalExpenseType{
+		LegalExpenseTypeHardCost,
+		LegalExpenseTypeSoftCost,
+		LegalExpenseTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *LegalExpenseType) IsExact() bool {
 	if e != nil {

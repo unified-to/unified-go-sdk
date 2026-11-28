@@ -297,6 +297,25 @@ func (e UcMetadataFormat) ToPointer() *UcMetadataFormat {
 	return &e
 }
 
+// UcMetadataFormatValues returns every known UcMetadataFormat value in schema order.
+func UcMetadataFormatValues() []UcMetadataFormat {
+	return []UcMetadataFormat{
+		UcMetadataFormatText,
+		UcMetadataFormatNumber,
+		UcMetadataFormatDate,
+		UcMetadataFormatBoolean,
+		UcMetadataFormatFile,
+		UcMetadataFormatTextarea,
+		UcMetadataFormatSingleSelect,
+		UcMetadataFormatMultipleSelect,
+		UcMetadataFormatMeasurement,
+		UcMetadataFormatPrice,
+		UcMetadataFormatYesNo,
+		UcMetadataFormatCurrency,
+		UcMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *UcMetadataFormat) IsExact() bool {
 	if e != nil {

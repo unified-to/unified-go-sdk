@@ -34,6 +34,29 @@ const (
 func (e ListHrisLocationsQueryParamFields) ToPointer() *ListHrisLocationsQueryParamFields {
 	return &e
 }
+
+// ListHrisLocationsQueryParamFieldsValues returns every known ListHrisLocationsQueryParamFields value in schema order.
+func ListHrisLocationsQueryParamFieldsValues() []ListHrisLocationsQueryParamFields {
+	return []ListHrisLocationsQueryParamFields{
+		ListHrisLocationsQueryParamFieldsID,
+		ListHrisLocationsQueryParamFieldsCreatedAt,
+		ListHrisLocationsQueryParamFieldsUpdatedAt,
+		ListHrisLocationsQueryParamFieldsName,
+		ListHrisLocationsQueryParamFieldsDescription,
+		ListHrisLocationsQueryParamFieldsAddress,
+		ListHrisLocationsQueryParamFieldsParentID,
+		ListHrisLocationsQueryParamFieldsExternalIdentifier,
+		ListHrisLocationsQueryParamFieldsTelephones,
+		ListHrisLocationsQueryParamFieldsTimezone,
+		ListHrisLocationsQueryParamFieldsCurrency,
+		ListHrisLocationsQueryParamFieldsLanguageLocale,
+		ListHrisLocationsQueryParamFieldsIsActive,
+		ListHrisLocationsQueryParamFieldsIsHq,
+		ListHrisLocationsQueryParamFieldsCompanyID,
+		ListHrisLocationsQueryParamFieldsMetadata,
+		ListHrisLocationsQueryParamFieldsRaw,
+	}
+}
 func (e *ListHrisLocationsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

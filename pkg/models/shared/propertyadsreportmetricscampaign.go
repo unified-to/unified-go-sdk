@@ -33,6 +33,29 @@ func (e PropertyAdsReportMetricsCampaignAdvertisingChannelType) ToPointer() *Pro
 	return &e
 }
 
+// PropertyAdsReportMetricsCampaignAdvertisingChannelTypeValues returns every known PropertyAdsReportMetricsCampaignAdvertisingChannelType value in schema order.
+func PropertyAdsReportMetricsCampaignAdvertisingChannelTypeValues() []PropertyAdsReportMetricsCampaignAdvertisingChannelType {
+	return []PropertyAdsReportMetricsCampaignAdvertisingChannelType{
+		PropertyAdsReportMetricsCampaignAdvertisingChannelTypeText,
+		PropertyAdsReportMetricsCampaignAdvertisingChannelTypeImage,
+		PropertyAdsReportMetricsCampaignAdvertisingChannelTypeVideo,
+		PropertyAdsReportMetricsCampaignAdvertisingChannelTypeResponsive,
+		PropertyAdsReportMetricsCampaignAdvertisingChannelTypeShopping,
+		PropertyAdsReportMetricsCampaignAdvertisingChannelTypeApp,
+		PropertyAdsReportMetricsCampaignAdvertisingChannelTypeCall,
+		PropertyAdsReportMetricsCampaignAdvertisingChannelTypeCarousel,
+		PropertyAdsReportMetricsCampaignAdvertisingChannelTypeSocial,
+		PropertyAdsReportMetricsCampaignAdvertisingChannelTypeDisplay,
+		PropertyAdsReportMetricsCampaignAdvertisingChannelTypeSearch,
+		PropertyAdsReportMetricsCampaignAdvertisingChannelTypeAudio,
+		PropertyAdsReportMetricsCampaignAdvertisingChannelTypeYoutube,
+		PropertyAdsReportMetricsCampaignAdvertisingChannelTypeNative,
+		PropertyAdsReportMetricsCampaignAdvertisingChannelTypeCtv,
+		PropertyAdsReportMetricsCampaignAdvertisingChannelTypeDooh,
+		PropertyAdsReportMetricsCampaignAdvertisingChannelTypePerformanceMax,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsCampaignAdvertisingChannelType) IsExact() bool {
 	if e != nil {
@@ -57,6 +80,16 @@ func (e PropertyAdsReportMetricsCampaignBudgetPeriod) ToPointer() *PropertyAdsRe
 	return &e
 }
 
+// PropertyAdsReportMetricsCampaignBudgetPeriodValues returns every known PropertyAdsReportMetricsCampaignBudgetPeriod value in schema order.
+func PropertyAdsReportMetricsCampaignBudgetPeriodValues() []PropertyAdsReportMetricsCampaignBudgetPeriod {
+	return []PropertyAdsReportMetricsCampaignBudgetPeriod{
+		PropertyAdsReportMetricsCampaignBudgetPeriodDaily,
+		PropertyAdsReportMetricsCampaignBudgetPeriodMonthly,
+		PropertyAdsReportMetricsCampaignBudgetPeriodTotal,
+		PropertyAdsReportMetricsCampaignBudgetPeriodLifetime,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsCampaignBudgetPeriod) IsExact() bool {
 	if e != nil {
@@ -78,6 +111,15 @@ const (
 
 func (e PropertyAdsReportMetricsCampaignBudgetUnit) ToPointer() *PropertyAdsReportMetricsCampaignBudgetUnit {
 	return &e
+}
+
+// PropertyAdsReportMetricsCampaignBudgetUnitValues returns every known PropertyAdsReportMetricsCampaignBudgetUnit value in schema order.
+func PropertyAdsReportMetricsCampaignBudgetUnitValues() []PropertyAdsReportMetricsCampaignBudgetUnit {
+	return []PropertyAdsReportMetricsCampaignBudgetUnit{
+		PropertyAdsReportMetricsCampaignBudgetUnitUnspecified,
+		PropertyAdsReportMetricsCampaignBudgetUnitCurrency,
+		PropertyAdsReportMetricsCampaignBudgetUnitImpressions,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -112,6 +154,23 @@ func (e PropertyAdsReportMetricsCampaignEffectiveStatus) ToPointer() *PropertyAd
 	return &e
 }
 
+// PropertyAdsReportMetricsCampaignEffectiveStatusValues returns every known PropertyAdsReportMetricsCampaignEffectiveStatus value in schema order.
+func PropertyAdsReportMetricsCampaignEffectiveStatusValues() []PropertyAdsReportMetricsCampaignEffectiveStatus {
+	return []PropertyAdsReportMetricsCampaignEffectiveStatus{
+		PropertyAdsReportMetricsCampaignEffectiveStatusUnspecified,
+		PropertyAdsReportMetricsCampaignEffectiveStatusServing,
+		PropertyAdsReportMetricsCampaignEffectiveStatusLimited,
+		PropertyAdsReportMetricsCampaignEffectiveStatusLearning,
+		PropertyAdsReportMetricsCampaignEffectiveStatusPaused,
+		PropertyAdsReportMetricsCampaignEffectiveStatusPending,
+		PropertyAdsReportMetricsCampaignEffectiveStatusEnded,
+		PropertyAdsReportMetricsCampaignEffectiveStatusMisconfigured,
+		PropertyAdsReportMetricsCampaignEffectiveStatusNotEligible,
+		PropertyAdsReportMetricsCampaignEffectiveStatusArchived,
+		PropertyAdsReportMetricsCampaignEffectiveStatusRemoved,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsCampaignEffectiveStatus) IsExact() bool {
 	if e != nil {
@@ -140,6 +199,20 @@ func (e PropertyAdsReportMetricsCampaignGoal) ToPointer() *PropertyAdsReportMetr
 	return &e
 }
 
+// PropertyAdsReportMetricsCampaignGoalValues returns every known PropertyAdsReportMetricsCampaignGoal value in schema order.
+func PropertyAdsReportMetricsCampaignGoalValues() []PropertyAdsReportMetricsCampaignGoal {
+	return []PropertyAdsReportMetricsCampaignGoal{
+		PropertyAdsReportMetricsCampaignGoalUnspecified,
+		PropertyAdsReportMetricsCampaignGoalBrandAwareness,
+		PropertyAdsReportMetricsCampaignGoalEngagement,
+		PropertyAdsReportMetricsCampaignGoalReach,
+		PropertyAdsReportMetricsCampaignGoalWebsiteTraffic,
+		PropertyAdsReportMetricsCampaignGoalLeads,
+		PropertyAdsReportMetricsCampaignGoalSales,
+		PropertyAdsReportMetricsCampaignGoalAppPromotion,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsCampaignGoal) IsExact() bool {
 	if e != nil {
@@ -166,6 +239,20 @@ const (
 
 func (e PropertyAdsReportMetricsCampaignStatus) ToPointer() *PropertyAdsReportMetricsCampaignStatus {
 	return &e
+}
+
+// PropertyAdsReportMetricsCampaignStatusValues returns every known PropertyAdsReportMetricsCampaignStatus value in schema order.
+func PropertyAdsReportMetricsCampaignStatusValues() []PropertyAdsReportMetricsCampaignStatus {
+	return []PropertyAdsReportMetricsCampaignStatus{
+		PropertyAdsReportMetricsCampaignStatusUnspecified,
+		PropertyAdsReportMetricsCampaignStatusActive,
+		PropertyAdsReportMetricsCampaignStatusPaused,
+		PropertyAdsReportMetricsCampaignStatusArchived,
+		PropertyAdsReportMetricsCampaignStatusDraft,
+		PropertyAdsReportMetricsCampaignStatusScheduledForDeletion,
+		PropertyAdsReportMetricsCampaignStatusProcessing,
+		PropertyAdsReportMetricsCampaignStatusProcessingFailed,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

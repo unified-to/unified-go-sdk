@@ -33,6 +33,28 @@ const (
 func (e PatchFormsFormQueryParamFields) ToPointer() *PatchFormsFormQueryParamFields {
 	return &e
 }
+
+// PatchFormsFormQueryParamFieldsValues returns every known PatchFormsFormQueryParamFields value in schema order.
+func PatchFormsFormQueryParamFieldsValues() []PatchFormsFormQueryParamFields {
+	return []PatchFormsFormQueryParamFields{
+		PatchFormsFormQueryParamFieldsID,
+		PatchFormsFormQueryParamFieldsCreatedAt,
+		PatchFormsFormQueryParamFieldsUpdatedAt,
+		PatchFormsFormQueryParamFieldsName,
+		PatchFormsFormQueryParamFieldsDescription,
+		PatchFormsFormQueryParamFieldsFields,
+		PatchFormsFormQueryParamFieldsIsActive,
+		PatchFormsFormQueryParamFieldsPublishedURL,
+		PatchFormsFormQueryParamFieldsResponseCount,
+		PatchFormsFormQueryParamFieldsHasMultipleSubmissions,
+		PatchFormsFormQueryParamFieldsHasProgressBar,
+		PatchFormsFormQueryParamFieldsHasShuffleQuestions,
+		PatchFormsFormQueryParamFieldsConfirmationMessage,
+		PatchFormsFormQueryParamFieldsConfirmationRedirectURL,
+		PatchFormsFormQueryParamFieldsMetadata,
+		PatchFormsFormQueryParamFieldsRaw,
+	}
+}
 func (e *PatchFormsFormQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

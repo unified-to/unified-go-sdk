@@ -27,6 +27,22 @@ const (
 func (e ListSocialInsightsQueryParamFields) ToPointer() *ListSocialInsightsQueryParamFields {
 	return &e
 }
+
+// ListSocialInsightsQueryParamFieldsValues returns every known ListSocialInsightsQueryParamFields value in schema order.
+func ListSocialInsightsQueryParamFieldsValues() []ListSocialInsightsQueryParamFields {
+	return []ListSocialInsightsQueryParamFields{
+		ListSocialInsightsQueryParamFieldsID,
+		ListSocialInsightsQueryParamFieldsCreatedAt,
+		ListSocialInsightsQueryParamFieldsProfileID,
+		ListSocialInsightsQueryParamFieldsPostID,
+		ListSocialInsightsQueryParamFieldsDate,
+		ListSocialInsightsQueryParamFieldsPeriod,
+		ListSocialInsightsQueryParamFieldsMetric,
+		ListSocialInsightsQueryParamFieldsValue,
+		ListSocialInsightsQueryParamFieldsMetadata,
+		ListSocialInsightsQueryParamFieldsRaw,
+	}
+}
 func (e *ListSocialInsightsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

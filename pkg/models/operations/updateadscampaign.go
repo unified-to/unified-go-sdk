@@ -43,6 +43,38 @@ const (
 func (e UpdateAdsCampaignQueryParamFields) ToPointer() *UpdateAdsCampaignQueryParamFields {
 	return &e
 }
+
+// UpdateAdsCampaignQueryParamFieldsValues returns every known UpdateAdsCampaignQueryParamFields value in schema order.
+func UpdateAdsCampaignQueryParamFieldsValues() []UpdateAdsCampaignQueryParamFields {
+	return []UpdateAdsCampaignQueryParamFields{
+		UpdateAdsCampaignQueryParamFieldsID,
+		UpdateAdsCampaignQueryParamFieldsCreatedAt,
+		UpdateAdsCampaignQueryParamFieldsUpdatedAt,
+		UpdateAdsCampaignQueryParamFieldsName,
+		UpdateAdsCampaignQueryParamFieldsOrganizationID,
+		UpdateAdsCampaignQueryParamFieldsStatus,
+		UpdateAdsCampaignQueryParamFieldsEffectiveStatus,
+		UpdateAdsCampaignQueryParamFieldsStartAt,
+		UpdateAdsCampaignQueryParamFieldsEndAt,
+		UpdateAdsCampaignQueryParamFieldsBudgetAmount,
+		UpdateAdsCampaignQueryParamFieldsBudgetPeriod,
+		UpdateAdsCampaignQueryParamFieldsBudgetUnit,
+		UpdateAdsCampaignQueryParamFieldsTotalSpendAmount,
+		UpdateAdsCampaignQueryParamFieldsTargeting,
+		UpdateAdsCampaignQueryParamFieldsGoal,
+		UpdateAdsCampaignQueryParamFieldsPlannedSpendAmount,
+		UpdateAdsCampaignQueryParamFieldsFrequencyCap,
+		UpdateAdsCampaignQueryParamFieldsAdvertisingChannelType,
+		UpdateAdsCampaignQueryParamFieldsCampaignBudgetIdentifier,
+		UpdateAdsCampaignQueryParamFieldsCurrency,
+		UpdateAdsCampaignQueryParamFieldsCategory,
+		UpdateAdsCampaignQueryParamFieldsHasEuPoliticalAds,
+		UpdateAdsCampaignQueryParamFieldsLabels,
+		UpdateAdsCampaignQueryParamFieldsKpi,
+		UpdateAdsCampaignQueryParamFieldsMetadata,
+		UpdateAdsCampaignQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateAdsCampaignQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

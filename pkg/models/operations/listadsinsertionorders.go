@@ -33,6 +33,28 @@ const (
 func (e ListAdsInsertionordersQueryParamFields) ToPointer() *ListAdsInsertionordersQueryParamFields {
 	return &e
 }
+
+// ListAdsInsertionordersQueryParamFieldsValues returns every known ListAdsInsertionordersQueryParamFields value in schema order.
+func ListAdsInsertionordersQueryParamFieldsValues() []ListAdsInsertionordersQueryParamFields {
+	return []ListAdsInsertionordersQueryParamFields{
+		ListAdsInsertionordersQueryParamFieldsID,
+		ListAdsInsertionordersQueryParamFieldsCreatedAt,
+		ListAdsInsertionordersQueryParamFieldsUpdatedAt,
+		ListAdsInsertionordersQueryParamFieldsName,
+		ListAdsInsertionordersQueryParamFieldsOrganizationID,
+		ListAdsInsertionordersQueryParamFieldsCampaignID,
+		ListAdsInsertionordersQueryParamFieldsStatus,
+		ListAdsInsertionordersQueryParamFieldsPacing,
+		ListAdsInsertionordersQueryParamFieldsFrequencyCap,
+		ListAdsInsertionordersQueryParamFieldsKpi,
+		ListAdsInsertionordersQueryParamFieldsBudgetUnit,
+		ListAdsInsertionordersQueryParamFieldsBudgetSegments,
+		ListAdsInsertionordersQueryParamFieldsBidStrategy,
+		ListAdsInsertionordersQueryParamFieldsReference,
+		ListAdsInsertionordersQueryParamFieldsMetadata,
+		ListAdsInsertionordersQueryParamFieldsRaw,
+	}
+}
 func (e *ListAdsInsertionordersQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

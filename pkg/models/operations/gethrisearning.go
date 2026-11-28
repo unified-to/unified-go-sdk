@@ -36,6 +36,31 @@ const (
 func (e GetHrisEarningQueryParamFields) ToPointer() *GetHrisEarningQueryParamFields {
 	return &e
 }
+
+// GetHrisEarningQueryParamFieldsValues returns every known GetHrisEarningQueryParamFields value in schema order.
+func GetHrisEarningQueryParamFieldsValues() []GetHrisEarningQueryParamFields {
+	return []GetHrisEarningQueryParamFields{
+		GetHrisEarningQueryParamFieldsID,
+		GetHrisEarningQueryParamFieldsCreatedAt,
+		GetHrisEarningQueryParamFieldsUpdatedAt,
+		GetHrisEarningQueryParamFieldsUserID,
+		GetHrisEarningQueryParamFieldsCompanyID,
+		GetHrisEarningQueryParamFieldsPaycodeID,
+		GetHrisEarningQueryParamFieldsAmount,
+		GetHrisEarningQueryParamFieldsCurrency,
+		GetHrisEarningQueryParamFieldsHours,
+		GetHrisEarningQueryParamFieldsRateAmount,
+		GetHrisEarningQueryParamFieldsFrequency,
+		GetHrisEarningQueryParamFieldsStartAt,
+		GetHrisEarningQueryParamFieldsEndAt,
+		GetHrisEarningQueryParamFieldsStatus,
+		GetHrisEarningQueryParamFieldsPayrollID,
+		GetHrisEarningQueryParamFieldsPayslipID,
+		GetHrisEarningQueryParamFieldsNotes,
+		GetHrisEarningQueryParamFieldsMetadata,
+		GetHrisEarningQueryParamFieldsRaw,
+	}
+}
 func (e *GetHrisEarningQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

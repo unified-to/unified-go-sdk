@@ -18,6 +18,14 @@ func (e PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender) ToP
 	return &e
 }
 
+// PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGenderValues returns every known PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender value in schema order.
+func PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGenderValues() []PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender {
+	return []PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender{
+		PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGenderFemale,
+		PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGenderMale,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender) IsExact() bool {
 	if e != nil {

@@ -18,6 +18,19 @@ func (e IssueStatus) ToPointer() *IssueStatus {
 	return &e
 }
 
+// IssueStatusValues returns every known IssueStatus value in schema order.
+func IssueStatusValues() []IssueStatus {
+	return []IssueStatus{
+		IssueStatusCompleted,
+		IssueStatusNew,
+		IssueStatusRoadmap,
+		IssueStatusInProgress,
+		IssueStatusOnHold,
+		IssueStatusValidating,
+		IssueStatusRejected,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *IssueStatus) IsExact() bool {
 	if e != nil {

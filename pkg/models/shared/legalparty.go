@@ -21,6 +21,21 @@ func (e LegalPartyRole) ToPointer() *LegalPartyRole {
 	return &e
 }
 
+// LegalPartyRoleValues returns every known LegalPartyRole value in schema order.
+func LegalPartyRoleValues() []LegalPartyRole {
+	return []LegalPartyRole{
+		LegalPartyRoleClient,
+		LegalPartyRoleOpposingParty,
+		LegalPartyRoleOpposingCounsel,
+		LegalPartyRoleCoCounsel,
+		LegalPartyRoleWitness,
+		LegalPartyRoleExpert,
+		LegalPartyRoleJudge,
+		LegalPartyRoleReferrer,
+		LegalPartyRoleOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *LegalPartyRole) IsExact() bool {
 	if e != nil {

@@ -28,6 +28,23 @@ const (
 func (e ListPrintingTemplatesQueryParamFields) ToPointer() *ListPrintingTemplatesQueryParamFields {
 	return &e
 }
+
+// ListPrintingTemplatesQueryParamFieldsValues returns every known ListPrintingTemplatesQueryParamFields value in schema order.
+func ListPrintingTemplatesQueryParamFieldsValues() []ListPrintingTemplatesQueryParamFields {
+	return []ListPrintingTemplatesQueryParamFields{
+		ListPrintingTemplatesQueryParamFieldsID,
+		ListPrintingTemplatesQueryParamFieldsCreatedAt,
+		ListPrintingTemplatesQueryParamFieldsUpdatedAt,
+		ListPrintingTemplatesQueryParamFieldsName,
+		ListPrintingTemplatesQueryParamFieldsDescription,
+		ListPrintingTemplatesQueryParamFieldsProductID,
+		ListPrintingTemplatesQueryParamFieldsPreviewURL,
+		ListPrintingTemplatesQueryParamFieldsVariantIdentifiers,
+		ListPrintingTemplatesQueryParamFieldsPlacements,
+		ListPrintingTemplatesQueryParamFieldsMetadata,
+		ListPrintingTemplatesQueryParamFieldsRaw,
+	}
+}
 func (e *ListPrintingTemplatesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

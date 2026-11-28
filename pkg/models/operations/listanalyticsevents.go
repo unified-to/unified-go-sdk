@@ -44,6 +44,39 @@ const (
 func (e ListAnalyticsEventsQueryParamFields) ToPointer() *ListAnalyticsEventsQueryParamFields {
 	return &e
 }
+
+// ListAnalyticsEventsQueryParamFieldsValues returns every known ListAnalyticsEventsQueryParamFields value in schema order.
+func ListAnalyticsEventsQueryParamFieldsValues() []ListAnalyticsEventsQueryParamFields {
+	return []ListAnalyticsEventsQueryParamFields{
+		ListAnalyticsEventsQueryParamFieldsID,
+		ListAnalyticsEventsQueryParamFieldsCreatedAt,
+		ListAnalyticsEventsQueryParamFieldsUpdatedAt,
+		ListAnalyticsEventsQueryParamFieldsName,
+		ListAnalyticsEventsQueryParamFieldsEventType,
+		ListAnalyticsEventsQueryParamFieldsVisitorID,
+		ListAnalyticsEventsQueryParamFieldsPropertyID,
+		ListAnalyticsEventsQueryParamFieldsSessionID,
+		ListAnalyticsEventsQueryParamFieldsPageURL,
+		ListAnalyticsEventsQueryParamFieldsPageTitle,
+		ListAnalyticsEventsQueryParamFieldsPageReferrer,
+		ListAnalyticsEventsQueryParamFieldsDevice,
+		ListAnalyticsEventsQueryParamFieldsBrowser,
+		ListAnalyticsEventsQueryParamFieldsOs,
+		ListAnalyticsEventsQueryParamFieldsCountry,
+		ListAnalyticsEventsQueryParamFieldsCountryCode,
+		ListAnalyticsEventsQueryParamFieldsRegion,
+		ListAnalyticsEventsQueryParamFieldsCity,
+		ListAnalyticsEventsQueryParamFieldsMetadata,
+		ListAnalyticsEventsQueryParamFieldsValue,
+		ListAnalyticsEventsQueryParamFieldsCurrency,
+		ListAnalyticsEventsQueryParamFieldsUtmSource,
+		ListAnalyticsEventsQueryParamFieldsUtmMedium,
+		ListAnalyticsEventsQueryParamFieldsUtmCampaign,
+		ListAnalyticsEventsQueryParamFieldsUtmTerm,
+		ListAnalyticsEventsQueryParamFieldsUtmContent,
+		ListAnalyticsEventsQueryParamFieldsRaw,
+	}
+}
 func (e *ListAnalyticsEventsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

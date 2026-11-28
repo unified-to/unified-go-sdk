@@ -37,6 +37,32 @@ const (
 func (e UpdateHrisTimeoffQueryParamFields) ToPointer() *UpdateHrisTimeoffQueryParamFields {
 	return &e
 }
+
+// UpdateHrisTimeoffQueryParamFieldsValues returns every known UpdateHrisTimeoffQueryParamFields value in schema order.
+func UpdateHrisTimeoffQueryParamFieldsValues() []UpdateHrisTimeoffQueryParamFields {
+	return []UpdateHrisTimeoffQueryParamFields{
+		UpdateHrisTimeoffQueryParamFieldsID,
+		UpdateHrisTimeoffQueryParamFieldsCreatedAt,
+		UpdateHrisTimeoffQueryParamFieldsUpdatedAt,
+		UpdateHrisTimeoffQueryParamFieldsUserID,
+		UpdateHrisTimeoffQueryParamFieldsCompanyID,
+		UpdateHrisTimeoffQueryParamFieldsStartAt,
+		UpdateHrisTimeoffQueryParamFieldsEndAt,
+		UpdateHrisTimeoffQueryParamFieldsIsPaid,
+		UpdateHrisTimeoffQueryParamFieldsStatus,
+		UpdateHrisTimeoffQueryParamFieldsApproverUserID,
+		UpdateHrisTimeoffQueryParamFieldsApprovedAt,
+		UpdateHrisTimeoffQueryParamFieldsComments,
+		UpdateHrisTimeoffQueryParamFieldsReason,
+		UpdateHrisTimeoffQueryParamFieldsOriginalType,
+		UpdateHrisTimeoffQueryParamFieldsType,
+		UpdateHrisTimeoffQueryParamFieldsDuration,
+		UpdateHrisTimeoffQueryParamFieldsDurationType,
+		UpdateHrisTimeoffQueryParamFieldsAttachments,
+		UpdateHrisTimeoffQueryParamFieldsMetadata,
+		UpdateHrisTimeoffQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateHrisTimeoffQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

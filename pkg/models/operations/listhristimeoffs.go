@@ -37,6 +37,32 @@ const (
 func (e ListHrisTimeoffsQueryParamFields) ToPointer() *ListHrisTimeoffsQueryParamFields {
 	return &e
 }
+
+// ListHrisTimeoffsQueryParamFieldsValues returns every known ListHrisTimeoffsQueryParamFields value in schema order.
+func ListHrisTimeoffsQueryParamFieldsValues() []ListHrisTimeoffsQueryParamFields {
+	return []ListHrisTimeoffsQueryParamFields{
+		ListHrisTimeoffsQueryParamFieldsID,
+		ListHrisTimeoffsQueryParamFieldsCreatedAt,
+		ListHrisTimeoffsQueryParamFieldsUpdatedAt,
+		ListHrisTimeoffsQueryParamFieldsUserID,
+		ListHrisTimeoffsQueryParamFieldsCompanyID,
+		ListHrisTimeoffsQueryParamFieldsStartAt,
+		ListHrisTimeoffsQueryParamFieldsEndAt,
+		ListHrisTimeoffsQueryParamFieldsIsPaid,
+		ListHrisTimeoffsQueryParamFieldsStatus,
+		ListHrisTimeoffsQueryParamFieldsApproverUserID,
+		ListHrisTimeoffsQueryParamFieldsApprovedAt,
+		ListHrisTimeoffsQueryParamFieldsComments,
+		ListHrisTimeoffsQueryParamFieldsReason,
+		ListHrisTimeoffsQueryParamFieldsOriginalType,
+		ListHrisTimeoffsQueryParamFieldsType,
+		ListHrisTimeoffsQueryParamFieldsDuration,
+		ListHrisTimeoffsQueryParamFieldsDurationType,
+		ListHrisTimeoffsQueryParamFieldsAttachments,
+		ListHrisTimeoffsQueryParamFieldsMetadata,
+		ListHrisTimeoffsQueryParamFieldsRaw,
+	}
+}
 func (e *ListHrisTimeoffsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

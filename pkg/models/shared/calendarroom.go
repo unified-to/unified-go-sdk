@@ -19,6 +19,15 @@ func (e CalendarRoomType) ToPointer() *CalendarRoomType {
 	return &e
 }
 
+// CalendarRoomTypeValues returns every known CalendarRoomType value in schema order.
+func CalendarRoomTypeValues() []CalendarRoomType {
+	return []CalendarRoomType{
+		CalendarRoomTypeRoom,
+		CalendarRoomTypeDesk,
+		CalendarRoomTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CalendarRoomType) IsExact() bool {
 	if e != nil {

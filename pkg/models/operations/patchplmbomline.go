@@ -31,6 +31,26 @@ const (
 func (e PatchPlmBomlineQueryParamFields) ToPointer() *PatchPlmBomlineQueryParamFields {
 	return &e
 }
+
+// PatchPlmBomlineQueryParamFieldsValues returns every known PatchPlmBomlineQueryParamFields value in schema order.
+func PatchPlmBomlineQueryParamFieldsValues() []PatchPlmBomlineQueryParamFields {
+	return []PatchPlmBomlineQueryParamFields{
+		PatchPlmBomlineQueryParamFieldsID,
+		PatchPlmBomlineQueryParamFieldsCreatedAt,
+		PatchPlmBomlineQueryParamFieldsUpdatedAt,
+		PatchPlmBomlineQueryParamFieldsParentPartID,
+		PatchPlmBomlineQueryParamFieldsChildPartID,
+		PatchPlmBomlineQueryParamFieldsChildRevision,
+		PatchPlmBomlineQueryParamFieldsQuantity,
+		PatchPlmBomlineQueryParamFieldsUnitOfMeasure,
+		PatchPlmBomlineQueryParamFieldsLineNumber,
+		PatchPlmBomlineQueryParamFieldsReferenceDesignators,
+		PatchPlmBomlineQueryParamFieldsEffectiveAt,
+		PatchPlmBomlineQueryParamFieldsExpiresAt,
+		PatchPlmBomlineQueryParamFieldsNotes,
+		PatchPlmBomlineQueryParamFieldsRaw,
+	}
+}
 func (e *PatchPlmBomlineQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

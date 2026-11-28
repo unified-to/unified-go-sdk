@@ -24,6 +24,19 @@ func (e ClubsActivityType) ToPointer() *ClubsActivityType {
 	return &e
 }
 
+// ClubsActivityTypeValues returns every known ClubsActivityType value in schema order.
+func ClubsActivityTypeValues() []ClubsActivityType {
+	return []ClubsActivityType{
+		ClubsActivityTypeRunning,
+		ClubsActivityTypeCycling,
+		ClubsActivityTypeSwimming,
+		ClubsActivityTypeTriathlon,
+		ClubsActivityTypeWalking,
+		ClubsActivityTypeHiking,
+		ClubsActivityTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ClubsActivityType) IsExact() bool {
 	if e != nil {

@@ -21,6 +21,16 @@ func (e AccountingOrganizationType) ToPointer() *AccountingOrganizationType {
 	return &e
 }
 
+// AccountingOrganizationTypeValues returns every known AccountingOrganizationType value in schema order.
+func AccountingOrganizationTypeValues() []AccountingOrganizationType {
+	return []AccountingOrganizationType{
+		AccountingOrganizationTypeCompany,
+		AccountingOrganizationTypeSubsidiary,
+		AccountingOrganizationTypeDivision,
+		AccountingOrganizationTypeLocation,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingOrganizationType) IsExact() bool {
 	if e != nil {

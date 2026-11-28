@@ -43,6 +43,38 @@ const (
 func (e GetDmsPartQueryParamFields) ToPointer() *GetDmsPartQueryParamFields {
 	return &e
 }
+
+// GetDmsPartQueryParamFieldsValues returns every known GetDmsPartQueryParamFields value in schema order.
+func GetDmsPartQueryParamFieldsValues() []GetDmsPartQueryParamFields {
+	return []GetDmsPartQueryParamFields{
+		GetDmsPartQueryParamFieldsID,
+		GetDmsPartQueryParamFieldsCreatedAt,
+		GetDmsPartQueryParamFieldsUpdatedAt,
+		GetDmsPartQueryParamFieldsPartNumber,
+		GetDmsPartQueryParamFieldsDescription,
+		GetDmsPartQueryParamFieldsManufacturerCode,
+		GetDmsPartQueryParamFieldsSourceCode,
+		GetDmsPartQueryParamFieldsSupplierCode,
+		GetDmsPartQueryParamFieldsCategory,
+		GetDmsPartQueryParamFieldsBinLocations,
+		GetDmsPartQueryParamFieldsQuantityOnHand,
+		GetDmsPartQueryParamFieldsQuantityAvailable,
+		GetDmsPartQueryParamFieldsQuantityOnOrder,
+		GetDmsPartQueryParamFieldsMinStockQuantity,
+		GetDmsPartQueryParamFieldsMaxStockQuantity,
+		GetDmsPartQueryParamFieldsPackQuantity,
+		GetDmsPartQueryParamFieldsCurrency,
+		GetDmsPartQueryParamFieldsCostAmount,
+		GetDmsPartQueryParamFieldsListPriceAmount,
+		GetDmsPartQueryParamFieldsTradePriceAmount,
+		GetDmsPartQueryParamFieldsSupersededByPartNumber,
+		GetDmsPartQueryParamFieldsLastSoldAt,
+		GetDmsPartQueryParamFieldsLastReceivedAt,
+		GetDmsPartQueryParamFieldsIsActive,
+		GetDmsPartQueryParamFieldsMetadata,
+		GetDmsPartQueryParamFieldsRaw,
+	}
+}
 func (e *GetDmsPartQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -29,6 +29,24 @@ const (
 func (e CreateCalendarLinkQueryParamFields) ToPointer() *CreateCalendarLinkQueryParamFields {
 	return &e
 }
+
+// CreateCalendarLinkQueryParamFieldsValues returns every known CreateCalendarLinkQueryParamFields value in schema order.
+func CreateCalendarLinkQueryParamFieldsValues() []CreateCalendarLinkQueryParamFields {
+	return []CreateCalendarLinkQueryParamFields{
+		CreateCalendarLinkQueryParamFieldsID,
+		CreateCalendarLinkQueryParamFieldsCreatedAt,
+		CreateCalendarLinkQueryParamFieldsUpdatedAt,
+		CreateCalendarLinkQueryParamFieldsName,
+		CreateCalendarLinkQueryParamFieldsURL,
+		CreateCalendarLinkQueryParamFieldsDuration,
+		CreateCalendarLinkQueryParamFieldsDescription,
+		CreateCalendarLinkQueryParamFieldsIsActive,
+		CreateCalendarLinkQueryParamFieldsPriceAmount,
+		CreateCalendarLinkQueryParamFieldsPriceCurrency,
+		CreateCalendarLinkQueryParamFieldsMetadata,
+		CreateCalendarLinkQueryParamFieldsRaw,
+	}
+}
 func (e *CreateCalendarLinkQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

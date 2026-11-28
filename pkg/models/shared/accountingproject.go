@@ -20,6 +20,16 @@ func (e BillingType) ToPointer() *BillingType {
 	return &e
 }
 
+// BillingTypeValues returns every known BillingType value in schema order.
+func BillingTypeValues() []BillingType {
+	return []BillingType{
+		BillingTypeFixedPrice,
+		BillingTypeTimeAndMaterials,
+		BillingTypeMilestone,
+		BillingTypeNonBillable,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *BillingType) IsExact() bool {
 	if e != nil {
@@ -44,6 +54,18 @@ const (
 
 func (e AccountingProjectStatus) ToPointer() *AccountingProjectStatus {
 	return &e
+}
+
+// AccountingProjectStatusValues returns every known AccountingProjectStatus value in schema order.
+func AccountingProjectStatusValues() []AccountingProjectStatus {
+	return []AccountingProjectStatus{
+		AccountingProjectStatusNotStarted,
+		AccountingProjectStatusInProgress,
+		AccountingProjectStatusOnHold,
+		AccountingProjectStatusCompleted,
+		AccountingProjectStatusCancelled,
+		AccountingProjectStatusClosed,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

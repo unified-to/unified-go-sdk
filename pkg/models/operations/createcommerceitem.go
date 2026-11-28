@@ -47,6 +47,42 @@ const (
 func (e CreateCommerceItemQueryParamFields) ToPointer() *CreateCommerceItemQueryParamFields {
 	return &e
 }
+
+// CreateCommerceItemQueryParamFieldsValues returns every known CreateCommerceItemQueryParamFields value in schema order.
+func CreateCommerceItemQueryParamFieldsValues() []CreateCommerceItemQueryParamFields {
+	return []CreateCommerceItemQueryParamFields{
+		CreateCommerceItemQueryParamFieldsID,
+		CreateCommerceItemQueryParamFieldsCreatedAt,
+		CreateCommerceItemQueryParamFieldsUpdatedAt,
+		CreateCommerceItemQueryParamFieldsName,
+		CreateCommerceItemQueryParamFieldsPublicName,
+		CreateCommerceItemQueryParamFieldsSlug,
+		CreateCommerceItemQueryParamFieldsDescription,
+		CreateCommerceItemQueryParamFieldsGlobalCode,
+		CreateCommerceItemQueryParamFieldsPublicDescription,
+		CreateCommerceItemQueryParamFieldsIsActive,
+		CreateCommerceItemQueryParamFieldsIsTaxable,
+		CreateCommerceItemQueryParamFieldsVendorName,
+		CreateCommerceItemQueryParamFieldsType,
+		CreateCommerceItemQueryParamFieldsIsVisible,
+		CreateCommerceItemQueryParamFieldsIsFeatured,
+		CreateCommerceItemQueryParamFieldsWeight,
+		CreateCommerceItemQueryParamFieldsWeightUnit,
+		CreateCommerceItemQueryParamFieldsRequiresShipping,
+		CreateCommerceItemQueryParamFieldsPrices,
+		CreateCommerceItemQueryParamFieldsInventoryID,
+		CreateCommerceItemQueryParamFieldsTotalStock,
+		CreateCommerceItemQueryParamFieldsTags,
+		CreateCommerceItemQueryParamFieldsMedia,
+		CreateCommerceItemQueryParamFieldsAccountID,
+		CreateCommerceItemQueryParamFieldsMetadata,
+		CreateCommerceItemQueryParamFieldsCollections,
+		CreateCommerceItemQueryParamFieldsTaxrateID,
+		CreateCommerceItemQueryParamFieldsLocationID,
+		CreateCommerceItemQueryParamFieldsDuration,
+		CreateCommerceItemQueryParamFieldsRaw,
+	}
+}
 func (e *CreateCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -19,6 +19,14 @@ func (e AccountingBankfeedtransactionType) ToPointer() *AccountingBankfeedtransa
 	return &e
 }
 
+// AccountingBankfeedtransactionTypeValues returns every known AccountingBankfeedtransactionType value in schema order.
+func AccountingBankfeedtransactionTypeValues() []AccountingBankfeedtransactionType {
+	return []AccountingBankfeedtransactionType{
+		AccountingBankfeedtransactionTypeDebit,
+		AccountingBankfeedtransactionTypeCredit,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingBankfeedtransactionType) IsExact() bool {
 	if e != nil {

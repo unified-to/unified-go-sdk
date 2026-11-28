@@ -41,6 +41,36 @@ const (
 func (e GetAnalyticsSessionQueryParamFields) ToPointer() *GetAnalyticsSessionQueryParamFields {
 	return &e
 }
+
+// GetAnalyticsSessionQueryParamFieldsValues returns every known GetAnalyticsSessionQueryParamFields value in schema order.
+func GetAnalyticsSessionQueryParamFieldsValues() []GetAnalyticsSessionQueryParamFields {
+	return []GetAnalyticsSessionQueryParamFields{
+		GetAnalyticsSessionQueryParamFieldsID,
+		GetAnalyticsSessionQueryParamFieldsCreatedAt,
+		GetAnalyticsSessionQueryParamFieldsUpdatedAt,
+		GetAnalyticsSessionQueryParamFieldsPropertyID,
+		GetAnalyticsSessionQueryParamFieldsVisitorID,
+		GetAnalyticsSessionQueryParamFieldsStartAt,
+		GetAnalyticsSessionQueryParamFieldsEndAt,
+		GetAnalyticsSessionQueryParamFieldsDurationSeconds,
+		GetAnalyticsSessionQueryParamFieldsLandingPage,
+		GetAnalyticsSessionQueryParamFieldsExitPage,
+		GetAnalyticsSessionQueryParamFieldsPageViews,
+		GetAnalyticsSessionQueryParamFieldsEventsCount,
+		GetAnalyticsSessionQueryParamFieldsSource,
+		GetAnalyticsSessionQueryParamFieldsMedium,
+		GetAnalyticsSessionQueryParamFieldsCampaign,
+		GetAnalyticsSessionQueryParamFieldsDevice,
+		GetAnalyticsSessionQueryParamFieldsBrowser,
+		GetAnalyticsSessionQueryParamFieldsOs,
+		GetAnalyticsSessionQueryParamFieldsCountry,
+		GetAnalyticsSessionQueryParamFieldsCity,
+		GetAnalyticsSessionQueryParamFieldsIsBounce,
+		GetAnalyticsSessionQueryParamFieldsIsConversion,
+		GetAnalyticsSessionQueryParamFieldsMetadata,
+		GetAnalyticsSessionQueryParamFieldsRaw,
+	}
+}
 func (e *GetAnalyticsSessionQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

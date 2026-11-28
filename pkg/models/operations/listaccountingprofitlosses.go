@@ -34,6 +34,29 @@ const (
 func (e ListAccountingProfitlossesQueryParamFields) ToPointer() *ListAccountingProfitlossesQueryParamFields {
 	return &e
 }
+
+// ListAccountingProfitlossesQueryParamFieldsValues returns every known ListAccountingProfitlossesQueryParamFields value in schema order.
+func ListAccountingProfitlossesQueryParamFieldsValues() []ListAccountingProfitlossesQueryParamFields {
+	return []ListAccountingProfitlossesQueryParamFields{
+		ListAccountingProfitlossesQueryParamFieldsID,
+		ListAccountingProfitlossesQueryParamFieldsCreatedAt,
+		ListAccountingProfitlossesQueryParamFieldsUpdatedAt,
+		ListAccountingProfitlossesQueryParamFieldsCategoryIds,
+		ListAccountingProfitlossesQueryParamFieldsStartAt,
+		ListAccountingProfitlossesQueryParamFieldsEndAt,
+		ListAccountingProfitlossesQueryParamFieldsName,
+		ListAccountingProfitlossesQueryParamFieldsCurrency,
+		ListAccountingProfitlossesQueryParamFieldsIncomeTotalAmount,
+		ListAccountingProfitlossesQueryParamFieldsNetIncomeAmount,
+		ListAccountingProfitlossesQueryParamFieldsExpensesTotalAmount,
+		ListAccountingProfitlossesQueryParamFieldsCostOfGoodsSoldTotalAmount,
+		ListAccountingProfitlossesQueryParamFieldsIncomeSections,
+		ListAccountingProfitlossesQueryParamFieldsExpensesSections,
+		ListAccountingProfitlossesQueryParamFieldsCostOfGoodsSoldSections,
+		ListAccountingProfitlossesQueryParamFieldsMetadata,
+		ListAccountingProfitlossesQueryParamFieldsRaw,
+	}
+}
 func (e *ListAccountingProfitlossesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -30,6 +30,25 @@ const (
 func (e GetComputeVolumeQueryParamFields) ToPointer() *GetComputeVolumeQueryParamFields {
 	return &e
 }
+
+// GetComputeVolumeQueryParamFieldsValues returns every known GetComputeVolumeQueryParamFields value in schema order.
+func GetComputeVolumeQueryParamFieldsValues() []GetComputeVolumeQueryParamFields {
+	return []GetComputeVolumeQueryParamFields{
+		GetComputeVolumeQueryParamFieldsID,
+		GetComputeVolumeQueryParamFieldsCreatedAt,
+		GetComputeVolumeQueryParamFieldsUpdatedAt,
+		GetComputeVolumeQueryParamFieldsName,
+		GetComputeVolumeQueryParamFieldsType,
+		GetComputeVolumeQueryParamFieldsStatus,
+		GetComputeVolumeQueryParamFieldsSizeMb,
+		GetComputeVolumeQueryParamFieldsUsedMb,
+		GetComputeVolumeQueryParamFieldsRegionID,
+		GetComputeVolumeQueryParamFieldsAvailabilityZone,
+		GetComputeVolumeQueryParamFieldsInstanceIds,
+		GetComputeVolumeQueryParamFieldsMetadata,
+		GetComputeVolumeQueryParamFieldsRaw,
+	}
+}
 func (e *GetComputeVolumeQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -56,6 +56,51 @@ const (
 func (e GetAdsGroupQueryParamFields) ToPointer() *GetAdsGroupQueryParamFields {
 	return &e
 }
+
+// GetAdsGroupQueryParamFieldsValues returns every known GetAdsGroupQueryParamFields value in schema order.
+func GetAdsGroupQueryParamFieldsValues() []GetAdsGroupQueryParamFields {
+	return []GetAdsGroupQueryParamFields{
+		GetAdsGroupQueryParamFieldsID,
+		GetAdsGroupQueryParamFieldsCreatedAt,
+		GetAdsGroupQueryParamFieldsUpdatedAt,
+		GetAdsGroupQueryParamFieldsName,
+		GetAdsGroupQueryParamFieldsParentID,
+		GetAdsGroupQueryParamFieldsCampaignID,
+		GetAdsGroupQueryParamFieldsOrganizationID,
+		GetAdsGroupQueryParamFieldsInsertionorderID,
+		GetAdsGroupQueryParamFieldsStatus,
+		GetAdsGroupQueryParamFieldsEffectiveStatus,
+		GetAdsGroupQueryParamFieldsTargeting,
+		GetAdsGroupQueryParamFieldsBidAmount,
+		GetAdsGroupQueryParamFieldsBidStrategy,
+		GetAdsGroupQueryParamFieldsBudgetAmount,
+		GetAdsGroupQueryParamFieldsBudgetPeriod,
+		GetAdsGroupQueryParamFieldsBudgetAllocationType,
+		GetAdsGroupQueryParamFieldsStartAt,
+		GetAdsGroupQueryParamFieldsEndAt,
+		GetAdsGroupQueryParamFieldsBudgetUnit,
+		GetAdsGroupQueryParamFieldsBudgetMaxAmount,
+		GetAdsGroupQueryParamFieldsType,
+		GetAdsGroupQueryParamFieldsHasEuPoliticalAds,
+		GetAdsGroupQueryParamFieldsPacing,
+		GetAdsGroupQueryParamFieldsFrequencyCap,
+		GetAdsGroupQueryParamFieldsCreativeIds,
+		GetAdsGroupQueryParamFieldsOptimizationGoal,
+		GetAdsGroupQueryParamFieldsBillingEvent,
+		GetAdsGroupQueryParamFieldsCurrency,
+		GetAdsGroupQueryParamFieldsPromoted,
+		GetAdsGroupQueryParamFieldsLanguageLocale,
+		GetAdsGroupQueryParamFieldsCreativeSelection,
+		GetAdsGroupQueryParamFieldsMetadata,
+		GetAdsGroupQueryParamFieldsRaw,
+		GetAdsGroupQueryParamFieldsDeliveryType,
+		GetAdsGroupQueryParamFieldsPriority,
+		GetAdsGroupQueryParamFieldsCostType,
+		GetAdsGroupQueryParamFieldsDeliveryGoal,
+		GetAdsGroupQueryParamFieldsCreativeSizes,
+		GetAdsGroupQueryParamFieldsConversionTracking,
+	}
+}
 func (e *GetAdsGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

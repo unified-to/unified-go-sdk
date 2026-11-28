@@ -298,6 +298,25 @@ func (e TicketingMetadataFormat) ToPointer() *TicketingMetadataFormat {
 	return &e
 }
 
+// TicketingMetadataFormatValues returns every known TicketingMetadataFormat value in schema order.
+func TicketingMetadataFormatValues() []TicketingMetadataFormat {
+	return []TicketingMetadataFormat{
+		TicketingMetadataFormatText,
+		TicketingMetadataFormatNumber,
+		TicketingMetadataFormatDate,
+		TicketingMetadataFormatBoolean,
+		TicketingMetadataFormatFile,
+		TicketingMetadataFormatTextarea,
+		TicketingMetadataFormatSingleSelect,
+		TicketingMetadataFormatMultipleSelect,
+		TicketingMetadataFormatMeasurement,
+		TicketingMetadataFormatPrice,
+		TicketingMetadataFormatYesNo,
+		TicketingMetadataFormatCurrency,
+		TicketingMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *TicketingMetadataFormat) IsExact() bool {
 	if e != nil {

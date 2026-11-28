@@ -24,6 +24,20 @@ func (e GenaiTaskStatus) ToPointer() *GenaiTaskStatus {
 	return &e
 }
 
+// GenaiTaskStatusValues returns every known GenaiTaskStatus value in schema order.
+func GenaiTaskStatusValues() []GenaiTaskStatus {
+	return []GenaiTaskStatus{
+		GenaiTaskStatusPending,
+		GenaiTaskStatusRunning,
+		GenaiTaskStatusBlocked,
+		GenaiTaskStatusCompleted,
+		GenaiTaskStatusFailed,
+		GenaiTaskStatusCancelled,
+		GenaiTaskStatusExpired,
+		GenaiTaskStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *GenaiTaskStatus) IsExact() bool {
 	if e != nil {

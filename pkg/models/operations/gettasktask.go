@@ -45,6 +45,40 @@ const (
 func (e GetTaskTaskQueryParamFields) ToPointer() *GetTaskTaskQueryParamFields {
 	return &e
 }
+
+// GetTaskTaskQueryParamFieldsValues returns every known GetTaskTaskQueryParamFields value in schema order.
+func GetTaskTaskQueryParamFieldsValues() []GetTaskTaskQueryParamFields {
+	return []GetTaskTaskQueryParamFields{
+		GetTaskTaskQueryParamFieldsID,
+		GetTaskTaskQueryParamFieldsCreatedAt,
+		GetTaskTaskQueryParamFieldsUpdatedAt,
+		GetTaskTaskQueryParamFieldsName,
+		GetTaskTaskQueryParamFieldsProjectID,
+		GetTaskTaskQueryParamFieldsParentID,
+		GetTaskTaskQueryParamFieldsCompletedAt,
+		GetTaskTaskQueryParamFieldsStatus,
+		GetTaskTaskQueryParamFieldsNotes,
+		GetTaskTaskQueryParamFieldsDueAt,
+		GetTaskTaskQueryParamFieldsStartAt,
+		GetTaskTaskQueryParamFieldsEndAt,
+		GetTaskTaskQueryParamFieldsPriority,
+		GetTaskTaskQueryParamFieldsAssignedUserIds,
+		GetTaskTaskQueryParamFieldsCreatorUserID,
+		GetTaskTaskQueryParamFieldsFollowerUserIds,
+		GetTaskTaskQueryParamFieldsGroupIds,
+		GetTaskTaskQueryParamFieldsTags,
+		GetTaskTaskQueryParamFieldsURL,
+		GetTaskTaskQueryParamFieldsAttachmentIds,
+		GetTaskTaskQueryParamFieldsMetadata,
+		GetTaskTaskQueryParamFieldsHasChildren,
+		GetTaskTaskQueryParamFieldsType,
+		GetTaskTaskQueryParamFieldsTimeSpent,
+		GetTaskTaskQueryParamFieldsTimeSpentUnit,
+		GetTaskTaskQueryParamFieldsProgress,
+		GetTaskTaskQueryParamFieldsStoryPoints,
+		GetTaskTaskQueryParamFieldsRaw,
+	}
+}
 func (e *GetTaskTaskQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

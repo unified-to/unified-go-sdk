@@ -42,7 +42,7 @@ func main() {
         MetadataMetadata: shared.MetadataMetadata{
             CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
             Format: shared.MetadataMetadataFormatPrice.ToPointer(),
-            ID: unifiedgosdk.Pointer("55fbc3a4-9128-42ce-80ad-da40d2a5e73e"),
+            ID: unifiedgosdk.Pointer("dab4eb9c-b410-4c82-b1af-e8a140a5fe6c"),
             IsRequired: unifiedgosdk.Pointer(false),
             Name: "tollo",
             ObjectType: "healthcare_document",
@@ -52,7 +52,7 @@ func main() {
             Options: []string{},
             OriginalFormat: unifiedgosdk.Pointer("deputo"),
             Slug: unifiedgosdk.Pointer("acidus"),
-            UpdatedAt: types.MustNewTimeFromString("2025-04-17T11:21:04.404Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-18T04:24:10.347Z"),
         },
         ConnectionID: "<id>",
     })
@@ -276,7 +276,7 @@ func main() {
         MetadataMetadata: shared.MetadataMetadata{
             CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
             Format: shared.MetadataMetadataFormatPrice.ToPointer(),
-            ID: unifiedgosdk.Pointer("08b06f45-d71c-4db6-81db-f5b39fe264a7"),
+            ID: unifiedgosdk.Pointer("0b948f5b-d14b-48c3-9db2-a21359b30eb7"),
             IsRequired: unifiedgosdk.Pointer(false),
             Name: "tollo",
             ObjectType: "healthcare_document",
@@ -286,7 +286,7 @@ func main() {
             Options: []string{},
             OriginalFormat: unifiedgosdk.Pointer("deputo"),
             Slug: unifiedgosdk.Pointer("acidus"),
-            UpdatedAt: types.MustNewTimeFromString("2025-04-17T11:21:04.411Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-18T04:24:10.350Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -403,7 +403,7 @@ func main() {
         MetadataMetadata: shared.MetadataMetadata{
             CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
             Format: shared.MetadataMetadataFormatPrice.ToPointer(),
-            ID: unifiedgosdk.Pointer("08b06f45-d71c-4db6-81db-f5b39fe264a7"),
+            ID: unifiedgosdk.Pointer("0b948f5b-d14b-48c3-9db2-a21359b30eb7"),
             IsRequired: unifiedgosdk.Pointer(false),
             Name: "tollo",
             ObjectType: "healthcare_document",
@@ -413,7 +413,7 @@ func main() {
             Options: []string{},
             OriginalFormat: unifiedgosdk.Pointer("deputo"),
             Slug: unifiedgosdk.Pointer("acidus"),
-            UpdatedAt: types.MustNewTimeFromString("2025-04-17T11:21:04.411Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-18T04:24:10.350Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -19,6 +19,19 @@ func (e PropertySocialPostCallToActionType) ToPointer() *PropertySocialPostCallT
 	return &e
 }
 
+// PropertySocialPostCallToActionTypeValues returns every known PropertySocialPostCallToActionType value in schema order.
+func PropertySocialPostCallToActionTypeValues() []PropertySocialPostCallToActionType {
+	return []PropertySocialPostCallToActionType{
+		PropertySocialPostCallToActionTypeBook,
+		PropertySocialPostCallToActionTypeOrder,
+		PropertySocialPostCallToActionTypeShop,
+		PropertySocialPostCallToActionTypeLearnMore,
+		PropertySocialPostCallToActionTypeSignUp,
+		PropertySocialPostCallToActionTypeCall,
+		PropertySocialPostCallToActionTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertySocialPostCallToActionType) IsExact() bool {
 	if e != nil {

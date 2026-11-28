@@ -58,6 +58,53 @@ const (
 func (e UpdateDmsRepairorderQueryParamFields) ToPointer() *UpdateDmsRepairorderQueryParamFields {
 	return &e
 }
+
+// UpdateDmsRepairorderQueryParamFieldsValues returns every known UpdateDmsRepairorderQueryParamFields value in schema order.
+func UpdateDmsRepairorderQueryParamFieldsValues() []UpdateDmsRepairorderQueryParamFields {
+	return []UpdateDmsRepairorderQueryParamFields{
+		UpdateDmsRepairorderQueryParamFieldsID,
+		UpdateDmsRepairorderQueryParamFieldsCreatedAt,
+		UpdateDmsRepairorderQueryParamFieldsUpdatedAt,
+		UpdateDmsRepairorderQueryParamFieldsNumber,
+		UpdateDmsRepairorderQueryParamFieldsStatus,
+		UpdateDmsRepairorderQueryParamFieldsPayType,
+		UpdateDmsRepairorderQueryParamFieldsContactID,
+		UpdateDmsRepairorderQueryParamFieldsBillingContactID,
+		UpdateDmsRepairorderQueryParamFieldsVehicleID,
+		UpdateDmsRepairorderQueryParamFieldsVin,
+		UpdateDmsRepairorderQueryParamFieldsAppointmentID,
+		UpdateDmsRepairorderQueryParamFieldsAdvisorUserID,
+		UpdateDmsRepairorderQueryParamFieldsTechnicianUserIds,
+		UpdateDmsRepairorderQueryParamFieldsAppointmentAt,
+		UpdateDmsRepairorderQueryParamFieldsOpenedAt,
+		UpdateDmsRepairorderQueryParamFieldsPromisedAt,
+		UpdateDmsRepairorderQueryParamFieldsCompletedAt,
+		UpdateDmsRepairorderQueryParamFieldsClosedAt,
+		UpdateDmsRepairorderQueryParamFieldsDeliveredAt,
+		UpdateDmsRepairorderQueryParamFieldsOdometerIn,
+		UpdateDmsRepairorderQueryParamFieldsOdometerOut,
+		UpdateDmsRepairorderQueryParamFieldsOdometerUnit,
+		UpdateDmsRepairorderQueryParamFieldsTransportType,
+		UpdateDmsRepairorderQueryParamFieldsTagNumber,
+		UpdateDmsRepairorderQueryParamFieldsPurchaseOrderNumber,
+		UpdateDmsRepairorderQueryParamFieldsIsComeback,
+		UpdateDmsRepairorderQueryParamFieldsNotes,
+		UpdateDmsRepairorderQueryParamFieldsCurrency,
+		UpdateDmsRepairorderQueryParamFieldsEstimateAmount,
+		UpdateDmsRepairorderQueryParamFieldsLaborAmount,
+		UpdateDmsRepairorderQueryParamFieldsPartsAmount,
+		UpdateDmsRepairorderQueryParamFieldsSubletAmount,
+		UpdateDmsRepairorderQueryParamFieldsMiscAmount,
+		UpdateDmsRepairorderQueryParamFieldsDiscountAmount,
+		UpdateDmsRepairorderQueryParamFieldsTaxAmount,
+		UpdateDmsRepairorderQueryParamFieldsTotalAmount,
+		UpdateDmsRepairorderQueryParamFieldsBalanceAmount,
+		UpdateDmsRepairorderQueryParamFieldsTotals,
+		UpdateDmsRepairorderQueryParamFieldsJobs,
+		UpdateDmsRepairorderQueryParamFieldsMetadata,
+		UpdateDmsRepairorderQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateDmsRepairorderQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

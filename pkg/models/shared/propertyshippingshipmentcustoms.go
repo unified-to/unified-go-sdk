@@ -17,6 +17,18 @@ func (e ContentsType) ToPointer() *ContentsType {
 	return &e
 }
 
+// ContentsTypeValues returns every known ContentsType value in schema order.
+func ContentsTypeValues() []ContentsType {
+	return []ContentsType{
+		ContentsTypeMerchandise,
+		ContentsTypeDocuments,
+		ContentsTypeGift,
+		ContentsTypeReturnedGoods,
+		ContentsTypeSample,
+		ContentsTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ContentsType) IsExact() bool {
 	if e != nil {
@@ -38,6 +50,15 @@ const (
 
 func (e DutiesPaidBy) ToPointer() *DutiesPaidBy {
 	return &e
+}
+
+// DutiesPaidByValues returns every known DutiesPaidBy value in schema order.
+func DutiesPaidByValues() []DutiesPaidBy {
+	return []DutiesPaidBy{
+		DutiesPaidBySender,
+		DutiesPaidByRecipient,
+		DutiesPaidByThirdParty,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -62,6 +83,14 @@ func (e NonDeliveryOption) ToPointer() *NonDeliveryOption {
 	return &e
 }
 
+// NonDeliveryOptionValues returns every known NonDeliveryOption value in schema order.
+func NonDeliveryOptionValues() []NonDeliveryOption {
+	return []NonDeliveryOption{
+		NonDeliveryOptionReturn,
+		NonDeliveryOptionAbandon,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *NonDeliveryOption) IsExact() bool {
 	if e != nil {
@@ -83,6 +112,15 @@ const (
 
 func (e TaxesPaidBy) ToPointer() *TaxesPaidBy {
 	return &e
+}
+
+// TaxesPaidByValues returns every known TaxesPaidBy value in schema order.
+func TaxesPaidByValues() []TaxesPaidBy {
+	return []TaxesPaidBy{
+		TaxesPaidBySender,
+		TaxesPaidByRecipient,
+		TaxesPaidByThirdParty,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

@@ -21,6 +21,16 @@ func (e APICallType) ToPointer() *APICallType {
 	return &e
 }
 
+// APICallTypeValues returns every known APICallType value in schema order.
+func APICallTypeValues() []APICallType {
+	return []APICallType{
+		APICallTypeLogin,
+		APICallTypeWebhook,
+		APICallTypeInbound,
+		APICallTypeMcp,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *APICallType) IsExact() bool {
 	if e != nil {

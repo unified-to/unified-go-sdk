@@ -28,6 +28,23 @@ const (
 func (e UpdateRepoRepositoryQueryParamFields) ToPointer() *UpdateRepoRepositoryQueryParamFields {
 	return &e
 }
+
+// UpdateRepoRepositoryQueryParamFieldsValues returns every known UpdateRepoRepositoryQueryParamFields value in schema order.
+func UpdateRepoRepositoryQueryParamFieldsValues() []UpdateRepoRepositoryQueryParamFields {
+	return []UpdateRepoRepositoryQueryParamFields{
+		UpdateRepoRepositoryQueryParamFieldsID,
+		UpdateRepoRepositoryQueryParamFieldsCreatedAt,
+		UpdateRepoRepositoryQueryParamFieldsUpdatedAt,
+		UpdateRepoRepositoryQueryParamFieldsName,
+		UpdateRepoRepositoryQueryParamFieldsDescription,
+		UpdateRepoRepositoryQueryParamFieldsOwner,
+		UpdateRepoRepositoryQueryParamFieldsIsPrivate,
+		UpdateRepoRepositoryQueryParamFieldsWebURL,
+		UpdateRepoRepositoryQueryParamFieldsOrgID,
+		UpdateRepoRepositoryQueryParamFieldsMetadata,
+		UpdateRepoRepositoryQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateRepoRepositoryQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

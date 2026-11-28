@@ -49,6 +49,44 @@ const (
 func (e PatchPropertyReservationQueryParamFields) ToPointer() *PatchPropertyReservationQueryParamFields {
 	return &e
 }
+
+// PatchPropertyReservationQueryParamFieldsValues returns every known PatchPropertyReservationQueryParamFields value in schema order.
+func PatchPropertyReservationQueryParamFieldsValues() []PatchPropertyReservationQueryParamFields {
+	return []PatchPropertyReservationQueryParamFields{
+		PatchPropertyReservationQueryParamFieldsID,
+		PatchPropertyReservationQueryParamFieldsCreatedAt,
+		PatchPropertyReservationQueryParamFieldsUpdatedAt,
+		PatchPropertyReservationQueryParamFieldsListingID,
+		PatchPropertyReservationQueryParamFieldsUnittypeIds,
+		PatchPropertyReservationQueryParamFieldsGuestID,
+		PatchPropertyReservationQueryParamFieldsGuestName,
+		PatchPropertyReservationQueryParamFieldsGuestEmail,
+		PatchPropertyReservationQueryParamFieldsGuestPhone,
+		PatchPropertyReservationQueryParamFieldsStatus,
+		PatchPropertyReservationQueryParamFieldsSource,
+		PatchPropertyReservationQueryParamFieldsConfirmationCode,
+		PatchPropertyReservationQueryParamFieldsStartAt,
+		PatchPropertyReservationQueryParamFieldsEndAt,
+		PatchPropertyReservationQueryParamFieldsEstimatedArrivalTime,
+		PatchPropertyReservationQueryParamFieldsEstimatedDepartureTime,
+		PatchPropertyReservationQueryParamFieldsNights,
+		PatchPropertyReservationQueryParamFieldsGuests,
+		PatchPropertyReservationQueryParamFieldsAdults,
+		PatchPropertyReservationQueryParamFieldsChildren,
+		PatchPropertyReservationQueryParamFieldsInfants,
+		PatchPropertyReservationQueryParamFieldsPets,
+		PatchPropertyReservationQueryParamFieldsCurrency,
+		PatchPropertyReservationQueryParamFieldsTotalAmount,
+		PatchPropertyReservationQueryParamFieldsPaidAmount,
+		PatchPropertyReservationQueryParamFieldsBalanceAmount,
+		PatchPropertyReservationQueryParamFieldsLineItems,
+		PatchPropertyReservationQueryParamFieldsNotes,
+		PatchPropertyReservationQueryParamFieldsCancelledAt,
+		PatchPropertyReservationQueryParamFieldsWebURL,
+		PatchPropertyReservationQueryParamFieldsMetadata,
+		PatchPropertyReservationQueryParamFieldsRaw,
+	}
+}
 func (e *PatchPropertyReservationQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

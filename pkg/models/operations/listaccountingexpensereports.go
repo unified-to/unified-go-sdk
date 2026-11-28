@@ -41,6 +41,36 @@ const (
 func (e ListAccountingExpensereportsQueryParamFields) ToPointer() *ListAccountingExpensereportsQueryParamFields {
 	return &e
 }
+
+// ListAccountingExpensereportsQueryParamFieldsValues returns every known ListAccountingExpensereportsQueryParamFields value in schema order.
+func ListAccountingExpensereportsQueryParamFieldsValues() []ListAccountingExpensereportsQueryParamFields {
+	return []ListAccountingExpensereportsQueryParamFields{
+		ListAccountingExpensereportsQueryParamFieldsID,
+		ListAccountingExpensereportsQueryParamFieldsCreatedAt,
+		ListAccountingExpensereportsQueryParamFieldsUpdatedAt,
+		ListAccountingExpensereportsQueryParamFieldsName,
+		ListAccountingExpensereportsQueryParamFieldsUserID,
+		ListAccountingExpensereportsQueryParamFieldsApproverUserID,
+		ListAccountingExpensereportsQueryParamFieldsApproverUsers,
+		ListAccountingExpensereportsQueryParamFieldsStatus,
+		ListAccountingExpensereportsQueryParamFieldsTotalAmount,
+		ListAccountingExpensereportsQueryParamFieldsCurrency,
+		ListAccountingExpensereportsQueryParamFieldsTaxAmount,
+		ListAccountingExpensereportsQueryParamFieldsReimbursedAmount,
+		ListAccountingExpensereportsQueryParamFieldsReimbursedAt,
+		ListAccountingExpensereportsQueryParamFieldsApprovedAt,
+		ListAccountingExpensereportsQueryParamFieldsPostedAt,
+		ListAccountingExpensereportsQueryParamFieldsExternalNumber,
+		ListAccountingExpensereportsQueryParamFieldsLineitems,
+		ListAccountingExpensereportsQueryParamFieldsAttachments,
+		ListAccountingExpensereportsQueryParamFieldsCategoryIds,
+		ListAccountingExpensereportsQueryParamFieldsProjectID,
+		ListAccountingExpensereportsQueryParamFieldsUsers,
+		ListAccountingExpensereportsQueryParamFieldsOrganizationID,
+		ListAccountingExpensereportsQueryParamFieldsMetadata,
+		ListAccountingExpensereportsQueryParamFieldsRaw,
+	}
+}
 func (e *ListAccountingExpensereportsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

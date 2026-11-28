@@ -26,6 +26,21 @@ const (
 func (e GetFormsSubmissionQueryParamFields) ToPointer() *GetFormsSubmissionQueryParamFields {
 	return &e
 }
+
+// GetFormsSubmissionQueryParamFieldsValues returns every known GetFormsSubmissionQueryParamFields value in schema order.
+func GetFormsSubmissionQueryParamFieldsValues() []GetFormsSubmissionQueryParamFields {
+	return []GetFormsSubmissionQueryParamFields{
+		GetFormsSubmissionQueryParamFieldsID,
+		GetFormsSubmissionQueryParamFieldsCreatedAt,
+		GetFormsSubmissionQueryParamFieldsUpdatedAt,
+		GetFormsSubmissionQueryParamFieldsFormID,
+		GetFormsSubmissionQueryParamFieldsRespondentEmail,
+		GetFormsSubmissionQueryParamFieldsRespondentName,
+		GetFormsSubmissionQueryParamFieldsAnswers,
+		GetFormsSubmissionQueryParamFieldsMetadata,
+		GetFormsSubmissionQueryParamFieldsRaw,
+	}
+}
 func (e *GetFormsSubmissionQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

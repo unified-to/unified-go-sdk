@@ -21,6 +21,16 @@ func (e PerformanceFeedbackType) ToPointer() *PerformanceFeedbackType {
 	return &e
 }
 
+// PerformanceFeedbackTypeValues returns every known PerformanceFeedbackType value in schema order.
+func PerformanceFeedbackTypeValues() []PerformanceFeedbackType {
+	return []PerformanceFeedbackType{
+		PerformanceFeedbackTypePraise,
+		PerformanceFeedbackTypeFeedback,
+		PerformanceFeedbackTypeRequested,
+		PerformanceFeedbackTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PerformanceFeedbackType) IsExact() bool {
 	if e != nil {

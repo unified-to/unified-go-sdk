@@ -22,6 +22,17 @@ func (e DmsOpcodePayType) ToPointer() *DmsOpcodePayType {
 	return &e
 }
 
+// DmsOpcodePayTypeValues returns every known DmsOpcodePayType value in schema order.
+func DmsOpcodePayTypeValues() []DmsOpcodePayType {
+	return []DmsOpcodePayType{
+		DmsOpcodePayTypeCustomer,
+		DmsOpcodePayTypeWarranty,
+		DmsOpcodePayTypeInternal,
+		DmsOpcodePayTypeServiceContract,
+		DmsOpcodePayTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *DmsOpcodePayType) IsExact() bool {
 	if e != nil {
@@ -44,6 +55,16 @@ const (
 
 func (e DmsOpcodeType) ToPointer() *DmsOpcodeType {
 	return &e
+}
+
+// DmsOpcodeTypeValues returns every known DmsOpcodeType value in schema order.
+func DmsOpcodeTypeValues() []DmsOpcodeType {
+	return []DmsOpcodeType{
+		DmsOpcodeTypeLabor,
+		DmsOpcodeTypeMenu,
+		DmsOpcodeTypeSublet,
+		DmsOpcodeTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

@@ -53,6 +53,48 @@ const (
 func (e UpdatePropertyListingQueryParamFields) ToPointer() *UpdatePropertyListingQueryParamFields {
 	return &e
 }
+
+// UpdatePropertyListingQueryParamFieldsValues returns every known UpdatePropertyListingQueryParamFields value in schema order.
+func UpdatePropertyListingQueryParamFieldsValues() []UpdatePropertyListingQueryParamFields {
+	return []UpdatePropertyListingQueryParamFields{
+		UpdatePropertyListingQueryParamFieldsID,
+		UpdatePropertyListingQueryParamFieldsCreatedAt,
+		UpdatePropertyListingQueryParamFieldsUpdatedAt,
+		UpdatePropertyListingQueryParamFieldsName,
+		UpdatePropertyListingQueryParamFieldsInternalName,
+		UpdatePropertyListingQueryParamFieldsDescription,
+		UpdatePropertyListingQueryParamFieldsType,
+		UpdatePropertyListingQueryParamFieldsIsActive,
+		UpdatePropertyListingQueryParamFieldsImageUrls,
+		UpdatePropertyListingQueryParamFieldsAddress,
+		UpdatePropertyListingQueryParamFieldsLatitude,
+		UpdatePropertyListingQueryParamFieldsLongitude,
+		UpdatePropertyListingQueryParamFieldsTimezone,
+		UpdatePropertyListingQueryParamFieldsCurrency,
+		UpdatePropertyListingQueryParamFieldsStartPriceAmount,
+		UpdatePropertyListingQueryParamFieldsCleaningFeeAmount,
+		UpdatePropertyListingQueryParamFieldsMaxOccupancy,
+		UpdatePropertyListingQueryParamFieldsBedrooms,
+		UpdatePropertyListingQueryParamFieldsBeds,
+		UpdatePropertyListingQueryParamFieldsBathrooms,
+		UpdatePropertyListingQueryParamFieldsMinNights,
+		UpdatePropertyListingQueryParamFieldsMaxNights,
+		UpdatePropertyListingQueryParamFieldsCheckInStartTime,
+		UpdatePropertyListingQueryParamFieldsCheckInEndTime,
+		UpdatePropertyListingQueryParamFieldsCheckOutTime,
+		UpdatePropertyListingQueryParamFieldsAmenities,
+		UpdatePropertyListingQueryParamFieldsHouseRules,
+		UpdatePropertyListingQueryParamFieldsCancellationPolicy,
+		UpdatePropertyListingQueryParamFieldsRating,
+		UpdatePropertyListingQueryParamFieldsReviewCount,
+		UpdatePropertyListingQueryParamFieldsChannels,
+		UpdatePropertyListingQueryParamFieldsUnittypeIds,
+		UpdatePropertyListingQueryParamFieldsOwnerUserIds,
+		UpdatePropertyListingQueryParamFieldsWebURL,
+		UpdatePropertyListingQueryParamFieldsMetadata,
+		UpdatePropertyListingQueryParamFieldsRaw,
+	}
+}
 func (e *UpdatePropertyListingQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

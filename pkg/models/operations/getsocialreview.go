@@ -31,6 +31,26 @@ const (
 func (e GetSocialReviewQueryParamFields) ToPointer() *GetSocialReviewQueryParamFields {
 	return &e
 }
+
+// GetSocialReviewQueryParamFieldsValues returns every known GetSocialReviewQueryParamFields value in schema order.
+func GetSocialReviewQueryParamFieldsValues() []GetSocialReviewQueryParamFields {
+	return []GetSocialReviewQueryParamFields{
+		GetSocialReviewQueryParamFieldsID,
+		GetSocialReviewQueryParamFieldsCreatedAt,
+		GetSocialReviewQueryParamFieldsUpdatedAt,
+		GetSocialReviewQueryParamFieldsProfileID,
+		GetSocialReviewQueryParamFieldsRating,
+		GetSocialReviewQueryParamFieldsTitle,
+		GetSocialReviewQueryParamFieldsContent,
+		GetSocialReviewQueryParamFieldsAuthorName,
+		GetSocialReviewQueryParamFieldsAuthorAvatarURL,
+		GetSocialReviewQueryParamFieldsAuthorLocation,
+		GetSocialReviewQueryParamFieldsReply,
+		GetSocialReviewQueryParamFieldsURL,
+		GetSocialReviewQueryParamFieldsMetadata,
+		GetSocialReviewQueryParamFieldsRaw,
+	}
+}
 func (e *GetSocialReviewQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

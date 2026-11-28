@@ -20,6 +20,15 @@ func (e AuthType) ToPointer() *AuthType {
 	return &e
 }
 
+// AuthTypeValues returns every known AuthType value in schema order.
+func AuthTypeValues() []AuthType {
+	return []AuthType{
+		AuthTypeOauth2,
+		AuthTypeOther,
+		AuthTypeToken,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AuthType) IsExact() bool {
 	if e != nil {

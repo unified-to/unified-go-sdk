@@ -57,7 +57,7 @@ func main() {
             Content: unifiedgosdk.Pointer("Vix taedium thymum adipiscor amicitia."),
             CreatedAt: types.MustNewTimeFromString("2019-12-12T18:10:22.988Z"),
             HelpfulVotes: unifiedgosdk.Pointer[float64](66.0),
-            ID: unifiedgosdk.Pointer("5fe29f1d-ec5e-4dbf-b163-fd09d12cf193"),
+            ID: unifiedgosdk.Pointer("2f9c1329-75e0-4a15-a3df-048840f092ba"),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsPublic: unifiedgosdk.Pointer(true),
             IsVerified: unifiedgosdk.Pointer(false),
@@ -65,10 +65,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Teneo."),
                     Height: unifiedgosdk.Pointer[float64](749.0),
-                    ID: unifiedgosdk.Pointer("0057e435-6c67-46d7-a193-af082b3c08ac"),
+                    ID: unifiedgosdk.Pointer("9e0f498e-e886-4356-b79a-eee5ab7d8093"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("b20ba1bb-4bbe-4ed2-899f-bf1b2df89b0c"),
+                            ID: unifiedgosdk.Pointer("8add0e1c-4ef8-4ffe-a617-4a8dabc9c31b"),
                             Slug: unifiedgosdk.Pointer("numquam"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "bos",
@@ -83,10 +83,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Ratione vulticulus arbitro ultio pauci."),
                     Height: unifiedgosdk.Pointer[float64](957.0),
-                    ID: unifiedgosdk.Pointer("38cd5a86-95d7-4960-99be-662378dba450"),
+                    ID: unifiedgosdk.Pointer("4babaf69-0f12-45e0-8e2c-71493c31e04e"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("8d56ee92-f3f1-4024-bd8d-3ad953395aff"),
+                            ID: unifiedgosdk.Pointer("09dbf833-ae69-4274-837f-e3535675dfe9"),
                             Slug: unifiedgosdk.Pointer("timidus"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "sol",
@@ -104,7 +104,7 @@ func main() {
             Status: shared.CommerceReviewStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("Auxilium."),
             UnhelpfulVotes: unifiedgosdk.Pointer[float64](88.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-21T02:06:21.206Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-21T21:52:16.938Z"),
             URL: unifiedgosdk.Pointer("https://whispered-hawk.name"),
             VerifiedPurchase: unifiedgosdk.Pointer(true),
         },
@@ -609,7 +609,7 @@ func main() {
             Content: unifiedgosdk.Pointer("Vix taedium thymum adipiscor amicitia."),
             CreatedAt: types.MustNewTimeFromString("2019-12-12T18:10:22.988Z"),
             HelpfulVotes: unifiedgosdk.Pointer[float64](66.0),
-            ID: unifiedgosdk.Pointer("0c04ac64-7cab-4e2c-8fba-5e2c5bee287e"),
+            ID: unifiedgosdk.Pointer("05ee6148-e5d2-48ff-a01e-6ac0f36a4488"),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsPublic: unifiedgosdk.Pointer(true),
             IsVerified: unifiedgosdk.Pointer(false),
@@ -617,10 +617,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Teneo."),
                     Height: unifiedgosdk.Pointer[float64](749.0),
-                    ID: unifiedgosdk.Pointer("b8527595-0c9f-43ed-8cd9-907b6a1b608a"),
+                    ID: unifiedgosdk.Pointer("b2885a48-048f-43bc-8d35-88ee58188e92"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("3be574f8-a7d6-4d4b-af03-3d48d039315e"),
+                            ID: unifiedgosdk.Pointer("6cd99fe7-ff41-475d-b2be-0c1f182f58b5"),
                             Slug: unifiedgosdk.Pointer("numquam"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "bos",
@@ -635,10 +635,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Ratione vulticulus arbitro ultio pauci."),
                     Height: unifiedgosdk.Pointer[float64](957.0),
-                    ID: unifiedgosdk.Pointer("e7c69cb2-38e0-4a03-ba0f-26ea421fa575"),
+                    ID: unifiedgosdk.Pointer("9fa95262-a6f2-4c01-bb53-c6898c25dac9"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("222d9247-024b-4983-8a1b-a605b7d96a9e"),
+                            ID: unifiedgosdk.Pointer("9146918a-bf17-4498-8b45-9cc8fd594206"),
                             Slug: unifiedgosdk.Pointer("timidus"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "sol",
@@ -656,7 +656,7 @@ func main() {
             Status: shared.CommerceReviewStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("Auxilium."),
             UnhelpfulVotes: unifiedgosdk.Pointer[float64](88.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-21T02:06:21.241Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-21T21:52:16.961Z"),
             URL: unifiedgosdk.Pointer("https://whispered-hawk.name"),
             VerifiedPurchase: unifiedgosdk.Pointer(true),
         },
@@ -750,13 +750,13 @@ func main() {
             },
             Content: unifiedgosdk.Pointer("Attonbitus comitatus auditor. Tergo nostrum deleo vomica comprehendo tertius summopere. Apparatus incidunt tabula pauci confido colo fugiat umquam perferendis amitto."),
             CreatedAt: types.MustNewTimeFromString("2022-10-17T11:17:07.682Z"),
-            ID: unifiedgosdk.Pointer("208376ca-6432-4013-96d4-fd7e5a361ec7"),
+            ID: unifiedgosdk.Pointer("d2279bc3-0ab8-4fa1-9dc5-880c2159257c"),
             IsPublic: unifiedgosdk.Pointer(true),
             Metadata: []shared.PropertyMetadata{},
             PrivateFeedback: unifiedgosdk.Pointer("Patria stella magni."),
             Rating: unifiedgosdk.Pointer[float64](3.0),
             Source: unifiedgosdk.Pointer("Airbnb"),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-13T13:43:51.779Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-14T09:26:41.552Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -936,7 +936,7 @@ func main() {
             Content: unifiedgosdk.Pointer("Vix taedium thymum adipiscor amicitia."),
             CreatedAt: types.MustNewTimeFromString("2019-12-12T18:10:22.988Z"),
             HelpfulVotes: unifiedgosdk.Pointer[float64](66.0),
-            ID: unifiedgosdk.Pointer("0c04ac64-7cab-4e2c-8fba-5e2c5bee287e"),
+            ID: unifiedgosdk.Pointer("05ee6148-e5d2-48ff-a01e-6ac0f36a4488"),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsPublic: unifiedgosdk.Pointer(true),
             IsVerified: unifiedgosdk.Pointer(false),
@@ -944,10 +944,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Teneo."),
                     Height: unifiedgosdk.Pointer[float64](749.0),
-                    ID: unifiedgosdk.Pointer("b8527595-0c9f-43ed-8cd9-907b6a1b608a"),
+                    ID: unifiedgosdk.Pointer("b2885a48-048f-43bc-8d35-88ee58188e92"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("3be574f8-a7d6-4d4b-af03-3d48d039315e"),
+                            ID: unifiedgosdk.Pointer("6cd99fe7-ff41-475d-b2be-0c1f182f58b5"),
                             Slug: unifiedgosdk.Pointer("numquam"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "bos",
@@ -962,10 +962,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Ratione vulticulus arbitro ultio pauci."),
                     Height: unifiedgosdk.Pointer[float64](957.0),
-                    ID: unifiedgosdk.Pointer("e7c69cb2-38e0-4a03-ba0f-26ea421fa575"),
+                    ID: unifiedgosdk.Pointer("9fa95262-a6f2-4c01-bb53-c6898c25dac9"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("222d9247-024b-4983-8a1b-a605b7d96a9e"),
+                            ID: unifiedgosdk.Pointer("9146918a-bf17-4498-8b45-9cc8fd594206"),
                             Slug: unifiedgosdk.Pointer("timidus"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "sol",
@@ -983,7 +983,7 @@ func main() {
             Status: shared.CommerceReviewStatusApproved.ToPointer(),
             Title: unifiedgosdk.Pointer("Auxilium."),
             UnhelpfulVotes: unifiedgosdk.Pointer[float64](88.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-21T02:06:21.241Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-21T21:52:16.961Z"),
             URL: unifiedgosdk.Pointer("https://whispered-hawk.name"),
             VerifiedPurchase: unifiedgosdk.Pointer(true),
         },
@@ -1077,13 +1077,13 @@ func main() {
             },
             Content: unifiedgosdk.Pointer("Attonbitus comitatus auditor. Tergo nostrum deleo vomica comprehendo tertius summopere. Apparatus incidunt tabula pauci confido colo fugiat umquam perferendis amitto."),
             CreatedAt: types.MustNewTimeFromString("2022-10-17T11:17:07.682Z"),
-            ID: unifiedgosdk.Pointer("208376ca-6432-4013-96d4-fd7e5a361ec7"),
+            ID: unifiedgosdk.Pointer("d2279bc3-0ab8-4fa1-9dc5-880c2159257c"),
             IsPublic: unifiedgosdk.Pointer(true),
             Metadata: []shared.PropertyMetadata{},
             PrivateFeedback: unifiedgosdk.Pointer("Patria stella magni."),
             Rating: unifiedgosdk.Pointer[float64](3.0),
             Source: unifiedgosdk.Pointer("Airbnb"),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-13T13:43:51.779Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-14T09:26:41.552Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

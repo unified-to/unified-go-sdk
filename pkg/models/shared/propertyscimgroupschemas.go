@@ -12,6 +12,13 @@ func (e PropertyScimGroupSchemas) ToPointer() *PropertyScimGroupSchemas {
 	return &e
 }
 
+// PropertyScimGroupSchemasValues returns every known PropertyScimGroupSchemas value in schema order.
+func PropertyScimGroupSchemasValues() []PropertyScimGroupSchemas {
+	return []PropertyScimGroupSchemas{
+		PropertyScimGroupSchemasUrnIetfParamsScimSchemasCore20Group,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyScimGroupSchemas) IsExact() bool {
 	if e != nil {

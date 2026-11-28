@@ -298,6 +298,25 @@ func (e DatastoreMetadataFormat) ToPointer() *DatastoreMetadataFormat {
 	return &e
 }
 
+// DatastoreMetadataFormatValues returns every known DatastoreMetadataFormat value in schema order.
+func DatastoreMetadataFormatValues() []DatastoreMetadataFormat {
+	return []DatastoreMetadataFormat{
+		DatastoreMetadataFormatText,
+		DatastoreMetadataFormatNumber,
+		DatastoreMetadataFormatDate,
+		DatastoreMetadataFormatBoolean,
+		DatastoreMetadataFormatFile,
+		DatastoreMetadataFormatTextarea,
+		DatastoreMetadataFormatSingleSelect,
+		DatastoreMetadataFormatMultipleSelect,
+		DatastoreMetadataFormatMeasurement,
+		DatastoreMetadataFormatPrice,
+		DatastoreMetadataFormatYesNo,
+		DatastoreMetadataFormatCurrency,
+		DatastoreMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *DatastoreMetadataFormat) IsExact() bool {
 	if e != nil {

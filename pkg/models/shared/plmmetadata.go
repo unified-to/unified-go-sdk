@@ -298,6 +298,25 @@ func (e PlmMetadataFormat) ToPointer() *PlmMetadataFormat {
 	return &e
 }
 
+// PlmMetadataFormatValues returns every known PlmMetadataFormat value in schema order.
+func PlmMetadataFormatValues() []PlmMetadataFormat {
+	return []PlmMetadataFormat{
+		PlmMetadataFormatText,
+		PlmMetadataFormatNumber,
+		PlmMetadataFormatDate,
+		PlmMetadataFormatBoolean,
+		PlmMetadataFormatFile,
+		PlmMetadataFormatTextarea,
+		PlmMetadataFormatSingleSelect,
+		PlmMetadataFormatMultipleSelect,
+		PlmMetadataFormatMeasurement,
+		PlmMetadataFormatPrice,
+		PlmMetadataFormatYesNo,
+		PlmMetadataFormatCurrency,
+		PlmMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PlmMetadataFormat) IsExact() bool {
 	if e != nil {

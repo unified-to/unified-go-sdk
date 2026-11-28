@@ -20,6 +20,15 @@ func (e Direction) ToPointer() *Direction {
 	return &e
 }
 
+// DirectionValues returns every known Direction value in schema order.
+func DirectionValues() []Direction {
+	return []Direction{
+		DirectionSource,
+		DirectionDestination,
+		DirectionBidirectional,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Direction) IsExact() bool {
 	if e != nil {

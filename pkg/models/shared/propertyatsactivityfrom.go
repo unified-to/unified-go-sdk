@@ -14,6 +14,15 @@ func (e PropertyAtsActivityFromType) ToPointer() *PropertyAtsActivityFromType {
 	return &e
 }
 
+// PropertyAtsActivityFromTypeValues returns every known PropertyAtsActivityFromType value in schema order.
+func PropertyAtsActivityFromTypeValues() []PropertyAtsActivityFromType {
+	return []PropertyAtsActivityFromType{
+		PropertyAtsActivityFromTypeWork,
+		PropertyAtsActivityFromTypeHome,
+		PropertyAtsActivityFromTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAtsActivityFromType) IsExact() bool {
 	if e != nil {

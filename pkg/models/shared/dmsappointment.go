@@ -20,6 +20,16 @@ func (e OdometerUnit) ToPointer() *OdometerUnit {
 	return &e
 }
 
+// OdometerUnitValues returns every known OdometerUnit value in schema order.
+func OdometerUnitValues() []OdometerUnit {
+	return []OdometerUnit{
+		OdometerUnitMiles,
+		OdometerUnitKilometers,
+		OdometerUnitHours,
+		OdometerUnitOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *OdometerUnit) IsExact() bool {
 	if e != nil {
@@ -44,6 +54,18 @@ const (
 
 func (e DmsAppointmentStatus) ToPointer() *DmsAppointmentStatus {
 	return &e
+}
+
+// DmsAppointmentStatusValues returns every known DmsAppointmentStatus value in schema order.
+func DmsAppointmentStatusValues() []DmsAppointmentStatus {
+	return []DmsAppointmentStatus{
+		DmsAppointmentStatusScheduled,
+		DmsAppointmentStatusConfirmed,
+		DmsAppointmentStatusConverted,
+		DmsAppointmentStatusCancelled,
+		DmsAppointmentStatusNoShow,
+		DmsAppointmentStatusOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -72,6 +94,20 @@ const (
 
 func (e TransportType) ToPointer() *TransportType {
 	return &e
+}
+
+// TransportTypeValues returns every known TransportType value in schema order.
+func TransportTypeValues() []TransportType {
+	return []TransportType{
+		TransportTypeWaiter,
+		TransportTypeDropOff,
+		TransportTypeShuttle,
+		TransportTypeLoaner,
+		TransportTypeRental,
+		TransportTypePickupDelivery,
+		TransportTypeTaxi,
+		TransportTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

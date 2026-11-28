@@ -39,6 +39,34 @@ const (
 func (e UpdateAnalyticsVisitorQueryParamFields) ToPointer() *UpdateAnalyticsVisitorQueryParamFields {
 	return &e
 }
+
+// UpdateAnalyticsVisitorQueryParamFieldsValues returns every known UpdateAnalyticsVisitorQueryParamFields value in schema order.
+func UpdateAnalyticsVisitorQueryParamFieldsValues() []UpdateAnalyticsVisitorQueryParamFields {
+	return []UpdateAnalyticsVisitorQueryParamFields{
+		UpdateAnalyticsVisitorQueryParamFieldsID,
+		UpdateAnalyticsVisitorQueryParamFieldsCreatedAt,
+		UpdateAnalyticsVisitorQueryParamFieldsUpdatedAt,
+		UpdateAnalyticsVisitorQueryParamFieldsPropertyID,
+		UpdateAnalyticsVisitorQueryParamFieldsEmail,
+		UpdateAnalyticsVisitorQueryParamFieldsName,
+		UpdateAnalyticsVisitorQueryParamFieldsFirstName,
+		UpdateAnalyticsVisitorQueryParamFieldsLastName,
+		UpdateAnalyticsVisitorQueryParamFieldsAge,
+		UpdateAnalyticsVisitorQueryParamFieldsGender,
+		UpdateAnalyticsVisitorQueryParamFieldsCountry,
+		UpdateAnalyticsVisitorQueryParamFieldsCountryCode,
+		UpdateAnalyticsVisitorQueryParamFieldsCity,
+		UpdateAnalyticsVisitorQueryParamFieldsLanguage,
+		UpdateAnalyticsVisitorQueryParamFieldsTimezone,
+		UpdateAnalyticsVisitorQueryParamFieldsFirstSeenAt,
+		UpdateAnalyticsVisitorQueryParamFieldsLastSeenAt,
+		UpdateAnalyticsVisitorQueryParamFieldsTotalSessions,
+		UpdateAnalyticsVisitorQueryParamFieldsTotalPageViews,
+		UpdateAnalyticsVisitorQueryParamFieldsTotalEvents,
+		UpdateAnalyticsVisitorQueryParamFieldsMetadata,
+		UpdateAnalyticsVisitorQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateAnalyticsVisitorQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

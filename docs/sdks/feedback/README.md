@@ -37,7 +37,7 @@ func main() {
     res, err := s.Feedback.CreatePerformanceFeedback(ctx, operations.CreatePerformanceFeedbackRequest{
         PerformanceFeedback: shared.PerformanceFeedback{
             CreatedAt: types.MustNewTimeFromString("2023-04-11T16:21:53.862Z"),
-            ID: unifiedgosdk.Pointer("539bd3ad-eb1d-494b-a6a3-364974eb814c"),
+            ID: unifiedgosdk.Pointer("3fece390-3dc3-495a-b8d8-fe93f36963de"),
             IsVisible: unifiedgosdk.Pointer(true),
             Message: unifiedgosdk.Pointer("Aestus viscus curo iure cernuus contigo damno decor carpo succedo est tergiversatio."),
             Metadata: []shared.PerformanceMetadata{},
@@ -46,7 +46,7 @@ func main() {
                 "mathematics",
             },
             Type: shared.PerformanceFeedbackTypePraise.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-29T06:49:44.930Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-29T23:01:42.398Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",

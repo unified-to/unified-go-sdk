@@ -27,6 +27,22 @@ func (e PropertyListingType) ToPointer() *PropertyListingType {
 	return &e
 }
 
+// PropertyListingTypeValues returns every known PropertyListingType value in schema order.
+func PropertyListingTypeValues() []PropertyListingType {
+	return []PropertyListingType{
+		PropertyListingTypeApartment,
+		PropertyListingTypeHouse,
+		PropertyListingTypeCondo,
+		PropertyListingTypeStudio,
+		PropertyListingTypeVilla,
+		PropertyListingTypeCabin,
+		PropertyListingTypeRoom,
+		PropertyListingTypeHotel,
+		PropertyListingTypeBedAndBreakfast,
+		PropertyListingTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyListingType) IsExact() bool {
 	if e != nil {

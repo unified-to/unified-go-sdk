@@ -19,6 +19,20 @@ func (e LmsMediaType) ToPointer() *LmsMediaType {
 	return &e
 }
 
+// LmsMediaTypeValues returns every known LmsMediaType value in schema order.
+func LmsMediaTypeValues() []LmsMediaType {
+	return []LmsMediaType{
+		LmsMediaTypeImage,
+		LmsMediaTypeHeadshot,
+		LmsMediaTypeVideo,
+		LmsMediaTypeWeb,
+		LmsMediaTypeDocument,
+		LmsMediaTypeText,
+		LmsMediaTypeHTML,
+		LmsMediaTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *LmsMediaType) IsExact() bool {
 	if e != nil {

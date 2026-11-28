@@ -14,6 +14,15 @@ func (e PropertyStoragePermissionRoles) ToPointer() *PropertyStoragePermissionRo
 	return &e
 }
 
+// PropertyStoragePermissionRolesValues returns every known PropertyStoragePermissionRoles value in schema order.
+func PropertyStoragePermissionRolesValues() []PropertyStoragePermissionRoles {
+	return []PropertyStoragePermissionRoles{
+		PropertyStoragePermissionRolesOwner,
+		PropertyStoragePermissionRolesRead,
+		PropertyStoragePermissionRolesWrite,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyStoragePermissionRoles) IsExact() bool {
 	if e != nil {

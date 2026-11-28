@@ -47,7 +47,7 @@ func main() {
                 PostalCode: unifiedgosdk.Pointer("99263-6004"),
                 Region: unifiedgosdk.Pointer("New Jersey"),
             },
-            Birthdate: unifiedgosdk.Pointer("1941-12-26"),
+            Birthdate: unifiedgosdk.Pointer("1941-12-27"),
             Contacts: []shared.HealthcarePatientContact{
                 shared.HealthcarePatientContact{
                     Emails: []shared.HealthcareEmail{},
@@ -70,7 +70,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Monroe"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("5ba4ebd4-3d68-4640-af37-6fd21588417e"),
+            ID: unifiedgosdk.Pointer("93d398c3-e4a0-4f91-9997-16caad5d32cf"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -90,7 +90,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-07-27T14:19:43.581Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-07-28T12:41:01.424Z"),
         },
         ConnectionID: "<id>",
     })
@@ -374,7 +374,7 @@ func main() {
                 PostalCode: unifiedgosdk.Pointer("99263-6004"),
                 Region: unifiedgosdk.Pointer("New Jersey"),
             },
-            Birthdate: unifiedgosdk.Pointer("1941-12-26"),
+            Birthdate: unifiedgosdk.Pointer("1941-12-27"),
             Contacts: []shared.HealthcarePatientContact{
                 shared.HealthcarePatientContact{
                     Emails: []shared.HealthcareEmail{},
@@ -397,7 +397,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Monroe"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("8c2e62c2-4a20-4818-b852-ca9ed7bfa210"),
+            ID: unifiedgosdk.Pointer("2dd3e89e-612e-41df-a3c4-43a707124ebb"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -417,7 +417,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-07-27T14:19:43.633Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-07-28T12:41:01.447Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -484,7 +484,7 @@ func main() {
                 PostalCode: unifiedgosdk.Pointer("99263-6004"),
                 Region: unifiedgosdk.Pointer("New Jersey"),
             },
-            Birthdate: unifiedgosdk.Pointer("1941-12-26"),
+            Birthdate: unifiedgosdk.Pointer("1941-12-27"),
             Contacts: []shared.HealthcarePatientContact{
                 shared.HealthcarePatientContact{
                     Emails: []shared.HealthcareEmail{},
@@ -507,7 +507,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Monroe"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("8c2e62c2-4a20-4818-b852-ca9ed7bfa210"),
+            ID: unifiedgosdk.Pointer("2dd3e89e-612e-41df-a3c4-43a707124ebb"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -527,7 +527,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-07-27T14:19:43.633Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-07-28T12:41:01.447Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

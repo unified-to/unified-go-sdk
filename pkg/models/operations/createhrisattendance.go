@@ -41,6 +41,36 @@ const (
 func (e CreateHrisAttendanceQueryParamFields) ToPointer() *CreateHrisAttendanceQueryParamFields {
 	return &e
 }
+
+// CreateHrisAttendanceQueryParamFieldsValues returns every known CreateHrisAttendanceQueryParamFields value in schema order.
+func CreateHrisAttendanceQueryParamFieldsValues() []CreateHrisAttendanceQueryParamFields {
+	return []CreateHrisAttendanceQueryParamFields{
+		CreateHrisAttendanceQueryParamFieldsID,
+		CreateHrisAttendanceQueryParamFieldsCreatedAt,
+		CreateHrisAttendanceQueryParamFieldsUpdatedAt,
+		CreateHrisAttendanceQueryParamFieldsEmployeeUserID,
+		CreateHrisAttendanceQueryParamFieldsStartAt,
+		CreateHrisAttendanceQueryParamFieldsEndAt,
+		CreateHrisAttendanceQueryParamFieldsTimeshiftID,
+		CreateHrisAttendanceQueryParamFieldsLocationID,
+		CreateHrisAttendanceQueryParamFieldsCompanyID,
+		CreateHrisAttendanceQueryParamFieldsGroupID,
+		CreateHrisAttendanceQueryParamFieldsTimezone,
+		CreateHrisAttendanceQueryParamFieldsAddress,
+		CreateHrisAttendanceQueryParamFieldsHours,
+		CreateHrisAttendanceQueryParamFieldsCurrency,
+		CreateHrisAttendanceQueryParamFieldsStatus,
+		CreateHrisAttendanceQueryParamFieldsBreaks,
+		CreateHrisAttendanceQueryParamFieldsDeclaredTipsAmount,
+		CreateHrisAttendanceQueryParamFieldsNonCashTipsAmount,
+		CreateHrisAttendanceQueryParamFieldsJobName,
+		CreateHrisAttendanceQueryParamFieldsHourlyRate,
+		CreateHrisAttendanceQueryParamFieldsApproverUserID,
+		CreateHrisAttendanceQueryParamFieldsApprovedAt,
+		CreateHrisAttendanceQueryParamFieldsMetadata,
+		CreateHrisAttendanceQueryParamFieldsRaw,
+	}
+}
 func (e *CreateHrisAttendanceQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

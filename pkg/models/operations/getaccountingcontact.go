@@ -47,6 +47,42 @@ const (
 func (e GetAccountingContactQueryParamFields) ToPointer() *GetAccountingContactQueryParamFields {
 	return &e
 }
+
+// GetAccountingContactQueryParamFieldsValues returns every known GetAccountingContactQueryParamFields value in schema order.
+func GetAccountingContactQueryParamFieldsValues() []GetAccountingContactQueryParamFields {
+	return []GetAccountingContactQueryParamFields{
+		GetAccountingContactQueryParamFieldsID,
+		GetAccountingContactQueryParamFieldsCreatedAt,
+		GetAccountingContactQueryParamFieldsUpdatedAt,
+		GetAccountingContactQueryParamFieldsName,
+		GetAccountingContactQueryParamFieldsFirstName,
+		GetAccountingContactQueryParamFieldsLastName,
+		GetAccountingContactQueryParamFieldsEmails,
+		GetAccountingContactQueryParamFieldsTelephones,
+		GetAccountingContactQueryParamFieldsCurrency,
+		GetAccountingContactQueryParamFieldsBillingAddress,
+		GetAccountingContactQueryParamFieldsShippingAddress,
+		GetAccountingContactQueryParamFieldsIsActive,
+		GetAccountingContactQueryParamFieldsTaxExemption,
+		GetAccountingContactQueryParamFieldsTaxNumber,
+		GetAccountingContactQueryParamFieldsIsCustomer,
+		GetAccountingContactQueryParamFieldsIsSupplier,
+		GetAccountingContactQueryParamFieldsPortalURL,
+		GetAccountingContactQueryParamFieldsPaymentMethods,
+		GetAccountingContactQueryParamFieldsCompanyName,
+		GetAccountingContactQueryParamFieldsIdentification,
+		GetAccountingContactQueryParamFieldsAssociatedContacts,
+		GetAccountingContactQueryParamFieldsOrganizationID,
+		GetAccountingContactQueryParamFieldsPaymentTerms,
+		GetAccountingContactQueryParamFieldsPaymenttermID,
+		GetAccountingContactQueryParamFieldsBalanceAmount,
+		GetAccountingContactQueryParamFieldsWebsite,
+		GetAccountingContactQueryParamFieldsNotes,
+		GetAccountingContactQueryParamFieldsMetadata,
+		GetAccountingContactQueryParamFieldsRaw,
+		GetAccountingContactQueryParamFieldsUnifiedPersonIds,
+	}
+}
 func (e *GetAccountingContactQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

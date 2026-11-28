@@ -28,6 +28,23 @@ const (
 func (e UpdateTaskCommentQueryParamFields) ToPointer() *UpdateTaskCommentQueryParamFields {
 	return &e
 }
+
+// UpdateTaskCommentQueryParamFieldsValues returns every known UpdateTaskCommentQueryParamFields value in schema order.
+func UpdateTaskCommentQueryParamFieldsValues() []UpdateTaskCommentQueryParamFields {
+	return []UpdateTaskCommentQueryParamFields{
+		UpdateTaskCommentQueryParamFieldsID,
+		UpdateTaskCommentQueryParamFieldsCreatedAt,
+		UpdateTaskCommentQueryParamFieldsUpdatedAt,
+		UpdateTaskCommentQueryParamFieldsText,
+		UpdateTaskCommentQueryParamFieldsUserID,
+		UpdateTaskCommentQueryParamFieldsUserName,
+		UpdateTaskCommentQueryParamFieldsTaskID,
+		UpdateTaskCommentQueryParamFieldsParentID,
+		UpdateTaskCommentQueryParamFieldsHasChildren,
+		UpdateTaskCommentQueryParamFieldsMetadata,
+		UpdateTaskCommentQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateTaskCommentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

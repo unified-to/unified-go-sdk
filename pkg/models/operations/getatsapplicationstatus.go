@@ -24,6 +24,19 @@ const (
 func (e GetAtsApplicationstatusQueryParamFields) ToPointer() *GetAtsApplicationstatusQueryParamFields {
 	return &e
 }
+
+// GetAtsApplicationstatusQueryParamFieldsValues returns every known GetAtsApplicationstatusQueryParamFields value in schema order.
+func GetAtsApplicationstatusQueryParamFieldsValues() []GetAtsApplicationstatusQueryParamFields {
+	return []GetAtsApplicationstatusQueryParamFields{
+		GetAtsApplicationstatusQueryParamFieldsID,
+		GetAtsApplicationstatusQueryParamFieldsJobID,
+		GetAtsApplicationstatusQueryParamFieldsStatus,
+		GetAtsApplicationstatusQueryParamFieldsOriginalStatus,
+		GetAtsApplicationstatusQueryParamFieldsDescription,
+		GetAtsApplicationstatusQueryParamFieldsMetadata,
+		GetAtsApplicationstatusQueryParamFieldsRaw,
+	}
+}
 func (e *GetAtsApplicationstatusQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

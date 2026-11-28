@@ -41,6 +41,36 @@ const (
 func (e CreateAccountingExpensereportQueryParamFields) ToPointer() *CreateAccountingExpensereportQueryParamFields {
 	return &e
 }
+
+// CreateAccountingExpensereportQueryParamFieldsValues returns every known CreateAccountingExpensereportQueryParamFields value in schema order.
+func CreateAccountingExpensereportQueryParamFieldsValues() []CreateAccountingExpensereportQueryParamFields {
+	return []CreateAccountingExpensereportQueryParamFields{
+		CreateAccountingExpensereportQueryParamFieldsID,
+		CreateAccountingExpensereportQueryParamFieldsCreatedAt,
+		CreateAccountingExpensereportQueryParamFieldsUpdatedAt,
+		CreateAccountingExpensereportQueryParamFieldsName,
+		CreateAccountingExpensereportQueryParamFieldsUserID,
+		CreateAccountingExpensereportQueryParamFieldsApproverUserID,
+		CreateAccountingExpensereportQueryParamFieldsApproverUsers,
+		CreateAccountingExpensereportQueryParamFieldsStatus,
+		CreateAccountingExpensereportQueryParamFieldsTotalAmount,
+		CreateAccountingExpensereportQueryParamFieldsCurrency,
+		CreateAccountingExpensereportQueryParamFieldsTaxAmount,
+		CreateAccountingExpensereportQueryParamFieldsReimbursedAmount,
+		CreateAccountingExpensereportQueryParamFieldsReimbursedAt,
+		CreateAccountingExpensereportQueryParamFieldsApprovedAt,
+		CreateAccountingExpensereportQueryParamFieldsPostedAt,
+		CreateAccountingExpensereportQueryParamFieldsExternalNumber,
+		CreateAccountingExpensereportQueryParamFieldsLineitems,
+		CreateAccountingExpensereportQueryParamFieldsAttachments,
+		CreateAccountingExpensereportQueryParamFieldsCategoryIds,
+		CreateAccountingExpensereportQueryParamFieldsProjectID,
+		CreateAccountingExpensereportQueryParamFieldsUsers,
+		CreateAccountingExpensereportQueryParamFieldsOrganizationID,
+		CreateAccountingExpensereportQueryParamFieldsMetadata,
+		CreateAccountingExpensereportQueryParamFieldsRaw,
+	}
+}
 func (e *CreateAccountingExpensereportQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

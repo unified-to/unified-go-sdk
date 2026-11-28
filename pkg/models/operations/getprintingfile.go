@@ -31,6 +31,26 @@ const (
 func (e GetPrintingFileQueryParamFields) ToPointer() *GetPrintingFileQueryParamFields {
 	return &e
 }
+
+// GetPrintingFileQueryParamFieldsValues returns every known GetPrintingFileQueryParamFields value in schema order.
+func GetPrintingFileQueryParamFieldsValues() []GetPrintingFileQueryParamFields {
+	return []GetPrintingFileQueryParamFields{
+		GetPrintingFileQueryParamFieldsID,
+		GetPrintingFileQueryParamFieldsCreatedAt,
+		GetPrintingFileQueryParamFieldsUpdatedAt,
+		GetPrintingFileQueryParamFieldsName,
+		GetPrintingFileQueryParamFieldsURL,
+		GetPrintingFileQueryParamFieldsPreviewURL,
+		GetPrintingFileQueryParamFieldsMimeType,
+		GetPrintingFileQueryParamFieldsSize,
+		GetPrintingFileQueryParamFieldsWidth,
+		GetPrintingFileQueryParamFieldsHeight,
+		GetPrintingFileQueryParamFieldsDpi,
+		GetPrintingFileQueryParamFieldsStatus,
+		GetPrintingFileQueryParamFieldsMetadata,
+		GetPrintingFileQueryParamFieldsRaw,
+	}
+}
 func (e *GetPrintingFileQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -51,6 +51,46 @@ const (
 func (e UpdateAccountingProjectQueryParamFields) ToPointer() *UpdateAccountingProjectQueryParamFields {
 	return &e
 }
+
+// UpdateAccountingProjectQueryParamFieldsValues returns every known UpdateAccountingProjectQueryParamFields value in schema order.
+func UpdateAccountingProjectQueryParamFieldsValues() []UpdateAccountingProjectQueryParamFields {
+	return []UpdateAccountingProjectQueryParamFields{
+		UpdateAccountingProjectQueryParamFieldsID,
+		UpdateAccountingProjectQueryParamFieldsCreatedAt,
+		UpdateAccountingProjectQueryParamFieldsUpdatedAt,
+		UpdateAccountingProjectQueryParamFieldsName,
+		UpdateAccountingProjectQueryParamFieldsCode,
+		UpdateAccountingProjectQueryParamFieldsDescription,
+		UpdateAccountingProjectQueryParamFieldsStatus,
+		UpdateAccountingProjectQueryParamFieldsIsActive,
+		UpdateAccountingProjectQueryParamFieldsIsBillable,
+		UpdateAccountingProjectQueryParamFieldsContactID,
+		UpdateAccountingProjectQueryParamFieldsParentID,
+		UpdateAccountingProjectQueryParamFieldsManagerUserID,
+		UpdateAccountingProjectQueryParamFieldsStartedAt,
+		UpdateAccountingProjectQueryParamFieldsDueAt,
+		UpdateAccountingProjectQueryParamFieldsEndedAt,
+		UpdateAccountingProjectQueryParamFieldsCurrency,
+		UpdateAccountingProjectQueryParamFieldsEstimateAmount,
+		UpdateAccountingProjectQueryParamFieldsEstimatedCostAmount,
+		UpdateAccountingProjectQueryParamFieldsActualCostAmount,
+		UpdateAccountingProjectQueryParamFieldsInvoicedAmount,
+		UpdateAccountingProjectQueryParamFieldsToBeInvoicedAmount,
+		UpdateAccountingProjectQueryParamFieldsExpenseAmount,
+		UpdateAccountingProjectQueryParamFieldsDepositAmount,
+		UpdateAccountingProjectQueryParamFieldsDepositAppliedAmount,
+		UpdateAccountingProjectQueryParamFieldsCreditNoteAmount,
+		UpdateAccountingProjectQueryParamFieldsMinutesLogged,
+		UpdateAccountingProjectQueryParamFieldsMinutesToBeInvoiced,
+		UpdateAccountingProjectQueryParamFieldsPercentComplete,
+		UpdateAccountingProjectQueryParamFieldsBillingType,
+		UpdateAccountingProjectQueryParamFieldsCategoryIds,
+		UpdateAccountingProjectQueryParamFieldsLocationID,
+		UpdateAccountingProjectQueryParamFieldsOrganizationID,
+		UpdateAccountingProjectQueryParamFieldsMetadata,
+		UpdateAccountingProjectQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateAccountingProjectQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -18,6 +18,14 @@ func (e EmploymentStatus) ToPointer() *EmploymentStatus {
 	return &e
 }
 
+// EmploymentStatusValues returns every known EmploymentStatus value in schema order.
+func EmploymentStatusValues() []EmploymentStatus {
+	return []EmploymentStatus{
+		EmploymentStatusActive,
+		EmploymentStatusInactive,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *EmploymentStatus) IsExact() bool {
 	if e != nil {
@@ -43,6 +51,18 @@ const (
 
 func (e EmploymentStatusReason) ToPointer() *EmploymentStatusReason {
 	return &e
+}
+
+// EmploymentStatusReasonValues returns every known EmploymentStatusReason value in schema order.
+func EmploymentStatusReasonValues() []EmploymentStatusReason {
+	return []EmploymentStatusReason{
+		EmploymentStatusReasonLeave,
+		EmploymentStatusReasonTerminated,
+		EmploymentStatusReasonRetired,
+		EmploymentStatusReasonDeceased,
+		EmploymentStatusReasonDisabled,
+		EmploymentStatusReasonOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -75,6 +95,22 @@ func (e HrisEmployeeEmploymentType) ToPointer() *HrisEmployeeEmploymentType {
 	return &e
 }
 
+// HrisEmployeeEmploymentTypeValues returns every known HrisEmployeeEmploymentType value in schema order.
+func HrisEmployeeEmploymentTypeValues() []HrisEmployeeEmploymentType {
+	return []HrisEmployeeEmploymentType{
+		HrisEmployeeEmploymentTypeFullTime,
+		HrisEmployeeEmploymentTypePartTime,
+		HrisEmployeeEmploymentTypeContractor,
+		HrisEmployeeEmploymentTypeIntern,
+		HrisEmployeeEmploymentTypeConsultant,
+		HrisEmployeeEmploymentTypeVolunteer,
+		HrisEmployeeEmploymentTypeCasual,
+		HrisEmployeeEmploymentTypeSeasonal,
+		HrisEmployeeEmploymentTypeFreelance,
+		HrisEmployeeEmploymentTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HrisEmployeeEmploymentType) IsExact() bool {
 	if e != nil {
@@ -98,6 +134,16 @@ const (
 
 func (e FlsaStatus) ToPointer() *FlsaStatus {
 	return &e
+}
+
+// FlsaStatusValues returns every known FlsaStatus value in schema order.
+func FlsaStatusValues() []FlsaStatus {
+	return []FlsaStatus{
+		FlsaStatusExempt,
+		FlsaStatusNonExempt,
+		FlsaStatusSalariedNonexempt,
+		FlsaStatusOwner,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -125,6 +171,17 @@ func (e HrisEmployeeGender) ToPointer() *HrisEmployeeGender {
 	return &e
 }
 
+// HrisEmployeeGenderValues returns every known HrisEmployeeGender value in schema order.
+func HrisEmployeeGenderValues() []HrisEmployeeGender {
+	return []HrisEmployeeGender{
+		HrisEmployeeGenderMale,
+		HrisEmployeeGenderFemale,
+		HrisEmployeeGenderIntersex,
+		HrisEmployeeGenderTrans,
+		HrisEmployeeGenderNonBinary,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HrisEmployeeGender) IsExact() bool {
 	if e != nil {
@@ -145,6 +202,14 @@ const (
 
 func (e HrisEmployeeMaritalStatus) ToPointer() *HrisEmployeeMaritalStatus {
 	return &e
+}
+
+// HrisEmployeeMaritalStatusValues returns every known HrisEmployeeMaritalStatus value in schema order.
+func HrisEmployeeMaritalStatusValues() []HrisEmployeeMaritalStatus {
+	return []HrisEmployeeMaritalStatus{
+		HrisEmployeeMaritalStatusMarried,
+		HrisEmployeeMaritalStatusSingle,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -175,6 +240,21 @@ const (
 
 func (e PayFrequency) ToPointer() *PayFrequency {
 	return &e
+}
+
+// PayFrequencyValues returns every known PayFrequency value in schema order.
+func PayFrequencyValues() []PayFrequency {
+	return []PayFrequency{
+		PayFrequencyOneTime,
+		PayFrequencyDay,
+		PayFrequencyQuarter,
+		PayFrequencyYear,
+		PayFrequencyHour,
+		PayFrequencyMonth,
+		PayFrequencyWeek,
+		PayFrequencyBiweekly,
+		PayFrequencySemimonthly,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

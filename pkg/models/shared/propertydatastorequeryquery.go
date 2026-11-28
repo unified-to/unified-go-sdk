@@ -13,6 +13,14 @@ func (e SortOrder) ToPointer() *SortOrder {
 	return &e
 }
 
+// SortOrderValues returns every known SortOrder value in schema order.
+func SortOrderValues() []SortOrder {
+	return []SortOrder{
+		SortOrderAsc,
+		SortOrderDesc,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *SortOrder) IsExact() bool {
 	if e != nil {

@@ -19,6 +19,14 @@ func (e PaymentCollectionMethod) ToPointer() *PaymentCollectionMethod {
 	return &e
 }
 
+// PaymentCollectionMethodValues returns every known PaymentCollectionMethod value in schema order.
+func PaymentCollectionMethodValues() []PaymentCollectionMethod {
+	return []PaymentCollectionMethod{
+		PaymentCollectionMethodSendInvoice,
+		PaymentCollectionMethodChargeAutomatically,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PaymentCollectionMethod) IsExact() bool {
 	if e != nil {
@@ -48,6 +56,23 @@ const (
 
 func (e PaymentTerms) ToPointer() *PaymentTerms {
 	return &e
+}
+
+// PaymentTermsValues returns every known PaymentTerms value in schema order.
+func PaymentTermsValues() []PaymentTerms {
+	return []PaymentTerms{
+		PaymentTermsOnReceipt,
+		PaymentTermsNet7,
+		PaymentTermsNet10,
+		PaymentTermsNet15,
+		PaymentTermsNet20,
+		PaymentTermsNet25,
+		PaymentTermsNet30,
+		PaymentTermsNet45,
+		PaymentTermsNet60,
+		PaymentTermsNet90,
+		PaymentTermsOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -80,6 +105,22 @@ func (e AccountingBillStatus) ToPointer() *AccountingBillStatus {
 	return &e
 }
 
+// AccountingBillStatusValues returns every known AccountingBillStatus value in schema order.
+func AccountingBillStatusValues() []AccountingBillStatus {
+	return []AccountingBillStatus{
+		AccountingBillStatusDraft,
+		AccountingBillStatusVoided,
+		AccountingBillStatusAuthorized,
+		AccountingBillStatusPaid,
+		AccountingBillStatusPartiallyPaid,
+		AccountingBillStatusPartiallyRefunded,
+		AccountingBillStatusRefunded,
+		AccountingBillStatusSubmitted,
+		AccountingBillStatusDeleted,
+		AccountingBillStatusOverdue,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingBillStatus) IsExact() bool {
 	if e != nil {
@@ -110,6 +151,23 @@ const (
 
 func (e Term) ToPointer() *Term {
 	return &e
+}
+
+// TermValues returns every known Term value in schema order.
+func TermValues() []Term {
+	return []Term{
+		TermOnReceipt,
+		TermNet7,
+		TermNet10,
+		TermNet15,
+		TermNet20,
+		TermNet25,
+		TermNet30,
+		TermNet45,
+		TermNet60,
+		TermNet90,
+		TermOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

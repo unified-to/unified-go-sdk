@@ -16,6 +16,17 @@ func (e PropertyAdsReportMetricsGroupTargetingContentVideoPositions) ToPointer()
 	return &e
 }
 
+// PropertyAdsReportMetricsGroupTargetingContentVideoPositionsValues returns every known PropertyAdsReportMetricsGroupTargetingContentVideoPositions value in schema order.
+func PropertyAdsReportMetricsGroupTargetingContentVideoPositionsValues() []PropertyAdsReportMetricsGroupTargetingContentVideoPositions {
+	return []PropertyAdsReportMetricsGroupTargetingContentVideoPositions{
+		PropertyAdsReportMetricsGroupTargetingContentVideoPositionsPreroll,
+		PropertyAdsReportMetricsGroupTargetingContentVideoPositionsMidroll,
+		PropertyAdsReportMetricsGroupTargetingContentVideoPositionsPostroll,
+		PropertyAdsReportMetricsGroupTargetingContentVideoPositionsInstream,
+		PropertyAdsReportMetricsGroupTargetingContentVideoPositionsOutstream,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsGroupTargetingContentVideoPositions) IsExact() bool {
 	if e != nil {

@@ -50,7 +50,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-10-22T04:25:39.825Z"),
             Dpi: unifiedgosdk.Pointer[float64](300.0),
             Height: unifiedgosdk.Pointer[float64](5400.0),
-            ID: unifiedgosdk.Pointer("302ffbf3-b5e5-4bf2-9cb0-7a0417b8c8c9"),
+            ID: unifiedgosdk.Pointer("28bb18b3-27f2-4169-8fa9-0c7a699191ea"),
             Metadata: []shared.PrintingMetadata{},
             MimeType: unifiedgosdk.Pointer("image/jpeg"),
             Name: unifiedgosdk.Pointer("blond-ecliptic.jpg"),
@@ -121,7 +121,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-03-14T11:16:15.147Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("2b4fc37b-71b7-43c6-8929-02e13342224d"),
+            ID: unifiedgosdk.Pointer("cbaef2af-0b66-490b-9793-2b946a4c0ba3"),
             Lineitems: []shared.PrintingLineitem{
                 shared.PrintingLineitem{
                     Files: []shared.PrintingLineitemFile{
@@ -171,7 +171,7 @@ func main() {
             SubtotalAmount: unifiedgosdk.Pointer[float64](62.78),
             TaxAmount: unifiedgosdk.Pointer[float64](5.02),
             TotalAmount: unifiedgosdk.Pointer[float64](72.49),
-            UpdatedAt: types.MustNewTimeFromString("2025-01-23T15:57:51.868Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-24T06:27:37.859Z"),
         },
         ConnectionID: "<id>",
     })
@@ -233,7 +233,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2019-01-02T03:42:06.944Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("696672e3-32f0-4567-8198-6511582868e2"),
+            ID: unifiedgosdk.Pointer("b837c070-dba3-4031-aee8-91fcdca1a61c"),
             Lineitems: []shared.PrintingLineitem{
                 shared.PrintingLineitem{
                     Files: []shared.PrintingLineitemFile{
@@ -799,7 +799,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-03-14T11:16:15.147Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("129e003f-16bb-48f1-a792-47face2e04e3"),
+            ID: unifiedgosdk.Pointer("fd99ecf6-c514-49c2-a41c-48e7ab179810"),
             Lineitems: []shared.PrintingLineitem{
                 shared.PrintingLineitem{
                     Files: []shared.PrintingLineitemFile{
@@ -849,7 +849,7 @@ func main() {
             SubtotalAmount: unifiedgosdk.Pointer[float64](62.78),
             TaxAmount: unifiedgosdk.Pointer[float64](5.02),
             TotalAmount: unifiedgosdk.Pointer[float64](72.49),
-            UpdatedAt: types.MustNewTimeFromString("2025-01-23T15:57:51.886Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-24T06:27:37.870Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -967,7 +967,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-03-14T11:16:15.147Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("129e003f-16bb-48f1-a792-47face2e04e3"),
+            ID: unifiedgosdk.Pointer("fd99ecf6-c514-49c2-a41c-48e7ab179810"),
             Lineitems: []shared.PrintingLineitem{
                 shared.PrintingLineitem{
                     Files: []shared.PrintingLineitemFile{
@@ -1017,7 +1017,7 @@ func main() {
             SubtotalAmount: unifiedgosdk.Pointer[float64](62.78),
             TaxAmount: unifiedgosdk.Pointer[float64](5.02),
             TotalAmount: unifiedgosdk.Pointer[float64](72.49),
-            UpdatedAt: types.MustNewTimeFromString("2025-01-23T15:57:51.886Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-24T06:27:37.870Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

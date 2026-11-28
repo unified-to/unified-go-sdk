@@ -34,6 +34,29 @@ const (
 func (e UpdateAccountingBankfeedaccountQueryParamFields) ToPointer() *UpdateAccountingBankfeedaccountQueryParamFields {
 	return &e
 }
+
+// UpdateAccountingBankfeedaccountQueryParamFieldsValues returns every known UpdateAccountingBankfeedaccountQueryParamFields value in schema order.
+func UpdateAccountingBankfeedaccountQueryParamFieldsValues() []UpdateAccountingBankfeedaccountQueryParamFields {
+	return []UpdateAccountingBankfeedaccountQueryParamFields{
+		UpdateAccountingBankfeedaccountQueryParamFieldsID,
+		UpdateAccountingBankfeedaccountQueryParamFieldsCreatedAt,
+		UpdateAccountingBankfeedaccountQueryParamFieldsUpdatedAt,
+		UpdateAccountingBankfeedaccountQueryParamFieldsOrganizationID,
+		UpdateAccountingBankfeedaccountQueryParamFieldsName,
+		UpdateAccountingBankfeedaccountQueryParamFieldsBankName,
+		UpdateAccountingBankfeedaccountQueryParamFieldsAccountNumber,
+		UpdateAccountingBankfeedaccountQueryParamFieldsAccountNumberLast4,
+		UpdateAccountingBankfeedaccountQueryParamFieldsRoutingNumber,
+		UpdateAccountingBankfeedaccountQueryParamFieldsAccountType,
+		UpdateAccountingBankfeedaccountQueryParamFieldsAccountID,
+		UpdateAccountingBankfeedaccountQueryParamFieldsCurrency,
+		UpdateAccountingBankfeedaccountQueryParamFieldsBalance,
+		UpdateAccountingBankfeedaccountQueryParamFieldsFeedStartAt,
+		UpdateAccountingBankfeedaccountQueryParamFieldsStatus,
+		UpdateAccountingBankfeedaccountQueryParamFieldsMetadata,
+		UpdateAccountingBankfeedaccountQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateAccountingBankfeedaccountQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

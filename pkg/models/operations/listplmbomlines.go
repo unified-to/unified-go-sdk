@@ -31,6 +31,26 @@ const (
 func (e ListPlmBomlinesQueryParamFields) ToPointer() *ListPlmBomlinesQueryParamFields {
 	return &e
 }
+
+// ListPlmBomlinesQueryParamFieldsValues returns every known ListPlmBomlinesQueryParamFields value in schema order.
+func ListPlmBomlinesQueryParamFieldsValues() []ListPlmBomlinesQueryParamFields {
+	return []ListPlmBomlinesQueryParamFields{
+		ListPlmBomlinesQueryParamFieldsID,
+		ListPlmBomlinesQueryParamFieldsCreatedAt,
+		ListPlmBomlinesQueryParamFieldsUpdatedAt,
+		ListPlmBomlinesQueryParamFieldsParentPartID,
+		ListPlmBomlinesQueryParamFieldsChildPartID,
+		ListPlmBomlinesQueryParamFieldsChildRevision,
+		ListPlmBomlinesQueryParamFieldsQuantity,
+		ListPlmBomlinesQueryParamFieldsUnitOfMeasure,
+		ListPlmBomlinesQueryParamFieldsLineNumber,
+		ListPlmBomlinesQueryParamFieldsReferenceDesignators,
+		ListPlmBomlinesQueryParamFieldsEffectiveAt,
+		ListPlmBomlinesQueryParamFieldsExpiresAt,
+		ListPlmBomlinesQueryParamFieldsNotes,
+		ListPlmBomlinesQueryParamFieldsRaw,
+	}
+}
 func (e *ListPlmBomlinesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

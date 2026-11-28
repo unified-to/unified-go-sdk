@@ -58,6 +58,53 @@ const (
 func (e PatchComputeInstanceQueryParamFields) ToPointer() *PatchComputeInstanceQueryParamFields {
 	return &e
 }
+
+// PatchComputeInstanceQueryParamFieldsValues returns every known PatchComputeInstanceQueryParamFields value in schema order.
+func PatchComputeInstanceQueryParamFieldsValues() []PatchComputeInstanceQueryParamFields {
+	return []PatchComputeInstanceQueryParamFields{
+		PatchComputeInstanceQueryParamFieldsID,
+		PatchComputeInstanceQueryParamFieldsCreatedAt,
+		PatchComputeInstanceQueryParamFieldsUpdatedAt,
+		PatchComputeInstanceQueryParamFieldsName,
+		PatchComputeInstanceQueryParamFieldsType,
+		PatchComputeInstanceQueryParamFieldsStatus,
+		PatchComputeInstanceQueryParamFieldsStatusReason,
+		PatchComputeInstanceQueryParamFieldsAllowedActions,
+		PatchComputeInstanceQueryParamFieldsMarket,
+		PatchComputeInstanceQueryParamFieldsRegionID,
+		PatchComputeInstanceQueryParamFieldsTemplateID,
+		PatchComputeInstanceQueryParamFieldsImage,
+		PatchComputeInstanceQueryParamFieldsSourceSnapshotID,
+		PatchComputeInstanceQueryParamFieldsParentInstanceID,
+		PatchComputeInstanceQueryParamFieldsGputypeID,
+		PatchComputeInstanceQueryParamFieldsGpuModel,
+		PatchComputeInstanceQueryParamFieldsGpuCount,
+		PatchComputeInstanceQueryParamFieldsSku,
+		PatchComputeInstanceQueryParamFieldsCPUCount,
+		PatchComputeInstanceQueryParamFieldsMemoryMb,
+		PatchComputeInstanceQueryParamFieldsDiskMb,
+		PatchComputeInstanceQueryParamFieldsArchitecture,
+		PatchComputeInstanceQueryParamFieldsPriceAmount,
+		PatchComputeInstanceQueryParamFieldsPriceUnit,
+		PatchComputeInstanceQueryParamFieldsCurrency,
+		PatchComputeInstanceQueryParamFieldsVolumeIds,
+		PatchComputeInstanceQueryParamFieldsEndpoints,
+		PatchComputeInstanceQueryParamFieldsSSH,
+		PatchComputeInstanceQueryParamFieldsHasInternetAccess,
+		PatchComputeInstanceQueryParamFieldsTimeoutSeconds,
+		PatchComputeInstanceQueryParamFieldsExpiresAt,
+		PatchComputeInstanceQueryParamFieldsOnExpire,
+		PatchComputeInstanceQueryParamFieldsIdleTimeoutSeconds,
+		PatchComputeInstanceQueryParamFieldsOnIdle,
+		PatchComputeInstanceQueryParamFieldsProjectIdentifier,
+		PatchComputeInstanceQueryParamFieldsServiceID,
+		PatchComputeInstanceQueryParamFieldsEnv,
+		PatchComputeInstanceQueryParamFieldsStartedAt,
+		PatchComputeInstanceQueryParamFieldsTerminatedAt,
+		PatchComputeInstanceQueryParamFieldsMetadata,
+		PatchComputeInstanceQueryParamFieldsRaw,
+	}
+}
 func (e *PatchComputeInstanceQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -38,6 +38,33 @@ const (
 func (e GetHealthcarePractitionerQueryParamFields) ToPointer() *GetHealthcarePractitionerQueryParamFields {
 	return &e
 }
+
+// GetHealthcarePractitionerQueryParamFieldsValues returns every known GetHealthcarePractitionerQueryParamFields value in schema order.
+func GetHealthcarePractitionerQueryParamFieldsValues() []GetHealthcarePractitionerQueryParamFields {
+	return []GetHealthcarePractitionerQueryParamFields{
+		GetHealthcarePractitionerQueryParamFieldsID,
+		GetHealthcarePractitionerQueryParamFieldsCreatedAt,
+		GetHealthcarePractitionerQueryParamFieldsUpdatedAt,
+		GetHealthcarePractitionerQueryParamFieldsName,
+		GetHealthcarePractitionerQueryParamFieldsFirstName,
+		GetHealthcarePractitionerQueryParamFieldsLastName,
+		GetHealthcarePractitionerQueryParamFieldsTitle,
+		GetHealthcarePractitionerQueryParamFieldsGender,
+		GetHealthcarePractitionerQueryParamFieldsEmails,
+		GetHealthcarePractitionerQueryParamFieldsTelephones,
+		GetHealthcarePractitionerQueryParamFieldsAddress,
+		GetHealthcarePractitionerQueryParamFieldsImageURL,
+		GetHealthcarePractitionerQueryParamFieldsIdentifiers,
+		GetHealthcarePractitionerQueryParamFieldsSpecialties,
+		GetHealthcarePractitionerQueryParamFieldsQualifications,
+		GetHealthcarePractitionerQueryParamFieldsLanguages,
+		GetHealthcarePractitionerQueryParamFieldsLocationIds,
+		GetHealthcarePractitionerQueryParamFieldsIsActive,
+		GetHealthcarePractitionerQueryParamFieldsMetadata,
+		GetHealthcarePractitionerQueryParamFieldsRaw,
+		GetHealthcarePractitionerQueryParamFieldsUnifiedPersonIds,
+	}
+}
 func (e *GetHealthcarePractitionerQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

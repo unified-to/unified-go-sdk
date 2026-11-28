@@ -15,6 +15,15 @@ func (e AtsFeeType) ToPointer() *AtsFeeType {
 	return &e
 }
 
+// AtsFeeTypeValues returns every known AtsFeeType value in schema order.
+func AtsFeeTypeValues() []AtsFeeType {
+	return []AtsFeeType{
+		AtsFeeTypeContingency,
+		AtsFeeTypeRetained,
+		AtsFeeTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AtsFeeType) IsExact() bool {
 	if e != nil {

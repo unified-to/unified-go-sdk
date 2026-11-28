@@ -29,6 +29,24 @@ const (
 func (e ListMetadataMetadatasQueryParamFields) ToPointer() *ListMetadataMetadatasQueryParamFields {
 	return &e
 }
+
+// ListMetadataMetadatasQueryParamFieldsValues returns every known ListMetadataMetadatasQueryParamFields value in schema order.
+func ListMetadataMetadatasQueryParamFieldsValues() []ListMetadataMetadatasQueryParamFields {
+	return []ListMetadataMetadatasQueryParamFields{
+		ListMetadataMetadatasQueryParamFieldsID,
+		ListMetadataMetadatasQueryParamFieldsCreatedAt,
+		ListMetadataMetadatasQueryParamFieldsUpdatedAt,
+		ListMetadataMetadatasQueryParamFieldsName,
+		ListMetadataMetadatasQueryParamFieldsSlug,
+		ListMetadataMetadatasQueryParamFieldsFormat,
+		ListMetadataMetadatasQueryParamFieldsOriginalFormat,
+		ListMetadataMetadatasQueryParamFieldsOptions,
+		ListMetadataMetadatasQueryParamFieldsObjectType,
+		ListMetadataMetadatasQueryParamFieldsObjects,
+		ListMetadataMetadatasQueryParamFieldsIsRequired,
+		ListMetadataMetadatasQueryParamFieldsRaw,
+	}
+}
 func (e *ListMetadataMetadatasQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

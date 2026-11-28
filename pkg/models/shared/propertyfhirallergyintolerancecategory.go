@@ -15,6 +15,16 @@ func (e PropertyFhirAllergyIntoleranceCategory) ToPointer() *PropertyFhirAllergy
 	return &e
 }
 
+// PropertyFhirAllergyIntoleranceCategoryValues returns every known PropertyFhirAllergyIntoleranceCategory value in schema order.
+func PropertyFhirAllergyIntoleranceCategoryValues() []PropertyFhirAllergyIntoleranceCategory {
+	return []PropertyFhirAllergyIntoleranceCategory{
+		PropertyFhirAllergyIntoleranceCategoryFood,
+		PropertyFhirAllergyIntoleranceCategoryMedication,
+		PropertyFhirAllergyIntoleranceCategoryEnvironment,
+		PropertyFhirAllergyIntoleranceCategoryBiologic,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyFhirAllergyIntoleranceCategory) IsExact() bool {
 	if e != nil {

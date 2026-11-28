@@ -40,6 +40,35 @@ const (
 func (e ListMessagingMessagesQueryParamFields) ToPointer() *ListMessagingMessagesQueryParamFields {
 	return &e
 }
+
+// ListMessagingMessagesQueryParamFieldsValues returns every known ListMessagingMessagesQueryParamFields value in schema order.
+func ListMessagingMessagesQueryParamFieldsValues() []ListMessagingMessagesQueryParamFields {
+	return []ListMessagingMessagesQueryParamFields{
+		ListMessagingMessagesQueryParamFieldsID,
+		ListMessagingMessagesQueryParamFieldsCreatedAt,
+		ListMessagingMessagesQueryParamFieldsUpdatedAt,
+		ListMessagingMessagesQueryParamFieldsChannels,
+		ListMessagingMessagesQueryParamFieldsParentID,
+		ListMessagingMessagesQueryParamFieldsMessageThreadIdentifier,
+		ListMessagingMessagesQueryParamFieldsAuthorMember,
+		ListMessagingMessagesQueryParamFieldsDestinationMembers,
+		ListMessagingMessagesQueryParamFieldsHiddenMembers,
+		ListMessagingMessagesQueryParamFieldsMentionedMembers,
+		ListMessagingMessagesQueryParamFieldsReactions,
+		ListMessagingMessagesQueryParamFieldsSubject,
+		ListMessagingMessagesQueryParamFieldsMessage,
+		ListMessagingMessagesQueryParamFieldsMessageHTML,
+		ListMessagingMessagesQueryParamFieldsMessageMarkdown,
+		ListMessagingMessagesQueryParamFieldsAttachments,
+		ListMessagingMessagesQueryParamFieldsWebURL,
+		ListMessagingMessagesQueryParamFieldsReference,
+		ListMessagingMessagesQueryParamFieldsHasChildren,
+		ListMessagingMessagesQueryParamFieldsIsUnread,
+		ListMessagingMessagesQueryParamFieldsButtons,
+		ListMessagingMessagesQueryParamFieldsMetadata,
+		ListMessagingMessagesQueryParamFieldsRaw,
+	}
+}
 func (e *ListMessagingMessagesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

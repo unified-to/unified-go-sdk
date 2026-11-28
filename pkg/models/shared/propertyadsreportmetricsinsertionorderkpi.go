@@ -32,6 +32,33 @@ func (e PropertyAdsReportMetricsInsertionorderKpiType) ToPointer() *PropertyAdsR
 	return &e
 }
 
+// PropertyAdsReportMetricsInsertionorderKpiTypeValues returns every known PropertyAdsReportMetricsInsertionorderKpiType value in schema order.
+func PropertyAdsReportMetricsInsertionorderKpiTypeValues() []PropertyAdsReportMetricsInsertionorderKpiType {
+	return []PropertyAdsReportMetricsInsertionorderKpiType{
+		PropertyAdsReportMetricsInsertionorderKpiTypeUnspecified,
+		PropertyAdsReportMetricsInsertionorderKpiTypeCpm,
+		PropertyAdsReportMetricsInsertionorderKpiTypeCpc,
+		PropertyAdsReportMetricsInsertionorderKpiTypeCpa,
+		PropertyAdsReportMetricsInsertionorderKpiTypeCtr,
+		PropertyAdsReportMetricsInsertionorderKpiTypeViewability,
+		PropertyAdsReportMetricsInsertionorderKpiTypeCpiavc,
+		PropertyAdsReportMetricsInsertionorderKpiTypeCpe,
+		PropertyAdsReportMetricsInsertionorderKpiTypeCpv,
+		PropertyAdsReportMetricsInsertionorderKpiTypeClickCvr,
+		PropertyAdsReportMetricsInsertionorderKpiTypeImpressionCvr,
+		PropertyAdsReportMetricsInsertionorderKpiTypeVcpm,
+		PropertyAdsReportMetricsInsertionorderKpiTypeVtr,
+		PropertyAdsReportMetricsInsertionorderKpiTypeAudioCompletionRate,
+		PropertyAdsReportMetricsInsertionorderKpiTypeVideoCompletionRate,
+		PropertyAdsReportMetricsInsertionorderKpiTypeCpcl,
+		PropertyAdsReportMetricsInsertionorderKpiTypeCpcv,
+		PropertyAdsReportMetricsInsertionorderKpiTypeTos10,
+		PropertyAdsReportMetricsInsertionorderKpiTypeMaximizePacing,
+		PropertyAdsReportMetricsInsertionorderKpiTypeCustomImpressionValueOverCost,
+		PropertyAdsReportMetricsInsertionorderKpiTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsInsertionorderKpiType) IsExact() bool {
 	if e != nil {

@@ -21,6 +21,16 @@ func (e CdpActivationStatus) ToPointer() *CdpActivationStatus {
 	return &e
 }
 
+// CdpActivationStatusValues returns every known CdpActivationStatus value in schema order.
+func CdpActivationStatusValues() []CdpActivationStatus {
+	return []CdpActivationStatus{
+		CdpActivationStatusActive,
+		CdpActivationStatusPaused,
+		CdpActivationStatusError,
+		CdpActivationStatusPending,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CdpActivationStatus) IsExact() bool {
 	if e != nil {

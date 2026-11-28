@@ -14,6 +14,15 @@ func (e CalendarEventStatus) ToPointer() *CalendarEventStatus {
 	return &e
 }
 
+// CalendarEventStatusValues returns every known CalendarEventStatus value in schema order.
+func CalendarEventStatusValues() []CalendarEventStatus {
+	return []CalendarEventStatus{
+		CalendarEventStatusCanceled,
+		CalendarEventStatusConfirmed,
+		CalendarEventStatusTentative,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CalendarEventStatus) IsExact() bool {
 	if e != nil {

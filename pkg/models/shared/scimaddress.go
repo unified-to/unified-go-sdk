@@ -14,6 +14,15 @@ func (e ScimAddressType) ToPointer() *ScimAddressType {
 	return &e
 }
 
+// ScimAddressTypeValues returns every known ScimAddressType value in schema order.
+func ScimAddressTypeValues() []ScimAddressType {
+	return []ScimAddressType{
+		ScimAddressTypeWork,
+		ScimAddressTypeHome,
+		ScimAddressTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ScimAddressType) IsExact() bool {
 	if e != nil {

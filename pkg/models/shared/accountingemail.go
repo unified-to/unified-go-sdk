@@ -14,6 +14,15 @@ func (e AccountingEmailType) ToPointer() *AccountingEmailType {
 	return &e
 }
 
+// AccountingEmailTypeValues returns every known AccountingEmailType value in schema order.
+func AccountingEmailTypeValues() []AccountingEmailType {
+	return []AccountingEmailType{
+		AccountingEmailTypeWork,
+		AccountingEmailTypeHome,
+		AccountingEmailTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingEmailType) IsExact() bool {
 	if e != nil {

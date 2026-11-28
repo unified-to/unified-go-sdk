@@ -24,6 +24,19 @@ func (e Interpretation) ToPointer() *Interpretation {
 	return &e
 }
 
+// InterpretationValues returns every known Interpretation value in schema order.
+func InterpretationValues() []Interpretation {
+	return []Interpretation{
+		InterpretationNormal,
+		InterpretationAbnormal,
+		InterpretationLow,
+		InterpretationHigh,
+		InterpretationCriticalLow,
+		InterpretationCriticalHigh,
+		InterpretationOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Interpretation) IsExact() bool {
 	if e != nil {
@@ -52,6 +65,21 @@ const (
 
 func (e HealthcareObservationStatus) ToPointer() *HealthcareObservationStatus {
 	return &e
+}
+
+// HealthcareObservationStatusValues returns every known HealthcareObservationStatus value in schema order.
+func HealthcareObservationStatusValues() []HealthcareObservationStatus {
+	return []HealthcareObservationStatus{
+		HealthcareObservationStatusRegistered,
+		HealthcareObservationStatusPreliminary,
+		HealthcareObservationStatusFinal,
+		HealthcareObservationStatusAmended,
+		HealthcareObservationStatusCorrected,
+		HealthcareObservationStatusCancelled,
+		HealthcareObservationStatusEnteredInError,
+		HealthcareObservationStatusUnknown,
+		HealthcareObservationStatusOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -83,6 +111,22 @@ const (
 
 func (e HealthcareObservationType) ToPointer() *HealthcareObservationType {
 	return &e
+}
+
+// HealthcareObservationTypeValues returns every known HealthcareObservationType value in schema order.
+func HealthcareObservationTypeValues() []HealthcareObservationType {
+	return []HealthcareObservationType{
+		HealthcareObservationTypeLaboratory,
+		HealthcareObservationTypeVitalSigns,
+		HealthcareObservationTypeSocialHistory,
+		HealthcareObservationTypeImaging,
+		HealthcareObservationTypeSurvey,
+		HealthcareObservationTypeExam,
+		HealthcareObservationTypeProcedure,
+		HealthcareObservationTypeTherapy,
+		HealthcareObservationTypeActivity,
+		HealthcareObservationTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

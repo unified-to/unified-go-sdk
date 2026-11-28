@@ -53,6 +53,48 @@ const (
 func (e PatchPropertyListingQueryParamFields) ToPointer() *PatchPropertyListingQueryParamFields {
 	return &e
 }
+
+// PatchPropertyListingQueryParamFieldsValues returns every known PatchPropertyListingQueryParamFields value in schema order.
+func PatchPropertyListingQueryParamFieldsValues() []PatchPropertyListingQueryParamFields {
+	return []PatchPropertyListingQueryParamFields{
+		PatchPropertyListingQueryParamFieldsID,
+		PatchPropertyListingQueryParamFieldsCreatedAt,
+		PatchPropertyListingQueryParamFieldsUpdatedAt,
+		PatchPropertyListingQueryParamFieldsName,
+		PatchPropertyListingQueryParamFieldsInternalName,
+		PatchPropertyListingQueryParamFieldsDescription,
+		PatchPropertyListingQueryParamFieldsType,
+		PatchPropertyListingQueryParamFieldsIsActive,
+		PatchPropertyListingQueryParamFieldsImageUrls,
+		PatchPropertyListingQueryParamFieldsAddress,
+		PatchPropertyListingQueryParamFieldsLatitude,
+		PatchPropertyListingQueryParamFieldsLongitude,
+		PatchPropertyListingQueryParamFieldsTimezone,
+		PatchPropertyListingQueryParamFieldsCurrency,
+		PatchPropertyListingQueryParamFieldsStartPriceAmount,
+		PatchPropertyListingQueryParamFieldsCleaningFeeAmount,
+		PatchPropertyListingQueryParamFieldsMaxOccupancy,
+		PatchPropertyListingQueryParamFieldsBedrooms,
+		PatchPropertyListingQueryParamFieldsBeds,
+		PatchPropertyListingQueryParamFieldsBathrooms,
+		PatchPropertyListingQueryParamFieldsMinNights,
+		PatchPropertyListingQueryParamFieldsMaxNights,
+		PatchPropertyListingQueryParamFieldsCheckInStartTime,
+		PatchPropertyListingQueryParamFieldsCheckInEndTime,
+		PatchPropertyListingQueryParamFieldsCheckOutTime,
+		PatchPropertyListingQueryParamFieldsAmenities,
+		PatchPropertyListingQueryParamFieldsHouseRules,
+		PatchPropertyListingQueryParamFieldsCancellationPolicy,
+		PatchPropertyListingQueryParamFieldsRating,
+		PatchPropertyListingQueryParamFieldsReviewCount,
+		PatchPropertyListingQueryParamFieldsChannels,
+		PatchPropertyListingQueryParamFieldsUnittypeIds,
+		PatchPropertyListingQueryParamFieldsOwnerUserIds,
+		PatchPropertyListingQueryParamFieldsWebURL,
+		PatchPropertyListingQueryParamFieldsMetadata,
+		PatchPropertyListingQueryParamFieldsRaw,
+	}
+}
 func (e *PatchPropertyListingQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

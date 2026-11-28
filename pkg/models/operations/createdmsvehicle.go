@@ -61,6 +61,56 @@ const (
 func (e CreateDmsVehicleQueryParamFields) ToPointer() *CreateDmsVehicleQueryParamFields {
 	return &e
 }
+
+// CreateDmsVehicleQueryParamFieldsValues returns every known CreateDmsVehicleQueryParamFields value in schema order.
+func CreateDmsVehicleQueryParamFieldsValues() []CreateDmsVehicleQueryParamFields {
+	return []CreateDmsVehicleQueryParamFields{
+		CreateDmsVehicleQueryParamFieldsID,
+		CreateDmsVehicleQueryParamFieldsCreatedAt,
+		CreateDmsVehicleQueryParamFieldsUpdatedAt,
+		CreateDmsVehicleQueryParamFieldsIsInventory,
+		CreateDmsVehicleQueryParamFieldsVin,
+		CreateDmsVehicleQueryParamFieldsStockNumber,
+		CreateDmsVehicleQueryParamFieldsFleetNumber,
+		CreateDmsVehicleQueryParamFieldsLicensePlate,
+		CreateDmsVehicleQueryParamFieldsYear,
+		CreateDmsVehicleQueryParamFieldsMake,
+		CreateDmsVehicleQueryParamFieldsModel,
+		CreateDmsVehicleQueryParamFieldsTrim,
+		CreateDmsVehicleQueryParamFieldsModelCode,
+		CreateDmsVehicleQueryParamFieldsDescription,
+		CreateDmsVehicleQueryParamFieldsType,
+		CreateDmsVehicleQueryParamFieldsBodyStyle,
+		CreateDmsVehicleQueryParamFieldsCondition,
+		CreateDmsVehicleQueryParamFieldsIsCertified,
+		CreateDmsVehicleQueryParamFieldsStatus,
+		CreateDmsVehicleQueryParamFieldsOdometer,
+		CreateDmsVehicleQueryParamFieldsOdometerUnit,
+		CreateDmsVehicleQueryParamFieldsExteriorColor,
+		CreateDmsVehicleQueryParamFieldsInteriorColor,
+		CreateDmsVehicleQueryParamFieldsFuelType,
+		CreateDmsVehicleQueryParamFieldsTransmission,
+		CreateDmsVehicleQueryParamFieldsCurrency,
+		CreateDmsVehicleQueryParamFieldsPriceAmount,
+		CreateDmsVehicleQueryParamFieldsMsrpAmount,
+		CreateDmsVehicleQueryParamFieldsInternetPriceAmount,
+		CreateDmsVehicleQueryParamFieldsCostAmount,
+		CreateDmsVehicleQueryParamFieldsReceivedAt,
+		CreateDmsVehicleQueryParamFieldsSoldAt,
+		CreateDmsVehicleQueryParamFieldsDeliveredAt,
+		CreateDmsVehicleQueryParamFieldsInServiceAt,
+		CreateDmsVehicleQueryParamFieldsWarrantyExpiresAt,
+		CreateDmsVehicleQueryParamFieldsLastServiceAt,
+		CreateDmsVehicleQueryParamFieldsContactID,
+		CreateDmsVehicleQueryParamFieldsCompanyID,
+		CreateDmsVehicleQueryParamFieldsOptions,
+		CreateDmsVehicleQueryParamFieldsImageUrls,
+		CreateDmsVehicleQueryParamFieldsIsPublished,
+		CreateDmsVehicleQueryParamFieldsIsActive,
+		CreateDmsVehicleQueryParamFieldsMetadata,
+		CreateDmsVehicleQueryParamFieldsRaw,
+	}
+}
 func (e *CreateDmsVehicleQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

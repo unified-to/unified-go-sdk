@@ -35,6 +35,30 @@ const (
 func (e CreatePaymentLinkQueryParamFields) ToPointer() *CreatePaymentLinkQueryParamFields {
 	return &e
 }
+
+// CreatePaymentLinkQueryParamFieldsValues returns every known CreatePaymentLinkQueryParamFields value in schema order.
+func CreatePaymentLinkQueryParamFieldsValues() []CreatePaymentLinkQueryParamFields {
+	return []CreatePaymentLinkQueryParamFields{
+		CreatePaymentLinkQueryParamFieldsID,
+		CreatePaymentLinkQueryParamFieldsCreatedAt,
+		CreatePaymentLinkQueryParamFieldsUpdatedAt,
+		CreatePaymentLinkQueryParamFieldsIsActive,
+		CreatePaymentLinkQueryParamFieldsLineitems,
+		CreatePaymentLinkQueryParamFieldsCurrency,
+		CreatePaymentLinkQueryParamFieldsAmount,
+		CreatePaymentLinkQueryParamFieldsPaymentID,
+		CreatePaymentLinkQueryParamFieldsContactID,
+		CreatePaymentLinkQueryParamFieldsURL,
+		CreatePaymentLinkQueryParamFieldsDescription,
+		CreatePaymentLinkQueryParamFieldsIsChargeableNow,
+		CreatePaymentLinkQueryParamFieldsSuccessURL,
+		CreatePaymentLinkQueryParamFieldsMetadata,
+		CreatePaymentLinkQueryParamFieldsRaw,
+		CreatePaymentLinkQueryParamFieldsContactName,
+		CreatePaymentLinkQueryParamFieldsContactEmail,
+		CreatePaymentLinkQueryParamFieldsContactPhone,
+	}
+}
 func (e *CreatePaymentLinkQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

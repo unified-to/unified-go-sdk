@@ -37,6 +37,32 @@ const (
 func (e ListDmsAppointmentsQueryParamFields) ToPointer() *ListDmsAppointmentsQueryParamFields {
 	return &e
 }
+
+// ListDmsAppointmentsQueryParamFieldsValues returns every known ListDmsAppointmentsQueryParamFields value in schema order.
+func ListDmsAppointmentsQueryParamFieldsValues() []ListDmsAppointmentsQueryParamFields {
+	return []ListDmsAppointmentsQueryParamFields{
+		ListDmsAppointmentsQueryParamFieldsID,
+		ListDmsAppointmentsQueryParamFieldsCreatedAt,
+		ListDmsAppointmentsQueryParamFieldsUpdatedAt,
+		ListDmsAppointmentsQueryParamFieldsNumber,
+		ListDmsAppointmentsQueryParamFieldsStatus,
+		ListDmsAppointmentsQueryParamFieldsContactID,
+		ListDmsAppointmentsQueryParamFieldsVehicleID,
+		ListDmsAppointmentsQueryParamFieldsVin,
+		ListDmsAppointmentsQueryParamFieldsAdvisorUserID,
+		ListDmsAppointmentsQueryParamFieldsBookedByUserID,
+		ListDmsAppointmentsQueryParamFieldsRepairorderID,
+		ListDmsAppointmentsQueryParamFieldsStartAt,
+		ListDmsAppointmentsQueryParamFieldsEndAt,
+		ListDmsAppointmentsQueryParamFieldsTransportType,
+		ListDmsAppointmentsQueryParamFieldsOdometer,
+		ListDmsAppointmentsQueryParamFieldsOdometerUnit,
+		ListDmsAppointmentsQueryParamFieldsNotes,
+		ListDmsAppointmentsQueryParamFieldsServices,
+		ListDmsAppointmentsQueryParamFieldsMetadata,
+		ListDmsAppointmentsQueryParamFieldsRaw,
+	}
+}
 func (e *ListDmsAppointmentsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

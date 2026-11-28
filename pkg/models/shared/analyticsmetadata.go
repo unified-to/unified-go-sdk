@@ -297,6 +297,25 @@ func (e AnalyticsMetadataFormat) ToPointer() *AnalyticsMetadataFormat {
 	return &e
 }
 
+// AnalyticsMetadataFormatValues returns every known AnalyticsMetadataFormat value in schema order.
+func AnalyticsMetadataFormatValues() []AnalyticsMetadataFormat {
+	return []AnalyticsMetadataFormat{
+		AnalyticsMetadataFormatText,
+		AnalyticsMetadataFormatNumber,
+		AnalyticsMetadataFormatDate,
+		AnalyticsMetadataFormatBoolean,
+		AnalyticsMetadataFormatFile,
+		AnalyticsMetadataFormatTextarea,
+		AnalyticsMetadataFormatSingleSelect,
+		AnalyticsMetadataFormatMultipleSelect,
+		AnalyticsMetadataFormatMeasurement,
+		AnalyticsMetadataFormatPrice,
+		AnalyticsMetadataFormatYesNo,
+		AnalyticsMetadataFormatCurrency,
+		AnalyticsMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AnalyticsMetadataFormat) IsExact() bool {
 	if e != nil {

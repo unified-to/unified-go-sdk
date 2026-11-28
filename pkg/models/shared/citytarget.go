@@ -13,6 +13,14 @@ func (e RadiusUnit) ToPointer() *RadiusUnit {
 	return &e
 }
 
+// RadiusUnitValues returns every known RadiusUnit value in schema order.
+func RadiusUnitValues() []RadiusUnit {
+	return []RadiusUnit{
+		RadiusUnitMiles,
+		RadiusUnitKilometers,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *RadiusUnit) IsExact() bool {
 	if e != nil {

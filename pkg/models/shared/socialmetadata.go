@@ -297,6 +297,25 @@ func (e SocialMetadataFormat) ToPointer() *SocialMetadataFormat {
 	return &e
 }
 
+// SocialMetadataFormatValues returns every known SocialMetadataFormat value in schema order.
+func SocialMetadataFormatValues() []SocialMetadataFormat {
+	return []SocialMetadataFormat{
+		SocialMetadataFormatText,
+		SocialMetadataFormatNumber,
+		SocialMetadataFormatDate,
+		SocialMetadataFormatBoolean,
+		SocialMetadataFormatFile,
+		SocialMetadataFormatTextarea,
+		SocialMetadataFormatSingleSelect,
+		SocialMetadataFormatMultipleSelect,
+		SocialMetadataFormatMeasurement,
+		SocialMetadataFormatPrice,
+		SocialMetadataFormatYesNo,
+		SocialMetadataFormatCurrency,
+		SocialMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *SocialMetadataFormat) IsExact() bool {
 	if e != nil {

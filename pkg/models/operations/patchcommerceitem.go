@@ -47,6 +47,42 @@ const (
 func (e PatchCommerceItemQueryParamFields) ToPointer() *PatchCommerceItemQueryParamFields {
 	return &e
 }
+
+// PatchCommerceItemQueryParamFieldsValues returns every known PatchCommerceItemQueryParamFields value in schema order.
+func PatchCommerceItemQueryParamFieldsValues() []PatchCommerceItemQueryParamFields {
+	return []PatchCommerceItemQueryParamFields{
+		PatchCommerceItemQueryParamFieldsID,
+		PatchCommerceItemQueryParamFieldsCreatedAt,
+		PatchCommerceItemQueryParamFieldsUpdatedAt,
+		PatchCommerceItemQueryParamFieldsName,
+		PatchCommerceItemQueryParamFieldsPublicName,
+		PatchCommerceItemQueryParamFieldsSlug,
+		PatchCommerceItemQueryParamFieldsDescription,
+		PatchCommerceItemQueryParamFieldsGlobalCode,
+		PatchCommerceItemQueryParamFieldsPublicDescription,
+		PatchCommerceItemQueryParamFieldsIsActive,
+		PatchCommerceItemQueryParamFieldsIsTaxable,
+		PatchCommerceItemQueryParamFieldsVendorName,
+		PatchCommerceItemQueryParamFieldsType,
+		PatchCommerceItemQueryParamFieldsIsVisible,
+		PatchCommerceItemQueryParamFieldsIsFeatured,
+		PatchCommerceItemQueryParamFieldsWeight,
+		PatchCommerceItemQueryParamFieldsWeightUnit,
+		PatchCommerceItemQueryParamFieldsRequiresShipping,
+		PatchCommerceItemQueryParamFieldsPrices,
+		PatchCommerceItemQueryParamFieldsInventoryID,
+		PatchCommerceItemQueryParamFieldsTotalStock,
+		PatchCommerceItemQueryParamFieldsTags,
+		PatchCommerceItemQueryParamFieldsMedia,
+		PatchCommerceItemQueryParamFieldsAccountID,
+		PatchCommerceItemQueryParamFieldsMetadata,
+		PatchCommerceItemQueryParamFieldsCollections,
+		PatchCommerceItemQueryParamFieldsTaxrateID,
+		PatchCommerceItemQueryParamFieldsLocationID,
+		PatchCommerceItemQueryParamFieldsDuration,
+		PatchCommerceItemQueryParamFieldsRaw,
+	}
+}
 func (e *PatchCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

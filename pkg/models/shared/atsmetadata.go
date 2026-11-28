@@ -298,6 +298,25 @@ func (e AtsMetadataFormat) ToPointer() *AtsMetadataFormat {
 	return &e
 }
 
+// AtsMetadataFormatValues returns every known AtsMetadataFormat value in schema order.
+func AtsMetadataFormatValues() []AtsMetadataFormat {
+	return []AtsMetadataFormat{
+		AtsMetadataFormatText,
+		AtsMetadataFormatNumber,
+		AtsMetadataFormatDate,
+		AtsMetadataFormatBoolean,
+		AtsMetadataFormatFile,
+		AtsMetadataFormatTextarea,
+		AtsMetadataFormatSingleSelect,
+		AtsMetadataFormatMultipleSelect,
+		AtsMetadataFormatMeasurement,
+		AtsMetadataFormatPrice,
+		AtsMetadataFormatYesNo,
+		AtsMetadataFormatCurrency,
+		AtsMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AtsMetadataFormat) IsExact() bool {
 	if e != nil {

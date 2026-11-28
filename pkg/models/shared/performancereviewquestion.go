@@ -16,6 +16,17 @@ func (e PerformanceReviewQuestionType) ToPointer() *PerformanceReviewQuestionTyp
 	return &e
 }
 
+// PerformanceReviewQuestionTypeValues returns every known PerformanceReviewQuestionType value in schema order.
+func PerformanceReviewQuestionTypeValues() []PerformanceReviewQuestionType {
+	return []PerformanceReviewQuestionType{
+		PerformanceReviewQuestionTypeText,
+		PerformanceReviewQuestionTypeSingleSelect,
+		PerformanceReviewQuestionTypeMultiSelect,
+		PerformanceReviewQuestionTypeRating,
+		PerformanceReviewQuestionTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PerformanceReviewQuestionType) IsExact() bool {
 	if e != nil {

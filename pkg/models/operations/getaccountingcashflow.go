@@ -34,6 +34,29 @@ const (
 func (e GetAccountingCashflowQueryParamFields) ToPointer() *GetAccountingCashflowQueryParamFields {
 	return &e
 }
+
+// GetAccountingCashflowQueryParamFieldsValues returns every known GetAccountingCashflowQueryParamFields value in schema order.
+func GetAccountingCashflowQueryParamFieldsValues() []GetAccountingCashflowQueryParamFields {
+	return []GetAccountingCashflowQueryParamFields{
+		GetAccountingCashflowQueryParamFieldsID,
+		GetAccountingCashflowQueryParamFieldsCreatedAt,
+		GetAccountingCashflowQueryParamFieldsUpdatedAt,
+		GetAccountingCashflowQueryParamFieldsStartAt,
+		GetAccountingCashflowQueryParamFieldsEndAt,
+		GetAccountingCashflowQueryParamFieldsCategoryIds,
+		GetAccountingCashflowQueryParamFieldsContactID,
+		GetAccountingCashflowQueryParamFieldsName,
+		GetAccountingCashflowQueryParamFieldsCurrency,
+		GetAccountingCashflowQueryParamFieldsCashBeginningAmount,
+		GetAccountingCashflowQueryParamFieldsCashEndingAmount,
+		GetAccountingCashflowQueryParamFieldsNetChangeInCashAmount,
+		GetAccountingCashflowQueryParamFieldsOperatingSections,
+		GetAccountingCashflowQueryParamFieldsInvestingSections,
+		GetAccountingCashflowQueryParamFieldsFinancingSections,
+		GetAccountingCashflowQueryParamFieldsMetadata,
+		GetAccountingCashflowQueryParamFieldsRaw,
+	}
+}
 func (e *GetAccountingCashflowQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -22,6 +22,17 @@ const (
 func (e GetAdsPromotedQueryParamFields) ToPointer() *GetAdsPromotedQueryParamFields {
 	return &e
 }
+
+// GetAdsPromotedQueryParamFieldsValues returns every known GetAdsPromotedQueryParamFields value in schema order.
+func GetAdsPromotedQueryParamFieldsValues() []GetAdsPromotedQueryParamFields {
+	return []GetAdsPromotedQueryParamFields{
+		GetAdsPromotedQueryParamFieldsID,
+		GetAdsPromotedQueryParamFieldsName,
+		GetAdsPromotedQueryParamFieldsType,
+		GetAdsPromotedQueryParamFieldsMetadata,
+		GetAdsPromotedQueryParamFieldsRaw,
+	}
+}
 func (e *GetAdsPromotedQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

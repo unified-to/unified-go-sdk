@@ -27,6 +27,22 @@ const (
 func (e ListTicketingCustomersQueryParamFields) ToPointer() *ListTicketingCustomersQueryParamFields {
 	return &e
 }
+
+// ListTicketingCustomersQueryParamFieldsValues returns every known ListTicketingCustomersQueryParamFields value in schema order.
+func ListTicketingCustomersQueryParamFieldsValues() []ListTicketingCustomersQueryParamFields {
+	return []ListTicketingCustomersQueryParamFields{
+		ListTicketingCustomersQueryParamFieldsID,
+		ListTicketingCustomersQueryParamFieldsCreatedAt,
+		ListTicketingCustomersQueryParamFieldsUpdatedAt,
+		ListTicketingCustomersQueryParamFieldsName,
+		ListTicketingCustomersQueryParamFieldsEmails,
+		ListTicketingCustomersQueryParamFieldsTelephones,
+		ListTicketingCustomersQueryParamFieldsTags,
+		ListTicketingCustomersQueryParamFieldsMetadata,
+		ListTicketingCustomersQueryParamFieldsRaw,
+		ListTicketingCustomersQueryParamFieldsUnifiedPersonIds,
+	}
+}
 func (e *ListTicketingCustomersQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

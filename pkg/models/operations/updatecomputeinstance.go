@@ -58,6 +58,53 @@ const (
 func (e UpdateComputeInstanceQueryParamFields) ToPointer() *UpdateComputeInstanceQueryParamFields {
 	return &e
 }
+
+// UpdateComputeInstanceQueryParamFieldsValues returns every known UpdateComputeInstanceQueryParamFields value in schema order.
+func UpdateComputeInstanceQueryParamFieldsValues() []UpdateComputeInstanceQueryParamFields {
+	return []UpdateComputeInstanceQueryParamFields{
+		UpdateComputeInstanceQueryParamFieldsID,
+		UpdateComputeInstanceQueryParamFieldsCreatedAt,
+		UpdateComputeInstanceQueryParamFieldsUpdatedAt,
+		UpdateComputeInstanceQueryParamFieldsName,
+		UpdateComputeInstanceQueryParamFieldsType,
+		UpdateComputeInstanceQueryParamFieldsStatus,
+		UpdateComputeInstanceQueryParamFieldsStatusReason,
+		UpdateComputeInstanceQueryParamFieldsAllowedActions,
+		UpdateComputeInstanceQueryParamFieldsMarket,
+		UpdateComputeInstanceQueryParamFieldsRegionID,
+		UpdateComputeInstanceQueryParamFieldsTemplateID,
+		UpdateComputeInstanceQueryParamFieldsImage,
+		UpdateComputeInstanceQueryParamFieldsSourceSnapshotID,
+		UpdateComputeInstanceQueryParamFieldsParentInstanceID,
+		UpdateComputeInstanceQueryParamFieldsGputypeID,
+		UpdateComputeInstanceQueryParamFieldsGpuModel,
+		UpdateComputeInstanceQueryParamFieldsGpuCount,
+		UpdateComputeInstanceQueryParamFieldsSku,
+		UpdateComputeInstanceQueryParamFieldsCPUCount,
+		UpdateComputeInstanceQueryParamFieldsMemoryMb,
+		UpdateComputeInstanceQueryParamFieldsDiskMb,
+		UpdateComputeInstanceQueryParamFieldsArchitecture,
+		UpdateComputeInstanceQueryParamFieldsPriceAmount,
+		UpdateComputeInstanceQueryParamFieldsPriceUnit,
+		UpdateComputeInstanceQueryParamFieldsCurrency,
+		UpdateComputeInstanceQueryParamFieldsVolumeIds,
+		UpdateComputeInstanceQueryParamFieldsEndpoints,
+		UpdateComputeInstanceQueryParamFieldsSSH,
+		UpdateComputeInstanceQueryParamFieldsHasInternetAccess,
+		UpdateComputeInstanceQueryParamFieldsTimeoutSeconds,
+		UpdateComputeInstanceQueryParamFieldsExpiresAt,
+		UpdateComputeInstanceQueryParamFieldsOnExpire,
+		UpdateComputeInstanceQueryParamFieldsIdleTimeoutSeconds,
+		UpdateComputeInstanceQueryParamFieldsOnIdle,
+		UpdateComputeInstanceQueryParamFieldsProjectIdentifier,
+		UpdateComputeInstanceQueryParamFieldsServiceID,
+		UpdateComputeInstanceQueryParamFieldsEnv,
+		UpdateComputeInstanceQueryParamFieldsStartedAt,
+		UpdateComputeInstanceQueryParamFieldsTerminatedAt,
+		UpdateComputeInstanceQueryParamFieldsMetadata,
+		UpdateComputeInstanceQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateComputeInstanceQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

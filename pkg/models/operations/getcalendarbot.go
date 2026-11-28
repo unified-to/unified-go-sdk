@@ -34,6 +34,29 @@ const (
 func (e GetCalendarBotQueryParamFields) ToPointer() *GetCalendarBotQueryParamFields {
 	return &e
 }
+
+// GetCalendarBotQueryParamFieldsValues returns every known GetCalendarBotQueryParamFields value in schema order.
+func GetCalendarBotQueryParamFieldsValues() []GetCalendarBotQueryParamFields {
+	return []GetCalendarBotQueryParamFields{
+		GetCalendarBotQueryParamFieldsID,
+		GetCalendarBotQueryParamFieldsCreatedAt,
+		GetCalendarBotQueryParamFieldsUpdatedAt,
+		GetCalendarBotQueryParamFieldsName,
+		GetCalendarBotQueryParamFieldsMeetingURL,
+		GetCalendarBotQueryParamFieldsEventID,
+		GetCalendarBotQueryParamFieldsStatus,
+		GetCalendarBotQueryParamFieldsStatusChanges,
+		GetCalendarBotQueryParamFieldsJoinAt,
+		GetCalendarBotQueryParamFieldsStartedAt,
+		GetCalendarBotQueryParamFieldsEndedAt,
+		GetCalendarBotQueryParamFieldsRecordingConfig,
+		GetCalendarBotQueryParamFieldsAutomaticLeave,
+		GetCalendarBotQueryParamFieldsMeetingMetadata,
+		GetCalendarBotQueryParamFieldsParticipants,
+		GetCalendarBotQueryParamFieldsRecordingID,
+		GetCalendarBotQueryParamFieldsRaw,
+	}
+}
 func (e *GetCalendarBotQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

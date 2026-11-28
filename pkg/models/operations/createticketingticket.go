@@ -36,6 +36,31 @@ const (
 func (e CreateTicketingTicketQueryParamFields) ToPointer() *CreateTicketingTicketQueryParamFields {
 	return &e
 }
+
+// CreateTicketingTicketQueryParamFieldsValues returns every known CreateTicketingTicketQueryParamFields value in schema order.
+func CreateTicketingTicketQueryParamFieldsValues() []CreateTicketingTicketQueryParamFields {
+	return []CreateTicketingTicketQueryParamFields{
+		CreateTicketingTicketQueryParamFieldsID,
+		CreateTicketingTicketQueryParamFieldsCreatedAt,
+		CreateTicketingTicketQueryParamFieldsUpdatedAt,
+		CreateTicketingTicketQueryParamFieldsCustomerID,
+		CreateTicketingTicketQueryParamFieldsSubject,
+		CreateTicketingTicketQueryParamFieldsDescription,
+		CreateTicketingTicketQueryParamFieldsStatus,
+		CreateTicketingTicketQueryParamFieldsClosedAt,
+		CreateTicketingTicketQueryParamFieldsPriority,
+		CreateTicketingTicketQueryParamFieldsCategoryID,
+		CreateTicketingTicketQueryParamFieldsSource,
+		CreateTicketingTicketQueryParamFieldsSourceRef,
+		CreateTicketingTicketQueryParamFieldsTags,
+		CreateTicketingTicketQueryParamFieldsUserID,
+		CreateTicketingTicketQueryParamFieldsURL,
+		CreateTicketingTicketQueryParamFieldsAttachmentIds,
+		CreateTicketingTicketQueryParamFieldsDueAt,
+		CreateTicketingTicketQueryParamFieldsMetadata,
+		CreateTicketingTicketQueryParamFieldsRaw,
+	}
+}
 func (e *CreateTicketingTicketQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

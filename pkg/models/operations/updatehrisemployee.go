@@ -69,6 +69,64 @@ const (
 func (e UpdateHrisEmployeeQueryParamFields) ToPointer() *UpdateHrisEmployeeQueryParamFields {
 	return &e
 }
+
+// UpdateHrisEmployeeQueryParamFieldsValues returns every known UpdateHrisEmployeeQueryParamFields value in schema order.
+func UpdateHrisEmployeeQueryParamFieldsValues() []UpdateHrisEmployeeQueryParamFields {
+	return []UpdateHrisEmployeeQueryParamFields{
+		UpdateHrisEmployeeQueryParamFieldsID,
+		UpdateHrisEmployeeQueryParamFieldsCreatedAt,
+		UpdateHrisEmployeeQueryParamFieldsUpdatedAt,
+		UpdateHrisEmployeeQueryParamFieldsName,
+		UpdateHrisEmployeeQueryParamFieldsFirstName,
+		UpdateHrisEmployeeQueryParamFieldsLastName,
+		UpdateHrisEmployeeQueryParamFieldsEmails,
+		UpdateHrisEmployeeQueryParamFieldsTitle,
+		UpdateHrisEmployeeQueryParamFieldsJobID,
+		UpdateHrisEmployeeQueryParamFieldsManagerID,
+		UpdateHrisEmployeeQueryParamFieldsEmploymentStatus,
+		UpdateHrisEmployeeQueryParamFieldsGender,
+		UpdateHrisEmployeeQueryParamFieldsTelephones,
+		UpdateHrisEmployeeQueryParamFieldsDateOfBirth,
+		UpdateHrisEmployeeQueryParamFieldsEmployeeNumber,
+		UpdateHrisEmployeeQueryParamFieldsHiredAt,
+		UpdateHrisEmployeeQueryParamFieldsTerminatedAt,
+		UpdateHrisEmployeeQueryParamFieldsTerminationReason,
+		UpdateHrisEmployeeQueryParamFieldsMaritalStatus,
+		UpdateHrisEmployeeQueryParamFieldsEmploymentType,
+		UpdateHrisEmployeeQueryParamFieldsAddress,
+		UpdateHrisEmployeeQueryParamFieldsLanguageLocale,
+		UpdateHrisEmployeeQueryParamFieldsCurrency,
+		UpdateHrisEmployeeQueryParamFieldsTimezone,
+		UpdateHrisEmployeeQueryParamFieldsImageURL,
+		UpdateHrisEmployeeQueryParamFieldsCompanyID,
+		UpdateHrisEmployeeQueryParamFieldsPronouns,
+		UpdateHrisEmployeeQueryParamFieldsEmployeeRoles,
+		UpdateHrisEmployeeQueryParamFieldsCompensation,
+		UpdateHrisEmployeeQueryParamFieldsSalutation,
+		UpdateHrisEmployeeQueryParamFieldsBio,
+		UpdateHrisEmployeeQueryParamFieldsSsnSin,
+		UpdateHrisEmployeeQueryParamFieldsGroups,
+		UpdateHrisEmployeeQueryParamFieldsLocations,
+		UpdateHrisEmployeeQueryParamFieldsMetadata,
+		UpdateHrisEmployeeQueryParamFieldsStorageQuotaAllocated,
+		UpdateHrisEmployeeQueryParamFieldsStorageQuotaUsed,
+		UpdateHrisEmployeeQueryParamFieldsStorageQuotaAvailable,
+		UpdateHrisEmployeeQueryParamFieldsRelationships,
+		UpdateHrisEmployeeQueryParamFieldsHasMfa,
+		UpdateHrisEmployeeQueryParamFieldsTimeoffDaysTotal,
+		UpdateHrisEmployeeQueryParamFieldsTimeoffDaysUsed,
+		UpdateHrisEmployeeQueryParamFieldsFlsaStatus,
+		UpdateHrisEmployeeQueryParamFieldsPayFrequency,
+		UpdateHrisEmployeeQueryParamFieldsRehiredAt,
+		UpdateHrisEmployeeQueryParamFieldsServiceStartedAt,
+		UpdateHrisEmployeeQueryParamFieldsSeniorityStartedAt,
+		UpdateHrisEmployeeQueryParamFieldsLeaveStartAt,
+		UpdateHrisEmployeeQueryParamFieldsLeaveEndAt,
+		UpdateHrisEmployeeQueryParamFieldsEmploymentStatusReason,
+		UpdateHrisEmployeeQueryParamFieldsRaw,
+		UpdateHrisEmployeeQueryParamFieldsUnifiedPersonIds,
+	}
+}
 func (e *UpdateHrisEmployeeQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

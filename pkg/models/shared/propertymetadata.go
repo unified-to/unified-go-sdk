@@ -299,6 +299,25 @@ func (e PropertyMetadataFormat) ToPointer() *PropertyMetadataFormat {
 	return &e
 }
 
+// PropertyMetadataFormatValues returns every known PropertyMetadataFormat value in schema order.
+func PropertyMetadataFormatValues() []PropertyMetadataFormat {
+	return []PropertyMetadataFormat{
+		PropertyMetadataFormatText,
+		PropertyMetadataFormatNumber,
+		PropertyMetadataFormatDate,
+		PropertyMetadataFormatBoolean,
+		PropertyMetadataFormatFile,
+		PropertyMetadataFormatTextarea,
+		PropertyMetadataFormatSingleSelect,
+		PropertyMetadataFormatMultipleSelect,
+		PropertyMetadataFormatMeasurement,
+		PropertyMetadataFormatPrice,
+		PropertyMetadataFormatYesNo,
+		PropertyMetadataFormatCurrency,
+		PropertyMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyMetadataFormat) IsExact() bool {
 	if e != nil {

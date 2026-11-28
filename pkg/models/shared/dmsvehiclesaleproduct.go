@@ -19,6 +19,20 @@ func (e DmsVehiclesaleProductType) ToPointer() *DmsVehiclesaleProductType {
 	return &e
 }
 
+// DmsVehiclesaleProductTypeValues returns every known DmsVehiclesaleProductType value in schema order.
+func DmsVehiclesaleProductTypeValues() []DmsVehiclesaleProductType {
+	return []DmsVehiclesaleProductType{
+		DmsVehiclesaleProductTypeServiceContract,
+		DmsVehiclesaleProductTypeGap,
+		DmsVehiclesaleProductTypeCreditLife,
+		DmsVehiclesaleProductTypeAccidentHealth,
+		DmsVehiclesaleProductTypeMaintenance,
+		DmsVehiclesaleProductTypeProtection,
+		DmsVehiclesaleProductTypeInsurance,
+		DmsVehiclesaleProductTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *DmsVehiclesaleProductType) IsExact() bool {
 	if e != nil {

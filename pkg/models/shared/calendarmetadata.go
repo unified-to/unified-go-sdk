@@ -297,6 +297,25 @@ func (e CalendarMetadataFormat) ToPointer() *CalendarMetadataFormat {
 	return &e
 }
 
+// CalendarMetadataFormatValues returns every known CalendarMetadataFormat value in schema order.
+func CalendarMetadataFormatValues() []CalendarMetadataFormat {
+	return []CalendarMetadataFormat{
+		CalendarMetadataFormatText,
+		CalendarMetadataFormatNumber,
+		CalendarMetadataFormatDate,
+		CalendarMetadataFormatBoolean,
+		CalendarMetadataFormatFile,
+		CalendarMetadataFormatTextarea,
+		CalendarMetadataFormatSingleSelect,
+		CalendarMetadataFormatMultipleSelect,
+		CalendarMetadataFormatMeasurement,
+		CalendarMetadataFormatPrice,
+		CalendarMetadataFormatYesNo,
+		CalendarMetadataFormatCurrency,
+		CalendarMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CalendarMetadataFormat) IsExact() bool {
 	if e != nil {

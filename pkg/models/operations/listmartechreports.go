@@ -46,6 +46,41 @@ const (
 func (e ListMartechReportsQueryParamFields) ToPointer() *ListMartechReportsQueryParamFields {
 	return &e
 }
+
+// ListMartechReportsQueryParamFieldsValues returns every known ListMartechReportsQueryParamFields value in schema order.
+func ListMartechReportsQueryParamFieldsValues() []ListMartechReportsQueryParamFields {
+	return []ListMartechReportsQueryParamFields{
+		ListMartechReportsQueryParamFieldsID,
+		ListMartechReportsQueryParamFieldsStartAt,
+		ListMartechReportsQueryParamFieldsEndAt,
+		ListMartechReportsQueryParamFieldsCampaignID,
+		ListMartechReportsQueryParamFieldsListID,
+		ListMartechReportsQueryParamFieldsEmailsSent,
+		ListMartechReportsQueryParamFieldsAbuseReports,
+		ListMartechReportsQueryParamFieldsUnsubscribed,
+		ListMartechReportsQueryParamFieldsSentAt,
+		ListMartechReportsQueryParamFieldsHardBounces,
+		ListMartechReportsQueryParamFieldsSoftBounces,
+		ListMartechReportsQueryParamFieldsSyntaxErrors,
+		ListMartechReportsQueryParamFieldsForwardsCount,
+		ListMartechReportsQueryParamFieldsForwardsOpens,
+		ListMartechReportsQueryParamFieldsOpensTotal,
+		ListMartechReportsQueryParamFieldsUniqueOpens,
+		ListMartechReportsQueryParamFieldsOpenRate,
+		ListMartechReportsQueryParamFieldsLastOpenAt,
+		ListMartechReportsQueryParamFieldsClicksTotal,
+		ListMartechReportsQueryParamFieldsUniqueClicks,
+		ListMartechReportsQueryParamFieldsUniqueSubscriberClicks,
+		ListMartechReportsQueryParamFieldsClickRate,
+		ListMartechReportsQueryParamFieldsLastClickAt,
+		ListMartechReportsQueryParamFieldsLinks,
+		ListMartechReportsQueryParamFieldsHumanOpensTotal,
+		ListMartechReportsQueryParamFieldsHumanUniqueOpens,
+		ListMartechReportsQueryParamFieldsHumanOpenRate,
+		ListMartechReportsQueryParamFieldsMetadata,
+		ListMartechReportsQueryParamFieldsRaw,
+	}
+}
 func (e *ListMartechReportsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

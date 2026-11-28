@@ -69,6 +69,64 @@ const (
 func (e PatchHrisEmployeeQueryParamFields) ToPointer() *PatchHrisEmployeeQueryParamFields {
 	return &e
 }
+
+// PatchHrisEmployeeQueryParamFieldsValues returns every known PatchHrisEmployeeQueryParamFields value in schema order.
+func PatchHrisEmployeeQueryParamFieldsValues() []PatchHrisEmployeeQueryParamFields {
+	return []PatchHrisEmployeeQueryParamFields{
+		PatchHrisEmployeeQueryParamFieldsID,
+		PatchHrisEmployeeQueryParamFieldsCreatedAt,
+		PatchHrisEmployeeQueryParamFieldsUpdatedAt,
+		PatchHrisEmployeeQueryParamFieldsName,
+		PatchHrisEmployeeQueryParamFieldsFirstName,
+		PatchHrisEmployeeQueryParamFieldsLastName,
+		PatchHrisEmployeeQueryParamFieldsEmails,
+		PatchHrisEmployeeQueryParamFieldsTitle,
+		PatchHrisEmployeeQueryParamFieldsJobID,
+		PatchHrisEmployeeQueryParamFieldsManagerID,
+		PatchHrisEmployeeQueryParamFieldsEmploymentStatus,
+		PatchHrisEmployeeQueryParamFieldsGender,
+		PatchHrisEmployeeQueryParamFieldsTelephones,
+		PatchHrisEmployeeQueryParamFieldsDateOfBirth,
+		PatchHrisEmployeeQueryParamFieldsEmployeeNumber,
+		PatchHrisEmployeeQueryParamFieldsHiredAt,
+		PatchHrisEmployeeQueryParamFieldsTerminatedAt,
+		PatchHrisEmployeeQueryParamFieldsTerminationReason,
+		PatchHrisEmployeeQueryParamFieldsMaritalStatus,
+		PatchHrisEmployeeQueryParamFieldsEmploymentType,
+		PatchHrisEmployeeQueryParamFieldsAddress,
+		PatchHrisEmployeeQueryParamFieldsLanguageLocale,
+		PatchHrisEmployeeQueryParamFieldsCurrency,
+		PatchHrisEmployeeQueryParamFieldsTimezone,
+		PatchHrisEmployeeQueryParamFieldsImageURL,
+		PatchHrisEmployeeQueryParamFieldsCompanyID,
+		PatchHrisEmployeeQueryParamFieldsPronouns,
+		PatchHrisEmployeeQueryParamFieldsEmployeeRoles,
+		PatchHrisEmployeeQueryParamFieldsCompensation,
+		PatchHrisEmployeeQueryParamFieldsSalutation,
+		PatchHrisEmployeeQueryParamFieldsBio,
+		PatchHrisEmployeeQueryParamFieldsSsnSin,
+		PatchHrisEmployeeQueryParamFieldsGroups,
+		PatchHrisEmployeeQueryParamFieldsLocations,
+		PatchHrisEmployeeQueryParamFieldsMetadata,
+		PatchHrisEmployeeQueryParamFieldsStorageQuotaAllocated,
+		PatchHrisEmployeeQueryParamFieldsStorageQuotaUsed,
+		PatchHrisEmployeeQueryParamFieldsStorageQuotaAvailable,
+		PatchHrisEmployeeQueryParamFieldsRelationships,
+		PatchHrisEmployeeQueryParamFieldsHasMfa,
+		PatchHrisEmployeeQueryParamFieldsTimeoffDaysTotal,
+		PatchHrisEmployeeQueryParamFieldsTimeoffDaysUsed,
+		PatchHrisEmployeeQueryParamFieldsFlsaStatus,
+		PatchHrisEmployeeQueryParamFieldsPayFrequency,
+		PatchHrisEmployeeQueryParamFieldsRehiredAt,
+		PatchHrisEmployeeQueryParamFieldsServiceStartedAt,
+		PatchHrisEmployeeQueryParamFieldsSeniorityStartedAt,
+		PatchHrisEmployeeQueryParamFieldsLeaveStartAt,
+		PatchHrisEmployeeQueryParamFieldsLeaveEndAt,
+		PatchHrisEmployeeQueryParamFieldsEmploymentStatusReason,
+		PatchHrisEmployeeQueryParamFieldsRaw,
+		PatchHrisEmployeeQueryParamFieldsUnifiedPersonIds,
+	}
+}
 func (e *PatchHrisEmployeeQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

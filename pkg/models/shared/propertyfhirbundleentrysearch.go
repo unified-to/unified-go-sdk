@@ -13,6 +13,13 @@ func (e PropertyFhirBundleEntrySearchMode) ToPointer() *PropertyFhirBundleEntryS
 	return &e
 }
 
+// PropertyFhirBundleEntrySearchModeValues returns every known PropertyFhirBundleEntrySearchMode value in schema order.
+func PropertyFhirBundleEntrySearchModeValues() []PropertyFhirBundleEntrySearchMode {
+	return []PropertyFhirBundleEntrySearchMode{
+		PropertyFhirBundleEntrySearchModeMatch,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyFhirBundleEntrySearchMode) IsExact() bool {
 	if e != nil {

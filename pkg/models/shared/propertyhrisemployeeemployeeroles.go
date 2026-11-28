@@ -18,6 +18,19 @@ func (e PropertyHrisEmployeeEmployeeRoles) ToPointer() *PropertyHrisEmployeeEmpl
 	return &e
 }
 
+// PropertyHrisEmployeeEmployeeRolesValues returns every known PropertyHrisEmployeeEmployeeRoles value in schema order.
+func PropertyHrisEmployeeEmployeeRolesValues() []PropertyHrisEmployeeEmployeeRoles {
+	return []PropertyHrisEmployeeEmployeeRoles{
+		PropertyHrisEmployeeEmployeeRolesAdmin,
+		PropertyHrisEmployeeEmployeeRolesManager,
+		PropertyHrisEmployeeEmployeeRolesRecruiter,
+		PropertyHrisEmployeeEmployeeRolesSalesrep,
+		PropertyHrisEmployeeEmployeeRolesInterviewer,
+		PropertyHrisEmployeeEmployeeRolesUser,
+		PropertyHrisEmployeeEmployeeRolesEmployee,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyHrisEmployeeEmployeeRoles) IsExact() bool {
 	if e != nil {

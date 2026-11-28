@@ -15,6 +15,15 @@ func (e PropertyAdsReportMetricsGroupTargetingSupplyAuthorizedSellerStatus) ToPo
 	return &e
 }
 
+// PropertyAdsReportMetricsGroupTargetingSupplyAuthorizedSellerStatusValues returns every known PropertyAdsReportMetricsGroupTargetingSupplyAuthorizedSellerStatus value in schema order.
+func PropertyAdsReportMetricsGroupTargetingSupplyAuthorizedSellerStatusValues() []PropertyAdsReportMetricsGroupTargetingSupplyAuthorizedSellerStatus {
+	return []PropertyAdsReportMetricsGroupTargetingSupplyAuthorizedSellerStatus{
+		PropertyAdsReportMetricsGroupTargetingSupplyAuthorizedSellerStatusAuthorizedDirectOnly,
+		PropertyAdsReportMetricsGroupTargetingSupplyAuthorizedSellerStatusAuthorizedDirectAndResellers,
+		PropertyAdsReportMetricsGroupTargetingSupplyAuthorizedSellerStatusAuthorizedAndNonParticipating,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsGroupTargetingSupplyAuthorizedSellerStatus) IsExact() bool {
 	if e != nil {

@@ -41,6 +41,36 @@ const (
 func (e PatchAccountingExpensereportQueryParamFields) ToPointer() *PatchAccountingExpensereportQueryParamFields {
 	return &e
 }
+
+// PatchAccountingExpensereportQueryParamFieldsValues returns every known PatchAccountingExpensereportQueryParamFields value in schema order.
+func PatchAccountingExpensereportQueryParamFieldsValues() []PatchAccountingExpensereportQueryParamFields {
+	return []PatchAccountingExpensereportQueryParamFields{
+		PatchAccountingExpensereportQueryParamFieldsID,
+		PatchAccountingExpensereportQueryParamFieldsCreatedAt,
+		PatchAccountingExpensereportQueryParamFieldsUpdatedAt,
+		PatchAccountingExpensereportQueryParamFieldsName,
+		PatchAccountingExpensereportQueryParamFieldsUserID,
+		PatchAccountingExpensereportQueryParamFieldsApproverUserID,
+		PatchAccountingExpensereportQueryParamFieldsApproverUsers,
+		PatchAccountingExpensereportQueryParamFieldsStatus,
+		PatchAccountingExpensereportQueryParamFieldsTotalAmount,
+		PatchAccountingExpensereportQueryParamFieldsCurrency,
+		PatchAccountingExpensereportQueryParamFieldsTaxAmount,
+		PatchAccountingExpensereportQueryParamFieldsReimbursedAmount,
+		PatchAccountingExpensereportQueryParamFieldsReimbursedAt,
+		PatchAccountingExpensereportQueryParamFieldsApprovedAt,
+		PatchAccountingExpensereportQueryParamFieldsPostedAt,
+		PatchAccountingExpensereportQueryParamFieldsExternalNumber,
+		PatchAccountingExpensereportQueryParamFieldsLineitems,
+		PatchAccountingExpensereportQueryParamFieldsAttachments,
+		PatchAccountingExpensereportQueryParamFieldsCategoryIds,
+		PatchAccountingExpensereportQueryParamFieldsProjectID,
+		PatchAccountingExpensereportQueryParamFieldsUsers,
+		PatchAccountingExpensereportQueryParamFieldsOrganizationID,
+		PatchAccountingExpensereportQueryParamFieldsMetadata,
+		PatchAccountingExpensereportQueryParamFieldsRaw,
+	}
+}
 func (e *PatchAccountingExpensereportQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

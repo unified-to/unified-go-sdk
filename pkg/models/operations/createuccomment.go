@@ -25,6 +25,20 @@ const (
 func (e CreateUcCommentQueryParamFields) ToPointer() *CreateUcCommentQueryParamFields {
 	return &e
 }
+
+// CreateUcCommentQueryParamFieldsValues returns every known CreateUcCommentQueryParamFields value in schema order.
+func CreateUcCommentQueryParamFieldsValues() []CreateUcCommentQueryParamFields {
+	return []CreateUcCommentQueryParamFields{
+		CreateUcCommentQueryParamFieldsID,
+		CreateUcCommentQueryParamFieldsCreatedAt,
+		CreateUcCommentQueryParamFieldsUpdatedAt,
+		CreateUcCommentQueryParamFieldsContent,
+		CreateUcCommentQueryParamFieldsUserID,
+		CreateUcCommentQueryParamFieldsCallID,
+		CreateUcCommentQueryParamFieldsMetadata,
+		CreateUcCommentQueryParamFieldsRaw,
+	}
+}
 func (e *CreateUcCommentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

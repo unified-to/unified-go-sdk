@@ -298,6 +298,25 @@ func (e PrintingMetadataFormat) ToPointer() *PrintingMetadataFormat {
 	return &e
 }
 
+// PrintingMetadataFormatValues returns every known PrintingMetadataFormat value in schema order.
+func PrintingMetadataFormatValues() []PrintingMetadataFormat {
+	return []PrintingMetadataFormat{
+		PrintingMetadataFormatText,
+		PrintingMetadataFormatNumber,
+		PrintingMetadataFormatDate,
+		PrintingMetadataFormatBoolean,
+		PrintingMetadataFormatFile,
+		PrintingMetadataFormatTextarea,
+		PrintingMetadataFormatSingleSelect,
+		PrintingMetadataFormatMultipleSelect,
+		PrintingMetadataFormatMeasurement,
+		PrintingMetadataFormatPrice,
+		PrintingMetadataFormatYesNo,
+		PrintingMetadataFormatCurrency,
+		PrintingMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PrintingMetadataFormat) IsExact() bool {
 	if e != nil {

@@ -23,6 +23,19 @@ func (e HrisPayrollStatus) ToPointer() *HrisPayrollStatus {
 	return &e
 }
 
+// HrisPayrollStatusValues returns every known HrisPayrollStatus value in schema order.
+func HrisPayrollStatusValues() []HrisPayrollStatus {
+	return []HrisPayrollStatus{
+		HrisPayrollStatusDraft,
+		HrisPayrollStatusPending,
+		HrisPayrollStatusApproved,
+		HrisPayrollStatusProcessing,
+		HrisPayrollStatusPaid,
+		HrisPayrollStatusFailed,
+		HrisPayrollStatusCancelled,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HrisPayrollStatus) IsExact() bool {
 	if e != nil {
@@ -47,6 +60,18 @@ const (
 
 func (e HrisPayrollType) ToPointer() *HrisPayrollType {
 	return &e
+}
+
+// HrisPayrollTypeValues returns every known HrisPayrollType value in schema order.
+func HrisPayrollTypeValues() []HrisPayrollType {
+	return []HrisPayrollType{
+		HrisPayrollTypeRegular,
+		HrisPayrollTypeOffCycle,
+		HrisPayrollTypeBonus,
+		HrisPayrollTypeCorrection,
+		HrisPayrollTypeTermination,
+		HrisPayrollTypeContractor,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

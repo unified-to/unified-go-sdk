@@ -27,6 +27,22 @@ const (
 func (e CreateGenaiEmbeddingQueryParamFields) ToPointer() *CreateGenaiEmbeddingQueryParamFields {
 	return &e
 }
+
+// CreateGenaiEmbeddingQueryParamFieldsValues returns every known CreateGenaiEmbeddingQueryParamFields value in schema order.
+func CreateGenaiEmbeddingQueryParamFieldsValues() []CreateGenaiEmbeddingQueryParamFields {
+	return []CreateGenaiEmbeddingQueryParamFields{
+		CreateGenaiEmbeddingQueryParamFieldsModelID,
+		CreateGenaiEmbeddingQueryParamFieldsContent,
+		CreateGenaiEmbeddingQueryParamFieldsEncodingFormat,
+		CreateGenaiEmbeddingQueryParamFieldsType,
+		CreateGenaiEmbeddingQueryParamFieldsDimension,
+		CreateGenaiEmbeddingQueryParamFieldsMaxTokens,
+		CreateGenaiEmbeddingQueryParamFieldsEmbeddings,
+		CreateGenaiEmbeddingQueryParamFieldsTokensUsed,
+		CreateGenaiEmbeddingQueryParamFieldsRaw,
+		CreateGenaiEmbeddingQueryParamFieldsID,
+	}
+}
 func (e *CreateGenaiEmbeddingQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

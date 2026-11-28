@@ -26,6 +26,22 @@ func (e PrintingOrderStatus) ToPointer() *PrintingOrderStatus {
 	return &e
 }
 
+// PrintingOrderStatusValues returns every known PrintingOrderStatus value in schema order.
+func PrintingOrderStatusValues() []PrintingOrderStatus {
+	return []PrintingOrderStatus{
+		PrintingOrderStatusDraft,
+		PrintingOrderStatusPending,
+		PrintingOrderStatusOnHold,
+		PrintingOrderStatusInProduction,
+		PrintingOrderStatusPartiallyShipped,
+		PrintingOrderStatusShipped,
+		PrintingOrderStatusDelivered,
+		PrintingOrderStatusCancelled,
+		PrintingOrderStatusFailed,
+		PrintingOrderStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PrintingOrderStatus) IsExact() bool {
 	if e != nil {

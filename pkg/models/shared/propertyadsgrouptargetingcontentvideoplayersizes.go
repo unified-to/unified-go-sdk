@@ -14,6 +14,15 @@ func (e PropertyAdsGroupTargetingContentVideoPlayerSizes) ToPointer() *PropertyA
 	return &e
 }
 
+// PropertyAdsGroupTargetingContentVideoPlayerSizesValues returns every known PropertyAdsGroupTargetingContentVideoPlayerSizes value in schema order.
+func PropertyAdsGroupTargetingContentVideoPlayerSizesValues() []PropertyAdsGroupTargetingContentVideoPlayerSizes {
+	return []PropertyAdsGroupTargetingContentVideoPlayerSizes{
+		PropertyAdsGroupTargetingContentVideoPlayerSizesSmall,
+		PropertyAdsGroupTargetingContentVideoPlayerSizesLarge,
+		PropertyAdsGroupTargetingContentVideoPlayerSizesHd,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsGroupTargetingContentVideoPlayerSizes) IsExact() bool {
 	if e != nil {

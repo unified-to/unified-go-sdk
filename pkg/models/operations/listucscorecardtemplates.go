@@ -26,6 +26,21 @@ const (
 func (e ListUcScorecardtemplatesQueryParamFields) ToPointer() *ListUcScorecardtemplatesQueryParamFields {
 	return &e
 }
+
+// ListUcScorecardtemplatesQueryParamFieldsValues returns every known ListUcScorecardtemplatesQueryParamFields value in schema order.
+func ListUcScorecardtemplatesQueryParamFieldsValues() []ListUcScorecardtemplatesQueryParamFields {
+	return []ListUcScorecardtemplatesQueryParamFields{
+		ListUcScorecardtemplatesQueryParamFieldsID,
+		ListUcScorecardtemplatesQueryParamFieldsCreatedAt,
+		ListUcScorecardtemplatesQueryParamFieldsUpdatedAt,
+		ListUcScorecardtemplatesQueryParamFieldsName,
+		ListUcScorecardtemplatesQueryParamFieldsDescription,
+		ListUcScorecardtemplatesQueryParamFieldsIsActive,
+		ListUcScorecardtemplatesQueryParamFieldsQuestions,
+		ListUcScorecardtemplatesQueryParamFieldsMetadata,
+		ListUcScorecardtemplatesQueryParamFieldsRaw,
+	}
+}
 func (e *ListUcScorecardtemplatesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

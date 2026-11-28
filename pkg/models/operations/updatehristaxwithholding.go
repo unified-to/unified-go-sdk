@@ -43,6 +43,38 @@ const (
 func (e UpdateHrisTaxwithholdingQueryParamFields) ToPointer() *UpdateHrisTaxwithholdingQueryParamFields {
 	return &e
 }
+
+// UpdateHrisTaxwithholdingQueryParamFieldsValues returns every known UpdateHrisTaxwithholdingQueryParamFields value in schema order.
+func UpdateHrisTaxwithholdingQueryParamFieldsValues() []UpdateHrisTaxwithholdingQueryParamFields {
+	return []UpdateHrisTaxwithholdingQueryParamFields{
+		UpdateHrisTaxwithholdingQueryParamFieldsID,
+		UpdateHrisTaxwithholdingQueryParamFieldsCreatedAt,
+		UpdateHrisTaxwithholdingQueryParamFieldsUpdatedAt,
+		UpdateHrisTaxwithholdingQueryParamFieldsUserID,
+		UpdateHrisTaxwithholdingQueryParamFieldsCompanyID,
+		UpdateHrisTaxwithholdingQueryParamFieldsCountry,
+		UpdateHrisTaxwithholdingQueryParamFieldsJurisdictionType,
+		UpdateHrisTaxwithholdingQueryParamFieldsJurisdiction,
+		UpdateHrisTaxwithholdingQueryParamFieldsIsResident,
+		UpdateHrisTaxwithholdingQueryParamFieldsForm,
+		UpdateHrisTaxwithholdingQueryParamFieldsFilingStatus,
+		UpdateHrisTaxwithholdingQueryParamFieldsTaxCode,
+		UpdateHrisTaxwithholdingQueryParamFieldsAllowances,
+		UpdateHrisTaxwithholdingQueryParamFieldsClaimAmount,
+		UpdateHrisTaxwithholdingQueryParamFieldsHasMultipleJobs,
+		UpdateHrisTaxwithholdingQueryParamFieldsDependentsAmount,
+		UpdateHrisTaxwithholdingQueryParamFieldsOtherIncomeAmount,
+		UpdateHrisTaxwithholdingQueryParamFieldsOtherDeductionsAmount,
+		UpdateHrisTaxwithholdingQueryParamFieldsExtraWithholdingAmount,
+		UpdateHrisTaxwithholdingQueryParamFieldsExtraWithholdingPercent,
+		UpdateHrisTaxwithholdingQueryParamFieldsOverrideType,
+		UpdateHrisTaxwithholdingQueryParamFieldsOverrideAmount,
+		UpdateHrisTaxwithholdingQueryParamFieldsIsExempt,
+		UpdateHrisTaxwithholdingQueryParamFieldsEffectiveAt,
+		UpdateHrisTaxwithholdingQueryParamFieldsMetadata,
+		UpdateHrisTaxwithholdingQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateHrisTaxwithholdingQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

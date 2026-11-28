@@ -31,6 +31,26 @@ const (
 func (e PatchSigningDocumentQueryParamFields) ToPointer() *PatchSigningDocumentQueryParamFields {
 	return &e
 }
+
+// PatchSigningDocumentQueryParamFieldsValues returns every known PatchSigningDocumentQueryParamFields value in schema order.
+func PatchSigningDocumentQueryParamFieldsValues() []PatchSigningDocumentQueryParamFields {
+	return []PatchSigningDocumentQueryParamFields{
+		PatchSigningDocumentQueryParamFieldsID,
+		PatchSigningDocumentQueryParamFieldsCreatedAt,
+		PatchSigningDocumentQueryParamFieldsUpdatedAt,
+		PatchSigningDocumentQueryParamFieldsName,
+		PatchSigningDocumentQueryParamFieldsDescription,
+		PatchSigningDocumentQueryParamFieldsStatus,
+		PatchSigningDocumentQueryParamFieldsSentAt,
+		PatchSigningDocumentQueryParamFieldsCompletedAt,
+		PatchSigningDocumentQueryParamFieldsExpiresAt,
+		PatchSigningDocumentQueryParamFieldsTemplateID,
+		PatchSigningDocumentQueryParamFieldsDownloadURL,
+		PatchSigningDocumentQueryParamFieldsCreatorID,
+		PatchSigningDocumentQueryParamFieldsRaw,
+		PatchSigningDocumentQueryParamFieldsMetadata,
+	}
+}
 func (e *PatchSigningDocumentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

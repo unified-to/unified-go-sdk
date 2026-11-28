@@ -20,6 +20,16 @@ func (e KmsPageType) ToPointer() *KmsPageType {
 	return &e
 }
 
+// KmsPageTypeValues returns every known KmsPageType value in schema order.
+func KmsPageTypeValues() []KmsPageType {
+	return []KmsPageType{
+		KmsPageTypeHTML,
+		KmsPageTypeMarkdown,
+		KmsPageTypeText,
+		KmsPageTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *KmsPageType) IsExact() bool {
 	if e != nil {

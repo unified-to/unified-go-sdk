@@ -31,6 +31,26 @@ const (
 func (e UpdateSocialCommentQueryParamFields) ToPointer() *UpdateSocialCommentQueryParamFields {
 	return &e
 }
+
+// UpdateSocialCommentQueryParamFieldsValues returns every known UpdateSocialCommentQueryParamFields value in schema order.
+func UpdateSocialCommentQueryParamFieldsValues() []UpdateSocialCommentQueryParamFields {
+	return []UpdateSocialCommentQueryParamFields{
+		UpdateSocialCommentQueryParamFieldsID,
+		UpdateSocialCommentQueryParamFieldsCreatedAt,
+		UpdateSocialCommentQueryParamFieldsUpdatedAt,
+		UpdateSocialCommentQueryParamFieldsPostID,
+		UpdateSocialCommentQueryParamFieldsParentID,
+		UpdateSocialCommentQueryParamFieldsAuthorIdentifier,
+		UpdateSocialCommentQueryParamFieldsAuthorName,
+		UpdateSocialCommentQueryParamFieldsAuthorUsername,
+		UpdateSocialCommentQueryParamFieldsAuthorAvatarURL,
+		UpdateSocialCommentQueryParamFieldsContent,
+		UpdateSocialCommentQueryParamFieldsURL,
+		UpdateSocialCommentQueryParamFieldsIsHidden,
+		UpdateSocialCommentQueryParamFieldsMetrics,
+		UpdateSocialCommentQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateSocialCommentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

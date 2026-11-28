@@ -33,6 +33,29 @@ func (e AdType) ToPointer() *AdType {
 	return &e
 }
 
+// AdTypeValues returns every known AdType value in schema order.
+func AdTypeValues() []AdType {
+	return []AdType{
+		AdTypeText,
+		AdTypeImage,
+		AdTypeVideo,
+		AdTypeResponsive,
+		AdTypeShopping,
+		AdTypeApp,
+		AdTypeCall,
+		AdTypeCarousel,
+		AdTypeSocial,
+		AdTypeDisplay,
+		AdTypeSearch,
+		AdTypeAudio,
+		AdTypeYoutube,
+		AdTypeNative,
+		AdTypeCtv,
+		AdTypeDooh,
+		AdTypePerformanceMax,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AdType) IsExact() bool {
 	if e != nil {
@@ -59,6 +82,20 @@ const (
 
 func (e AdsAdStatus) ToPointer() *AdsAdStatus {
 	return &e
+}
+
+// AdsAdStatusValues returns every known AdsAdStatus value in schema order.
+func AdsAdStatusValues() []AdsAdStatus {
+	return []AdsAdStatus{
+		AdsAdStatusUnspecified,
+		AdsAdStatusActive,
+		AdsAdStatusPaused,
+		AdsAdStatusArchived,
+		AdsAdStatusDraft,
+		AdsAdStatusScheduledForDeletion,
+		AdsAdStatusProcessing,
+		AdsAdStatusProcessingFailed,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

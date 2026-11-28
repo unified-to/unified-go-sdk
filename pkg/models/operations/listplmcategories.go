@@ -27,6 +27,22 @@ const (
 func (e ListPlmCategoriesQueryParamFields) ToPointer() *ListPlmCategoriesQueryParamFields {
 	return &e
 }
+
+// ListPlmCategoriesQueryParamFieldsValues returns every known ListPlmCategoriesQueryParamFields value in schema order.
+func ListPlmCategoriesQueryParamFieldsValues() []ListPlmCategoriesQueryParamFields {
+	return []ListPlmCategoriesQueryParamFields{
+		ListPlmCategoriesQueryParamFieldsID,
+		ListPlmCategoriesQueryParamFieldsCreatedAt,
+		ListPlmCategoriesQueryParamFieldsUpdatedAt,
+		ListPlmCategoriesQueryParamFieldsName,
+		ListPlmCategoriesQueryParamFieldsDescription,
+		ListPlmCategoriesQueryParamFieldsType,
+		ListPlmCategoriesQueryParamFieldsIsActive,
+		ListPlmCategoriesQueryParamFieldsParentID,
+		ListPlmCategoriesQueryParamFieldsMetadata,
+		ListPlmCategoriesQueryParamFieldsRaw,
+	}
+}
 func (e *ListPlmCategoriesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -51,6 +51,46 @@ const (
 func (e GetAccountingProjectQueryParamFields) ToPointer() *GetAccountingProjectQueryParamFields {
 	return &e
 }
+
+// GetAccountingProjectQueryParamFieldsValues returns every known GetAccountingProjectQueryParamFields value in schema order.
+func GetAccountingProjectQueryParamFieldsValues() []GetAccountingProjectQueryParamFields {
+	return []GetAccountingProjectQueryParamFields{
+		GetAccountingProjectQueryParamFieldsID,
+		GetAccountingProjectQueryParamFieldsCreatedAt,
+		GetAccountingProjectQueryParamFieldsUpdatedAt,
+		GetAccountingProjectQueryParamFieldsName,
+		GetAccountingProjectQueryParamFieldsCode,
+		GetAccountingProjectQueryParamFieldsDescription,
+		GetAccountingProjectQueryParamFieldsStatus,
+		GetAccountingProjectQueryParamFieldsIsActive,
+		GetAccountingProjectQueryParamFieldsIsBillable,
+		GetAccountingProjectQueryParamFieldsContactID,
+		GetAccountingProjectQueryParamFieldsParentID,
+		GetAccountingProjectQueryParamFieldsManagerUserID,
+		GetAccountingProjectQueryParamFieldsStartedAt,
+		GetAccountingProjectQueryParamFieldsDueAt,
+		GetAccountingProjectQueryParamFieldsEndedAt,
+		GetAccountingProjectQueryParamFieldsCurrency,
+		GetAccountingProjectQueryParamFieldsEstimateAmount,
+		GetAccountingProjectQueryParamFieldsEstimatedCostAmount,
+		GetAccountingProjectQueryParamFieldsActualCostAmount,
+		GetAccountingProjectQueryParamFieldsInvoicedAmount,
+		GetAccountingProjectQueryParamFieldsToBeInvoicedAmount,
+		GetAccountingProjectQueryParamFieldsExpenseAmount,
+		GetAccountingProjectQueryParamFieldsDepositAmount,
+		GetAccountingProjectQueryParamFieldsDepositAppliedAmount,
+		GetAccountingProjectQueryParamFieldsCreditNoteAmount,
+		GetAccountingProjectQueryParamFieldsMinutesLogged,
+		GetAccountingProjectQueryParamFieldsMinutesToBeInvoiced,
+		GetAccountingProjectQueryParamFieldsPercentComplete,
+		GetAccountingProjectQueryParamFieldsBillingType,
+		GetAccountingProjectQueryParamFieldsCategoryIds,
+		GetAccountingProjectQueryParamFieldsLocationID,
+		GetAccountingProjectQueryParamFieldsOrganizationID,
+		GetAccountingProjectQueryParamFieldsMetadata,
+		GetAccountingProjectQueryParamFieldsRaw,
+	}
+}
 func (e *GetAccountingProjectQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

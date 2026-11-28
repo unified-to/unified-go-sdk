@@ -26,6 +26,21 @@ const (
 func (e GetGenaiModelQueryParamFields) ToPointer() *GetGenaiModelQueryParamFields {
 	return &e
 }
+
+// GetGenaiModelQueryParamFieldsValues returns every known GetGenaiModelQueryParamFields value in schema order.
+func GetGenaiModelQueryParamFieldsValues() []GetGenaiModelQueryParamFields {
+	return []GetGenaiModelQueryParamFields{
+		GetGenaiModelQueryParamFieldsID,
+		GetGenaiModelQueryParamFieldsName,
+		GetGenaiModelQueryParamFieldsDescription,
+		GetGenaiModelQueryParamFieldsMaxTokens,
+		GetGenaiModelQueryParamFieldsWebURL,
+		GetGenaiModelQueryParamFieldsHasTemperature,
+		GetGenaiModelQueryParamFieldsHasQuestions,
+		GetGenaiModelQueryParamFieldsHasVision,
+		GetGenaiModelQueryParamFieldsRaw,
+	}
+}
 func (e *GetGenaiModelQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

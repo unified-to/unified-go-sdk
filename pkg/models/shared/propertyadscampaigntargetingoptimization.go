@@ -14,6 +14,14 @@ func (e PropertyAdsCampaignTargetingOptimizationMode) ToPointer() *PropertyAdsCa
 	return &e
 }
 
+// PropertyAdsCampaignTargetingOptimizationModeValues returns every known PropertyAdsCampaignTargetingOptimizationMode value in schema order.
+func PropertyAdsCampaignTargetingOptimizationModeValues() []PropertyAdsCampaignTargetingOptimizationMode {
+	return []PropertyAdsCampaignTargetingOptimizationMode{
+		PropertyAdsCampaignTargetingOptimizationModeTargeting,
+		PropertyAdsCampaignTargetingOptimizationModeObservation,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsCampaignTargetingOptimizationMode) IsExact() bool {
 	if e != nil {

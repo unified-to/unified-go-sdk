@@ -42,6 +42,37 @@ const (
 func (e UpdateLmsContentQueryParamFields) ToPointer() *UpdateLmsContentQueryParamFields {
 	return &e
 }
+
+// UpdateLmsContentQueryParamFieldsValues returns every known UpdateLmsContentQueryParamFields value in schema order.
+func UpdateLmsContentQueryParamFieldsValues() []UpdateLmsContentQueryParamFields {
+	return []UpdateLmsContentQueryParamFields{
+		UpdateLmsContentQueryParamFieldsID,
+		UpdateLmsContentQueryParamFieldsCreatedAt,
+		UpdateLmsContentQueryParamFieldsUpdatedAt,
+		UpdateLmsContentQueryParamFieldsExternalReference,
+		UpdateLmsContentQueryParamFieldsCourseIds,
+		UpdateLmsContentQueryParamFieldsName,
+		UpdateLmsContentQueryParamFieldsDescription,
+		UpdateLmsContentQueryParamFieldsLanguages,
+		UpdateLmsContentQueryParamFieldsMedia,
+		UpdateLmsContentQueryParamFieldsIsActive,
+		UpdateLmsContentQueryParamFieldsDurationMinutes,
+		UpdateLmsContentQueryParamFieldsCategories,
+		UpdateLmsContentQueryParamFieldsSubjects,
+		UpdateLmsContentQueryParamFieldsSkills,
+		UpdateLmsContentQueryParamFieldsTags,
+		UpdateLmsContentQueryParamFieldsDifficulty,
+		UpdateLmsContentQueryParamFieldsSortOrder,
+		UpdateLmsContentQueryParamFieldsProviderName,
+		UpdateLmsContentQueryParamFieldsShortDescription,
+		UpdateLmsContentQueryParamFieldsLocalizations,
+		UpdateLmsContentQueryParamFieldsCollectionIds,
+		UpdateLmsContentQueryParamFieldsInstructors,
+		UpdateLmsContentQueryParamFieldsPublishedAt,
+		UpdateLmsContentQueryParamFieldsMetadata,
+		UpdateLmsContentQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateLmsContentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -16,6 +16,16 @@ func (e FhirPatientGender) ToPointer() *FhirPatientGender {
 	return &e
 }
 
+// FhirPatientGenderValues returns every known FhirPatientGender value in schema order.
+func FhirPatientGenderValues() []FhirPatientGender {
+	return []FhirPatientGender{
+		FhirPatientGenderMale,
+		FhirPatientGenderFemale,
+		FhirPatientGenderOther,
+		FhirPatientGenderUnknown,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *FhirPatientGender) IsExact() bool {
 	if e != nil {
@@ -47,6 +57,24 @@ const (
 
 func (e FhirPatientResourceType) ToPointer() *FhirPatientResourceType {
 	return &e
+}
+
+// FhirPatientResourceTypeValues returns every known FhirPatientResourceType value in schema order.
+func FhirPatientResourceTypeValues() []FhirPatientResourceType {
+	return []FhirPatientResourceType{
+		FhirPatientResourceTypePatient,
+		FhirPatientResourceTypePractitioner,
+		FhirPatientResourceTypeEncounter,
+		FhirPatientResourceTypeObservation,
+		FhirPatientResourceTypeCondition,
+		FhirPatientResourceTypeAllergyIntolerance,
+		FhirPatientResourceTypeMedicationRequest,
+		FhirPatientResourceTypeImmunization,
+		FhirPatientResourceTypeBundle,
+		FhirPatientResourceTypeOperationOutcome,
+		FhirPatientResourceTypeCapabilityStatement,
+		FhirPatientResourceTypeDiagnosticReport,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

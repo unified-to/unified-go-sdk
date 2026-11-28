@@ -42,6 +42,37 @@ const (
 func (e UpdateDmsPartsaleQueryParamFields) ToPointer() *UpdateDmsPartsaleQueryParamFields {
 	return &e
 }
+
+// UpdateDmsPartsaleQueryParamFieldsValues returns every known UpdateDmsPartsaleQueryParamFields value in schema order.
+func UpdateDmsPartsaleQueryParamFieldsValues() []UpdateDmsPartsaleQueryParamFields {
+	return []UpdateDmsPartsaleQueryParamFields{
+		UpdateDmsPartsaleQueryParamFieldsID,
+		UpdateDmsPartsaleQueryParamFieldsCreatedAt,
+		UpdateDmsPartsaleQueryParamFieldsUpdatedAt,
+		UpdateDmsPartsaleQueryParamFieldsNumber,
+		UpdateDmsPartsaleQueryParamFieldsType,
+		UpdateDmsPartsaleQueryParamFieldsStatus,
+		UpdateDmsPartsaleQueryParamFieldsContactID,
+		UpdateDmsPartsaleQueryParamFieldsSalespersonUserID,
+		UpdateDmsPartsaleQueryParamFieldsVehicleID,
+		UpdateDmsPartsaleQueryParamFieldsPayType,
+		UpdateDmsPartsaleQueryParamFieldsPurchaseOrderNumber,
+		UpdateDmsPartsaleQueryParamFieldsClosedAt,
+		UpdateDmsPartsaleQueryParamFieldsShippedAt,
+		UpdateDmsPartsaleQueryParamFieldsCurrency,
+		UpdateDmsPartsaleQueryParamFieldsSubtotalAmount,
+		UpdateDmsPartsaleQueryParamFieldsDiscountAmount,
+		UpdateDmsPartsaleQueryParamFieldsFreightAmount,
+		UpdateDmsPartsaleQueryParamFieldsTaxAmount,
+		UpdateDmsPartsaleQueryParamFieldsTotalAmount,
+		UpdateDmsPartsaleQueryParamFieldsCostAmount,
+		UpdateDmsPartsaleQueryParamFieldsNotes,
+		UpdateDmsPartsaleQueryParamFieldsShippingAddress,
+		UpdateDmsPartsaleQueryParamFieldsLines,
+		UpdateDmsPartsaleQueryParamFieldsMetadata,
+		UpdateDmsPartsaleQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateDmsPartsaleQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

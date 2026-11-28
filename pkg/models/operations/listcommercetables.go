@@ -35,6 +35,30 @@ const (
 func (e ListCommerceTablesQueryParamFields) ToPointer() *ListCommerceTablesQueryParamFields {
 	return &e
 }
+
+// ListCommerceTablesQueryParamFieldsValues returns every known ListCommerceTablesQueryParamFields value in schema order.
+func ListCommerceTablesQueryParamFieldsValues() []ListCommerceTablesQueryParamFields {
+	return []ListCommerceTablesQueryParamFields{
+		ListCommerceTablesQueryParamFieldsID,
+		ListCommerceTablesQueryParamFieldsCreatedAt,
+		ListCommerceTablesQueryParamFieldsUpdatedAt,
+		ListCommerceTablesQueryParamFieldsName,
+		ListCommerceTablesQueryParamFieldsNumber,
+		ListCommerceTablesQueryParamFieldsDescription,
+		ListCommerceTablesQueryParamFieldsIsActive,
+		ListCommerceTablesQueryParamFieldsCapacity,
+		ListCommerceTablesQueryParamFieldsLocationID,
+		ListCommerceTablesQueryParamFieldsFloorplanName,
+		ListCommerceTablesQueryParamFieldsFloorplanIdentifier,
+		ListCommerceTablesQueryParamFieldsLayout,
+		ListCommerceTablesQueryParamFieldsStatus,
+		ListCommerceTablesQueryParamFieldsGuestCount,
+		ListCommerceTablesQueryParamFieldsOccupiedAt,
+		ListCommerceTablesQueryParamFieldsSalesorderIds,
+		ListCommerceTablesQueryParamFieldsMetadata,
+		ListCommerceTablesQueryParamFieldsRaw,
+	}
+}
 func (e *ListCommerceTablesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

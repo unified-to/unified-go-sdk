@@ -39,16 +39,16 @@ func main() {
 
     res, err := s.Expensereport.CreateAccountingExpensereport(ctx, operations.CreateAccountingExpensereportRequest{
         AccountingExpensereport: shared.AccountingExpensereport{
-            ApprovedAt: types.MustNewTimeFromString("2021-04-24T15:14:23.880Z"),
+            ApprovedAt: types.MustNewTimeFromString("2021-04-24T18:33:25.559Z"),
             Attachments: []shared.AccountingAttachment{},
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-05-29T02:04:59.078Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
             ExternalNumber: unifiedgosdk.Pointer("ER-31240"),
-            ID: unifiedgosdk.Pointer("bfff6a05-5381-4e10-9292-c33d6788c7e6"),
+            ID: unifiedgosdk.Pointer("8023ad53-7aae-4266-897b-1089f4fba693"),
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("e5b1b92b-2426-428d-8ebc-4e0dd645a176"),
+                    ID: unifiedgosdk.Pointer("3b5318e0-306a-4d16-8e31-63203fa2c91c"),
                     ItemName: unifiedgosdk.Pointer("Conference ticket"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](39.9),
@@ -56,7 +56,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("a17a5eeb-8628-4dba-8cdb-3819ba80f5ba"),
+                    ID: unifiedgosdk.Pointer("c2549d34-22e5-4f97-a8c1-3d8dd1dea716"),
                     ItemName: unifiedgosdk.Pointer("Flight"),
                     Notes: unifiedgosdk.Pointer("Aliquam soluta omnis dolor."),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -65,7 +65,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("74ef1aa5-f253-41a7-a14f-29d8c5ffb825"),
+                    ID: unifiedgosdk.Pointer("fc44c9b1-94f9-4f1b-8372-f7f58a504723"),
                     ItemName: unifiedgosdk.Pointer("Client dinner"),
                     Notes: unifiedgosdk.Pointer("Altus caveo capio."),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -74,7 +74,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("c42c6cb1-3223-403e-aefd-b6bf53392495"),
+                    ID: unifiedgosdk.Pointer("2ddf68dc-ccf3-48a4-890f-e3ff2c2ecfc1"),
                     ItemName: unifiedgosdk.Pointer("Flight"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](445.27),
@@ -86,11 +86,11 @@ func main() {
             Name: unifiedgosdk.Pointer("Jamil Christiansen - October expenses"),
             PostedAt: types.MustNewTimeFromString("2020-05-29T02:04:59.078Z"),
             ReimbursedAmount: unifiedgosdk.Pointer[float64](908.46),
-            ReimbursedAt: types.MustNewTimeFromString("2021-04-24T15:14:23.880Z"),
+            ReimbursedAt: types.MustNewTimeFromString("2021-04-24T18:33:25.559Z"),
             Status: shared.AccountingExpensereportStatusPaid.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](908.46),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-24T15:14:23.880Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-24T18:33:25.559Z"),
         },
         ConnectionID: "<id>",
     })
@@ -258,16 +258,16 @@ func main() {
 
     res, err := s.Expensereport.PatchAccountingExpensereport(ctx, operations.PatchAccountingExpensereportRequest{
         AccountingExpensereport: shared.AccountingExpensereport{
-            ApprovedAt: types.MustNewTimeFromString("2021-04-24T15:14:23.884Z"),
+            ApprovedAt: types.MustNewTimeFromString("2021-04-24T18:33:25.562Z"),
             Attachments: []shared.AccountingAttachment{},
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-05-29T02:04:59.078Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
             ExternalNumber: unifiedgosdk.Pointer("ER-31240"),
-            ID: unifiedgosdk.Pointer("e9623188-ec1a-4a14-9369-61b1e7ece55a"),
+            ID: unifiedgosdk.Pointer("36b2d2e5-bc7e-4e9e-99a1-6abf702755e5"),
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("80be5d67-85c0-4d94-941b-ff167e88a4bd"),
+                    ID: unifiedgosdk.Pointer("e5c3d642-f24d-489a-a3c9-53d44ec548ee"),
                     ItemName: unifiedgosdk.Pointer("Conference ticket"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](39.9),
@@ -275,7 +275,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("7b59aacc-60ca-40b8-a58b-6b4b8f949564"),
+                    ID: unifiedgosdk.Pointer("a23ada04-a09d-4bf4-9541-ef072a28a82a"),
                     ItemName: unifiedgosdk.Pointer("Flight"),
                     Notes: unifiedgosdk.Pointer("Aliquam soluta omnis dolor."),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -284,7 +284,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("5156732d-76be-4b80-909a-fb609ca0a58d"),
+                    ID: unifiedgosdk.Pointer("88e67c7b-3e2e-4c0b-aa25-2c6212fa88cc"),
                     ItemName: unifiedgosdk.Pointer("Client dinner"),
                     Notes: unifiedgosdk.Pointer("Altus caveo capio."),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -293,7 +293,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("06bad8c2-6d63-4bbd-9614-e2deaa0fd814"),
+                    ID: unifiedgosdk.Pointer("77bc2c96-48d6-494d-8c1d-f42d127cef3f"),
                     ItemName: unifiedgosdk.Pointer("Flight"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](445.27),
@@ -305,11 +305,11 @@ func main() {
             Name: unifiedgosdk.Pointer("Jamil Christiansen - October expenses"),
             PostedAt: types.MustNewTimeFromString("2020-05-29T02:04:59.078Z"),
             ReimbursedAmount: unifiedgosdk.Pointer[float64](908.46),
-            ReimbursedAt: types.MustNewTimeFromString("2021-04-24T15:14:23.884Z"),
+            ReimbursedAt: types.MustNewTimeFromString("2021-04-24T18:33:25.562Z"),
             Status: shared.AccountingExpensereportStatusPaid.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](908.46),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-24T15:14:23.884Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-24T18:33:25.562Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -424,16 +424,16 @@ func main() {
 
     res, err := s.Expensereport.UpdateAccountingExpensereport(ctx, operations.UpdateAccountingExpensereportRequest{
         AccountingExpensereport: shared.AccountingExpensereport{
-            ApprovedAt: types.MustNewTimeFromString("2021-04-24T15:14:23.884Z"),
+            ApprovedAt: types.MustNewTimeFromString("2021-04-24T18:33:25.562Z"),
             Attachments: []shared.AccountingAttachment{},
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-05-29T02:04:59.078Z"),
             Currency: unifiedgosdk.Pointer("GBP"),
             ExternalNumber: unifiedgosdk.Pointer("ER-31240"),
-            ID: unifiedgosdk.Pointer("e9623188-ec1a-4a14-9369-61b1e7ece55a"),
+            ID: unifiedgosdk.Pointer("36b2d2e5-bc7e-4e9e-99a1-6abf702755e5"),
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("80be5d67-85c0-4d94-941b-ff167e88a4bd"),
+                    ID: unifiedgosdk.Pointer("e5c3d642-f24d-489a-a3c9-53d44ec548ee"),
                     ItemName: unifiedgosdk.Pointer("Conference ticket"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](39.9),
@@ -441,7 +441,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("7b59aacc-60ca-40b8-a58b-6b4b8f949564"),
+                    ID: unifiedgosdk.Pointer("a23ada04-a09d-4bf4-9541-ef072a28a82a"),
                     ItemName: unifiedgosdk.Pointer("Flight"),
                     Notes: unifiedgosdk.Pointer("Aliquam soluta omnis dolor."),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -450,7 +450,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("5156732d-76be-4b80-909a-fb609ca0a58d"),
+                    ID: unifiedgosdk.Pointer("88e67c7b-3e2e-4c0b-aa25-2c6212fa88cc"),
                     ItemName: unifiedgosdk.Pointer("Client dinner"),
                     Notes: unifiedgosdk.Pointer("Altus caveo capio."),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
@@ -459,7 +459,7 @@ func main() {
                     UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
                 },
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("06bad8c2-6d63-4bbd-9614-e2deaa0fd814"),
+                    ID: unifiedgosdk.Pointer("77bc2c96-48d6-494d-8c1d-f42d127cef3f"),
                     ItemName: unifiedgosdk.Pointer("Flight"),
                     TaxAmount: unifiedgosdk.Pointer[float64](0.0),
                     TotalAmount: unifiedgosdk.Pointer[float64](445.27),
@@ -471,11 +471,11 @@ func main() {
             Name: unifiedgosdk.Pointer("Jamil Christiansen - October expenses"),
             PostedAt: types.MustNewTimeFromString("2020-05-29T02:04:59.078Z"),
             ReimbursedAmount: unifiedgosdk.Pointer[float64](908.46),
-            ReimbursedAt: types.MustNewTimeFromString("2021-04-24T15:14:23.884Z"),
+            ReimbursedAt: types.MustNewTimeFromString("2021-04-24T18:33:25.562Z"),
             Status: shared.AccountingExpensereportStatusPaid.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](908.46),
-            UpdatedAt: types.MustNewTimeFromString("2021-04-24T15:14:23.884Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-24T18:33:25.562Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

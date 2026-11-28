@@ -33,6 +33,28 @@ const (
 func (e ListHealthcareLocationsQueryParamFields) ToPointer() *ListHealthcareLocationsQueryParamFields {
 	return &e
 }
+
+// ListHealthcareLocationsQueryParamFieldsValues returns every known ListHealthcareLocationsQueryParamFields value in schema order.
+func ListHealthcareLocationsQueryParamFieldsValues() []ListHealthcareLocationsQueryParamFields {
+	return []ListHealthcareLocationsQueryParamFields{
+		ListHealthcareLocationsQueryParamFieldsID,
+		ListHealthcareLocationsQueryParamFieldsCreatedAt,
+		ListHealthcareLocationsQueryParamFieldsUpdatedAt,
+		ListHealthcareLocationsQueryParamFieldsName,
+		ListHealthcareLocationsQueryParamFieldsDescription,
+		ListHealthcareLocationsQueryParamFieldsParentID,
+		ListHealthcareLocationsQueryParamFieldsOrganizationName,
+		ListHealthcareLocationsQueryParamFieldsAddress,
+		ListHealthcareLocationsQueryParamFieldsTelephones,
+		ListHealthcareLocationsQueryParamFieldsEmails,
+		ListHealthcareLocationsQueryParamFieldsLatitude,
+		ListHealthcareLocationsQueryParamFieldsLongitude,
+		ListHealthcareLocationsQueryParamFieldsIdentifiers,
+		ListHealthcareLocationsQueryParamFieldsIsActive,
+		ListHealthcareLocationsQueryParamFieldsMetadata,
+		ListHealthcareLocationsQueryParamFieldsRaw,
+	}
+}
 func (e *ListHealthcareLocationsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

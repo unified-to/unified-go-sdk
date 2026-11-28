@@ -25,6 +25,20 @@ func (e UcFaxStatus) ToPointer() *UcFaxStatus {
 	return &e
 }
 
+// UcFaxStatusValues returns every known UcFaxStatus value in schema order.
+func UcFaxStatusValues() []UcFaxStatus {
+	return []UcFaxStatus{
+		UcFaxStatusQueued,
+		UcFaxStatusSending,
+		UcFaxStatusDelivered,
+		UcFaxStatusReceiving,
+		UcFaxStatusReceived,
+		UcFaxStatusFailed,
+		UcFaxStatusCanceled,
+		UcFaxStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *UcFaxStatus) IsExact() bool {
 	if e != nil {
@@ -46,6 +60,14 @@ const (
 
 func (e UcFaxType) ToPointer() *UcFaxType {
 	return &e
+}
+
+// UcFaxTypeValues returns every known UcFaxType value in schema order.
+func UcFaxTypeValues() []UcFaxType {
+	return []UcFaxType{
+		UcFaxTypeInbound,
+		UcFaxTypeOutbound,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

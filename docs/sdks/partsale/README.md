@@ -43,10 +43,10 @@ func main() {
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             FreightAmount: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("bd08d54d-448b-4d62-8768-b6502973e230"),
+            ID: unifiedgosdk.Pointer("eb010012-1cc9-45e8-a95b-8c462753e544"),
             Lines: []shared.DmsPartline{
                 shared.DmsPartline{
-                    ID: unifiedgosdk.Pointer("caca2735-8164-423c-84f4-488aa8c75ac9"),
+                    ID: unifiedgosdk.Pointer("950015f1-0a34-4a2e-8ed1-f34e9bd0a4f7"),
                     PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
                     Quantity: unifiedgosdk.Pointer[float64](5.0),
                     QuantityOrdered: unifiedgosdk.Pointer[float64](5.0),
@@ -54,7 +54,7 @@ func main() {
                     UnitPriceAmount: unifiedgosdk.Pointer[float64](98.29),
                 },
                 shared.DmsPartline{
-                    ID: unifiedgosdk.Pointer("8e6e84b8-fb04-45e5-a51e-06a1cd4dc803"),
+                    ID: unifiedgosdk.Pointer("1968d3d2-74f2-410f-8b59-749ddcc0a7e4"),
                     PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
                     Quantity: unifiedgosdk.Pointer[float64](2.0),
                     QuantityOrdered: unifiedgosdk.Pointer[float64](2.0),
@@ -62,7 +62,7 @@ func main() {
                     UnitPriceAmount: unifiedgosdk.Pointer[float64](120.45),
                 },
                 shared.DmsPartline{
-                    ID: unifiedgosdk.Pointer("dc2e64c1-cc98-4b72-a4fa-f67dd4941ab9"),
+                    ID: unifiedgosdk.Pointer("a8cc91a7-9f8a-46e9-9ba9-3a29ccfdf837"),
                     PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
                     Quantity: unifiedgosdk.Pointer[float64](3.0),
                     QuantityOrdered: unifiedgosdk.Pointer[float64](3.0),
@@ -78,7 +78,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](68.73),
             TotalAmount: unifiedgosdk.Pointer[float64](1050.62),
             Type: shared.DmsPartsaleTypeSale.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-18T13:15:50.883Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-19T08:57:12.743Z"),
         },
         ConnectionID: "<id>",
     })
@@ -251,10 +251,10 @@ func main() {
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             FreightAmount: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("c8f3d6d4-f9f0-4bf3-9721-4d7e489e98ba"),
+            ID: unifiedgosdk.Pointer("d40c20d8-7c5f-4539-9639-97368eed59b7"),
             Lines: []shared.DmsPartline{
                 shared.DmsPartline{
-                    ID: unifiedgosdk.Pointer("13b3eda3-f590-4de6-a13d-499d910cfc23"),
+                    ID: unifiedgosdk.Pointer("4f2c410d-54ba-4ea0-8ad7-ece3adc68f9d"),
                     PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
                     Quantity: unifiedgosdk.Pointer[float64](5.0),
                     QuantityOrdered: unifiedgosdk.Pointer[float64](5.0),
@@ -262,7 +262,7 @@ func main() {
                     UnitPriceAmount: unifiedgosdk.Pointer[float64](98.29),
                 },
                 shared.DmsPartline{
-                    ID: unifiedgosdk.Pointer("939aa1f5-3dfd-4b82-838b-240da4c49ea6"),
+                    ID: unifiedgosdk.Pointer("e59cf189-582a-4ff4-bde7-641f1f1a090d"),
                     PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
                     Quantity: unifiedgosdk.Pointer[float64](2.0),
                     QuantityOrdered: unifiedgosdk.Pointer[float64](2.0),
@@ -270,7 +270,7 @@ func main() {
                     UnitPriceAmount: unifiedgosdk.Pointer[float64](120.45),
                 },
                 shared.DmsPartline{
-                    ID: unifiedgosdk.Pointer("f65e363c-3828-4710-909c-2b319567d354"),
+                    ID: unifiedgosdk.Pointer("12b60689-1155-4ddb-810e-53e132f1b01b"),
                     PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
                     Quantity: unifiedgosdk.Pointer[float64](3.0),
                     QuantityOrdered: unifiedgosdk.Pointer[float64](3.0),
@@ -286,7 +286,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](68.73),
             TotalAmount: unifiedgosdk.Pointer[float64](1050.62),
             Type: shared.DmsPartsaleTypeSale.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-18T13:15:50.920Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-19T08:57:12.759Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -351,10 +351,10 @@ func main() {
             Currency: unifiedgosdk.Pointer("USD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             FreightAmount: unifiedgosdk.Pointer[float64](0.0),
-            ID: unifiedgosdk.Pointer("c8f3d6d4-f9f0-4bf3-9721-4d7e489e98ba"),
+            ID: unifiedgosdk.Pointer("d40c20d8-7c5f-4539-9639-97368eed59b7"),
             Lines: []shared.DmsPartline{
                 shared.DmsPartline{
-                    ID: unifiedgosdk.Pointer("13b3eda3-f590-4de6-a13d-499d910cfc23"),
+                    ID: unifiedgosdk.Pointer("4f2c410d-54ba-4ea0-8ad7-ece3adc68f9d"),
                     PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
                     Quantity: unifiedgosdk.Pointer[float64](5.0),
                     QuantityOrdered: unifiedgosdk.Pointer[float64](5.0),
@@ -362,7 +362,7 @@ func main() {
                     UnitPriceAmount: unifiedgosdk.Pointer[float64](98.29),
                 },
                 shared.DmsPartline{
-                    ID: unifiedgosdk.Pointer("939aa1f5-3dfd-4b82-838b-240da4c49ea6"),
+                    ID: unifiedgosdk.Pointer("e59cf189-582a-4ff4-bde7-641f1f1a090d"),
                     PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
                     Quantity: unifiedgosdk.Pointer[float64](2.0),
                     QuantityOrdered: unifiedgosdk.Pointer[float64](2.0),
@@ -370,7 +370,7 @@ func main() {
                     UnitPriceAmount: unifiedgosdk.Pointer[float64](120.45),
                 },
                 shared.DmsPartline{
-                    ID: unifiedgosdk.Pointer("f65e363c-3828-4710-909c-2b319567d354"),
+                    ID: unifiedgosdk.Pointer("12b60689-1155-4ddb-810e-53e132f1b01b"),
                     PayType: shared.DmsPartlinePayTypeCustomer.ToPointer(),
                     Quantity: unifiedgosdk.Pointer[float64](3.0),
                     QuantityOrdered: unifiedgosdk.Pointer[float64](3.0),
@@ -386,7 +386,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](68.73),
             TotalAmount: unifiedgosdk.Pointer[float64](1050.62),
             Type: shared.DmsPartsaleTypeSale.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-18T13:15:50.920Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-19T08:57:12.759Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

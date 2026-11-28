@@ -18,6 +18,19 @@ func (e TimeUnit) ToPointer() *TimeUnit {
 	return &e
 }
 
+// TimeUnitValues returns every known TimeUnit value in schema order.
+func TimeUnitValues() []TimeUnit {
+	return []TimeUnit{
+		TimeUnitUnspecified,
+		TimeUnitLifetime,
+		TimeUnitMonths,
+		TimeUnitWeeks,
+		TimeUnitDays,
+		TimeUnitHours,
+		TimeUnitMinutes,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *TimeUnit) IsExact() bool {
 	if e != nil {

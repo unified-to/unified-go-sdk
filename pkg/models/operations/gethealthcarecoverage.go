@@ -36,6 +36,31 @@ const (
 func (e GetHealthcareCoverageQueryParamFields) ToPointer() *GetHealthcareCoverageQueryParamFields {
 	return &e
 }
+
+// GetHealthcareCoverageQueryParamFieldsValues returns every known GetHealthcareCoverageQueryParamFields value in schema order.
+func GetHealthcareCoverageQueryParamFieldsValues() []GetHealthcareCoverageQueryParamFields {
+	return []GetHealthcareCoverageQueryParamFields{
+		GetHealthcareCoverageQueryParamFieldsID,
+		GetHealthcareCoverageQueryParamFieldsCreatedAt,
+		GetHealthcareCoverageQueryParamFieldsUpdatedAt,
+		GetHealthcareCoverageQueryParamFieldsPatientID,
+		GetHealthcareCoverageQueryParamFieldsStatus,
+		GetHealthcareCoverageQueryParamFieldsCodes,
+		GetHealthcareCoverageQueryParamFieldsPayerName,
+		GetHealthcareCoverageQueryParamFieldsPlanName,
+		GetHealthcareCoverageQueryParamFieldsGroupName,
+		GetHealthcareCoverageQueryParamFieldsGroupIdentifier,
+		GetHealthcareCoverageQueryParamFieldsMemberIdentifier,
+		GetHealthcareCoverageQueryParamFieldsSubscriberName,
+		GetHealthcareCoverageQueryParamFieldsRelationship,
+		GetHealthcareCoverageQueryParamFieldsPriority,
+		GetHealthcareCoverageQueryParamFieldsStartAt,
+		GetHealthcareCoverageQueryParamFieldsEndAt,
+		GetHealthcareCoverageQueryParamFieldsIdentifiers,
+		GetHealthcareCoverageQueryParamFieldsMetadata,
+		GetHealthcareCoverageQueryParamFieldsRaw,
+	}
+}
 func (e *GetHealthcareCoverageQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

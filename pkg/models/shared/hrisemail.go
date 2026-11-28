@@ -14,6 +14,15 @@ func (e HrisEmailType) ToPointer() *HrisEmailType {
 	return &e
 }
 
+// HrisEmailTypeValues returns every known HrisEmailType value in schema order.
+func HrisEmailTypeValues() []HrisEmailType {
+	return []HrisEmailType{
+		HrisEmailTypeWork,
+		HrisEmailTypeHome,
+		HrisEmailTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HrisEmailType) IsExact() bool {
 	if e != nil {

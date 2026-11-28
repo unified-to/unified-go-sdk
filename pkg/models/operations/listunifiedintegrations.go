@@ -61,6 +61,56 @@ const (
 func (e ListUnifiedIntegrationsQueryParamCategories) ToPointer() *ListUnifiedIntegrationsQueryParamCategories {
 	return &e
 }
+
+// ListUnifiedIntegrationsQueryParamCategoriesValues returns every known ListUnifiedIntegrationsQueryParamCategories value in schema order.
+func ListUnifiedIntegrationsQueryParamCategoriesValues() []ListUnifiedIntegrationsQueryParamCategories {
+	return []ListUnifiedIntegrationsQueryParamCategories{
+		ListUnifiedIntegrationsQueryParamCategoriesPassthrough,
+		ListUnifiedIntegrationsQueryParamCategoriesHris,
+		ListUnifiedIntegrationsQueryParamCategoriesAts,
+		ListUnifiedIntegrationsQueryParamCategoriesAuth,
+		ListUnifiedIntegrationsQueryParamCategoriesSaml,
+		ListUnifiedIntegrationsQueryParamCategoriesCrm,
+		ListUnifiedIntegrationsQueryParamCategoriesEnrich,
+		ListUnifiedIntegrationsQueryParamCategoriesMartech,
+		ListUnifiedIntegrationsQueryParamCategoriesTicketing,
+		ListUnifiedIntegrationsQueryParamCategoriesUc,
+		ListUnifiedIntegrationsQueryParamCategoriesAccounting,
+		ListUnifiedIntegrationsQueryParamCategoriesStorage,
+		ListUnifiedIntegrationsQueryParamCategoriesCommerce,
+		ListUnifiedIntegrationsQueryParamCategoriesPayment,
+		ListUnifiedIntegrationsQueryParamCategoriesGenai,
+		ListUnifiedIntegrationsQueryParamCategoriesMessaging,
+		ListUnifiedIntegrationsQueryParamCategoriesKms,
+		ListUnifiedIntegrationsQueryParamCategoriesTask,
+		ListUnifiedIntegrationsQueryParamCategoriesScim,
+		ListUnifiedIntegrationsQueryParamCategoriesLms,
+		ListUnifiedIntegrationsQueryParamCategoriesRepo,
+		ListUnifiedIntegrationsQueryParamCategoriesMetadata,
+		ListUnifiedIntegrationsQueryParamCategoriesCalendar,
+		ListUnifiedIntegrationsQueryParamCategoriesVerification,
+		ListUnifiedIntegrationsQueryParamCategoriesAds,
+		ListUnifiedIntegrationsQueryParamCategoriesAnalytics,
+		ListUnifiedIntegrationsQueryParamCategoriesForms,
+		ListUnifiedIntegrationsQueryParamCategoriesShipping,
+		ListUnifiedIntegrationsQueryParamCategoriesAssessment,
+		ListUnifiedIntegrationsQueryParamCategoriesSigning,
+		ListUnifiedIntegrationsQueryParamCategoriesClubs,
+		ListUnifiedIntegrationsQueryParamCategoriesDatastore,
+		ListUnifiedIntegrationsQueryParamCategoriesCdp,
+		ListUnifiedIntegrationsQueryParamCategoriesPerformance,
+		ListUnifiedIntegrationsQueryParamCategoriesSocial,
+		ListUnifiedIntegrationsQueryParamCategoriesLegal,
+		ListUnifiedIntegrationsQueryParamCategoriesCompute,
+		ListUnifiedIntegrationsQueryParamCategoriesHealthcare,
+		ListUnifiedIntegrationsQueryParamCategoriesProperty,
+		ListUnifiedIntegrationsQueryParamCategoriesPlm,
+		ListUnifiedIntegrationsQueryParamCategoriesQms,
+		ListUnifiedIntegrationsQueryParamCategoriesDms,
+		ListUnifiedIntegrationsQueryParamCategoriesFhir,
+		ListUnifiedIntegrationsQueryParamCategoriesPrinting,
+	}
+}
 func (e *ListUnifiedIntegrationsQueryParamCategories) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

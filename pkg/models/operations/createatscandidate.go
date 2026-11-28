@@ -48,6 +48,43 @@ const (
 func (e CreateAtsCandidateQueryParamFields) ToPointer() *CreateAtsCandidateQueryParamFields {
 	return &e
 }
+
+// CreateAtsCandidateQueryParamFieldsValues returns every known CreateAtsCandidateQueryParamFields value in schema order.
+func CreateAtsCandidateQueryParamFieldsValues() []CreateAtsCandidateQueryParamFields {
+	return []CreateAtsCandidateQueryParamFields{
+		CreateAtsCandidateQueryParamFieldsID,
+		CreateAtsCandidateQueryParamFieldsCreatedAt,
+		CreateAtsCandidateQueryParamFieldsUpdatedAt,
+		CreateAtsCandidateQueryParamFieldsName,
+		CreateAtsCandidateQueryParamFieldsFirstName,
+		CreateAtsCandidateQueryParamFieldsLastName,
+		CreateAtsCandidateQueryParamFieldsEmails,
+		CreateAtsCandidateQueryParamFieldsTitle,
+		CreateAtsCandidateQueryParamFieldsTelephones,
+		CreateAtsCandidateQueryParamFieldsCompanyName,
+		CreateAtsCandidateQueryParamFieldsImageURL,
+		CreateAtsCandidateQueryParamFieldsTags,
+		CreateAtsCandidateQueryParamFieldsAddress,
+		CreateAtsCandidateQueryParamFieldsExternalIdentifier,
+		CreateAtsCandidateQueryParamFieldsLinkUrls,
+		CreateAtsCandidateQueryParamFieldsOrigin,
+		CreateAtsCandidateQueryParamFieldsCompanyID,
+		CreateAtsCandidateQueryParamFieldsSources,
+		CreateAtsCandidateQueryParamFieldsDateOfBirth,
+		CreateAtsCandidateQueryParamFieldsUserID,
+		CreateAtsCandidateQueryParamFieldsUserIds,
+		CreateAtsCandidateQueryParamFieldsWebURL,
+		CreateAtsCandidateQueryParamFieldsExperiences,
+		CreateAtsCandidateQueryParamFieldsEducation,
+		CreateAtsCandidateQueryParamFieldsSkills,
+		CreateAtsCandidateQueryParamFieldsJobIds,
+		CreateAtsCandidateQueryParamFieldsMetadata,
+		CreateAtsCandidateQueryParamFieldsSummary,
+		CreateAtsCandidateQueryParamFieldsIsPrivate,
+		CreateAtsCandidateQueryParamFieldsHasDoNotContact,
+		CreateAtsCandidateQueryParamFieldsRaw,
+	}
+}
 func (e *CreateAtsCandidateQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

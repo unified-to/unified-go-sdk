@@ -37,6 +37,32 @@ const (
 func (e CreateHrisBenefitQueryParamFields) ToPointer() *CreateHrisBenefitQueryParamFields {
 	return &e
 }
+
+// CreateHrisBenefitQueryParamFieldsValues returns every known CreateHrisBenefitQueryParamFields value in schema order.
+func CreateHrisBenefitQueryParamFieldsValues() []CreateHrisBenefitQueryParamFields {
+	return []CreateHrisBenefitQueryParamFields{
+		CreateHrisBenefitQueryParamFieldsID,
+		CreateHrisBenefitQueryParamFieldsCreatedAt,
+		CreateHrisBenefitQueryParamFieldsUpdatedAt,
+		CreateHrisBenefitQueryParamFieldsName,
+		CreateHrisBenefitQueryParamFieldsDescription,
+		CreateHrisBenefitQueryParamFieldsCompanyID,
+		CreateHrisBenefitQueryParamFieldsType,
+		CreateHrisBenefitQueryParamFieldsTax,
+		CreateHrisBenefitQueryParamFieldsFrequency,
+		CreateHrisBenefitQueryParamFieldsIsActive,
+		CreateHrisBenefitQueryParamFieldsEmployerContributionType,
+		CreateHrisBenefitQueryParamFieldsEmployerContributionAmount,
+		CreateHrisBenefitQueryParamFieldsEmployerContributionMaxAmount,
+		CreateHrisBenefitQueryParamFieldsCoverageLevel,
+		CreateHrisBenefitQueryParamFieldsCurrency,
+		CreateHrisBenefitQueryParamFieldsCode,
+		CreateHrisBenefitQueryParamFieldsRetirementPlanType,
+		CreateHrisBenefitQueryParamFieldsEmployerContributionCategory,
+		CreateHrisBenefitQueryParamFieldsMetadata,
+		CreateHrisBenefitQueryParamFieldsRaw,
+	}
+}
 func (e *CreateHrisBenefitQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

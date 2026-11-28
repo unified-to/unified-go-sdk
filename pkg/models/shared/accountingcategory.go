@@ -25,6 +25,20 @@ func (e AccountingCategoryType) ToPointer() *AccountingCategoryType {
 	return &e
 }
 
+// AccountingCategoryTypeValues returns every known AccountingCategoryType value in schema order.
+func AccountingCategoryTypeValues() []AccountingCategoryType {
+	return []AccountingCategoryType{
+		AccountingCategoryTypeClass,
+		AccountingCategoryTypeDepartment,
+		AccountingCategoryTypeLocation,
+		AccountingCategoryTypeProject,
+		AccountingCategoryTypeTask,
+		AccountingCategoryTypeCustom,
+		AccountingCategoryTypeExpense,
+		AccountingCategoryTypeIncome,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingCategoryType) IsExact() bool {
 	if e != nil {

@@ -25,6 +25,20 @@ const (
 func (e ListUcCommentsQueryParamFields) ToPointer() *ListUcCommentsQueryParamFields {
 	return &e
 }
+
+// ListUcCommentsQueryParamFieldsValues returns every known ListUcCommentsQueryParamFields value in schema order.
+func ListUcCommentsQueryParamFieldsValues() []ListUcCommentsQueryParamFields {
+	return []ListUcCommentsQueryParamFields{
+		ListUcCommentsQueryParamFieldsID,
+		ListUcCommentsQueryParamFieldsCreatedAt,
+		ListUcCommentsQueryParamFieldsUpdatedAt,
+		ListUcCommentsQueryParamFieldsContent,
+		ListUcCommentsQueryParamFieldsUserID,
+		ListUcCommentsQueryParamFieldsCallID,
+		ListUcCommentsQueryParamFieldsMetadata,
+		ListUcCommentsQueryParamFieldsRaw,
+	}
+}
 func (e *ListUcCommentsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

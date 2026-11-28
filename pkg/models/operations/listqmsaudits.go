@@ -40,6 +40,35 @@ const (
 func (e ListQmsAuditsQueryParamFields) ToPointer() *ListQmsAuditsQueryParamFields {
 	return &e
 }
+
+// ListQmsAuditsQueryParamFieldsValues returns every known ListQmsAuditsQueryParamFields value in schema order.
+func ListQmsAuditsQueryParamFieldsValues() []ListQmsAuditsQueryParamFields {
+	return []ListQmsAuditsQueryParamFields{
+		ListQmsAuditsQueryParamFieldsID,
+		ListQmsAuditsQueryParamFieldsCreatedAt,
+		ListQmsAuditsQueryParamFieldsUpdatedAt,
+		ListQmsAuditsQueryParamFieldsNumber,
+		ListQmsAuditsQueryParamFieldsName,
+		ListQmsAuditsQueryParamFieldsDescription,
+		ListQmsAuditsQueryParamFieldsType,
+		ListQmsAuditsQueryParamFieldsOriginalType,
+		ListQmsAuditsQueryParamFieldsStatus,
+		ListQmsAuditsQueryParamFieldsLifecycleState,
+		ListQmsAuditsQueryParamFieldsStandard,
+		ListQmsAuditsQueryParamFieldsScope,
+		ListQmsAuditsQueryParamFieldsSupplierName,
+		ListQmsAuditsQueryParamFieldsUserID,
+		ListQmsAuditsQueryParamFieldsScheduledAt,
+		ListQmsAuditsQueryParamFieldsStartAt,
+		ListQmsAuditsQueryParamFieldsEndAt,
+		ListQmsAuditsQueryParamFieldsClosedAt,
+		ListQmsAuditsQueryParamFieldsIssueIds,
+		ListQmsAuditsQueryParamFieldsFileIds,
+		ListQmsAuditsQueryParamFieldsURL,
+		ListQmsAuditsQueryParamFieldsMetadata,
+		ListQmsAuditsQueryParamFieldsRaw,
+	}
+}
 func (e *ListQmsAuditsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

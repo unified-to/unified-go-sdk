@@ -15,6 +15,15 @@ func (e PropertyEmailType) ToPointer() *PropertyEmailType {
 	return &e
 }
 
+// PropertyEmailTypeValues returns every known PropertyEmailType value in schema order.
+func PropertyEmailTypeValues() []PropertyEmailType {
+	return []PropertyEmailType{
+		PropertyEmailTypeWork,
+		PropertyEmailTypeHome,
+		PropertyEmailTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyEmailType) IsExact() bool {
 	if e != nil {

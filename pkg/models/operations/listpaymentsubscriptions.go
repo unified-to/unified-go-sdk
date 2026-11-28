@@ -39,6 +39,34 @@ const (
 func (e ListPaymentSubscriptionsQueryParamFields) ToPointer() *ListPaymentSubscriptionsQueryParamFields {
 	return &e
 }
+
+// ListPaymentSubscriptionsQueryParamFieldsValues returns every known ListPaymentSubscriptionsQueryParamFields value in schema order.
+func ListPaymentSubscriptionsQueryParamFieldsValues() []ListPaymentSubscriptionsQueryParamFields {
+	return []ListPaymentSubscriptionsQueryParamFields{
+		ListPaymentSubscriptionsQueryParamFieldsID,
+		ListPaymentSubscriptionsQueryParamFieldsCreatedAt,
+		ListPaymentSubscriptionsQueryParamFieldsUpdatedAt,
+		ListPaymentSubscriptionsQueryParamFieldsDescription,
+		ListPaymentSubscriptionsQueryParamFieldsContactID,
+		ListPaymentSubscriptionsQueryParamFieldsInvoiceID,
+		ListPaymentSubscriptionsQueryParamFieldsCurrentPeriodEndAt,
+		ListPaymentSubscriptionsQueryParamFieldsCurrentPeriodStartAt,
+		ListPaymentSubscriptionsQueryParamFieldsCanceledAt,
+		ListPaymentSubscriptionsQueryParamFieldsCurrency,
+		ListPaymentSubscriptionsQueryParamFieldsTotalAmount,
+		ListPaymentSubscriptionsQueryParamFieldsStartAt,
+		ListPaymentSubscriptionsQueryParamFieldsEndAt,
+		ListPaymentSubscriptionsQueryParamFieldsStatus,
+		ListPaymentSubscriptionsQueryParamFieldsMonth,
+		ListPaymentSubscriptionsQueryParamFieldsIntervalUnit,
+		ListPaymentSubscriptionsQueryParamFieldsDayOfMonth,
+		ListPaymentSubscriptionsQueryParamFieldsDayOfWeek,
+		ListPaymentSubscriptionsQueryParamFieldsInterval,
+		ListPaymentSubscriptionsQueryParamFieldsLineitems,
+		ListPaymentSubscriptionsQueryParamFieldsMetadata,
+		ListPaymentSubscriptionsQueryParamFieldsRaw,
+	}
+}
 func (e *ListPaymentSubscriptionsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

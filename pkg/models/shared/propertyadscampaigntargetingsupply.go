@@ -15,6 +15,15 @@ func (e AuthorizedSellerStatus) ToPointer() *AuthorizedSellerStatus {
 	return &e
 }
 
+// AuthorizedSellerStatusValues returns every known AuthorizedSellerStatus value in schema order.
+func AuthorizedSellerStatusValues() []AuthorizedSellerStatus {
+	return []AuthorizedSellerStatus{
+		AuthorizedSellerStatusAuthorizedDirectOnly,
+		AuthorizedSellerStatusAuthorizedDirectAndResellers,
+		AuthorizedSellerStatusAuthorizedAndNonParticipating,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AuthorizedSellerStatus) IsExact() bool {
 	if e != nil {

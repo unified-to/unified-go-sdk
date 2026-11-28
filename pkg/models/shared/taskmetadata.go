@@ -298,6 +298,25 @@ func (e TaskMetadataFormat) ToPointer() *TaskMetadataFormat {
 	return &e
 }
 
+// TaskMetadataFormatValues returns every known TaskMetadataFormat value in schema order.
+func TaskMetadataFormatValues() []TaskMetadataFormat {
+	return []TaskMetadataFormat{
+		TaskMetadataFormatText,
+		TaskMetadataFormatNumber,
+		TaskMetadataFormatDate,
+		TaskMetadataFormatBoolean,
+		TaskMetadataFormatFile,
+		TaskMetadataFormatTextarea,
+		TaskMetadataFormatSingleSelect,
+		TaskMetadataFormatMultipleSelect,
+		TaskMetadataFormatMeasurement,
+		TaskMetadataFormatPrice,
+		TaskMetadataFormatYesNo,
+		TaskMetadataFormatCurrency,
+		TaskMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *TaskMetadataFormat) IsExact() bool {
 	if e != nil {

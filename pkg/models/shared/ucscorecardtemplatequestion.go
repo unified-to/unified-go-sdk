@@ -15,6 +15,16 @@ func (e UcScorecardtemplateQuestionType) ToPointer() *UcScorecardtemplateQuestio
 	return &e
 }
 
+// UcScorecardtemplateQuestionTypeValues returns every known UcScorecardtemplateQuestionType value in schema order.
+func UcScorecardtemplateQuestionTypeValues() []UcScorecardtemplateQuestionType {
+	return []UcScorecardtemplateQuestionType{
+		UcScorecardtemplateQuestionTypeRating,
+		UcScorecardtemplateQuestionTypeYesNo,
+		UcScorecardtemplateQuestionTypeText,
+		UcScorecardtemplateQuestionTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *UcScorecardtemplateQuestionType) IsExact() bool {
 	if e != nil {

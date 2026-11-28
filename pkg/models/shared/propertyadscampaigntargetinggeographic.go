@@ -13,6 +13,14 @@ func (e PresenceType) ToPointer() *PresenceType {
 	return &e
 }
 
+// PresenceTypeValues returns every known PresenceType value in schema order.
+func PresenceTypeValues() []PresenceType {
+	return []PresenceType{
+		PresenceTypePresence,
+		PresenceTypePresenceOrInterest,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PresenceType) IsExact() bool {
 	if e != nil {

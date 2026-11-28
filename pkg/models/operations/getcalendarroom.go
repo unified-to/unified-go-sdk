@@ -35,6 +35,30 @@ const (
 func (e GetCalendarRoomQueryParamFields) ToPointer() *GetCalendarRoomQueryParamFields {
 	return &e
 }
+
+// GetCalendarRoomQueryParamFieldsValues returns every known GetCalendarRoomQueryParamFields value in schema order.
+func GetCalendarRoomQueryParamFieldsValues() []GetCalendarRoomQueryParamFields {
+	return []GetCalendarRoomQueryParamFields{
+		GetCalendarRoomQueryParamFieldsID,
+		GetCalendarRoomQueryParamFieldsCreatedAt,
+		GetCalendarRoomQueryParamFieldsUpdatedAt,
+		GetCalendarRoomQueryParamFieldsName,
+		GetCalendarRoomQueryParamFieldsType,
+		GetCalendarRoomQueryParamFieldsCapacity,
+		GetCalendarRoomQueryParamFieldsLocationID,
+		GetCalendarRoomQueryParamFieldsDescription,
+		GetCalendarRoomQueryParamFieldsEmail,
+		GetCalendarRoomQueryParamFieldsRaw,
+		GetCalendarRoomQueryParamFieldsCalendarID,
+		GetCalendarRoomQueryParamFieldsFloor,
+		GetCalendarRoomQueryParamFieldsTimezone,
+		GetCalendarRoomQueryParamFieldsWebURL,
+		GetCalendarRoomQueryParamFieldsIsActive,
+		GetCalendarRoomQueryParamFieldsIsBookable,
+		GetCalendarRoomQueryParamFieldsFeatures,
+		GetCalendarRoomQueryParamFieldsMetadata,
+	}
+}
 func (e *GetCalendarRoomQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

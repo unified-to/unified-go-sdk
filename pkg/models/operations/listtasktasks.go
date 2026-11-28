@@ -45,6 +45,40 @@ const (
 func (e ListTaskTasksQueryParamFields) ToPointer() *ListTaskTasksQueryParamFields {
 	return &e
 }
+
+// ListTaskTasksQueryParamFieldsValues returns every known ListTaskTasksQueryParamFields value in schema order.
+func ListTaskTasksQueryParamFieldsValues() []ListTaskTasksQueryParamFields {
+	return []ListTaskTasksQueryParamFields{
+		ListTaskTasksQueryParamFieldsID,
+		ListTaskTasksQueryParamFieldsCreatedAt,
+		ListTaskTasksQueryParamFieldsUpdatedAt,
+		ListTaskTasksQueryParamFieldsName,
+		ListTaskTasksQueryParamFieldsProjectID,
+		ListTaskTasksQueryParamFieldsParentID,
+		ListTaskTasksQueryParamFieldsCompletedAt,
+		ListTaskTasksQueryParamFieldsStatus,
+		ListTaskTasksQueryParamFieldsNotes,
+		ListTaskTasksQueryParamFieldsDueAt,
+		ListTaskTasksQueryParamFieldsStartAt,
+		ListTaskTasksQueryParamFieldsEndAt,
+		ListTaskTasksQueryParamFieldsPriority,
+		ListTaskTasksQueryParamFieldsAssignedUserIds,
+		ListTaskTasksQueryParamFieldsCreatorUserID,
+		ListTaskTasksQueryParamFieldsFollowerUserIds,
+		ListTaskTasksQueryParamFieldsGroupIds,
+		ListTaskTasksQueryParamFieldsTags,
+		ListTaskTasksQueryParamFieldsURL,
+		ListTaskTasksQueryParamFieldsAttachmentIds,
+		ListTaskTasksQueryParamFieldsMetadata,
+		ListTaskTasksQueryParamFieldsHasChildren,
+		ListTaskTasksQueryParamFieldsType,
+		ListTaskTasksQueryParamFieldsTimeSpent,
+		ListTaskTasksQueryParamFieldsTimeSpentUnit,
+		ListTaskTasksQueryParamFieldsProgress,
+		ListTaskTasksQueryParamFieldsStoryPoints,
+		ListTaskTasksQueryParamFieldsRaw,
+	}
+}
 func (e *ListTaskTasksQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -20,6 +20,20 @@ func (e CdpIdentifierType) ToPointer() *CdpIdentifierType {
 	return &e
 }
 
+// CdpIdentifierTypeValues returns every known CdpIdentifierType value in schema order.
+func CdpIdentifierTypeValues() []CdpIdentifierType {
+	return []CdpIdentifierType{
+		CdpIdentifierTypeEmail,
+		CdpIdentifierTypeUserID,
+		CdpIdentifierTypeAnonymousID,
+		CdpIdentifierTypeDeviceID,
+		CdpIdentifierTypePhone,
+		CdpIdentifierTypeCrmID,
+		CdpIdentifierTypeLoyaltyID,
+		CdpIdentifierTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CdpIdentifierType) IsExact() bool {
 	if e != nil {

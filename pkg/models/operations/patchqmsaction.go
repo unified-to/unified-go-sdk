@@ -40,6 +40,35 @@ const (
 func (e PatchQmsActionQueryParamFields) ToPointer() *PatchQmsActionQueryParamFields {
 	return &e
 }
+
+// PatchQmsActionQueryParamFieldsValues returns every known PatchQmsActionQueryParamFields value in schema order.
+func PatchQmsActionQueryParamFieldsValues() []PatchQmsActionQueryParamFields {
+	return []PatchQmsActionQueryParamFields{
+		PatchQmsActionQueryParamFieldsID,
+		PatchQmsActionQueryParamFieldsCreatedAt,
+		PatchQmsActionQueryParamFieldsUpdatedAt,
+		PatchQmsActionQueryParamFieldsNumber,
+		PatchQmsActionQueryParamFieldsName,
+		PatchQmsActionQueryParamFieldsDescription,
+		PatchQmsActionQueryParamFieldsType,
+		PatchQmsActionQueryParamFieldsOriginalType,
+		PatchQmsActionQueryParamFieldsStatus,
+		PatchQmsActionQueryParamFieldsLifecycleState,
+		PatchQmsActionQueryParamFieldsPriority,
+		PatchQmsActionQueryParamFieldsIssueIds,
+		PatchQmsActionQueryParamFieldsAffectedItems,
+		PatchQmsActionQueryParamFieldsRootCause,
+		PatchQmsActionQueryParamFieldsSupplierName,
+		PatchQmsActionQueryParamFieldsUserID,
+		PatchQmsActionQueryParamFieldsDueAt,
+		PatchQmsActionQueryParamFieldsClosedAt,
+		PatchQmsActionQueryParamFieldsVerifiedAt,
+		PatchQmsActionQueryParamFieldsFileIds,
+		PatchQmsActionQueryParamFieldsURL,
+		PatchQmsActionQueryParamFieldsMetadata,
+		PatchQmsActionQueryParamFieldsRaw,
+	}
+}
 func (e *PatchQmsActionQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -56,6 +56,51 @@ const (
 func (e PatchAdsGroupQueryParamFields) ToPointer() *PatchAdsGroupQueryParamFields {
 	return &e
 }
+
+// PatchAdsGroupQueryParamFieldsValues returns every known PatchAdsGroupQueryParamFields value in schema order.
+func PatchAdsGroupQueryParamFieldsValues() []PatchAdsGroupQueryParamFields {
+	return []PatchAdsGroupQueryParamFields{
+		PatchAdsGroupQueryParamFieldsID,
+		PatchAdsGroupQueryParamFieldsCreatedAt,
+		PatchAdsGroupQueryParamFieldsUpdatedAt,
+		PatchAdsGroupQueryParamFieldsName,
+		PatchAdsGroupQueryParamFieldsParentID,
+		PatchAdsGroupQueryParamFieldsCampaignID,
+		PatchAdsGroupQueryParamFieldsOrganizationID,
+		PatchAdsGroupQueryParamFieldsInsertionorderID,
+		PatchAdsGroupQueryParamFieldsStatus,
+		PatchAdsGroupQueryParamFieldsEffectiveStatus,
+		PatchAdsGroupQueryParamFieldsTargeting,
+		PatchAdsGroupQueryParamFieldsBidAmount,
+		PatchAdsGroupQueryParamFieldsBidStrategy,
+		PatchAdsGroupQueryParamFieldsBudgetAmount,
+		PatchAdsGroupQueryParamFieldsBudgetPeriod,
+		PatchAdsGroupQueryParamFieldsBudgetAllocationType,
+		PatchAdsGroupQueryParamFieldsStartAt,
+		PatchAdsGroupQueryParamFieldsEndAt,
+		PatchAdsGroupQueryParamFieldsBudgetUnit,
+		PatchAdsGroupQueryParamFieldsBudgetMaxAmount,
+		PatchAdsGroupQueryParamFieldsType,
+		PatchAdsGroupQueryParamFieldsHasEuPoliticalAds,
+		PatchAdsGroupQueryParamFieldsPacing,
+		PatchAdsGroupQueryParamFieldsFrequencyCap,
+		PatchAdsGroupQueryParamFieldsCreativeIds,
+		PatchAdsGroupQueryParamFieldsOptimizationGoal,
+		PatchAdsGroupQueryParamFieldsBillingEvent,
+		PatchAdsGroupQueryParamFieldsCurrency,
+		PatchAdsGroupQueryParamFieldsPromoted,
+		PatchAdsGroupQueryParamFieldsLanguageLocale,
+		PatchAdsGroupQueryParamFieldsCreativeSelection,
+		PatchAdsGroupQueryParamFieldsMetadata,
+		PatchAdsGroupQueryParamFieldsRaw,
+		PatchAdsGroupQueryParamFieldsDeliveryType,
+		PatchAdsGroupQueryParamFieldsPriority,
+		PatchAdsGroupQueryParamFieldsCostType,
+		PatchAdsGroupQueryParamFieldsDeliveryGoal,
+		PatchAdsGroupQueryParamFieldsCreativeSizes,
+		PatchAdsGroupQueryParamFieldsConversionTracking,
+	}
+}
 func (e *PatchAdsGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

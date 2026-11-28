@@ -16,6 +16,17 @@ func (e HrisTelephoneType) ToPointer() *HrisTelephoneType {
 	return &e
 }
 
+// HrisTelephoneTypeValues returns every known HrisTelephoneType value in schema order.
+func HrisTelephoneTypeValues() []HrisTelephoneType {
+	return []HrisTelephoneType{
+		HrisTelephoneTypeWork,
+		HrisTelephoneTypeHome,
+		HrisTelephoneTypeOther,
+		HrisTelephoneTypeFax,
+		HrisTelephoneTypeMobile,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HrisTelephoneType) IsExact() bool {
 	if e != nil {

@@ -21,6 +21,17 @@ func (e AtsInterviewStatus) ToPointer() *AtsInterviewStatus {
 	return &e
 }
 
+// AtsInterviewStatusValues returns every known AtsInterviewStatus value in schema order.
+func AtsInterviewStatusValues() []AtsInterviewStatus {
+	return []AtsInterviewStatus{
+		AtsInterviewStatusScheduled,
+		AtsInterviewStatusAwaitingFeedback,
+		AtsInterviewStatusComplete,
+		AtsInterviewStatusCanceled,
+		AtsInterviewStatusNeedsScheduling,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AtsInterviewStatus) IsExact() bool {
 	if e != nil {

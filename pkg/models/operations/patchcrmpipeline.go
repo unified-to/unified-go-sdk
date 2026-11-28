@@ -27,6 +27,22 @@ const (
 func (e PatchCrmPipelineQueryParamFields) ToPointer() *PatchCrmPipelineQueryParamFields {
 	return &e
 }
+
+// PatchCrmPipelineQueryParamFieldsValues returns every known PatchCrmPipelineQueryParamFields value in schema order.
+func PatchCrmPipelineQueryParamFieldsValues() []PatchCrmPipelineQueryParamFields {
+	return []PatchCrmPipelineQueryParamFields{
+		PatchCrmPipelineQueryParamFieldsID,
+		PatchCrmPipelineQueryParamFieldsCreatedAt,
+		PatchCrmPipelineQueryParamFieldsUpdatedAt,
+		PatchCrmPipelineQueryParamFieldsName,
+		PatchCrmPipelineQueryParamFieldsIsActive,
+		PatchCrmPipelineQueryParamFieldsDealProbability,
+		PatchCrmPipelineQueryParamFieldsDisplayOrder,
+		PatchCrmPipelineQueryParamFieldsStages,
+		PatchCrmPipelineQueryParamFieldsMetadata,
+		PatchCrmPipelineQueryParamFieldsRaw,
+	}
+}
 func (e *PatchCrmPipelineQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -30,6 +30,25 @@ const (
 func (e UpdateMessagingChannelQueryParamFields) ToPointer() *UpdateMessagingChannelQueryParamFields {
 	return &e
 }
+
+// UpdateMessagingChannelQueryParamFieldsValues returns every known UpdateMessagingChannelQueryParamFields value in schema order.
+func UpdateMessagingChannelQueryParamFieldsValues() []UpdateMessagingChannelQueryParamFields {
+	return []UpdateMessagingChannelQueryParamFields{
+		UpdateMessagingChannelQueryParamFieldsID,
+		UpdateMessagingChannelQueryParamFieldsCreatedAt,
+		UpdateMessagingChannelQueryParamFieldsUpdatedAt,
+		UpdateMessagingChannelQueryParamFieldsName,
+		UpdateMessagingChannelQueryParamFieldsDescription,
+		UpdateMessagingChannelQueryParamFieldsParentID,
+		UpdateMessagingChannelQueryParamFieldsHasSubchannels,
+		UpdateMessagingChannelQueryParamFieldsMembers,
+		UpdateMessagingChannelQueryParamFieldsIsActive,
+		UpdateMessagingChannelQueryParamFieldsIsPrivate,
+		UpdateMessagingChannelQueryParamFieldsWebURL,
+		UpdateMessagingChannelQueryParamFieldsMetadata,
+		UpdateMessagingChannelQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateMessagingChannelQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

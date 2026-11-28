@@ -27,6 +27,22 @@ const (
 func (e GetAnalyticsPropertyQueryParamFields) ToPointer() *GetAnalyticsPropertyQueryParamFields {
 	return &e
 }
+
+// GetAnalyticsPropertyQueryParamFieldsValues returns every known GetAnalyticsPropertyQueryParamFields value in schema order.
+func GetAnalyticsPropertyQueryParamFieldsValues() []GetAnalyticsPropertyQueryParamFields {
+	return []GetAnalyticsPropertyQueryParamFields{
+		GetAnalyticsPropertyQueryParamFieldsID,
+		GetAnalyticsPropertyQueryParamFieldsCreatedAt,
+		GetAnalyticsPropertyQueryParamFieldsUpdatedAt,
+		GetAnalyticsPropertyQueryParamFieldsName,
+		GetAnalyticsPropertyQueryParamFieldsTimezone,
+		GetAnalyticsPropertyQueryParamFieldsCurrency,
+		GetAnalyticsPropertyQueryParamFieldsIndustry,
+		GetAnalyticsPropertyQueryParamFieldsParentID,
+		GetAnalyticsPropertyQueryParamFieldsMetadata,
+		GetAnalyticsPropertyQueryParamFieldsRaw,
+	}
+}
 func (e *GetAnalyticsPropertyQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

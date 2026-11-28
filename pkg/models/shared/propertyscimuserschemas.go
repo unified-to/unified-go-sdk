@@ -15,6 +15,16 @@ func (e PropertyScimUserSchemas) ToPointer() *PropertyScimUserSchemas {
 	return &e
 }
 
+// PropertyScimUserSchemasValues returns every known PropertyScimUserSchemas value in schema order.
+func PropertyScimUserSchemasValues() []PropertyScimUserSchemas {
+	return []PropertyScimUserSchemas{
+		PropertyScimUserSchemasUrnIetfParamsScimSchemasCore20User,
+		PropertyScimUserSchemasUrnIetfParamsScimSchemasExtensionEnterprise20User,
+		PropertyScimUserSchemasUrnIetfParamsScimSchemasExtensionLatticeAttributes10User,
+		PropertyScimUserSchemasUrnIetfParamsScimSchemasExtensionPeakon20User,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyScimUserSchemas) IsExact() bool {
 	if e != nil {

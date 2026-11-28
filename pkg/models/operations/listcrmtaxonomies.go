@@ -23,6 +23,18 @@ const (
 func (e ListCrmTaxonomiesQueryParamFields) ToPointer() *ListCrmTaxonomiesQueryParamFields {
 	return &e
 }
+
+// ListCrmTaxonomiesQueryParamFieldsValues returns every known ListCrmTaxonomiesQueryParamFields value in schema order.
+func ListCrmTaxonomiesQueryParamFieldsValues() []ListCrmTaxonomiesQueryParamFields {
+	return []ListCrmTaxonomiesQueryParamFields{
+		ListCrmTaxonomiesQueryParamFieldsID,
+		ListCrmTaxonomiesQueryParamFieldsName,
+		ListCrmTaxonomiesQueryParamFieldsLabel,
+		ListCrmTaxonomiesQueryParamFieldsType,
+		ListCrmTaxonomiesQueryParamFieldsMetadata,
+		ListCrmTaxonomiesQueryParamFieldsRaw,
+	}
+}
 func (e *ListCrmTaxonomiesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

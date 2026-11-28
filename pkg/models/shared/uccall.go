@@ -26,6 +26,21 @@ func (e UcCallStatus) ToPointer() *UcCallStatus {
 	return &e
 }
 
+// UcCallStatusValues returns every known UcCallStatus value in schema order.
+func UcCallStatusValues() []UcCallStatus {
+	return []UcCallStatus{
+		UcCallStatusQueued,
+		UcCallStatusRinging,
+		UcCallStatusInProgress,
+		UcCallStatusCompleted,
+		UcCallStatusBusy,
+		UcCallStatusNoAnswer,
+		UcCallStatusFailed,
+		UcCallStatusCanceled,
+		UcCallStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *UcCallStatus) IsExact() bool {
 	if e != nil {
@@ -46,6 +61,14 @@ const (
 
 func (e UcCallType) ToPointer() *UcCallType {
 	return &e
+}
+
+// UcCallTypeValues returns every known UcCallType value in schema order.
+func UcCallTypeValues() []UcCallType {
+	return []UcCallType{
+		UcCallTypeInbound,
+		UcCallTypeOutbound,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

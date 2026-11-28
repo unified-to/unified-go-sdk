@@ -24,6 +24,24 @@ func (e FhirConditionResourceType) ToPointer() *FhirConditionResourceType {
 	return &e
 }
 
+// FhirConditionResourceTypeValues returns every known FhirConditionResourceType value in schema order.
+func FhirConditionResourceTypeValues() []FhirConditionResourceType {
+	return []FhirConditionResourceType{
+		FhirConditionResourceTypePatient,
+		FhirConditionResourceTypePractitioner,
+		FhirConditionResourceTypeEncounter,
+		FhirConditionResourceTypeObservation,
+		FhirConditionResourceTypeCondition,
+		FhirConditionResourceTypeAllergyIntolerance,
+		FhirConditionResourceTypeMedicationRequest,
+		FhirConditionResourceTypeImmunization,
+		FhirConditionResourceTypeBundle,
+		FhirConditionResourceTypeOperationOutcome,
+		FhirConditionResourceTypeCapabilityStatement,
+		FhirConditionResourceTypeDiagnosticReport,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *FhirConditionResourceType) IsExact() bool {
 	if e != nil {

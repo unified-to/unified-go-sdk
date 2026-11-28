@@ -40,6 +40,35 @@ const (
 func (e CreateCommerceLocationQueryParamFields) ToPointer() *CreateCommerceLocationQueryParamFields {
 	return &e
 }
+
+// CreateCommerceLocationQueryParamFieldsValues returns every known CreateCommerceLocationQueryParamFields value in schema order.
+func CreateCommerceLocationQueryParamFieldsValues() []CreateCommerceLocationQueryParamFields {
+	return []CreateCommerceLocationQueryParamFields{
+		CreateCommerceLocationQueryParamFieldsID,
+		CreateCommerceLocationQueryParamFieldsCreatedAt,
+		CreateCommerceLocationQueryParamFieldsUpdatedAt,
+		CreateCommerceLocationQueryParamFieldsName,
+		CreateCommerceLocationQueryParamFieldsAddress,
+		CreateCommerceLocationQueryParamFieldsDescription,
+		CreateCommerceLocationQueryParamFieldsIsActive,
+		CreateCommerceLocationQueryParamFieldsLanguageLocale,
+		CreateCommerceLocationQueryParamFieldsParentID,
+		CreateCommerceLocationQueryParamFieldsCurrency,
+		CreateCommerceLocationQueryParamFieldsLocationType,
+		CreateCommerceLocationQueryParamFieldsTelephones,
+		CreateCommerceLocationQueryParamFieldsRating,
+		CreateCommerceLocationQueryParamFieldsReviewCount,
+		CreateCommerceLocationQueryParamFieldsPriceLevel,
+		CreateCommerceLocationQueryParamFieldsLatitude,
+		CreateCommerceLocationQueryParamFieldsLongitude,
+		CreateCommerceLocationQueryParamFieldsImageURL,
+		CreateCommerceLocationQueryParamFieldsWebURL,
+		CreateCommerceLocationQueryParamFieldsMedia,
+		CreateCommerceLocationQueryParamFieldsMetadata,
+		CreateCommerceLocationQueryParamFieldsRaw,
+		CreateCommerceLocationQueryParamFieldsCategories,
+	}
+}
 func (e *CreateCommerceLocationQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

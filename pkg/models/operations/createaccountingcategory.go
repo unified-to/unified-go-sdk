@@ -29,6 +29,24 @@ const (
 func (e CreateAccountingCategoryQueryParamFields) ToPointer() *CreateAccountingCategoryQueryParamFields {
 	return &e
 }
+
+// CreateAccountingCategoryQueryParamFieldsValues returns every known CreateAccountingCategoryQueryParamFields value in schema order.
+func CreateAccountingCategoryQueryParamFieldsValues() []CreateAccountingCategoryQueryParamFields {
+	return []CreateAccountingCategoryQueryParamFields{
+		CreateAccountingCategoryQueryParamFieldsID,
+		CreateAccountingCategoryQueryParamFieldsCreatedAt,
+		CreateAccountingCategoryQueryParamFieldsUpdatedAt,
+		CreateAccountingCategoryQueryParamFieldsName,
+		CreateAccountingCategoryQueryParamFieldsDescription,
+		CreateAccountingCategoryQueryParamFieldsIsActive,
+		CreateAccountingCategoryQueryParamFieldsParentID,
+		CreateAccountingCategoryQueryParamFieldsType,
+		CreateAccountingCategoryQueryParamFieldsCode,
+		CreateAccountingCategoryQueryParamFieldsOrganizationID,
+		CreateAccountingCategoryQueryParamFieldsMetadata,
+		CreateAccountingCategoryQueryParamFieldsRaw,
+	}
+}
 func (e *CreateAccountingCategoryQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

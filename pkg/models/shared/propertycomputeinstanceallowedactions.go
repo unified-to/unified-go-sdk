@@ -17,6 +17,18 @@ func (e PropertyComputeInstanceAllowedActions) ToPointer() *PropertyComputeInsta
 	return &e
 }
 
+// PropertyComputeInstanceAllowedActionsValues returns every known PropertyComputeInstanceAllowedActions value in schema order.
+func PropertyComputeInstanceAllowedActionsValues() []PropertyComputeInstanceAllowedActions {
+	return []PropertyComputeInstanceAllowedActions{
+		PropertyComputeInstanceAllowedActionsStart,
+		PropertyComputeInstanceAllowedActionsStop,
+		PropertyComputeInstanceAllowedActionsRestart,
+		PropertyComputeInstanceAllowedActionsPause,
+		PropertyComputeInstanceAllowedActionsResume,
+		PropertyComputeInstanceAllowedActionsTerminate,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyComputeInstanceAllowedActions) IsExact() bool {
 	if e != nil {

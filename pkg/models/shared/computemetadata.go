@@ -292,6 +292,18 @@ func (e ComputeMetadataFormat) ToPointer() *ComputeMetadataFormat {
 	return &e
 }
 
+// ComputeMetadataFormatValues returns every known ComputeMetadataFormat value in schema order.
+func ComputeMetadataFormatValues() []ComputeMetadataFormat {
+	return []ComputeMetadataFormat{
+		ComputeMetadataFormatText,
+		ComputeMetadataFormatNumber,
+		ComputeMetadataFormatDate,
+		ComputeMetadataFormatBoolean,
+		ComputeMetadataFormatArray,
+		ComputeMetadataFormatObject,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ComputeMetadataFormat) IsExact() bool {
 	if e != nil {

@@ -27,6 +27,22 @@ const (
 func (e CreateCdpSourceQueryParamFields) ToPointer() *CreateCdpSourceQueryParamFields {
 	return &e
 }
+
+// CreateCdpSourceQueryParamFieldsValues returns every known CreateCdpSourceQueryParamFields value in schema order.
+func CreateCdpSourceQueryParamFieldsValues() []CreateCdpSourceQueryParamFields {
+	return []CreateCdpSourceQueryParamFields{
+		CreateCdpSourceQueryParamFieldsID,
+		CreateCdpSourceQueryParamFieldsCreatedAt,
+		CreateCdpSourceQueryParamFieldsUpdatedAt,
+		CreateCdpSourceQueryParamFieldsName,
+		CreateCdpSourceQueryParamFieldsSlug,
+		CreateCdpSourceQueryParamFieldsType,
+		CreateCdpSourceQueryParamFieldsDirection,
+		CreateCdpSourceQueryParamFieldsIsEnabled,
+		CreateCdpSourceQueryParamFieldsMetadata,
+		CreateCdpSourceQueryParamFieldsRaw,
+	}
+}
 func (e *CreateCdpSourceQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

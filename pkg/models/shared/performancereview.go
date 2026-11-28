@@ -23,6 +23,19 @@ func (e PerformanceReviewStatus) ToPointer() *PerformanceReviewStatus {
 	return &e
 }
 
+// PerformanceReviewStatusValues returns every known PerformanceReviewStatus value in schema order.
+func PerformanceReviewStatusValues() []PerformanceReviewStatus {
+	return []PerformanceReviewStatus{
+		PerformanceReviewStatusDraft,
+		PerformanceReviewStatusInProgress,
+		PerformanceReviewStatusSubmitted,
+		PerformanceReviewStatusCompleted,
+		PerformanceReviewStatusShared,
+		PerformanceReviewStatusAcknowledged,
+		PerformanceReviewStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PerformanceReviewStatus) IsExact() bool {
 	if e != nil {
@@ -46,6 +59,17 @@ const (
 
 func (e PerformanceReviewType) ToPointer() *PerformanceReviewType {
 	return &e
+}
+
+// PerformanceReviewTypeValues returns every known PerformanceReviewType value in schema order.
+func PerformanceReviewTypeValues() []PerformanceReviewType {
+	return []PerformanceReviewType{
+		PerformanceReviewTypeSelf,
+		PerformanceReviewTypeManager,
+		PerformanceReviewTypePeer,
+		PerformanceReviewTypeUpward,
+		PerformanceReviewTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

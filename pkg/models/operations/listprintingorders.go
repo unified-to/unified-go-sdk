@@ -35,6 +35,30 @@ const (
 func (e ListPrintingOrdersQueryParamFields) ToPointer() *ListPrintingOrdersQueryParamFields {
 	return &e
 }
+
+// ListPrintingOrdersQueryParamFieldsValues returns every known ListPrintingOrdersQueryParamFields value in schema order.
+func ListPrintingOrdersQueryParamFieldsValues() []ListPrintingOrdersQueryParamFields {
+	return []ListPrintingOrdersQueryParamFields{
+		ListPrintingOrdersQueryParamFieldsID,
+		ListPrintingOrdersQueryParamFieldsCreatedAt,
+		ListPrintingOrdersQueryParamFieldsUpdatedAt,
+		ListPrintingOrdersQueryParamFieldsExternalIdentifier,
+		ListPrintingOrdersQueryParamFieldsCustomerIdentifier,
+		ListPrintingOrdersQueryParamFieldsStatus,
+		ListPrintingOrdersQueryParamFieldsCurrency,
+		ListPrintingOrdersQueryParamFieldsShippingAddress,
+		ListPrintingOrdersQueryParamFieldsShippingMethod,
+		ListPrintingOrdersQueryParamFieldsLineitems,
+		ListPrintingOrdersQueryParamFieldsSubtotalAmount,
+		ListPrintingOrdersQueryParamFieldsDiscountAmount,
+		ListPrintingOrdersQueryParamFieldsShippingAmount,
+		ListPrintingOrdersQueryParamFieldsTaxAmount,
+		ListPrintingOrdersQueryParamFieldsTotalAmount,
+		ListPrintingOrdersQueryParamFieldsShipments,
+		ListPrintingOrdersQueryParamFieldsMetadata,
+		ListPrintingOrdersQueryParamFieldsRaw,
+	}
+}
 func (e *ListPrintingOrdersQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

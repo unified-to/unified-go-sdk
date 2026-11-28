@@ -20,6 +20,15 @@ func (e CdpSourceDirection) ToPointer() *CdpSourceDirection {
 	return &e
 }
 
+// CdpSourceDirectionValues returns every known CdpSourceDirection value in schema order.
+func CdpSourceDirectionValues() []CdpSourceDirection {
+	return []CdpSourceDirection{
+		CdpSourceDirectionSource,
+		CdpSourceDirectionDestination,
+		CdpSourceDirectionBidirectional,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CdpSourceDirection) IsExact() bool {
 	if e != nil {

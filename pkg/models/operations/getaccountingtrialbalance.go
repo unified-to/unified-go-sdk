@@ -29,6 +29,24 @@ const (
 func (e GetAccountingTrialbalanceQueryParamFields) ToPointer() *GetAccountingTrialbalanceQueryParamFields {
 	return &e
 }
+
+// GetAccountingTrialbalanceQueryParamFieldsValues returns every known GetAccountingTrialbalanceQueryParamFields value in schema order.
+func GetAccountingTrialbalanceQueryParamFieldsValues() []GetAccountingTrialbalanceQueryParamFields {
+	return []GetAccountingTrialbalanceQueryParamFields{
+		GetAccountingTrialbalanceQueryParamFieldsID,
+		GetAccountingTrialbalanceQueryParamFieldsCreatedAt,
+		GetAccountingTrialbalanceQueryParamFieldsUpdatedAt,
+		GetAccountingTrialbalanceQueryParamFieldsStartAt,
+		GetAccountingTrialbalanceQueryParamFieldsName,
+		GetAccountingTrialbalanceQueryParamFieldsCurrency,
+		GetAccountingTrialbalanceQueryParamFieldsEndAt,
+		GetAccountingTrialbalanceQueryParamFieldsTotalDebitAmount,
+		GetAccountingTrialbalanceQueryParamFieldsTotalCreditAmount,
+		GetAccountingTrialbalanceQueryParamFieldsSubItems,
+		GetAccountingTrialbalanceQueryParamFieldsMetadata,
+		GetAccountingTrialbalanceQueryParamFieldsRaw,
+	}
+}
 func (e *GetAccountingTrialbalanceQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

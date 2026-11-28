@@ -14,6 +14,15 @@ func (e PropertyAdsCampaignTargetingBrandSafetyPublisherVisibilityCategories) To
 	return &e
 }
 
+// PropertyAdsCampaignTargetingBrandSafetyPublisherVisibilityCategoriesValues returns every known PropertyAdsCampaignTargetingBrandSafetyPublisherVisibilityCategories value in schema order.
+func PropertyAdsCampaignTargetingBrandSafetyPublisherVisibilityCategoriesValues() []PropertyAdsCampaignTargetingBrandSafetyPublisherVisibilityCategories {
+	return []PropertyAdsCampaignTargetingBrandSafetyPublisherVisibilityCategories{
+		PropertyAdsCampaignTargetingBrandSafetyPublisherVisibilityCategoriesLimited,
+		PropertyAdsCampaignTargetingBrandSafetyPublisherVisibilityCategoriesStandard,
+		PropertyAdsCampaignTargetingBrandSafetyPublisherVisibilityCategoriesExpanded,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsCampaignTargetingBrandSafetyPublisherVisibilityCategories) IsExact() bool {
 	if e != nil {

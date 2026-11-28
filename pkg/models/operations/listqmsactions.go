@@ -40,6 +40,35 @@ const (
 func (e ListQmsActionsQueryParamFields) ToPointer() *ListQmsActionsQueryParamFields {
 	return &e
 }
+
+// ListQmsActionsQueryParamFieldsValues returns every known ListQmsActionsQueryParamFields value in schema order.
+func ListQmsActionsQueryParamFieldsValues() []ListQmsActionsQueryParamFields {
+	return []ListQmsActionsQueryParamFields{
+		ListQmsActionsQueryParamFieldsID,
+		ListQmsActionsQueryParamFieldsCreatedAt,
+		ListQmsActionsQueryParamFieldsUpdatedAt,
+		ListQmsActionsQueryParamFieldsNumber,
+		ListQmsActionsQueryParamFieldsName,
+		ListQmsActionsQueryParamFieldsDescription,
+		ListQmsActionsQueryParamFieldsType,
+		ListQmsActionsQueryParamFieldsOriginalType,
+		ListQmsActionsQueryParamFieldsStatus,
+		ListQmsActionsQueryParamFieldsLifecycleState,
+		ListQmsActionsQueryParamFieldsPriority,
+		ListQmsActionsQueryParamFieldsIssueIds,
+		ListQmsActionsQueryParamFieldsAffectedItems,
+		ListQmsActionsQueryParamFieldsRootCause,
+		ListQmsActionsQueryParamFieldsSupplierName,
+		ListQmsActionsQueryParamFieldsUserID,
+		ListQmsActionsQueryParamFieldsDueAt,
+		ListQmsActionsQueryParamFieldsClosedAt,
+		ListQmsActionsQueryParamFieldsVerifiedAt,
+		ListQmsActionsQueryParamFieldsFileIds,
+		ListQmsActionsQueryParamFieldsURL,
+		ListQmsActionsQueryParamFieldsMetadata,
+		ListQmsActionsQueryParamFieldsRaw,
+	}
+}
 func (e *ListQmsActionsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

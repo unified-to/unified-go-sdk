@@ -18,6 +18,19 @@ func (e AtsGroupType) ToPointer() *AtsGroupType {
 	return &e
 }
 
+// AtsGroupTypeValues returns every known AtsGroupType value in schema order.
+func AtsGroupTypeValues() []AtsGroupType {
+	return []AtsGroupType{
+		AtsGroupTypeTeam,
+		AtsGroupTypeGroup,
+		AtsGroupTypeDepartment,
+		AtsGroupTypeDivision,
+		AtsGroupTypeBusinessUnit,
+		AtsGroupTypeBranch,
+		AtsGroupTypeSubDepartment,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AtsGroupType) IsExact() bool {
 	if e != nil {

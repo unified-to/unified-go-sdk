@@ -37,6 +37,32 @@ const (
 func (e ListCdpProfilesQueryParamFields) ToPointer() *ListCdpProfilesQueryParamFields {
 	return &e
 }
+
+// ListCdpProfilesQueryParamFieldsValues returns every known ListCdpProfilesQueryParamFields value in schema order.
+func ListCdpProfilesQueryParamFieldsValues() []ListCdpProfilesQueryParamFields {
+	return []ListCdpProfilesQueryParamFields{
+		ListCdpProfilesQueryParamFieldsID,
+		ListCdpProfilesQueryParamFieldsCreatedAt,
+		ListCdpProfilesQueryParamFieldsUpdatedAt,
+		ListCdpProfilesQueryParamFieldsName,
+		ListCdpProfilesQueryParamFieldsFirstName,
+		ListCdpProfilesQueryParamFieldsLastName,
+		ListCdpProfilesQueryParamFieldsEmail,
+		ListCdpProfilesQueryParamFieldsTelephone,
+		ListCdpProfilesQueryParamFieldsGender,
+		ListCdpProfilesQueryParamFieldsBirthdate,
+		ListCdpProfilesQueryParamFieldsTitle,
+		ListCdpProfilesQueryParamFieldsCompany,
+		ListCdpProfilesQueryParamFieldsAddress,
+		ListCdpProfilesQueryParamFieldsIdentifiers,
+		ListCdpProfilesQueryParamFieldsMetadata,
+		ListCdpProfilesQueryParamFieldsSegments,
+		ListCdpProfilesQueryParamFieldsIsAnonymous,
+		ListCdpProfilesQueryParamFieldsConsent,
+		ListCdpProfilesQueryParamFieldsSourceID,
+		ListCdpProfilesQueryParamFieldsRaw,
+	}
+}
 func (e *ListCdpProfilesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

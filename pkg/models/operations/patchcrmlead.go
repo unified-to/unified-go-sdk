@@ -40,6 +40,35 @@ const (
 func (e PatchCrmLeadQueryParamFields) ToPointer() *PatchCrmLeadQueryParamFields {
 	return &e
 }
+
+// PatchCrmLeadQueryParamFieldsValues returns every known PatchCrmLeadQueryParamFields value in schema order.
+func PatchCrmLeadQueryParamFieldsValues() []PatchCrmLeadQueryParamFields {
+	return []PatchCrmLeadQueryParamFields{
+		PatchCrmLeadQueryParamFieldsID,
+		PatchCrmLeadQueryParamFieldsCreatedAt,
+		PatchCrmLeadQueryParamFieldsUpdatedAt,
+		PatchCrmLeadQueryParamFieldsName,
+		PatchCrmLeadQueryParamFieldsFirstName,
+		PatchCrmLeadQueryParamFieldsLastName,
+		PatchCrmLeadQueryParamFieldsUserID,
+		PatchCrmLeadQueryParamFieldsCreatorUserID,
+		PatchCrmLeadQueryParamFieldsContactID,
+		PatchCrmLeadQueryParamFieldsCompanyID,
+		PatchCrmLeadQueryParamFieldsCompanyName,
+		PatchCrmLeadQueryParamFieldsIsActive,
+		PatchCrmLeadQueryParamFieldsAddress,
+		PatchCrmLeadQueryParamFieldsEmails,
+		PatchCrmLeadQueryParamFieldsTelephones,
+		PatchCrmLeadQueryParamFieldsSource,
+		PatchCrmLeadQueryParamFieldsStatus,
+		PatchCrmLeadQueryParamFieldsTitle,
+		PatchCrmLeadQueryParamFieldsLinkUrls,
+		PatchCrmLeadQueryParamFieldsMetadata,
+		PatchCrmLeadQueryParamFieldsVehicleIds,
+		PatchCrmLeadQueryParamFieldsRaw,
+		PatchCrmLeadQueryParamFieldsUnifiedPersonIds,
+	}
+}
 func (e *PatchCrmLeadQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -19,6 +19,19 @@ func (e PropertyCategoryratingCategory) ToPointer() *PropertyCategoryratingCateg
 	return &e
 }
 
+// PropertyCategoryratingCategoryValues returns every known PropertyCategoryratingCategory value in schema order.
+func PropertyCategoryratingCategoryValues() []PropertyCategoryratingCategory {
+	return []PropertyCategoryratingCategory{
+		PropertyCategoryratingCategoryCleanliness,
+		PropertyCategoryratingCategoryAccuracy,
+		PropertyCategoryratingCategoryCommunication,
+		PropertyCategoryratingCategoryCheckin,
+		PropertyCategoryratingCategoryLocation,
+		PropertyCategoryratingCategoryValue,
+		PropertyCategoryratingCategoryOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyCategoryratingCategory) IsExact() bool {
 	if e != nil {

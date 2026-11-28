@@ -27,6 +27,23 @@ func (e SecretsManagerType) ToPointer() *SecretsManagerType {
 	return &e
 }
 
+// SecretsManagerTypeValues returns every known SecretsManagerType value in schema order.
+func SecretsManagerTypeValues() []SecretsManagerType {
+	return []SecretsManagerType{
+		SecretsManagerTypeAws,
+		SecretsManagerTypeAzure,
+		SecretsManagerTypeGcp,
+		SecretsManagerTypeHashicorp,
+		SecretsManagerTypeComposio,
+		SecretsManagerTypeOnepassword,
+		SecretsManagerTypeBitwarden,
+		SecretsManagerTypeDoppler,
+		SecretsManagerTypeAkeyless,
+		SecretsManagerTypePipedream,
+		SecretsManagerTypeAlibabacloud,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *SecretsManagerType) IsExact() bool {
 	if e != nil {

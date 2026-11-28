@@ -40,6 +40,35 @@ const (
 func (e PatchCommerceLocationQueryParamFields) ToPointer() *PatchCommerceLocationQueryParamFields {
 	return &e
 }
+
+// PatchCommerceLocationQueryParamFieldsValues returns every known PatchCommerceLocationQueryParamFields value in schema order.
+func PatchCommerceLocationQueryParamFieldsValues() []PatchCommerceLocationQueryParamFields {
+	return []PatchCommerceLocationQueryParamFields{
+		PatchCommerceLocationQueryParamFieldsID,
+		PatchCommerceLocationQueryParamFieldsCreatedAt,
+		PatchCommerceLocationQueryParamFieldsUpdatedAt,
+		PatchCommerceLocationQueryParamFieldsName,
+		PatchCommerceLocationQueryParamFieldsAddress,
+		PatchCommerceLocationQueryParamFieldsDescription,
+		PatchCommerceLocationQueryParamFieldsIsActive,
+		PatchCommerceLocationQueryParamFieldsLanguageLocale,
+		PatchCommerceLocationQueryParamFieldsParentID,
+		PatchCommerceLocationQueryParamFieldsCurrency,
+		PatchCommerceLocationQueryParamFieldsLocationType,
+		PatchCommerceLocationQueryParamFieldsTelephones,
+		PatchCommerceLocationQueryParamFieldsRating,
+		PatchCommerceLocationQueryParamFieldsReviewCount,
+		PatchCommerceLocationQueryParamFieldsPriceLevel,
+		PatchCommerceLocationQueryParamFieldsLatitude,
+		PatchCommerceLocationQueryParamFieldsLongitude,
+		PatchCommerceLocationQueryParamFieldsImageURL,
+		PatchCommerceLocationQueryParamFieldsWebURL,
+		PatchCommerceLocationQueryParamFieldsMedia,
+		PatchCommerceLocationQueryParamFieldsMetadata,
+		PatchCommerceLocationQueryParamFieldsRaw,
+		PatchCommerceLocationQueryParamFieldsCategories,
+	}
+}
 func (e *PatchCommerceLocationQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

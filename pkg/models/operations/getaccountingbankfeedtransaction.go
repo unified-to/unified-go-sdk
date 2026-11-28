@@ -37,6 +37,32 @@ const (
 func (e GetAccountingBankfeedtransactionQueryParamFields) ToPointer() *GetAccountingBankfeedtransactionQueryParamFields {
 	return &e
 }
+
+// GetAccountingBankfeedtransactionQueryParamFieldsValues returns every known GetAccountingBankfeedtransactionQueryParamFields value in schema order.
+func GetAccountingBankfeedtransactionQueryParamFieldsValues() []GetAccountingBankfeedtransactionQueryParamFields {
+	return []GetAccountingBankfeedtransactionQueryParamFields{
+		GetAccountingBankfeedtransactionQueryParamFieldsID,
+		GetAccountingBankfeedtransactionQueryParamFieldsCreatedAt,
+		GetAccountingBankfeedtransactionQueryParamFieldsUpdatedAt,
+		GetAccountingBankfeedtransactionQueryParamFieldsOrganizationID,
+		GetAccountingBankfeedtransactionQueryParamFieldsBankfeedaccountID,
+		GetAccountingBankfeedtransactionQueryParamFieldsTransactionAt,
+		GetAccountingBankfeedtransactionQueryParamFieldsPostedAt,
+		GetAccountingBankfeedtransactionQueryParamFieldsAmount,
+		GetAccountingBankfeedtransactionQueryParamFieldsType,
+		GetAccountingBankfeedtransactionQueryParamFieldsBankCategory,
+		GetAccountingBankfeedtransactionQueryParamFieldsDescription,
+		GetAccountingBankfeedtransactionQueryParamFieldsMerchantName,
+		GetAccountingBankfeedtransactionQueryParamFieldsIsPending,
+		GetAccountingBankfeedtransactionQueryParamFieldsReference,
+		GetAccountingBankfeedtransactionQueryParamFieldsCurrency,
+		GetAccountingBankfeedtransactionQueryParamFieldsContactID,
+		GetAccountingBankfeedtransactionQueryParamFieldsAccountID,
+		GetAccountingBankfeedtransactionQueryParamFieldsCategoryIds,
+		GetAccountingBankfeedtransactionQueryParamFieldsMetadata,
+		GetAccountingBankfeedtransactionQueryParamFieldsRaw,
+	}
+}
 func (e *GetAccountingBankfeedtransactionQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

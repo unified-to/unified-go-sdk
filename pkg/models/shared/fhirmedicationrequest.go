@@ -24,6 +24,24 @@ func (e FhirMedicationRequestResourceType) ToPointer() *FhirMedicationRequestRes
 	return &e
 }
 
+// FhirMedicationRequestResourceTypeValues returns every known FhirMedicationRequestResourceType value in schema order.
+func FhirMedicationRequestResourceTypeValues() []FhirMedicationRequestResourceType {
+	return []FhirMedicationRequestResourceType{
+		FhirMedicationRequestResourceTypePatient,
+		FhirMedicationRequestResourceTypePractitioner,
+		FhirMedicationRequestResourceTypeEncounter,
+		FhirMedicationRequestResourceTypeObservation,
+		FhirMedicationRequestResourceTypeCondition,
+		FhirMedicationRequestResourceTypeAllergyIntolerance,
+		FhirMedicationRequestResourceTypeMedicationRequest,
+		FhirMedicationRequestResourceTypeImmunization,
+		FhirMedicationRequestResourceTypeBundle,
+		FhirMedicationRequestResourceTypeOperationOutcome,
+		FhirMedicationRequestResourceTypeCapabilityStatement,
+		FhirMedicationRequestResourceTypeDiagnosticReport,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *FhirMedicationRequestResourceType) IsExact() bool {
 	if e != nil {
@@ -51,6 +69,20 @@ const (
 
 func (e FhirMedicationRequestStatus) ToPointer() *FhirMedicationRequestStatus {
 	return &e
+}
+
+// FhirMedicationRequestStatusValues returns every known FhirMedicationRequestStatus value in schema order.
+func FhirMedicationRequestStatusValues() []FhirMedicationRequestStatus {
+	return []FhirMedicationRequestStatus{
+		FhirMedicationRequestStatusActive,
+		FhirMedicationRequestStatusOnHold,
+		FhirMedicationRequestStatusCancelled,
+		FhirMedicationRequestStatusCompleted,
+		FhirMedicationRequestStatusEnteredInError,
+		FhirMedicationRequestStatusStopped,
+		FhirMedicationRequestStatusDraft,
+		FhirMedicationRequestStatusUnknown,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

@@ -37,6 +37,32 @@ const (
 func (e GetComputeTemplateQueryParamFields) ToPointer() *GetComputeTemplateQueryParamFields {
 	return &e
 }
+
+// GetComputeTemplateQueryParamFieldsValues returns every known GetComputeTemplateQueryParamFields value in schema order.
+func GetComputeTemplateQueryParamFieldsValues() []GetComputeTemplateQueryParamFields {
+	return []GetComputeTemplateQueryParamFields{
+		GetComputeTemplateQueryParamFieldsID,
+		GetComputeTemplateQueryParamFieldsCreatedAt,
+		GetComputeTemplateQueryParamFieldsUpdatedAt,
+		GetComputeTemplateQueryParamFieldsName,
+		GetComputeTemplateQueryParamFieldsAliases,
+		GetComputeTemplateQueryParamFieldsImage,
+		GetComputeTemplateQueryParamFieldsDockerfile,
+		GetComputeTemplateQueryParamFieldsStartCommand,
+		GetComputeTemplateQueryParamFieldsStatus,
+		GetComputeTemplateQueryParamFieldsGpuModel,
+		GetComputeTemplateQueryParamFieldsGpuCount,
+		GetComputeTemplateQueryParamFieldsCPUCount,
+		GetComputeTemplateQueryParamFieldsMemoryMb,
+		GetComputeTemplateQueryParamFieldsDiskMb,
+		GetComputeTemplateQueryParamFieldsPorts,
+		GetComputeTemplateQueryParamFieldsEnv,
+		GetComputeTemplateQueryParamFieldsIsPublic,
+		GetComputeTemplateQueryParamFieldsLastUsedAt,
+		GetComputeTemplateQueryParamFieldsMetadata,
+		GetComputeTemplateQueryParamFieldsRaw,
+	}
+}
 func (e *GetComputeTemplateQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -16,6 +16,17 @@ func (e AccountingTelephoneType) ToPointer() *AccountingTelephoneType {
 	return &e
 }
 
+// AccountingTelephoneTypeValues returns every known AccountingTelephoneType value in schema order.
+func AccountingTelephoneTypeValues() []AccountingTelephoneType {
+	return []AccountingTelephoneType{
+		AccountingTelephoneTypeWork,
+		AccountingTelephoneTypeHome,
+		AccountingTelephoneTypeOther,
+		AccountingTelephoneTypeFax,
+		AccountingTelephoneTypeMobile,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingTelephoneType) IsExact() bool {
 	if e != nil {

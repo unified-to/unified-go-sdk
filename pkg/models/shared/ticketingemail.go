@@ -14,6 +14,15 @@ func (e TicketingEmailType) ToPointer() *TicketingEmailType {
 	return &e
 }
 
+// TicketingEmailTypeValues returns every known TicketingEmailType value in schema order.
+func TicketingEmailTypeValues() []TicketingEmailType {
+	return []TicketingEmailType{
+		TicketingEmailTypeWork,
+		TicketingEmailTypeHome,
+		TicketingEmailTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *TicketingEmailType) IsExact() bool {
 	if e != nil {

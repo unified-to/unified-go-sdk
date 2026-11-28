@@ -20,6 +20,16 @@ func (e CalendarEventRecurrenceFrequency) ToPointer() *CalendarEventRecurrenceFr
 	return &e
 }
 
+// CalendarEventRecurrenceFrequencyValues returns every known CalendarEventRecurrenceFrequency value in schema order.
+func CalendarEventRecurrenceFrequencyValues() []CalendarEventRecurrenceFrequency {
+	return []CalendarEventRecurrenceFrequency{
+		CalendarEventRecurrenceFrequencyDaily,
+		CalendarEventRecurrenceFrequencyWeekly,
+		CalendarEventRecurrenceFrequencyMonthly,
+		CalendarEventRecurrenceFrequencyYearly,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CalendarEventRecurrenceFrequency) IsExact() bool {
 	if e != nil {
@@ -46,6 +56,19 @@ const (
 
 func (e WeekStart) ToPointer() *WeekStart {
 	return &e
+}
+
+// WeekStartValues returns every known WeekStart value in schema order.
+func WeekStartValues() []WeekStart {
+	return []WeekStart{
+		WeekStartSu,
+		WeekStartMo,
+		WeekStartTu,
+		WeekStartWe,
+		WeekStartTh,
+		WeekStartFr,
+		WeekStartSa,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

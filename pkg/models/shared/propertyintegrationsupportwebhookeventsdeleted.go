@@ -13,6 +13,14 @@ func (e PropertyIntegrationSupportWebhookEventsDeleted) ToPointer() *PropertyInt
 	return &e
 }
 
+// PropertyIntegrationSupportWebhookEventsDeletedValues returns every known PropertyIntegrationSupportWebhookEventsDeleted value in schema order.
+func PropertyIntegrationSupportWebhookEventsDeletedValues() []PropertyIntegrationSupportWebhookEventsDeleted {
+	return []PropertyIntegrationSupportWebhookEventsDeleted{
+		PropertyIntegrationSupportWebhookEventsDeletedVirtual,
+		PropertyIntegrationSupportWebhookEventsDeletedNative,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyIntegrationSupportWebhookEventsDeleted) IsExact() bool {
 	if e != nil {

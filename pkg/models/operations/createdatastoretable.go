@@ -29,6 +29,24 @@ const (
 func (e CreateDatastoreTableQueryParamFields) ToPointer() *CreateDatastoreTableQueryParamFields {
 	return &e
 }
+
+// CreateDatastoreTableQueryParamFieldsValues returns every known CreateDatastoreTableQueryParamFields value in schema order.
+func CreateDatastoreTableQueryParamFieldsValues() []CreateDatastoreTableQueryParamFields {
+	return []CreateDatastoreTableQueryParamFields{
+		CreateDatastoreTableQueryParamFieldsID,
+		CreateDatastoreTableQueryParamFieldsCreatedAt,
+		CreateDatastoreTableQueryParamFieldsUpdatedAt,
+		CreateDatastoreTableQueryParamFieldsName,
+		CreateDatastoreTableQueryParamFieldsDescription,
+		CreateDatastoreTableQueryParamFieldsDatabaseID,
+		CreateDatastoreTableQueryParamFieldsFields,
+		CreateDatastoreTableQueryParamFieldsRelationships,
+		CreateDatastoreTableQueryParamFieldsWebURL,
+		CreateDatastoreTableQueryParamFieldsParentID,
+		CreateDatastoreTableQueryParamFieldsMetadata,
+		CreateDatastoreTableQueryParamFieldsRaw,
+	}
+}
 func (e *CreateDatastoreTableQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

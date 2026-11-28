@@ -38,6 +38,33 @@ const (
 func (e ListPropertyUnittypesQueryParamFields) ToPointer() *ListPropertyUnittypesQueryParamFields {
 	return &e
 }
+
+// ListPropertyUnittypesQueryParamFieldsValues returns every known ListPropertyUnittypesQueryParamFields value in schema order.
+func ListPropertyUnittypesQueryParamFieldsValues() []ListPropertyUnittypesQueryParamFields {
+	return []ListPropertyUnittypesQueryParamFields{
+		ListPropertyUnittypesQueryParamFieldsID,
+		ListPropertyUnittypesQueryParamFieldsCreatedAt,
+		ListPropertyUnittypesQueryParamFieldsUpdatedAt,
+		ListPropertyUnittypesQueryParamFieldsListingID,
+		ListPropertyUnittypesQueryParamFieldsName,
+		ListPropertyUnittypesQueryParamFieldsDescription,
+		ListPropertyUnittypesQueryParamFieldsImageUrls,
+		ListPropertyUnittypesQueryParamFieldsUnitCount,
+		ListPropertyUnittypesQueryParamFieldsMaxOccupancy,
+		ListPropertyUnittypesQueryParamFieldsBedrooms,
+		ListPropertyUnittypesQueryParamFieldsBeds,
+		ListPropertyUnittypesQueryParamFieldsBathrooms,
+		ListPropertyUnittypesQueryParamFieldsMinNights,
+		ListPropertyUnittypesQueryParamFieldsMaxNights,
+		ListPropertyUnittypesQueryParamFieldsCurrency,
+		ListPropertyUnittypesQueryParamFieldsStartPriceAmount,
+		ListPropertyUnittypesQueryParamFieldsCleaningFeeAmount,
+		ListPropertyUnittypesQueryParamFieldsExtraPersonFeeAmount,
+		ListPropertyUnittypesQueryParamFieldsAmenities,
+		ListPropertyUnittypesQueryParamFieldsMetadata,
+		ListPropertyUnittypesQueryParamFieldsRaw,
+	}
+}
 func (e *ListPropertyUnittypesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -12,6 +12,13 @@ func (e CrmTaxonomyType) ToPointer() *CrmTaxonomyType {
 	return &e
 }
 
+// CrmTaxonomyTypeValues returns every known CrmTaxonomyType value in schema order.
+func CrmTaxonomyTypeValues() []CrmTaxonomyType {
+	return []CrmTaxonomyType{
+		CrmTaxonomyTypeIndustry,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CrmTaxonomyType) IsExact() bool {
 	if e != nil {

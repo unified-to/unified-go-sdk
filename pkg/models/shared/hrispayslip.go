@@ -19,6 +19,15 @@ func (e PaymentType) ToPointer() *PaymentType {
 	return &e
 }
 
+// PaymentTypeValues returns every known PaymentType value in schema order.
+func PaymentTypeValues() []PaymentType {
+	return []PaymentType{
+		PaymentTypeDirect,
+		PaymentTypeCheque,
+		PaymentTypeCash,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PaymentType) IsExact() bool {
 	if e != nil {
@@ -43,6 +52,18 @@ const (
 
 func (e HrisPayslipType) ToPointer() *HrisPayslipType {
 	return &e
+}
+
+// HrisPayslipTypeValues returns every known HrisPayslipType value in schema order.
+func HrisPayslipTypeValues() []HrisPayslipType {
+	return []HrisPayslipType{
+		HrisPayslipTypeRegular,
+		HrisPayslipTypeOffCycle,
+		HrisPayslipTypeBonus,
+		HrisPayslipTypeCorrection,
+		HrisPayslipTypeTermination,
+		HrisPayslipTypeContractor,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

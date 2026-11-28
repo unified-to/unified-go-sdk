@@ -21,6 +21,16 @@ func (e Reason) ToPointer() *Reason {
 	return &e
 }
 
+// ReasonValues returns every known Reason value in schema order.
+func ReasonValues() []Reason {
+	return []Reason{
+		ReasonDuplicate,
+		ReasonFraudulent,
+		ReasonRequestedByCustomer,
+		ReasonOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Reason) IsExact() bool {
 	if e != nil {
@@ -43,6 +53,16 @@ const (
 
 func (e PaymentRefundStatus) ToPointer() *PaymentRefundStatus {
 	return &e
+}
+
+// PaymentRefundStatusValues returns every known PaymentRefundStatus value in schema order.
+func PaymentRefundStatusValues() []PaymentRefundStatus {
+	return []PaymentRefundStatus{
+		PaymentRefundStatusSucceeded,
+		PaymentRefundStatusPending,
+		PaymentRefundStatusFailed,
+		PaymentRefundStatusCanceled,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -74,6 +94,22 @@ const (
 
 func (e PaymentRefundTenderType) ToPointer() *PaymentRefundTenderType {
 	return &e
+}
+
+// PaymentRefundTenderTypeValues returns every known PaymentRefundTenderType value in schema order.
+func PaymentRefundTenderTypeValues() []PaymentRefundTenderType {
+	return []PaymentRefundTenderType{
+		PaymentRefundTenderTypeCard,
+		PaymentRefundTenderTypeCash,
+		PaymentRefundTenderTypeGiftCard,
+		PaymentRefundTenderTypeBankTransfer,
+		PaymentRefundTenderTypeWallet,
+		PaymentRefundTenderTypeCheck,
+		PaymentRefundTenderTypeStoreCredit,
+		PaymentRefundTenderTypeBuyNowPayLater,
+		PaymentRefundTenderTypeExternal,
+		PaymentRefundTenderTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

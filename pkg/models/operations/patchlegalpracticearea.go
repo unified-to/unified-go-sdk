@@ -26,6 +26,21 @@ const (
 func (e PatchLegalPracticeareaQueryParamFields) ToPointer() *PatchLegalPracticeareaQueryParamFields {
 	return &e
 }
+
+// PatchLegalPracticeareaQueryParamFieldsValues returns every known PatchLegalPracticeareaQueryParamFields value in schema order.
+func PatchLegalPracticeareaQueryParamFieldsValues() []PatchLegalPracticeareaQueryParamFields {
+	return []PatchLegalPracticeareaQueryParamFields{
+		PatchLegalPracticeareaQueryParamFieldsID,
+		PatchLegalPracticeareaQueryParamFieldsCreatedAt,
+		PatchLegalPracticeareaQueryParamFieldsUpdatedAt,
+		PatchLegalPracticeareaQueryParamFieldsName,
+		PatchLegalPracticeareaQueryParamFieldsType,
+		PatchLegalPracticeareaQueryParamFieldsCode,
+		PatchLegalPracticeareaQueryParamFieldsIsActive,
+		PatchLegalPracticeareaQueryParamFieldsMetadata,
+		PatchLegalPracticeareaQueryParamFieldsRaw,
+	}
+}
 func (e *PatchLegalPracticeareaQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

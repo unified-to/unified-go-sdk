@@ -13,6 +13,14 @@ func (e PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager
 	return &e
 }
 
+// PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerTypeValues returns every known PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType value in schema order.
+func PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerTypeValues() []PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType {
+	return []PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType{
+		PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerTypeDirect,
+		PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerTypeIndirect,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType) IsExact() bool {
 	if e != nil {

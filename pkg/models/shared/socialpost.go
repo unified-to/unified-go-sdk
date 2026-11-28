@@ -24,6 +24,19 @@ func (e SocialPostStatus) ToPointer() *SocialPostStatus {
 	return &e
 }
 
+// SocialPostStatusValues returns every known SocialPostStatus value in schema order.
+func SocialPostStatusValues() []SocialPostStatus {
+	return []SocialPostStatus{
+		SocialPostStatusDraft,
+		SocialPostStatusScheduled,
+		SocialPostStatusPublished,
+		SocialPostStatusRejected,
+		SocialPostStatusProcessing,
+		SocialPostStatusDeleted,
+		SocialPostStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *SocialPostStatus) IsExact() bool {
 	if e != nil {
@@ -52,6 +65,21 @@ const (
 
 func (e SocialPostType) ToPointer() *SocialPostType {
 	return &e
+}
+
+// SocialPostTypeValues returns every known SocialPostType value in schema order.
+func SocialPostTypeValues() []SocialPostType {
+	return []SocialPostType{
+		SocialPostTypePost,
+		SocialPostTypeReply,
+		SocialPostTypeRepost,
+		SocialPostTypeQuote,
+		SocialPostTypeEvent,
+		SocialPostTypeOffer,
+		SocialPostTypeAlert,
+		SocialPostTypeStory,
+		SocialPostTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

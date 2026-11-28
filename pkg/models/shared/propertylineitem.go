@@ -18,6 +18,18 @@ func (e PropertyLineitemType) ToPointer() *PropertyLineitemType {
 	return &e
 }
 
+// PropertyLineitemTypeValues returns every known PropertyLineitemType value in schema order.
+func PropertyLineitemTypeValues() []PropertyLineitemType {
+	return []PropertyLineitemType{
+		PropertyLineitemTypeBase,
+		PropertyLineitemTypeFee,
+		PropertyLineitemTypeTax,
+		PropertyLineitemTypeDiscount,
+		PropertyLineitemTypeDeposit,
+		PropertyLineitemTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyLineitemType) IsExact() bool {
 	if e != nil {

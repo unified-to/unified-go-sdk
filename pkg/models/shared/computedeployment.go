@@ -21,6 +21,16 @@ func (e Environment) ToPointer() *Environment {
 	return &e
 }
 
+// EnvironmentValues returns every known Environment value in schema order.
+func EnvironmentValues() []Environment {
+	return []Environment{
+		EnvironmentProduction,
+		EnvironmentPreview,
+		EnvironmentDevelopment,
+		EnvironmentOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Environment) IsExact() bool {
 	if e != nil {
@@ -50,6 +60,20 @@ func (e ComputeDeploymentStatus) ToPointer() *ComputeDeploymentStatus {
 	return &e
 }
 
+// ComputeDeploymentStatusValues returns every known ComputeDeploymentStatus value in schema order.
+func ComputeDeploymentStatusValues() []ComputeDeploymentStatus {
+	return []ComputeDeploymentStatus{
+		ComputeDeploymentStatusQueued,
+		ComputeDeploymentStatusBuilding,
+		ComputeDeploymentStatusDeploying,
+		ComputeDeploymentStatusLive,
+		ComputeDeploymentStatusFailed,
+		ComputeDeploymentStatusCanceled,
+		ComputeDeploymentStatusSuperseded,
+		ComputeDeploymentStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ComputeDeploymentStatus) IsExact() bool {
 	if e != nil {
@@ -74,6 +98,17 @@ const (
 
 func (e Trigger) ToPointer() *Trigger {
 	return &e
+}
+
+// TriggerValues returns every known Trigger value in schema order.
+func TriggerValues() []Trigger {
+	return []Trigger{
+		TriggerGit,
+		TriggerManual,
+		TriggerAPI,
+		TriggerRollback,
+		TriggerOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

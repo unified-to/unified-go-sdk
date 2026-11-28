@@ -20,6 +20,16 @@ func (e AtsOfferStatus) ToPointer() *AtsOfferStatus {
 	return &e
 }
 
+// AtsOfferStatusValues returns every known AtsOfferStatus value in schema order.
+func AtsOfferStatusValues() []AtsOfferStatus {
+	return []AtsOfferStatus{
+		AtsOfferStatusCreated,
+		AtsOfferStatusSent,
+		AtsOfferStatusAccepted,
+		AtsOfferStatusRejected,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AtsOfferStatus) IsExact() bool {
 	if e != nil {

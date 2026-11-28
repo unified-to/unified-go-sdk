@@ -24,6 +24,19 @@ const (
 func (e CreateGenaiOrganizationQueryParamFields) ToPointer() *CreateGenaiOrganizationQueryParamFields {
 	return &e
 }
+
+// CreateGenaiOrganizationQueryParamFieldsValues returns every known CreateGenaiOrganizationQueryParamFields value in schema order.
+func CreateGenaiOrganizationQueryParamFieldsValues() []CreateGenaiOrganizationQueryParamFields {
+	return []CreateGenaiOrganizationQueryParamFields{
+		CreateGenaiOrganizationQueryParamFieldsID,
+		CreateGenaiOrganizationQueryParamFieldsCreatedAt,
+		CreateGenaiOrganizationQueryParamFieldsUpdatedAt,
+		CreateGenaiOrganizationQueryParamFieldsName,
+		CreateGenaiOrganizationQueryParamFieldsDescription,
+		CreateGenaiOrganizationQueryParamFieldsIsActive,
+		CreateGenaiOrganizationQueryParamFieldsRaw,
+	}
+}
 func (e *CreateGenaiOrganizationQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

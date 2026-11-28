@@ -59,6 +59,54 @@ const (
 func (e PatchAssessmentOrderQueryParamFields) ToPointer() *PatchAssessmentOrderQueryParamFields {
 	return &e
 }
+
+// PatchAssessmentOrderQueryParamFieldsValues returns every known PatchAssessmentOrderQueryParamFields value in schema order.
+func PatchAssessmentOrderQueryParamFieldsValues() []PatchAssessmentOrderQueryParamFields {
+	return []PatchAssessmentOrderQueryParamFields{
+		PatchAssessmentOrderQueryParamFieldsID,
+		PatchAssessmentOrderQueryParamFieldsCreatedAt,
+		PatchAssessmentOrderQueryParamFieldsUpdatedAt,
+		PatchAssessmentOrderQueryParamFieldsWorkspaceID,
+		PatchAssessmentOrderQueryParamFieldsConnectionID,
+		PatchAssessmentOrderQueryParamFieldsWebhookID,
+		PatchAssessmentOrderQueryParamFieldsPackageID,
+		PatchAssessmentOrderQueryParamFieldsParameters,
+		PatchAssessmentOrderQueryParamFieldsTargetURL,
+		PatchAssessmentOrderQueryParamFieldsStatus,
+		PatchAssessmentOrderQueryParamFieldsReference,
+		PatchAssessmentOrderQueryParamFieldsApplicationID,
+		PatchAssessmentOrderQueryParamFieldsJobID,
+		PatchAssessmentOrderQueryParamFieldsCompanyID,
+		PatchAssessmentOrderQueryParamFieldsCandidateID,
+		PatchAssessmentOrderQueryParamFieldsEmployeeID,
+		PatchAssessmentOrderQueryParamFieldsProfileName,
+		PatchAssessmentOrderQueryParamFieldsProfileFirstName,
+		PatchAssessmentOrderQueryParamFieldsProfileLastName,
+		PatchAssessmentOrderQueryParamFieldsProfileResumeURL,
+		PatchAssessmentOrderQueryParamFieldsProfileIPAddress,
+		PatchAssessmentOrderQueryParamFieldsProfileDateOfBirth,
+		PatchAssessmentOrderQueryParamFieldsProfileAddresses,
+		PatchAssessmentOrderQueryParamFieldsProfileGender,
+		PatchAssessmentOrderQueryParamFieldsProfileEmails,
+		PatchAssessmentOrderQueryParamFieldsProfileTelephones,
+		PatchAssessmentOrderQueryParamFieldsProfileNationalIdentifier,
+		PatchAssessmentOrderQueryParamFieldsProfileSocialMediaUrls,
+		PatchAssessmentOrderQueryParamFieldsResponseCompletedAt,
+		PatchAssessmentOrderQueryParamFieldsResponseExpiresAt,
+		PatchAssessmentOrderQueryParamFieldsResponseIssuedAt,
+		PatchAssessmentOrderQueryParamFieldsResponseStatus,
+		PatchAssessmentOrderQueryParamFieldsResponseScore,
+		PatchAssessmentOrderQueryParamFieldsResponseMaxScore,
+		PatchAssessmentOrderQueryParamFieldsResponseURL,
+		PatchAssessmentOrderQueryParamFieldsResponseRedirectURL,
+		PatchAssessmentOrderQueryParamFieldsResponseDownloadUrls,
+		PatchAssessmentOrderQueryParamFieldsResponseDetails,
+		PatchAssessmentOrderQueryParamFieldsResponseSource,
+		PatchAssessmentOrderQueryParamFieldsResponseAttributes,
+		PatchAssessmentOrderQueryParamFieldsMetadata,
+		PatchAssessmentOrderQueryParamFieldsRaw,
+	}
+}
 func (e *PatchAssessmentOrderQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -37,6 +37,32 @@ const (
 func (e ListVerificationPackagesQueryParamFields) ToPointer() *ListVerificationPackagesQueryParamFields {
 	return &e
 }
+
+// ListVerificationPackagesQueryParamFieldsValues returns every known ListVerificationPackagesQueryParamFields value in schema order.
+func ListVerificationPackagesQueryParamFieldsValues() []ListVerificationPackagesQueryParamFields {
+	return []ListVerificationPackagesQueryParamFields{
+		ListVerificationPackagesQueryParamFieldsID,
+		ListVerificationPackagesQueryParamFieldsCreatedAt,
+		ListVerificationPackagesQueryParamFieldsUpdatedAt,
+		ListVerificationPackagesQueryParamFieldsName,
+		ListVerificationPackagesQueryParamFieldsType,
+		ListVerificationPackagesQueryParamFieldsAliases,
+		ListVerificationPackagesQueryParamFieldsTags,
+		ListVerificationPackagesQueryParamFieldsDescription,
+		ListVerificationPackagesQueryParamFieldsParameters,
+		ListVerificationPackagesQueryParamFieldsAverageProcessingTimes,
+		ListVerificationPackagesQueryParamFieldsHasRedirectURL,
+		ListVerificationPackagesQueryParamFieldsHasTargetURL,
+		ListVerificationPackagesQueryParamFieldsNeedsIPAddress,
+		ListVerificationPackagesQueryParamFieldsCostAmount,
+		ListVerificationPackagesQueryParamFieldsCurrency,
+		ListVerificationPackagesQueryParamFieldsMaxScore,
+		ListVerificationPackagesQueryParamFieldsInfoURL,
+		ListVerificationPackagesQueryParamFieldsValidRegions,
+		ListVerificationPackagesQueryParamFieldsMetadata,
+		ListVerificationPackagesQueryParamFieldsRaw,
+	}
+}
 func (e *ListVerificationPackagesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -45,6 +45,40 @@ const (
 func (e GetCommerceItemvariantQueryParamFields) ToPointer() *GetCommerceItemvariantQueryParamFields {
 	return &e
 }
+
+// GetCommerceItemvariantQueryParamFieldsValues returns every known GetCommerceItemvariantQueryParamFields value in schema order.
+func GetCommerceItemvariantQueryParamFieldsValues() []GetCommerceItemvariantQueryParamFields {
+	return []GetCommerceItemvariantQueryParamFields{
+		GetCommerceItemvariantQueryParamFieldsID,
+		GetCommerceItemvariantQueryParamFieldsCreatedAt,
+		GetCommerceItemvariantQueryParamFieldsUpdatedAt,
+		GetCommerceItemvariantQueryParamFieldsName,
+		GetCommerceItemvariantQueryParamFieldsPublicName,
+		GetCommerceItemvariantQueryParamFieldsDescription,
+		GetCommerceItemvariantQueryParamFieldsPublicDescription,
+		GetCommerceItemvariantQueryParamFieldsSku,
+		GetCommerceItemvariantQueryParamFieldsIsActive,
+		GetCommerceItemvariantQueryParamFieldsIsVisible,
+		GetCommerceItemvariantQueryParamFieldsIsFeatured,
+		GetCommerceItemvariantQueryParamFieldsMedia,
+		GetCommerceItemvariantQueryParamFieldsAvailableAt,
+		GetCommerceItemvariantQueryParamFieldsTags,
+		GetCommerceItemvariantQueryParamFieldsWidth,
+		GetCommerceItemvariantQueryParamFieldsHeight,
+		GetCommerceItemvariantQueryParamFieldsLength,
+		GetCommerceItemvariantQueryParamFieldsWeight,
+		GetCommerceItemvariantQueryParamFieldsSizeUnit,
+		GetCommerceItemvariantQueryParamFieldsWeightUnit,
+		GetCommerceItemvariantQueryParamFieldsTotalStock,
+		GetCommerceItemvariantQueryParamFieldsPrices,
+		GetCommerceItemvariantQueryParamFieldsOptions,
+		GetCommerceItemvariantQueryParamFieldsInventoryID,
+		GetCommerceItemvariantQueryParamFieldsRequiresShipping,
+		GetCommerceItemvariantQueryParamFieldsMetadata,
+		GetCommerceItemvariantQueryParamFieldsItems,
+		GetCommerceItemvariantQueryParamFieldsRaw,
+	}
+}
 func (e *GetCommerceItemvariantQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

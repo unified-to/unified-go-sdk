@@ -14,6 +14,15 @@ func (e DatastoreFilterGroupType) ToPointer() *DatastoreFilterGroupType {
 	return &e
 }
 
+// DatastoreFilterGroupTypeValues returns every known DatastoreFilterGroupType value in schema order.
+func DatastoreFilterGroupTypeValues() []DatastoreFilterGroupType {
+	return []DatastoreFilterGroupType{
+		DatastoreFilterGroupTypeFilter,
+		DatastoreFilterGroupTypeAnd,
+		DatastoreFilterGroupTypeOr,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *DatastoreFilterGroupType) IsExact() bool {
 	if e != nil {

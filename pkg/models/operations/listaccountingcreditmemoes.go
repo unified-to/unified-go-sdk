@@ -48,6 +48,43 @@ const (
 func (e ListAccountingCreditmemoesQueryParamFields) ToPointer() *ListAccountingCreditmemoesQueryParamFields {
 	return &e
 }
+
+// ListAccountingCreditmemoesQueryParamFieldsValues returns every known ListAccountingCreditmemoesQueryParamFields value in schema order.
+func ListAccountingCreditmemoesQueryParamFieldsValues() []ListAccountingCreditmemoesQueryParamFields {
+	return []ListAccountingCreditmemoesQueryParamFields{
+		ListAccountingCreditmemoesQueryParamFieldsID,
+		ListAccountingCreditmemoesQueryParamFieldsCreatedAt,
+		ListAccountingCreditmemoesQueryParamFieldsUpdatedAt,
+		ListAccountingCreditmemoesQueryParamFieldsDueAt,
+		ListAccountingCreditmemoesQueryParamFieldsPaidAt,
+		ListAccountingCreditmemoesQueryParamFieldsRefundedAt,
+		ListAccountingCreditmemoesQueryParamFieldsCancelledAt,
+		ListAccountingCreditmemoesQueryParamFieldsPostedAt,
+		ListAccountingCreditmemoesQueryParamFieldsTotalAmount,
+		ListAccountingCreditmemoesQueryParamFieldsPaidAmount,
+		ListAccountingCreditmemoesQueryParamFieldsRefundAmount,
+		ListAccountingCreditmemoesQueryParamFieldsTaxAmount,
+		ListAccountingCreditmemoesQueryParamFieldsDiscountAmount,
+		ListAccountingCreditmemoesQueryParamFieldsBalanceAmount,
+		ListAccountingCreditmemoesQueryParamFieldsCreditmemoNumber,
+		ListAccountingCreditmemoesQueryParamFieldsContactID,
+		ListAccountingCreditmemoesQueryParamFieldsInvoiceID,
+		ListAccountingCreditmemoesQueryParamFieldsCurrency,
+		ListAccountingCreditmemoesQueryParamFieldsNotes,
+		ListAccountingCreditmemoesQueryParamFieldsRefundReason,
+		ListAccountingCreditmemoesQueryParamFieldsLineitems,
+		ListAccountingCreditmemoesQueryParamFieldsStatus,
+		ListAccountingCreditmemoesQueryParamFieldsURL,
+		ListAccountingCreditmemoesQueryParamFieldsPaymentCollectionMethod,
+		ListAccountingCreditmemoesQueryParamFieldsAttachments,
+		ListAccountingCreditmemoesQueryParamFieldsSend,
+		ListAccountingCreditmemoesQueryParamFieldsOrganizationID,
+		ListAccountingCreditmemoesQueryParamFieldsApplyAmount,
+		ListAccountingCreditmemoesQueryParamFieldsApplications,
+		ListAccountingCreditmemoesQueryParamFieldsMetadata,
+		ListAccountingCreditmemoesQueryParamFieldsRaw,
+	}
+}
 func (e *ListAccountingCreditmemoesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -30,6 +30,25 @@ const (
 func (e PatchAtsDocumentQueryParamFields) ToPointer() *PatchAtsDocumentQueryParamFields {
 	return &e
 }
+
+// PatchAtsDocumentQueryParamFieldsValues returns every known PatchAtsDocumentQueryParamFields value in schema order.
+func PatchAtsDocumentQueryParamFieldsValues() []PatchAtsDocumentQueryParamFields {
+	return []PatchAtsDocumentQueryParamFields{
+		PatchAtsDocumentQueryParamFieldsID,
+		PatchAtsDocumentQueryParamFieldsCreatedAt,
+		PatchAtsDocumentQueryParamFieldsUpdatedAt,
+		PatchAtsDocumentQueryParamFieldsDocumentURL,
+		PatchAtsDocumentQueryParamFieldsDocumentData,
+		PatchAtsDocumentQueryParamFieldsFilename,
+		PatchAtsDocumentQueryParamFieldsType,
+		PatchAtsDocumentQueryParamFieldsCandidateID,
+		PatchAtsDocumentQueryParamFieldsApplicationID,
+		PatchAtsDocumentQueryParamFieldsJobID,
+		PatchAtsDocumentQueryParamFieldsUserID,
+		PatchAtsDocumentQueryParamFieldsMetadata,
+		PatchAtsDocumentQueryParamFieldsRaw,
+	}
+}
 func (e *PatchAtsDocumentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

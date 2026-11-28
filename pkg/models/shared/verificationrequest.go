@@ -21,6 +21,17 @@ func (e VerificationRequestProfileGender) ToPointer() *VerificationRequestProfil
 	return &e
 }
 
+// VerificationRequestProfileGenderValues returns every known VerificationRequestProfileGender value in schema order.
+func VerificationRequestProfileGenderValues() []VerificationRequestProfileGender {
+	return []VerificationRequestProfileGender{
+		VerificationRequestProfileGenderMale,
+		VerificationRequestProfileGenderFemale,
+		VerificationRequestProfileGenderIntersex,
+		VerificationRequestProfileGenderTrans,
+		VerificationRequestProfileGenderNonBinary,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VerificationRequestProfileGender) IsExact() bool {
 	if e != nil {
@@ -44,6 +55,16 @@ const (
 
 func (e VerificationRequestResponseStatus) ToPointer() *VerificationRequestResponseStatus {
 	return &e
+}
+
+// VerificationRequestResponseStatusValues returns every known VerificationRequestResponseStatus value in schema order.
+func VerificationRequestResponseStatusValues() []VerificationRequestResponseStatus {
+	return []VerificationRequestResponseStatus{
+		VerificationRequestResponseStatusCompleted,
+		VerificationRequestResponseStatusFailed,
+		VerificationRequestResponseStatusPassed,
+		VerificationRequestResponseStatusPending,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

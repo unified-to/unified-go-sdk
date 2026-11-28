@@ -30,6 +30,25 @@ const (
 func (e PatchComputeVolumeQueryParamFields) ToPointer() *PatchComputeVolumeQueryParamFields {
 	return &e
 }
+
+// PatchComputeVolumeQueryParamFieldsValues returns every known PatchComputeVolumeQueryParamFields value in schema order.
+func PatchComputeVolumeQueryParamFieldsValues() []PatchComputeVolumeQueryParamFields {
+	return []PatchComputeVolumeQueryParamFields{
+		PatchComputeVolumeQueryParamFieldsID,
+		PatchComputeVolumeQueryParamFieldsCreatedAt,
+		PatchComputeVolumeQueryParamFieldsUpdatedAt,
+		PatchComputeVolumeQueryParamFieldsName,
+		PatchComputeVolumeQueryParamFieldsType,
+		PatchComputeVolumeQueryParamFieldsStatus,
+		PatchComputeVolumeQueryParamFieldsSizeMb,
+		PatchComputeVolumeQueryParamFieldsUsedMb,
+		PatchComputeVolumeQueryParamFieldsRegionID,
+		PatchComputeVolumeQueryParamFieldsAvailabilityZone,
+		PatchComputeVolumeQueryParamFieldsInstanceIds,
+		PatchComputeVolumeQueryParamFieldsMetadata,
+		PatchComputeVolumeQueryParamFieldsRaw,
+	}
+}
 func (e *PatchComputeVolumeQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

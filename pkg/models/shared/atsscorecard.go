@@ -20,6 +20,16 @@ func (e Recommendation) ToPointer() *Recommendation {
 	return &e
 }
 
+// RecommendationValues returns every known Recommendation value in schema order.
+func RecommendationValues() []Recommendation {
+	return []Recommendation{
+		RecommendationDefinitelyNo,
+		RecommendationNo,
+		RecommendationYes,
+		RecommendationStrongYes,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Recommendation) IsExact() bool {
 	if e != nil {

@@ -36,6 +36,31 @@ const (
 func (e PatchLegalExpenseQueryParamFields) ToPointer() *PatchLegalExpenseQueryParamFields {
 	return &e
 }
+
+// PatchLegalExpenseQueryParamFieldsValues returns every known PatchLegalExpenseQueryParamFields value in schema order.
+func PatchLegalExpenseQueryParamFieldsValues() []PatchLegalExpenseQueryParamFields {
+	return []PatchLegalExpenseQueryParamFields{
+		PatchLegalExpenseQueryParamFieldsID,
+		PatchLegalExpenseQueryParamFieldsCreatedAt,
+		PatchLegalExpenseQueryParamFieldsUpdatedAt,
+		PatchLegalExpenseQueryParamFieldsMatterID,
+		PatchLegalExpenseQueryParamFieldsUserID,
+		PatchLegalExpenseQueryParamFieldsDescription,
+		PatchLegalExpenseQueryParamFieldsIncurredAt,
+		PatchLegalExpenseQueryParamFieldsQuantity,
+		PatchLegalExpenseQueryParamFieldsPriceAmount,
+		PatchLegalExpenseQueryParamFieldsTotalAmount,
+		PatchLegalExpenseQueryParamFieldsCurrency,
+		PatchLegalExpenseQueryParamFieldsType,
+		PatchLegalExpenseQueryParamFieldsCategory,
+		PatchLegalExpenseQueryParamFieldsIsBillable,
+		PatchLegalExpenseQueryParamFieldsIsBilled,
+		PatchLegalExpenseQueryParamFieldsInvoiceID,
+		PatchLegalExpenseQueryParamFieldsExpenseCode,
+		PatchLegalExpenseQueryParamFieldsMetadata,
+		PatchLegalExpenseQueryParamFieldsRaw,
+	}
+}
 func (e *PatchLegalExpenseQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

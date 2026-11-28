@@ -31,6 +31,26 @@ func (e Metric) ToPointer() *Metric {
 	return &e
 }
 
+// MetricValues returns every known Metric value in schema order.
+func MetricValues() []Metric {
+	return []Metric{
+		MetricFollowers,
+		MetricFollowing,
+		MetricPosts,
+		MetricImpressions,
+		MetricReach,
+		MetricEngagement,
+		MetricProfileViews,
+		MetricClicks,
+		MetricVideoViews,
+		MetricLikes,
+		MetricComments,
+		MetricShares,
+		MetricSaves,
+		MetricOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Metric) IsExact() bool {
 	if e != nil {
@@ -56,6 +76,18 @@ const (
 
 func (e Period) ToPointer() *Period {
 	return &e
+}
+
+// PeriodValues returns every known Period value in schema order.
+func PeriodValues() []Period {
+	return []Period{
+		PeriodDay,
+		PeriodWeek,
+		PeriodMonth,
+		PeriodLifetime,
+		PeriodTotal,
+		PeriodOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

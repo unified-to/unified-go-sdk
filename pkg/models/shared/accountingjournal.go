@@ -21,6 +21,16 @@ func (e AccountingJournalStatus) ToPointer() *AccountingJournalStatus {
 	return &e
 }
 
+// AccountingJournalStatusValues returns every known AccountingJournalStatus value in schema order.
+func AccountingJournalStatusValues() []AccountingJournalStatus {
+	return []AccountingJournalStatus{
+		AccountingJournalStatusDraft,
+		AccountingJournalStatusPosted,
+		AccountingJournalStatusVoid,
+		AccountingJournalStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingJournalStatus) IsExact() bool {
 	if e != nil {

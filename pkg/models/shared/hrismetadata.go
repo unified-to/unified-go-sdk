@@ -298,6 +298,25 @@ func (e HrisMetadataFormat) ToPointer() *HrisMetadataFormat {
 	return &e
 }
 
+// HrisMetadataFormatValues returns every known HrisMetadataFormat value in schema order.
+func HrisMetadataFormatValues() []HrisMetadataFormat {
+	return []HrisMetadataFormat{
+		HrisMetadataFormatText,
+		HrisMetadataFormatNumber,
+		HrisMetadataFormatDate,
+		HrisMetadataFormatBoolean,
+		HrisMetadataFormatFile,
+		HrisMetadataFormatTextarea,
+		HrisMetadataFormatSingleSelect,
+		HrisMetadataFormatMultipleSelect,
+		HrisMetadataFormatMeasurement,
+		HrisMetadataFormatPrice,
+		HrisMetadataFormatYesNo,
+		HrisMetadataFormatCurrency,
+		HrisMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HrisMetadataFormat) IsExact() bool {
 	if e != nil {

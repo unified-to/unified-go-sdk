@@ -44,6 +44,39 @@ const (
 func (e GetAccountingSalesreceiptQueryParamFields) ToPointer() *GetAccountingSalesreceiptQueryParamFields {
 	return &e
 }
+
+// GetAccountingSalesreceiptQueryParamFieldsValues returns every known GetAccountingSalesreceiptQueryParamFields value in schema order.
+func GetAccountingSalesreceiptQueryParamFieldsValues() []GetAccountingSalesreceiptQueryParamFields {
+	return []GetAccountingSalesreceiptQueryParamFields{
+		GetAccountingSalesreceiptQueryParamFieldsID,
+		GetAccountingSalesreceiptQueryParamFieldsCreatedAt,
+		GetAccountingSalesreceiptQueryParamFieldsUpdatedAt,
+		GetAccountingSalesreceiptQueryParamFieldsOrganizationID,
+		GetAccountingSalesreceiptQueryParamFieldsMetadata,
+		GetAccountingSalesreceiptQueryParamFieldsRaw,
+		GetAccountingSalesreceiptQueryParamFieldsReceiptNumber,
+		GetAccountingSalesreceiptQueryParamFieldsReference,
+		GetAccountingSalesreceiptQueryParamFieldsContactID,
+		GetAccountingSalesreceiptQueryParamFieldsAccountID,
+		GetAccountingSalesreceiptQueryParamFieldsPostedAt,
+		GetAccountingSalesreceiptQueryParamFieldsCurrency,
+		GetAccountingSalesreceiptQueryParamFieldsExchangeRate,
+		GetAccountingSalesreceiptQueryParamFieldsSubTotalAmount,
+		GetAccountingSalesreceiptQueryParamFieldsTaxAmount,
+		GetAccountingSalesreceiptQueryParamFieldsDiscountAmount,
+		GetAccountingSalesreceiptQueryParamFieldsTotalAmount,
+		GetAccountingSalesreceiptQueryParamFieldsIsInclusiveOfTax,
+		GetAccountingSalesreceiptQueryParamFieldsPaymentMethod,
+		GetAccountingSalesreceiptQueryParamFieldsNotes,
+		GetAccountingSalesreceiptQueryParamFieldsLineitems,
+		GetAccountingSalesreceiptQueryParamFieldsBillingAddress,
+		GetAccountingSalesreceiptQueryParamFieldsShippingAddress,
+		GetAccountingSalesreceiptQueryParamFieldsCategoryIds,
+		GetAccountingSalesreceiptQueryParamFieldsProjectID,
+		GetAccountingSalesreceiptQueryParamFieldsAttachments,
+		GetAccountingSalesreceiptQueryParamFieldsStatus,
+	}
+}
 func (e *GetAccountingSalesreceiptQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

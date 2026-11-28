@@ -29,6 +29,24 @@ const (
 func (e GetPerformanceCycleQueryParamFields) ToPointer() *GetPerformanceCycleQueryParamFields {
 	return &e
 }
+
+// GetPerformanceCycleQueryParamFieldsValues returns every known GetPerformanceCycleQueryParamFields value in schema order.
+func GetPerformanceCycleQueryParamFieldsValues() []GetPerformanceCycleQueryParamFields {
+	return []GetPerformanceCycleQueryParamFields{
+		GetPerformanceCycleQueryParamFieldsID,
+		GetPerformanceCycleQueryParamFieldsCreatedAt,
+		GetPerformanceCycleQueryParamFieldsUpdatedAt,
+		GetPerformanceCycleQueryParamFieldsName,
+		GetPerformanceCycleQueryParamFieldsDescription,
+		GetPerformanceCycleQueryParamFieldsType,
+		GetPerformanceCycleQueryParamFieldsStatus,
+		GetPerformanceCycleQueryParamFieldsStartAt,
+		GetPerformanceCycleQueryParamFieldsEndAt,
+		GetPerformanceCycleQueryParamFieldsDueAt,
+		GetPerformanceCycleQueryParamFieldsMetadata,
+		GetPerformanceCycleQueryParamFieldsRaw,
+	}
+}
 func (e *GetPerformanceCycleQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

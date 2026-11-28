@@ -31,6 +31,26 @@ func (e ShippingTrackingStatus) ToPointer() *ShippingTrackingStatus {
 	return &e
 }
 
+// ShippingTrackingStatusValues returns every known ShippingTrackingStatus value in schema order.
+func ShippingTrackingStatusValues() []ShippingTrackingStatus {
+	return []ShippingTrackingStatus{
+		ShippingTrackingStatusPending,
+		ShippingTrackingStatusProcessing,
+		ShippingTrackingStatusInTransit,
+		ShippingTrackingStatusDelivered,
+		ShippingTrackingStatusException,
+		ShippingTrackingStatusCancelled,
+		ShippingTrackingStatusLabelCreated,
+		ShippingTrackingStatusPickedUp,
+		ShippingTrackingStatusOutForDelivery,
+		ShippingTrackingStatusDeliveryAttempted,
+		ShippingTrackingStatusReturnedToSender,
+		ShippingTrackingStatusHeldAtLocation,
+		ShippingTrackingStatusCustomsClearance,
+		ShippingTrackingStatusExceptionResolved,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ShippingTrackingStatus) IsExact() bool {
 	if e != nil {

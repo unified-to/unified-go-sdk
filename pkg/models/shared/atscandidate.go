@@ -22,6 +22,18 @@ func (e Origin) ToPointer() *Origin {
 	return &e
 }
 
+// OriginValues returns every known Origin value in schema order.
+func OriginValues() []Origin {
+	return []Origin{
+		OriginAgency,
+		OriginApplied,
+		OriginInternal,
+		OriginReferred,
+		OriginSourced,
+		OriginUniversity,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Origin) IsExact() bool {
 	if e != nil {

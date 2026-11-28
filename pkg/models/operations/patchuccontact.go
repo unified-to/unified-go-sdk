@@ -30,6 +30,25 @@ const (
 func (e PatchUcContactQueryParamFields) ToPointer() *PatchUcContactQueryParamFields {
 	return &e
 }
+
+// PatchUcContactQueryParamFieldsValues returns every known PatchUcContactQueryParamFields value in schema order.
+func PatchUcContactQueryParamFieldsValues() []PatchUcContactQueryParamFields {
+	return []PatchUcContactQueryParamFields{
+		PatchUcContactQueryParamFieldsID,
+		PatchUcContactQueryParamFieldsCreatedAt,
+		PatchUcContactQueryParamFieldsUpdatedAt,
+		PatchUcContactQueryParamFieldsName,
+		PatchUcContactQueryParamFieldsFirstName,
+		PatchUcContactQueryParamFieldsLastName,
+		PatchUcContactQueryParamFieldsTitle,
+		PatchUcContactQueryParamFieldsCompany,
+		PatchUcContactQueryParamFieldsEmails,
+		PatchUcContactQueryParamFieldsTelephones,
+		PatchUcContactQueryParamFieldsMetadata,
+		PatchUcContactQueryParamFieldsRaw,
+		PatchUcContactQueryParamFieldsUnifiedPersonIds,
+	}
+}
 func (e *PatchUcContactQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

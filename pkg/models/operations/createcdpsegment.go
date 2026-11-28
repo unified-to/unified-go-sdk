@@ -31,6 +31,26 @@ const (
 func (e CreateCdpSegmentQueryParamFields) ToPointer() *CreateCdpSegmentQueryParamFields {
 	return &e
 }
+
+// CreateCdpSegmentQueryParamFieldsValues returns every known CreateCdpSegmentQueryParamFields value in schema order.
+func CreateCdpSegmentQueryParamFieldsValues() []CreateCdpSegmentQueryParamFields {
+	return []CreateCdpSegmentQueryParamFields{
+		CreateCdpSegmentQueryParamFieldsID,
+		CreateCdpSegmentQueryParamFieldsCreatedAt,
+		CreateCdpSegmentQueryParamFieldsUpdatedAt,
+		CreateCdpSegmentQueryParamFieldsName,
+		CreateCdpSegmentQueryParamFieldsSlug,
+		CreateCdpSegmentQueryParamFieldsDescription,
+		CreateCdpSegmentQueryParamFieldsDefinition,
+		CreateCdpSegmentQueryParamFieldsType,
+		CreateCdpSegmentQueryParamFieldsComputeMode,
+		CreateCdpSegmentQueryParamFieldsSize,
+		CreateCdpSegmentQueryParamFieldsIsActive,
+		CreateCdpSegmentQueryParamFieldsSourceID,
+		CreateCdpSegmentQueryParamFieldsMetadata,
+		CreateCdpSegmentQueryParamFieldsRaw,
+	}
+}
 func (e *CreateCdpSegmentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

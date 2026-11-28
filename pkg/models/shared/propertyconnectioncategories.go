@@ -55,6 +55,56 @@ func (e PropertyConnectionCategories) ToPointer() *PropertyConnectionCategories 
 	return &e
 }
 
+// PropertyConnectionCategoriesValues returns every known PropertyConnectionCategories value in schema order.
+func PropertyConnectionCategoriesValues() []PropertyConnectionCategories {
+	return []PropertyConnectionCategories{
+		PropertyConnectionCategoriesPassthrough,
+		PropertyConnectionCategoriesHris,
+		PropertyConnectionCategoriesAts,
+		PropertyConnectionCategoriesAuth,
+		PropertyConnectionCategoriesSaml,
+		PropertyConnectionCategoriesCrm,
+		PropertyConnectionCategoriesEnrich,
+		PropertyConnectionCategoriesMartech,
+		PropertyConnectionCategoriesTicketing,
+		PropertyConnectionCategoriesUc,
+		PropertyConnectionCategoriesAccounting,
+		PropertyConnectionCategoriesStorage,
+		PropertyConnectionCategoriesCommerce,
+		PropertyConnectionCategoriesPayment,
+		PropertyConnectionCategoriesGenai,
+		PropertyConnectionCategoriesMessaging,
+		PropertyConnectionCategoriesKms,
+		PropertyConnectionCategoriesTask,
+		PropertyConnectionCategoriesScim,
+		PropertyConnectionCategoriesLms,
+		PropertyConnectionCategoriesRepo,
+		PropertyConnectionCategoriesMetadata,
+		PropertyConnectionCategoriesCalendar,
+		PropertyConnectionCategoriesVerification,
+		PropertyConnectionCategoriesAds,
+		PropertyConnectionCategoriesAnalytics,
+		PropertyConnectionCategoriesForms,
+		PropertyConnectionCategoriesShipping,
+		PropertyConnectionCategoriesAssessment,
+		PropertyConnectionCategoriesSigning,
+		PropertyConnectionCategoriesClubs,
+		PropertyConnectionCategoriesDatastore,
+		PropertyConnectionCategoriesCdp,
+		PropertyConnectionCategoriesPerformance,
+		PropertyConnectionCategoriesSocial,
+		PropertyConnectionCategoriesLegal,
+		PropertyConnectionCategoriesCompute,
+		PropertyConnectionCategoriesHealthcare,
+		PropertyConnectionCategoriesProperty,
+		PropertyConnectionCategoriesPlm,
+		PropertyConnectionCategoriesQms,
+		PropertyConnectionCategoriesDms,
+		PropertyConnectionCategoriesFhir,
+		PropertyConnectionCategoriesPrinting,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyConnectionCategories) IsExact() bool {
 	if e != nil {

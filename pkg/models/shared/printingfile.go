@@ -21,6 +21,16 @@ func (e PrintingFileStatus) ToPointer() *PrintingFileStatus {
 	return &e
 }
 
+// PrintingFileStatusValues returns every known PrintingFileStatus value in schema order.
+func PrintingFileStatusValues() []PrintingFileStatus {
+	return []PrintingFileStatus{
+		PrintingFileStatusPending,
+		PrintingFileStatusReady,
+		PrintingFileStatusFailed,
+		PrintingFileStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PrintingFileStatus) IsExact() bool {
 	if e != nil {

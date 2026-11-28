@@ -28,6 +28,23 @@ const (
 func (e ListGenaiMemoriesQueryParamFields) ToPointer() *ListGenaiMemoriesQueryParamFields {
 	return &e
 }
+
+// ListGenaiMemoriesQueryParamFieldsValues returns every known ListGenaiMemoriesQueryParamFields value in schema order.
+func ListGenaiMemoriesQueryParamFieldsValues() []ListGenaiMemoriesQueryParamFields {
+	return []ListGenaiMemoriesQueryParamFields{
+		ListGenaiMemoriesQueryParamFieldsID,
+		ListGenaiMemoriesQueryParamFieldsCreatedAt,
+		ListGenaiMemoriesQueryParamFieldsUpdatedAt,
+		ListGenaiMemoriesQueryParamFieldsType,
+		ListGenaiMemoriesQueryParamFieldsParentID,
+		ListGenaiMemoriesQueryParamFieldsUserIdentifier,
+		ListGenaiMemoriesQueryParamFieldsName,
+		ListGenaiMemoriesQueryParamFieldsContent,
+		ListGenaiMemoriesQueryParamFieldsDescription,
+		ListGenaiMemoriesQueryParamFieldsMetadata,
+		ListGenaiMemoriesQueryParamFieldsRaw,
+	}
+}
 func (e *ListGenaiMemoriesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

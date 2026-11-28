@@ -28,6 +28,23 @@ const (
 func (e CreateShippingRateQueryParamFields) ToPointer() *CreateShippingRateQueryParamFields {
 	return &e
 }
+
+// CreateShippingRateQueryParamFieldsValues returns every known CreateShippingRateQueryParamFields value in schema order.
+func CreateShippingRateQueryParamFieldsValues() []CreateShippingRateQueryParamFields {
+	return []CreateShippingRateQueryParamFields{
+		CreateShippingRateQueryParamFieldsShipmentID,
+		CreateShippingRateQueryParamFieldsCurrency,
+		CreateShippingRateQueryParamFieldsFromAddress,
+		CreateShippingRateQueryParamFieldsToAddress,
+		CreateShippingRateQueryParamFieldsPackages,
+		CreateShippingRateQueryParamFieldsShipByAt,
+		CreateShippingRateQueryParamFieldsCarrierID,
+		CreateShippingRateQueryParamFieldsID,
+		CreateShippingRateQueryParamFieldsRates,
+		CreateShippingRateQueryParamFieldsMetadata,
+		CreateShippingRateQueryParamFieldsRaw,
+	}
+}
 func (e *CreateShippingRateQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -29,6 +29,24 @@ const (
 func (e CreateTaskProjectQueryParamFields) ToPointer() *CreateTaskProjectQueryParamFields {
 	return &e
 }
+
+// CreateTaskProjectQueryParamFieldsValues returns every known CreateTaskProjectQueryParamFields value in schema order.
+func CreateTaskProjectQueryParamFieldsValues() []CreateTaskProjectQueryParamFields {
+	return []CreateTaskProjectQueryParamFields{
+		CreateTaskProjectQueryParamFieldsID,
+		CreateTaskProjectQueryParamFieldsCreatedAt,
+		CreateTaskProjectQueryParamFieldsUpdatedAt,
+		CreateTaskProjectQueryParamFieldsName,
+		CreateTaskProjectQueryParamFieldsParentID,
+		CreateTaskProjectQueryParamFieldsUserIds,
+		CreateTaskProjectQueryParamFieldsGroupIds,
+		CreateTaskProjectQueryParamFieldsDescription,
+		CreateTaskProjectQueryParamFieldsHasTasks,
+		CreateTaskProjectQueryParamFieldsHasChildren,
+		CreateTaskProjectQueryParamFieldsMetadata,
+		CreateTaskProjectQueryParamFieldsRaw,
+	}
+}
 func (e *CreateTaskProjectQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

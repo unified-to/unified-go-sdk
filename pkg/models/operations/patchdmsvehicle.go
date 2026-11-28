@@ -61,6 +61,56 @@ const (
 func (e PatchDmsVehicleQueryParamFields) ToPointer() *PatchDmsVehicleQueryParamFields {
 	return &e
 }
+
+// PatchDmsVehicleQueryParamFieldsValues returns every known PatchDmsVehicleQueryParamFields value in schema order.
+func PatchDmsVehicleQueryParamFieldsValues() []PatchDmsVehicleQueryParamFields {
+	return []PatchDmsVehicleQueryParamFields{
+		PatchDmsVehicleQueryParamFieldsID,
+		PatchDmsVehicleQueryParamFieldsCreatedAt,
+		PatchDmsVehicleQueryParamFieldsUpdatedAt,
+		PatchDmsVehicleQueryParamFieldsIsInventory,
+		PatchDmsVehicleQueryParamFieldsVin,
+		PatchDmsVehicleQueryParamFieldsStockNumber,
+		PatchDmsVehicleQueryParamFieldsFleetNumber,
+		PatchDmsVehicleQueryParamFieldsLicensePlate,
+		PatchDmsVehicleQueryParamFieldsYear,
+		PatchDmsVehicleQueryParamFieldsMake,
+		PatchDmsVehicleQueryParamFieldsModel,
+		PatchDmsVehicleQueryParamFieldsTrim,
+		PatchDmsVehicleQueryParamFieldsModelCode,
+		PatchDmsVehicleQueryParamFieldsDescription,
+		PatchDmsVehicleQueryParamFieldsType,
+		PatchDmsVehicleQueryParamFieldsBodyStyle,
+		PatchDmsVehicleQueryParamFieldsCondition,
+		PatchDmsVehicleQueryParamFieldsIsCertified,
+		PatchDmsVehicleQueryParamFieldsStatus,
+		PatchDmsVehicleQueryParamFieldsOdometer,
+		PatchDmsVehicleQueryParamFieldsOdometerUnit,
+		PatchDmsVehicleQueryParamFieldsExteriorColor,
+		PatchDmsVehicleQueryParamFieldsInteriorColor,
+		PatchDmsVehicleQueryParamFieldsFuelType,
+		PatchDmsVehicleQueryParamFieldsTransmission,
+		PatchDmsVehicleQueryParamFieldsCurrency,
+		PatchDmsVehicleQueryParamFieldsPriceAmount,
+		PatchDmsVehicleQueryParamFieldsMsrpAmount,
+		PatchDmsVehicleQueryParamFieldsInternetPriceAmount,
+		PatchDmsVehicleQueryParamFieldsCostAmount,
+		PatchDmsVehicleQueryParamFieldsReceivedAt,
+		PatchDmsVehicleQueryParamFieldsSoldAt,
+		PatchDmsVehicleQueryParamFieldsDeliveredAt,
+		PatchDmsVehicleQueryParamFieldsInServiceAt,
+		PatchDmsVehicleQueryParamFieldsWarrantyExpiresAt,
+		PatchDmsVehicleQueryParamFieldsLastServiceAt,
+		PatchDmsVehicleQueryParamFieldsContactID,
+		PatchDmsVehicleQueryParamFieldsCompanyID,
+		PatchDmsVehicleQueryParamFieldsOptions,
+		PatchDmsVehicleQueryParamFieldsImageUrls,
+		PatchDmsVehicleQueryParamFieldsIsPublished,
+		PatchDmsVehicleQueryParamFieldsIsActive,
+		PatchDmsVehicleQueryParamFieldsMetadata,
+		PatchDmsVehicleQueryParamFieldsRaw,
+	}
+}
 func (e *PatchDmsVehicleQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

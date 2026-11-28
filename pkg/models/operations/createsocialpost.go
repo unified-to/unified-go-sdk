@@ -34,6 +34,29 @@ const (
 func (e CreateSocialPostQueryParamFields) ToPointer() *CreateSocialPostQueryParamFields {
 	return &e
 }
+
+// CreateSocialPostQueryParamFieldsValues returns every known CreateSocialPostQueryParamFields value in schema order.
+func CreateSocialPostQueryParamFieldsValues() []CreateSocialPostQueryParamFields {
+	return []CreateSocialPostQueryParamFields{
+		CreateSocialPostQueryParamFieldsID,
+		CreateSocialPostQueryParamFieldsCreatedAt,
+		CreateSocialPostQueryParamFieldsUpdatedAt,
+		CreateSocialPostQueryParamFieldsProfileID,
+		CreateSocialPostQueryParamFieldsParentID,
+		CreateSocialPostQueryParamFieldsTitle,
+		CreateSocialPostQueryParamFieldsBody,
+		CreateSocialPostQueryParamFieldsStatus,
+		CreateSocialPostQueryParamFieldsType,
+		CreateSocialPostQueryParamFieldsMedia,
+		CreateSocialPostQueryParamFieldsURL,
+		CreateSocialPostQueryParamFieldsLanguage,
+		CreateSocialPostQueryParamFieldsScheduledAt,
+		CreateSocialPostQueryParamFieldsCallToAction,
+		CreateSocialPostQueryParamFieldsMetrics,
+		CreateSocialPostQueryParamFieldsMetadata,
+		CreateSocialPostQueryParamFieldsRaw,
+	}
+}
 func (e *CreateSocialPostQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -47,6 +47,42 @@ const (
 func (e UpdateAccountingContactQueryParamFields) ToPointer() *UpdateAccountingContactQueryParamFields {
 	return &e
 }
+
+// UpdateAccountingContactQueryParamFieldsValues returns every known UpdateAccountingContactQueryParamFields value in schema order.
+func UpdateAccountingContactQueryParamFieldsValues() []UpdateAccountingContactQueryParamFields {
+	return []UpdateAccountingContactQueryParamFields{
+		UpdateAccountingContactQueryParamFieldsID,
+		UpdateAccountingContactQueryParamFieldsCreatedAt,
+		UpdateAccountingContactQueryParamFieldsUpdatedAt,
+		UpdateAccountingContactQueryParamFieldsName,
+		UpdateAccountingContactQueryParamFieldsFirstName,
+		UpdateAccountingContactQueryParamFieldsLastName,
+		UpdateAccountingContactQueryParamFieldsEmails,
+		UpdateAccountingContactQueryParamFieldsTelephones,
+		UpdateAccountingContactQueryParamFieldsCurrency,
+		UpdateAccountingContactQueryParamFieldsBillingAddress,
+		UpdateAccountingContactQueryParamFieldsShippingAddress,
+		UpdateAccountingContactQueryParamFieldsIsActive,
+		UpdateAccountingContactQueryParamFieldsTaxExemption,
+		UpdateAccountingContactQueryParamFieldsTaxNumber,
+		UpdateAccountingContactQueryParamFieldsIsCustomer,
+		UpdateAccountingContactQueryParamFieldsIsSupplier,
+		UpdateAccountingContactQueryParamFieldsPortalURL,
+		UpdateAccountingContactQueryParamFieldsPaymentMethods,
+		UpdateAccountingContactQueryParamFieldsCompanyName,
+		UpdateAccountingContactQueryParamFieldsIdentification,
+		UpdateAccountingContactQueryParamFieldsAssociatedContacts,
+		UpdateAccountingContactQueryParamFieldsOrganizationID,
+		UpdateAccountingContactQueryParamFieldsPaymentTerms,
+		UpdateAccountingContactQueryParamFieldsPaymenttermID,
+		UpdateAccountingContactQueryParamFieldsBalanceAmount,
+		UpdateAccountingContactQueryParamFieldsWebsite,
+		UpdateAccountingContactQueryParamFieldsNotes,
+		UpdateAccountingContactQueryParamFieldsMetadata,
+		UpdateAccountingContactQueryParamFieldsRaw,
+		UpdateAccountingContactQueryParamFieldsUnifiedPersonIds,
+	}
+}
 func (e *UpdateAccountingContactQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

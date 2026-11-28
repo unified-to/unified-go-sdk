@@ -39,6 +39,34 @@ const (
 func (e PatchHrisDeductionQueryParamFields) ToPointer() *PatchHrisDeductionQueryParamFields {
 	return &e
 }
+
+// PatchHrisDeductionQueryParamFieldsValues returns every known PatchHrisDeductionQueryParamFields value in schema order.
+func PatchHrisDeductionQueryParamFieldsValues() []PatchHrisDeductionQueryParamFields {
+	return []PatchHrisDeductionQueryParamFields{
+		PatchHrisDeductionQueryParamFieldsID,
+		PatchHrisDeductionQueryParamFieldsCreatedAt,
+		PatchHrisDeductionQueryParamFieldsUpdatedAt,
+		PatchHrisDeductionQueryParamFieldsUserID,
+		PatchHrisDeductionQueryParamFieldsCompanyID,
+		PatchHrisDeductionQueryParamFieldsBenefitID,
+		PatchHrisDeductionQueryParamFieldsAmount,
+		PatchHrisDeductionQueryParamFieldsType,
+		PatchHrisDeductionQueryParamFieldsCoverageLevel,
+		PatchHrisDeductionQueryParamFieldsFrequency,
+		PatchHrisDeductionQueryParamFieldsStartAt,
+		PatchHrisDeductionQueryParamFieldsEndAt,
+		PatchHrisDeductionQueryParamFieldsIsActive,
+		PatchHrisDeductionQueryParamFieldsNotes,
+		PatchHrisDeductionQueryParamFieldsEmployerAmount,
+		PatchHrisDeductionQueryParamFieldsEmployerType,
+		PatchHrisDeductionQueryParamFieldsMaxAmount,
+		PatchHrisDeductionQueryParamFieldsPaycodeID,
+		PatchHrisDeductionQueryParamFieldsGarnishmentType,
+		PatchHrisDeductionQueryParamFieldsLoanIdentifier,
+		PatchHrisDeductionQueryParamFieldsMetadata,
+		PatchHrisDeductionQueryParamFieldsRaw,
+	}
+}
 func (e *PatchHrisDeductionQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

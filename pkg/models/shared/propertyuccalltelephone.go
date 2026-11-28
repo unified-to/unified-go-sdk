@@ -16,6 +16,17 @@ func (e PropertyUcCallTelephoneType) ToPointer() *PropertyUcCallTelephoneType {
 	return &e
 }
 
+// PropertyUcCallTelephoneTypeValues returns every known PropertyUcCallTelephoneType value in schema order.
+func PropertyUcCallTelephoneTypeValues() []PropertyUcCallTelephoneType {
+	return []PropertyUcCallTelephoneType{
+		PropertyUcCallTelephoneTypeWork,
+		PropertyUcCallTelephoneTypeHome,
+		PropertyUcCallTelephoneTypeOther,
+		PropertyUcCallTelephoneTypeFax,
+		PropertyUcCallTelephoneTypeMobile,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyUcCallTelephoneType) IsExact() bool {
 	if e != nil {

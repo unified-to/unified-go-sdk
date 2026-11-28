@@ -48,6 +48,43 @@ const (
 func (e PatchPaymentPaymentQueryParamFields) ToPointer() *PatchPaymentPaymentQueryParamFields {
 	return &e
 }
+
+// PatchPaymentPaymentQueryParamFieldsValues returns every known PatchPaymentPaymentQueryParamFields value in schema order.
+func PatchPaymentPaymentQueryParamFieldsValues() []PatchPaymentPaymentQueryParamFields {
+	return []PatchPaymentPaymentQueryParamFields{
+		PatchPaymentPaymentQueryParamFieldsID,
+		PatchPaymentPaymentQueryParamFieldsCreatedAt,
+		PatchPaymentPaymentQueryParamFieldsUpdatedAt,
+		PatchPaymentPaymentQueryParamFieldsTotalAmount,
+		PatchPaymentPaymentQueryParamFieldsContactID,
+		PatchPaymentPaymentQueryParamFieldsPaymentMethod,
+		PatchPaymentPaymentQueryParamFieldsType,
+		PatchPaymentPaymentQueryParamFieldsCurrency,
+		PatchPaymentPaymentQueryParamFieldsNotes,
+		PatchPaymentPaymentQueryParamFieldsInvoiceID,
+		PatchPaymentPaymentQueryParamFieldsBillID,
+		PatchPaymentPaymentQueryParamFieldsLinkID,
+		PatchPaymentPaymentQueryParamFieldsAccountID,
+		PatchPaymentPaymentQueryParamFieldsReference,
+		PatchPaymentPaymentQueryParamFieldsOrganizationID,
+		PatchPaymentPaymentQueryParamFieldsAllocations,
+		PatchPaymentPaymentQueryParamFieldsStatus,
+		PatchPaymentPaymentQueryParamFieldsSalesorderID,
+		PatchPaymentPaymentQueryParamFieldsTenderType,
+		PatchPaymentPaymentQueryParamFieldsTipAmount,
+		PatchPaymentPaymentQueryParamFieldsFeeAmount,
+		PatchPaymentPaymentQueryParamFieldsLocationID,
+		PatchPaymentPaymentQueryParamFieldsDeviceID,
+		PatchPaymentPaymentQueryParamFieldsCardBrand,
+		PatchPaymentPaymentQueryParamFieldsCardLast4,
+		PatchPaymentPaymentQueryParamFieldsPaidAt,
+		PatchPaymentPaymentQueryParamFieldsExchangeRate,
+		PatchPaymentPaymentQueryParamFieldsCategoryIds,
+		PatchPaymentPaymentQueryParamFieldsNetAmount,
+		PatchPaymentPaymentQueryParamFieldsMetadata,
+		PatchPaymentPaymentQueryParamFieldsRaw,
+	}
+}
 func (e *PatchPaymentPaymentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

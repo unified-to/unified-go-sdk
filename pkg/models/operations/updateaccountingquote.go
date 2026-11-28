@@ -51,6 +51,46 @@ const (
 func (e UpdateAccountingQuoteQueryParamFields) ToPointer() *UpdateAccountingQuoteQueryParamFields {
 	return &e
 }
+
+// UpdateAccountingQuoteQueryParamFieldsValues returns every known UpdateAccountingQuoteQueryParamFields value in schema order.
+func UpdateAccountingQuoteQueryParamFieldsValues() []UpdateAccountingQuoteQueryParamFields {
+	return []UpdateAccountingQuoteQueryParamFields{
+		UpdateAccountingQuoteQueryParamFieldsID,
+		UpdateAccountingQuoteQueryParamFieldsCreatedAt,
+		UpdateAccountingQuoteQueryParamFieldsUpdatedAt,
+		UpdateAccountingQuoteQueryParamFieldsQuoteNumber,
+		UpdateAccountingQuoteQueryParamFieldsReference,
+		UpdateAccountingQuoteQueryParamFieldsTitle,
+		UpdateAccountingQuoteQueryParamFieldsSummary,
+		UpdateAccountingQuoteQueryParamFieldsPaymentTerms,
+		UpdateAccountingQuoteQueryParamFieldsCustomerMessage,
+		UpdateAccountingQuoteQueryParamFieldsMemo,
+		UpdateAccountingQuoteQueryParamFieldsContactID,
+		UpdateAccountingQuoteQueryParamFieldsContacts,
+		UpdateAccountingQuoteQueryParamFieldsIssuedAt,
+		UpdateAccountingQuoteQueryParamFieldsExpiresAt,
+		UpdateAccountingQuoteQueryParamFieldsSentAt,
+		UpdateAccountingQuoteQueryParamFieldsAcceptedAt,
+		UpdateAccountingQuoteQueryParamFieldsDeclinedAt,
+		UpdateAccountingQuoteQueryParamFieldsStatus,
+		UpdateAccountingQuoteQueryParamFieldsCurrency,
+		UpdateAccountingQuoteQueryParamFieldsCurrencyRate,
+		UpdateAccountingQuoteQueryParamFieldsSubTotalAmount,
+		UpdateAccountingQuoteQueryParamFieldsTaxAmount,
+		UpdateAccountingQuoteQueryParamFieldsDiscountAmount,
+		UpdateAccountingQuoteQueryParamFieldsTotalAmount,
+		UpdateAccountingQuoteQueryParamFieldsTaxMode,
+		UpdateAccountingQuoteQueryParamFieldsLineitems,
+		UpdateAccountingQuoteQueryParamFieldsInvoiceID,
+		UpdateAccountingQuoteQueryParamFieldsProjectID,
+		UpdateAccountingQuoteQueryParamFieldsGroupID,
+		UpdateAccountingQuoteQueryParamFieldsCategoryIds,
+		UpdateAccountingQuoteQueryParamFieldsURL,
+		UpdateAccountingQuoteQueryParamFieldsOrganizationID,
+		UpdateAccountingQuoteQueryParamFieldsMetadata,
+		UpdateAccountingQuoteQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateAccountingQuoteQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

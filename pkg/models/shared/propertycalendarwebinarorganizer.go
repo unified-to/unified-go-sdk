@@ -14,6 +14,15 @@ func (e PropertyCalendarWebinarOrganizerStatus) ToPointer() *PropertyCalendarWeb
 	return &e
 }
 
+// PropertyCalendarWebinarOrganizerStatusValues returns every known PropertyCalendarWebinarOrganizerStatus value in schema order.
+func PropertyCalendarWebinarOrganizerStatusValues() []PropertyCalendarWebinarOrganizerStatus {
+	return []PropertyCalendarWebinarOrganizerStatus{
+		PropertyCalendarWebinarOrganizerStatusAccepted,
+		PropertyCalendarWebinarOrganizerStatusRejected,
+		PropertyCalendarWebinarOrganizerStatusTentative,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyCalendarWebinarOrganizerStatus) IsExact() bool {
 	if e != nil {

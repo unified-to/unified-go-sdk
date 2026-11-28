@@ -21,6 +21,16 @@ func (e Relationship) ToPointer() *Relationship {
 	return &e
 }
 
+// RelationshipValues returns every known Relationship value in schema order.
+func RelationshipValues() []Relationship {
+	return []Relationship{
+		RelationshipSelf,
+		RelationshipSpouse,
+		RelationshipChild,
+		RelationshipOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Relationship) IsExact() bool {
 	if e != nil {
@@ -45,6 +55,17 @@ const (
 
 func (e HealthcareCoverageStatus) ToPointer() *HealthcareCoverageStatus {
 	return &e
+}
+
+// HealthcareCoverageStatusValues returns every known HealthcareCoverageStatus value in schema order.
+func HealthcareCoverageStatusValues() []HealthcareCoverageStatus {
+	return []HealthcareCoverageStatus{
+		HealthcareCoverageStatusActive,
+		HealthcareCoverageStatusCancelled,
+		HealthcareCoverageStatusDraft,
+		HealthcareCoverageStatusEnteredInError,
+		HealthcareCoverageStatusOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

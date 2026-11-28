@@ -24,6 +24,24 @@ func (e FhirDiagnosticReportResourceType) ToPointer() *FhirDiagnosticReportResou
 	return &e
 }
 
+// FhirDiagnosticReportResourceTypeValues returns every known FhirDiagnosticReportResourceType value in schema order.
+func FhirDiagnosticReportResourceTypeValues() []FhirDiagnosticReportResourceType {
+	return []FhirDiagnosticReportResourceType{
+		FhirDiagnosticReportResourceTypePatient,
+		FhirDiagnosticReportResourceTypePractitioner,
+		FhirDiagnosticReportResourceTypeEncounter,
+		FhirDiagnosticReportResourceTypeObservation,
+		FhirDiagnosticReportResourceTypeCondition,
+		FhirDiagnosticReportResourceTypeAllergyIntolerance,
+		FhirDiagnosticReportResourceTypeMedicationRequest,
+		FhirDiagnosticReportResourceTypeImmunization,
+		FhirDiagnosticReportResourceTypeBundle,
+		FhirDiagnosticReportResourceTypeOperationOutcome,
+		FhirDiagnosticReportResourceTypeCapabilityStatement,
+		FhirDiagnosticReportResourceTypeDiagnosticReport,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *FhirDiagnosticReportResourceType) IsExact() bool {
 	if e != nil {
@@ -53,6 +71,22 @@ const (
 
 func (e FhirDiagnosticReportStatus) ToPointer() *FhirDiagnosticReportStatus {
 	return &e
+}
+
+// FhirDiagnosticReportStatusValues returns every known FhirDiagnosticReportStatus value in schema order.
+func FhirDiagnosticReportStatusValues() []FhirDiagnosticReportStatus {
+	return []FhirDiagnosticReportStatus{
+		FhirDiagnosticReportStatusRegistered,
+		FhirDiagnosticReportStatusPartial,
+		FhirDiagnosticReportStatusPreliminary,
+		FhirDiagnosticReportStatusFinal,
+		FhirDiagnosticReportStatusAmended,
+		FhirDiagnosticReportStatusCorrected,
+		FhirDiagnosticReportStatusAppended,
+		FhirDiagnosticReportStatusCancelled,
+		FhirDiagnosticReportStatusEnteredInError,
+		FhirDiagnosticReportStatusUnknown,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

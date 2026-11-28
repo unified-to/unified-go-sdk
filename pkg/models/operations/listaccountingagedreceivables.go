@@ -30,6 +30,25 @@ const (
 func (e ListAccountingAgedreceivablesQueryParamFields) ToPointer() *ListAccountingAgedreceivablesQueryParamFields {
 	return &e
 }
+
+// ListAccountingAgedreceivablesQueryParamFieldsValues returns every known ListAccountingAgedreceivablesQueryParamFields value in schema order.
+func ListAccountingAgedreceivablesQueryParamFieldsValues() []ListAccountingAgedreceivablesQueryParamFields {
+	return []ListAccountingAgedreceivablesQueryParamFields{
+		ListAccountingAgedreceivablesQueryParamFieldsID,
+		ListAccountingAgedreceivablesQueryParamFieldsCreatedAt,
+		ListAccountingAgedreceivablesQueryParamFieldsUpdatedAt,
+		ListAccountingAgedreceivablesQueryParamFieldsCurrency,
+		ListAccountingAgedreceivablesQueryParamFieldsStartAt,
+		ListAccountingAgedreceivablesQueryParamFieldsEndAt,
+		ListAccountingAgedreceivablesQueryParamFieldsTotalCurrentAmount,
+		ListAccountingAgedreceivablesQueryParamFieldsTotalOverdueAmount,
+		ListAccountingAgedreceivablesQueryParamFieldsTotalAmount,
+		ListAccountingAgedreceivablesQueryParamFieldsPeriods,
+		ListAccountingAgedreceivablesQueryParamFieldsOrganizationID,
+		ListAccountingAgedreceivablesQueryParamFieldsMetadata,
+		ListAccountingAgedreceivablesQueryParamFieldsRaw,
+	}
+}
 func (e *ListAccountingAgedreceivablesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

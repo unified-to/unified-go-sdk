@@ -47,6 +47,42 @@ const (
 func (e CreateAccountingExpenseQueryParamFields) ToPointer() *CreateAccountingExpenseQueryParamFields {
 	return &e
 }
+
+// CreateAccountingExpenseQueryParamFieldsValues returns every known CreateAccountingExpenseQueryParamFields value in schema order.
+func CreateAccountingExpenseQueryParamFieldsValues() []CreateAccountingExpenseQueryParamFields {
+	return []CreateAccountingExpenseQueryParamFields{
+		CreateAccountingExpenseQueryParamFieldsID,
+		CreateAccountingExpenseQueryParamFieldsCreatedAt,
+		CreateAccountingExpenseQueryParamFieldsUpdatedAt,
+		CreateAccountingExpenseQueryParamFieldsUserID,
+		CreateAccountingExpenseQueryParamFieldsContactID,
+		CreateAccountingExpenseQueryParamFieldsAccountID,
+		CreateAccountingExpenseQueryParamFieldsName,
+		CreateAccountingExpenseQueryParamFieldsPaymentMethod,
+		CreateAccountingExpenseQueryParamFieldsPostedAt,
+		CreateAccountingExpenseQueryParamFieldsTotalAmount,
+		CreateAccountingExpenseQueryParamFieldsCurrency,
+		CreateAccountingExpenseQueryParamFieldsTaxAmount,
+		CreateAccountingExpenseQueryParamFieldsReimbursedAmount,
+		CreateAccountingExpenseQueryParamFieldsReimbursedAt,
+		CreateAccountingExpenseQueryParamFieldsApprovedAt,
+		CreateAccountingExpenseQueryParamFieldsApproverUserID,
+		CreateAccountingExpenseQueryParamFieldsLineitems,
+		CreateAccountingExpenseQueryParamFieldsAttachments,
+		CreateAccountingExpenseQueryParamFieldsOrganizationID,
+		CreateAccountingExpenseQueryParamFieldsUsers,
+		CreateAccountingExpenseQueryParamFieldsApproverUsers,
+		CreateAccountingExpenseQueryParamFieldsStatus,
+		CreateAccountingExpenseQueryParamFieldsExternalNumber,
+		CreateAccountingExpenseQueryParamFieldsCategoryIds,
+		CreateAccountingExpenseQueryParamFieldsProjectID,
+		CreateAccountingExpenseQueryParamFieldsMetadata,
+		CreateAccountingExpenseQueryParamFieldsTaxrateID,
+		CreateAccountingExpenseQueryParamFieldsExchangeRate,
+		CreateAccountingExpenseQueryParamFieldsType,
+		CreateAccountingExpenseQueryParamFieldsRaw,
+	}
+}
 func (e *CreateAccountingExpenseQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

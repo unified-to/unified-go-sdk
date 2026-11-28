@@ -14,6 +14,15 @@ func (e Role) ToPointer() *Role {
 	return &e
 }
 
+// RoleValues returns every known Role value in schema order.
+func RoleValues() []Role {
+	return []Role{
+		RoleSystem,
+		RoleUser,
+		RoleAssistant,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Role) IsExact() bool {
 	if e != nil {

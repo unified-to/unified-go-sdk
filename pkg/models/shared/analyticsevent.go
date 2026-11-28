@@ -32,6 +32,28 @@ func (e EventType) ToPointer() *EventType {
 	return &e
 }
 
+// EventTypeValues returns every known EventType value in schema order.
+func EventTypeValues() []EventType {
+	return []EventType{
+		EventTypePageView,
+		EventTypeScreenView,
+		EventTypeClick,
+		EventTypeFormSubmit,
+		EventTypePurchase,
+		EventTypeSignUp,
+		EventTypeLogin,
+		EventTypeLogout,
+		EventTypeSearch,
+		EventTypeVideoPlay,
+		EventTypeVideoComplete,
+		EventTypeFileDownload,
+		EventTypeScroll,
+		EventTypeSessionStart,
+		EventTypeFirstVisit,
+		EventTypeCustom,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *EventType) IsExact() bool {
 	if e != nil {

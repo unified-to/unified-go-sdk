@@ -20,6 +20,21 @@ func (e AccountingContactPaymentMethodType) ToPointer() *AccountingContactPaymen
 	return &e
 }
 
+// AccountingContactPaymentMethodTypeValues returns every known AccountingContactPaymentMethodType value in schema order.
+func AccountingContactPaymentMethodTypeValues() []AccountingContactPaymentMethodType {
+	return []AccountingContactPaymentMethodType{
+		AccountingContactPaymentMethodTypeAch,
+		AccountingContactPaymentMethodTypeAlipay,
+		AccountingContactPaymentMethodTypeCard,
+		AccountingContactPaymentMethodTypeGiropay,
+		AccountingContactPaymentMethodTypeIdeal,
+		AccountingContactPaymentMethodTypeOther,
+		AccountingContactPaymentMethodTypePaypal,
+		AccountingContactPaymentMethodTypeWire,
+		AccountingContactPaymentMethodTypeCheck,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingContactPaymentMethodType) IsExact() bool {
 	if e != nil {

@@ -297,6 +297,25 @@ func (e LmsMetadataFormat) ToPointer() *LmsMetadataFormat {
 	return &e
 }
 
+// LmsMetadataFormatValues returns every known LmsMetadataFormat value in schema order.
+func LmsMetadataFormatValues() []LmsMetadataFormat {
+	return []LmsMetadataFormat{
+		LmsMetadataFormatText,
+		LmsMetadataFormatNumber,
+		LmsMetadataFormatDate,
+		LmsMetadataFormatBoolean,
+		LmsMetadataFormatFile,
+		LmsMetadataFormatTextarea,
+		LmsMetadataFormatSingleSelect,
+		LmsMetadataFormatMultipleSelect,
+		LmsMetadataFormatMeasurement,
+		LmsMetadataFormatPrice,
+		LmsMetadataFormatYesNo,
+		LmsMetadataFormatCurrency,
+		LmsMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *LmsMetadataFormat) IsExact() bool {
 	if e != nil {

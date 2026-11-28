@@ -35,6 +35,30 @@ const (
 func (e PatchPrintingOrderQueryParamFields) ToPointer() *PatchPrintingOrderQueryParamFields {
 	return &e
 }
+
+// PatchPrintingOrderQueryParamFieldsValues returns every known PatchPrintingOrderQueryParamFields value in schema order.
+func PatchPrintingOrderQueryParamFieldsValues() []PatchPrintingOrderQueryParamFields {
+	return []PatchPrintingOrderQueryParamFields{
+		PatchPrintingOrderQueryParamFieldsID,
+		PatchPrintingOrderQueryParamFieldsCreatedAt,
+		PatchPrintingOrderQueryParamFieldsUpdatedAt,
+		PatchPrintingOrderQueryParamFieldsExternalIdentifier,
+		PatchPrintingOrderQueryParamFieldsCustomerIdentifier,
+		PatchPrintingOrderQueryParamFieldsStatus,
+		PatchPrintingOrderQueryParamFieldsCurrency,
+		PatchPrintingOrderQueryParamFieldsShippingAddress,
+		PatchPrintingOrderQueryParamFieldsShippingMethod,
+		PatchPrintingOrderQueryParamFieldsLineitems,
+		PatchPrintingOrderQueryParamFieldsSubtotalAmount,
+		PatchPrintingOrderQueryParamFieldsDiscountAmount,
+		PatchPrintingOrderQueryParamFieldsShippingAmount,
+		PatchPrintingOrderQueryParamFieldsTaxAmount,
+		PatchPrintingOrderQueryParamFieldsTotalAmount,
+		PatchPrintingOrderQueryParamFieldsShipments,
+		PatchPrintingOrderQueryParamFieldsMetadata,
+		PatchPrintingOrderQueryParamFieldsRaw,
+	}
+}
 func (e *PatchPrintingOrderQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -23,6 +23,18 @@ func (e ComputeUsageCategory) ToPointer() *ComputeUsageCategory {
 	return &e
 }
 
+// ComputeUsageCategoryValues returns every known ComputeUsageCategory value in schema order.
+func ComputeUsageCategoryValues() []ComputeUsageCategory {
+	return []ComputeUsageCategory{
+		ComputeUsageCategoryGpu,
+		ComputeUsageCategoryCPU,
+		ComputeUsageCategoryMemory,
+		ComputeUsageCategoryStorage,
+		ComputeUsageCategoryNetwork,
+		ComputeUsageCategoryOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ComputeUsageCategory) IsExact() bool {
 	if e != nil {
@@ -49,6 +61,19 @@ const (
 
 func (e Unit) ToPointer() *Unit {
 	return &e
+}
+
+// UnitValues returns every known Unit value in schema order.
+func UnitValues() []Unit {
+	return []Unit{
+		UnitGpuHour,
+		UnitVcpuSecond,
+		UnitGbSecond,
+		UnitGbMonth,
+		UnitByte,
+		UnitSecond,
+		UnitOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

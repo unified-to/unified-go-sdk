@@ -29,6 +29,24 @@ const (
 func (e CreateComputeSnapshotQueryParamFields) ToPointer() *CreateComputeSnapshotQueryParamFields {
 	return &e
 }
+
+// CreateComputeSnapshotQueryParamFieldsValues returns every known CreateComputeSnapshotQueryParamFields value in schema order.
+func CreateComputeSnapshotQueryParamFieldsValues() []CreateComputeSnapshotQueryParamFields {
+	return []CreateComputeSnapshotQueryParamFields{
+		CreateComputeSnapshotQueryParamFieldsID,
+		CreateComputeSnapshotQueryParamFieldsCreatedAt,
+		CreateComputeSnapshotQueryParamFieldsUpdatedAt,
+		CreateComputeSnapshotQueryParamFieldsName,
+		CreateComputeSnapshotQueryParamFieldsInstanceID,
+		CreateComputeSnapshotQueryParamFieldsVolumeID,
+		CreateComputeSnapshotQueryParamFieldsType,
+		CreateComputeSnapshotQueryParamFieldsStatus,
+		CreateComputeSnapshotQueryParamFieldsSizeMb,
+		CreateComputeSnapshotQueryParamFieldsExpiresAt,
+		CreateComputeSnapshotQueryParamFieldsMetadata,
+		CreateComputeSnapshotQueryParamFieldsRaw,
+	}
+}
 func (e *CreateComputeSnapshotQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

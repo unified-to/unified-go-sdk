@@ -21,6 +21,17 @@ func (e PaymentPaymentStatus) ToPointer() *PaymentPaymentStatus {
 	return &e
 }
 
+// PaymentPaymentStatusValues returns every known PaymentPaymentStatus value in schema order.
+func PaymentPaymentStatusValues() []PaymentPaymentStatus {
+	return []PaymentPaymentStatus{
+		PaymentPaymentStatusSucceeded,
+		PaymentPaymentStatusPending,
+		PaymentPaymentStatusAuthorized,
+		PaymentPaymentStatusFailed,
+		PaymentPaymentStatusCanceled,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PaymentPaymentStatus) IsExact() bool {
 	if e != nil {
@@ -52,6 +63,22 @@ func (e TenderType) ToPointer() *TenderType {
 	return &e
 }
 
+// TenderTypeValues returns every known TenderType value in schema order.
+func TenderTypeValues() []TenderType {
+	return []TenderType{
+		TenderTypeCard,
+		TenderTypeCash,
+		TenderTypeGiftCard,
+		TenderTypeBankTransfer,
+		TenderTypeWallet,
+		TenderTypeCheck,
+		TenderTypeStoreCredit,
+		TenderTypeBuyNowPayLater,
+		TenderTypeExternal,
+		TenderTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *TenderType) IsExact() bool {
 	if e != nil {
@@ -72,6 +99,14 @@ const (
 
 func (e PaymentPaymentType) ToPointer() *PaymentPaymentType {
 	return &e
+}
+
+// PaymentPaymentTypeValues returns every known PaymentPaymentType value in schema order.
+func PaymentPaymentTypeValues() []PaymentPaymentType {
+	return []PaymentPaymentType{
+		PaymentPaymentTypeInvoice,
+		PaymentPaymentTypeBill,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

@@ -20,6 +20,16 @@ func (e IntervalUnit) ToPointer() *IntervalUnit {
 	return &e
 }
 
+// IntervalUnitValues returns every known IntervalUnit value in schema order.
+func IntervalUnitValues() []IntervalUnit {
+	return []IntervalUnit{
+		IntervalUnitYear,
+		IntervalUnitMonth,
+		IntervalUnitWeek,
+		IntervalUnitDay,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *IntervalUnit) IsExact() bool {
 	if e != nil {
@@ -42,6 +52,16 @@ const (
 
 func (e PaymentSubscriptionStatus) ToPointer() *PaymentSubscriptionStatus {
 	return &e
+}
+
+// PaymentSubscriptionStatusValues returns every known PaymentSubscriptionStatus value in schema order.
+func PaymentSubscriptionStatusValues() []PaymentSubscriptionStatus {
+	return []PaymentSubscriptionStatus{
+		PaymentSubscriptionStatusActive,
+		PaymentSubscriptionStatusInactive,
+		PaymentSubscriptionStatusCanceled,
+		PaymentSubscriptionStatusPaused,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

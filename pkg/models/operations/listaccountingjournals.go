@@ -38,6 +38,33 @@ const (
 func (e ListAccountingJournalsQueryParamFields) ToPointer() *ListAccountingJournalsQueryParamFields {
 	return &e
 }
+
+// ListAccountingJournalsQueryParamFieldsValues returns every known ListAccountingJournalsQueryParamFields value in schema order.
+func ListAccountingJournalsQueryParamFieldsValues() []ListAccountingJournalsQueryParamFields {
+	return []ListAccountingJournalsQueryParamFields{
+		ListAccountingJournalsQueryParamFieldsID,
+		ListAccountingJournalsQueryParamFieldsCreatedAt,
+		ListAccountingJournalsQueryParamFieldsUpdatedAt,
+		ListAccountingJournalsQueryParamFieldsReference,
+		ListAccountingJournalsQueryParamFieldsTaxAmount,
+		ListAccountingJournalsQueryParamFieldsCurrency,
+		ListAccountingJournalsQueryParamFieldsLineitems,
+		ListAccountingJournalsQueryParamFieldsTaxrateID,
+		ListAccountingJournalsQueryParamFieldsDescription,
+		ListAccountingJournalsQueryParamFieldsPostedAt,
+		ListAccountingJournalsQueryParamFieldsSource,
+		ListAccountingJournalsQueryParamFieldsOrganizationID,
+		ListAccountingJournalsQueryParamFieldsCategoryIds,
+		ListAccountingJournalsQueryParamFieldsProjectID,
+		ListAccountingJournalsQueryParamFieldsAttachments,
+		ListAccountingJournalsQueryParamFieldsTotalAmount,
+		ListAccountingJournalsQueryParamFieldsExchangeRate,
+		ListAccountingJournalsQueryParamFieldsStatus,
+		ListAccountingJournalsQueryParamFieldsIsInclusiveOfTax,
+		ListAccountingJournalsQueryParamFieldsMetadata,
+		ListAccountingJournalsQueryParamFieldsRaw,
+	}
+}
 func (e *ListAccountingJournalsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -24,6 +24,20 @@ func (e AdsInventoryStatus) ToPointer() *AdsInventoryStatus {
 	return &e
 }
 
+// AdsInventoryStatusValues returns every known AdsInventoryStatus value in schema order.
+func AdsInventoryStatusValues() []AdsInventoryStatus {
+	return []AdsInventoryStatus{
+		AdsInventoryStatusUnspecified,
+		AdsInventoryStatusActive,
+		AdsInventoryStatusPaused,
+		AdsInventoryStatusArchived,
+		AdsInventoryStatusDraft,
+		AdsInventoryStatusScheduledForDeletion,
+		AdsInventoryStatusProcessing,
+		AdsInventoryStatusProcessingFailed,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AdsInventoryStatus) IsExact() bool {
 	if e != nil {
@@ -49,6 +63,19 @@ const (
 
 func (e AdsInventoryType) ToPointer() *AdsInventoryType {
 	return &e
+}
+
+// AdsInventoryTypeValues returns every known AdsInventoryType value in schema order.
+func AdsInventoryTypeValues() []AdsInventoryType {
+	return []AdsInventoryType{
+		AdsInventoryTypeAdUnit,
+		AdsInventoryTypePlacement,
+		AdsInventoryTypeSite,
+		AdsInventoryTypeApp,
+		AdsInventoryTypeZone,
+		AdsInventoryTypeChannel,
+		AdsInventoryTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

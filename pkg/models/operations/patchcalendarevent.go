@@ -44,6 +44,39 @@ const (
 func (e PatchCalendarEventQueryParamFields) ToPointer() *PatchCalendarEventQueryParamFields {
 	return &e
 }
+
+// PatchCalendarEventQueryParamFieldsValues returns every known PatchCalendarEventQueryParamFields value in schema order.
+func PatchCalendarEventQueryParamFieldsValues() []PatchCalendarEventQueryParamFields {
+	return []PatchCalendarEventQueryParamFields{
+		PatchCalendarEventQueryParamFieldsID,
+		PatchCalendarEventQueryParamFieldsCreatedAt,
+		PatchCalendarEventQueryParamFieldsUpdatedAt,
+		PatchCalendarEventQueryParamFieldsCalendarID,
+		PatchCalendarEventQueryParamFieldsSubject,
+		PatchCalendarEventQueryParamFieldsStartAt,
+		PatchCalendarEventQueryParamFieldsEndAt,
+		PatchCalendarEventQueryParamFieldsIsAllDay,
+		PatchCalendarEventQueryParamFieldsTimezone,
+		PatchCalendarEventQueryParamFieldsNotes,
+		PatchCalendarEventQueryParamFieldsLocation,
+		PatchCalendarEventQueryParamFieldsIsFree,
+		PatchCalendarEventQueryParamFieldsIsPrivate,
+		PatchCalendarEventQueryParamFieldsStatus,
+		PatchCalendarEventQueryParamFieldsOrganizer,
+		PatchCalendarEventQueryParamFieldsAttendees,
+		PatchCalendarEventQueryParamFieldsRecurringEventID,
+		PatchCalendarEventQueryParamFieldsRecurrence,
+		PatchCalendarEventQueryParamFieldsWebURL,
+		PatchCalendarEventQueryParamFieldsHasConference,
+		PatchCalendarEventQueryParamFieldsConference,
+		PatchCalendarEventQueryParamFieldsAttachments,
+		PatchCalendarEventQueryParamFieldsSendNotifications,
+		PatchCalendarEventQueryParamFieldsMatterID,
+		PatchCalendarEventQueryParamFieldsMetadata,
+		PatchCalendarEventQueryParamFieldsRooms,
+		PatchCalendarEventQueryParamFieldsRaw,
+	}
+}
 func (e *PatchCalendarEventQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

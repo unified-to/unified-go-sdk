@@ -19,6 +19,15 @@ func (e QmsInspectionResult) ToPointer() *QmsInspectionResult {
 	return &e
 }
 
+// QmsInspectionResultValues returns every known QmsInspectionResult value in schema order.
+func QmsInspectionResultValues() []QmsInspectionResult {
+	return []QmsInspectionResult{
+		QmsInspectionResultPass,
+		QmsInspectionResultFail,
+		QmsInspectionResultConditional,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *QmsInspectionResult) IsExact() bool {
 	if e != nil {
@@ -42,6 +51,17 @@ const (
 
 func (e QmsInspectionStatus) ToPointer() *QmsInspectionStatus {
 	return &e
+}
+
+// QmsInspectionStatusValues returns every known QmsInspectionStatus value in schema order.
+func QmsInspectionStatusValues() []QmsInspectionStatus {
+	return []QmsInspectionStatus{
+		QmsInspectionStatusOpen,
+		QmsInspectionStatusInProgress,
+		QmsInspectionStatusInReview,
+		QmsInspectionStatusClosed,
+		QmsInspectionStatusCancelled,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -68,6 +88,18 @@ const (
 
 func (e QmsInspectionType) ToPointer() *QmsInspectionType {
 	return &e
+}
+
+// QmsInspectionTypeValues returns every known QmsInspectionType value in schema order.
+func QmsInspectionTypeValues() []QmsInspectionType {
+	return []QmsInspectionType{
+		QmsInspectionTypeReceiving,
+		QmsInspectionTypeInProcess,
+		QmsInspectionTypeFinal,
+		QmsInspectionTypeFirstArticle,
+		QmsInspectionTypeSource,
+		QmsInspectionTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

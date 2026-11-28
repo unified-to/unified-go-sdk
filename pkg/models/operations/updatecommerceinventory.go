@@ -26,6 +26,21 @@ const (
 func (e UpdateCommerceInventoryQueryParamFields) ToPointer() *UpdateCommerceInventoryQueryParamFields {
 	return &e
 }
+
+// UpdateCommerceInventoryQueryParamFieldsValues returns every known UpdateCommerceInventoryQueryParamFields value in schema order.
+func UpdateCommerceInventoryQueryParamFieldsValues() []UpdateCommerceInventoryQueryParamFields {
+	return []UpdateCommerceInventoryQueryParamFields{
+		UpdateCommerceInventoryQueryParamFieldsID,
+		UpdateCommerceInventoryQueryParamFieldsUpdatedAt,
+		UpdateCommerceInventoryQueryParamFieldsItemID,
+		UpdateCommerceInventoryQueryParamFieldsItemVariantID,
+		UpdateCommerceInventoryQueryParamFieldsItemOptionID,
+		UpdateCommerceInventoryQueryParamFieldsLocationID,
+		UpdateCommerceInventoryQueryParamFieldsAvailable,
+		UpdateCommerceInventoryQueryParamFieldsMetadata,
+		UpdateCommerceInventoryQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateCommerceInventoryQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

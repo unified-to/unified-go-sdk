@@ -35,6 +35,30 @@ const (
 func (e PatchPropertyReviewQueryParamFields) ToPointer() *PatchPropertyReviewQueryParamFields {
 	return &e
 }
+
+// PatchPropertyReviewQueryParamFieldsValues returns every known PatchPropertyReviewQueryParamFields value in schema order.
+func PatchPropertyReviewQueryParamFieldsValues() []PatchPropertyReviewQueryParamFields {
+	return []PatchPropertyReviewQueryParamFields{
+		PatchPropertyReviewQueryParamFieldsID,
+		PatchPropertyReviewQueryParamFieldsCreatedAt,
+		PatchPropertyReviewQueryParamFieldsUpdatedAt,
+		PatchPropertyReviewQueryParamFieldsListingID,
+		PatchPropertyReviewQueryParamFieldsReservationID,
+		PatchPropertyReviewQueryParamFieldsGuestID,
+		PatchPropertyReviewQueryParamFieldsAuthorName,
+		PatchPropertyReviewQueryParamFieldsSource,
+		PatchPropertyReviewQueryParamFieldsTitle,
+		PatchPropertyReviewQueryParamFieldsContent,
+		PatchPropertyReviewQueryParamFieldsRating,
+		PatchPropertyReviewQueryParamFieldsCategoryRatings,
+		PatchPropertyReviewQueryParamFieldsPrivateFeedback,
+		PatchPropertyReviewQueryParamFieldsResponse,
+		PatchPropertyReviewQueryParamFieldsRespondedAt,
+		PatchPropertyReviewQueryParamFieldsIsPublic,
+		PatchPropertyReviewQueryParamFieldsMetadata,
+		PatchPropertyReviewQueryParamFieldsRaw,
+	}
+}
 func (e *PatchPropertyReviewQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

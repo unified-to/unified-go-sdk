@@ -45,6 +45,40 @@ const (
 func (e PatchCommerceItemvariantQueryParamFields) ToPointer() *PatchCommerceItemvariantQueryParamFields {
 	return &e
 }
+
+// PatchCommerceItemvariantQueryParamFieldsValues returns every known PatchCommerceItemvariantQueryParamFields value in schema order.
+func PatchCommerceItemvariantQueryParamFieldsValues() []PatchCommerceItemvariantQueryParamFields {
+	return []PatchCommerceItemvariantQueryParamFields{
+		PatchCommerceItemvariantQueryParamFieldsID,
+		PatchCommerceItemvariantQueryParamFieldsCreatedAt,
+		PatchCommerceItemvariantQueryParamFieldsUpdatedAt,
+		PatchCommerceItemvariantQueryParamFieldsName,
+		PatchCommerceItemvariantQueryParamFieldsPublicName,
+		PatchCommerceItemvariantQueryParamFieldsDescription,
+		PatchCommerceItemvariantQueryParamFieldsPublicDescription,
+		PatchCommerceItemvariantQueryParamFieldsSku,
+		PatchCommerceItemvariantQueryParamFieldsIsActive,
+		PatchCommerceItemvariantQueryParamFieldsIsVisible,
+		PatchCommerceItemvariantQueryParamFieldsIsFeatured,
+		PatchCommerceItemvariantQueryParamFieldsMedia,
+		PatchCommerceItemvariantQueryParamFieldsAvailableAt,
+		PatchCommerceItemvariantQueryParamFieldsTags,
+		PatchCommerceItemvariantQueryParamFieldsWidth,
+		PatchCommerceItemvariantQueryParamFieldsHeight,
+		PatchCommerceItemvariantQueryParamFieldsLength,
+		PatchCommerceItemvariantQueryParamFieldsWeight,
+		PatchCommerceItemvariantQueryParamFieldsSizeUnit,
+		PatchCommerceItemvariantQueryParamFieldsWeightUnit,
+		PatchCommerceItemvariantQueryParamFieldsTotalStock,
+		PatchCommerceItemvariantQueryParamFieldsPrices,
+		PatchCommerceItemvariantQueryParamFieldsOptions,
+		PatchCommerceItemvariantQueryParamFieldsInventoryID,
+		PatchCommerceItemvariantQueryParamFieldsRequiresShipping,
+		PatchCommerceItemvariantQueryParamFieldsMetadata,
+		PatchCommerceItemvariantQueryParamFieldsItems,
+		PatchCommerceItemvariantQueryParamFieldsRaw,
+	}
+}
 func (e *PatchCommerceItemvariantQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

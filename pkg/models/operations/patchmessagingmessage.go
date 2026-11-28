@@ -40,6 +40,35 @@ const (
 func (e PatchMessagingMessageQueryParamFields) ToPointer() *PatchMessagingMessageQueryParamFields {
 	return &e
 }
+
+// PatchMessagingMessageQueryParamFieldsValues returns every known PatchMessagingMessageQueryParamFields value in schema order.
+func PatchMessagingMessageQueryParamFieldsValues() []PatchMessagingMessageQueryParamFields {
+	return []PatchMessagingMessageQueryParamFields{
+		PatchMessagingMessageQueryParamFieldsID,
+		PatchMessagingMessageQueryParamFieldsCreatedAt,
+		PatchMessagingMessageQueryParamFieldsUpdatedAt,
+		PatchMessagingMessageQueryParamFieldsChannels,
+		PatchMessagingMessageQueryParamFieldsParentID,
+		PatchMessagingMessageQueryParamFieldsMessageThreadIdentifier,
+		PatchMessagingMessageQueryParamFieldsAuthorMember,
+		PatchMessagingMessageQueryParamFieldsDestinationMembers,
+		PatchMessagingMessageQueryParamFieldsHiddenMembers,
+		PatchMessagingMessageQueryParamFieldsMentionedMembers,
+		PatchMessagingMessageQueryParamFieldsReactions,
+		PatchMessagingMessageQueryParamFieldsSubject,
+		PatchMessagingMessageQueryParamFieldsMessage,
+		PatchMessagingMessageQueryParamFieldsMessageHTML,
+		PatchMessagingMessageQueryParamFieldsMessageMarkdown,
+		PatchMessagingMessageQueryParamFieldsAttachments,
+		PatchMessagingMessageQueryParamFieldsWebURL,
+		PatchMessagingMessageQueryParamFieldsReference,
+		PatchMessagingMessageQueryParamFieldsHasChildren,
+		PatchMessagingMessageQueryParamFieldsIsUnread,
+		PatchMessagingMessageQueryParamFieldsButtons,
+		PatchMessagingMessageQueryParamFieldsMetadata,
+		PatchMessagingMessageQueryParamFieldsRaw,
+	}
+}
 func (e *PatchMessagingMessageQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

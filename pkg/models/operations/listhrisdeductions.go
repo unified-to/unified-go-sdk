@@ -39,6 +39,34 @@ const (
 func (e ListHrisDeductionsQueryParamFields) ToPointer() *ListHrisDeductionsQueryParamFields {
 	return &e
 }
+
+// ListHrisDeductionsQueryParamFieldsValues returns every known ListHrisDeductionsQueryParamFields value in schema order.
+func ListHrisDeductionsQueryParamFieldsValues() []ListHrisDeductionsQueryParamFields {
+	return []ListHrisDeductionsQueryParamFields{
+		ListHrisDeductionsQueryParamFieldsID,
+		ListHrisDeductionsQueryParamFieldsCreatedAt,
+		ListHrisDeductionsQueryParamFieldsUpdatedAt,
+		ListHrisDeductionsQueryParamFieldsUserID,
+		ListHrisDeductionsQueryParamFieldsCompanyID,
+		ListHrisDeductionsQueryParamFieldsBenefitID,
+		ListHrisDeductionsQueryParamFieldsAmount,
+		ListHrisDeductionsQueryParamFieldsType,
+		ListHrisDeductionsQueryParamFieldsCoverageLevel,
+		ListHrisDeductionsQueryParamFieldsFrequency,
+		ListHrisDeductionsQueryParamFieldsStartAt,
+		ListHrisDeductionsQueryParamFieldsEndAt,
+		ListHrisDeductionsQueryParamFieldsIsActive,
+		ListHrisDeductionsQueryParamFieldsNotes,
+		ListHrisDeductionsQueryParamFieldsEmployerAmount,
+		ListHrisDeductionsQueryParamFieldsEmployerType,
+		ListHrisDeductionsQueryParamFieldsMaxAmount,
+		ListHrisDeductionsQueryParamFieldsPaycodeID,
+		ListHrisDeductionsQueryParamFieldsGarnishmentType,
+		ListHrisDeductionsQueryParamFieldsLoanIdentifier,
+		ListHrisDeductionsQueryParamFieldsMetadata,
+		ListHrisDeductionsQueryParamFieldsRaw,
+	}
+}
 func (e *ListHrisDeductionsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

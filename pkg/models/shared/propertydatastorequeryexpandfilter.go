@@ -14,6 +14,15 @@ func (e PropertyDatastoreQueryExpandFilterType) ToPointer() *PropertyDatastoreQu
 	return &e
 }
 
+// PropertyDatastoreQueryExpandFilterTypeValues returns every known PropertyDatastoreQueryExpandFilterType value in schema order.
+func PropertyDatastoreQueryExpandFilterTypeValues() []PropertyDatastoreQueryExpandFilterType {
+	return []PropertyDatastoreQueryExpandFilterType{
+		PropertyDatastoreQueryExpandFilterTypeFilter,
+		PropertyDatastoreQueryExpandFilterTypeAnd,
+		PropertyDatastoreQueryExpandFilterTypeOr,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyDatastoreQueryExpandFilterType) IsExact() bool {
 	if e != nil {

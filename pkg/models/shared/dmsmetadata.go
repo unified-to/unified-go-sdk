@@ -298,6 +298,25 @@ func (e DmsMetadataFormat) ToPointer() *DmsMetadataFormat {
 	return &e
 }
 
+// DmsMetadataFormatValues returns every known DmsMetadataFormat value in schema order.
+func DmsMetadataFormatValues() []DmsMetadataFormat {
+	return []DmsMetadataFormat{
+		DmsMetadataFormatText,
+		DmsMetadataFormatNumber,
+		DmsMetadataFormatDate,
+		DmsMetadataFormatBoolean,
+		DmsMetadataFormatFile,
+		DmsMetadataFormatTextarea,
+		DmsMetadataFormatSingleSelect,
+		DmsMetadataFormatMultipleSelect,
+		DmsMetadataFormatMeasurement,
+		DmsMetadataFormatPrice,
+		DmsMetadataFormatYesNo,
+		DmsMetadataFormatCurrency,
+		DmsMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *DmsMetadataFormat) IsExact() bool {
 	if e != nil {

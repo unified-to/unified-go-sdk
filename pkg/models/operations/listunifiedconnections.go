@@ -61,6 +61,56 @@ const (
 func (e Categories) ToPointer() *Categories {
 	return &e
 }
+
+// CategoriesValues returns every known Categories value in schema order.
+func CategoriesValues() []Categories {
+	return []Categories{
+		CategoriesPassthrough,
+		CategoriesHris,
+		CategoriesAts,
+		CategoriesAuth,
+		CategoriesSaml,
+		CategoriesCrm,
+		CategoriesEnrich,
+		CategoriesMartech,
+		CategoriesTicketing,
+		CategoriesUc,
+		CategoriesAccounting,
+		CategoriesStorage,
+		CategoriesCommerce,
+		CategoriesPayment,
+		CategoriesGenai,
+		CategoriesMessaging,
+		CategoriesKms,
+		CategoriesTask,
+		CategoriesScim,
+		CategoriesLms,
+		CategoriesRepo,
+		CategoriesMetadata,
+		CategoriesCalendar,
+		CategoriesVerification,
+		CategoriesAds,
+		CategoriesAnalytics,
+		CategoriesForms,
+		CategoriesShipping,
+		CategoriesAssessment,
+		CategoriesSigning,
+		CategoriesClubs,
+		CategoriesDatastore,
+		CategoriesCdp,
+		CategoriesPerformance,
+		CategoriesSocial,
+		CategoriesLegal,
+		CategoriesCompute,
+		CategoriesHealthcare,
+		CategoriesProperty,
+		CategoriesPlm,
+		CategoriesQms,
+		CategoriesDms,
+		CategoriesFhir,
+		CategoriesPrinting,
+	}
+}
 func (e *Categories) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
@@ -185,6 +235,29 @@ const (
 
 func (e ListUnifiedConnectionsQueryParamFields) ToPointer() *ListUnifiedConnectionsQueryParamFields {
 	return &e
+}
+
+// ListUnifiedConnectionsQueryParamFieldsValues returns every known ListUnifiedConnectionsQueryParamFields value in schema order.
+func ListUnifiedConnectionsQueryParamFieldsValues() []ListUnifiedConnectionsQueryParamFields {
+	return []ListUnifiedConnectionsQueryParamFields{
+		ListUnifiedConnectionsQueryParamFieldsID,
+		ListUnifiedConnectionsQueryParamFieldsCreatedAt,
+		ListUnifiedConnectionsQueryParamFieldsUpdatedAt,
+		ListUnifiedConnectionsQueryParamFieldsWorkspaceID,
+		ListUnifiedConnectionsQueryParamFieldsIntegrationType,
+		ListUnifiedConnectionsQueryParamFieldsIntegrationName,
+		ListUnifiedConnectionsQueryParamFieldsExternalXref,
+		ListUnifiedConnectionsQueryParamFieldsPermissions,
+		ListUnifiedConnectionsQueryParamFieldsCategories,
+		ListUnifiedConnectionsQueryParamFieldsAuth,
+		ListUnifiedConnectionsQueryParamFieldsIsPaused,
+		ListUnifiedConnectionsQueryParamFieldsEnvironment,
+		ListUnifiedConnectionsQueryParamFieldsLastHealthyAt,
+		ListUnifiedConnectionsQueryParamFieldsLastUnhealthyAt,
+		ListUnifiedConnectionsQueryParamFieldsLastUnhealthyCode,
+		ListUnifiedConnectionsQueryParamFieldsSecretsmanagerID,
+		ListUnifiedConnectionsQueryParamFieldsSecretsmanagerKey,
+	}
 }
 func (e *ListUnifiedConnectionsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string

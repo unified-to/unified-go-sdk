@@ -23,6 +23,18 @@ func (e AtsDocumentType) ToPointer() *AtsDocumentType {
 	return &e
 }
 
+// AtsDocumentTypeValues returns every known AtsDocumentType value in schema order.
+func AtsDocumentTypeValues() []AtsDocumentType {
+	return []AtsDocumentType{
+		AtsDocumentTypeResume,
+		AtsDocumentTypeCoverLetter,
+		AtsDocumentTypeOfferPacket,
+		AtsDocumentTypeOfferLetter,
+		AtsDocumentTypeTakeHomeTest,
+		AtsDocumentTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AtsDocumentType) IsExact() bool {
 	if e != nil {

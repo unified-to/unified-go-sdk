@@ -30,6 +30,25 @@ const (
 func (e UpdateLmsInstructorQueryParamFields) ToPointer() *UpdateLmsInstructorQueryParamFields {
 	return &e
 }
+
+// UpdateLmsInstructorQueryParamFieldsValues returns every known UpdateLmsInstructorQueryParamFields value in schema order.
+func UpdateLmsInstructorQueryParamFieldsValues() []UpdateLmsInstructorQueryParamFields {
+	return []UpdateLmsInstructorQueryParamFields{
+		UpdateLmsInstructorQueryParamFieldsID,
+		UpdateLmsInstructorQueryParamFieldsCreatedAt,
+		UpdateLmsInstructorQueryParamFieldsUpdatedAt,
+		UpdateLmsInstructorQueryParamFieldsName,
+		UpdateLmsInstructorQueryParamFieldsFirstName,
+		UpdateLmsInstructorQueryParamFieldsLastName,
+		UpdateLmsInstructorQueryParamFieldsEmails,
+		UpdateLmsInstructorQueryParamFieldsTitle,
+		UpdateLmsInstructorQueryParamFieldsTelephones,
+		UpdateLmsInstructorQueryParamFieldsImageURL,
+		UpdateLmsInstructorQueryParamFieldsMetadata,
+		UpdateLmsInstructorQueryParamFieldsRaw,
+		UpdateLmsInstructorQueryParamFieldsUnifiedPersonIds,
+	}
+}
 func (e *UpdateLmsInstructorQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

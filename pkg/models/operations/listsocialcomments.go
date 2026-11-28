@@ -31,6 +31,26 @@ const (
 func (e ListSocialCommentsQueryParamFields) ToPointer() *ListSocialCommentsQueryParamFields {
 	return &e
 }
+
+// ListSocialCommentsQueryParamFieldsValues returns every known ListSocialCommentsQueryParamFields value in schema order.
+func ListSocialCommentsQueryParamFieldsValues() []ListSocialCommentsQueryParamFields {
+	return []ListSocialCommentsQueryParamFields{
+		ListSocialCommentsQueryParamFieldsID,
+		ListSocialCommentsQueryParamFieldsCreatedAt,
+		ListSocialCommentsQueryParamFieldsUpdatedAt,
+		ListSocialCommentsQueryParamFieldsPostID,
+		ListSocialCommentsQueryParamFieldsParentID,
+		ListSocialCommentsQueryParamFieldsAuthorIdentifier,
+		ListSocialCommentsQueryParamFieldsAuthorName,
+		ListSocialCommentsQueryParamFieldsAuthorUsername,
+		ListSocialCommentsQueryParamFieldsAuthorAvatarURL,
+		ListSocialCommentsQueryParamFieldsContent,
+		ListSocialCommentsQueryParamFieldsURL,
+		ListSocialCommentsQueryParamFieldsIsHidden,
+		ListSocialCommentsQueryParamFieldsMetrics,
+		ListSocialCommentsQueryParamFieldsRaw,
+	}
+}
 func (e *ListSocialCommentsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

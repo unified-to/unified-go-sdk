@@ -44,6 +44,39 @@ const (
 func (e ListCalendarEventsQueryParamFields) ToPointer() *ListCalendarEventsQueryParamFields {
 	return &e
 }
+
+// ListCalendarEventsQueryParamFieldsValues returns every known ListCalendarEventsQueryParamFields value in schema order.
+func ListCalendarEventsQueryParamFieldsValues() []ListCalendarEventsQueryParamFields {
+	return []ListCalendarEventsQueryParamFields{
+		ListCalendarEventsQueryParamFieldsID,
+		ListCalendarEventsQueryParamFieldsCreatedAt,
+		ListCalendarEventsQueryParamFieldsUpdatedAt,
+		ListCalendarEventsQueryParamFieldsCalendarID,
+		ListCalendarEventsQueryParamFieldsSubject,
+		ListCalendarEventsQueryParamFieldsStartAt,
+		ListCalendarEventsQueryParamFieldsEndAt,
+		ListCalendarEventsQueryParamFieldsIsAllDay,
+		ListCalendarEventsQueryParamFieldsTimezone,
+		ListCalendarEventsQueryParamFieldsNotes,
+		ListCalendarEventsQueryParamFieldsLocation,
+		ListCalendarEventsQueryParamFieldsIsFree,
+		ListCalendarEventsQueryParamFieldsIsPrivate,
+		ListCalendarEventsQueryParamFieldsStatus,
+		ListCalendarEventsQueryParamFieldsOrganizer,
+		ListCalendarEventsQueryParamFieldsAttendees,
+		ListCalendarEventsQueryParamFieldsRecurringEventID,
+		ListCalendarEventsQueryParamFieldsRecurrence,
+		ListCalendarEventsQueryParamFieldsWebURL,
+		ListCalendarEventsQueryParamFieldsHasConference,
+		ListCalendarEventsQueryParamFieldsConference,
+		ListCalendarEventsQueryParamFieldsAttachments,
+		ListCalendarEventsQueryParamFieldsSendNotifications,
+		ListCalendarEventsQueryParamFieldsMatterID,
+		ListCalendarEventsQueryParamFieldsMetadata,
+		ListCalendarEventsQueryParamFieldsRooms,
+		ListCalendarEventsQueryParamFieldsRaw,
+	}
+}
 func (e *ListCalendarEventsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

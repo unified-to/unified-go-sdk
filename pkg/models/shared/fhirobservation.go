@@ -24,6 +24,24 @@ func (e FhirObservationResourceType) ToPointer() *FhirObservationResourceType {
 	return &e
 }
 
+// FhirObservationResourceTypeValues returns every known FhirObservationResourceType value in schema order.
+func FhirObservationResourceTypeValues() []FhirObservationResourceType {
+	return []FhirObservationResourceType{
+		FhirObservationResourceTypePatient,
+		FhirObservationResourceTypePractitioner,
+		FhirObservationResourceTypeEncounter,
+		FhirObservationResourceTypeObservation,
+		FhirObservationResourceTypeCondition,
+		FhirObservationResourceTypeAllergyIntolerance,
+		FhirObservationResourceTypeMedicationRequest,
+		FhirObservationResourceTypeImmunization,
+		FhirObservationResourceTypeBundle,
+		FhirObservationResourceTypeOperationOutcome,
+		FhirObservationResourceTypeCapabilityStatement,
+		FhirObservationResourceTypeDiagnosticReport,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *FhirObservationResourceType) IsExact() bool {
 	if e != nil {
@@ -51,6 +69,20 @@ const (
 
 func (e FhirObservationStatus) ToPointer() *FhirObservationStatus {
 	return &e
+}
+
+// FhirObservationStatusValues returns every known FhirObservationStatus value in schema order.
+func FhirObservationStatusValues() []FhirObservationStatus {
+	return []FhirObservationStatus{
+		FhirObservationStatusRegistered,
+		FhirObservationStatusPreliminary,
+		FhirObservationStatusFinal,
+		FhirObservationStatusAmended,
+		FhirObservationStatusCorrected,
+		FhirObservationStatusCancelled,
+		FhirObservationStatusEnteredInError,
+		FhirObservationStatusUnknown,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

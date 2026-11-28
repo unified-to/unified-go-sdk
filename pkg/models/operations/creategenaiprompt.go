@@ -33,6 +33,28 @@ const (
 func (e CreateGenaiPromptQueryParamFields) ToPointer() *CreateGenaiPromptQueryParamFields {
 	return &e
 }
+
+// CreateGenaiPromptQueryParamFieldsValues returns every known CreateGenaiPromptQueryParamFields value in schema order.
+func CreateGenaiPromptQueryParamFieldsValues() []CreateGenaiPromptQueryParamFields {
+	return []CreateGenaiPromptQueryParamFields{
+		CreateGenaiPromptQueryParamFieldsModelID,
+		CreateGenaiPromptQueryParamFieldsMessages,
+		CreateGenaiPromptQueryParamFieldsTemperature,
+		CreateGenaiPromptQueryParamFieldsMaxTokens,
+		CreateGenaiPromptQueryParamFieldsResponses,
+		CreateGenaiPromptQueryParamFieldsTokensUsed,
+		CreateGenaiPromptQueryParamFieldsMcpURL,
+		CreateGenaiPromptQueryParamFieldsMcpDeferredTools,
+		CreateGenaiPromptQueryParamFieldsMcpAuthorizationToken,
+		CreateGenaiPromptQueryParamFieldsQuestions,
+		CreateGenaiPromptQueryParamFieldsAnswers,
+		CreateGenaiPromptQueryParamFieldsSkillIds,
+		CreateGenaiPromptQueryParamFieldsID,
+		CreateGenaiPromptQueryParamFieldsParentID,
+		CreateGenaiPromptQueryParamFieldsHasThread,
+		CreateGenaiPromptQueryParamFieldsRaw,
+	}
+}
 func (e *CreateGenaiPromptQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

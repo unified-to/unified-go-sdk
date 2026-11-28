@@ -27,6 +27,22 @@ const (
 func (e PatchLmsCollectionQueryParamFields) ToPointer() *PatchLmsCollectionQueryParamFields {
 	return &e
 }
+
+// PatchLmsCollectionQueryParamFieldsValues returns every known PatchLmsCollectionQueryParamFields value in schema order.
+func PatchLmsCollectionQueryParamFieldsValues() []PatchLmsCollectionQueryParamFields {
+	return []PatchLmsCollectionQueryParamFields{
+		PatchLmsCollectionQueryParamFieldsID,
+		PatchLmsCollectionQueryParamFieldsCreatedAt,
+		PatchLmsCollectionQueryParamFieldsUpdatedAt,
+		PatchLmsCollectionQueryParamFieldsName,
+		PatchLmsCollectionQueryParamFieldsDescription,
+		PatchLmsCollectionQueryParamFieldsMedia,
+		PatchLmsCollectionQueryParamFieldsIsActive,
+		PatchLmsCollectionQueryParamFieldsParentID,
+		PatchLmsCollectionQueryParamFieldsMetadata,
+		PatchLmsCollectionQueryParamFieldsRaw,
+	}
+}
 func (e *PatchLmsCollectionQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

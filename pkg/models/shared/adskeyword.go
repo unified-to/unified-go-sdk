@@ -14,6 +14,15 @@ func (e MatchType) ToPointer() *MatchType {
 	return &e
 }
 
+// MatchTypeValues returns every known MatchType value in schema order.
+func MatchTypeValues() []MatchType {
+	return []MatchType{
+		MatchTypeBroad,
+		MatchTypePhrase,
+		MatchTypeExact,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *MatchType) IsExact() bool {
 	if e != nil {

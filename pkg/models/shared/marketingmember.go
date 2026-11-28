@@ -21,6 +21,17 @@ func (e MarketingMemberStatus) ToPointer() *MarketingMemberStatus {
 	return &e
 }
 
+// MarketingMemberStatusValues returns every known MarketingMemberStatus value in schema order.
+func MarketingMemberStatusValues() []MarketingMemberStatus {
+	return []MarketingMemberStatus{
+		MarketingMemberStatusSubscribed,
+		MarketingMemberStatusUnsubscribed,
+		MarketingMemberStatusCleaned,
+		MarketingMemberStatusPending,
+		MarketingMemberStatusTransactional,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *MarketingMemberStatus) IsExact() bool {
 	if e != nil {

@@ -27,6 +27,22 @@ func (e AchievementStatus) ToPointer() *AchievementStatus {
 	return &e
 }
 
+// AchievementStatusValues returns every known AchievementStatus value in schema order.
+func AchievementStatusValues() []AchievementStatus {
+	return []AchievementStatus{
+		AchievementStatusInProgress,
+		AchievementStatusImproving,
+		AchievementStatusWorsening,
+		AchievementStatusNoChange,
+		AchievementStatusAchieved,
+		AchievementStatusSustaining,
+		AchievementStatusNotAchieved,
+		AchievementStatusNoProgress,
+		AchievementStatusNotAttainable,
+		AchievementStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AchievementStatus) IsExact() bool {
 	if e != nil {
@@ -56,6 +72,22 @@ const (
 
 func (e HealthcareGoalStatus) ToPointer() *HealthcareGoalStatus {
 	return &e
+}
+
+// HealthcareGoalStatusValues returns every known HealthcareGoalStatus value in schema order.
+func HealthcareGoalStatusValues() []HealthcareGoalStatus {
+	return []HealthcareGoalStatus{
+		HealthcareGoalStatusProposed,
+		HealthcareGoalStatusPlanned,
+		HealthcareGoalStatusAccepted,
+		HealthcareGoalStatusActive,
+		HealthcareGoalStatusOnHold,
+		HealthcareGoalStatusCompleted,
+		HealthcareGoalStatusCancelled,
+		HealthcareGoalStatusEnteredInError,
+		HealthcareGoalStatusRejected,
+		HealthcareGoalStatusOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

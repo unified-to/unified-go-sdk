@@ -22,6 +22,18 @@ func (e PaymentFrequency) ToPointer() *PaymentFrequency {
 	return &e
 }
 
+// PaymentFrequencyValues returns every known PaymentFrequency value in schema order.
+func PaymentFrequencyValues() []PaymentFrequency {
+	return []PaymentFrequency{
+		PaymentFrequencyMonthly,
+		PaymentFrequencySemiMonthly,
+		PaymentFrequencyBiweekly,
+		PaymentFrequencyWeekly,
+		PaymentFrequencyYearly,
+		PaymentFrequencyOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PaymentFrequency) IsExact() bool {
 	if e != nil {

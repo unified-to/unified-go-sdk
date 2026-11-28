@@ -20,6 +20,15 @@ func (e SenderType) ToPointer() *SenderType {
 	return &e
 }
 
+// SenderTypeValues returns every known SenderType value in schema order.
+func SenderTypeValues() []SenderType {
+	return []SenderType{
+		SenderTypeGuest,
+		SenderTypeHost,
+		SenderTypeSystem,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *SenderType) IsExact() bool {
 	if e != nil {

@@ -47,6 +47,42 @@ const (
 func (e PatchAccountingContactQueryParamFields) ToPointer() *PatchAccountingContactQueryParamFields {
 	return &e
 }
+
+// PatchAccountingContactQueryParamFieldsValues returns every known PatchAccountingContactQueryParamFields value in schema order.
+func PatchAccountingContactQueryParamFieldsValues() []PatchAccountingContactQueryParamFields {
+	return []PatchAccountingContactQueryParamFields{
+		PatchAccountingContactQueryParamFieldsID,
+		PatchAccountingContactQueryParamFieldsCreatedAt,
+		PatchAccountingContactQueryParamFieldsUpdatedAt,
+		PatchAccountingContactQueryParamFieldsName,
+		PatchAccountingContactQueryParamFieldsFirstName,
+		PatchAccountingContactQueryParamFieldsLastName,
+		PatchAccountingContactQueryParamFieldsEmails,
+		PatchAccountingContactQueryParamFieldsTelephones,
+		PatchAccountingContactQueryParamFieldsCurrency,
+		PatchAccountingContactQueryParamFieldsBillingAddress,
+		PatchAccountingContactQueryParamFieldsShippingAddress,
+		PatchAccountingContactQueryParamFieldsIsActive,
+		PatchAccountingContactQueryParamFieldsTaxExemption,
+		PatchAccountingContactQueryParamFieldsTaxNumber,
+		PatchAccountingContactQueryParamFieldsIsCustomer,
+		PatchAccountingContactQueryParamFieldsIsSupplier,
+		PatchAccountingContactQueryParamFieldsPortalURL,
+		PatchAccountingContactQueryParamFieldsPaymentMethods,
+		PatchAccountingContactQueryParamFieldsCompanyName,
+		PatchAccountingContactQueryParamFieldsIdentification,
+		PatchAccountingContactQueryParamFieldsAssociatedContacts,
+		PatchAccountingContactQueryParamFieldsOrganizationID,
+		PatchAccountingContactQueryParamFieldsPaymentTerms,
+		PatchAccountingContactQueryParamFieldsPaymenttermID,
+		PatchAccountingContactQueryParamFieldsBalanceAmount,
+		PatchAccountingContactQueryParamFieldsWebsite,
+		PatchAccountingContactQueryParamFieldsNotes,
+		PatchAccountingContactQueryParamFieldsMetadata,
+		PatchAccountingContactQueryParamFieldsRaw,
+		PatchAccountingContactQueryParamFieldsUnifiedPersonIds,
+	}
+}
 func (e *PatchAccountingContactQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

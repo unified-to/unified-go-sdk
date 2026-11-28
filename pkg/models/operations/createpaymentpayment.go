@@ -48,6 +48,43 @@ const (
 func (e CreatePaymentPaymentQueryParamFields) ToPointer() *CreatePaymentPaymentQueryParamFields {
 	return &e
 }
+
+// CreatePaymentPaymentQueryParamFieldsValues returns every known CreatePaymentPaymentQueryParamFields value in schema order.
+func CreatePaymentPaymentQueryParamFieldsValues() []CreatePaymentPaymentQueryParamFields {
+	return []CreatePaymentPaymentQueryParamFields{
+		CreatePaymentPaymentQueryParamFieldsID,
+		CreatePaymentPaymentQueryParamFieldsCreatedAt,
+		CreatePaymentPaymentQueryParamFieldsUpdatedAt,
+		CreatePaymentPaymentQueryParamFieldsTotalAmount,
+		CreatePaymentPaymentQueryParamFieldsContactID,
+		CreatePaymentPaymentQueryParamFieldsPaymentMethod,
+		CreatePaymentPaymentQueryParamFieldsType,
+		CreatePaymentPaymentQueryParamFieldsCurrency,
+		CreatePaymentPaymentQueryParamFieldsNotes,
+		CreatePaymentPaymentQueryParamFieldsInvoiceID,
+		CreatePaymentPaymentQueryParamFieldsBillID,
+		CreatePaymentPaymentQueryParamFieldsLinkID,
+		CreatePaymentPaymentQueryParamFieldsAccountID,
+		CreatePaymentPaymentQueryParamFieldsReference,
+		CreatePaymentPaymentQueryParamFieldsOrganizationID,
+		CreatePaymentPaymentQueryParamFieldsAllocations,
+		CreatePaymentPaymentQueryParamFieldsStatus,
+		CreatePaymentPaymentQueryParamFieldsSalesorderID,
+		CreatePaymentPaymentQueryParamFieldsTenderType,
+		CreatePaymentPaymentQueryParamFieldsTipAmount,
+		CreatePaymentPaymentQueryParamFieldsFeeAmount,
+		CreatePaymentPaymentQueryParamFieldsLocationID,
+		CreatePaymentPaymentQueryParamFieldsDeviceID,
+		CreatePaymentPaymentQueryParamFieldsCardBrand,
+		CreatePaymentPaymentQueryParamFieldsCardLast4,
+		CreatePaymentPaymentQueryParamFieldsPaidAt,
+		CreatePaymentPaymentQueryParamFieldsExchangeRate,
+		CreatePaymentPaymentQueryParamFieldsCategoryIds,
+		CreatePaymentPaymentQueryParamFieldsNetAmount,
+		CreatePaymentPaymentQueryParamFieldsMetadata,
+		CreatePaymentPaymentQueryParamFieldsRaw,
+	}
+}
 func (e *CreatePaymentPaymentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

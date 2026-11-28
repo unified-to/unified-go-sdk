@@ -27,6 +27,22 @@ func (e PropertyAdsReportMetricsGroupBillingEvent) ToPointer() *PropertyAdsRepor
 	return &e
 }
 
+// PropertyAdsReportMetricsGroupBillingEventValues returns every known PropertyAdsReportMetricsGroupBillingEvent value in schema order.
+func PropertyAdsReportMetricsGroupBillingEventValues() []PropertyAdsReportMetricsGroupBillingEvent {
+	return []PropertyAdsReportMetricsGroupBillingEvent{
+		PropertyAdsReportMetricsGroupBillingEventImpressions,
+		PropertyAdsReportMetricsGroupBillingEventLinkClicks,
+		PropertyAdsReportMetricsGroupBillingEventVideoViews,
+		PropertyAdsReportMetricsGroupBillingEventAppInstalls,
+		PropertyAdsReportMetricsGroupBillingEventEngagement,
+		PropertyAdsReportMetricsGroupBillingEventPageLikes,
+		PropertyAdsReportMetricsGroupBillingEventMessages,
+		PropertyAdsReportMetricsGroupBillingEventPostEngagement,
+		PropertyAdsReportMetricsGroupBillingEventPurchase,
+		PropertyAdsReportMetricsGroupBillingEventNone,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsGroupBillingEvent) IsExact() bool {
 	if e != nil {
@@ -49,6 +65,16 @@ const (
 
 func (e PropertyAdsReportMetricsGroupBudgetAllocationType) ToPointer() *PropertyAdsReportMetricsGroupBudgetAllocationType {
 	return &e
+}
+
+// PropertyAdsReportMetricsGroupBudgetAllocationTypeValues returns every known PropertyAdsReportMetricsGroupBudgetAllocationType value in schema order.
+func PropertyAdsReportMetricsGroupBudgetAllocationTypeValues() []PropertyAdsReportMetricsGroupBudgetAllocationType {
+	return []PropertyAdsReportMetricsGroupBudgetAllocationType{
+		PropertyAdsReportMetricsGroupBudgetAllocationTypeUnspecified,
+		PropertyAdsReportMetricsGroupBudgetAllocationTypeAutomatic,
+		PropertyAdsReportMetricsGroupBudgetAllocationTypeFixed,
+		PropertyAdsReportMetricsGroupBudgetAllocationTypeUnlimited,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -75,6 +101,16 @@ func (e PropertyAdsReportMetricsGroupBudgetPeriod) ToPointer() *PropertyAdsRepor
 	return &e
 }
 
+// PropertyAdsReportMetricsGroupBudgetPeriodValues returns every known PropertyAdsReportMetricsGroupBudgetPeriod value in schema order.
+func PropertyAdsReportMetricsGroupBudgetPeriodValues() []PropertyAdsReportMetricsGroupBudgetPeriod {
+	return []PropertyAdsReportMetricsGroupBudgetPeriod{
+		PropertyAdsReportMetricsGroupBudgetPeriodDaily,
+		PropertyAdsReportMetricsGroupBudgetPeriodMonthly,
+		PropertyAdsReportMetricsGroupBudgetPeriodTotal,
+		PropertyAdsReportMetricsGroupBudgetPeriodLifetime,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsGroupBudgetPeriod) IsExact() bool {
 	if e != nil {
@@ -96,6 +132,15 @@ const (
 
 func (e PropertyAdsReportMetricsGroupBudgetUnit) ToPointer() *PropertyAdsReportMetricsGroupBudgetUnit {
 	return &e
+}
+
+// PropertyAdsReportMetricsGroupBudgetUnitValues returns every known PropertyAdsReportMetricsGroupBudgetUnit value in schema order.
+func PropertyAdsReportMetricsGroupBudgetUnitValues() []PropertyAdsReportMetricsGroupBudgetUnit {
+	return []PropertyAdsReportMetricsGroupBudgetUnit{
+		PropertyAdsReportMetricsGroupBudgetUnitUnspecified,
+		PropertyAdsReportMetricsGroupBudgetUnitCurrency,
+		PropertyAdsReportMetricsGroupBudgetUnitImpressions,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -126,6 +171,19 @@ func (e PropertyAdsReportMetricsGroupCostType) ToPointer() *PropertyAdsReportMet
 	return &e
 }
 
+// PropertyAdsReportMetricsGroupCostTypeValues returns every known PropertyAdsReportMetricsGroupCostType value in schema order.
+func PropertyAdsReportMetricsGroupCostTypeValues() []PropertyAdsReportMetricsGroupCostType {
+	return []PropertyAdsReportMetricsGroupCostType{
+		PropertyAdsReportMetricsGroupCostTypeCpm,
+		PropertyAdsReportMetricsGroupCostTypeViewableCpm,
+		PropertyAdsReportMetricsGroupCostTypeCpc,
+		PropertyAdsReportMetricsGroupCostTypeCpd,
+		PropertyAdsReportMetricsGroupCostTypeCpa,
+		PropertyAdsReportMetricsGroupCostTypeCpcv,
+		PropertyAdsReportMetricsGroupCostTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsGroupCostType) IsExact() bool {
 	if e != nil {
@@ -149,6 +207,16 @@ const (
 
 func (e PropertyAdsReportMetricsGroupCreativeSelection) ToPointer() *PropertyAdsReportMetricsGroupCreativeSelection {
 	return &e
+}
+
+// PropertyAdsReportMetricsGroupCreativeSelectionValues returns every known PropertyAdsReportMetricsGroupCreativeSelection value in schema order.
+func PropertyAdsReportMetricsGroupCreativeSelectionValues() []PropertyAdsReportMetricsGroupCreativeSelection {
+	return []PropertyAdsReportMetricsGroupCreativeSelection{
+		PropertyAdsReportMetricsGroupCreativeSelectionOptimized,
+		PropertyAdsReportMetricsGroupCreativeSelectionRoundRobin,
+		PropertyAdsReportMetricsGroupCreativeSelectionWeighted,
+		PropertyAdsReportMetricsGroupCreativeSelectionSequential,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -182,6 +250,22 @@ func (e PropertyAdsReportMetricsGroupDeliveryType) ToPointer() *PropertyAdsRepor
 	return &e
 }
 
+// PropertyAdsReportMetricsGroupDeliveryTypeValues returns every known PropertyAdsReportMetricsGroupDeliveryType value in schema order.
+func PropertyAdsReportMetricsGroupDeliveryTypeValues() []PropertyAdsReportMetricsGroupDeliveryType {
+	return []PropertyAdsReportMetricsGroupDeliveryType{
+		PropertyAdsReportMetricsGroupDeliveryTypeStandard,
+		PropertyAdsReportMetricsGroupDeliveryTypeSponsorship,
+		PropertyAdsReportMetricsGroupDeliveryTypeNetwork,
+		PropertyAdsReportMetricsGroupDeliveryTypeBulk,
+		PropertyAdsReportMetricsGroupDeliveryTypePricePriority,
+		PropertyAdsReportMetricsGroupDeliveryTypeHouse,
+		PropertyAdsReportMetricsGroupDeliveryTypePreferredDeal,
+		PropertyAdsReportMetricsGroupDeliveryTypeAdExchange,
+		PropertyAdsReportMetricsGroupDeliveryTypeClickTracking,
+		PropertyAdsReportMetricsGroupDeliveryTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsGroupDeliveryType) IsExact() bool {
 	if e != nil {
@@ -211,6 +295,23 @@ const (
 
 func (e PropertyAdsReportMetricsGroupEffectiveStatus) ToPointer() *PropertyAdsReportMetricsGroupEffectiveStatus {
 	return &e
+}
+
+// PropertyAdsReportMetricsGroupEffectiveStatusValues returns every known PropertyAdsReportMetricsGroupEffectiveStatus value in schema order.
+func PropertyAdsReportMetricsGroupEffectiveStatusValues() []PropertyAdsReportMetricsGroupEffectiveStatus {
+	return []PropertyAdsReportMetricsGroupEffectiveStatus{
+		PropertyAdsReportMetricsGroupEffectiveStatusUnspecified,
+		PropertyAdsReportMetricsGroupEffectiveStatusServing,
+		PropertyAdsReportMetricsGroupEffectiveStatusLimited,
+		PropertyAdsReportMetricsGroupEffectiveStatusLearning,
+		PropertyAdsReportMetricsGroupEffectiveStatusPaused,
+		PropertyAdsReportMetricsGroupEffectiveStatusPending,
+		PropertyAdsReportMetricsGroupEffectiveStatusEnded,
+		PropertyAdsReportMetricsGroupEffectiveStatusMisconfigured,
+		PropertyAdsReportMetricsGroupEffectiveStatusNotEligible,
+		PropertyAdsReportMetricsGroupEffectiveStatusArchived,
+		PropertyAdsReportMetricsGroupEffectiveStatusRemoved,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -246,6 +347,24 @@ func (e PropertyAdsReportMetricsGroupOptimizationGoal) ToPointer() *PropertyAdsR
 	return &e
 }
 
+// PropertyAdsReportMetricsGroupOptimizationGoalValues returns every known PropertyAdsReportMetricsGroupOptimizationGoal value in schema order.
+func PropertyAdsReportMetricsGroupOptimizationGoalValues() []PropertyAdsReportMetricsGroupOptimizationGoal {
+	return []PropertyAdsReportMetricsGroupOptimizationGoal{
+		PropertyAdsReportMetricsGroupOptimizationGoalReach,
+		PropertyAdsReportMetricsGroupOptimizationGoalImpressions,
+		PropertyAdsReportMetricsGroupOptimizationGoalLinkClicks,
+		PropertyAdsReportMetricsGroupOptimizationGoalLandingPageViews,
+		PropertyAdsReportMetricsGroupOptimizationGoalConversions,
+		PropertyAdsReportMetricsGroupOptimizationGoalLeadGeneration,
+		PropertyAdsReportMetricsGroupOptimizationGoalAppInstalls,
+		PropertyAdsReportMetricsGroupOptimizationGoalAppEngagement,
+		PropertyAdsReportMetricsGroupOptimizationGoalVideoViews,
+		PropertyAdsReportMetricsGroupOptimizationGoalEngagement,
+		PropertyAdsReportMetricsGroupOptimizationGoalPageLikes,
+		PropertyAdsReportMetricsGroupOptimizationGoalMessages,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyAdsReportMetricsGroupOptimizationGoal) IsExact() bool {
 	if e != nil {
@@ -272,6 +391,20 @@ const (
 
 func (e PropertyAdsReportMetricsGroupStatus) ToPointer() *PropertyAdsReportMetricsGroupStatus {
 	return &e
+}
+
+// PropertyAdsReportMetricsGroupStatusValues returns every known PropertyAdsReportMetricsGroupStatus value in schema order.
+func PropertyAdsReportMetricsGroupStatusValues() []PropertyAdsReportMetricsGroupStatus {
+	return []PropertyAdsReportMetricsGroupStatus{
+		PropertyAdsReportMetricsGroupStatusUnspecified,
+		PropertyAdsReportMetricsGroupStatusActive,
+		PropertyAdsReportMetricsGroupStatusPaused,
+		PropertyAdsReportMetricsGroupStatusArchived,
+		PropertyAdsReportMetricsGroupStatusDraft,
+		PropertyAdsReportMetricsGroupStatusScheduledForDeletion,
+		PropertyAdsReportMetricsGroupStatusProcessing,
+		PropertyAdsReportMetricsGroupStatusProcessingFailed,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -309,6 +442,29 @@ const (
 
 func (e PropertyAdsReportMetricsGroupType) ToPointer() *PropertyAdsReportMetricsGroupType {
 	return &e
+}
+
+// PropertyAdsReportMetricsGroupTypeValues returns every known PropertyAdsReportMetricsGroupType value in schema order.
+func PropertyAdsReportMetricsGroupTypeValues() []PropertyAdsReportMetricsGroupType {
+	return []PropertyAdsReportMetricsGroupType{
+		PropertyAdsReportMetricsGroupTypeText,
+		PropertyAdsReportMetricsGroupTypeImage,
+		PropertyAdsReportMetricsGroupTypeVideo,
+		PropertyAdsReportMetricsGroupTypeResponsive,
+		PropertyAdsReportMetricsGroupTypeShopping,
+		PropertyAdsReportMetricsGroupTypeApp,
+		PropertyAdsReportMetricsGroupTypeCall,
+		PropertyAdsReportMetricsGroupTypeCarousel,
+		PropertyAdsReportMetricsGroupTypeSocial,
+		PropertyAdsReportMetricsGroupTypeDisplay,
+		PropertyAdsReportMetricsGroupTypeSearch,
+		PropertyAdsReportMetricsGroupTypeAudio,
+		PropertyAdsReportMetricsGroupTypeYoutube,
+		PropertyAdsReportMetricsGroupTypeNative,
+		PropertyAdsReportMetricsGroupTypeCtv,
+		PropertyAdsReportMetricsGroupTypeDooh,
+		PropertyAdsReportMetricsGroupTypePerformanceMax,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

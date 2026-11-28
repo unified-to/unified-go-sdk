@@ -28,6 +28,23 @@ const (
 func (e GetPerformanceFeedbackQueryParamFields) ToPointer() *GetPerformanceFeedbackQueryParamFields {
 	return &e
 }
+
+// GetPerformanceFeedbackQueryParamFieldsValues returns every known GetPerformanceFeedbackQueryParamFields value in schema order.
+func GetPerformanceFeedbackQueryParamFieldsValues() []GetPerformanceFeedbackQueryParamFields {
+	return []GetPerformanceFeedbackQueryParamFields{
+		GetPerformanceFeedbackQueryParamFieldsID,
+		GetPerformanceFeedbackQueryParamFieldsCreatedAt,
+		GetPerformanceFeedbackQueryParamFieldsUpdatedAt,
+		GetPerformanceFeedbackQueryParamFieldsUserID,
+		GetPerformanceFeedbackQueryParamFieldsAuthorUserID,
+		GetPerformanceFeedbackQueryParamFieldsType,
+		GetPerformanceFeedbackQueryParamFieldsMessage,
+		GetPerformanceFeedbackQueryParamFieldsTags,
+		GetPerformanceFeedbackQueryParamFieldsIsVisible,
+		GetPerformanceFeedbackQueryParamFieldsMetadata,
+		GetPerformanceFeedbackQueryParamFieldsRaw,
+	}
+}
 func (e *GetPerformanceFeedbackQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

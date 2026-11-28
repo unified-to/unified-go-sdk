@@ -47,6 +47,42 @@ const (
 func (e UpdateAccountingExpenseQueryParamFields) ToPointer() *UpdateAccountingExpenseQueryParamFields {
 	return &e
 }
+
+// UpdateAccountingExpenseQueryParamFieldsValues returns every known UpdateAccountingExpenseQueryParamFields value in schema order.
+func UpdateAccountingExpenseQueryParamFieldsValues() []UpdateAccountingExpenseQueryParamFields {
+	return []UpdateAccountingExpenseQueryParamFields{
+		UpdateAccountingExpenseQueryParamFieldsID,
+		UpdateAccountingExpenseQueryParamFieldsCreatedAt,
+		UpdateAccountingExpenseQueryParamFieldsUpdatedAt,
+		UpdateAccountingExpenseQueryParamFieldsUserID,
+		UpdateAccountingExpenseQueryParamFieldsContactID,
+		UpdateAccountingExpenseQueryParamFieldsAccountID,
+		UpdateAccountingExpenseQueryParamFieldsName,
+		UpdateAccountingExpenseQueryParamFieldsPaymentMethod,
+		UpdateAccountingExpenseQueryParamFieldsPostedAt,
+		UpdateAccountingExpenseQueryParamFieldsTotalAmount,
+		UpdateAccountingExpenseQueryParamFieldsCurrency,
+		UpdateAccountingExpenseQueryParamFieldsTaxAmount,
+		UpdateAccountingExpenseQueryParamFieldsReimbursedAmount,
+		UpdateAccountingExpenseQueryParamFieldsReimbursedAt,
+		UpdateAccountingExpenseQueryParamFieldsApprovedAt,
+		UpdateAccountingExpenseQueryParamFieldsApproverUserID,
+		UpdateAccountingExpenseQueryParamFieldsLineitems,
+		UpdateAccountingExpenseQueryParamFieldsAttachments,
+		UpdateAccountingExpenseQueryParamFieldsOrganizationID,
+		UpdateAccountingExpenseQueryParamFieldsUsers,
+		UpdateAccountingExpenseQueryParamFieldsApproverUsers,
+		UpdateAccountingExpenseQueryParamFieldsStatus,
+		UpdateAccountingExpenseQueryParamFieldsExternalNumber,
+		UpdateAccountingExpenseQueryParamFieldsCategoryIds,
+		UpdateAccountingExpenseQueryParamFieldsProjectID,
+		UpdateAccountingExpenseQueryParamFieldsMetadata,
+		UpdateAccountingExpenseQueryParamFieldsTaxrateID,
+		UpdateAccountingExpenseQueryParamFieldsExchangeRate,
+		UpdateAccountingExpenseQueryParamFieldsType,
+		UpdateAccountingExpenseQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateAccountingExpenseQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

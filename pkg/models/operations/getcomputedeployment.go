@@ -34,6 +34,29 @@ const (
 func (e GetComputeDeploymentQueryParamFields) ToPointer() *GetComputeDeploymentQueryParamFields {
 	return &e
 }
+
+// GetComputeDeploymentQueryParamFieldsValues returns every known GetComputeDeploymentQueryParamFields value in schema order.
+func GetComputeDeploymentQueryParamFieldsValues() []GetComputeDeploymentQueryParamFields {
+	return []GetComputeDeploymentQueryParamFields{
+		GetComputeDeploymentQueryParamFieldsID,
+		GetComputeDeploymentQueryParamFieldsCreatedAt,
+		GetComputeDeploymentQueryParamFieldsUpdatedAt,
+		GetComputeDeploymentQueryParamFieldsServiceID,
+		GetComputeDeploymentQueryParamFieldsStatus,
+		GetComputeDeploymentQueryParamFieldsTrigger,
+		GetComputeDeploymentQueryParamFieldsEnvironment,
+		GetComputeDeploymentQueryParamFieldsCommitIdentifier,
+		GetComputeDeploymentQueryParamFieldsCommitMessage,
+		GetComputeDeploymentQueryParamFieldsBranch,
+		GetComputeDeploymentQueryParamFieldsImage,
+		GetComputeDeploymentQueryParamFieldsURL,
+		GetComputeDeploymentQueryParamFieldsStartedAt,
+		GetComputeDeploymentQueryParamFieldsFinishedAt,
+		GetComputeDeploymentQueryParamFieldsError,
+		GetComputeDeploymentQueryParamFieldsMetadata,
+		GetComputeDeploymentQueryParamFieldsRaw,
+	}
+}
 func (e *GetComputeDeploymentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -51,6 +51,46 @@ const (
 func (e CreateAccountingQuoteQueryParamFields) ToPointer() *CreateAccountingQuoteQueryParamFields {
 	return &e
 }
+
+// CreateAccountingQuoteQueryParamFieldsValues returns every known CreateAccountingQuoteQueryParamFields value in schema order.
+func CreateAccountingQuoteQueryParamFieldsValues() []CreateAccountingQuoteQueryParamFields {
+	return []CreateAccountingQuoteQueryParamFields{
+		CreateAccountingQuoteQueryParamFieldsID,
+		CreateAccountingQuoteQueryParamFieldsCreatedAt,
+		CreateAccountingQuoteQueryParamFieldsUpdatedAt,
+		CreateAccountingQuoteQueryParamFieldsQuoteNumber,
+		CreateAccountingQuoteQueryParamFieldsReference,
+		CreateAccountingQuoteQueryParamFieldsTitle,
+		CreateAccountingQuoteQueryParamFieldsSummary,
+		CreateAccountingQuoteQueryParamFieldsPaymentTerms,
+		CreateAccountingQuoteQueryParamFieldsCustomerMessage,
+		CreateAccountingQuoteQueryParamFieldsMemo,
+		CreateAccountingQuoteQueryParamFieldsContactID,
+		CreateAccountingQuoteQueryParamFieldsContacts,
+		CreateAccountingQuoteQueryParamFieldsIssuedAt,
+		CreateAccountingQuoteQueryParamFieldsExpiresAt,
+		CreateAccountingQuoteQueryParamFieldsSentAt,
+		CreateAccountingQuoteQueryParamFieldsAcceptedAt,
+		CreateAccountingQuoteQueryParamFieldsDeclinedAt,
+		CreateAccountingQuoteQueryParamFieldsStatus,
+		CreateAccountingQuoteQueryParamFieldsCurrency,
+		CreateAccountingQuoteQueryParamFieldsCurrencyRate,
+		CreateAccountingQuoteQueryParamFieldsSubTotalAmount,
+		CreateAccountingQuoteQueryParamFieldsTaxAmount,
+		CreateAccountingQuoteQueryParamFieldsDiscountAmount,
+		CreateAccountingQuoteQueryParamFieldsTotalAmount,
+		CreateAccountingQuoteQueryParamFieldsTaxMode,
+		CreateAccountingQuoteQueryParamFieldsLineitems,
+		CreateAccountingQuoteQueryParamFieldsInvoiceID,
+		CreateAccountingQuoteQueryParamFieldsProjectID,
+		CreateAccountingQuoteQueryParamFieldsGroupID,
+		CreateAccountingQuoteQueryParamFieldsCategoryIds,
+		CreateAccountingQuoteQueryParamFieldsURL,
+		CreateAccountingQuoteQueryParamFieldsOrganizationID,
+		CreateAccountingQuoteQueryParamFieldsMetadata,
+		CreateAccountingQuoteQueryParamFieldsRaw,
+	}
+}
 func (e *CreateAccountingQuoteQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

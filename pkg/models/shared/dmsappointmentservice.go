@@ -16,6 +16,17 @@ func (e PayType) ToPointer() *PayType {
 	return &e
 }
 
+// PayTypeValues returns every known PayType value in schema order.
+func PayTypeValues() []PayType {
+	return []PayType{
+		PayTypeCustomer,
+		PayTypeWarranty,
+		PayTypeInternal,
+		PayTypeServiceContract,
+		PayTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PayType) IsExact() bool {
 	if e != nil {

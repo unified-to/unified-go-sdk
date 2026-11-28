@@ -22,6 +22,22 @@ func (e AccountingFeeType) ToPointer() *AccountingFeeType {
 	return &e
 }
 
+// AccountingFeeTypeValues returns every known AccountingFeeType value in schema order.
+func AccountingFeeTypeValues() []AccountingFeeType {
+	return []AccountingFeeType{
+		AccountingFeeTypeTax,
+		AccountingFeeTypeDiscount,
+		AccountingFeeTypePromotion,
+		AccountingFeeTypeShipping,
+		AccountingFeeTypeGiftWrap,
+		AccountingFeeTypeCod,
+		AccountingFeeTypeSurcharge,
+		AccountingFeeTypeTip,
+		AccountingFeeTypeServiceCharge,
+		AccountingFeeTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingFeeType) IsExact() bool {
 	if e != nil {

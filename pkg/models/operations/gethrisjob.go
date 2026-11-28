@@ -33,6 +33,28 @@ const (
 func (e GetHrisJobQueryParamFields) ToPointer() *GetHrisJobQueryParamFields {
 	return &e
 }
+
+// GetHrisJobQueryParamFieldsValues returns every known GetHrisJobQueryParamFields value in schema order.
+func GetHrisJobQueryParamFieldsValues() []GetHrisJobQueryParamFields {
+	return []GetHrisJobQueryParamFields{
+		GetHrisJobQueryParamFieldsID,
+		GetHrisJobQueryParamFieldsCreatedAt,
+		GetHrisJobQueryParamFieldsUpdatedAt,
+		GetHrisJobQueryParamFieldsName,
+		GetHrisJobQueryParamFieldsDescription,
+		GetHrisJobQueryParamFieldsCode,
+		GetHrisJobQueryParamFieldsIsActive,
+		GetHrisJobQueryParamFieldsEmploymentType,
+		GetHrisJobQueryParamFieldsCompanyID,
+		GetHrisJobQueryParamFieldsGroups,
+		GetHrisJobQueryParamFieldsLocations,
+		GetHrisJobQueryParamFieldsParentID,
+		GetHrisJobQueryParamFieldsUsers,
+		GetHrisJobQueryParamFieldsCompensation,
+		GetHrisJobQueryParamFieldsMetadata,
+		GetHrisJobQueryParamFieldsRaw,
+	}
+}
 func (e *GetHrisJobQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

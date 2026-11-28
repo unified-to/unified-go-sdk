@@ -28,6 +28,23 @@ const (
 func (e UpdateKmsCommentQueryParamFields) ToPointer() *UpdateKmsCommentQueryParamFields {
 	return &e
 }
+
+// UpdateKmsCommentQueryParamFieldsValues returns every known UpdateKmsCommentQueryParamFields value in schema order.
+func UpdateKmsCommentQueryParamFieldsValues() []UpdateKmsCommentQueryParamFields {
+	return []UpdateKmsCommentQueryParamFields{
+		UpdateKmsCommentQueryParamFieldsID,
+		UpdateKmsCommentQueryParamFieldsCreatedAt,
+		UpdateKmsCommentQueryParamFieldsUpdatedAt,
+		UpdateKmsCommentQueryParamFieldsType,
+		UpdateKmsCommentQueryParamFieldsContentType,
+		UpdateKmsCommentQueryParamFieldsContent,
+		UpdateKmsCommentQueryParamFieldsUserID,
+		UpdateKmsCommentQueryParamFieldsPageID,
+		UpdateKmsCommentQueryParamFieldsParentID,
+		UpdateKmsCommentQueryParamFieldsMetadata,
+		UpdateKmsCommentQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateKmsCommentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

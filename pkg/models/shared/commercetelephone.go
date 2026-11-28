@@ -16,6 +16,17 @@ func (e CommerceTelephoneType) ToPointer() *CommerceTelephoneType {
 	return &e
 }
 
+// CommerceTelephoneTypeValues returns every known CommerceTelephoneType value in schema order.
+func CommerceTelephoneTypeValues() []CommerceTelephoneType {
+	return []CommerceTelephoneType{
+		CommerceTelephoneTypeWork,
+		CommerceTelephoneTypeHome,
+		CommerceTelephoneTypeFax,
+		CommerceTelephoneTypeMobile,
+		CommerceTelephoneTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CommerceTelephoneType) IsExact() bool {
 	if e != nil {

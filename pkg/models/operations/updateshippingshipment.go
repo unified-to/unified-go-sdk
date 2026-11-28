@@ -58,6 +58,53 @@ const (
 func (e UpdateShippingShipmentQueryParamFields) ToPointer() *UpdateShippingShipmentQueryParamFields {
 	return &e
 }
+
+// UpdateShippingShipmentQueryParamFieldsValues returns every known UpdateShippingShipmentQueryParamFields value in schema order.
+func UpdateShippingShipmentQueryParamFieldsValues() []UpdateShippingShipmentQueryParamFields {
+	return []UpdateShippingShipmentQueryParamFields{
+		UpdateShippingShipmentQueryParamFieldsID,
+		UpdateShippingShipmentQueryParamFieldsCreatedAt,
+		UpdateShippingShipmentQueryParamFieldsUpdatedAt,
+		UpdateShippingShipmentQueryParamFieldsOrderID,
+		UpdateShippingShipmentQueryParamFieldsOrganizationID,
+		UpdateShippingShipmentQueryParamFieldsFromAddress,
+		UpdateShippingShipmentQueryParamFieldsToAddress,
+		UpdateShippingShipmentQueryParamFieldsPackages,
+		UpdateShippingShipmentQueryParamFieldsCarrierID,
+		UpdateShippingShipmentQueryParamFieldsServiceCode,
+		UpdateShippingShipmentQueryParamFieldsStatus,
+		UpdateShippingShipmentQueryParamFieldsRateID,
+		UpdateShippingShipmentQueryParamFieldsLabelID,
+		UpdateShippingShipmentQueryParamFieldsTrackingID,
+		UpdateShippingShipmentQueryParamFieldsShippedAt,
+		UpdateShippingShipmentQueryParamFieldsRateAmount,
+		UpdateShippingShipmentQueryParamFieldsRateCurrency,
+		UpdateShippingShipmentQueryParamFieldsRateServiceName,
+		UpdateShippingShipmentQueryParamFieldsRateEstimatedDays,
+		UpdateShippingShipmentQueryParamFieldsRateEstimatedDeliveryAt,
+		UpdateShippingShipmentQueryParamFieldsIsRateGuaranteed,
+		UpdateShippingShipmentQueryParamFieldsReturnAddress,
+		UpdateShippingShipmentQueryParamFieldsReturnAuthorizationNumber,
+		UpdateShippingShipmentQueryParamFieldsWarehouseLocationID,
+		UpdateShippingShipmentQueryParamFieldsWarehouseLocationName,
+		UpdateShippingShipmentQueryParamFieldsCustoms,
+		UpdateShippingShipmentQueryParamFieldsIsInternational,
+		UpdateShippingShipmentQueryParamFieldsInsurance,
+		UpdateShippingShipmentQueryParamFieldsSpecialInstructions,
+		UpdateShippingShipmentQueryParamFieldsIsSignatureRequired,
+		UpdateShippingShipmentQueryParamFieldsIsAdultSignatureRequired,
+		UpdateShippingShipmentQueryParamFieldsReferenceNumber,
+		UpdateShippingShipmentQueryParamFieldsIsReturn,
+		UpdateShippingShipmentQueryParamFieldsOriginalShipmentID,
+		UpdateShippingShipmentQueryParamFieldsReturnReason,
+		UpdateShippingShipmentQueryParamFieldsReturnType,
+		UpdateShippingShipmentQueryParamFieldsCarrierName,
+		UpdateShippingShipmentQueryParamFieldsTrackingURL,
+		UpdateShippingShipmentQueryParamFieldsLineitems,
+		UpdateShippingShipmentQueryParamFieldsMetadata,
+		UpdateShippingShipmentQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateShippingShipmentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

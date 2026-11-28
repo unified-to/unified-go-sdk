@@ -42,6 +42,37 @@ const (
 func (e GetCommerceReviewQueryParamFields) ToPointer() *GetCommerceReviewQueryParamFields {
 	return &e
 }
+
+// GetCommerceReviewQueryParamFieldsValues returns every known GetCommerceReviewQueryParamFields value in schema order.
+func GetCommerceReviewQueryParamFieldsValues() []GetCommerceReviewQueryParamFields {
+	return []GetCommerceReviewQueryParamFields{
+		GetCommerceReviewQueryParamFieldsID,
+		GetCommerceReviewQueryParamFieldsCreatedAt,
+		GetCommerceReviewQueryParamFieldsUpdatedAt,
+		GetCommerceReviewQueryParamFieldsItemID,
+		GetCommerceReviewQueryParamFieldsItemVariantID,
+		GetCommerceReviewQueryParamFieldsLocationID,
+		GetCommerceReviewQueryParamFieldsRating,
+		GetCommerceReviewQueryParamFieldsTitle,
+		GetCommerceReviewQueryParamFieldsContent,
+		GetCommerceReviewQueryParamFieldsAuthorName,
+		GetCommerceReviewQueryParamFieldsAuthorEmail,
+		GetCommerceReviewQueryParamFieldsAuthorAvatarURL,
+		GetCommerceReviewQueryParamFieldsAuthorLocation,
+		GetCommerceReviewQueryParamFieldsVerifiedPurchase,
+		GetCommerceReviewQueryParamFieldsHelpfulVotes,
+		GetCommerceReviewQueryParamFieldsUnhelpfulVotes,
+		GetCommerceReviewQueryParamFieldsMedia,
+		GetCommerceReviewQueryParamFieldsStatus,
+		GetCommerceReviewQueryParamFieldsIsVerified,
+		GetCommerceReviewQueryParamFieldsIsFeatured,
+		GetCommerceReviewQueryParamFieldsIsPublic,
+		GetCommerceReviewQueryParamFieldsComments,
+		GetCommerceReviewQueryParamFieldsMetadata,
+		GetCommerceReviewQueryParamFieldsURL,
+		GetCommerceReviewQueryParamFieldsRaw,
+	}
+}
 func (e *GetCommerceReviewQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

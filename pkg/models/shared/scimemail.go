@@ -14,6 +14,15 @@ func (e ScimEmailType) ToPointer() *ScimEmailType {
 	return &e
 }
 
+// ScimEmailTypeValues returns every known ScimEmailType value in schema order.
+func ScimEmailTypeValues() []ScimEmailType {
+	return []ScimEmailType{
+		ScimEmailTypeWork,
+		ScimEmailTypeHome,
+		ScimEmailTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ScimEmailType) IsExact() bool {
 	if e != nil {

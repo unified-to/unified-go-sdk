@@ -32,6 +32,27 @@ const (
 func (e PatchComputeKeyQueryParamFields) ToPointer() *PatchComputeKeyQueryParamFields {
 	return &e
 }
+
+// PatchComputeKeyQueryParamFieldsValues returns every known PatchComputeKeyQueryParamFields value in schema order.
+func PatchComputeKeyQueryParamFieldsValues() []PatchComputeKeyQueryParamFields {
+	return []PatchComputeKeyQueryParamFields{
+		PatchComputeKeyQueryParamFieldsID,
+		PatchComputeKeyQueryParamFieldsCreatedAt,
+		PatchComputeKeyQueryParamFieldsUpdatedAt,
+		PatchComputeKeyQueryParamFieldsName,
+		PatchComputeKeyQueryParamFieldsType,
+		PatchComputeKeyQueryParamFieldsPublicKey,
+		PatchComputeKeyQueryParamFieldsPrivateKey,
+		PatchComputeKeyQueryParamFieldsFingerprint,
+		PatchComputeKeyQueryParamFieldsRegistryURL,
+		PatchComputeKeyQueryParamFieldsUsername,
+		PatchComputeKeyQueryParamFieldsSecret,
+		PatchComputeKeyQueryParamFieldsInstanceID,
+		PatchComputeKeyQueryParamFieldsExpiresAt,
+		PatchComputeKeyQueryParamFieldsMetadata,
+		PatchComputeKeyQueryParamFieldsRaw,
+	}
+}
 func (e *PatchComputeKeyQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

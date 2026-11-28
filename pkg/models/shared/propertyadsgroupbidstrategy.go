@@ -20,6 +20,21 @@ func (e PerformanceGoalType) ToPointer() *PerformanceGoalType {
 	return &e
 }
 
+// PerformanceGoalTypeValues returns every known PerformanceGoalType value in schema order.
+func PerformanceGoalTypeValues() []PerformanceGoalType {
+	return []PerformanceGoalType{
+		PerformanceGoalTypeUnspecified,
+		PerformanceGoalTypeCpa,
+		PerformanceGoalTypeCpc,
+		PerformanceGoalTypeViewableCpm,
+		PerformanceGoalTypeCustomAlgo,
+		PerformanceGoalTypeCiva,
+		PerformanceGoalTypeIvoTen,
+		PerformanceGoalTypeAvViewed,
+		PerformanceGoalTypeReach,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PerformanceGoalType) IsExact() bool {
 	if e != nil {
@@ -42,6 +57,16 @@ const (
 
 func (e PropertyAdsGroupBidStrategyType) ToPointer() *PropertyAdsGroupBidStrategyType {
 	return &e
+}
+
+// PropertyAdsGroupBidStrategyTypeValues returns every known PropertyAdsGroupBidStrategyType value in schema order.
+func PropertyAdsGroupBidStrategyTypeValues() []PropertyAdsGroupBidStrategyType {
+	return []PropertyAdsGroupBidStrategyType{
+		PropertyAdsGroupBidStrategyTypeFixedBid,
+		PropertyAdsGroupBidStrategyTypeMaximizeSpend,
+		PropertyAdsGroupBidStrategyTypePerformanceGoal,
+		PropertyAdsGroupBidStrategyTypeYoutubeAndPartners,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -73,6 +98,23 @@ const (
 
 func (e YoutubeAndPartnersType) ToPointer() *YoutubeAndPartnersType {
 	return &e
+}
+
+// YoutubeAndPartnersTypeValues returns every known YoutubeAndPartnersType value in schema order.
+func YoutubeAndPartnersTypeValues() []YoutubeAndPartnersType {
+	return []YoutubeAndPartnersType{
+		YoutubeAndPartnersTypeUnspecified,
+		YoutubeAndPartnersTypeManualCpv,
+		YoutubeAndPartnersTypeManualCpm,
+		YoutubeAndPartnersTypeTargetCpa,
+		YoutubeAndPartnersTypeTargetCpm,
+		YoutubeAndPartnersTypeReserveCpm,
+		YoutubeAndPartnersTypeMaximizeLift,
+		YoutubeAndPartnersTypeMaximizeConversions,
+		YoutubeAndPartnersTypeTargetCpv,
+		YoutubeAndPartnersTypeTargetRoas,
+		YoutubeAndPartnersTypeMaximizeConversionValue,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

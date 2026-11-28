@@ -22,6 +22,18 @@ func (e Disposition) ToPointer() *Disposition {
 	return &e
 }
 
+// DispositionValues returns every known Disposition value in schema order.
+func DispositionValues() []Disposition {
+	return []Disposition{
+		DispositionUseAsIs,
+		DispositionRework,
+		DispositionRepair,
+		DispositionScrap,
+		DispositionReturnToVendor,
+		DispositionOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Disposition) IsExact() bool {
 	if e != nil {
@@ -44,6 +56,16 @@ const (
 
 func (e Severity) ToPointer() *Severity {
 	return &e
+}
+
+// SeverityValues returns every known Severity value in schema order.
+func SeverityValues() []Severity {
+	return []Severity{
+		SeverityLow,
+		SeverityMedium,
+		SeverityHigh,
+		SeverityCritical,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -71,6 +93,17 @@ func (e QmsIssueSource) ToPointer() *QmsIssueSource {
 	return &e
 }
 
+// QmsIssueSourceValues returns every known QmsIssueSource value in schema order.
+func QmsIssueSourceValues() []QmsIssueSource {
+	return []QmsIssueSource{
+		QmsIssueSourceInternal,
+		QmsIssueSourceSupplier,
+		QmsIssueSourceCustomer,
+		QmsIssueSourceAudit,
+		QmsIssueSourceOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *QmsIssueSource) IsExact() bool {
 	if e != nil {
@@ -96,6 +129,17 @@ func (e QmsIssueStatus) ToPointer() *QmsIssueStatus {
 	return &e
 }
 
+// QmsIssueStatusValues returns every known QmsIssueStatus value in schema order.
+func QmsIssueStatusValues() []QmsIssueStatus {
+	return []QmsIssueStatus{
+		QmsIssueStatusOpen,
+		QmsIssueStatusInProgress,
+		QmsIssueStatusInReview,
+		QmsIssueStatusClosed,
+		QmsIssueStatusCancelled,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *QmsIssueStatus) IsExact() bool {
 	if e != nil {
@@ -119,6 +163,17 @@ const (
 
 func (e QmsIssueType) ToPointer() *QmsIssueType {
 	return &e
+}
+
+// QmsIssueTypeValues returns every known QmsIssueType value in schema order.
+func QmsIssueTypeValues() []QmsIssueType {
+	return []QmsIssueType{
+		QmsIssueTypeNonconformance,
+		QmsIssueTypeComplaint,
+		QmsIssueTypeAuditFinding,
+		QmsIssueTypeProblemReport,
+		QmsIssueTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

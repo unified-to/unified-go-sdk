@@ -20,6 +20,15 @@ func (e Category) ToPointer() *Category {
 	return &e
 }
 
+// CategoryValues returns every known Category value in schema order.
+func CategoryValues() []Category {
+	return []Category{
+		CategoryStandard,
+		CategoryDateDriven,
+		CategoryOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *Category) IsExact() bool {
 	if e != nil {
@@ -49,6 +58,23 @@ const (
 
 func (e AccountingPaymenttermType) ToPointer() *AccountingPaymenttermType {
 	return &e
+}
+
+// AccountingPaymenttermTypeValues returns every known AccountingPaymenttermType value in schema order.
+func AccountingPaymenttermTypeValues() []AccountingPaymenttermType {
+	return []AccountingPaymenttermType{
+		AccountingPaymenttermTypeOnReceipt,
+		AccountingPaymenttermTypeNet7,
+		AccountingPaymenttermTypeNet10,
+		AccountingPaymenttermTypeNet15,
+		AccountingPaymenttermTypeNet20,
+		AccountingPaymenttermTypeNet25,
+		AccountingPaymenttermTypeNet30,
+		AccountingPaymenttermTypeNet45,
+		AccountingPaymenttermTypeNet60,
+		AccountingPaymenttermTypeNet90,
+		AccountingPaymenttermTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

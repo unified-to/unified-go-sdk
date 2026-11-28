@@ -36,6 +36,31 @@ const (
 func (e CreateHealthcareAppointmentQueryParamFields) ToPointer() *CreateHealthcareAppointmentQueryParamFields {
 	return &e
 }
+
+// CreateHealthcareAppointmentQueryParamFieldsValues returns every known CreateHealthcareAppointmentQueryParamFields value in schema order.
+func CreateHealthcareAppointmentQueryParamFieldsValues() []CreateHealthcareAppointmentQueryParamFields {
+	return []CreateHealthcareAppointmentQueryParamFields{
+		CreateHealthcareAppointmentQueryParamFieldsID,
+		CreateHealthcareAppointmentQueryParamFieldsCreatedAt,
+		CreateHealthcareAppointmentQueryParamFieldsUpdatedAt,
+		CreateHealthcareAppointmentQueryParamFieldsPatientID,
+		CreateHealthcareAppointmentQueryParamFieldsPractitionerIds,
+		CreateHealthcareAppointmentQueryParamFieldsLocationID,
+		CreateHealthcareAppointmentQueryParamFieldsSlotIds,
+		CreateHealthcareAppointmentQueryParamFieldsStatus,
+		CreateHealthcareAppointmentQueryParamFieldsStartAt,
+		CreateHealthcareAppointmentQueryParamFieldsEndAt,
+		CreateHealthcareAppointmentQueryParamFieldsDescription,
+		CreateHealthcareAppointmentQueryParamFieldsServiceTypes,
+		CreateHealthcareAppointmentQueryParamFieldsReasons,
+		CreateHealthcareAppointmentQueryParamFieldsCancellationReason,
+		CreateHealthcareAppointmentQueryParamFieldsNotes,
+		CreateHealthcareAppointmentQueryParamFieldsIsVirtual,
+		CreateHealthcareAppointmentQueryParamFieldsMeetingURL,
+		CreateHealthcareAppointmentQueryParamFieldsMetadata,
+		CreateHealthcareAppointmentQueryParamFieldsRaw,
+	}
+}
 func (e *CreateHealthcareAppointmentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -33,6 +33,28 @@ const (
 func (e GetAccountingOrderQueryParamFields) ToPointer() *GetAccountingOrderQueryParamFields {
 	return &e
 }
+
+// GetAccountingOrderQueryParamFieldsValues returns every known GetAccountingOrderQueryParamFields value in schema order.
+func GetAccountingOrderQueryParamFieldsValues() []GetAccountingOrderQueryParamFields {
+	return []GetAccountingOrderQueryParamFields{
+		GetAccountingOrderQueryParamFieldsID,
+		GetAccountingOrderQueryParamFieldsCreatedAt,
+		GetAccountingOrderQueryParamFieldsUpdatedAt,
+		GetAccountingOrderQueryParamFieldsPostedAt,
+		GetAccountingOrderQueryParamFieldsContactID,
+		GetAccountingOrderQueryParamFieldsAccountID,
+		GetAccountingOrderQueryParamFieldsType,
+		GetAccountingOrderQueryParamFieldsCurrency,
+		GetAccountingOrderQueryParamFieldsTotalAmount,
+		GetAccountingOrderQueryParamFieldsShippingAddress,
+		GetAccountingOrderQueryParamFieldsBillingAddress,
+		GetAccountingOrderQueryParamFieldsStatus,
+		GetAccountingOrderQueryParamFieldsLineitems,
+		GetAccountingOrderQueryParamFieldsOrganizationID,
+		GetAccountingOrderQueryParamFieldsMetadata,
+		GetAccountingOrderQueryParamFieldsRaw,
+	}
+}
 func (e *GetAccountingOrderQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -26,6 +26,21 @@ const (
 func (e ListCommerceSaleschannelsQueryParamFields) ToPointer() *ListCommerceSaleschannelsQueryParamFields {
 	return &e
 }
+
+// ListCommerceSaleschannelsQueryParamFieldsValues returns every known ListCommerceSaleschannelsQueryParamFields value in schema order.
+func ListCommerceSaleschannelsQueryParamFieldsValues() []ListCommerceSaleschannelsQueryParamFields {
+	return []ListCommerceSaleschannelsQueryParamFields{
+		ListCommerceSaleschannelsQueryParamFieldsID,
+		ListCommerceSaleschannelsQueryParamFieldsCreatedAt,
+		ListCommerceSaleschannelsQueryParamFieldsUpdatedAt,
+		ListCommerceSaleschannelsQueryParamFieldsSlug,
+		ListCommerceSaleschannelsQueryParamFieldsDescription,
+		ListCommerceSaleschannelsQueryParamFieldsIsActive,
+		ListCommerceSaleschannelsQueryParamFieldsCollections,
+		ListCommerceSaleschannelsQueryParamFieldsMetadata,
+		ListCommerceSaleschannelsQueryParamFieldsRaw,
+	}
+}
 func (e *ListCommerceSaleschannelsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

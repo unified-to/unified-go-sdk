@@ -42,6 +42,37 @@ const (
 func (e ListDmsPartsalesQueryParamFields) ToPointer() *ListDmsPartsalesQueryParamFields {
 	return &e
 }
+
+// ListDmsPartsalesQueryParamFieldsValues returns every known ListDmsPartsalesQueryParamFields value in schema order.
+func ListDmsPartsalesQueryParamFieldsValues() []ListDmsPartsalesQueryParamFields {
+	return []ListDmsPartsalesQueryParamFields{
+		ListDmsPartsalesQueryParamFieldsID,
+		ListDmsPartsalesQueryParamFieldsCreatedAt,
+		ListDmsPartsalesQueryParamFieldsUpdatedAt,
+		ListDmsPartsalesQueryParamFieldsNumber,
+		ListDmsPartsalesQueryParamFieldsType,
+		ListDmsPartsalesQueryParamFieldsStatus,
+		ListDmsPartsalesQueryParamFieldsContactID,
+		ListDmsPartsalesQueryParamFieldsSalespersonUserID,
+		ListDmsPartsalesQueryParamFieldsVehicleID,
+		ListDmsPartsalesQueryParamFieldsPayType,
+		ListDmsPartsalesQueryParamFieldsPurchaseOrderNumber,
+		ListDmsPartsalesQueryParamFieldsClosedAt,
+		ListDmsPartsalesQueryParamFieldsShippedAt,
+		ListDmsPartsalesQueryParamFieldsCurrency,
+		ListDmsPartsalesQueryParamFieldsSubtotalAmount,
+		ListDmsPartsalesQueryParamFieldsDiscountAmount,
+		ListDmsPartsalesQueryParamFieldsFreightAmount,
+		ListDmsPartsalesQueryParamFieldsTaxAmount,
+		ListDmsPartsalesQueryParamFieldsTotalAmount,
+		ListDmsPartsalesQueryParamFieldsCostAmount,
+		ListDmsPartsalesQueryParamFieldsNotes,
+		ListDmsPartsalesQueryParamFieldsShippingAddress,
+		ListDmsPartsalesQueryParamFieldsLines,
+		ListDmsPartsalesQueryParamFieldsMetadata,
+		ListDmsPartsalesQueryParamFieldsRaw,
+	}
+}
 func (e *ListDmsPartsalesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

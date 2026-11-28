@@ -16,6 +16,17 @@ func (e AccountingAccountTaxonomyType) ToPointer() *AccountingAccountTaxonomyTyp
 	return &e
 }
 
+// AccountingAccountTaxonomyTypeValues returns every known AccountingAccountTaxonomyType value in schema order.
+func AccountingAccountTaxonomyTypeValues() []AccountingAccountTaxonomyType {
+	return []AccountingAccountTaxonomyType{
+		AccountingAccountTaxonomyTypeClassification,
+		AccountingAccountTaxonomyTypeGroup,
+		AccountingAccountTaxonomyTypeSubgroup,
+		AccountingAccountTaxonomyTypeSystemRole,
+		AccountingAccountTaxonomyTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingAccountTaxonomyType) IsExact() bool {
 	if e != nil {

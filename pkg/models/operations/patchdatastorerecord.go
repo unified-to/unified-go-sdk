@@ -26,6 +26,21 @@ const (
 func (e PatchDatastoreRecordQueryParamFields) ToPointer() *PatchDatastoreRecordQueryParamFields {
 	return &e
 }
+
+// PatchDatastoreRecordQueryParamFieldsValues returns every known PatchDatastoreRecordQueryParamFields value in schema order.
+func PatchDatastoreRecordQueryParamFieldsValues() []PatchDatastoreRecordQueryParamFields {
+	return []PatchDatastoreRecordQueryParamFields{
+		PatchDatastoreRecordQueryParamFieldsID,
+		PatchDatastoreRecordQueryParamFieldsCreatedAt,
+		PatchDatastoreRecordQueryParamFieldsUpdatedAt,
+		PatchDatastoreRecordQueryParamFieldsDatabaseID,
+		PatchDatastoreRecordQueryParamFieldsTableID,
+		PatchDatastoreRecordQueryParamFieldsFields,
+		PatchDatastoreRecordQueryParamFieldsRowNumber,
+		PatchDatastoreRecordQueryParamFieldsMetadata,
+		PatchDatastoreRecordQueryParamFieldsRaw,
+	}
+}
 func (e *PatchDatastoreRecordQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

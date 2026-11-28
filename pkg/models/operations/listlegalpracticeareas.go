@@ -26,6 +26,21 @@ const (
 func (e ListLegalPracticeareasQueryParamFields) ToPointer() *ListLegalPracticeareasQueryParamFields {
 	return &e
 }
+
+// ListLegalPracticeareasQueryParamFieldsValues returns every known ListLegalPracticeareasQueryParamFields value in schema order.
+func ListLegalPracticeareasQueryParamFieldsValues() []ListLegalPracticeareasQueryParamFields {
+	return []ListLegalPracticeareasQueryParamFields{
+		ListLegalPracticeareasQueryParamFieldsID,
+		ListLegalPracticeareasQueryParamFieldsCreatedAt,
+		ListLegalPracticeareasQueryParamFieldsUpdatedAt,
+		ListLegalPracticeareasQueryParamFieldsName,
+		ListLegalPracticeareasQueryParamFieldsType,
+		ListLegalPracticeareasQueryParamFieldsCode,
+		ListLegalPracticeareasQueryParamFieldsIsActive,
+		ListLegalPracticeareasQueryParamFieldsMetadata,
+		ListLegalPracticeareasQueryParamFieldsRaw,
+	}
+}
 func (e *ListLegalPracticeareasQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

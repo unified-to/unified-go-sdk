@@ -297,6 +297,25 @@ func (e RepoMetadataFormat) ToPointer() *RepoMetadataFormat {
 	return &e
 }
 
+// RepoMetadataFormatValues returns every known RepoMetadataFormat value in schema order.
+func RepoMetadataFormatValues() []RepoMetadataFormat {
+	return []RepoMetadataFormat{
+		RepoMetadataFormatText,
+		RepoMetadataFormatNumber,
+		RepoMetadataFormatDate,
+		RepoMetadataFormatBoolean,
+		RepoMetadataFormatFile,
+		RepoMetadataFormatTextarea,
+		RepoMetadataFormatSingleSelect,
+		RepoMetadataFormatMultipleSelect,
+		RepoMetadataFormatMeasurement,
+		RepoMetadataFormatPrice,
+		RepoMetadataFormatYesNo,
+		RepoMetadataFormatCurrency,
+		RepoMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *RepoMetadataFormat) IsExact() bool {
 	if e != nil {

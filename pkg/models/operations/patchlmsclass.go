@@ -29,6 +29,24 @@ const (
 func (e PatchLmsClassQueryParamFields) ToPointer() *PatchLmsClassQueryParamFields {
 	return &e
 }
+
+// PatchLmsClassQueryParamFieldsValues returns every known PatchLmsClassQueryParamFields value in schema order.
+func PatchLmsClassQueryParamFieldsValues() []PatchLmsClassQueryParamFields {
+	return []PatchLmsClassQueryParamFields{
+		PatchLmsClassQueryParamFieldsID,
+		PatchLmsClassQueryParamFieldsCreatedAt,
+		PatchLmsClassQueryParamFieldsUpdatedAt,
+		PatchLmsClassQueryParamFieldsName,
+		PatchLmsClassQueryParamFieldsDescription,
+		PatchLmsClassQueryParamFieldsMedia,
+		PatchLmsClassQueryParamFieldsCourseID,
+		PatchLmsClassQueryParamFieldsLanguages,
+		PatchLmsClassQueryParamFieldsInstructors,
+		PatchLmsClassQueryParamFieldsStudents,
+		PatchLmsClassQueryParamFieldsMetadata,
+		PatchLmsClassQueryParamFieldsRaw,
+	}
+}
 func (e *PatchLmsClassQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

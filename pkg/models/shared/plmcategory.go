@@ -20,6 +20,15 @@ func (e PlmCategoryType) ToPointer() *PlmCategoryType {
 	return &e
 }
 
+// PlmCategoryTypeValues returns every known PlmCategoryType value in schema order.
+func PlmCategoryTypeValues() []PlmCategoryType {
+	return []PlmCategoryType{
+		PlmCategoryTypePart,
+		PlmCategoryTypeDocument,
+		PlmCategoryTypeChange,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PlmCategoryType) IsExact() bool {
 	if e != nil {

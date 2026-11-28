@@ -39,6 +39,34 @@ const (
 func (e PatchCrmDealQueryParamFields) ToPointer() *PatchCrmDealQueryParamFields {
 	return &e
 }
+
+// PatchCrmDealQueryParamFieldsValues returns every known PatchCrmDealQueryParamFields value in schema order.
+func PatchCrmDealQueryParamFieldsValues() []PatchCrmDealQueryParamFields {
+	return []PatchCrmDealQueryParamFields{
+		PatchCrmDealQueryParamFieldsID,
+		PatchCrmDealQueryParamFieldsCreatedAt,
+		PatchCrmDealQueryParamFieldsUpdatedAt,
+		PatchCrmDealQueryParamFieldsName,
+		PatchCrmDealQueryParamFieldsAmount,
+		PatchCrmDealQueryParamFieldsCurrency,
+		PatchCrmDealQueryParamFieldsClosedAt,
+		PatchCrmDealQueryParamFieldsClosingAt,
+		PatchCrmDealQueryParamFieldsStages,
+		PatchCrmDealQueryParamFieldsPipelines,
+		PatchCrmDealQueryParamFieldsSource,
+		PatchCrmDealQueryParamFieldsProbability,
+		PatchCrmDealQueryParamFieldsTags,
+		PatchCrmDealQueryParamFieldsLostReason,
+		PatchCrmDealQueryParamFieldsWonReason,
+		PatchCrmDealQueryParamFieldsUserID,
+		PatchCrmDealQueryParamFieldsContactIds,
+		PatchCrmDealQueryParamFieldsCompanyIds,
+		PatchCrmDealQueryParamFieldsDescription,
+		PatchCrmDealQueryParamFieldsMetadata,
+		PatchCrmDealQueryParamFieldsVehicleIds,
+		PatchCrmDealQueryParamFieldsRaw,
+	}
+}
 func (e *PatchCrmDealQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

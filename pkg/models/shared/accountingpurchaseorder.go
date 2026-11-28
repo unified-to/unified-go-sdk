@@ -28,6 +28,24 @@ func (e AccountingPurchaseorderStatus) ToPointer() *AccountingPurchaseorderStatu
 	return &e
 }
 
+// AccountingPurchaseorderStatusValues returns every known AccountingPurchaseorderStatus value in schema order.
+func AccountingPurchaseorderStatusValues() []AccountingPurchaseorderStatus {
+	return []AccountingPurchaseorderStatus{
+		AccountingPurchaseorderStatusDraft,
+		AccountingPurchaseorderStatusVoided,
+		AccountingPurchaseorderStatusAuthorized,
+		AccountingPurchaseorderStatusPaid,
+		AccountingPurchaseorderStatusPartiallyPaid,
+		AccountingPurchaseorderStatusPartiallyRefunded,
+		AccountingPurchaseorderStatusRefunded,
+		AccountingPurchaseorderStatusSubmitted,
+		AccountingPurchaseorderStatusDeleted,
+		AccountingPurchaseorderStatusOpen,
+		AccountingPurchaseorderStatusCompleted,
+		AccountingPurchaseorderStatusCanceled,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingPurchaseorderStatus) IsExact() bool {
 	if e != nil {

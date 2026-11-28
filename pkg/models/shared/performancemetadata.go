@@ -297,6 +297,25 @@ func (e PerformanceMetadataFormat) ToPointer() *PerformanceMetadataFormat {
 	return &e
 }
 
+// PerformanceMetadataFormatValues returns every known PerformanceMetadataFormat value in schema order.
+func PerformanceMetadataFormatValues() []PerformanceMetadataFormat {
+	return []PerformanceMetadataFormat{
+		PerformanceMetadataFormatText,
+		PerformanceMetadataFormatNumber,
+		PerformanceMetadataFormatDate,
+		PerformanceMetadataFormatBoolean,
+		PerformanceMetadataFormatFile,
+		PerformanceMetadataFormatTextarea,
+		PerformanceMetadataFormatSingleSelect,
+		PerformanceMetadataFormatMultipleSelect,
+		PerformanceMetadataFormatMeasurement,
+		PerformanceMetadataFormatPrice,
+		PerformanceMetadataFormatYesNo,
+		PerformanceMetadataFormatCurrency,
+		PerformanceMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PerformanceMetadataFormat) IsExact() bool {
 	if e != nil {

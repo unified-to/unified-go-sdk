@@ -22,6 +22,18 @@ func (e PlmChangeStatus) ToPointer() *PlmChangeStatus {
 	return &e
 }
 
+// PlmChangeStatusValues returns every known PlmChangeStatus value in schema order.
+func PlmChangeStatusValues() []PlmChangeStatus {
+	return []PlmChangeStatus{
+		PlmChangeStatusOpen,
+		PlmChangeStatusInReview,
+		PlmChangeStatusApproved,
+		PlmChangeStatusImplemented,
+		PlmChangeStatusRejected,
+		PlmChangeStatusCancelled,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PlmChangeStatus) IsExact() bool {
 	if e != nil {
@@ -45,6 +57,17 @@ const (
 
 func (e PlmChangeType) ToPointer() *PlmChangeType {
 	return &e
+}
+
+// PlmChangeTypeValues returns every known PlmChangeType value in schema order.
+func PlmChangeTypeValues() []PlmChangeType {
+	return []PlmChangeType{
+		PlmChangeTypeRequest,
+		PlmChangeTypeOrder,
+		PlmChangeTypeNotice,
+		PlmChangeTypeDeviation,
+		PlmChangeTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

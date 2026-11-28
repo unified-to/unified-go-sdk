@@ -45,6 +45,40 @@ const (
 func (e UpdateTaskTaskQueryParamFields) ToPointer() *UpdateTaskTaskQueryParamFields {
 	return &e
 }
+
+// UpdateTaskTaskQueryParamFieldsValues returns every known UpdateTaskTaskQueryParamFields value in schema order.
+func UpdateTaskTaskQueryParamFieldsValues() []UpdateTaskTaskQueryParamFields {
+	return []UpdateTaskTaskQueryParamFields{
+		UpdateTaskTaskQueryParamFieldsID,
+		UpdateTaskTaskQueryParamFieldsCreatedAt,
+		UpdateTaskTaskQueryParamFieldsUpdatedAt,
+		UpdateTaskTaskQueryParamFieldsName,
+		UpdateTaskTaskQueryParamFieldsProjectID,
+		UpdateTaskTaskQueryParamFieldsParentID,
+		UpdateTaskTaskQueryParamFieldsCompletedAt,
+		UpdateTaskTaskQueryParamFieldsStatus,
+		UpdateTaskTaskQueryParamFieldsNotes,
+		UpdateTaskTaskQueryParamFieldsDueAt,
+		UpdateTaskTaskQueryParamFieldsStartAt,
+		UpdateTaskTaskQueryParamFieldsEndAt,
+		UpdateTaskTaskQueryParamFieldsPriority,
+		UpdateTaskTaskQueryParamFieldsAssignedUserIds,
+		UpdateTaskTaskQueryParamFieldsCreatorUserID,
+		UpdateTaskTaskQueryParamFieldsFollowerUserIds,
+		UpdateTaskTaskQueryParamFieldsGroupIds,
+		UpdateTaskTaskQueryParamFieldsTags,
+		UpdateTaskTaskQueryParamFieldsURL,
+		UpdateTaskTaskQueryParamFieldsAttachmentIds,
+		UpdateTaskTaskQueryParamFieldsMetadata,
+		UpdateTaskTaskQueryParamFieldsHasChildren,
+		UpdateTaskTaskQueryParamFieldsType,
+		UpdateTaskTaskQueryParamFieldsTimeSpent,
+		UpdateTaskTaskQueryParamFieldsTimeSpentUnit,
+		UpdateTaskTaskQueryParamFieldsProgress,
+		UpdateTaskTaskQueryParamFieldsStoryPoints,
+		UpdateTaskTaskQueryParamFieldsRaw,
+	}
+}
 func (e *UpdateTaskTaskQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

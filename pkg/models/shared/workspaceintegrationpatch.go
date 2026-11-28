@@ -20,6 +20,15 @@ func (e WorkspaceIntegrationPatchAuthType) ToPointer() *WorkspaceIntegrationPatc
 	return &e
 }
 
+// WorkspaceIntegrationPatchAuthTypeValues returns every known WorkspaceIntegrationPatchAuthType value in schema order.
+func WorkspaceIntegrationPatchAuthTypeValues() []WorkspaceIntegrationPatchAuthType {
+	return []WorkspaceIntegrationPatchAuthType{
+		WorkspaceIntegrationPatchAuthTypeOauth2,
+		WorkspaceIntegrationPatchAuthTypeOther,
+		WorkspaceIntegrationPatchAuthTypeToken,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *WorkspaceIntegrationPatchAuthType) IsExact() bool {
 	if e != nil {

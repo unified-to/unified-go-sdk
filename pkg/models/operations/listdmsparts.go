@@ -43,6 +43,38 @@ const (
 func (e ListDmsPartsQueryParamFields) ToPointer() *ListDmsPartsQueryParamFields {
 	return &e
 }
+
+// ListDmsPartsQueryParamFieldsValues returns every known ListDmsPartsQueryParamFields value in schema order.
+func ListDmsPartsQueryParamFieldsValues() []ListDmsPartsQueryParamFields {
+	return []ListDmsPartsQueryParamFields{
+		ListDmsPartsQueryParamFieldsID,
+		ListDmsPartsQueryParamFieldsCreatedAt,
+		ListDmsPartsQueryParamFieldsUpdatedAt,
+		ListDmsPartsQueryParamFieldsPartNumber,
+		ListDmsPartsQueryParamFieldsDescription,
+		ListDmsPartsQueryParamFieldsManufacturerCode,
+		ListDmsPartsQueryParamFieldsSourceCode,
+		ListDmsPartsQueryParamFieldsSupplierCode,
+		ListDmsPartsQueryParamFieldsCategory,
+		ListDmsPartsQueryParamFieldsBinLocations,
+		ListDmsPartsQueryParamFieldsQuantityOnHand,
+		ListDmsPartsQueryParamFieldsQuantityAvailable,
+		ListDmsPartsQueryParamFieldsQuantityOnOrder,
+		ListDmsPartsQueryParamFieldsMinStockQuantity,
+		ListDmsPartsQueryParamFieldsMaxStockQuantity,
+		ListDmsPartsQueryParamFieldsPackQuantity,
+		ListDmsPartsQueryParamFieldsCurrency,
+		ListDmsPartsQueryParamFieldsCostAmount,
+		ListDmsPartsQueryParamFieldsListPriceAmount,
+		ListDmsPartsQueryParamFieldsTradePriceAmount,
+		ListDmsPartsQueryParamFieldsSupersededByPartNumber,
+		ListDmsPartsQueryParamFieldsLastSoldAt,
+		ListDmsPartsQueryParamFieldsLastReceivedAt,
+		ListDmsPartsQueryParamFieldsIsActive,
+		ListDmsPartsQueryParamFieldsMetadata,
+		ListDmsPartsQueryParamFieldsRaw,
+	}
+}
 func (e *ListDmsPartsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

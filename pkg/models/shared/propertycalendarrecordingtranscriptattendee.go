@@ -14,6 +14,15 @@ func (e PropertyCalendarRecordingTranscriptAttendeeStatus) ToPointer() *Property
 	return &e
 }
 
+// PropertyCalendarRecordingTranscriptAttendeeStatusValues returns every known PropertyCalendarRecordingTranscriptAttendeeStatus value in schema order.
+func PropertyCalendarRecordingTranscriptAttendeeStatusValues() []PropertyCalendarRecordingTranscriptAttendeeStatus {
+	return []PropertyCalendarRecordingTranscriptAttendeeStatus{
+		PropertyCalendarRecordingTranscriptAttendeeStatusAccepted,
+		PropertyCalendarRecordingTranscriptAttendeeStatusRejected,
+		PropertyCalendarRecordingTranscriptAttendeeStatusTentative,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PropertyCalendarRecordingTranscriptAttendeeStatus) IsExact() bool {
 	if e != nil {

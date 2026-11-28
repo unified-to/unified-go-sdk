@@ -298,6 +298,25 @@ func (e CommerceMetadataFormat) ToPointer() *CommerceMetadataFormat {
 	return &e
 }
 
+// CommerceMetadataFormatValues returns every known CommerceMetadataFormat value in schema order.
+func CommerceMetadataFormatValues() []CommerceMetadataFormat {
+	return []CommerceMetadataFormat{
+		CommerceMetadataFormatText,
+		CommerceMetadataFormatNumber,
+		CommerceMetadataFormatDate,
+		CommerceMetadataFormatBoolean,
+		CommerceMetadataFormatFile,
+		CommerceMetadataFormatTextarea,
+		CommerceMetadataFormatSingleSelect,
+		CommerceMetadataFormatMultipleSelect,
+		CommerceMetadataFormatMeasurement,
+		CommerceMetadataFormatPrice,
+		CommerceMetadataFormatYesNo,
+		CommerceMetadataFormatCurrency,
+		CommerceMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CommerceMetadataFormat) IsExact() bool {
 	if e != nil {

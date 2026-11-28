@@ -32,6 +32,27 @@ const (
 func (e ListHrisPaycodesQueryParamFields) ToPointer() *ListHrisPaycodesQueryParamFields {
 	return &e
 }
+
+// ListHrisPaycodesQueryParamFieldsValues returns every known ListHrisPaycodesQueryParamFields value in schema order.
+func ListHrisPaycodesQueryParamFieldsValues() []ListHrisPaycodesQueryParamFields {
+	return []ListHrisPaycodesQueryParamFields{
+		ListHrisPaycodesQueryParamFieldsID,
+		ListHrisPaycodesQueryParamFieldsCreatedAt,
+		ListHrisPaycodesQueryParamFieldsUpdatedAt,
+		ListHrisPaycodesQueryParamFieldsCompanyID,
+		ListHrisPaycodesQueryParamFieldsName,
+		ListHrisPaycodesQueryParamFieldsCode,
+		ListHrisPaycodesQueryParamFieldsDescription,
+		ListHrisPaycodesQueryParamFieldsType,
+		ListHrisPaycodesQueryParamFieldsDetailType,
+		ListHrisPaycodesQueryParamFieldsIsPreTax,
+		ListHrisPaycodesQueryParamFieldsIsEmployer,
+		ListHrisPaycodesQueryParamFieldsIsActive,
+		ListHrisPaycodesQueryParamFieldsIsRetirementEligible,
+		ListHrisPaycodesQueryParamFieldsMetadata,
+		ListHrisPaycodesQueryParamFieldsRaw,
+	}
+}
 func (e *ListHrisPaycodesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

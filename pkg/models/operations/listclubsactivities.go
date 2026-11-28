@@ -61,6 +61,56 @@ const (
 func (e ListClubsActivitiesQueryParamFields) ToPointer() *ListClubsActivitiesQueryParamFields {
 	return &e
 }
+
+// ListClubsActivitiesQueryParamFieldsValues returns every known ListClubsActivitiesQueryParamFields value in schema order.
+func ListClubsActivitiesQueryParamFieldsValues() []ListClubsActivitiesQueryParamFields {
+	return []ListClubsActivitiesQueryParamFields{
+		ListClubsActivitiesQueryParamFieldsID,
+		ListClubsActivitiesQueryParamFieldsCreatedAt,
+		ListClubsActivitiesQueryParamFieldsUpdatedAt,
+		ListClubsActivitiesQueryParamFieldsGroupID,
+		ListClubsActivitiesQueryParamFieldsName,
+		ListClubsActivitiesQueryParamFieldsDescription,
+		ListClubsActivitiesQueryParamFieldsType,
+		ListClubsActivitiesQueryParamFieldsAthleteID,
+		ListClubsActivitiesQueryParamFieldsAthleteName,
+		ListClubsActivitiesQueryParamFieldsDistance,
+		ListClubsActivitiesQueryParamFieldsMovingTime,
+		ListClubsActivitiesQueryParamFieldsElapsedTime,
+		ListClubsActivitiesQueryParamFieldsTotalElevationGain,
+		ListClubsActivitiesQueryParamFieldsElevationHigh,
+		ListClubsActivitiesQueryParamFieldsElevationLow,
+		ListClubsActivitiesQueryParamFieldsStartAt,
+		ListClubsActivitiesQueryParamFieldsTimezone,
+		ListClubsActivitiesQueryParamFieldsAchievementCount,
+		ListClubsActivitiesQueryParamFieldsKudosCount,
+		ListClubsActivitiesQueryParamFieldsCommentCount,
+		ListClubsActivitiesQueryParamFieldsAthleteCount,
+		ListClubsActivitiesQueryParamFieldsPhotoCount,
+		ListClubsActivitiesQueryParamFieldsAverageSpeed,
+		ListClubsActivitiesQueryParamFieldsMaxSpeed,
+		ListClubsActivitiesQueryParamFieldsAverageCadence,
+		ListClubsActivitiesQueryParamFieldsAverageHeartrate,
+		ListClubsActivitiesQueryParamFieldsMaxHeartrate,
+		ListClubsActivitiesQueryParamFieldsAverageWatts,
+		ListClubsActivitiesQueryParamFieldsMaxWatts,
+		ListClubsActivitiesQueryParamFieldsWeightedAverageWatts,
+		ListClubsActivitiesQueryParamFieldsKilojoules,
+		ListClubsActivitiesQueryParamFieldsCalories,
+		ListClubsActivitiesQueryParamFieldsHasHeartrate,
+		ListClubsActivitiesQueryParamFieldsIsTrainer,
+		ListClubsActivitiesQueryParamFieldsIsCommute,
+		ListClubsActivitiesQueryParamFieldsIsManual,
+		ListClubsActivitiesQueryParamFieldsIsPrivate,
+		ListClubsActivitiesQueryParamFieldsMapPolyline,
+		ListClubsActivitiesQueryParamFieldsMapSummaryPolyline,
+		ListClubsActivitiesQueryParamFieldsWorkoutType,
+		ListClubsActivitiesQueryParamFieldsSufferScore,
+		ListClubsActivitiesQueryParamFieldsPrCount,
+		ListClubsActivitiesQueryParamFieldsMetadata,
+		ListClubsActivitiesQueryParamFieldsRaw,
+	}
+}
 func (e *ListClubsActivitiesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

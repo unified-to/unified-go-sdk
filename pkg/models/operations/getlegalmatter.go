@@ -42,6 +42,37 @@ const (
 func (e GetLegalMatterQueryParamFields) ToPointer() *GetLegalMatterQueryParamFields {
 	return &e
 }
+
+// GetLegalMatterQueryParamFieldsValues returns every known GetLegalMatterQueryParamFields value in schema order.
+func GetLegalMatterQueryParamFieldsValues() []GetLegalMatterQueryParamFields {
+	return []GetLegalMatterQueryParamFields{
+		GetLegalMatterQueryParamFieldsID,
+		GetLegalMatterQueryParamFieldsCreatedAt,
+		GetLegalMatterQueryParamFieldsUpdatedAt,
+		GetLegalMatterQueryParamFieldsName,
+		GetLegalMatterQueryParamFieldsNumber,
+		GetLegalMatterQueryParamFieldsDescription,
+		GetLegalMatterQueryParamFieldsStatus,
+		GetLegalMatterQueryParamFieldsBillingMethod,
+		GetLegalMatterQueryParamFieldsPracticeareaID,
+		GetLegalMatterQueryParamFieldsStage,
+		GetLegalMatterQueryParamFieldsContactIds,
+		GetLegalMatterQueryParamFieldsCompanyIds,
+		GetLegalMatterQueryParamFieldsParties,
+		GetLegalMatterQueryParamFieldsUserID,
+		GetLegalMatterQueryParamFieldsOriginatingUserID,
+		GetLegalMatterQueryParamFieldsUserIds,
+		GetLegalMatterQueryParamFieldsClientReference,
+		GetLegalMatterQueryParamFieldsCurrency,
+		GetLegalMatterQueryParamFieldsIsBillable,
+		GetLegalMatterQueryParamFieldsOpenedAt,
+		GetLegalMatterQueryParamFieldsClosedAt,
+		GetLegalMatterQueryParamFieldsPendingAt,
+		GetLegalMatterQueryParamFieldsStatuteOfLimitationsAt,
+		GetLegalMatterQueryParamFieldsMetadata,
+		GetLegalMatterQueryParamFieldsRaw,
+	}
+}
 func (e *GetLegalMatterQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

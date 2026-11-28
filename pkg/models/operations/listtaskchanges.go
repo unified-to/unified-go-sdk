@@ -25,6 +25,20 @@ const (
 func (e ListTaskChangesQueryParamFields) ToPointer() *ListTaskChangesQueryParamFields {
 	return &e
 }
+
+// ListTaskChangesQueryParamFieldsValues returns every known ListTaskChangesQueryParamFields value in schema order.
+func ListTaskChangesQueryParamFieldsValues() []ListTaskChangesQueryParamFields {
+	return []ListTaskChangesQueryParamFields{
+		ListTaskChangesQueryParamFieldsID,
+		ListTaskChangesQueryParamFieldsCreatedAt,
+		ListTaskChangesQueryParamFieldsUpdatedAt,
+		ListTaskChangesQueryParamFieldsTaskID,
+		ListTaskChangesQueryParamFieldsUserID,
+		ListTaskChangesQueryParamFieldsItems,
+		ListTaskChangesQueryParamFieldsMetadata,
+		ListTaskChangesQueryParamFieldsRaw,
+	}
+}
 func (e *ListTaskChangesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

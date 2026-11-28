@@ -14,6 +14,15 @@ func (e UcEmailType) ToPointer() *UcEmailType {
 	return &e
 }
 
+// UcEmailTypeValues returns every known UcEmailType value in schema order.
+func UcEmailTypeValues() []UcEmailType {
+	return []UcEmailType{
+		UcEmailTypeWork,
+		UcEmailTypeHome,
+		UcEmailTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *UcEmailType) IsExact() bool {
 	if e != nil {

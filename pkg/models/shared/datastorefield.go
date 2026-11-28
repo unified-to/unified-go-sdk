@@ -25,6 +25,26 @@ func (e DatastoreFieldType) ToPointer() *DatastoreFieldType {
 	return &e
 }
 
+// DatastoreFieldTypeValues returns every known DatastoreFieldType value in schema order.
+func DatastoreFieldTypeValues() []DatastoreFieldType {
+	return []DatastoreFieldType{
+		DatastoreFieldTypeText,
+		DatastoreFieldTypeNumber,
+		DatastoreFieldTypeDate,
+		DatastoreFieldTypeBoolean,
+		DatastoreFieldTypeFile,
+		DatastoreFieldTypeTextarea,
+		DatastoreFieldTypeSingleSelect,
+		DatastoreFieldTypeMultipleSelect,
+		DatastoreFieldTypeCurrency,
+		DatastoreFieldTypeURL,
+		DatastoreFieldTypeEmail,
+		DatastoreFieldTypePhone,
+		DatastoreFieldTypeLinkedRecord,
+		DatastoreFieldTypeRelation,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *DatastoreFieldType) IsExact() bool {
 	if e != nil {

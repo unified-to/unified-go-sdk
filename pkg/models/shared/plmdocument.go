@@ -22,6 +22,17 @@ func (e PlmDocumentStatus) ToPointer() *PlmDocumentStatus {
 	return &e
 }
 
+// PlmDocumentStatusValues returns every known PlmDocumentStatus value in schema order.
+func PlmDocumentStatusValues() []PlmDocumentStatus {
+	return []PlmDocumentStatus{
+		PlmDocumentStatusInWork,
+		PlmDocumentStatusInReview,
+		PlmDocumentStatusReleased,
+		PlmDocumentStatusObsolete,
+		PlmDocumentStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PlmDocumentStatus) IsExact() bool {
 	if e != nil {
@@ -47,6 +58,18 @@ const (
 
 func (e PlmDocumentType) ToPointer() *PlmDocumentType {
 	return &e
+}
+
+// PlmDocumentTypeValues returns every known PlmDocumentType value in schema order.
+func PlmDocumentTypeValues() []PlmDocumentType {
+	return []PlmDocumentType{
+		PlmDocumentTypeDrawing,
+		PlmDocumentTypeCadModel,
+		PlmDocumentTypeSpecification,
+		PlmDocumentTypeProcedure,
+		PlmDocumentTypeReport,
+		PlmDocumentTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

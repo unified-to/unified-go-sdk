@@ -40,6 +40,35 @@ const (
 func (e GetUcCallQueryParamFields) ToPointer() *GetUcCallQueryParamFields {
 	return &e
 }
+
+// GetUcCallQueryParamFieldsValues returns every known GetUcCallQueryParamFields value in schema order.
+func GetUcCallQueryParamFieldsValues() []GetUcCallQueryParamFields {
+	return []GetUcCallQueryParamFields{
+		GetUcCallQueryParamFieldsID,
+		GetUcCallQueryParamFieldsCreatedAt,
+		GetUcCallQueryParamFieldsUpdatedAt,
+		GetUcCallQueryParamFieldsContactID,
+		GetUcCallQueryParamFieldsTelephone,
+		GetUcCallQueryParamFieldsStartAt,
+		GetUcCallQueryParamFieldsEndAt,
+		GetUcCallQueryParamFieldsUserID,
+		GetUcCallQueryParamFieldsContacts,
+		GetUcCallQueryParamFieldsIsPrivate,
+		GetUcCallQueryParamFieldsUserName,
+		GetUcCallQueryParamFieldsUserPhone,
+		GetUcCallQueryParamFieldsType,
+		GetUcCallQueryParamFieldsMetadata,
+		GetUcCallQueryParamFieldsRaw,
+		GetUcCallQueryParamFieldsConversationIdentifier,
+		GetUcCallQueryParamFieldsStatus,
+		GetUcCallQueryParamFieldsAnswerAt,
+		GetUcCallQueryParamFieldsDurationSeconds,
+		GetUcCallQueryParamFieldsCostAmount,
+		GetUcCallQueryParamFieldsCurrency,
+		GetUcCallQueryParamFieldsParentID,
+		GetUcCallQueryParamFieldsInstructions,
+	}
+}
 func (e *GetUcCallQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -18,6 +18,14 @@ func (e HrisBankaccountAccountType) ToPointer() *HrisBankaccountAccountType {
 	return &e
 }
 
+// HrisBankaccountAccountTypeValues returns every known HrisBankaccountAccountType value in schema order.
+func HrisBankaccountAccountTypeValues() []HrisBankaccountAccountType {
+	return []HrisBankaccountAccountType{
+		HrisBankaccountAccountTypeChecking,
+		HrisBankaccountAccountTypeSavings,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HrisBankaccountAccountType) IsExact() bool {
 	if e != nil {
@@ -40,6 +48,15 @@ const (
 
 func (e SplitType) ToPointer() *SplitType {
 	return &e
+}
+
+// SplitTypeValues returns every known SplitType value in schema order.
+func SplitTypeValues() []SplitType {
+	return []SplitType{
+		SplitTypePercentage,
+		SplitTypeFixed,
+		SplitTypeRemainder,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

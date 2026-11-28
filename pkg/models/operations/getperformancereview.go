@@ -36,6 +36,31 @@ const (
 func (e GetPerformanceReviewQueryParamFields) ToPointer() *GetPerformanceReviewQueryParamFields {
 	return &e
 }
+
+// GetPerformanceReviewQueryParamFieldsValues returns every known GetPerformanceReviewQueryParamFields value in schema order.
+func GetPerformanceReviewQueryParamFieldsValues() []GetPerformanceReviewQueryParamFields {
+	return []GetPerformanceReviewQueryParamFields{
+		GetPerformanceReviewQueryParamFieldsID,
+		GetPerformanceReviewQueryParamFieldsCreatedAt,
+		GetPerformanceReviewQueryParamFieldsUpdatedAt,
+		GetPerformanceReviewQueryParamFieldsUserID,
+		GetPerformanceReviewQueryParamFieldsReviewerUserID,
+		GetPerformanceReviewQueryParamFieldsCycleID,
+		GetPerformanceReviewQueryParamFieldsTemplateIdentifier,
+		GetPerformanceReviewQueryParamFieldsType,
+		GetPerformanceReviewQueryParamFieldsStatus,
+		GetPerformanceReviewQueryParamFieldsRating,
+		GetPerformanceReviewQueryParamFieldsRatingMaximum,
+		GetPerformanceReviewQueryParamFieldsRatingDescription,
+		GetPerformanceReviewQueryParamFieldsComment,
+		GetPerformanceReviewQueryParamFieldsQuestions,
+		GetPerformanceReviewQueryParamFieldsIsAcknowledged,
+		GetPerformanceReviewQueryParamFieldsSubmittedAt,
+		GetPerformanceReviewQueryParamFieldsCompletedAt,
+		GetPerformanceReviewQueryParamFieldsMetadata,
+		GetPerformanceReviewQueryParamFieldsRaw,
+	}
+}
 func (e *GetPerformanceReviewQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

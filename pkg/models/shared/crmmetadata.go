@@ -298,6 +298,25 @@ func (e CrmMetadataFormat) ToPointer() *CrmMetadataFormat {
 	return &e
 }
 
+// CrmMetadataFormatValues returns every known CrmMetadataFormat value in schema order.
+func CrmMetadataFormatValues() []CrmMetadataFormat {
+	return []CrmMetadataFormat{
+		CrmMetadataFormatText,
+		CrmMetadataFormatNumber,
+		CrmMetadataFormatDate,
+		CrmMetadataFormatBoolean,
+		CrmMetadataFormatFile,
+		CrmMetadataFormatTextarea,
+		CrmMetadataFormatSingleSelect,
+		CrmMetadataFormatMultipleSelect,
+		CrmMetadataFormatMeasurement,
+		CrmMetadataFormatPrice,
+		CrmMetadataFormatYesNo,
+		CrmMetadataFormatCurrency,
+		CrmMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *CrmMetadataFormat) IsExact() bool {
 	if e != nil {

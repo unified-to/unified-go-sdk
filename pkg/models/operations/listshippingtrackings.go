@@ -32,6 +32,27 @@ const (
 func (e ListShippingTrackingsQueryParamFields) ToPointer() *ListShippingTrackingsQueryParamFields {
 	return &e
 }
+
+// ListShippingTrackingsQueryParamFieldsValues returns every known ListShippingTrackingsQueryParamFields value in schema order.
+func ListShippingTrackingsQueryParamFieldsValues() []ListShippingTrackingsQueryParamFields {
+	return []ListShippingTrackingsQueryParamFields{
+		ListShippingTrackingsQueryParamFieldsID,
+		ListShippingTrackingsQueryParamFieldsCreatedAt,
+		ListShippingTrackingsQueryParamFieldsUpdatedAt,
+		ListShippingTrackingsQueryParamFieldsShipmentID,
+		ListShippingTrackingsQueryParamFieldsTrackingNumber,
+		ListShippingTrackingsQueryParamFieldsStatus,
+		ListShippingTrackingsQueryParamFieldsEvents,
+		ListShippingTrackingsQueryParamFieldsEstimatedDelivery,
+		ListShippingTrackingsQueryParamFieldsActualDeliveryAt,
+		ListShippingTrackingsQueryParamFieldsStatusDescription,
+		ListShippingTrackingsQueryParamFieldsCarrierID,
+		ListShippingTrackingsQueryParamFieldsCarrierStatusCode,
+		ListShippingTrackingsQueryParamFieldsCarrierStatusDescription,
+		ListShippingTrackingsQueryParamFieldsMetadata,
+		ListShippingTrackingsQueryParamFieldsRaw,
+	}
+}
 func (e *ListShippingTrackingsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

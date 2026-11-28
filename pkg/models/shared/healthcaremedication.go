@@ -26,6 +26,21 @@ func (e HealthcareMedicationStatus) ToPointer() *HealthcareMedicationStatus {
 	return &e
 }
 
+// HealthcareMedicationStatusValues returns every known HealthcareMedicationStatus value in schema order.
+func HealthcareMedicationStatusValues() []HealthcareMedicationStatus {
+	return []HealthcareMedicationStatus{
+		HealthcareMedicationStatusDraft,
+		HealthcareMedicationStatusActive,
+		HealthcareMedicationStatusOnHold,
+		HealthcareMedicationStatusCompleted,
+		HealthcareMedicationStatusStopped,
+		HealthcareMedicationStatusCancelled,
+		HealthcareMedicationStatusEnteredInError,
+		HealthcareMedicationStatusUnknown,
+		HealthcareMedicationStatusOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HealthcareMedicationStatus) IsExact() bool {
 	if e != nil {

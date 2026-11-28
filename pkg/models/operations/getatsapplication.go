@@ -36,6 +36,31 @@ const (
 func (e GetAtsApplicationQueryParamFields) ToPointer() *GetAtsApplicationQueryParamFields {
 	return &e
 }
+
+// GetAtsApplicationQueryParamFieldsValues returns every known GetAtsApplicationQueryParamFields value in schema order.
+func GetAtsApplicationQueryParamFieldsValues() []GetAtsApplicationQueryParamFields {
+	return []GetAtsApplicationQueryParamFields{
+		GetAtsApplicationQueryParamFieldsID,
+		GetAtsApplicationQueryParamFieldsCandidateID,
+		GetAtsApplicationQueryParamFieldsJobID,
+		GetAtsApplicationQueryParamFieldsCreatedAt,
+		GetAtsApplicationQueryParamFieldsUpdatedAt,
+		GetAtsApplicationQueryParamFieldsAppliedAt,
+		GetAtsApplicationQueryParamFieldsHiredAt,
+		GetAtsApplicationQueryParamFieldsRejectedAt,
+		GetAtsApplicationQueryParamFieldsRejectedReason,
+		GetAtsApplicationQueryParamFieldsSource,
+		GetAtsApplicationQueryParamFieldsStatus,
+		GetAtsApplicationQueryParamFieldsOriginalStatus,
+		GetAtsApplicationQueryParamFieldsAnswers,
+		GetAtsApplicationQueryParamFieldsOffers,
+		GetAtsApplicationQueryParamFieldsUserID,
+		GetAtsApplicationQueryParamFieldsMetadata,
+		GetAtsApplicationQueryParamFieldsOriginalSubstatus,
+		GetAtsApplicationQueryParamFieldsSummary,
+		GetAtsApplicationQueryParamFieldsRaw,
+	}
+}
 func (e *GetAtsApplicationQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

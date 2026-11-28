@@ -19,6 +19,14 @@ func (e AccountingInvoicePaymentCollectionMethod) ToPointer() *AccountingInvoice
 	return &e
 }
 
+// AccountingInvoicePaymentCollectionMethodValues returns every known AccountingInvoicePaymentCollectionMethod value in schema order.
+func AccountingInvoicePaymentCollectionMethodValues() []AccountingInvoicePaymentCollectionMethod {
+	return []AccountingInvoicePaymentCollectionMethod{
+		AccountingInvoicePaymentCollectionMethodSendInvoice,
+		AccountingInvoicePaymentCollectionMethodChargeAutomatically,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingInvoicePaymentCollectionMethod) IsExact() bool {
 	if e != nil {
@@ -50,6 +58,23 @@ func (e AccountingInvoicePaymentTerms) ToPointer() *AccountingInvoicePaymentTerm
 	return &e
 }
 
+// AccountingInvoicePaymentTermsValues returns every known AccountingInvoicePaymentTerms value in schema order.
+func AccountingInvoicePaymentTermsValues() []AccountingInvoicePaymentTerms {
+	return []AccountingInvoicePaymentTerms{
+		AccountingInvoicePaymentTermsOnReceipt,
+		AccountingInvoicePaymentTermsNet7,
+		AccountingInvoicePaymentTermsNet10,
+		AccountingInvoicePaymentTermsNet15,
+		AccountingInvoicePaymentTermsNet20,
+		AccountingInvoicePaymentTermsNet25,
+		AccountingInvoicePaymentTermsNet30,
+		AccountingInvoicePaymentTermsNet45,
+		AccountingInvoicePaymentTermsNet60,
+		AccountingInvoicePaymentTermsNet90,
+		AccountingInvoicePaymentTermsOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingInvoicePaymentTerms) IsExact() bool {
 	if e != nil {
@@ -78,6 +103,22 @@ const (
 
 func (e AccountingInvoiceStatus) ToPointer() *AccountingInvoiceStatus {
 	return &e
+}
+
+// AccountingInvoiceStatusValues returns every known AccountingInvoiceStatus value in schema order.
+func AccountingInvoiceStatusValues() []AccountingInvoiceStatus {
+	return []AccountingInvoiceStatus{
+		AccountingInvoiceStatusDraft,
+		AccountingInvoiceStatusVoided,
+		AccountingInvoiceStatusAuthorized,
+		AccountingInvoiceStatusPaid,
+		AccountingInvoiceStatusPartiallyPaid,
+		AccountingInvoiceStatusPartiallyRefunded,
+		AccountingInvoiceStatusRefunded,
+		AccountingInvoiceStatusSubmitted,
+		AccountingInvoiceStatusDeleted,
+		AccountingInvoiceStatusOverdue,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -112,6 +153,23 @@ func (e AccountingInvoiceTerm) ToPointer() *AccountingInvoiceTerm {
 	return &e
 }
 
+// AccountingInvoiceTermValues returns every known AccountingInvoiceTerm value in schema order.
+func AccountingInvoiceTermValues() []AccountingInvoiceTerm {
+	return []AccountingInvoiceTerm{
+		AccountingInvoiceTermOnReceipt,
+		AccountingInvoiceTermNet7,
+		AccountingInvoiceTermNet10,
+		AccountingInvoiceTermNet15,
+		AccountingInvoiceTermNet20,
+		AccountingInvoiceTermNet25,
+		AccountingInvoiceTermNet30,
+		AccountingInvoiceTermNet45,
+		AccountingInvoiceTermNet60,
+		AccountingInvoiceTermNet90,
+		AccountingInvoiceTermOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AccountingInvoiceTerm) IsExact() bool {
 	if e != nil {
@@ -133,6 +191,14 @@ const (
 
 func (e AccountingInvoiceType) ToPointer() *AccountingInvoiceType {
 	return &e
+}
+
+// AccountingInvoiceTypeValues returns every known AccountingInvoiceType value in schema order.
+func AccountingInvoiceTypeValues() []AccountingInvoiceType {
+	return []AccountingInvoiceType{
+		AccountingInvoiceTypeInvoice,
+		AccountingInvoiceTypeCreditmemo,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

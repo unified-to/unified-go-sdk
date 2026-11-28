@@ -19,6 +19,15 @@ func (e HrisAttendanceStatus) ToPointer() *HrisAttendanceStatus {
 	return &e
 }
 
+// HrisAttendanceStatusValues returns every known HrisAttendanceStatus value in schema order.
+func HrisAttendanceStatusValues() []HrisAttendanceStatus {
+	return []HrisAttendanceStatus{
+		HrisAttendanceStatusOpen,
+		HrisAttendanceStatusClosed,
+		HrisAttendanceStatusApproved,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *HrisAttendanceStatus) IsExact() bool {
 	if e != nil {

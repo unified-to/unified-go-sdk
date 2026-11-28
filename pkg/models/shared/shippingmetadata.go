@@ -297,6 +297,25 @@ func (e ShippingMetadataFormat) ToPointer() *ShippingMetadataFormat {
 	return &e
 }
 
+// ShippingMetadataFormatValues returns every known ShippingMetadataFormat value in schema order.
+func ShippingMetadataFormatValues() []ShippingMetadataFormat {
+	return []ShippingMetadataFormat{
+		ShippingMetadataFormatText,
+		ShippingMetadataFormatNumber,
+		ShippingMetadataFormatDate,
+		ShippingMetadataFormatBoolean,
+		ShippingMetadataFormatFile,
+		ShippingMetadataFormatTextarea,
+		ShippingMetadataFormatSingleSelect,
+		ShippingMetadataFormatMultipleSelect,
+		ShippingMetadataFormatMeasurement,
+		ShippingMetadataFormatPrice,
+		ShippingMetadataFormatYesNo,
+		ShippingMetadataFormatCurrency,
+		ShippingMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ShippingMetadataFormat) IsExact() bool {
 	if e != nil {

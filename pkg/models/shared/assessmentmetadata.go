@@ -298,6 +298,25 @@ func (e AssessmentMetadataFormat) ToPointer() *AssessmentMetadataFormat {
 	return &e
 }
 
+// AssessmentMetadataFormatValues returns every known AssessmentMetadataFormat value in schema order.
+func AssessmentMetadataFormatValues() []AssessmentMetadataFormat {
+	return []AssessmentMetadataFormat{
+		AssessmentMetadataFormatText,
+		AssessmentMetadataFormatNumber,
+		AssessmentMetadataFormatDate,
+		AssessmentMetadataFormatBoolean,
+		AssessmentMetadataFormatFile,
+		AssessmentMetadataFormatTextarea,
+		AssessmentMetadataFormatSingleSelect,
+		AssessmentMetadataFormatMultipleSelect,
+		AssessmentMetadataFormatMeasurement,
+		AssessmentMetadataFormatPrice,
+		AssessmentMetadataFormatYesNo,
+		AssessmentMetadataFormatCurrency,
+		AssessmentMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *AssessmentMetadataFormat) IsExact() bool {
 	if e != nil {

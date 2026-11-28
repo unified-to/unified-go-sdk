@@ -36,6 +36,31 @@ const (
 func (e CreatePlmDocumentQueryParamFields) ToPointer() *CreatePlmDocumentQueryParamFields {
 	return &e
 }
+
+// CreatePlmDocumentQueryParamFieldsValues returns every known CreatePlmDocumentQueryParamFields value in schema order.
+func CreatePlmDocumentQueryParamFieldsValues() []CreatePlmDocumentQueryParamFields {
+	return []CreatePlmDocumentQueryParamFields{
+		CreatePlmDocumentQueryParamFieldsID,
+		CreatePlmDocumentQueryParamFieldsCreatedAt,
+		CreatePlmDocumentQueryParamFieldsUpdatedAt,
+		CreatePlmDocumentQueryParamFieldsMasterIdentifier,
+		CreatePlmDocumentQueryParamFieldsNumber,
+		CreatePlmDocumentQueryParamFieldsName,
+		CreatePlmDocumentQueryParamFieldsDescription,
+		CreatePlmDocumentQueryParamFieldsRevision,
+		CreatePlmDocumentQueryParamFieldsStatus,
+		CreatePlmDocumentQueryParamFieldsLifecycleState,
+		CreatePlmDocumentQueryParamFieldsType,
+		CreatePlmDocumentQueryParamFieldsOriginalType,
+		CreatePlmDocumentQueryParamFieldsCategoryID,
+		CreatePlmDocumentQueryParamFieldsPartIds,
+		CreatePlmDocumentQueryParamFieldsFileIds,
+		CreatePlmDocumentQueryParamFieldsUserID,
+		CreatePlmDocumentQueryParamFieldsURL,
+		CreatePlmDocumentQueryParamFieldsMetadata,
+		CreatePlmDocumentQueryParamFieldsRaw,
+	}
+}
 func (e *CreatePlmDocumentQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

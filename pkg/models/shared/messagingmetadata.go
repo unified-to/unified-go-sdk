@@ -297,6 +297,25 @@ func (e MessagingMetadataFormat) ToPointer() *MessagingMetadataFormat {
 	return &e
 }
 
+// MessagingMetadataFormatValues returns every known MessagingMetadataFormat value in schema order.
+func MessagingMetadataFormatValues() []MessagingMetadataFormat {
+	return []MessagingMetadataFormat{
+		MessagingMetadataFormatText,
+		MessagingMetadataFormatNumber,
+		MessagingMetadataFormatDate,
+		MessagingMetadataFormatBoolean,
+		MessagingMetadataFormatFile,
+		MessagingMetadataFormatTextarea,
+		MessagingMetadataFormatSingleSelect,
+		MessagingMetadataFormatMultipleSelect,
+		MessagingMetadataFormatMeasurement,
+		MessagingMetadataFormatPrice,
+		MessagingMetadataFormatYesNo,
+		MessagingMetadataFormatCurrency,
+		MessagingMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *MessagingMetadataFormat) IsExact() bool {
 	if e != nil {

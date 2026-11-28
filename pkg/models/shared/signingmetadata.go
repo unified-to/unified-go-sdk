@@ -297,6 +297,25 @@ func (e SigningMetadataFormat) ToPointer() *SigningMetadataFormat {
 	return &e
 }
 
+// SigningMetadataFormatValues returns every known SigningMetadataFormat value in schema order.
+func SigningMetadataFormatValues() []SigningMetadataFormat {
+	return []SigningMetadataFormat{
+		SigningMetadataFormatText,
+		SigningMetadataFormatNumber,
+		SigningMetadataFormatDate,
+		SigningMetadataFormatBoolean,
+		SigningMetadataFormatFile,
+		SigningMetadataFormatTextarea,
+		SigningMetadataFormatSingleSelect,
+		SigningMetadataFormatMultipleSelect,
+		SigningMetadataFormatMeasurement,
+		SigningMetadataFormatPrice,
+		SigningMetadataFormatYesNo,
+		SigningMetadataFormatCurrency,
+		SigningMetadataFormatURL,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *SigningMetadataFormat) IsExact() bool {
 	if e != nil {

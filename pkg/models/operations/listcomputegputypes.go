@@ -34,6 +34,29 @@ const (
 func (e ListComputeGputypesQueryParamFields) ToPointer() *ListComputeGputypesQueryParamFields {
 	return &e
 }
+
+// ListComputeGputypesQueryParamFieldsValues returns every known ListComputeGputypesQueryParamFields value in schema order.
+func ListComputeGputypesQueryParamFieldsValues() []ListComputeGputypesQueryParamFields {
+	return []ListComputeGputypesQueryParamFields{
+		ListComputeGputypesQueryParamFieldsID,
+		ListComputeGputypesQueryParamFieldsCreatedAt,
+		ListComputeGputypesQueryParamFieldsUpdatedAt,
+		ListComputeGputypesQueryParamFieldsName,
+		ListComputeGputypesQueryParamFieldsGpuModel,
+		ListComputeGputypesQueryParamFieldsGpuManufacturer,
+		ListComputeGputypesQueryParamFieldsSku,
+		ListComputeGputypesQueryParamFieldsGpuCount,
+		ListComputeGputypesQueryParamFieldsGpuMemoryMb,
+		ListComputeGputypesQueryParamFieldsCPUCount,
+		ListComputeGputypesQueryParamFieldsMemoryMb,
+		ListComputeGputypesQueryParamFieldsDiskMb,
+		ListComputeGputypesQueryParamFieldsArchitecture,
+		ListComputeGputypesQueryParamFieldsPrices,
+		ListComputeGputypesQueryParamFieldsAvailability,
+		ListComputeGputypesQueryParamFieldsMetadata,
+		ListComputeGputypesQueryParamFieldsRaw,
+	}
+}
 func (e *ListComputeGputypesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

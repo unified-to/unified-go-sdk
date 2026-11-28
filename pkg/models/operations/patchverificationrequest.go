@@ -43,6 +43,38 @@ const (
 func (e PatchVerificationRequestQueryParamFields) ToPointer() *PatchVerificationRequestQueryParamFields {
 	return &e
 }
+
+// PatchVerificationRequestQueryParamFieldsValues returns every known PatchVerificationRequestQueryParamFields value in schema order.
+func PatchVerificationRequestQueryParamFieldsValues() []PatchVerificationRequestQueryParamFields {
+	return []PatchVerificationRequestQueryParamFields{
+		PatchVerificationRequestQueryParamFieldsID,
+		PatchVerificationRequestQueryParamFieldsCreatedAt,
+		PatchVerificationRequestQueryParamFieldsUpdatedAt,
+		PatchVerificationRequestQueryParamFieldsPackageID,
+		PatchVerificationRequestQueryParamFieldsParameters,
+		PatchVerificationRequestQueryParamFieldsTargetURL,
+		PatchVerificationRequestQueryParamFieldsCandidateID,
+		PatchVerificationRequestQueryParamFieldsProfileIPAddress,
+		PatchVerificationRequestQueryParamFieldsProfileName,
+		PatchVerificationRequestQueryParamFieldsProfileDateOfBirth,
+		PatchVerificationRequestQueryParamFieldsProfileAddresses,
+		PatchVerificationRequestQueryParamFieldsProfileGender,
+		PatchVerificationRequestQueryParamFieldsProfileEmails,
+		PatchVerificationRequestQueryParamFieldsProfileTelephones,
+		PatchVerificationRequestQueryParamFieldsProfileNationalIdentifier,
+		PatchVerificationRequestQueryParamFieldsResponseCompletedAt,
+		PatchVerificationRequestQueryParamFieldsResponseExpiresAt,
+		PatchVerificationRequestQueryParamFieldsResponseIssuedAt,
+		PatchVerificationRequestQueryParamFieldsResponseStatus,
+		PatchVerificationRequestQueryParamFieldsResponseScore,
+		PatchVerificationRequestQueryParamFieldsResponseRedirectURL,
+		PatchVerificationRequestQueryParamFieldsResponseDownloadUrls,
+		PatchVerificationRequestQueryParamFieldsResponseDetails,
+		PatchVerificationRequestQueryParamFieldsResponseSource,
+		PatchVerificationRequestQueryParamFieldsMetadata,
+		PatchVerificationRequestQueryParamFieldsRaw,
+	}
+}
 func (e *PatchVerificationRequestQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

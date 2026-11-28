@@ -18,6 +18,14 @@ func (e DurationType) ToPointer() *DurationType {
 	return &e
 }
 
+// DurationTypeValues returns every known DurationType value in schema order.
+func DurationTypeValues() []DurationType {
+	return []DurationType{
+		DurationTypeHour,
+		DurationTypeDay,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *DurationType) IsExact() bool {
 	if e != nil {
@@ -40,6 +48,16 @@ const (
 
 func (e HrisTimeoffStatus) ToPointer() *HrisTimeoffStatus {
 	return &e
+}
+
+// HrisTimeoffStatusValues returns every known HrisTimeoffStatus value in schema order.
+func HrisTimeoffStatusValues() []HrisTimeoffStatus {
+	return []HrisTimeoffStatus{
+		HrisTimeoffStatusApproved,
+		HrisTimeoffStatusPending,
+		HrisTimeoffStatusDenied,
+		HrisTimeoffStatusCancelled,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
@@ -68,6 +86,20 @@ const (
 
 func (e HrisTimeoffType) ToPointer() *HrisTimeoffType {
 	return &e
+}
+
+// HrisTimeoffTypeValues returns every known HrisTimeoffType value in schema order.
+func HrisTimeoffTypeValues() []HrisTimeoffType {
+	return []HrisTimeoffType{
+		HrisTimeoffTypeVacation,
+		HrisTimeoffTypeSick,
+		HrisTimeoffTypeHoliday,
+		HrisTimeoffTypeBereavement,
+		HrisTimeoffTypeParental,
+		HrisTimeoffTypeUnpaid,
+		HrisTimeoffTypeInLieu,
+		HrisTimeoffTypeOther,
+	}
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.

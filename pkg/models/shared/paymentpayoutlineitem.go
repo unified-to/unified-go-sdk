@@ -18,6 +18,18 @@ func (e PaymentPayoutLineitemObjectType) ToPointer() *PaymentPayoutLineitemObjec
 	return &e
 }
 
+// PaymentPayoutLineitemObjectTypeValues returns every known PaymentPayoutLineitemObjectType value in schema order.
+func PaymentPayoutLineitemObjectTypeValues() []PaymentPayoutLineitemObjectType {
+	return []PaymentPayoutLineitemObjectType{
+		PaymentPayoutLineitemObjectTypePayment,
+		PaymentPayoutLineitemObjectTypeRefund,
+		PaymentPayoutLineitemObjectTypeFee,
+		PaymentPayoutLineitemObjectTypeAdjustment,
+		PaymentPayoutLineitemObjectTypeTransfer,
+		PaymentPayoutLineitemObjectTypeOther,
+	}
+}
+
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *PaymentPayoutLineitemObjectType) IsExact() bool {
 	if e != nil {

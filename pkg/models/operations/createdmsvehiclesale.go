@@ -50,6 +50,45 @@ const (
 func (e CreateDmsVehiclesaleQueryParamFields) ToPointer() *CreateDmsVehiclesaleQueryParamFields {
 	return &e
 }
+
+// CreateDmsVehiclesaleQueryParamFieldsValues returns every known CreateDmsVehiclesaleQueryParamFields value in schema order.
+func CreateDmsVehiclesaleQueryParamFieldsValues() []CreateDmsVehiclesaleQueryParamFields {
+	return []CreateDmsVehiclesaleQueryParamFields{
+		CreateDmsVehiclesaleQueryParamFieldsID,
+		CreateDmsVehiclesaleQueryParamFieldsCreatedAt,
+		CreateDmsVehiclesaleQueryParamFieldsUpdatedAt,
+		CreateDmsVehiclesaleQueryParamFieldsNumber,
+		CreateDmsVehiclesaleQueryParamFieldsStatus,
+		CreateDmsVehiclesaleQueryParamFieldsType,
+		CreateDmsVehiclesaleQueryParamFieldsFinanceType,
+		CreateDmsVehiclesaleQueryParamFieldsContactIds,
+		CreateDmsVehiclesaleQueryParamFieldsCompanyIds,
+		CreateDmsVehiclesaleQueryParamFieldsLeadID,
+		CreateDmsVehiclesaleQueryParamFieldsSalespersonUserIds,
+		CreateDmsVehiclesaleQueryParamFieldsSalesManagerUserID,
+		CreateDmsVehiclesaleQueryParamFieldsFinanceManagerUserIds,
+		CreateDmsVehiclesaleQueryParamFieldsVehicles,
+		CreateDmsVehiclesaleQueryParamFieldsTradeIns,
+		CreateDmsVehiclesaleQueryParamFieldsFees,
+		CreateDmsVehiclesaleQueryParamFieldsProducts,
+		CreateDmsVehiclesaleQueryParamFieldsTaxes,
+		CreateDmsVehiclesaleQueryParamFieldsFinance,
+		CreateDmsVehiclesaleQueryParamFieldsCurrency,
+		CreateDmsVehiclesaleQueryParamFieldsRebateAmount,
+		CreateDmsVehiclesaleQueryParamFieldsDownPaymentAmount,
+		CreateDmsVehiclesaleQueryParamFieldsTaxAmount,
+		CreateDmsVehiclesaleQueryParamFieldsTotalAmount,
+		CreateDmsVehiclesaleQueryParamFieldsFrontGrossAmount,
+		CreateDmsVehiclesaleQueryParamFieldsBackGrossAmount,
+		CreateDmsVehiclesaleQueryParamFieldsSoldAt,
+		CreateDmsVehiclesaleQueryParamFieldsDeliveredAt,
+		CreateDmsVehiclesaleQueryParamFieldsPostedAt,
+		CreateDmsVehiclesaleQueryParamFieldsSource,
+		CreateDmsVehiclesaleQueryParamFieldsNotes,
+		CreateDmsVehiclesaleQueryParamFieldsMetadata,
+		CreateDmsVehiclesaleQueryParamFieldsRaw,
+	}
+}
 func (e *CreateDmsVehiclesaleQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

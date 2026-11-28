@@ -31,6 +31,26 @@ const (
 func (e ListPaymentRefundsQueryParamFields) ToPointer() *ListPaymentRefundsQueryParamFields {
 	return &e
 }
+
+// ListPaymentRefundsQueryParamFieldsValues returns every known ListPaymentRefundsQueryParamFields value in schema order.
+func ListPaymentRefundsQueryParamFieldsValues() []ListPaymentRefundsQueryParamFields {
+	return []ListPaymentRefundsQueryParamFields{
+		ListPaymentRefundsQueryParamFieldsID,
+		ListPaymentRefundsQueryParamFieldsCreatedAt,
+		ListPaymentRefundsQueryParamFieldsUpdatedAt,
+		ListPaymentRefundsQueryParamFieldsTotalAmount,
+		ListPaymentRefundsQueryParamFieldsPaymentID,
+		ListPaymentRefundsQueryParamFieldsCurrency,
+		ListPaymentRefundsQueryParamFieldsNotes,
+		ListPaymentRefundsQueryParamFieldsStatus,
+		ListPaymentRefundsQueryParamFieldsReference,
+		ListPaymentRefundsQueryParamFieldsRefundedAt,
+		ListPaymentRefundsQueryParamFieldsReason,
+		ListPaymentRefundsQueryParamFieldsTenderType,
+		ListPaymentRefundsQueryParamFieldsMetadata,
+		ListPaymentRefundsQueryParamFieldsRaw,
+	}
+}
 func (e *ListPaymentRefundsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
